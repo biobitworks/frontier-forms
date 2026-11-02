@@ -1,0 +1,11 @@
+{
+  "mode": "staged",
+  "predecessor_failure": "evidence/receipts/gitleaks_initial_failure.json",
+  "reason": "review-export case_digest_sha256 field no longer resembles credential assignment",
+  "reported_findings": 0,
+  "rerun": "PASS",
+  "schema": "security.scan.successor.v1",
+  "snyk": "NOT_TESTED_AUTH_STATUS_UNVERIFIED",
+  "tool": "gitleaks",
+  "version": "8.30.1"
+}

@@ -1,0 +1,57 @@
+{
+  "claims": "OFFLINE_PROTOCOL_AND_REPLAY_ONLY",
+  "clinician_assessment": "NOT_TESTED",
+  "execution_environment": "LOCAL_PYTHON3.12_IPYKERNEL",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "00_fco_merkle_replay.ipynb",
+      "receipt_sha256": "00c516f4484d1e760c7938838245c922160136801c0664ee6ad910170776d44c"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "01_paired_mcnemar_bootstrap.ipynb",
+      "receipt_sha256": "3f9239197dde54cd6f30f905d9f9a94cc238b69d1f1fe9074d4e7cf993443708"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "02_classification_auroc_fpr_fdr.ipynb",
+      "receipt_sha256": "00582e0d591f39b16f2f7f0395e4900b27008a1108f6f089166fbe6a8855fdef"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "03_lomo_harness_ablation.ipynb",
+      "receipt_sha256": "db9340c79b47feaa48cbf64c2b4d7bb7a23ec8f9a98c842146aef369be38c388"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "04_synthea_to_fhir_contract.ipynb",
+      "receipt_sha256": "c4c40c031101ec6de181806243eb6674a904e6e0264ce4f2ccb7f39150d3e137"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "05_fireworks_pricing_roi.ipynb",
+      "receipt_sha256": "80e0afdd61f55e7a1d6423e2d3f7b1a896f3d479e423ce7d621fcaa6c28539dd"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "06_lean_gsd_gsigmad_admission.ipynb",
+      "receipt_sha256": "8532d78fe4cd5e136ef683287087d6f2e125055036f6ea0aaefd611e5182d8a8"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "07_supabase_source_gate.ipynb",
+      "receipt_sha256": "e1e462b1d92ad541f6afeb81b719fd2a8c9dbf52f2eb6113b1d84d72e3044727"
+    }
+  ],
+  "schema": "notebook.execution.v1"
+}

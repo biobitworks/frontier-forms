@@ -1,0 +1,12 @@
+{
+  "effect": "independent verification reported FAIL although leaf-root calculation had executed",
+  "failure": "VERIFY_SCRIPT_FIELD_NAME_MISMATCH",
+  "mmr": "NOT_COMPUTED",
+  "observed": "KeyError signed in prior verifier while freeze manifest field was signature",
+  "predecessor_git_commit": "bf58691bbf93753a9a63b4722e479d8b044fcb01",
+  "predecessor_root": "37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7",
+  "recovery": "versioned successor verifier reading historical Git bytes and schema-specific signature field",
+  "schema": "fco.failure.successor.v1",
+  "signature": "NOT_SIGNED",
+  "status": "FAILED_PREDECESSOR_PRESERVED"
+}

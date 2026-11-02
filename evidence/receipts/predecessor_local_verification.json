@@ -1,0 +1,85 @@
+{
+  "context_digest": "PASS",
+  "edge_digest": "PASS",
+  "leaf_order": "PASS",
+  "leaves": 15,
+  "meaning": "INTEGRITY_ONLY_NOT_TRUTH",
+  "mmr": "NOT_COMPUTED",
+  "parent_snapshot": {
+    "root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "snapshot": "LN-MINI-ec719d04c3707ca1cb"
+  },
+  "root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+  "root_recomputed": "PASS",
+  "schema": "fco.predecessor_verification.v1",
+  "signature": "NOT_SIGNED",
+  "source_files": [
+    {
+      "expected_sha256": "544e0bf2975b04cf1d2be6654b4baccbe04db3cf4f167d80c81e25a9fc3fe72c",
+      "path": "datasets/longebench/mini/eval-00000-of-00001.parquet",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "6f8462be402bb95cba1aeb0043e5b9c78b01d0d35aa5d07de525b85231949e6b",
+      "path": "datasets/longebench/benchmark/eval-00000-of-00001.parquet",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "990d52064037bbf83d10f13163da428964b56ae673b7f39bf549d78c1e7eda16",
+      "path": "datasets/synthea_100_csv/synthea_sample_data_csv_latest.zip",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+      "path": "models/Qwen3-0.6B-Longevity/model.safetensors",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "2d3e992b480850b5c2c358e37f8a4b09cfb103a0f0b1cea80888d5ddfedc1595",
+      "path": "receipts/megatron_git_head.txt",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "6ba4e17f01f489d175a7d56f0d8eac4f52f12e4a2f3be479d638f6c1b40be1f3",
+      "path": "custody/snapshots/LN-MINI-ec719d04c3707ca1cb/manifest.json",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "46c48f08add45a2bc5941fba2ddca682e0ac136d718232aafa5c011438f92007",
+      "path": "eval/longebench_split_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "6f721e37e62ba8f4251f01d9fb3f77fe797719086a7538cc66b12dfcca53c6bc",
+      "path": "eval/lb_mini_discovery_lfm2-1.2b-longevity-q4km_latest.jsonl",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "e853588825fdb2435efa3da1461a1b4485bceb239e740fab27c547bafae5cee6",
+      "path": "eval/insilico_qwen3_06b_discovery_attempt3.jsonl",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "ef4117e865eb7ebc7297ab0962719118684932dcfefa860b7d482929b484186a",
+      "path": "eval/paired_discovery_mcnemar_bootstrap.json",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "6ea8fc7b8a5b6d94fe1a20d4b7d8c9355e78c53fce3a59f13dd5e9c0027896fc",
+      "path": "eval/mcnemar_bootstrap.py",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "ba802babbbfdf61bdeff3704effbf46144c2484c4e4a7fd29bd351200d21d399",
+      "path": "tests/test_paired_stats.py",
+      "status": "PASS"
+    },
+    {
+      "expected_sha256": "c45f7fc9313908c9ed0851912e46729adefd6c81614ce1c7b81200038c60ec03",
+      "path": "contracts/VALIDATION_PROTOCOL.md",
+      "status": "PASS"
+    }
+  ],
+  "source_path_in_receipt": "REDACTED",
+  "source_sha_verification": "PASS"
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "fco.supabase.source_intake.v1",
+  "observed_at": "NOT_OBSERVED",
+  "reported_at_utc": "2026-11-02",
+  "reported_fact": "A dataset is being built on Supabase",
+  "reporter": "USER",
+  "state": "REPORTED_IN_PROGRESS",
+  "project_ref": null,
+  "schema_names": [],
+  "table_names": [],
+  "data_classification": "UNKNOWN",
+  "rows_observed": null,
+  "snapshot_transaction_id": null,
+  "snapshot_export_sha256": null,
+  "source_root": "NOT_COMPUTED",
+  "snapshot_merkle_root": "NOT_COMPUTED",
+  "signature": "NOT_SIGNED",
+  "mmr": "NOT_COMPUTED",
+  "chain_parent": "513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730",
+  "source_to_fcg_edge": {
+    "relation": "PROPOSED_SOURCE_FOR",
+    "target": "Frontier Forms EHR intake",
+    "state": "NOT_TESTED"
+  },
+  "private_export": "NOT_AUTHORIZED",
+  "actual_supabase_query": "NOT_EXECUTED",
+  "tests": {
+    "integrity": "NOT_TESTED",
+    "privacy": "NOT_TESTED",
+    "label_leakage": "NOT_TESTED",
+    "fhir_mapping": "NOT_TESTED",
+    "ocr": "NOT_TESTED"
+  }
+}
