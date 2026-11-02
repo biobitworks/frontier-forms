@@ -1,0 +1,226 @@
+{
+  "bbox_format" : "normalized bottom-left x,y,width,height",
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "engine_version" : "OS-native",
+  "pages" : [
+    {
+      "lines" : [
+        {
+          "bbox_norm_bl" : [
+            0.067669172277873058,
+            0.84883720917220484,
+            0.097744362027037374,
+            0.026162791011309361
+          ],
+          "confidence" : 1,
+          "text" : "form)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548874101067248,
+            0.81249999996247058,
+            0.10902255189185048,
+            0.013257575757575801
+          ],
+          "confidence" : 1,
+          "text" : "Patient name"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187969869035795,
+            0.78633720928452067,
+            0.12030075172972836,
+            0.014672891539756705
+          ],
+          "confidence" : 1,
+          "text" : "Lanny Volkman"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548871169106255,
+            0.75000000001716705,
+            0.30639097924325975,
+            0.016161615679962438
+          ],
+          "confidence" : 1,
+          "text" : "List all medications you currently take"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.077015374534340666,
+            0.72526196824600397,
+            0.79709719988255712,
+            0.01754448437931555
+          ],
+          "confidence" : 1,
+          "text" : "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG\/ML Auto-Injector;"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075070088662208337,
+            0.6596478012604795,
+            0.043468844345192492,
+            0.013553235025116961
+          ],
+          "confidence" : 1,
+          "text" : "None"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069252588367747531,
+            0.62017753165043077,
+            0.25809900620404413,
+            0.019279289245605513
+          ],
+          "confidence" : 1,
+          "text" : "Food or environmental allergies"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.07518796472981687,
+            0.5973837209433237,
+            0.81954888237847223,
+            0.015988372070620649
+          ],
+          "confidence" : 1,
+          "text" : "Glycine max (substance); Eggs (edible) (substance); Tree nut (substance); Allergic disposition (finding); Bee"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187984832724306,
+            0.58131313152799957,
+            0.81015034594566993,
+            0.016161615679962438
+          ],
+          "confidence" : 1,
+          "text" : "venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Tree pollen"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075144755041484296,
+            0.56812620962883464,
+            0.094071391984528185,
+            0.013456883093323269
+          ],
+          "confidence" : 1,
+          "text" : "(substance)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548876570555529,
+            0.53924418597464363,
+            0.21804510378370096,
+            0.013281066489942206
+          ],
+          "confidence" : 1,
+          "text" : "Current medical conditions"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.077067672078365318,
+            0.51308139536189756,
+            0.81203006918913412,
+            0.016211534268928296
+          ],
+          "confidence" : 1,
+          "text" : "Seasonal allergic rhinitis (disorder); Atopic dermatitis (disorder); Laceration - injury (disorder); Laceration of"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308268333143287,
+            0.49848484837159024,
+            0.14097744810814949,
+            0.014646464646464574
+          ],
+          "confidence" : 1,
+          "text" : "forearm (disorder)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069300400898108364,
+            0.4674692896499606,
+            0.096375528971354166,
+            0.016127071958599637
+          ],
+          "confidence" : 1,
+          "text" : "Height (cm)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187969080972569,
+            0.44476744185845896,
+            0.046992482702716498,
+            0.01453488378813772
+          ],
+          "confidence" : 1,
+          "text" : "133.6"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067549979021987935,
+            0.40798381911624049,
+            0.097982748193678512,
+            0.016881199075718056
+          ],
+          "confidence" : 1,
+          "text" : "Weight (kg)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187970014138919,
+            0.38662790693467275,
+            0.035714285358104822,
+            0.01308139550565468
+          ],
+          "confidence" : 1,
+          "text" : "34.9"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548878081802656,
+            0.34883720931777906,
+            0.37406013837826796,
+            0.01598837207062076
+          ],
+          "confidence" : 1,
+          "text" : "Most recent blood pressure (systolic\/diastolic)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075161931283652186,
+            0.32696989509719054,
+            0.054563355290032686,
+            0.013211372645214436
+          ],
+          "confidence" : 1,
+          "text" : "126\/79"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067226449591789611,
+            0.28775300858796315,
+            0.13051808675130208,
+            0.018672993207218713
+          ],
+          "confidence" : 1,
+          "text" : "Smoking status"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308270778342982,
+            0.26744186036718065,
+            0.050751879324320875,
+            0.011627907223171641
+          ],
+          "confidence" : 1,
+          "text" : "never"
+        }
+      ],
+      "page_index" : 0,
+      "pixel_height" : 1980,
+      "pixel_width" : 1530
+    }
+  ],
+  "pdfkit_text" : "SYNTHETIC DEMO FORM. Not a real clinic. Do not enter real patient data.\nMedication and allergy intake (synthetic demo\nform)\nPatient name\nLanny Volkman\nList all medications you currently take\nFexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG\/ML Auto-Injector;\nHydrocortisone 10 MG\/ML Topical Cream; Acetaminophen 160 MG Chewable Tablet\nDo you have any medication allergies? If yes, list them\nNone\nFood or environmental allergies\nGlycine max (substance); Eggs (edible) (substance); Tree nut (substance); Allergic disposition (finding); Bee\nvenom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Tree pollen\n(substance)\nCurrent medical conditions\nSeasonal allergic rhinitis (disorder); Atopic dermatitis (disorder); Laceration - injury (disorder); Laceration of\nforearm (disorder)\nHeight (cm)\n133.6\nWeight (kg)\n34.9\nMost recent blood pressure (systolic\/diastolic)\n126\/79\nSmoking status\nnever",
+  "pdfkit_text_is_not_ocr" : true
+}

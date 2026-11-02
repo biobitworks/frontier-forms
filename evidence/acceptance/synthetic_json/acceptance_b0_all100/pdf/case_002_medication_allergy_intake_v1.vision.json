@@ -1,0 +1,236 @@
+{
+  "bbox_format" : "normalized bottom-left x,y,width,height",
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "engine_version" : "OS-native",
+  "pages" : [
+    {
+      "lines" : [
+        {
+          "bbox_norm_bl" : [
+            0.069474756429343573,
+            0.93165043411090565,
+            0.4926351709303512,
+            0.013874879027857889
+          ],
+          "confidence" : 1,
+          "text" : "SYNTHETIC DEMO FORM. Not a real clinic. Do not enter real patient data."
+        },
+        {
+          "bbox_norm_bl" : [
+            0.071428582422539702,
+            0.87929292949837679,
+            0.80451125599979589,
+            0.02929292929292926
+          ],
+          "confidence" : 1,
+          "text" : "Medication and allergy intake (synthetic demo"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067669172277873058,
+            0.84883720917220484,
+            0.097744362027037374,
+            0.026162791011309361
+          ],
+          "confidence" : 1,
+          "text" : "form)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548874101067248,
+            0.81249999996247058,
+            0.10902255189185048,
+            0.013257575757575801
+          ],
+          "confidence" : 1,
+          "text" : "Patient name"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.074882620983990164,
+            0.78711580762855116,
+            0.12093481924019607,
+            0.015208201938205379
+          ],
+          "confidence" : 1,
+          "text" : "Keren Schumm"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067669169897080231,
+            0.75000000001716705,
+            0.30827068254059437,
+            0.016161615679962438
+          ],
+          "confidence" : 1,
+          "text" : "List all medications you currently take"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187968628869103,
+            0.72525252518718109,
+            0.82518797232434637,
+            0.016161616161616266
+          ],
+          "confidence" : 1,
+          "text" : "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG\/ML Auto-Injector; Trinessa 28 Day"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187970173208177,
+            0.71366279065369032,
+            0.041353382783777579,
+            0.013081395505654791
+          ],
+          "confidence" : 1,
+          "text" : "Pack"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.06954887297991251,
+            0.68023255815435346,
+            0.44360902075674025,
+            0.016232088358715369
+          ],
+          "confidence" : 1,
+          "text" : "Do you have any medication allergies? If yes, list them"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075141265051918718,
+            0.65687799222181742,
+            0.056484386967677699,
+            0.016185876094933715
+          ],
+          "confidence" : 1,
+          "text" : "Aspirin"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069394195331754602,
+            0.62042529543964342,
+            0.25781110377093547,
+            0.017715567771834473
+          ],
+          "confidence" : 1,
+          "text" : "Food or environmental allergies"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187979700832949,
+            0.59738372094662484,
+            0.3796992283241421,
+            0.015988372070620649
+          ],
+          "confidence" : 1,
+          "text" : "Shellfish (substance); Allergic disposition (finding)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548876570555529,
+            0.56395348830022507,
+            0.21804510378370096,
+            0.01331923899024412
+          ],
+          "confidence" : 1,
+          "text" : "Current medical conditions"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075044915549958,
+            0.53856526149750072,
+            0.25592964521420547,
+            0.016208671801017926
+          ],
+          "confidence" : 1,
+          "text" : "Medication review due (situation)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069410193097139944,
+            0.50234031356186226,
+            0.096142019633374182,
+            0.015668210116299708
+          ],
+          "confidence" : 1,
+          "text" : "Height (cm)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187971105579704,
+            0.47965116273954178,
+            0.045112779405381942,
+            0.01308139550565468
+          ],
+          "confidence" : 1,
+          "text" : "173.4"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067669172275954995,
+            0.44186046514346877,
+            0.097744362027037388,
+            0.016220342751705252
+          ],
+          "confidence" : 1,
+          "text" : "Weight (kg)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187970472629984,
+            0.4215116278143628,
+            0.037593983668907011,
+            0.011627907223171752
+          ],
+          "confidence" : 1,
+          "text" : "62.8"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.0695488780813239,
+            0.38372093020279952,
+            0.37406013837826801,
+            0.014763918308296597
+          ],
+          "confidence" : 1,
+          "text" : "Most recent blood pressure (systolic\/diastolic)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.07504710889974546,
+            0.36010618452000875,
+            0.0547930000654233,
+            0.013799258916065038
+          ],
+          "confidence" : 1,
+          "text" : "103\/66"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067669172728835339,
+            0.32267441863216717,
+            0.12969924827027163,
+            0.016214470429853911
+          ],
+          "confidence" : 1,
+          "text" : "Smoking status"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.076967978203787632,
+            0.30208070342354598,
+            0.047191864213133164,
+            0.012117663296786207
+          ],
+          "confidence" : 1,
+          "text" : "never"
+        }
+      ],
+      "page_index" : 0,
+      "pixel_height" : 1980,
+      "pixel_width" : 1530
+    }
+  ],
+  "pdfkit_text" : "SYNTHETIC DEMO FORM. Not a real clinic. Do not enter real patient data.\nMedication and allergy intake (synthetic demo\nform)\nPatient name\nKeren Schumm\nList all medications you currently take\nLoratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG\/ML Auto-Injector; Trinessa 28 Day\nPack\nDo you have any medication allergies? If yes, list them\nAspirin\nFood or environmental allergies\nShellfish (substance); Allergic disposition (finding)\nCurrent medical conditions\nMedication review due (situation)\nHeight (cm)\n173.4\nWeight (kg)\n62.8\nMost recent blood pressure (systolic\/diastolic)\n103\/66\nSmoking status\nnever",
+  "pdfkit_text_is_not_ocr" : true
+}
