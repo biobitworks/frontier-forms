@@ -1,4 +1,42 @@
 {
+ "answers": {
+  "apple_vision_parser": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "F",
+   "Patient first": "Cleo27",
+   "Patient last": "Paucek755",
+   "Synthetic case": "synform2-ce08cff8d07665997ab7",
+   "Visit class": "outpatient"
+  },
+  "qwen2.5:1.5b": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "F",
+   "Patient first": "Paucek755",
+   "Patient last": "2001-03-31",
+   "Synthetic case": "Cleo27",
+   "Visit class": "outpatient"
+  },
+  "qwen2.5vl:3b": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "F",
+   "Patient first": "Cleo27",
+   "Patient last": "Paucek755",
+   "Synthetic case": "synform2-ce08cff8d07665997ab7",
+   "Visit class": "outpatient"
+  },
+  "qwen3:1.7b": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "F",
+   "Patient first": "Paucek755",
+   "Patient last": "Cleo27",
+   "Synthetic case": "Synthetic case:",
+   "Visit class": "outpatient"
+  }
+ },
  "dataset": "synform2",
  "detector_boxes": [
   {
@@ -169,6 +207,7 @@
  },
  "id": "synform2-ce08cff8d07665997ab7_scan",
  "image": "img/synform2-ce08cff8d07665997ab7_scan.png",
+ "input_fco_id": "fco:4183a40b767dd729915a145d2e9eb7c96e84aad282aad01389d2f5022f3c5508",
  "ocr_boxes": [
   {
    "box": [

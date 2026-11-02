@@ -1,0 +1,62 @@
+{
+ "synform2-ce08cff8d07665997ab7_E3_case_id_swap": {
+  "apple_vision_parser": 5,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-ce08cff8d07665997ab7_E6_name_swap": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-ce08cff8d07665997ab7_E7_digit_flip": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-ce08cff8d07665997ab7_V2_scan_sigma25": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-ce08cff8d07665997ab7_clean": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-ce08cff8d07665997ab7_scan": {
+  "apple_vision_parser": 7,
+  "qwen2.5:1.5b": 4,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": 4
+ },
+ "synform2-d0c1b1664723a40a00dd_clean": {
+  "apple_vision_parser": 5,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-d0c1b1664723a40a00dd_scan": {
+  "apple_vision_parser": 5,
+  "qwen2.5:1.5b": 5,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": 4
+ },
+ "synform2-d25a62e4657d1668520e_clean": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": null
+ },
+ "synform2-d25a62e4657d1668520e_scan": {
+  "apple_vision_parser": 6,
+  "qwen2.5:1.5b": 6,
+  "qwen2.5vl:3b": 7,
+  "qwen3:1.7b": 5
+ }
+}

@@ -1,4 +1,42 @@
 {
+ "answers": {
+  "apple_vision_parser": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": null,
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "synform2-d25a62e4657d1668520e",
+   "Visit class": "wellness"
+  },
+  "qwen2.5:1.5b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "Gender",
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "synform2-d25a62e4657d1668520e",
+   "Visit class": "wellness"
+  },
+  "qwen2.5vl:3b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "F",
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "synform2-d25a62e4657d1668520e",
+   "Visit class": "wellness"
+  },
+  "qwen3:1.7b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "Gender",
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "SYNTHETIC",
+   "Visit class": "wellness"
+  }
+ },
  "dataset": "synform2",
  "detector_boxes": [
   {
@@ -169,6 +207,7 @@
  },
  "id": "synform2-d25a62e4657d1668520e_scan",
  "image": "img/synform2-d25a62e4657d1668520e_scan.png",
+ "input_fco_id": "fco:17f7c8e8de8b3a5d0addce4103ac689ac1c0527af6f9a72f9ab66bfa74c4eec2",
  "ocr_boxes": [
   {
    "box": [

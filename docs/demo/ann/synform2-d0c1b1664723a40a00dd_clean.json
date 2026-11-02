@@ -1,4 +1,26 @@
 {
+ "answers": {
+  "apple_vision_parser": {
+   "Birth date": "1963-07-21",
+   "Encounter date": "1988-10-16",
+   "Gender": "M",
+   "Patient first": "Stephan 15",
+   "Patient last": "Emmerich580",
+   "Synthetic case": "synform2-dOc 1b1664723a40a00dd",
+   "Visit class": "ambulatory"
+  },
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": {
+   "Birth date": "1963-07-21",
+   "Encounter date": "1988-10-16",
+   "Gender": "M",
+   "Patient first": "Stephan15",
+   "Patient last": "Emmerich580",
+   "Synthetic case": "synform2-d0c1b1664723a40a00dd",
+   "Visit class": "ambulatory"
+  },
+  "qwen3:1.7b": null
+ },
  "dataset": "synform2",
  "detector_boxes": [
   {
@@ -169,6 +191,7 @@
  },
  "id": "synform2-d0c1b1664723a40a00dd_clean",
  "image": "img/synform2-d0c1b1664723a40a00dd_clean.png",
+ "input_fco_id": "fco:7d7d7259ac92e165c7b4dca8b35e13c5a2e6babeb23da6d2a4c2973908cc0ee7",
  "ocr_boxes": [
   {
    "box": [
