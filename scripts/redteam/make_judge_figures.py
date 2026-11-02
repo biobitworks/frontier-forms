@@ -20,7 +20,7 @@ SYN = 'SYNTHETIC DATA ONLY (MITRE Synthea sample) — not clinical, no PHI, no h
 F = lambda s: ImageFont.load_default(size=s)
 
 
-ASCII = {'—': '-', '–': '-', '≥': '>=', '≤': '<=', '▲': '^', '▼': 'v', '✓': 'yes', '→': '->', '×': 'x', '…': '...', '·': '|', '∧': 'AND', 'σ': 'sigma', '°': ' deg'}
+ASCII = {'Δ': 'd', '−': '-', '—': '-', '–': '-', '≥': '>=', '≤': '<=', '▲': '^', '▼': 'v', '✓': 'yes', '→': '->', '×': 'x', '…': '...', '·': '|', '∧': 'AND', 'σ': 'sigma', '°': ' deg'}
 
 
 def a(t):
@@ -57,7 +57,7 @@ def heatmap(rows, cols, values, labels, cell=(118, 30), left=330, top=60, title_
         for k, part in enumerate(textwrap.wrap(c, 16)[:3]):
             d.text((left + j * cell[0] + 6, 4 + 16 * k), a(part), fill=INK, font=F(13))
     for i, r in enumerate(rows):
-        d.text((8, top + i * cell[1] + 8), a(r)[:62], fill=INK, font=F(13))
+        d.text((8, top + i * cell[1] + 8), a(r)[:92], fill=INK, font=F(13))
         for j, _ in enumerate(cols):
             v = values[i][j]; x, y = left + j * cell[0], top + i * cell[1]
             d.rounded_rectangle([x + 1, y + 1, x + cell[0] - 2, y + cell[1] - 2], 4, fill=shade(v) if v is not None else BG, outline=LINE)
@@ -74,6 +74,28 @@ def bars(items, maxv, unit='', width=900, bar_h=34):
         L = int((width - left - 160) * v / maxv)
         d.rounded_rectangle([left, y + 6, left + max(L, 2), y + bar_h - 6], 4, fill=hexrgb('#3987e5'))
         d.text((left + L + 8, y + 9), a(f'{v}{unit} {note}'), fill=INK, font=F(14))
+    return im
+
+
+
+def table(rows, cols, widths, row_h=24):
+    """rows: list of tuples of strings; colours the last column by decision word (text + tint, never colour alone)."""
+    w = sum(widths) + 20; h = 34 + row_h * len(rows) + 8
+    im = Image.new('RGB', (w, h), BG); d = ImageDraw.Draw(im)
+    x = 10
+    for c, cw in zip(cols, widths):
+        d.text((x + 4, 8), a(c), fill=INK, font=F(14)); x += cw
+    d.line([10, 30, w - 10, 30], fill=LINE, width=1)
+    tint = {'PROMOTE': (205, 226, 251), 'PASS': (205, 226, 251), 'GAIN': (205, 226, 251), 'NULL': (243, 244, 246), 'NEUTRAL': (243, 244, 246),
+            'NEGATIVE': (254, 226, 226), 'LOSS': (254, 226, 226), 'BLOCKED': (255, 237, 213), 'NOT_TESTED': (255, 237, 213)}
+    for i, r in enumerate(rows):
+        y = 34 + i * row_h; x = 10
+        key = next((k for k in tint if str(r[-1]).upper().startswith(k)), None)
+        if key:
+            d.rectangle([10 + sum(widths[:-1]), y, 10 + sum(widths), y + row_h - 2], fill=tint[key])
+        for v, cw in zip(r, widths):
+            t = a(v); maxc = int(cw / 7.2)
+            d.text((x + 4, y + 5), t if len(t) <= maxc else t[:maxc - 3] + '...', fill=INK, font=F(13)); x += cw
     return im
 
 
@@ -103,11 +125,11 @@ def main():
         for w in ws:
             st = w.get('stages', {})
             row = [1.0 if st.get(s) else 0.0 for s in stages]
-            neg = (w.get('blocked_or_negative') or '').upper()
-            vals.append(row); labs.append(['✓' if x else ('BLOCKED' if ('BLOCK' in neg and k >= 2) else '—') for k, x in enumerate(row)])
-        body = heatmap([f"{w['name']} (#{', #'.join(str(p) for p in w.get('prs', [])[:4])})" for w in ws], stages, vals, labs, cell=(120, 28), left=520)
+            vals.append(row + [None]); labs.append(['yes' if x else '-' for x in row] + [w.get('highest_status_reached', '')])
+        names = [f"{w['name']} (#{', #'.join(str(p) for p in w.get('prs', [])[:4])})" for w in ws]
+        body = heatmap(names, stages + ['Outcome'], vals, labs, cell=(112, 26), left=640, title_cols=stages + ['Outcome (highest status / result)'])
         add('What we accomplished: workstreams × evidence stage', fit(body),
-            'Each row is a workstream across all pull requests; a filled cell means the PRs show that stage was reached (PROPOSED → IMPLEMENTED → EXECUTED → OBSERVED → SUPPORTED). SUPPORTED requires McNemar + bootstrap + independent replication + guardrails; BLOCKED marks lanes stopped by access or policy (e.g. hosted inference).',
+            'Each row is a workstream across all 34 pull requests (27 merged, 4 open, 3 closed as superseded). Blue cells = the PRs show that stage was reached. Outcome keeps the honest result: NEGATIVE / NULL results and BLOCKED lanes (hosted inference, Snyk) are shown, not hidden. No workstream is SUPPORTED yet: that needs McNemar + bootstrap + an independent replication cohort + guardrails.',
             'docs/judges/pr_inventory.json (built from every PR in biobitworks/frontier-forms)', 'accomplishment_heatmap')
     else:
         skipped.append('accomplishment heat map (pr_inventory.json missing)')
@@ -168,6 +190,65 @@ def main():
         add('Training over time: every epoch committed as a Merkle leaf (GAIN / LOSS / NEUTRAL)', im,
             f"Local YOLOv8n field-box detector trained on the SYNFORM2 train split; after every epoch the weights are hashed, scored on the dev split (field box IoU ≥ 0.5, 308 boxes), compared with the previous epoch (exact McNemar + stratified bootstrap) and committed to a hash chain. Test (touched once): full mAP50 {fr['test']['mAP50']:.3f}, {fr['test']['fields_ok']}/{fr['test']['fields_total']} boxes; LOMO no-scan mAP50 {nr['test']['mAP50']:.3f}, {nr['test']['fields_ok']}/{nr['test']['fields_total']}. Chain roots {fr['chain_root'][:12]}… / {nr['chain_root'][:12]}….",
             'evidence/redteam/detector/{full,no_scan}/epoch_ledger.jsonl, chain_manifest.json, final_receipt.json', 'epoch_ledger')
+
+
+    # promotions and negatives: every decision in one table
+    dec = []
+    am = R / 'evidence/redteam/attribution_matrix.json'
+    if am.exists():
+        for r in json.loads(am.read_text())['records']:
+            if r['kind'] in ('MODEL_LANE', 'CONTEXT_PROJECTION') and 'table' in r and r['split'] == 'heldout':
+                w = r['weights']; ww = w['challenger']['name'] if r['kind'] == 'MODEL_LANE' else w['baseline']['name']
+                verdict = 'NEGATIVE_WORSE' if (r['holm_p'] < 0.05 and r['delta_abs'] < 0) else ('PROMOTE (discovery)' if r['admission'] == 'PASS' else 'NULL')
+                dec.append(('LongevityBench heldout (n=39)', ww, r['intervention'][:40], f"d={r['delta_abs']:+.3f}, Holm p={r['holm_p']:.3f}", verdict))
+    gfp = R / 'evidence/redteam/gate_factorial.json'
+    if gfp.exists():
+        g = json.loads(gfp.read_text())
+        for k, c in sorted(g['configurations'].items(), key=lambda kv: (sum(kv[1]['config'].values()), kv[0])):
+            if k == 'none' or k.count('+') not in (0, 3):
+                continue
+            v = c.get('vs_none', {})
+            dec.append(('Planted-error forms (135 img)', 'qwen2.5vl:3b + Apple OCR', 'checks: ' + k, f"detect {c['planted_detection_rate']:.2f}, false adm {c['false_admissions']}, Holm p={v.get('p_holm', 1):.4f}",
+                        'PROMOTE (discovery; no replication yet)' if v.get('mcnemar_gate_holm') and v.get('bootstrap_gate') else 'NULL'))
+    for run in ('full', 'no_scan'):
+        lp = R / f'evidence/redteam/detector/{run}/epoch_ledger.jsonl'
+        if lp.exists():
+            st = [json.loads(x)['status'] for x in lp.read_text().splitlines() if x.strip()]
+            for s_ in ('GAIN', 'LOSS'):
+                eps = [i + 1 for i, x in enumerate(st) if x == s_]
+                dec.append((f'Detector training ({run})', 'YOLOv8n (trained locally)', f'epoch vs previous epoch ({len(eps)} epochs)', 'epochs ' + ', '.join(map(str, eps)) if eps else 'none', s_))
+            dec.append((f'Detector training ({run})', 'YOLOv8n (trained locally)', 'remaining epochs', f"{st.count('NEUTRAL')} epochs", 'NEUTRAL'))
+    tgp = R / 'evidence/redteam/trained_gain/trained_gain_summary.json'
+    if tgp.exists():
+        t = json.loads(tgp.read_text())
+        names = {'A1': 'learned OCR correction', 'A2': 'trained detector crops', 'A3': 'detector crops + correction'}
+        for arm, c in t['comparisons_vs_A0'].items():
+            dec.append(('Test forms (46 img, once)', 'trained local models vs page OCR', names[arm], f"all-7 {c['baseline_all7']}->{c['arm_all7']}/46, fields {c['baseline_fields_correct']}->{c['fields_correct']}/322, Holm p={c['p_holm']:.4f}", c['decision']))
+    invp = R / 'docs/judges/pr_inventory.json'
+    if invp.exists():
+        for w in json.loads(invp.read_text())['workstreams']:
+            if w['highest_status_reached'] in ('NEGATIVE', 'NULL', 'BLOCKED', 'NOT_TESTED'):
+                dec.append(('All PRs (inventory)', w['name'][:34], 'workstream outcome', (w.get('blocked_or_negative') or '')[:60], w['highest_status_reached']))
+    if dec:
+        add('Every promotion decision, including negative and null results', fit(table(dec, ['Data', 'Weights / model', 'Intervention', 'Measured', 'Decision'], [200, 230, 290, 420, 360])),
+            'One row per decision. PROMOTE requires Holm-corrected exact McNemar p<0.05 and a stratified-bootstrap lower 95% CI > 0, and is labelled discovery because the replication cohort is NOT_TESTED. NEGATIVE, NULL, LOSS, NEUTRAL, BLOCKED and NOT_TESTED rows are kept on purpose. Tint repeats the word in the Decision column (blue = promote/gain, grey = null/neutral, red = negative/loss, orange = blocked/not tested).',
+            'evidence/redteam/attribution_matrix.json, gate_factorial.json, detector/*/epoch_ledger.jsonl, trained_gain/trained_gain_summary.json, docs/judges/pr_inventory.json', 'promotions_and_negatives')
+
+    # trained local models vs untrained baseline (preregistered, test split scored once)
+    if tgp.exists():
+        t = json.loads(tgp.read_text()); C = t['comparisons_vs_A0']; b0 = C['A1']
+        items = [('A0 page OCR + rule parser (untrained)', b0['baseline_all7'], f"/ 46 forms all 7 fields | {b0['baseline_fields_correct']}/322 fields | baseline")]
+        names = {'A1': 'A1 + learned correction (fit on train)', 'A2': 'A2 trained YOLOv8n crops + OCR', 'A3': 'A3 detector crops + correction'}
+        for arm in ('A1', 'A2', 'A3'):
+            c = C[arm]; lo, hi = c['ci95_bootstrap_stratified']
+            items.append((names[arm], c['arm_all7'], f"/ 46 | {c['fields_correct']}/322 fields | Holm p={c['p_holm']:.3f} | CI [{lo:+.2f},{hi:+.2f}] | {c['decision'].split(' ')[0]}"))
+        cm = t['trained_components']['post_correction']
+        rules = [f"{f}: {k}" for f, m in cm['char_map'].items() for k in m]
+        add('Trained local models vs the untrained baseline (test split, scored once)', bars(items, 46, width=1300),
+            'Preregistered before the test split was scored (scripts/redteam/trained_gain_eval.py, committed first). Endpoint: forms with all 7 fields correct, 46 held-out images (23 patients x clean + scan). '
+            f"The learned correction was fit only on the 132 training images: strip spaces in every field (no training value contains one) plus character rules seen at least twice and never contradicted ({', '.join(rules) or 'none'}). "
+            'It is the only trained arm that is promoted, at discovery grade because the replication cohort is NOT_TESTED. The trained YOLOv8n detector finds fields well (mAP50 0.912) but OCR on its crops is NULL, and so is crops plus correction.',
+            'evidence/redteam/trained_gain/trained_gain_summary.json, trained_gain_rows.json', 'trained_gain')
 
     # 5+ labelled form images
     demo = R / 'docs/demo'
