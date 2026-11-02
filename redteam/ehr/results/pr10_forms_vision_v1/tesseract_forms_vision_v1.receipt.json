@@ -1,0 +1,12 @@
+{
+ "bbox_semantics": "value-text box (union of OCR words right of the 'Label:' token); input boxes not detected",
+ "eng_traineddata_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+ "gold_read": false,
+ "images": 57,
+ "note": "fields = only 'Label: value' on one OCR line; web-style forms with labels above input boxes yield few fields, so every OCR line with its box is also emitted under 'lines' for label-proximity scoring",
+ "output_sha256": "91075ce32a2ca016ac57044ff941097c52e7923648b67112d3fe43c18eea3969",
+ "psm": "4",
+ "runner": "redteam/ehr/tesseract_generic.py",
+ "runner_sha256": "829f6931e903b709fb62397dd3955828c78751db8ce670785eec033b3a6a105f",
+ "tesseract_version": "tesseract 5.5.3"
+}
