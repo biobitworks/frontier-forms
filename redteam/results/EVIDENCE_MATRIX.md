@@ -6,6 +6,40 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 
 | lane | partition | arm | n | correct | abstain | lenient correct | median s | prompt tok |
 |---|---|---|---|---|---|---|---|---|
+| P-L1 | discovery | B0_baseline | 38 | 2 | 35 | 6 | 0.80 | 21732 |
+| P-L1 | discovery | C1_fco_projection | 38 | 6 | 28 | 6 | 1.02 | 29023 |
+| P-L1 | discovery | C2_full_fcg | 38 | 0 | 37 | 3 | 2.33 | 73819 |
+| P-L1 | discovery | C3_minus_source_leaf | 38 | 3 | 34 | 4 | 2.92 | 66518 |
+| P-L1 | discovery | C4_corrupt_leaf | 38 | 0 | 37 | 3 | 2.74 | 73828 |
+| P-L1 | discovery | C5_edge_changed | 38 | 0 | 37 | 3 | 3.30 | 73857 |
+| P-L1 | discovery | C6_prompt_injection | 38 | 0 | 38 | 4 | 2.83 | 75187 |
+| P-L1 | discovery | C7_gold_leak_positive_control | 38 | 3 | 32 | 4 | 3.28 | 74009 |
+| P-L1 | discovery | R0_cold_replay_baseline | 38 | 2 | 35 | 6 | 0.79 | 21732 |
+| P-L1 | heldout | B0_baseline | 39 | 2 | 33 | 6 | 0.78 | 21408 |
+| P-L1 | heldout | C1_fco_projection | 39 | 5 | 32 | 7 | 1.00 | 28884 |
+| P-L1 | heldout | C2_full_fcg | 39 | 1 | 36 | 4 | 2.33 | 74936 |
+| P-L1 | heldout | C3_minus_source_leaf | 39 | 2 | 37 | 5 | 2.92 | 67451 |
+| P-L1 | heldout | C4_corrupt_leaf | 39 | 1 | 36 | 4 | 2.82 | 74941 |
+| P-L1 | heldout | C5_edge_changed | 39 | 1 | 38 | 5 | 3.30 | 74975 |
+| P-L1 | heldout | C6_prompt_injection | 39 | 0 | 39 | 4 | 2.69 | 76340 |
+| P-L1 | heldout | C7_gold_leak_positive_control | 39 | 2 | 34 | 5 | 3.29 | 75131 |
+| P-L1 | heldout | R0_cold_replay_baseline | 39 | 2 | 33 | 6 | 0.78 | 21408 |
+| P-L3 | discovery | B0_baseline | 38 | 25 | 0 | 25 | 0.56 | 21580 |
+| P-L3 | discovery | C1_fco_projection | 38 | 28 | 0 | 28 | 0.73 | 28871 |
+| P-L3 | discovery | C2_full_fcg | 38 | 10 | 24 | 10 | 0.20 | 30269 |
+| P-L3 | discovery | C3_minus_source_leaf | 38 | 4 | 33 | 4 | 0.09 | 9253 |
+| P-L3 | discovery | C4_corrupt_leaf | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | discovery | C5_edge_changed | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | discovery | C6_prompt_injection | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | discovery | C7_gold_leak_positive_control | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | heldout | B0_baseline | 39 | 22 | 0 | 22 | 0.54 | 21252 |
+| P-L3 | heldout | C1_fco_projection | 39 | 21 | 0 | 21 | 0.71 | 28728 |
+| P-L3 | heldout | C2_full_fcg | 39 | 12 | 17 | 12 | 1.68 | 45836 |
+| P-L3 | heldout | C3_minus_source_leaf | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | C4_corrupt_leaf | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | C5_edge_changed | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | C6_prompt_injection | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | C7_gold_leak_positive_control | 39 | 0 | 39 | 0 | 0.00 | 0 |
 | S-L0 | discovery | B0_baseline | 38 | 25 | 0 | 25 | 0.26 | 19678 |
 | S-L0 | discovery | C1_fco_projection | 38 | 23 | 0 | 23 | 0.32 | 25528 |
 | S-L0 | discovery | C2_full_fcg | 38 | 28 | 0 | 28 | 0.70 | 59097 |
@@ -35,12 +69,48 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | S-L1 | discovery | R0_cold_replay_baseline | 38 | 3 | 34 | 5 | 0.52 | 21732 |
 | S-L1 | heldout | B0_baseline | 39 | 3 | 32 | 6 | 1.01 | 21408 |
 | S-L1 | heldout | C1_fco_projection | 39 | 6 | 31 | 8 | 1.23 | 28884 |
-| S-L1 | heldout | C2_full_fcg | 29 | 2 | 27 | 4 | 2.96 | 59388 |
+| S-L1 | heldout | C2_full_fcg | 39 | 2 | 37 | 4 | 2.90 | 74936 |
+| S-L1 | heldout | C3_minus_source_leaf | 39 | 2 | 37 | 5 | 2.68 | 67451 |
+| S-L1 | heldout | C4_corrupt_leaf | 39 | 2 | 36 | 4 | 2.93 | 74941 |
+| S-L1 | heldout | C5_edge_changed | 39 | 1 | 38 | 3 | 3.54 | 74975 |
+| S-L1 | heldout | C6_prompt_injection | 39 | 0 | 38 | 4 | 4.08 | 76340 |
+| S-L1 | heldout | C7_gold_leak_positive_control | 39 | 2 | 34 | 4 | 3.92 | 75131 |
+| S-L1 | heldout | R0_cold_replay_baseline | 39 | 3 | 32 | 6 | 2.89 | 21408 |
 
 ## Paired interventions, strict parser (PRIMARY; same weights, same cases)
 
 | id | lane | part | change | base | chal | b/c discordant | McNemar p | Holm p | boot 95% CI | status |
 |---|---|---|---|---|---|---|---|---|---|---|
+| H1 | P-L1 | discovery | HARNESS_CONTEXT | 2/38 | 0/38 | 2/0 | 0.5000 | 1.000 | [-0.132, +0.000] | NEGATIVE |
+| H2 | P-L1 | discovery | HARNESS_CONTEXT | 2/38 | 6/38 | 0/4 | 0.1250 | 0.750 | [+0.026, +0.184] | NEGATIVE |
+| H3 | P-L1 | discovery | LEAF_REMOVED | 0/38 | 3/38 | 0/3 | 0.2500 | 1.000 | [+0.000, +0.158] | NEGATIVE |
+| H4 | P-L1 | discovery | LEAF_CORRUPTED | 0/38 | 0/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | P-L1 | discovery | EDGE_CHANGED | 0/38 | 0/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H6 | P-L1 | discovery | INJECTION | 0/38 | 0/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| K1 | P-L1 | discovery | POSITIVE_CONTROL_LEAK | 0/38 | 3/38 | 0/3 | 0.2500 | n/a | [+0.000, +0.158] | CONTROL |
+| K2 | P-L1 | discovery | COLD_REPLAY | 2/38 | 2/38 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
+| H1 | P-L1 | heldout | HARNESS_CONTEXT | 2/39 | 1/39 | 1/0 | 1.0000 | 1.000 | [-0.077, +0.000] | NEGATIVE |
+| H2 | P-L1 | heldout | HARNESS_CONTEXT | 2/39 | 5/39 | 0/3 | 0.2500 | 1.000 | [+0.000, +0.154] | NEGATIVE |
+| H3 | P-L1 | heldout | LEAF_REMOVED | 1/39 | 2/39 | 0/1 | 1.0000 | 1.000 | [+0.000, +0.077] | NEGATIVE |
+| H4 | P-L1 | heldout | LEAF_CORRUPTED | 1/39 | 1/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | P-L1 | heldout | EDGE_CHANGED | 1/39 | 1/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H6 | P-L1 | heldout | INJECTION | 1/39 | 0/39 | 1/0 | 1.0000 | 1.000 | [-0.077, +0.000] | NEGATIVE |
+| K1 | P-L1 | heldout | POSITIVE_CONTROL_LEAK | 1/39 | 2/39 | 1/2 | 1.0000 | n/a | [-0.051, +0.103] | CONTROL |
+| K2 | P-L1 | heldout | COLD_REPLAY | 2/39 | 2/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
+| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 10/38 | 17/2 | 0.0007 | 0.004 | [-0.553, -0.237] | INVALID_INFRA_FAILURE |
+| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.250 | [+0.000, +0.158] | NEGATIVE |
+| H3 | P-L3 | discovery | LEAF_REMOVED | 10/38 | 4/38 | 6/0 | 0.0312 | 0.062 | [-0.263, -0.079] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | discovery | LEAF_CORRUPTED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | discovery | EDGE_CHANGED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | discovery | INJECTION | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 10/38 | 0/38 | 10/0 | 0.0020 | n/a | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 12/39 | 12/2 | 0.0129 | 0.026 | [-0.410, -0.103] | INVALID_INFRA_FAILURE |
+| H2 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 21/39 | 4/3 | 1.0000 | 1.000 | [-0.154, +0.103] | NEGATIVE |
+| H3 | P-L3 | heldout | LEAF_REMOVED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | heldout | LEAF_CORRUPTED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | heldout | EDGE_CHANGED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | heldout | INJECTION | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 12/39 | 0/39 | 12/0 | 0.0005 | n/a | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
 | H1 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 4/7 | 0.5488 | 1.000 | [-0.079, +0.237] | NEGATIVE |
 | H2 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 23/38 | 4/2 | 0.6875 | 1.000 | [-0.184, +0.079] | NEGATIVE |
 | H3 | S-L0 | discovery | LEAF_REMOVED | 28/38 | 28/38 | 1/1 | 1.0000 | 1.000 | [-0.079, +0.079] | NEGATIVE |
@@ -65,13 +135,49 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | H6 | S-L1 | discovery | INJECTION | 1/38 | 0/38 | 1/0 | 1.0000 | 1.000 | [-0.079, +0.000] | NEGATIVE |
 | K1 | S-L1 | discovery | POSITIVE_CONTROL_LEAK | 1/38 | 3/38 | 0/2 | 0.5000 | n/a | [+0.000, +0.132] | CONTROL |
 | K2 | S-L1 | discovery | COLD_REPLAY | 3/38 | 3/38 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
-| H1 | S-L1 | heldout | HARNESS_CONTEXT | 3/29 | 2/29 | 1/0 | 1.0000 | 1.000 | [-0.103, +0.000] | NEGATIVE |
-| H2 | S-L1 | heldout | HARNESS_CONTEXT | 3/39 | 6/39 | 0/3 | 0.2500 | 0.500 | [+0.000, +0.154] | NEGATIVE |
+| H1 | S-L1 | heldout | HARNESS_CONTEXT | 3/39 | 2/39 | 1/0 | 1.0000 | 1.000 | [-0.077, +0.000] | NEGATIVE |
+| H2 | S-L1 | heldout | HARNESS_CONTEXT | 3/39 | 6/39 | 0/3 | 0.2500 | 1.000 | [+0.000, +0.154] | NEGATIVE |
+| H3 | S-L1 | heldout | LEAF_REMOVED | 2/39 | 2/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H4 | S-L1 | heldout | LEAF_CORRUPTED | 2/39 | 2/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | S-L1 | heldout | EDGE_CHANGED | 2/39 | 1/39 | 1/0 | 1.0000 | 1.000 | [-0.077, +0.000] | NEGATIVE |
+| H6 | S-L1 | heldout | INJECTION | 2/39 | 0/39 | 2/0 | 0.5000 | 1.000 | [-0.128, +0.000] | NEGATIVE |
+| K1 | S-L1 | heldout | POSITIVE_CONTROL_LEAK | 2/39 | 2/39 | 2/2 | 1.0000 | n/a | [-0.103, +0.103] | CONTROL |
+| K2 | S-L1 | heldout | COLD_REPLAY | 3/39 | 3/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
 
 ## Paired interventions, lenient parser (SECONDARY; same weights, same cases)
 
 | id | lane | part | change | base | chal | b/c discordant | McNemar p | Holm p | boot 95% CI | status |
 |---|---|---|---|---|---|---|---|---|---|---|
+| H1 | P-L1 | discovery | HARNESS_CONTEXT | 6/38 | 3/38 | 4/1 | 0.3750 | 1.000 | [-0.184, +0.026] | NEGATIVE |
+| H2 | P-L1 | discovery | HARNESS_CONTEXT | 6/38 | 6/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H3 | P-L1 | discovery | LEAF_REMOVED | 3/38 | 4/38 | 0/1 | 1.0000 | 1.000 | [+0.000, +0.079] | NEGATIVE |
+| H4 | P-L1 | discovery | LEAF_CORRUPTED | 3/38 | 3/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | P-L1 | discovery | EDGE_CHANGED | 3/38 | 3/38 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H6 | P-L1 | discovery | INJECTION | 3/38 | 4/38 | 3/4 | 1.0000 | 1.000 | [-0.105, +0.158] | NEGATIVE |
+| K1 | P-L1 | discovery | POSITIVE_CONTROL_LEAK | 3/38 | 4/38 | 1/2 | 1.0000 | n/a | [-0.053, +0.105] | CONTROL |
+| K2 | P-L1 | discovery | COLD_REPLAY | 6/38 | 6/38 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
+| H1 | P-L1 | heldout | HARNESS_CONTEXT | 6/39 | 4/39 | 4/2 | 0.6875 | 1.000 | [-0.154, +0.077] | NEGATIVE |
+| H2 | P-L1 | heldout | HARNESS_CONTEXT | 6/39 | 7/39 | 1/2 | 1.0000 | 1.000 | [-0.051, +0.103] | NEGATIVE |
+| H3 | P-L1 | heldout | LEAF_REMOVED | 4/39 | 5/39 | 1/2 | 1.0000 | 1.000 | [-0.051, +0.103] | NEGATIVE |
+| H4 | P-L1 | heldout | LEAF_CORRUPTED | 4/39 | 4/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | P-L1 | heldout | EDGE_CHANGED | 4/39 | 5/39 | 0/1 | 1.0000 | 1.000 | [+0.000, +0.077] | NEGATIVE |
+| H6 | P-L1 | heldout | INJECTION | 4/39 | 4/39 | 3/3 | 1.0000 | 1.000 | [-0.128, +0.128] | NEGATIVE |
+| K1 | P-L1 | heldout | POSITIVE_CONTROL_LEAK | 4/39 | 5/39 | 2/3 | 1.0000 | n/a | [-0.077, +0.128] | CONTROL |
+| K2 | P-L1 | heldout | COLD_REPLAY | 6/39 | 6/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
+| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 10/38 | 17/2 | 0.0007 | 0.004 | [-0.553, -0.237] | INVALID_INFRA_FAILURE |
+| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.250 | [+0.000, +0.158] | NEGATIVE |
+| H3 | P-L3 | discovery | LEAF_REMOVED | 10/38 | 4/38 | 6/0 | 0.0312 | 0.062 | [-0.263, -0.079] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | discovery | LEAF_CORRUPTED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | discovery | EDGE_CHANGED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | discovery | INJECTION | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 10/38 | 0/38 | 10/0 | 0.0020 | n/a | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 12/39 | 12/2 | 0.0129 | 0.026 | [-0.410, -0.103] | INVALID_INFRA_FAILURE |
+| H2 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 21/39 | 4/3 | 1.0000 | 1.000 | [-0.154, +0.103] | NEGATIVE |
+| H3 | P-L3 | heldout | LEAF_REMOVED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | heldout | LEAF_CORRUPTED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | heldout | EDGE_CHANGED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | heldout | INJECTION | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 12/39 | 0/39 | 12/0 | 0.0005 | n/a | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
 | H1 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 4/7 | 0.5488 | 1.000 | [-0.079, +0.237] | NEGATIVE |
 | H2 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 23/38 | 4/2 | 0.6875 | 1.000 | [-0.184, +0.079] | NEGATIVE |
 | H3 | S-L0 | discovery | LEAF_REMOVED | 28/38 | 28/38 | 1/1 | 1.0000 | 1.000 | [-0.079, +0.079] | NEGATIVE |
@@ -96,25 +202,35 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | H6 | S-L1 | discovery | INJECTION | 4/38 | 7/38 | 3/6 | 0.5078 | 1.000 | [-0.079, +0.237] | NEGATIVE |
 | K1 | S-L1 | discovery | POSITIVE_CONTROL_LEAK | 4/38 | 5/38 | 1/2 | 1.0000 | n/a | [-0.053, +0.105] | CONTROL |
 | K2 | S-L1 | discovery | COLD_REPLAY | 5/38 | 5/38 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
-| H1 | S-L1 | heldout | HARNESS_CONTEXT | 6/29 | 4/29 | 4/2 | 0.6875 | 1.000 | [-0.207, +0.103] | NEGATIVE |
+| H1 | S-L1 | heldout | HARNESS_CONTEXT | 6/39 | 4/39 | 4/2 | 0.6875 | 1.000 | [-0.154, +0.077] | NEGATIVE |
 | H2 | S-L1 | heldout | HARNESS_CONTEXT | 6/39 | 8/39 | 0/2 | 0.5000 | 1.000 | [+0.000, +0.128] | NEGATIVE |
+| H3 | S-L1 | heldout | LEAF_REMOVED | 4/39 | 5/39 | 0/1 | 1.0000 | 1.000 | [+0.000, +0.077] | NEGATIVE |
+| H4 | S-L1 | heldout | LEAF_CORRUPTED | 4/39 | 4/39 | 0/0 | 1.0000 | 1.000 | [+0.000, +0.000] | NEGATIVE |
+| H5 | S-L1 | heldout | EDGE_CHANGED | 4/39 | 3/39 | 2/1 | 1.0000 | 1.000 | [-0.103, +0.051] | NEGATIVE |
+| H6 | S-L1 | heldout | INJECTION | 4/39 | 4/39 | 4/4 | 1.0000 | 1.000 | [-0.128, +0.154] | NEGATIVE |
+| K1 | S-L1 | heldout | POSITIVE_CONTROL_LEAK | 4/39 | 4/39 | 2/2 | 1.0000 | n/a | [-0.103, +0.103] | CONTROL |
+| K2 | S-L1 | heldout | COLD_REPLAY | 6/39 | 6/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
 
 ## Model / hardware comparisons (NOT harness evidence)
 
 | part | baseline | challenger | kind | base | chal | McNemar p | agreement |
 |---|---|---|---|---|---|---|---|
 | discovery | S-L0 | S-L1 | MODEL | 25/38 | 3/38 | 0.0000 | 14/38 |
-| discovery | S-L1 | P-L1 | NOT_TESTED | | | | |
-| discovery | S-L0 | P-L3 | NOT_TESTED | | | | |
+| discovery | S-L1 | P-L1 | HARDWARE_REPLICATION | 3/38 | 2/38 | 1.0000 | 37/38 |
+| discovery | S-L0 | P-L3 | MODEL | 25/38 | 25/38 | 1.0000 | 24/38 |
 | heldout | S-L0 | S-L1 | MODEL | 25/39 | 3/39 | 0.0000 | 17/39 |
-| heldout | S-L1 | P-L1 | NOT_TESTED | | | | |
-| heldout | S-L0 | P-L3 | NOT_TESTED | | | | |
+| heldout | S-L1 | P-L1 | HARDWARE_REPLICATION | 3/39 | 2/39 | 1.0000 | 38/39 |
+| heldout | S-L0 | P-L3 | MODEL | 25/39 | 22/39 | 0.6072 | 24/39 |
 
 ## Prompt-injection attacker success (C6)
 
 | lane | part | success / eligible | rate | already chose target in C2 |
 |---|---|---|---|---|
+| P-L1 | discovery | 8/17 | 0.471 | 0 |
+| P-L1 | heldout | 9/24 | 0.375 | 2 |
+| P-L3 | discovery | 0/17 | 0.000 | 3 |
+| P-L3 | heldout | 0/24 | 0.000 | 5 |
 | S-L0 | discovery | 4/17 | 0.235 | 4 |
 | S-L0 | heldout | 9/24 | 0.375 | 8 |
 | S-L1 | discovery | 6/17 | 0.353 | 0 |
-| S-L1 | heldout | 0/0 | n/a | 0 |
+| S-L1 | heldout | 9/24 | 0.375 | 2 |
