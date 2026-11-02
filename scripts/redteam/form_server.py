@@ -39,6 +39,9 @@ input.ok{border-color:var(--ok)} input.bad{border-color:var(--bad)} .verdict{fon
 <form>__FORM__</form></div></body></html>"""
 
 
+MODELS = ('qwen2.5vl:3b', 'apple_vision_parser', 'qwen2.5:1.5b', 'qwen3:1.7b')
+
+
 def boxes_svg(a):
     out = []
     for f, b in (a.get('gt_boxes') or {}).items():
@@ -53,15 +56,18 @@ def boxes_svg(a):
     return ''.join(out)
 
 
-def form_html(a):
-    rows = []
+def form_html(a, model):
+    answers = (a.get('answers') or {}).get(model)
+    rows = [f'<div style="font-weight:600;margin-bottom:4px">Filled by {html.escape(model)}' + ('' if answers is not None else ' — NOT_RUN for this image') + '</div>']
+    correct = 0
     for f in FIELDS:
         fa = (a.get('fields') or {}).get(f, {})
-        val = fa.get('vlm')
-        ok = fa.get('vlm_correct_vs_printed')
-        verdict = fa.get('validation', '')
-        rows.append(f'<label>{html.escape(f)} <span class="verdict">— qwen2.5vl:3b, validation {html.escape(str(verdict))}; printed "{html.escape(str(fa.get("printed")))}"; Apple Vision "{html.escape(str(fa.get("ocr")))}"</span></label>'
+        val = (answers or {}).get(f)
+        ok = answers is not None and ' '.join(str(val or '').split()).lower() == ' '.join(str(fa.get('printed') or '').split()).lower()
+        correct += ok
+        rows.append(f'<label>{html.escape(f)} <span class="verdict">— printed "{html.escape(str(fa.get("printed")))}" · {"match" if ok else "MISMATCH"}</span></label>'
                     f'<input class="{"ok" if ok else "bad"}" value="{html.escape("" if val is None else str(val))}" readonly>')
+    rows.append(f'<p style="margin-top:8px">{correct}/7 fields match the printed form</p>')
     return ''.join(rows)
 
 
@@ -72,16 +78,19 @@ class Handler(SimpleHTTPRequestHandler):
         if u.path in ('/', '/index.html'):
             items = sorted((root / 'ann').glob('*.json'))
             body = '<!doctype html><meta charset="utf-8"><title>Synthetic Form Index</title><body style="font:14px system-ui;padding:16px"><h1>Annotated synthetic forms</h1><ul>' + ''.join(
-                f'<li><a href="/viewer.html?id={p.stem}">{p.stem}</a> — {html.escape(json.loads(p.read_text()).get("title", ""))}</li>' for p in items) + '</ul></body>'
+                f'<li>{p.stem} — {html.escape(json.loads(p.read_text()).get("title", ""))}: ' + ' · '.join(f'<a href="/viewer.html?id={p.stem}&model={m}">{m}</a> (<a href="/viewer.html?id={p.stem}&model={m}&boxes=0">no boxes</a>)' for m in MODELS) + '</li>' for p in items) + '</ul></body>'
             return self._send(body)
         if u.path == '/viewer.html':
-            ident = (parse_qs(u.query).get('id') or [''])[0]
+            q = parse_qs(u.query)
+            ident = (q.get('id') or [''])[0]
+            model = (q.get('model') or ['qwen2.5vl:3b'])[0]
+            show_boxes = (q.get('boxes') or ['1'])[0] != '0'
             p = root / 'ann' / f'{Path(ident).name}.json'
             if not p.exists():
                 self.send_error(404, 'annotation not found'); return
             a = json.loads(p.read_text())
             body = (PAGE.replace('__TITLE__', html.escape(a.get('title', ident))).replace('__SUB__', html.escape(a.get('subtitle', '')))
-                    .replace('__IMG__', '/' + a['image']).replace('__BOXES__', boxes_svg(a)).replace('__FORM__', form_html(a)))
+                    .replace('__IMG__', '/' + a['image']).replace('__BOXES__', boxes_svg(a) if show_boxes else '').replace('__FORM__', form_html(a, model)))
             return self._send(body)
         return super().do_GET()
 
