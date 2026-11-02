@@ -118,7 +118,7 @@ def render_case(browser,base,template,patient_id,answers,pdf_path,vision_tool=No
     import fitz
     page=browser.new_page(viewport={"width":900,"height":1100},device_scale_factor=1)
     try:
-        page.goto(base+"/forms/"+template["template_key"],wait_until="domcontentloaded")
+        page.goto(base+"/preview/forms/"+template["template_key"],wait_until="domcontentloaded")
         dom=prepare_print_page(page,answers,template)
         pdf=page.pdf(format="Letter",print_background=True,
                      margin={"top":"0.35in","right":"0.35in","bottom":"0.35in","left":"0.35in"})
@@ -168,6 +168,8 @@ def run(args):
     out=Path(args.out)
     out.mkdir(parents=True,exist_ok=True)
     members,bundles=load_cohort(ROOT/"data/forms_cohort_v1/bundles",limit=args.limit)
+    if len(members)!=args.limit:
+        raise RuntimeError("COHORT_COUNT_MISMATCH")
     templates=load_templates()
     base_meta=model_meta(args.model) if args.arm=="qwen" else {"runtime":"rules","name":"B0","digest":None}
     state=FormState(members,bundles,templates)
@@ -230,7 +232,8 @@ def run(args):
                     if browser is None:
                         from playwright.sync_api import sync_playwright
                         pw=sync_playwright().start()
-                        browser=pw.chromium.launch(headless=True)
+                        chrome=Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+                        browser=pw.chromium.launch(headless=True,**({"executable_path":str(chrome)} if chrome.is_file() else {}))
                     path=out/"pdf"
                     path.mkdir(exist_ok=True)
                     filename=safe_filename("case_%03d_%s" % (rendered,key))

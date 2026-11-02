@@ -25,6 +25,7 @@ from urllib.parse import parse_qs, urlparse
 
 from .passport import build_passport
 from .templates import public_schema, render_html
+from .acceptance_preview import render_preview_html
 
 FHIR_SEARCH_TYPES = ("AllergyIntolerance", "Condition", "MedicationRequest", "Observation",
                      "Immunization", "Encounter", "ExplanationOfBenefit")
@@ -95,6 +96,11 @@ def make_handler(state: FormState):
                 return self._send(200, {"ok": True, "synthetic_only": True})
             if parts == ["forms"]:
                 return self._send(200, sorted(state.templates))
+            if len(parts) == 3 and parts[:2] == ["preview", "forms"]:
+                t = state.templates.get(parts[2])
+                if not t:
+                    return self._err(404, "UNKNOWN_TEMPLATE")
+                return self._send(200, render_preview_html(t), "text/html")
             if len(parts) in (2, 3) and parts[0] == "forms":
                 t = state.templates.get(parts[1])
                 if not t:
