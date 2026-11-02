@@ -168,7 +168,9 @@ nb("12_redteam_ehr_forms.ipynb", "EXP-012 (red-team): synthetic form → VLM ext
     "10 Claim ceiling": CEILING + " 12 clean rendered forms are not scanned/faxed documents; no OCR robustness claim."},
    [code(COMMON + """from frontier_forms.fhir_draft import FORM_FIELDS, confusion, draft_fhir
 pub = sorted((R / 'evidence/redteam/lanes').glob('EHR_*_forms12_PUBLIC.jsonl'))
-assert pub, 'FORMS_EXPORT_MISSING'
+if not pub:
+    res = {'status': 'NOT_TESTED', 'reason': 'legacy 12-form lane dropped by operator at finish request (GPU contention); superseded by SYNFORM2 lanes in EXP-014/015'}
+    emit('exp012_forms.json', res); print(res); raise SystemExit(0)
 rows = jsonl(pub[0]); meta = json.loads(pub[0].with_name(pub[0].name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
 assert len({r['case_id'] for r in rows}) == len(rows) == 12
 agg = {'n_forms': len(rows), 'model': meta['model'], 'form_root': meta['form_root'], 'per_field': {}, 'cross_patient_abstain': sum(1 for r in rows if r['cross_patient_identity_check'] == 'ABSTAIN')}
@@ -342,9 +344,78 @@ for p in sorted(L.glob('BBOX*_PUBLIC.jsonl')):
         for k in ('vlm_values_correct', 'vision_values_correct'): d[k] += r[k]
         d['vlm_iou_ge_05'] += r['vlm_iou_ge_0.5']; d['vision_iou_ge_05'] += r['vision_iou_ge_0.5']; d['vlm_mean_iou'] += r['vlm_mean_iou']; d['vision_mean_iou'] += r['vision_mean_iou']
     out['bbox'][p.stem] = {v: dict(d, vlm_mean_iou=d['vlm_mean_iou'] / d['images'], vision_mean_iou=d['vision_mean_iou'] / d['images'], fields=7 * d['images']) for v, d in by.items()} | {'model_digest': meta.get('model_digest')}
-det = R / 'evidence/redteam/detector/detector_receipt.json'
-if det.exists():
-    d = json.loads(det.read_text()); out['detector'] = {k: d[k] for k in ('framework', 'device', 'epochs', 'imgsz', 'val', 'test', 'trained_weights_sha256', 'start_weights', 'wall_seconds')}
-    out['weights']['yolov8n_field_detector'] = d['trained_weights_sha256']
-    assert d['dataset_manifest']['images'].get('test', 0) == 46, 'DETECTOR_TEST_SPLIT_SIZE'
+for run in ('full', 'no_scan'):
+    det = R / 'evidence/redteam/detector' / run / 'final_receipt.json'
+    if det.exists():
+        d = json.loads(det.read_text()); out.setdefault('detector', {})[run] = {k: d[k] for k in ('framework', 'device', 'test', 'best_weights_sha256', 'epochs_committed', 'chain_root', 'wall_seconds')}
+        out['weights'][f'yolov8n_field_detector_{run}'] = d['best_weights_sha256']
+dm = R / 'evidence/redteam/detector/dataset_manifest.json'
+if dm.exists():
+    assert json.loads(dm.read_text())['images'].get('test', 0) == 46, 'DETECTOR_TEST_SPLIT_SIZE'
 emit('exp015_mappers_bbox.json', out); print(json.dumps(out, indent=1)[:5000])""")])
+
+# ---------------------------------------------------------------- EXP-016 per-epoch Merkle breakpoints for detector training (full vs LOMO)
+nb("16_redteam_epoch_breakpoints.ipynb", "EXP-016 (red-team): per-epoch Merkle breakpoints for the local field detector — full vs LOMO (no scan variants)",
+   {"1 Requirements and predeclared hypothesis": "Every epoch is committed as a leaf (weights sha256, dev metrics, paired test vs previous epoch, status GAIN/LOSS/NEUTRAL) chained to the SYNFORM2 root. H0 (per epoch): epoch k does not differ from epoch k-1 on dev image pass (exact McNemar, stratified bootstrap). H0 (LOMO): removing scan-variant images from training does not change test image pass or field localisation versus the full run.",
+    "2 Input source, license, hashes": "evidence/redteam/detector/{full,no_scan}/{epoch_ledger.jsonl, chain_manifest.json, final_receipt.json, test_scores.json}; dataset built from SYNFORM2 root aa447934… (train 132 / val 44 / test 46 images).",
+    "3 Frozen settings": "YOLOv8n from yolov8n.pt (sha in chain context), 30 epochs, imgsz 640, seed 20261102, deterministic, MPS; image PASS = all 7 value boxes IoU ≥ 0.5.",
+    "4 Deterministic preprocessing": "labels from renderer geometry (no human annotation).",
+    "5 Model/harness execution": "replayed from ledgers; training happened on magicSTUDIObox.",
+    "6 Analysis": "independent chain replay (root and every parent_root), per-epoch status sequence, dev curve, final test paired McNemar + bootstrap full vs LOMO.",
+    "7 Negative controls": "tampering any epoch row must break the replayed root; dev-only scoring during training (test touched once at the end).",
+    "8 Outputs": "exp016_epochs.json, docs/architecture/epoch_breakpoints.svg.",
+    "9 FCO/FCG dependency changes": "adds TRAINED_FROM edges SYNFORM2 train split → 30 epoch weights per run, each a committed leaf; LOMO run shares the parent root.",
+    "10 Claim ceiling": CEILING + " Epoch statuses are dev-split statements; with 44 dev images a single-image change is NEUTRAL by design."},
+   [code(COMMON + """import copy, hashlib
+from redteam_verify_sources import leaf, root
+from frontier_forms.redteam_stats import compare
+D = R / 'evidence/redteam/detector'
+out = {'runs': {}}
+for run in ('full', 'no_scan'):
+    man = json.loads((D / run / 'chain_manifest.json').read_text()); rows = jsonl(D / run / 'epoch_ledger.jsonl')
+    ctx = man['context']
+    replay = root([leaf(ctx)] + [leaf(r) for r in rows])
+    assert replay == man['root'] and ctx['leaf_count'] == len(rows) + 1, ('CHAIN_ROOT_MISMATCH', run)
+    # every epoch's parent_root is the committed root after the previous epoch
+    for k, r in enumerate(rows, start=1):
+        if k == 1:
+            assert r['parent_root'] == ctx['parent_synform2_root']
+        else:
+            c = dict(ctx, leaf_count=k); assert r['parent_root'] == root([leaf(c)] + [leaf(x) for x in rows[:k - 1]]), ('PARENT_ROOT_MISMATCH', run, k)
+    tam = copy.deepcopy(rows); tam[10]['dev_pass'] += 1
+    assert root([leaf(ctx)] + [leaf(r) for r in tam]) != man['root']   # negative control
+    fin = json.loads((D / run / 'final_receipt.json').read_text())
+    statuses = [r['status'] for r in rows]
+    out['runs'][run] = {'chain_root': man['root'], 'epochs': len(rows), 'status_counts': {s: statuses.count(s) for s in sorted(set(statuses))},
+                        'gain_epochs': [r['epoch'] for r in rows if r['status'] == 'GAIN'], 'loss_epochs': [r['epoch'] for r in rows if r['status'] == 'LOSS'],
+                        'dev_curve': [{'epoch': r['epoch'], 'dev_pass': r['dev_pass'], 'dev_fields_ok': r['dev_fields_ok'], 'status': r['status'], 'p': r['pairing']['p_mcnemar_exact_two_sided'],
+                                       'delta': r['pairing']['delta_pass_rate'], 'weights_sha256': r['weights_sha256'], 'mAP50': r['trainer_metrics'].get('metrics/mAP50(B)')} for r in rows],
+                        'final_test': fin['test'], 'best_weights_sha256': fin['best_weights_sha256'], 'start_weights_sha256': ctx['start_weights_sha256'], 'chain_replay': 'PASS', 'tamper_control': 'PASS'}
+fs = json.loads((D / 'full' / 'test_scores.json').read_text()); ns = json.loads((D / 'no_scan' / 'test_scores.json').read_text())
+keys = sorted(set(fs) & set(ns)); strata = {k: fs[k]['variant'] for k in keys}
+out['lomo_no_scan_vs_full_test'] = compare({k: fs[k]['pass'] for k in keys}, {k: ns[k]['pass'] for k in keys}, strata)
+out['lomo_no_scan_vs_full_test']['fields_ok'] = {'full': sum(fs[k]['fields_ok'] for k in keys), 'no_scan': sum(ns[k]['fields_ok'] for k in keys), 'total': 7 * len(keys)}
+out['lomo_no_scan_vs_full_test']['by_variant'] = {v: {'full_pass': sum(1 for k in keys if strata[k] == v and fs[k]['pass']), 'no_scan_pass': sum(1 for k in keys if strata[k] == v and ns[k]['pass']), 'n': sum(1 for k in keys if strata[k] == v)} for v in ('clean', 'scan')}
+# SVG timeline: dev fields_ok per epoch, both runs, status markers
+W_, H_, L_, T_ = 760, 300, 60, 30; xs = lambda e: L_ + (e - 1) * (W_ - L_ - 30) / 29; ys = lambda v: T_ + (1 - v / 308) * (H_ - T_ - 50)
+svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W_}" height="{H_}" viewBox="0 0 {W_} {H_}" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12"><rect width="{W_}" height="{H_}" fill="#ffffff"/>',
+       f'<text x="16" y="18" font-weight="600" fill="#111827">Dev field boxes correct (of 308) per epoch — full run (blue) vs LOMO no-scan (orange); ▲ GAIN ▼ LOSS committed leaves</text>']
+for v in (0, 77, 154, 231, 308):
+    svg.append(f'<line x1="{L_}" x2="{W_ - 30}" y1="{ys(v):.1f}" y2="{ys(v):.1f}" stroke="#e5e7eb"/><text x="{L_ - 8}" y="{ys(v) + 4:.1f}" text-anchor="end" fill="#6b7280">{v}</text>')
+for e in (1, 5, 10, 15, 20, 25, 30):
+    svg.append(f'<text x="{xs(e):.1f}" y="{H_ - 28}" text-anchor="middle" fill="#6b7280">{e}</text>')
+svg.append(f'<text x="{(W_ + L_) / 2}" y="{H_ - 10}" text-anchor="middle" fill="#374151">epoch</text>')
+for run, col in (('full', '#1c5cab'), ('no_scan', '#c2410c')):
+    pts = out['runs'][run]['dev_curve']
+    svg.append('<polyline fill="none" stroke="' + col + '" stroke-width="2" points="' + ' '.join(f"{xs(p['epoch']):.1f},{ys(p['dev_fields_ok']):.1f}" for p in pts) + '"/>')
+    for p in pts:
+        x, y = xs(p['epoch']), ys(p['dev_fields_ok'])
+        tip = f"{run} epoch {p['epoch']}: {p['dev_fields_ok']}/308 fields, {p['dev_pass']}/44 images, {p['status']}, p={p['p']}, weights {p['weights_sha256'][:12]}"
+        if p['status'] == 'GAIN': svg.append(f'<path d="M{x:.1f},{y - 9:.1f} l5,8 h-10 z" fill="{col}"><title>{tip}</title></path>')
+        elif p['status'] == 'LOSS': svg.append(f'<path d="M{x:.1f},{y + 9:.1f} l5,-8 h-10 z" fill="{col}"><title>{tip}</title></path>')
+        else: svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#ffffff" stroke="{col}" stroke-width="2"><title>{tip}</title></circle>')
+svg.append('</svg>')
+(R / 'docs/architecture/epoch_breakpoints.svg').write_text('\n'.join(svg) + '\n')
+emit('exp016_epochs.json', out)
+for run, r in out['runs'].items(): print(run, r['status_counts'], 'gain', r['gain_epochs'], 'loss', r['loss_epochs'], 'test', r['final_test'], 'root', r['chain_root'][:16])
+print('LOMO no_scan vs full (test image pass):', {k: out['lomo_no_scan_vs_full_test'][k] for k in ('accuracy_baseline', 'accuracy_challenger', 'delta_abs', 'p_mcnemar_exact_two_sided', 'ci95_delta_stratified_bootstrap', 'fields_ok', 'by_variant')})""")])
