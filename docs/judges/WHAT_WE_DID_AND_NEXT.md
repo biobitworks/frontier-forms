@@ -2,7 +2,7 @@
 
 The project turns a medical intake form into a draft FHIR record and checks each field against its source. It uses only synthetic MITRE Synthea patients, so there is no PHI. Models run locally (Apple Vision, Ollama Qwen, local detectors), with no hosted inference and no live EHR writes. The statuses are PROPOSED, IMPLEMENTED, EXECUTED, OBSERVED, SUPPORTED, NEGATIVE, NULL, NOT_TESTED and BLOCKED. **No workstream has reached SUPPORTED**, because every positive result still needs replication.
 
-This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`.
+This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`. Labelled figures with captions, including the accomplishment heat map, are in [FIGURES.md](FIGURES.md).
 
 ## Workstreams
 
@@ -35,7 +35,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 | Epic | NOT_TESTED | 1, 3, 22 |
 | Snyk | BLOCKED | 1, 8, 20 |
 | Governance (GSD/gsigmad, TASKS) | EXECUTED | 9, 42, 44, 46, 47 |
-| Demo / overlays | IMPLEMENTED | 7, 12, 18 |
+| Demo: form server, overlays, screenshots, PDFs | OBSERVED (this branch) | 7, 12, 18, this PR |
 
 ## Headline results
 
@@ -49,6 +49,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
   - Followed the injected note in 0 of 18 injected images (#29).
 - **YOLOv8n:** test mAP50 0.912, with 315/322 fields detected (#20).
 - **100-patient B0 acceptance:** 1,867/2,180 fields (85.6422%) and 0 server echo errors (#22).
+- **Bounding boxes and OCR:** drawing boxes onto a form image dropped Apple OCR from 58/70 to 0/70 correct fields on the same 10 forms, so OCR must run on the clean render (`docs/demo/ocr_boxes_vs_clean.json`).
 - **Custody:** all 728 inclusion proofs and the review roots were independently recomputed (#11, #20, #47).
 
 ## Negative and null results we kept
