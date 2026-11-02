@@ -1,0 +1,317 @@
+{
+ "dataset": "synform2_err",
+ "detector_boxes": [
+  {
+   "box": [
+    288.9859619140625,
+    229.52029418945312,
+    379.41552734375,
+    244.2340087890625
+   ],
+   "class": "value:Patient last",
+   "conf": 0.9420003294944763
+  },
+  {
+   "box": [
+    289.3946838378906,
+    405.8247985839844,
+    382.24957275390625,
+    417.1343078613281
+   ],
+   "class": "value:Encounter date",
+   "conf": 0.9353976845741272
+  },
+  {
+   "box": [
+    290.21307373046875,
+    347.6986389160156,
+    300.44390869140625,
+    360.1841735839844
+   ],
+   "class": "value:Gender",
+   "conf": 0.8526082634925842
+  },
+  {
+   "box": [
+    288.4728088378906,
+    172.8466339111328,
+    348.78955078125,
+    185.43540954589844
+   ],
+   "class": "value:Patient first",
+   "conf": 0.8091356754302979
+  },
+  {
+   "box": [
+    288.5709228515625,
+    462.0128479003906,
+    377.559326171875,
+    478.93798828125
+   ],
+   "class": "value:Visit class",
+   "conf": 0.7865994572639465
+  },
+  {
+   "box": [
+    289.25,
+    289.1023254394531,
+    382.8132019042969,
+    301.878662109375
+   ],
+   "class": "value:Birth date",
+   "conf": 0.7624934911727905
+  },
+  {
+   "box": [
+    287.1074523925781,
+    113.49689483642578,
+    568.4234008789062,
+    133.96774291992188
+   ],
+   "class": "value:Synthetic case",
+   "conf": 0.7511993050575256
+  }
+ ],
+ "fields": {
+  "Birth date": {
+   "ocr": "2001-03-30",
+   "printed": "2001-03-30",
+   "validation": "OK",
+   "vlm": "2001-03-30",
+   "vlm_correct_vs_printed": true
+  },
+  "Encounter date": {
+   "ocr": "2020-09-26",
+   "printed": "2020-09-26",
+   "validation": "OK",
+   "vlm": "2020-09-26",
+   "vlm_correct_vs_printed": true
+  },
+  "Gender": {
+   "ocr": null,
+   "printed": "F",
+   "validation": "OK",
+   "vlm": "F",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient first": {
+   "ocr": "Cleo27",
+   "printed": "Cleo27",
+   "validation": "OK",
+   "vlm": "Cleo27",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient last": {
+   "ocr": "Paucek755",
+   "printed": "Paucek755",
+   "validation": "OK",
+   "vlm": "Paucek755",
+   "vlm_correct_vs_printed": true
+  },
+  "Synthetic case": {
+   "ocr": "synform2-ce08cff8d07665997ab7",
+   "printed": "synform2-ce08cff8d07665997ab7",
+   "validation": "OK",
+   "vlm": "synform2-ce08cff8d07665997ab7",
+   "vlm_correct_vs_printed": true
+  },
+  "Visit class": {
+   "ocr": "outpatient",
+   "printed": "outpatient",
+   "validation": "OK",
+   "vlm": "outpatient",
+   "vlm_correct_vs_printed": true
+  }
+ },
+ "gt_boxes": {
+  "Birth date": [
+   290,
+   289,
+   382,
+   302
+  ],
+  "Encounter date": [
+   290,
+   405,
+   382,
+   418
+  ],
+  "Gender": [
+   290,
+   347,
+   301,
+   360
+  ],
+  "Patient first": [
+   290,
+   173,
+   348,
+   186
+  ],
+  "Patient last": [
+   290,
+   231,
+   380,
+   244
+  ],
+  "Synthetic case": [
+   290,
+   114,
+   569,
+   132
+  ],
+  "Visit class": [
+   290,
+   462,
+   377,
+   480
+  ]
+ },
+ "id": "synform2-ce08cff8d07665997ab7_E7_digit_flip",
+ "image": "img/synform2-ce08cff8d07665997ab7_E7_digit_flip.png",
+ "ocr_boxes": [
+  {
+   "box": [
+    51.99999705000005,
+    43.99999978333332,
+    429.99999705000005,
+    69.99999978333335
+   ],
+   "conf": 1,
+   "text": "SYNTHETIC ENCOUNTER INTAKE - NOT CLINICAL"
+  },
+  {
+   "box": [
+    55.896575769975485,
+    109.45598408438153,
+    190.10342391450672,
+    136.54401585318033
+   ],
+   "conf": 1,
+   "text": "Synthetic case:"
+  },
+  {
+   "box": [
+    55.920303225488965,
+    167.63610741699523,
+    164.07969653603584,
+    192.36389348114324
+   ],
+   "conf": 1,
+   "text": "Patient first:"
+  },
+  {
+   "box": [
+    55.90347661489062,
+    225.566230750256,
+    162.09652318471484,
+    250.4337692024044
+   ],
+   "conf": 1,
+   "text": "Patient last:"
+  },
+  {
+   "box": [
+    55.93935762300369,
+    283.76024719371617,
+    150.06064210786695,
+    308.2397536863309
+   ],
+   "conf": 1,
+   "text": "Birth date:"
+  },
+  {
+   "box": [
+    57.96576298911533,
+    341.8968953719717,
+    130.0342368050333,
+    366.10310455471097
+   ],
+   "conf": 1,
+   "text": "Gender:"
+  },
+  {
+   "box": [
+    57.999999895312506,
+    399.99999998125,
+    195.9999998953125,
+    423.99999998125
+   ],
+   "conf": 1,
+   "text": "Encounter date:"
+  },
+  {
+   "box": [
+    57.520674136043226,
+    456.4869325930844,
+    150.51633301055494,
+    482.1807611758481
+   ],
+   "conf": 1,
+   "text": "Visit class:"
+  },
+  {
+   "box": [
+    287.9999998597701,
+    109.99999998505744,
+    571.9999998597701,
+    135.99999998505749
+   ],
+   "conf": 1,
+   "text": "synform2-ce08cff8d07665997ab7"
+  },
+  {
+   "box": [
+    287.99999990344827,
+    167.9999999586207,
+    351.99999990344827,
+    191.99999995862066
+   ],
+   "conf": 1,
+   "text": "Cleo27"
+  },
+  {
+   "box": [
+    285.89809026702846,
+    225.57683655963982,
+    384.1019095419308,
+    250.4231633876428
+   ],
+   "conf": 1,
+   "text": "Paucek755"
+  },
+  {
+   "box": [
+    287.9790343357831,
+    283.91410824764137,
+    386.0209654881269,
+    308.085891694907
+   ],
+   "conf": 1,
+   "text": "2001-03-30"
+  },
+  {
+   "box": [
+    285.9330062007468,
+    399.717733355092,
+    386.0669936275046,
+    424.2822665887345
+   ],
+   "conf": 1,
+   "text": "2020-09-26"
+  },
+  {
+   "box": [
+    287.8180044728333,
+    457.26612563497406,
+    382.1819952565247,
+    482.7338742769419
+   ],
+   "conf": 1,
+   "text": "outpatient"
+  }
+ ],
+ "subtitle": "case synform2-ce08cff8d07665997ab7 \u00b7 input FCO fco:330620b94f27b7ab\u2026 \u00b7 png sha256 5e7f9ca53200a8d1\u2026",
+ "title": "SYNFORM2-ERR \u00b7 planted E7_digit_flip (fields changed: Birth date)",
+ "vlm_available": true
+}
