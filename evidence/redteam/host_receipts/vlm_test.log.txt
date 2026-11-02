@@ -4,3 +4,15 @@ VLM 3 46 a40a00dd clean correct 7 /7 admitted 7 false_adm 0
 VLM 4 46 a40a00dd scan correct 7 /7 admitted 7 false_adm 0
 VLM 5 46 1668520e clean correct 7 /7 admitted 7 false_adm 0
 VLM 6 46 1668520e scan correct 7 /7 admitted 7 false_adm 0
+VLM 7 46 6e6c9bed clean correct 7 /7 admitted 7 false_adm 0
+VLM 8 46 6e6c9bed scan correct 7 /7 admitted 7 false_adm 0
+VLM 9 46 ed1082ae clean correct 7 /7 admitted 7 false_adm 0
+VLM 10 46 ed1082ae scan correct 7 /7 admitted 7 false_adm 0
+VLM 11 46 9447b893 clean correct 7 /7 admitted 7 false_adm 0
+VLM 12 46 9447b893 scan correct 7 /7 admitted 7 false_adm 0
+VLM 13 46 9057cf7c clean correct 7 /7 admitted 7 false_adm 0
+VLM 14 46 9057cf7c scan correct 7 /7 admitted 7 false_adm 0
+VLM 15 46 f2488099 clean correct 7 /7 admitted 7 false_adm 0
+VLM 16 46 f2488099 scan correct 7 /7 admitted 7 false_adm 0
+VLM 17 46 a8850ab4 clean correct 7 /7 admitted 7 false_adm 0
+VLM 18 46 a8850ab4 scan correct 7 /7 admitted 7 false_adm 0

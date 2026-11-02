@@ -52,5 +52,5 @@
   "reason": "gitleaks generic-api-key matched the JSON field \"key\" (64-hex case digest); renamed to case_digest_sha256 in exported copies, values unchanged; originals retained on host",
   "renamed_files": 8,
   "schema": "security.scan.successor.v1",
-  "utc": "2026-11-02T23:12:12Z"
+  "utc": "2026-11-02T23:15:47Z"
 }
