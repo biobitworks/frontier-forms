@@ -296,3 +296,55 @@ if gf.exists():
     rules_only = g['configurations']['rules']
     assert rules_only['by_variant']['E7_digit_flip']['planted_detected'] < rules_only['by_variant']['E7_digit_flip']['planted_cells'], 'RULES_SHOULD_NOT_SEE_E7'
 emit('exp014_ocr_vlm.json', out); print(json.dumps(out, indent=1)[:6000])""")])
+
+# ---------------------------------------------------------------- EXP-015 Qwen mappers, grounding boxes, local detector
+nb("15_redteam_qwen_mappers_bbox_detector.ipynb", "EXP-015 (red-team): OCR→Qwen mappers, Qwen2.5-VL grounding boxes, locally trained field detector",
+   {"1 Requirements and predeclared hypothesis": "H0 (mappers): given identical Apple Vision OCR lines, the Qwen text mappers (qwen3:1.7b, qwen2.5:1.5b, qwen2.5:0.5b, qwen2.5-coder:1.5b) do not differ in field fidelity on the SYNFORM2 test split; no direction predeclared. H0 (boxes): Qwen2.5-VL grounding boxes reach IoU≥0.5 on fewer than all fields on clean renders; the locally trained YOLOv8n detector (trained only on the train split) reaches mAP50 > 0.9 on the untouched test split. Weights are identified by digest in every row.",
+    "2 Input source, license, hashes": "evidence/redteam/lanes/MAP_*, MAPERR_*, BBOX_*, BBOXERR_* (actual answers exported; synthetic); evidence/redteam/detector/detector_receipt.json; SYNFORM2 root aa447934…, SYNFORM2-ERR root 790a7dc6….",
+    "3 Frozen settings": "temperature 0, seed 20261102, format=json; detector seed 20261102, epochs/imgsz in receipt.",
+    "4 Deterministic preprocessing": "same normalisation as EXP-012/014; GT boxes from renderer geometry.",
+    "5 Model/harness execution": "replayed from receipts; no inference here.",
+    "6 Analysis": "field fidelity per mapper (paired vs qwen3:1.7b with McNemar/bootstrap/Holm); IoU distributions; detector mAP; weights digest table.",
+    "7 Negative controls": "mapper fed the blank-page OCR (no lines) must return all null — covered by the OCR blank control; detector val split never used for selection of the test number.",
+    "8 Outputs": "exp015_mappers_bbox.json.",
+    "9 FCO/FCG dependency changes": "adds EXECUTED edges OCR lines → mapper answers; adds a TRAINED_FROM edge SYNFORM2 train split → detector weights (sha256 in receipt).",
+    "10 Claim ceiling": CEILING + " Mapper differences are MODEL comparisons (WEIGHTS_ONLY), never harness gains."},
+   [code(COMMON + """import collections
+from frontier_forms.redteam_stats import compare, holm
+L = R / 'evidence/redteam/lanes'
+FIELDS = ('Synthetic case', 'Patient first', 'Patient last', 'Birth date', 'Gender', 'Encounter date', 'Visit class')
+out = {'mappers': {}, 'mapper_pairwise_vs_qwen3': {}, 'bbox': {}, 'detector': None, 'weights': {}}
+maps = {}
+for p in sorted(L.glob('MAP_*_synform2_test_PUBLIC.jsonl')):
+    rows = jsonl(p); meta = json.loads(p.with_name(p.name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
+    model = meta['model']; maps[model] = {r['input_fco_id']: r for r in rows}
+    out['weights'][model] = meta.get('model_digest')
+    by = collections.defaultdict(lambda: {'images': 0, 'fields_correct': 0, 'all7': 0, 'failed': 0})
+    for r in rows:
+        d = by[r.get('variant', 'hidden')]; d['images'] += 1; d['fields_correct'] += r['correct_count']; d['all7'] += r['correct_count'] == 7; d['failed'] += r['status'] != 'EXECUTED'
+    out['mappers'][model] = {v: dict(d, field_fidelity=d['fields_correct'] / (7 * d['images'])) for v, d in by.items()} | {'wall_seconds': meta.get('wall_seconds'), 'images': meta.get('images')}
+ref = 'qwen3:1.7b'
+if ref in maps:
+    fam = {}
+    for model, rows in maps.items():
+        if model == ref: continue
+        common = sorted(set(maps[ref]) & set(rows))
+        strata = {k: maps[ref][k].get('variant', 'x') for k in common}
+        fam[model] = compare({k: maps[ref][k]['correct_count'] == 7 for k in common}, {k: rows[k]['correct_count'] == 7 for k in common}, strata)
+    h = holm({k: v['p_mcnemar_exact_two_sided'] for k, v in fam.items()})
+    for k in fam: fam[k]['holm'] = h[k]
+    out['mapper_pairwise_vs_qwen3'] = fam
+for p in sorted(L.glob('BBOX*_PUBLIC.jsonl')):
+    rows = jsonl(p); meta = json.loads(p.with_name(p.name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
+    by = collections.defaultdict(lambda: {'images': 0, 'vlm_values_correct': 0, 'vision_values_correct': 0, 'vlm_iou_ge_05': 0, 'vision_iou_ge_05': 0, 'vlm_mean_iou': 0.0, 'vision_mean_iou': 0.0})
+    for r in rows:
+        d = by[r.get('variant', 'hidden')]; d['images'] += 1
+        for k in ('vlm_values_correct', 'vision_values_correct'): d[k] += r[k]
+        d['vlm_iou_ge_05'] += r['vlm_iou_ge_0.5']; d['vision_iou_ge_05'] += r['vision_iou_ge_0.5']; d['vlm_mean_iou'] += r['vlm_mean_iou']; d['vision_mean_iou'] += r['vision_mean_iou']
+    out['bbox'][p.stem] = {v: dict(d, vlm_mean_iou=d['vlm_mean_iou'] / d['images'], vision_mean_iou=d['vision_mean_iou'] / d['images'], fields=7 * d['images']) for v, d in by.items()} | {'model_digest': meta.get('model_digest')}
+det = R / 'evidence/redteam/detector/detector_receipt.json'
+if det.exists():
+    d = json.loads(det.read_text()); out['detector'] = {k: d[k] for k in ('framework', 'device', 'epochs', 'imgsz', 'val', 'test', 'trained_weights_sha256', 'start_weights', 'wall_seconds')}
+    out['weights']['yolov8n_field_detector'] = d['trained_weights_sha256']
+    assert d['dataset_manifest']['images'].get('test', 0) == 46, 'DETECTOR_TEST_SPLIT_SIZE'
+emit('exp015_mappers_bbox.json', out); print(json.dumps(out, indent=1)[:5000])""")])
