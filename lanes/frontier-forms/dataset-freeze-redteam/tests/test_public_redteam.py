@@ -48,3 +48,21 @@ def test_full_run_is_deterministic(tmp_path):
     assert by["MK00"]["incumbent"] == "ACCEPT"
     assert all(by[k]["incumbent"].startswith("REJECT") for k in ("MK01", "MK02", "MK03", "MK05", "MK06", "MK07", "MK08", "MK09", "MK10"))
     assert by["MK12"]["incumbent"] == "unpinned: ACCEPT" and by["MK12"]["successor"] == "pinned root: REJECT"
+
+def test_self_consistent_forged_verified_state_is_not_readback(tmp_path):
+    """A producer cannot mint verifier-VERIFIED by signing its own manifest."""
+    m = pr.build_synthetic_freeze(tmp_path)
+    remote = next(a for a in m["atoms"] if a["custody_state"] == "NOT_STORED")
+    remote["custody_state"] = "VERIFIED"
+    remote["output_sha256"] = "UNKNOWN"
+    remote["leaf_sha256"] = fl.leaf_hash(fl.build_leaf(remote))
+    m["merkle"]["root"] = fl.merkle_root([a["leaf_sha256"] for a in m["atoms"]])
+    with pytest.raises(fl.FreezeError, match="CUSTODY_STATE_NOT_RECOGNIZED"):
+        fl.verify_manifest(m, lambda atom: (tmp_path / atom["destination_path"]).read_bytes() if (tmp_path / atom["destination_path"]).is_file() else None)
+
+
+def test_not_stored_atom_remains_nonverified(tmp_path):
+    """Unknown output bytes must never receive readback-VERIFIED status."""
+    m = pr.build_synthetic_freeze(tmp_path)
+    v = fl.verify_manifest(m, lambda a: (tmp_path / a["destination_path"]).read_bytes() if (tmp_path / a["destination_path"]).is_file() else None)
+    assert v["atoms"]["X001"] == "NOT_STORED"

@@ -73,3 +73,6 @@ The user reports a dataset being built in Supabase. The project and schema are n
 
 ## App-plane integration and red-team review
 The project application baseline includes teammate [Supabase migration](supabase/migrations/20261102000000_initial_schema.sql) and [Synthea FHIR importer](scripts/import_fhir.py) merged from PR #4. The evidence workflow must not mutate that operational implementation without review. New review checks fail closed on exact frozen evaluation input byte mismatches; Jupyter reruns write new versioned receipt directories. The original predecessor Merkle root has not changed. Draft PR #5 reviews stable identity, nondestructive provenance and a canonical dataset snapshot; draft PR #6 provides a synthetic red-team comparison, not demonstrated improvements in live model accuracy.
+
+## Post-merge custody hardening
+The Claude synthetic freeze-red-team lane and independent design-review document were merged via PR #6 and PR #5. A follow-on review corrected an input-state spoofing flaw in the Claude verifier, added a regression test, and explicitly pinned the only permitted synthetic binary fixture by its exact SHA-256. This fixture tests custody, not clinical source data or model improvement. Existing frozen predecessor and prior review roots remain immutable.
