@@ -28,9 +28,18 @@ def rel(p):
     return str(Path(p).relative_to(ROOT))
 
 
-def outcome(stats, metric, split):
+CLUSTER = {}
+_cf = ROOT / "evidence/PATIENT_CLUSTER_BOOTSTRAP_V1.json"
+if _cf.exists():
+    for _r in json.loads(_cf.read_text())["rows"]:
+        CLUSTER[(_r["parent"], _r["child"], _r["split"])] = _r["ci_patient_cluster_95"]
+
+
+def outcome(stats, metric, split, key=None):
+    pc = stats.get("patient_cluster_bootstrap", {}).get("ci_delta_patient_cluster_95") or (CLUSTER.get(key) if key else None)
     return {"metric": metric, "split": split, "n": stats["n"], "delta": round(stats["delta"], 4),
             "ci95": [round(x, 4) for x in stats["ci_delta_bootstrap_stratified_95"]],
+            "ci95_patient_cluster": [round(x, 4) for x in pc] if pc else "NOT_COMPUTED",
             "mcnemar_p": stats["p_mcnemar_exact_two_sided"], "table": stats["table"]}
 
 
@@ -61,7 +70,7 @@ def main():
                          "model_weights": {"parent": rules, "child": rules, "changed": False},
                          "mechanism": {"changed": changed, "parent_enabled": sorted(mods[e["parent"]]),
                                        "child_enabled": sorted(mods[e["child"]]), "edge_kind": e["kind"]},
-                         "outcome": outcome(e[split], "required_fields_correct per form", split),
+                         "outcome": outcome(e[split], "required_fields_correct per form", split, (e["parent"], e["child"], split)),
                          "attribution": classify(False, changed),
                          "evidence": {"path": rel(fcg), "sha256": sha(fcg)}})
 
@@ -110,7 +119,8 @@ def main():
                 rows.append({"family": "learned_model", "parent_arm": "B0-v1", "child_arm": rec["arm"],
                              "model_weights": {"parent": rules, "child": ident, "changed": True},
                              "mechanism": {"changed": ["mapper:rules->model"]},
-                             "outcome": outcome(s["paired_vs_B0"][key], "required_fields_correct per form", split),
+                             "outcome": outcome(s["paired_vs_B0"][key], "required_fields_correct per form", split,
+                                                 ("B0-v1", p.parent.name, "test" if key == "test_split" else "overall")),
                              "attribution": "CONFOUNDED",
                              "note": "rules -> model replaces the whole mapper; read as an arm comparison, not a single mechanism",
                              "evidence": {"path": rel(p.parent / "summary.json"), "sha256": sha(p.parent / "summary.json")}})
