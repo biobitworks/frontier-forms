@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Elias Swaniawski",
+    "text": "Elias Swaniawski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "73.3",
+    "text": "73.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "9.6",
+    "text": "9.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "109/81",
+    "text": "109/81"
+  }
+}

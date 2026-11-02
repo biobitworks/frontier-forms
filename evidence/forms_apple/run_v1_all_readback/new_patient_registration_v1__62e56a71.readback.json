@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Stevie Nolan",
+    "text": "Stevie Nolan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1946-12-16",
+    "text": "1946-12-16"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-964-2485",
+    "text": "555-964-2485"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "734 Skiles Annex",
+    "text": "734 Skiles Annex"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Hingham",
+    "text": "Hingham"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02043",
+    "text": "02043"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

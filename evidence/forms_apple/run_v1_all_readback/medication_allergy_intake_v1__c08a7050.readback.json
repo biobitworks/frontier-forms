@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Erma Gerhold",
+    "text": "Erma Gerhold"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Naproxen sodium 220 MG Oral Tablet; Ibuprofen 400 MG Oral Tablet [Ibu]; 24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet; Ibuprofen 200 MG Oral Tablet",
+    "text": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Naproxen sodium 220 MG Oral"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Only received primary school education (finding); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Chronic pain (finding); Chronic low back pain (finding); Diabetes mellitus type 2 (disorder); Essential hypertension (disorder); Hyperglycemia (disorder); Hypertriglyceridemia (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Osteoarthritis of hip (disorder); Stress (finding); Neuropathy due to type 2 diabetes mellitus (disorder); Part-time employment (finding); Medication review due (situation); Sprain (morphologic abnormality); Sprain of ankle (disorder)",
+    "text": "Housing unsatisfactory (finding); Only received primary school education (finding); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Chronic pain (finding); Chronic low back pain (finding); Diabetes mellitus type 2 (disorder); Essential hypertension (disorder);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "169.8",
+    "text": "169.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "88.2",
+    "text": "88.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "115/76",
+    "text": "115/76"
+  }
+}

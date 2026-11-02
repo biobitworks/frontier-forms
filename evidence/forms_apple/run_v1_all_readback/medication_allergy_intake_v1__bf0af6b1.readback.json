@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ellis Ondricka",
+    "text": "Ellis Ondricka"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen/Hydrocodone; Sertraline 100 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; 24 HR tacrolimus 1 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Acetaminophen/Hydrocodone; Sertraline 100 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML /"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Serving in military service (finding); Educated to high school level (finding); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Prediabetes (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Disorder of kidney due to diabetes mellitus (disorder); Has a criminal record (finding); Microalbuminuria due to type 2 diabetes mellitus (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Metabolic syndrome X (disorder); Alcoholism (disorder); Anemia (disorder); Full-time employment (finding); Social isolation (finding); History of renal transplant (situation); Medication review due (situation); Stress (finding)",
+    "text": "Serving in military service (finding); Educated to high school level (finding); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Prediabetes (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "178.1",
+    "text": "178.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "96.1",
+    "text": "96.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "106/58",
+    "text": "106/58"
+  }
+}

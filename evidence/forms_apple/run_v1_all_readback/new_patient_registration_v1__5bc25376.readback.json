@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Gregory Schuppe",
+    "text": "Gregory Schuppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2023-01-07",
+    "text": "2023-01-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-627-8961",
+    "text": "555-627-8961"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1093 Weimann Course",
+    "text": "1093 Weimann Course"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Seekonk",
+    "text": "Seekonk"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Uninsured",
+    "text": "Uninsured"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Harrison Klocko",
+    "text": "Harrison Klocko"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Has a criminal record (finding); Victim of intimate partner abuse (finding); Medication review due (situation); Social isolation (finding); Essential hypertension (disorder); Full-time employment (finding)",
+    "text": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Has a criminal record (finding); Victim of intimate partner abuse (finding); Medication review due (situation); Social"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "170",
+    "text": "170"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "80.2",
+    "text": "80.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "107/55",
+    "text": "107/55"
+  }
+}

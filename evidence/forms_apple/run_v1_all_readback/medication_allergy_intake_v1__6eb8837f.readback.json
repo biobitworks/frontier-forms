@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mac Smith",
+    "text": "Mac Smith"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; 120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent]; albuterol 0.83 MG/ML Inhalation Solution",
+    "text": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; 120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent]; albuterol 0.83 MG/ML Inhalation Solution"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Fish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance)",
+    "text": "Fish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Atopic dermatitis (disorder); Childhood asthma (disorder)",
+    "text": "Atopic dermatitis (disorder); Childhood asthma (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "85.5",
+    "text": "85.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "12.1",
+    "text": "12.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "111/74",
+    "text": "111/74"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Dirk Wilderman",
+    "text": "Dirk Wilderman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Serving in military service (finding); Received higher education (finding); Lack of access to transportation (finding); Limited social contact (finding); Full-time employment (finding); Transport problem (finding); Stress (finding); Victim of intimate partner abuse (finding)",
+    "text": "Risk activity involvement (finding); Serving in military service (finding); Received higher education (finding); Lack of access to transportation (finding); Limited social contact (finding); Full-time employment (finding); Transport problem (finding); Stress (finding); Victim of intimate"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "170.6",
+    "text": "170.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "81.2",
+    "text": "81.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "120/70",
+    "text": "120/70"
+  }
+}

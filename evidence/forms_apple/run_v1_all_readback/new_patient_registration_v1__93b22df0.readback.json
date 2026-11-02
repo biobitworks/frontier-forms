@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Elias Swaniawski",
+    "text": "Elias Swaniawski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2026-01-09",
+    "text": "2026-01-09"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-220-2217",
+    "text": "555-220-2217"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "645 Kiehn Heights",
+    "text": "645 Kiehn Heights"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Worcester",
+    "text": "Worcester"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01603",
+    "text": "01603"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Korean",
+    "text": "Korean"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jake West",
+    "text": "Jake West"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Atopic dermatitis (disorder)",
+    "text": "Atopic dermatitis (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "62.9",
+    "text": "62.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "6.4",
+    "text": "6.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/82",
+    "text": "133/82"
+  }
+}

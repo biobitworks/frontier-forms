@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Trenton Kessler",
+    "text": "Trenton Kessler"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Dependent drug abuse (disorder); Medication review due (situation); Body mass index 30+ - obesity (finding); Part-time employment (finding)",
+    "text": "Received higher education (finding); Dependent drug abuse (disorder); Medication review due (situation); Body mass index 30+ - obesity (finding); Part-time employment (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "169.1",
+    "text": "169.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "86.4",
+    "text": "86.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "108/79",
+    "text": "108/79"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jeane Casper",
+    "text": "Jeane Casper"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2018-07-23",
+    "text": "2018-07-23"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-355-6137",
+    "text": "555-355-6137"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "888 Gutmann Lodge",
+    "text": "888 Gutmann Lodge"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Salem",
+    "text": "Salem"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01970",
+    "text": "01970"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

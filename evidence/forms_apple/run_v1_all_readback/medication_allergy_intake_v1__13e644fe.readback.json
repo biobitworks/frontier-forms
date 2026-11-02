@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Karisa Daugherty",
+    "text": "Karisa Daugherty"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "cetirizine hydrochloride 5 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "text": "cetirizine hydrochloride 5 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto- Injector"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin",
+    "text": "Aspirin"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Eggs (edible) (substance); Allergic disposition (finding)",
+    "text": "Eggs (edible) (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "154.9",
+    "text": "154.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "45.8",
+    "text": "45.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "130/66",
+    "text": "130/66"
+  }
+}

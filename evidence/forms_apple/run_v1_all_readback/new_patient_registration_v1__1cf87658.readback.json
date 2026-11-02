@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Eda Bartoletti",
+    "text": "Eda Bartoletti"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2019-05-23",
+    "text": "2019-05-23"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-163-1079",
+    "text": "555-163-1079"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "722 Schultz Mill",
+    "text": "722 Schultz Mill"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Melrose",
+    "text": "Melrose"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02176",
+    "text": "02176"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

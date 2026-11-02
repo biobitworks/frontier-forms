@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Pete Denesik",
+    "text": "Pete Denesik"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2013-07-17",
+    "text": "2013-07-17"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-655-2425",
+    "text": "555-655-2425"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1068 Blick Heights",
+    "text": "1068 Blick Heights"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Hull",
+    "text": "HulI"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02045",
+    "text": "02045"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

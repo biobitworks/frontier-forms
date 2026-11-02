@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Loria D'Amore",
+    "text": "Loria D'Amore"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1957-06-12",
+    "text": "1957-06-12"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-266-9664",
+    "text": "555-266-9664"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "749 Hammes Crossroad Suite 48",
+    "text": "749 Hammes Crossroad Suite 48"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Sutton",
+    "text": "Sutton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

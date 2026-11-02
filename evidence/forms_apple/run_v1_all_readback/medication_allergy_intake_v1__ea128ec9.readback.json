@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Leanna Hoppe",
+    "text": "Leanna Hoppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Hydrochlorothiazide 25 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Hydrochlorothiazide 25 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Wheat (substance); Shellfish (substance); Allergic disposition (finding)",
+    "text": "Wheat (substance); Shelfish (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Only received primary school education (finding); Social isolation (finding); Refugee (person); Chronic sinusitis (disorder); Prediabetes (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Full-time employment (finding); Sleep disorder (disorder); Sleep apnea (disorder); Essential hypertension (disorder)",
+    "text": "Only received primary school education (finding); Social isolation (finding); Refugee (person); Chronic sinusitis (disorder); Prediabetes (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Full-time employment (finding); Sleep"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "166.4",
+    "text": "166.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "76.3",
+    "text": "76.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "123/81",
+    "text": "123/81"
+  }
+}

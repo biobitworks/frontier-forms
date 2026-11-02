@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jarred Cartwright",
+    "text": "Jarred Cartwright"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Full-time employment (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Stress (finding)",
+    "text": "Educated to high school level (finding); Full-time employment (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Stress (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "179.4",
+    "text": "179.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "89.2",
+    "text": "89.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "107/77",
+    "text": "107/77"
+  }
+}

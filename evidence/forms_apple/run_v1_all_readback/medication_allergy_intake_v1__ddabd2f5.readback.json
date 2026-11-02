@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Johnnie Gorczany",
+    "text": "Johnnie Gorczany"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Received higher education (finding); Medication review due (situation); Stress (finding); Full-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Received higher education (finding); Medication review due (situation); Stress (finding); Full-time employment (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "178.5",
+    "text": "178.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "75.1",
+    "text": "75.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "140/81",
+    "text": "140/81"
+  }
+}

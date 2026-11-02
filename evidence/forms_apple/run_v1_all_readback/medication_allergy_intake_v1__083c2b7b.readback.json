@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Keren Schumm",
+    "text": "Keren Schumm"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Trinessa 28 Day Pack",
+    "text": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Trinessa 28 Day Pack"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin",
+    "text": "Aspirin"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Shellfish (substance); Allergic disposition (finding)",
+    "text": "Shellfish (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "173.4",
+    "text": "173.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "62.8",
+    "text": "62.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "103/66",
+    "text": "103/66"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Herb Hilll",
+    "text": "Herb Hilll"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 72 HR Fentanyl 0.025 MG/HR Transdermal System; 12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet",
+    "text": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 72 HR Fentanyl 0.025 MG/HR Transdermal System; 12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Received higher education (finding); Stress (finding); Part-time employment (finding); Unhealthy alcohol drinking behavior (finding)",
+    "text": "Medication review due (situation); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Received higher education (finding); Stress (finding); Part-time employment (finding); Unhealthy alcohol drinking behavior (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "184",
+    "text": "184"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "96.4",
+    "text": "96.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "134/78",
+    "text": "134/78"
+  }
+}

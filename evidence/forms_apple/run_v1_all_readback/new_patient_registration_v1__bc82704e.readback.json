@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Birgit Gibson",
+    "text": "Birgit Gibson"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2022-03-12",
+    "text": "2022-03-12"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-920-3894",
+    "text": "555-920-3894"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "269 Schultz Crossroad",
+    "text": "269 Schultz Crossroad"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Worcester",
+    "text": "Worcester"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01545",
+    "text": "01545"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

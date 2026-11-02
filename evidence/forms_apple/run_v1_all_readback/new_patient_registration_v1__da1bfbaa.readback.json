@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Margeret Ferry",
+    "text": "Margeret Ferry"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1955-03-31",
+    "text": "1955-03-31"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-108-3125",
+    "text": "555-108-3125"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "605 Dare Wynd Unit 88",
+    "text": "605 Dare Wynd Unit 88"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lynnfield",
+    "text": "Lynnfield"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01940",
+    "text": "01940"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Fernande Mraz",
+    "text": "Fernande Mraz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1985-12-07",
+    "text": "1985-12-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-722-6593",
+    "text": "555-722-6593"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "995 Koss Skyway Suite 11",
+    "text": "995 Koss Skyway Suite 11"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Wilmington",
+    "text": "Wilmington"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01887",
+    "text": "01887"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Anthem",
+    "text": "Anthem"
+  }
+}

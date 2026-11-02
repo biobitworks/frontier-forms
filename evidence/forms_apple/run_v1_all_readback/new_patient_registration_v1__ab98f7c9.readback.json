@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Tiffaney Conn",
+    "text": "Tiffaney Conn"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2000-04-04",
+    "text": "2000-04-04"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-246-6450",
+    "text": "555-246-6450"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "906 Conroy Quay",
+    "text": "906 Conroy Quay"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Westborough",
+    "text": "Westborough"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01581",
+    "text": "01581"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Dual Eligible",
+    "text": "Dual Eligible"
+  }
+}

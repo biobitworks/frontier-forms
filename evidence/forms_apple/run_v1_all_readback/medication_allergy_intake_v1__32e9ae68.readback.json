@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Dolores Rubio",
+    "text": "Dolores Rubio"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)",
+    "text": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "167.5",
+    "text": "167.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "84.5",
+    "text": "84.5"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "135/88",
+    "text": "135/88"
+  }
+}

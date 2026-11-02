@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Dirk Wilderman",
+    "text": "Dirk Wilderman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2005-02-18",
+    "text": "2005-02-18"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-513-8590",
+    "text": "555-513-8590"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "481 O'Reilly Estate Unit 67",
+    "text": "481 O'Reilly Estate Unit 67"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Springfield",
+    "text": "Springfield"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01151",
+    "text": "01151"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Temple Wehner",
+    "text": "Temple Wehner"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Galantamine 4 MG Oral Tablet; Simvastatin 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Galantamine 4 MG Oral Tablet; Simvastatin 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Recurrent urinary tract infection (disorder); Only received primary school education (finding); High risk pregnancy (finding); Chronic intractable migraine without aura (disorder); Impacted molars (disorder); Prediabetes (finding); Chronic pain (finding); Body mass index 30+ - obesity (finding); Hyperlipidemia (disorder); Dependent drug abuse (disorder); Essential hypertension (disorder); Has a criminal record (finding); Metabolic syndrome X (disorder); Diabetes mellitus type 2 (disorder); Hypertriglyceridemia (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Neuropathy due to type 2 diabetes mellitus (disorder); Nonproliferative diabetic retinopathy due to type 2 diabetes mellitus (disorder); Familial Alzheimer's disease of early onset (disorder); Acute non-ST segment elevation myocardial infarction (disorder); History of myocardial infarction (situation); Gingivitis (disorder); Stress (finding); Part-time employment (finding)",
+    "text": "Chronic sinusitis (disorder); Recurrent urinary tract infection (disorder); Only received primary school education (finding); High risk pregnancy (finding); Chronic intractable migraine without aura (disorder); Impacted molars (disorder); Prediabetes (finding); Chronic pain (finding); Body"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "154.6",
+    "text": "154.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "66.6",
+    "text": "66.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "127/67",
+    "text": "127/67"
+  }
+}

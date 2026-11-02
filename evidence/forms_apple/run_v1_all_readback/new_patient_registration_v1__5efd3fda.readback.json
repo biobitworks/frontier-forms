@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Corene Kovacek",
+    "text": "Corene Kovacek"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1957-01-03",
+    "text": "1957-01-03"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-718-3663",
+    "text": "555-718-3663"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "696 Boyer Lock",
+    "text": "696 Boyer Lock"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Harwich Center",
+    "text": "Harwich Center"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

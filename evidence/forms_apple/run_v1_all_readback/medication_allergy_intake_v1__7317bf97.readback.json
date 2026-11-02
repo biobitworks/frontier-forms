@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ivan Okuneva",
+    "text": "Ivan Okuneva"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG Oral Tablet [Tylenol]",
+    "text": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ ACTUAT Mucosal Spray; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG Oral Tablet [Tylenol]"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Alzheimer's disease (disorder); Limited social contact (finding); Full-time employment (finding); Impacted molars (disorder); Dependent drug abuse (disorder); Medication review due (situation); Victim of intimate partner abuse (finding)",
+    "text": "Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Alzheimer's disease"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "171.3",
+    "text": "171.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "82.5",
+    "text": "82.5"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "130/72",
+    "text": "130/72"
+  }
+}
