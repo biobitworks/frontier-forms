@@ -17,7 +17,7 @@ Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient coho
 |---|---|
 | Blank AcroForm PDFs (made by PDFKit) | `evidence/forms_apple/forms/*.pdf` |
 | Filled PDFs plus Apple Vision OCR read-back, sample of 6 | `evidence/forms_apple/run_v1/samples/` |
-| All 218 filled forms as read-back JSON (the PDF field values plus the Apple Vision OCR text and boxes for each field) | `evidence/forms_apple/run_v1_all_readback/` (follow-up PR when the MacBookPro re-run finishes). The PDFs themselves stay local because the JSON-only gate blocks new PDFs. |
+| All 218 filled forms as read-back JSON (the PDF field values plus the Apple Vision OCR text and boxes for each field), and the SHA-256 of each filled PDF | `evidence/forms_apple/run_v1_all_readback/`. The PDFs themselves stay on MacBookPro because the JSON-only gate blocks new PDFs. |
 | Single fixture PDF with Apple Vision boxes (PR #12) | `experiments/form_error_factorial/sample_vision/` |
 
 ## Screenshots
