@@ -147,10 +147,10 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
                 rec["holm_p"] = adj.get(cid)
                 n_failed = sum(arms[a][k]["status"] != "EXECUTED" for a in (rec["baseline"]["harness"], rec["challenger"]["harness"])
                            for k in arms[a])
-            rec["failed_records"] = n_failed
-            if n_failed:
-                rec["claim_status"] = "INVALID_INFRA_FAILURE"
-            elif rec["family"] == "control":
+                rec["failed_records"] = n_failed
+                if n_failed:
+                    rec["claim_status"] = "INVALID_INFRA_FAILURE"
+                elif rec["family"] == "control":
                     rec["claim_status"] = "CONTROL"
                 elif rec["holm_p"] is not None and rec["holm_p"] < 0.05 and rec["bootstrap"]["ci95"][0] > 0:
                     rec["claim_status"] = "DISCOVERY_SIGNAL_REPLICATION_REQUIRED" if part == "discovery" else "HELDOUT_PASS_PENDING_GUARDRAILS"
