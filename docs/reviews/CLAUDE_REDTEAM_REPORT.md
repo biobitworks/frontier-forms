@@ -40,16 +40,29 @@ YOLOv8n field-box detector trained on the SYNFORM2 train split only, scored on d
 
 Ledgers: `evidence/redteam/detector/{full,no_scan}/epoch_ledger.jsonl`; replay notebook `notebooks/16_redteam_epoch_breakpoints.ipynb` (not executed at finish: NOT_TESTED).
 
+## 4. Trained local models vs the untrained baseline (preregistered, test split scored once)
+
+The protocol was committed before scoring, in `scripts/redteam/trained_gain_eval.py` (5615a07). The same Apple Vision OCR engine is used in every arm, so only the trained components differ. The endpoint is forms with all 7 fields correct, on 46 held-out images. Statistics are exact McNemar with Holm over the three arms, plus a stratified bootstrap (10,000 reps, seed 20261102).
+
+| Arm | Trained component | All 7 correct | Fields | Holm p | 95% CI (Δ rate) | Decision |
+|---|---|---|---|---|---|---|
+| A0 | none (page OCR + rule parser) | 14/46 | 283/322 | — | — | baseline |
+| A1 | learned correction fit on 132 train images | 22/46 | 296/322 | 0.023 | [+0.065, +0.283] | PROMOTE_DISCOVERY |
+| A2 | YOLOv8n detector crops (best `d7bc1a04…`) | 9/46 | 276/322 | 0.534 | [−0.261, +0.043] | NULL |
+| A3 | A2 + learned correction | 15/46 | 288/322 | 1.000 | [−0.109, +0.152] | NULL |
+
+The learned correction is small. It strips spaces in every field, because no training value contains one, and maps `O` to `0` in the case id. Replication on a second cohort is NOT_TESTED, so this is OBSERVED at discovery grade and not SUPPORTED. Evidence: `evidence/redteam/trained_gain/`, judge Figure 6.
+
 ## TURN_BREAKPOINT
 
 * **ID**: CLAUDE-REDTEAM-CLOUD-20261102-FINAL
 * **PARENT**: PR #3 head `da953450`; roots `9e4d4df8…`, `5f9a7e51…`, `2f1cfafd…`
 * **VERIFIED_NEW**: SYNFORM2 `aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e`; SYNFORM2-ERR `790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944`; detector chains `1fc60016…` (full), `e99fe22c…` (no_scan)
-* **EXECUTED**: independent replay; L0/L1/L2 discovery+heldout; L0 cold replay; L3 discovery; Apple Vision OCR (train/dev/test, ERR); qwen2.5vl on ERR (135/230); gate factorial; detector full + LOMO; Lean ×2; gitleaks ×2; gsigmad init/register/classify/status
+* **EXECUTED**: trained-gain evaluation (A0–A3, test split once); independent replay; L0/L1/L2 discovery+heldout; L0 cold replay; L3 discovery; Apple Vision OCR (train/dev/test, ERR); qwen2.5vl on ERR (135/230); gate factorial; detector full + LOMO; Lean ×2; gitleaks ×2; gsigmad init/register/classify/status
 * **OBSERVED**: as in sections 1–3
 * **DECISIONS**: Insilico stopped; Fireworks not used; 12-form lane, mapper/bbox lanes and DB build dropped at finish request
 * **PROPOSED**: commitment-gate replication; mapper lanes; template-family replication
 * **NOT_TESTED**: Fireworks L4/L5, Snyk, NVIDIA training, live Supabase, Epic, mapper/bbox lanes, EXP-012/014/015/016 notebook execution
 * **FAILURES**: L3 MPS hang (resumed); gitleaks 273 false positives (repaired); EXP-013 first run import error (repaired, v1 kept)
-* **UNRESOLVED**: F-01 in predecessor schemas; replication of the commitment gain
+* **UNRESOLVED**: F-01 in predecessor schemas; replication of the commitment gain and of the learned-correction gain (A1)
 * **NEXT_ACTION**: teammate review of this merge into `feat/fcg-ehr-evidence-lab-20261102`; PR #3 itself left for the owner

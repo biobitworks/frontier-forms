@@ -234,6 +234,22 @@ def main():
             'One row per decision. PROMOTE requires Holm-corrected exact McNemar p<0.05 and a stratified-bootstrap lower 95% CI > 0, and is labelled discovery because the replication cohort is NOT_TESTED. NEGATIVE, NULL, LOSS, NEUTRAL, BLOCKED and NOT_TESTED rows are kept on purpose. Tint repeats the word in the Decision column (blue = promote/gain, grey = null/neutral, red = negative/loss, orange = blocked/not tested).',
             'evidence/redteam/attribution_matrix.json, gate_factorial.json, detector/*/epoch_ledger.jsonl, trained_gain/trained_gain_summary.json, docs/judges/pr_inventory.json', 'promotions_and_negatives')
 
+    # trained local models vs untrained baseline (preregistered, test split scored once)
+    if tgp.exists():
+        t = json.loads(tgp.read_text()); C = t['comparisons_vs_A0']; b0 = C['A1']
+        items = [('A0 page OCR + rule parser (untrained)', b0['baseline_all7'], f"/ 46 forms all 7 fields | {b0['baseline_fields_correct']}/322 fields | baseline")]
+        names = {'A1': 'A1 + learned correction (fit on train)', 'A2': 'A2 trained YOLOv8n crops + OCR', 'A3': 'A3 detector crops + correction'}
+        for arm in ('A1', 'A2', 'A3'):
+            c = C[arm]; lo, hi = c['ci95_bootstrap_stratified']
+            items.append((names[arm], c['arm_all7'], f"/ 46 | {c['fields_correct']}/322 fields | Holm p={c['p_holm']:.3f} | CI [{lo:+.2f},{hi:+.2f}] | {c['decision'].split(' ')[0]}"))
+        cm = t['trained_components']['post_correction']
+        rules = [f"{f}: {k}" for f, m in cm['char_map'].items() for k in m]
+        add('Trained local models vs the untrained baseline (test split, scored once)', bars(items, 46, width=1300),
+            'Preregistered before the test split was scored (scripts/redteam/trained_gain_eval.py, committed first). Endpoint: forms with all 7 fields correct, 46 held-out images (23 patients x clean + scan). '
+            f"The learned correction was fit only on the 132 training images: strip spaces in every field (no training value contains one) plus character rules seen at least twice and never contradicted ({', '.join(rules) or 'none'}). "
+            'It is the only trained arm that is promoted, at discovery grade because the replication cohort is NOT_TESTED. The trained YOLOv8n detector finds fields well (mAP50 0.912) but OCR on its crops is NULL, and so is crops plus correction.',
+            'evidence/redteam/trained_gain/trained_gain_summary.json, trained_gain_rows.json', 'trained_gain')
+
     # 5+ labelled form images
     demo = R / 'docs/demo'
     shots = [
