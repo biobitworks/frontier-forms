@@ -1,5 +1,7 @@
 # Real Pi baseline versus Frontier Forms
 
+**[Live multi-model results and horizontal chart](LIVE_RESULTS.md)** — new runs are added as they complete. The detailed results below describe the original completed DeepSeek pilot.
+
 [Model-specific speed chart](model_speed.png) · [How the tooling achieves this](TOOLING_WRITEUP.md)
 
 ## Explain it in 20 seconds

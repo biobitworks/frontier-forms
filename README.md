@@ -9,7 +9,7 @@
 
 ## Hackathon: real Pi baseline versus our harness
 
-[Horizontal comparison charts, exact numbers and a 20-second explanation](bench/charts/README.md). Same DeepSeek V4.1 Flash model, three synthetic medical forms, two patients, six matched cases per arm. Median completion: **92.0 s → 16.8 s (5.5× faster)**. Correct fields: **119/121 for both arms**. Mean estimated API cost: **$0.0269 → $0.0054 per form**. Small development pilot; no held-out or clinical superiority claim. [Sanitized paired metrics](bench/charts/paired_pilot.json).
+[Live multi-model horizontal charts and results](bench/charts/LIVE_RESULTS.md), updated as runs finish. [Original DeepSeek pilot and 20-second explanation](bench/charts/README.md). Same DeepSeek V4.1 Flash model, three synthetic medical forms, two patients, six matched cases per arm. Median completion: **92.0 s → 16.8 s (5.5× faster)**. Correct fields: **119/121 for both arms**. Mean estimated API cost: **$0.0269 → $0.0054 per form**. Small development pilot; no held-out or clinical superiority claim. [Sanitized paired metrics](bench/charts/paired_pilot.json).
 
 ## Business use case
 
