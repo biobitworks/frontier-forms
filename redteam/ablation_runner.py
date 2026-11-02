@@ -166,6 +166,8 @@ class HF:
                                            return_tensors="pt", return_dict=True).to(self.dev)
         with self.torch.inference_mode():
             out = self.m.generate(**inp, do_sample=False, max_new_tokens=NUM_PREDICT, pad_token_id=self.tok.eos_token_id)
+        if self.dev == "mps":
+            self.torch.mps.empty_cache()  # first P-L3 attempt accumulated MPS memory and OOMed mid-run
         n_in = inp["input_ids"].shape[-1]
         raw = self.tok.decode(out[0][n_in:], skip_special_tokens=True)
         return raw, int(n_in), int(out.shape[-1] - n_in)
