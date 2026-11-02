@@ -133,7 +133,12 @@ def verify_manifest(manifest: dict, read_bytes) -> dict:
     if len(atoms) != manifest["merkle"]["leaf_count"]:
         raise FreezeError("LEAF_COUNT_MISMATCH")
     statuses, leaves = {}, []
+    # Never reflect a producer-supplied "VERIFIED" into the readback result.
+    # This vocabulary is distinct from the returned verifier status.
+    allowed_custody = {"STORED_READBACK_VERIFIED", "NOT_STORED", "UNKNOWN"}
     for a in atoms:
+        if a.get("custody_state") not in allowed_custody:
+            raise FreezeError("CUSTODY_STATE_NOT_RECOGNIZED:" + a["atom_id"])
         if a["occurrence_id"] != occurrence_id(a["source_id"], a["content_sha256"], a["origin_ref"]):
             raise FreezeError("OCCURRENCE_ID_MISMATCH:" + a["atom_id"])
         if a["custody_state"] == "STORED_READBACK_VERIFIED":
