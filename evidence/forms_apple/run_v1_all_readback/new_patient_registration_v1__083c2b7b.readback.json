@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Keren Schumm",
+    "text": "Keren Schumm"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2010-11-04",
+    "text": "2010-11-04"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-233-5576",
+    "text": "555-233-5576"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "495 Stiedemann Rest",
+    "text": "495 Stiedemann Rest"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medfield",
+    "text": "Medfield"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02052",
+    "text": "02052"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

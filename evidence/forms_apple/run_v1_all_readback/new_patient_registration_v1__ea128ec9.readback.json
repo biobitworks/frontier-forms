@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Leanna Hoppe",
+    "text": "Leanna Hoppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1966-04-14",
+    "text": "1966-04-14"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-116-3167",
+    "text": "555-116-3167"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "740 Herzog Union Suite 82",
+    "text": "740 Herzog Union Suite 82"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Waltham",
+    "text": "Waltham"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02452",
+    "text": "02452"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Vietnamese",
+    "text": "Vietnamese"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

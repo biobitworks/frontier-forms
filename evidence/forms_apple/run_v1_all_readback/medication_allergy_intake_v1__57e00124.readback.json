@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Octavio McKenzie",
+    "text": "Octavio McKenzie"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "ferrous sulfate 325 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet",
+    "text": "ferrous sulfate 325 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Metabolic syndrome X (disorder); Full-time employment (finding)",
+    "text": "Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Metabolic syndrome X (disorder); Full-time employment (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "171.8",
+    "text": "171.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "85",
+    "text": "85"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "141/91",
+    "text": "141/91"
+  }
+}

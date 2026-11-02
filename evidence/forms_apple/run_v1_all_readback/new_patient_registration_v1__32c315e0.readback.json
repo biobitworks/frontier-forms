@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Willis Homenick",
+    "text": "Willis Homenick"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1977-12-19",
+    "text": "1977-12-19"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-215-4962",
+    "text": "555-215-4962"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "763 Bechtelar Gate",
+    "text": "763 Bechtelar Gate"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Everett",
+    "text": "Everett"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02148",
+    "text": "02148"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

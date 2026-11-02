@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Willis Homenick",
+    "text": "Willis Homenick"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet",
+    "text": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Eggs (edible) (substance); Tree nut (substance); Peanut (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)",
+    "text": "Eggs (edible) (substance); Tree nut (substance); Peanut (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Body mass index 30+ - obesity (finding); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Full-time employment (finding); Unhealthy alcohol drinking behavior (finding)",
+    "text": "Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Chronic kidney disease stage 2"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "172.2",
+    "text": "172.2"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "89.6",
+    "text": "89.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "157/95",
+    "text": "157/95"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Rich Little",
+    "text": "Rich Little"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Naproxen sodium 220 MG Oral Tablet; Simvastatin 10 MG Oral Tablet",
+    "text": "Naproxen sodium 220 MG Oral Tablet; Simvastatin 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Lack of access to transportation (finding); Transport problem (finding); Chronic sinusitis (disorder); Limited social contact (finding); Osteoarthritis of knee (disorder); Full-time employment (finding); Medication review due (situation); Hyperlipidemia (disorder)",
+    "text": "Educated to high school level (finding); Lack of access to transportation (finding); Transport problem (finding); Chronic sinusitis (disorder); Limited social contact (finding); Osteoarthritis of knee (disorder); Full-time employment (finding); Medication review due (situation);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "165",
+    "text": "165"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "55",
+    "text": "55"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "114/89",
+    "text": "114/89"
+  }
+}

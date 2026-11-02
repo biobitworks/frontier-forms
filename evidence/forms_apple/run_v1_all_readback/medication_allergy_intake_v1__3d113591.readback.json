@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jeane Casper",
+    "text": "Jeane Casper"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "127.6",
+    "text": "127.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "30.6",
+    "text": "30.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "115/71",
+    "text": "115/71"
+  }
+}

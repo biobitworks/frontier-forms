@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Bergstrom",
+    "text": "Bergstrom"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Celena",
+    "text": "Celena"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2015-12-20",
+    "text": "2015-12-20"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "History of appendectomy (situation)",
+    "text": "History of appendectomy (situation)"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "43.2",
+    "text": "43.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

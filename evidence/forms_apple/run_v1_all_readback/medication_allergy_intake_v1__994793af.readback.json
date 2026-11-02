@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Latarsha Sipes",
+    "text": "Latarsha Sipes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Hydrochlorothiazide 25 MG Oral Tablet",
+    "text": "Hydrochlorothiazide 25 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Essential hypertension (disorder); Sepsis (disorder); History of tubal ligation (situation); Medication review due (situation); Body mass index 30+ - obesity (finding); Unemployed (finding); Social isolation (finding)",
+    "text": "Received higher education (finding); Essential hypertension (disorder); Sepsis (disorder); History of tubal ligation (situation); Medication review due (situation); Body mass index 30+ - obesity (finding); Unemployed (finding); Social isolation (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "172.4",
+    "text": "172.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "89.3",
+    "text": "89.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "122/86",
+    "text": "122/86"
+  }
+}

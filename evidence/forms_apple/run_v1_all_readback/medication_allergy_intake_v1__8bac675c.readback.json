@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Emogene Cartwright",
+    "text": "Emogene Cartwright"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "152.8",
+    "text": "152.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "39",
+    "text": "39"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "119/68",
+    "text": "119/68"
+  }
+}

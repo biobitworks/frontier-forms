@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Oscar Sauer",
+    "text": "Oscar Sauer"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2022-02-11",
+    "text": "2022-02-11"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-448-9812",
+    "text": "555-448-9812"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "394 Kirlin Rue Apt 98",
+    "text": "394 Kirlin Rue Apt 98"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02215",
+    "text": "02215"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

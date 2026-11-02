@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Chung Ledner",
+    "text": "Chung Ledner"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Naproxen sodium 220 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Ibuprofen 400 MG Oral Tablet [Ibu]; 24 HR tacrolimus 1 MG Extended Release Oral Tablet; tramadol hydrochloride 50 MG Oral Tablet; 24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet",
+    "text": "Naproxen sodium 220 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Ibuprofen 400 MG Oral Tablet [Ibu]; 24 HR"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Prediabetes (finding); Received higher education (finding); Anemia (disorder); Essential hypertension (disorder); Past pregnancy history of miscarriage (situation); Polyp of colon (disorder); Diabetes mellitus type 2 (disorder); Hypertriglyceridemia (disorder); Metabolic syndrome X (disorder); Recurrent rectal polyp (disorder); Localized, primary osteoarthritis of the hand (disorder); Disorder of kidney due to diabetes mellitus (disorder); Hyperglycemia (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Gingivitis (disorder); Body mass index 30+ - obesity (finding); Limited social contact (finding); History of renal transplant (situation); Stress (finding); Ischemic heart disease (disorder); Hyperlipidemia (disorder); Part-time employment (finding); Social isolation (finding); Victim of intimate partner abuse (finding); Abnormal findings diagnostic imaging heart+coronary circulat (finding)",
+    "text": "Prediabetes (finding); Received higher education (finding); Anemia (disorder); Essential hypertension (disorder); Past pregnancy history of miscarriage (situation); Polyp of colon (disorder); Diabetes mellitus type 2 (disorder); Hypertriglyceridemia (disorder); Metabolic"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "171.6",
+    "text": "171.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "80.3",
+    "text": "80.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "113/62",
+    "text": "113/62"
+  }
+}

@@ -8,6 +8,10 @@ select{background:#253a57;color:var(--ink);border:1px solid #6681a6;border-radiu
 .golden{display:flex;gap:7px;flex-wrap:wrap}.step{padding:13px;background:#243c59;border:1px solid #426181;border-radius:9px;min-width:158px;flex:1}.step b{font-size:15px;display:block}.step span{color:#bdd5f5;font-size:12px}pre{overflow:auto;white-space:pre-wrap;color:#b9d7ff;font-size:12px}a{color:#aed4ff}.legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted)}.dot{width:10px;height:10px;display:inline-block;margin-right:5px;border-radius:3px}
 @media(max-width:720px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head><body>
+<!-- judge-caption:start -->
+<aside style="all:initial;display:block;font:13px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;background:#fffbe6;color:#1a1a1a;border:1px solid #e0c96b;border-radius:8px;padding:10px 14px;margin:12px 16px" aria-label="Figure caption"><b style="font-size:14px">Figure 4. Fault-injection factorial: 16 module combinations at three scales</b><br><b>How to read:</b> Select a scale (10 / 30 / 100 patients). Rows = module combination, columns = overall accuracy, paired change vs the impaired baseline, then repair outcome per attack type. Legend: fully repaired / partially repaired / still failing / missing evidence.<br><b>Source:</b> PR #12 &middot; <b>Evidence grade:</b> Discovery (faults target known corrections by design) &middot; Synthetic MITRE Synthea data, local inference only. Index: docs/figures/FIGURES.md</aside>
+<!-- judge-caption:end -->
+
 <header><div class="eyebrow">Frontier Forms · Synthetic controlled fault injection · FCO/FCG</div><h1>Factorial LOMO evidence heatmap</h1>
 <p>All 16 module combinations, tiny → small → medium, with paired comparisons and exact-byte Merkle receipts. These experiments test deliberately seeded form errors, not AI model training or clinical effectiveness.</p></header>
 <main>

@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Daniel",
+    "text": "Daniel"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Shalanda",
+    "text": "Shalanda"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "1948-01-30",
+    "text": "1948-01-30"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due (situation); Part-time employment (finding)",
+    "text": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "80.2",
+    "text": "80.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

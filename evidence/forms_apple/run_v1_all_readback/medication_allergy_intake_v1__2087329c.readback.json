@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mindi Ondricka",
+    "text": "Mindi Ondricka"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)",
+    "text": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "162.5",
+    "text": "162.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "73.3",
+    "text": "73.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "118/87",
+    "text": "118/87"
+  }
+}

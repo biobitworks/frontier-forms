@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Hans Friesen",
+    "text": "Hans Friesen"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet",
+    "text": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Peanut (substance); Allergic disposition (finding)",
+    "text": "Peanut (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic intractable migraine without aura (disorder); Received higher education (finding); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Victim of intimate partner abuse (finding); Metabolic syndrome X (disorder); Medication review due (situation); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Full-time employment (finding); Stress (finding)",
+    "text": "Chronic intractable migraine without aura (disorder); Received higher education (finding); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "184.9",
+    "text": "184.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "96.6",
+    "text": "96.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "141/100",
+    "text": "141/100"
+  }
+}

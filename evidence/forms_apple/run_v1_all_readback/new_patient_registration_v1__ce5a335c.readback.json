@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ann Hagenes",
+    "text": "Ann Hagenes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1988-08-29",
+    "text": "1988-08-29"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-299-9921",
+    "text": "555-299-9921"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "981 Carter Underpass Suite 15",
+    "text": "981 Carter Underpass Suite 15"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Holden",
+    "text": "Holden"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

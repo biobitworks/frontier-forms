@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Parker",
+    "text": "Parker"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Wilfred",
+    "text": "Wilfred"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2009-11-22",
+    "text": "2009-11-22"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "69.1",
+    "text": "69.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

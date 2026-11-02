@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Rolando Rohan",
+    "text": "Rolando Rohan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1981-06-18",
+    "text": "1981-06-18"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-666-1540",
+    "text": "555-666-1540"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "260 Cassin Byway",
+    "text": "260 Cassin Byway"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Yarmouth",
+    "text": "Yarmouth"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

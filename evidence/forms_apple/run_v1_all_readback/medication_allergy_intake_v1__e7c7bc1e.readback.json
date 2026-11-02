@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roman Gutmann",
+    "text": "Roman Gutmann"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Terfenadine 60 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet",
+    "text": "Terfenadine 60 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Wheat (substance); Allergic disposition (finding)",
+    "text": "Wheat (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Chronic pain (finding); Chronic low back pain (finding); Essential hypertension (disorder); Stress (finding); Severe anxiety (panic) (finding); Medication review due (situation); Full-time employment (finding); Social isolation (finding); Gingivitis (disorder); Acute bronchitis (disorder)",
+    "text": "Educated to high school level (finding); Chronic pain (finding); Chronic low back pain (finding); Essential hypertension (disorder); Stress (finding); Severe anxiety (panic) (finding); Medication review due (situation); Full-time employment (finding); Social isolation (finding); Gingivitis"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "183.6",
+    "text": "183.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "92.4",
+    "text": "92.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "123/89",
+    "text": "123/89"
+  }
+}

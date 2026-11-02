@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mickey Hintz",
+    "text": "Mickey Hintz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2000-05-07",
+    "text": "2000-05-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-493-7675",
+    "text": "555-493-7675"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1006 Kozey Avenue",
+    "text": "1006 Kozey Avenue"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Northampton",
+    "text": "Northampton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01062",
+    "text": "01062"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

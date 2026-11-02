@@ -25,7 +25,11 @@ table{border-collapse:collapse;width:100%;font-size:12px;min-width:900px}th{text
 details{border-top:1px solid #dce5ed;margin-top:10px;padding-top:8px}summary{cursor:pointer;font-weight:600}
 a{color:#155b9b}code{font-size:12px}@media(max-width:750px){.grid{grid-template-columns:repeat(2,minmax(130px,1fr))}main{padding:12px}.card,.panel{padding:12px}}
 </style></head>
-<body><header><div class="eyebrow">FRONTIER FORMS  ·  SOURCE-BACKED AUDIT</div>
+<body>
+<!-- judge-caption:start -->
+<aside style="all:initial;display:block;font:13px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;background:#fffbe6;color:#1a1a1a;border:1px solid #e0c96b;border-radius:8px;padding:10px 14px;margin:12px 16px" aria-label="Figure caption"><b style="font-size:14px">Figure 6. Training checkpoints versus FCO/FCG ablations (statistical timeline)</b><br><b>How to read:</b> Panel 1: x = epoch, y = validation cross-entropy loss (one real point so far). Panel 2: rows = single changed leaf, columns = delta in percentage points with 95% CI, McNemar p and Holm-adjusted p. Panel 3: training-set size versus held-out F1 (sample-size sweep, not a learning curve).<br><b>Source:</b> PR #18 &middot; <b>Evidence grade:</b> Mixed; no trained-model gain admitted &middot; Synthetic MITRE Synthea data, local inference only. Index: docs/figures/FIGURES.md</aside>
+<!-- judge-caption:end -->
+<header><div class="eyebrow">FRONTIER FORMS  ·  SOURCE-BACKED AUDIT</div>
 <h1>Training checkpoints × FCO/FCG ablations</h1>
 <p>Three separate axes: <b>neural weights</b>, <b>single-leaf context/validator changes</b>, and <b>measured outcomes</b>. Root changes represent evidence identity, never proof of improvement. Vita DAISY is shown as an abstract admission gate only.</p></header>
 <main><div id="status" class="note">Loading local snapshot…</div>

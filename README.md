@@ -1,5 +1,8 @@
 # Frontier Forms — Antigentic EHR Form Intake
 
+> **Start here (judges, 2026-11-02).** Current status, results and priorities: [docs/STATUS_2026-11-02.md](docs/STATUS_2026-11-02.md). Accomplishment heatmap: [docs/figures/accomplishment_heatmap.png](docs/figures/accomplishment_heatmap.png) (interactive: [.html](docs/figures/accomplishment_heatmap.html)). Every figure and image with its caption and source PR: [docs/figures/FIGURES.md](docs/figures/FIGURES.md).
+> Headline on 54 held-out synthetic test forms: B0 33.3% (18/54) full-form success; B0 + FCG harness 55.6% (30/54), discovery grade; post-training arm not yet scored. All data synthetic (MITRE Synthea), all inference local. The sections below are the original pre-release protocol, and some of their NOT_TESTED rows have since been run (see the status file).
+
 **Repo:** https://github.com/biobitworks/frontier-forms
 **Parent commit:** 67bf6b0ba51dc7ed792c139f37fcc648653611c4
 **State:** PRE-RELEASE_EVIDENCE_PACKAGE; NO_LIVE_EHR_WRITE.

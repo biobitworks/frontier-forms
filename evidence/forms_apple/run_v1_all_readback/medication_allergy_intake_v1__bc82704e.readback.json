@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Birgit Gibson",
+    "text": "Birgit Gibson"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "107.8",
+    "text": "107.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "17.9",
+    "text": "17.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "141/88",
+    "text": "141/88"
+  }
+}

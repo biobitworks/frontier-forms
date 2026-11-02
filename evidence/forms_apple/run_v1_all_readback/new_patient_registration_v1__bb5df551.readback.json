@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Lou Durgan",
+    "text": "Lou Durgan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2006-03-24",
+    "text": "2006-03-24"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-717-2933",
+    "text": "555-717-2933"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "495 Reinger Run Suite 45",
+    "text": "495 Reinger Run Suite 45"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "East Longmeadow",
+    "text": "East Longmeadow"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

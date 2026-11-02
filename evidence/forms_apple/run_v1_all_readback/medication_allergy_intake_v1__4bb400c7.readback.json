@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Avery Upton",
+    "text": "Avery Upton"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Naproxen sodium 220 MG Oral Tablet; Furosemide 40 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet [Tylenol]; Simvastatin 10 MG Oral Tablet",
+    "text": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Naproxen sodium 220 MG Oral Tablet; Furosemide 40 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet [Tylenol]; Simvastatin 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Seizure disorder (disorder); History of seizure (situation); Epilepsy (disorder); Gingivitis (disorder); Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Hyperlipidemia (disorder); Localized, primary osteoarthritis of the hand (disorder); Medication review due (situation); Full-time employment (finding); Stress (finding); Chronic congestive heart failure (disorder); Limited social contact (finding)",
+    "text": "Seizure disorder (disorder); History of seizure (situation); Epilepsy (disorder); Gingivitis (disorder); Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Chronic pain (finding); Chronic low back pain (finding); Chronic"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "177.4",
+    "text": "177.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "85.8",
+    "text": "85.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "86/72",
+    "text": "86/72"
+  }
+}

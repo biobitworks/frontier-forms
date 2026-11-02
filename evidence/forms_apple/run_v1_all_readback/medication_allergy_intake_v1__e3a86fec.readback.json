@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Beckie Sanford",
+    "text": "Beckie Sanford"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Naproxen sodium 220 MG Oral Tablet; Simvastatin 10 MG Oral Tablet",
+    "text": "Naproxen sodium 220 MG Oral Tablet; Simvastatin 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Localized, primary osteoarthritis of the hand (disorder); Body mass index 30+ - obesity (finding); Victim of intimate partner abuse (finding); Polyp of colon (disorder); Recurrent rectal polyp (disorder); Hyperlipidemia (disorder); Full-time employment (finding); Gingivitis (disorder)",
+    "text": "Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Localized, primary osteoarthritis of the hand (disorder); Body mass index 30+ - obesity (finding); Victim of intimate partner abuse (finding); Polyp of colon (disorder); Recurrent rectal polyp"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "162.7",
+    "text": "162.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "72.6",
+    "text": "72.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "136/79",
+    "text": "136/79"
+  }
+}

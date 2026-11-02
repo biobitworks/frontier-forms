@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Casper",
+    "text": "Casper"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Margret",
+    "text": "Margret"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2005-12-03",
+    "text": "2005-12-03"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]",
+    "text": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Stress (finding)",
+    "text": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "74.3",
+    "text": "74.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

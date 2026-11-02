@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jared Little",
+    "text": "Jared Little"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Full-time employment (finding); Medication review due (situation); Limited social contact (finding)",
+    "text": "Received higher education (finding); Full-time employment (finding); Medication review due (situation); Limited social contact (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "176.1",
+    "text": "176.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "80.6",
+    "text": "80.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "104/73",
+    "text": "104/73"
+  }
+}

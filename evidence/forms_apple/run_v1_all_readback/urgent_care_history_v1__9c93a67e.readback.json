@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Kuphal",
+    "text": "Kuphal"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Charlette",
+    "text": "Charlette"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "1973-06-08",
+    "text": "1973-06-08"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "lisinopril 10 MG Oral Tablet",
+    "text": "lisinopril 10 MG Oral Tablet"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "74.3",
+    "text": "74.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Dual Eligible",
+    "text": "Dual Eligible"
+  }
+}

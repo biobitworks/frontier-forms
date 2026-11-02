@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Graig Kub",
+    "text": "Graig Kub"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1979-12-02",
+    "text": "1979-12-02"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-445-6721",
+    "text": "555-445-6721"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "486 Walter Village",
+    "text": "486 Walter Village"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Worcester",
+    "text": "Worcester"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01609",
+    "text": "01609"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

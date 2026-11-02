@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ricky Aufderhar",
+    "text": "Ricky Aufderhar"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Vitamin B12 5 MG/ML Injectable Solution",
+    "text": "Vitamin B12 5 MG/ML Injectable Solution"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Prediabetes (finding); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Stress (finding)",
+    "text": "Chronic sinusitis (disorder); Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Prediabetes (finding); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Stress (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "165",
+    "text": "165"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "80.9",
+    "text": "80.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "106/78",
+    "text": "106/78"
+  }
+}

@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="980" height="576" viewBox="0 0 980 576" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">
-<rect width="980" height="576" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="604" data-judge-h="576" viewBox="0 0 980 604" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">
+<!-- judge-caption:start --><title>Admission-gate factorial on SYNFORM2-ERR (16 combinations x 4 outcome metrics)</title><desc>Source: evidence/redteam/gate_factorial.json, PRs #20/#21. Discovery grade: replication NOT_TESTED.</desc><text x="16" y="594" fill="#111827" font-weight="600">Figure. Admission-gate factorial on SYNFORM2-ERR (16 combinations x 4 outcome metrics). Source: evidence/redteam/gate_factorial.json, PRs #20/#21. Discovery grade: replication NOT_TESTED.</text><!-- judge-caption:end -->
+<rect width="980" height="604" fill="#ffffff"/>
 <text x="16" y="28" font-size="16" font-weight="600" fill="#111827">Gate factorial on SYNFORM2ERR-790a7dc6f9641fa6 (135 images, 945 field cells)</text>
 <text x="16" y="46" fill="#4b5563">primary extractor qwen2.5vl:3b single pass; challenger Apple Vision OCR + geometric parser; one row per mechanism combination; darker = larger value</text>
 <text x="415.0" y="62" text-anchor="middle" fill="#374151" font-weight="600">Planted-error detection rate</text>
