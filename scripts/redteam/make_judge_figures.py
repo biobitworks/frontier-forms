@@ -20,7 +20,7 @@ SYN = 'SYNTHETIC DATA ONLY (MITRE Synthea sample) — not clinical, no PHI, no h
 F = lambda s: ImageFont.load_default(size=s)
 
 
-ASCII = {'—': '-', '–': '-', '≥': '>=', '≤': '<=', '▲': '^', '▼': 'v', '✓': 'yes', '→': '->', '×': 'x', '…': '...', '·': '|', '∧': 'AND', 'σ': 'sigma', '°': ' deg'}
+ASCII = {'Δ': 'd', '−': '-', '—': '-', '–': '-', '≥': '>=', '≤': '<=', '▲': '^', '▼': 'v', '✓': 'yes', '→': '->', '×': 'x', '…': '...', '·': '|', '∧': 'AND', 'σ': 'sigma', '°': ' deg'}
 
 
 def a(t):
@@ -74,6 +74,28 @@ def bars(items, maxv, unit='', width=900, bar_h=34):
         L = int((width - left - 160) * v / maxv)
         d.rounded_rectangle([left, y + 6, left + max(L, 2), y + bar_h - 6], 4, fill=hexrgb('#3987e5'))
         d.text((left + L + 8, y + 9), a(f'{v}{unit} {note}'), fill=INK, font=F(14))
+    return im
+
+
+
+def table(rows, cols, widths, row_h=24):
+    """rows: list of tuples of strings; colours the last column by decision word (text + tint, never colour alone)."""
+    w = sum(widths) + 20; h = 34 + row_h * len(rows) + 8
+    im = Image.new('RGB', (w, h), BG); d = ImageDraw.Draw(im)
+    x = 10
+    for c, cw in zip(cols, widths):
+        d.text((x + 4, 8), a(c), fill=INK, font=F(14)); x += cw
+    d.line([10, 30, w - 10, 30], fill=LINE, width=1)
+    tint = {'PROMOTE': (205, 226, 251), 'PASS': (205, 226, 251), 'GAIN': (205, 226, 251), 'NULL': (243, 244, 246), 'NEUTRAL': (243, 244, 246),
+            'NEGATIVE': (254, 226, 226), 'LOSS': (254, 226, 226), 'BLOCKED': (255, 237, 213), 'NOT_TESTED': (255, 237, 213)}
+    for i, r in enumerate(rows):
+        y = 34 + i * row_h; x = 10
+        key = next((k for k in tint if str(r[-1]).upper().startswith(k)), None)
+        if key:
+            d.rectangle([10 + sum(widths[:-1]), y, 10 + sum(widths), y + row_h - 2], fill=tint[key])
+        for v, cw in zip(r, widths):
+            t = a(v); maxc = int(cw / 7.2)
+            d.text((x + 4, y + 5), t if len(t) <= maxc else t[:maxc - 3] + '...', fill=INK, font=F(13)); x += cw
     return im
 
 
@@ -168,6 +190,49 @@ def main():
         add('Training over time: every epoch committed as a Merkle leaf (GAIN / LOSS / NEUTRAL)', im,
             f"Local YOLOv8n field-box detector trained on the SYNFORM2 train split; after every epoch the weights are hashed, scored on the dev split (field box IoU ≥ 0.5, 308 boxes), compared with the previous epoch (exact McNemar + stratified bootstrap) and committed to a hash chain. Test (touched once): full mAP50 {fr['test']['mAP50']:.3f}, {fr['test']['fields_ok']}/{fr['test']['fields_total']} boxes; LOMO no-scan mAP50 {nr['test']['mAP50']:.3f}, {nr['test']['fields_ok']}/{nr['test']['fields_total']}. Chain roots {fr['chain_root'][:12]}… / {nr['chain_root'][:12]}….",
             'evidence/redteam/detector/{full,no_scan}/epoch_ledger.jsonl, chain_manifest.json, final_receipt.json', 'epoch_ledger')
+
+
+    # promotions and negatives: every decision in one table
+    dec = []
+    am = R / 'evidence/redteam/attribution_matrix.json'
+    if am.exists():
+        for r in json.loads(am.read_text())['records']:
+            if r['kind'] in ('MODEL_LANE', 'CONTEXT_PROJECTION') and 'table' in r and r['split'] == 'heldout':
+                w = r['weights']; ww = w['challenger']['name'] if r['kind'] == 'MODEL_LANE' else w['baseline']['name']
+                verdict = 'NEGATIVE_WORSE' if (r['holm_p'] < 0.05 and r['delta_abs'] < 0) else ('PROMOTE (discovery)' if r['admission'] == 'PASS' else 'NULL')
+                dec.append(('LongevityBench heldout (n=39)', ww, r['intervention'][:40], f"d={r['delta_abs']:+.3f}, Holm p={r['holm_p']:.3f}", verdict))
+    gfp = R / 'evidence/redteam/gate_factorial.json'
+    if gfp.exists():
+        g = json.loads(gfp.read_text())
+        for k, c in sorted(g['configurations'].items(), key=lambda kv: (sum(kv[1]['config'].values()), kv[0])):
+            if k == 'none' or k.count('+') not in (0, 3):
+                continue
+            v = c.get('vs_none', {})
+            dec.append(('Planted-error forms (135 img)', 'qwen2.5vl:3b + Apple OCR', 'checks: ' + k, f"detect {c['planted_detection_rate']:.2f}, false adm {c['false_admissions']}, Holm p={v.get('p_holm', 1):.4f}",
+                        'PROMOTE (discovery; no replication yet)' if v.get('mcnemar_gate_holm') and v.get('bootstrap_gate') else 'NULL'))
+    for run in ('full', 'no_scan'):
+        lp = R / f'evidence/redteam/detector/{run}/epoch_ledger.jsonl'
+        if lp.exists():
+            st = [json.loads(x)['status'] for x in lp.read_text().splitlines() if x.strip()]
+            for s_ in ('GAIN', 'LOSS'):
+                eps = [i + 1 for i, x in enumerate(st) if x == s_]
+                dec.append((f'Detector training ({run})', 'YOLOv8n (trained locally)', f'epoch vs previous epoch ({len(eps)} epochs)', 'epochs ' + ', '.join(map(str, eps)) if eps else 'none', s_))
+            dec.append((f'Detector training ({run})', 'YOLOv8n (trained locally)', 'remaining epochs', f"{st.count('NEUTRAL')} epochs", 'NEUTRAL'))
+    tgp = R / 'evidence/redteam/trained_gain/trained_gain_summary.json'
+    if tgp.exists():
+        t = json.loads(tgp.read_text())
+        names = {'A1': 'learned OCR correction', 'A2': 'trained detector crops', 'A3': 'detector crops + correction'}
+        for arm, c in t['comparisons_vs_A0'].items():
+            dec.append(('Test forms (46 img, once)', 'trained local models vs page OCR', names[arm], f"all-7 {c['baseline_all7']}->{c['arm_all7']}/46, fields {c['baseline_fields_correct']}->{c['fields_correct']}/322, Holm p={c['p_holm']:.4f}", c['decision']))
+    invp = R / 'docs/judges/pr_inventory.json'
+    if invp.exists():
+        for w in json.loads(invp.read_text())['workstreams']:
+            if w['highest_status_reached'] in ('NEGATIVE', 'NULL', 'BLOCKED', 'NOT_TESTED'):
+                dec.append(('All PRs (inventory)', w['name'][:34], 'workstream outcome', (w.get('blocked_or_negative') or '')[:60], w['highest_status_reached']))
+    if dec:
+        add('Every promotion decision, including negative and null results', fit(table(dec, ['Data', 'Weights / model', 'Intervention', 'Measured', 'Decision'], [200, 230, 290, 420, 360])),
+            'One row per decision. PROMOTE requires Holm-corrected exact McNemar p<0.05 and a stratified-bootstrap lower 95% CI > 0, and is labelled discovery because the replication cohort is NOT_TESTED. NEGATIVE, NULL, LOSS, NEUTRAL, BLOCKED and NOT_TESTED rows are kept on purpose. Tint repeats the word in the Decision column (blue = promote/gain, grey = null/neutral, red = negative/loss, orange = blocked/not tested).',
+            'evidence/redteam/attribution_matrix.json, gate_factorial.json, detector/*/epoch_ledger.jsonl, trained_gain/trained_gain_summary.json, docs/judges/pr_inventory.json', 'promotions_and_negatives')
 
     # 5+ labelled form images
     demo = R / 'docs/demo'

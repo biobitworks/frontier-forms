@@ -36,49 +36,57 @@ Local YOLOv8n field-box detector trained on the SYNFORM2 train split; after ever
 
 *Source:* `evidence/redteam/detector/{full,no_scan}/epoch_ledger.jsonl, chain_manifest.json, final_receipt.json`
 
-## Figure 5 — A clean synthetic intake form with three kinds of boxes
+## Figure 5 — Every promotion decision, including negative and null results
 
-![Figure 5](figures/fig05_clean_boxes.png)
+![Figure 5](figures/fig05_promotions_and_negatives.png)
+
+One row per decision. PROMOTE requires Holm-corrected exact McNemar p<0.05 and a stratified-bootstrap lower 95% CI > 0, and is labelled discovery because the replication cohort is NOT_TESTED. NEGATIVE, NULL, LOSS, NEUTRAL, BLOCKED and NOT_TESTED rows are kept on purpose. Tint repeats the word in the Decision column (blue = promote/gain, grey = null/neutral, red = negative/loss, orange = blocked/not tested).
+
+*Source:* `evidence/redteam/attribution_matrix.json, gate_factorial.json, detector/*/epoch_ledger.jsonl, trained_gain/trained_gain_summary.json, docs/judges/pr_inventory.json`
+
+## Figure 6 — A clean synthetic intake form with three kinds of boxes
+
+![Figure 6](figures/fig06_clean_boxes.png)
 
 Renderer ground truth (green dashed), Apple Vision OCR text lines (blue) and the locally trained YOLOv8n detector (orange, with confidence) on a frozen SYNFORM2 test render.
 
 *Source:* `docs/demo/overlay/synform2-ce08cff8d07665997ab7_clean.png`
 
-## Figure 6 — The same form as a scan-like image (rotation, noise, blur, JPEG)
+## Figure 7 — The same form as a scan-like image (rotation, noise, blur, JPEG)
 
-![Figure 6](figures/fig06_scan_boxes.png)
+![Figure 7](figures/fig07_scan_boxes.png)
 
 Scan-like variant of the same patient; boxes as in the previous figure. Used to test robustness of OCR and the detector.
 
 *Source:* `docs/demo/overlay/synform2-ce08cff8d07665997ab7_scan.png`
 
-## Figure 7 — Planted error the models cannot see: first and last names swapped
+## Figure 8 — Planted error the models cannot see: first and last names swapped
 
-![Figure 7](figures/fig07_planted_name_swap.png)
+![Figure 8](figures/fig08_planted_name_swap.png)
 
 Local form server: the printed form swaps first/last name. qwen2.5vl:3b reads the printed values faithfully and every rule passes — only the per-field source commitment in the FCO leaf rejects it.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_E6_name_swap.png`
 
-## Figure 8 — Planted cross-patient error: another patient's case id
+## Figure 9 — Planted cross-patient error: another patient's case id
 
-![Figure 8](figures/fig08_planted_case_swap.png)
+![Figure 9](figures/fig09_planted_case_swap.png)
 
 The printed case id belongs to a different patient. The identity check (FCO case id) and the commitment check both reject it.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_E3_case_id_swap.png`
 
-## Figure 9 — Heavy noise variant read by the models
+## Figure 10 — Heavy noise variant read by the models
 
-![Figure 9](figures/fig09_heavy_noise.png)
+![Figure 10](figures/fig10_heavy_noise.png)
 
 Heavier noise and rotation with no planted error; tests whether extraction stays correct under degradation.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_V2_scan_sigma25.png`
 
-## Figure 10 — Drawing boxes on an image breaks OCR
+## Figure 11 — Drawing boxes on an image breaks OCR
 
-![Figure 10](figures/fig10_boxes_break_ocr.png)
+![Figure 11](figures/fig11_boxes_break_ocr.png)
 
 Same 10 forms, same OCR engine and parser; the only change is the drawn bounding boxes. Lesson: run OCR on the clean render and keep overlays for humans.
 
