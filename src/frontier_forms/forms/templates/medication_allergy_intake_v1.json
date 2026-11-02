@@ -1,0 +1,18 @@
+{
+  "template_key": "medication_allergy_intake_v1",
+  "title": "Medication and allergy intake (synthetic demo form)",
+  "family": "medication_allergy",
+  "splits": ["train", "validation", "test"],
+  "modality": "html",
+  "fields": [
+    {"field_key": "patient_name", "label": "Patient name", "type": "text", "required": true, "canonical_key": "patient.full_name"},
+    {"field_key": "current_medications", "label": "List all medications you currently take", "type": "textarea", "required": true, "canonical_key": "medication.active_list"},
+    {"field_key": "medication_allergies", "label": "Do you have any medication allergies? If yes, list them", "type": "textarea", "required": true, "canonical_key": "allergy.medication_active_list"},
+    {"field_key": "other_allergies", "label": "Food or environmental allergies", "type": "textarea", "required": false, "canonical_key": "allergy.other_active_list"},
+    {"field_key": "conditions", "label": "Current medical conditions", "type": "textarea", "required": true, "canonical_key": "condition.active_disorder_list"},
+    {"field_key": "height_cm", "label": "Height (cm)", "type": "number", "required": false, "canonical_key": "vitals.height_cm"},
+    {"field_key": "weight_kg", "label": "Weight (kg)", "type": "number", "required": false, "canonical_key": "vitals.weight_kg"},
+    {"field_key": "blood_pressure", "label": "Most recent blood pressure (systolic/diastolic)", "type": "text", "required": false, "canonical_key": "vitals.blood_pressure"},
+    {"field_key": "smoking", "label": "Smoking status", "type": "select", "required": true, "options": ["", "never", "former", "current"], "canonical_key": "social.smoking_category"}
+  ]
+}
