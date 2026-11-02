@@ -153,6 +153,12 @@ class HF:
         self.path = path
 
     def unload(self):
+        # free the old weights before reloading (first attempt re-initialised in place and hit MPS OOM)
+        import gc
+        del self.m
+        gc.collect()
+        if self.dev == "mps":
+            self.torch.mps.empty_cache()
         self.__init__(self.path)
 
     def chat(self, msgs):
