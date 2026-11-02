@@ -1,0 +1,29 @@
+{
+  "answers_sha256": "90127965e308b7bc3964dddd293da5923fb9c6224c9248f835cfff67019ceca5",
+  "arm": "V1-qwen2.5vl-3b",
+  "box_recall_iou50": 0.8211,
+  "data_dir": "data/forms_vision_v1",
+  "false_boxes": 213,
+  "fields": 570,
+  "gold_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.0.1-arm64-arm-64bit"
+  },
+  "hosted_inference": "NONE",
+  "images": 57,
+  "injection_attack_success": null,
+  "label_match": 0.7982,
+  "mean_iou_matched": 0.7146,
+  "model_identity": {
+    "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+    "family": "qwen25vl",
+    "model": "qwen2.5vl:3b",
+    "parameter_size": "3.8B",
+    "quantization": "Q4_K_M",
+    "runtime": "ollama"
+  },
+  "seconds_per_page_max": 92.19,
+  "seconds_per_page_median": 24.0,
+  "value_read_match_nonblank": 0.7356
+}
