@@ -57,7 +57,7 @@
     "done",
     "todo"
    ],
-   "note": "Preregistered: 654 forms, 702 injected errors. M3 source binding recall 0.99; LOMO: no single unique contribution."
+   "note": "Preregistered: 654 forms, 702 injected errors. M3 source binding recall 0.99; LOMO: removing M3 loses 0.563 recall (p=2.5e-119), while M1 and M2 add nothing once M3 is present."
   },
   {
    "name": "Admission-gate factorial (SYNFORM2-ERR)",
@@ -537,7 +537,7 @@
    "note": "Extractor qwen2.5vl:3b; challenger Apple Vision OCR. Commitment = salted per-field hash in the FCG leaf. Replication NOT_TESTED."
   },
   {
-   "title": "Reading the form image (57 synthetic renders, 570 fields)",
+   "title": "Reading the form image (evaluation set differs by row; compare within a set only)",
    "source": "evidence/forms_vision/*/summary.json (PR #19); box validators from PRs #14 #15 #16",
    "columns": [
     "Value read exactly",
@@ -551,7 +551,7 @@
    ],
    "rows": [
     {
-     "label": "Tesseract 5.5.3 (T1)",
+     "label": "Tesseract 5.5.3 (T1) [57 renders]",
      "values": [
       0.7874,
       null,
@@ -560,7 +560,7 @@
      "grade": "evidence"
     },
     {
-     "label": "qwen2.5vl:3b (V1)",
+     "label": "qwen2.5vl:3b (V1) [57 renders]",
      "values": [
       0.7356,
       0.8211,
@@ -569,7 +569,7 @@
      "grade": "evidence"
     },
     {
-     "label": "Contour control (deterministic)",
+     "label": "Contour control (deterministic) [54 test forms, 540 boxes]",
      "values": [
       null,
       1.0,
@@ -578,7 +578,7 @@
      "grade": "baseline"
     },
     {
-     "label": "Logistic box validator (#14)",
+     "label": "Logistic box validator (#14) [54 test forms, 540 boxes]",
      "values": [
       null,
       1.0,
@@ -587,7 +587,7 @@
      "grade": "negative"
     },
     {
-     "label": "D1 tiny segmenter (#16)",
+     "label": "D1 tiny segmenter (#16) [36 test images, 360 boxes]",
      "values": [
       null,
       0.1306,
@@ -596,7 +596,7 @@
      "grade": "negative"
     },
     {
-     "label": "D2 candidate classifier (#16)",
+     "label": "D2 candidate classifier (#16) [36 test images, 360 boxes]",
      "values": [
       null,
       0.9556,
@@ -614,7 +614,7 @@
      "grade": "running"
     }
    ],
-   "note": "Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000."
+   "note": "Rows are grouped by evaluation set: T1 and V1 on the same 57 renders (570 fields); the contour control and #14 on the same 54 filled test forms (540 boxes); D1 and D2 on 36 patient-disjoint test images (360 boxes), with no contour control on that set. Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000."
   },
   {
    "title": "Local models vs deterministic code on identical input",

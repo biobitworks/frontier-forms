@@ -32,7 +32,7 @@ WORK = [
     ("FCG harness L1-L3 + LOMO", "#10 #17 #18 #19", ["done", "done", "done", "discovery", "todo"],
      "0.333 -> 0.556 (12/0 discordant, p=0.00049). Discovery grade: modules written after B0 errors were seen (T01)."),
     ("Injected-error detectors M1-M3", "#10", ["done", "done", "done", "done", "todo"],
-     "Preregistered: 654 forms, 702 injected errors. M3 source binding recall 0.99; LOMO: no single unique contribution."),
+     "Preregistered: 654 forms, 702 injected errors. M3 source binding recall 0.99; LOMO: removing M3 loses 0.563 recall (p=2.5e-119), while M1 and M2 add nothing once M3 is present."),
     ("Admission-gate factorial (SYNFORM2-ERR)", "#20 #21", ["done", "done", "done", "discovery", "todo"],
      "Per-field commitment leaf: detection 0.13 -> 1.00, 0 false admissions. Replication NOT_TESTED."),
     ("Fault-injection factorial, 16 arms", "#12", ["done", "done", "done", "discovery", "todo"],
@@ -128,22 +128,22 @@ def vision():
     v1 = load("evidence/forms_vision/V1-qwen2.5vl-3b/summary.json")
     t1 = load("evidence/forms_vision/T1-tesseract-redteam/summary.json")
     return {
-        "title": "Reading the form image (57 synthetic renders, 570 fields)",
+        "title": "Reading the form image (evaluation set differs by row; compare within a set only)",
         "source": "evidence/forms_vision/*/summary.json (PR #19); box validators from PRs #14 #15 #16",
         "columns": ["Value read exactly", "Box recall @IoU 0.5", "Box precision"],
         "lower_better": [False, False, False],
         "rows": [
-            {"label": "Tesseract 5.5.3 (T1)", "values": [t1["value_read_match_nonblank"], None, None], "grade": "evidence"},
-            {"label": "qwen2.5vl:3b (V1)", "values": [v1["value_read_match_nonblank"], v1["box_recall_iou50"],
+            {"label": "Tesseract 5.5.3 (T1) [57 renders]", "values": [t1["value_read_match_nonblank"], None, None], "grade": "evidence"},
+            {"label": "qwen2.5vl:3b (V1) [57 renders]", "values": [v1["value_read_match_nonblank"], v1["box_recall_iou50"],
                                                        round(v1["fields"] * v1["box_recall_iou50"] / (v1["fields"] * v1["box_recall_iou50"] + v1["false_boxes"]), 4)],
              "grade": "evidence"},
-            {"label": "Contour control (deterministic)", "values": [None, 1.0, 1.0], "grade": "baseline"},
-            {"label": "Logistic box validator (#14)", "values": [None, 1.0, 1.0], "grade": "negative"},
-            {"label": "D1 tiny segmenter (#16)", "values": [None, 0.1306, 0.0994], "grade": "negative"},
-            {"label": "D2 candidate classifier (#16)", "values": [None, 0.9556, 0.6565], "grade": "exploratory"},
+            {"label": "Contour control (deterministic) [54 test forms, 540 boxes]", "values": [None, 1.0, 1.0], "grade": "baseline"},
+            {"label": "Logistic box validator (#14) [54 test forms, 540 boxes]", "values": [None, 1.0, 1.0], "grade": "negative"},
+            {"label": "D1 tiny segmenter (#16) [36 test images, 360 boxes]", "values": [None, 0.1306, 0.0994], "grade": "negative"},
+            {"label": "D2 candidate classifier (#16) [36 test images, 360 boxes]", "values": [None, 0.9556, 0.6565], "grade": "exploratory"},
             {"label": "V2 YOLOv8n + OCR check (#19)", "values": [None, None, None], "grade": "running"},
         ],
-        "note": "Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000.",
+        "note": "Rows are grouped by evaluation set: T1 and V1 on the same 57 renders (570 fields); the contour control and #14 on the same 54 filled test forms (540 boxes); D1 and D2 on 36 patient-disjoint test images (360 boxes), with no contour control on that set. Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000.",
     }
 
 
