@@ -1,0 +1,13 @@
+{
+  "schema": "security.scan.failure.v1",
+  "tool": "gitleaks 8.30.1",
+  "scan_mode": "staged",
+  "result": "FAIL",
+  "finding_count": 38,
+  "rule_id": "generic-api-key",
+  "affected_file": "evidence/stats/discovery_pair_flags.jsonl",
+  "reason": "hashed case identifiers stored under a field name ending in key_sha256 triggered generic-api-key pattern",
+  "review_status": "NO_SECRET_IDENTIFIED_FROM_SOURCE_HASH_LINEAGE",
+  "repair_successor": "rename non-secret field to case_digest_sha256 and rerun staged scan",
+  "no_match_secret_logged": true
+}

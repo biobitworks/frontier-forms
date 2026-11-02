@@ -1,0 +1,145 @@
+{
+  "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+  "EHR_OCR": "NOT_TESTED",
+  "FIREWORKS": "NOT_TESTED",
+  "FPR_FDR_by_task": {
+    "LB-0307": {
+      "baseline": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.3333333333333333,
+        "FN": 2,
+        "FP": 1,
+        "FPR": 0.16666666666666666,
+        "TN": 5,
+        "TP": 2,
+        "TPR": 0.5,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.6666666666666666
+      },
+      "challenger": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.5,
+        "FN": 2,
+        "FP": 2,
+        "FPR": 0.3333333333333333,
+        "TN": 4,
+        "TP": 2,
+        "TPR": 0.5,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.5
+      }
+    },
+    "LB-0309": {
+      "baseline": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.2,
+        "FN": 3,
+        "FP": 1,
+        "FPR": 0.3333333333333333,
+        "TN": 2,
+        "TP": 4,
+        "TPR": 0.5714285714285714,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.8
+      },
+      "challenger": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.16666666666666666,
+        "FN": 2,
+        "FP": 1,
+        "FPR": 0.3333333333333333,
+        "TN": 2,
+        "TP": 5,
+        "TPR": 0.7142857142857143,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.8333333333333334
+      }
+    },
+    "LB-0314": {
+      "baseline": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.6666666666666666,
+        "FN": 2,
+        "FP": 2,
+        "FPR": 0.2857142857142857,
+        "TN": 5,
+        "TP": 1,
+        "TPR": 0.3333333333333333,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.3333333333333333
+      },
+      "challenger": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.6,
+        "FN": 1,
+        "FP": 3,
+        "FPR": 0.42857142857142855,
+        "TN": 4,
+        "TP": 2,
+        "TPR": 0.6666666666666666,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.4
+      }
+    },
+    "LB-0315": {
+      "baseline": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.3333333333333333,
+        "FN": 1,
+        "FP": 1,
+        "FPR": 0.2,
+        "TN": 4,
+        "TP": 2,
+        "TPR": 0.6666666666666666,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 0.6666666666666666
+      },
+      "challenger": {
+        "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+        "FDR": 0.0,
+        "FN": 0,
+        "FP": 0,
+        "FPR": 0.0,
+        "TN": 5,
+        "TP": 3,
+        "TPR": 1.0,
+        "note": "A is an arbitrary benchmark answer token, not a clinical disease-positive label.",
+        "positive_label": "A",
+        "precision": 1.0
+      }
+    }
+  },
+  "alpha": 0.05,
+  "bootstrap_positive_gate": false,
+  "bootstrap_reps": 10000,
+  "bootstrap_seed": 20261102,
+  "ci_delta_bootstrap_stratified_95": [
+    -0.05263157894736842,
+    0.18421052631578946
+  ],
+  "contamination_control": "NO_GOLD_IN_MODEL_INPUTS",
+  "delta": 0.05263157894736842,
+  "external_replication": "NOT_TESTED",
+  "frozen_source_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+  "mcnemar_positive_gate": false,
+  "n": 38,
+  "p_mcnemar_exact_two_sided": 0.6875,
+  "phase": "discovery",
+  "promotion": "NO_SUPERIORITY_CLAIM",
+  "replication_gate": "NOT_TESTED",
+  "source": "local source-bound 38-case discovery only",
+  "table": {
+    "baseline_only": 2,
+    "both_correct": 23,
+    "both_wrong": 9,
+    "challenger_only": 4,
+    "n": 38
+  }
+}

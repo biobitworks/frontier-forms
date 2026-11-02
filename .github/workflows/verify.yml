@@ -1,0 +1,25 @@
+name: independent-evidence-check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/verify_predecessor.py --bundle evidence/freeze/predecessor
+      - run: python3 scripts/verify_review_export.py
+      - run: python3 scripts/validate_pair_export.py
+      - run: python3 -m unittest discover -s tests -v
+      - name: Check prohibited raw payload types
+        run: |
+          if git ls-files | grep -E '\.(safetensors|parquet|zip|p12|pfx|pem|key)$'; then
+            echo "Forbidden raw payload in public repo"; exit 1
+          fi
+          echo "Public-file type policy PASS"
