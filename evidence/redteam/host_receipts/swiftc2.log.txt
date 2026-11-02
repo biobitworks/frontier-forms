@@ -1,0 +1,1 @@
+SWIFTC_EXIT=0

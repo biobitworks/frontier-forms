@@ -1,0 +1,13 @@
+{
+  "dataset": "SYNFORM2-aa447934df526734",
+  "root": "aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e",
+  "leaf_count": 223,
+  "cases": 111,
+  "split_sizes": {
+    "train": 66,
+    "dev": 22,
+    "test": 23
+  },
+  "images": 222,
+  "public_input_listing_sha256": "de0d69164031361a5c34a1754d6e40608f1b4233a71c88239c24066d8fa26f43"
+}
