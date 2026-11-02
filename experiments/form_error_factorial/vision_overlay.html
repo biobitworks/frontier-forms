@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frontier Forms — Model answers and OCR bounding boxes</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif;background:#0e1726;color:#edf5ff}
+body{margin:0}header,main{max-width:1100px;margin:0 auto;padding:22px}h1{font-size:27px;margin:8px 0}
+small,p{color:#b9c9db}nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+select{padding:9px 12px;background:#1f3450;color:white;border:1px solid #49627f;border-radius:9px}
+.layout{display:grid;grid-template-columns:minmax(330px,1.2fr) minmax(260px,.8fr);gap:18px;margin-top:18px}
+.panel{border:1px solid #35506c;background:#192a43;border-radius:13px;padding:15px}
+.frame{position:relative;line-height:0;background:white;max-width:100%}
+.frame img{width:100%;display:block}
+.box{position:absolute;border:2px solid #2dd7aa;background:#2dd7aa22;cursor:pointer;min-width:8px;min-height:5px;pointer-events:auto}
+.box.miss{border-color:#fcae69;background:#fcae6922}
+.box.fail{border-color:#fc6678;background:#fc667822}
+.box:hover,.box:focus{outline:3px solid white;z-index:10}
+.row{display:grid;grid-template-columns:100px 1fr 1fr;gap:5px;padding:9px 2px;border-bottom:1px solid #34506b;align-items:center;font-size:13px}
+.row b{font-size:13px}.row .ok{color:#73e7ba}.row .bad{color:#ffaaad}
+.grid{max-height:710px;overflow:auto}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#c0ddf8;font-size:11px}
+.status{border-left:3px solid #81b2ed;padding:9px 12px;color:#c0d0e5}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.grid{max-height:none}}
+</style></head><body>
+<header><div style="letter-spacing:.17em;font-size:11px;color:#9dc8ff">FRONTIER FORMS · SYNTHETIC VISION EXPERIMENT</div>
+<h1>Field answers × checkpoint × bounding boxes</h1>
+<p>Apple Vision OCR geometry overlaid on the exact same rendered synthetic PDF image supplied to the local vision model. Boxes belong to Apple Vision, not Qwen. Model checkpoints are displayed only when a live reply was captured.</p></header>
+<main><nav><label>Comparison arm <select id="arm"></select></label><small id="meta"></small></nav>
+<div class="layout"><section class="panel"><h2>Rendered synthetic form</h2><div class="frame" id="frame"><img alt="Rendered synthetic patient intake PDF" src="sample_vision/synthetic_intake.png" id="source"></div><p><small>Green: exact field match; orange: missing answer; red: wrong answer. Rectangle coordinates from Apple Vision, normalized to the raster page.</small></p></section>
+<section class="panel"><h2>Source-grounded field comparisons</h2><div class="grid" id="fields"></div><h3>Model receipt</h3><pre id="receipt"></pre></section></div>
+<p class="status">This is one source-verified synthetic form. No claim of training improvement, generalization, or statistically supported advantage. Fireworks/NVIDIA/Mistral are teammate lanes and are NOT_TESTED unless their exact inference receipts are imported.</p>
+</main>
+<script>
+(async()=>{
+const $=x=>document.getElementById(x);
+let report;
+try {const res=await fetch("sample_vision/model_field_answers.json",{cache:"no-store"});if(!res.ok)throw Error("HTTP "+res.status);report=await res.json()}
+catch(e){$("meta").textContent="No model report yet: "+e.message;return}
+report.arms.forEach((arm,i)=>{const opt=document.createElement("option");opt.value=String(i);opt.textContent=arm.model_id+" — "+arm.status;$("arm").appendChild(opt)});
+function draw(){
+const arm=report.arms[Number($("arm").value)];$("frame").querySelectorAll(".box").forEach(x=>x.remove());$("fields").replaceChildren();
+const hasRun=["OBSERVED","EXECUTED"].includes(arm.status);
+for(const field of arm.per_field){
+const box=field.bbox;
+if(box?.bbox_norm_bl){
+const [x,y,w,h]=box.bbox_norm_bl;
+const e=document.createElement("button");e.type="button";e.className="box "+(!hasRun||field.answer===null?"miss":field.exact_match?"":"fail");
+e.style.left=(100*x)+"%";e.style.top=(100*(1-y-h))+"%";e.style.width=(100*w)+"%";e.style.height=(100*h)+"%";
+e.title=field.field_id+" / "+(field.answer??"null")+" / Vision confidence "+box.ocr_confidence.toFixed(3);
+e.setAttribute("aria-label",e.title);$("frame").appendChild(e)}
+const row=document.createElement("div");row.className="row";const label=document.createElement("b");label.textContent=field.field_id;
+const actual=document.createElement("span");actual.textContent=hasRun?(field.answer??"NULL"):"NOT_TESTED";actual.className=field.exact_match&&hasRun?"ok":"bad";
+const gold=document.createElement("span");gold.textContent=field.gold??"NULL";
+row.append(label,actual,gold);$("fields").appendChild(row)}
+$("meta").textContent=(arm.fields_exact??"NOT_TESTED")+"/"+arm.n_fields+" exact · "+(arm.weight_digest??"checkpoint N/A");
+const copy=Object.fromEntries(["model_id","provider","status","input_modality","weight_digest","runtime_model_id","elapsed_seconds","prompt_sha256","model_reply_sha256","answer_sha256","response_stats","parse_status","error"].filter(k=>arm[k]!==undefined).map(k=>[k,arm[k]]));
+$("receipt").textContent=JSON.stringify(copy,null,2)
+}
+$("arm").addEventListener("change",draw);draw();
+})();
+</script>
+</body></html>

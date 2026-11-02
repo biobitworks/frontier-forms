@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontier Forms | Factorial Error Audit</title><style>
+:root{font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color-scheme:dark;--bg:#0d1524;--ink:#f2f7ff;--muted:#a4b9d4;--panel:#1a2940;--line:#34465e}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);margin:0}header,main,footer{max-width:1220px;margin:0 auto;padding:24px}header{padding-top:40px;background:linear-gradient(120deg,#182e4e,#0d1524 85%)}
+h1{letter-spacing:-.035em;font-size:clamp(28px,4vw,43px);margin:8px 0}h2{font-size:19px;margin:4px 0 12px}p{color:var(--muted);line-height:1.55}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#b5cfff;font-weight:700}.note{background:#25364f;border-left:3px solid #79a6e8;padding:12px 16px;color:#d5e4fa}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px}.card strong{display:block;font-size:24px}.card small{color:var(--muted)}
+.panel{margin-top:16px}.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+select{background:#253a57;color:var(--ink);border:1px solid #6681a6;border-radius:8px;padding:9px}.scroll{overflow:auto}.grid{display:grid;min-width:900px;gap:5px}.cell{min-height:46px;padding:9px 7px;border:1px solid #62769733;border-radius:6px;color:var(--ink);font-size:12px;display:flex;flex-direction:column;justify-content:center;gap:4px;align-items:center;text-align:center;cursor:pointer}.head{background:#29415f;font-weight:700}.rowhead{background:#263854;align-items:flex-start;text-align:left;cursor:default;font-weight:650}.good{background:#14684e}.partial{background:#8a6c36}.bad{background:#8d3f45}.neutral{background:#48566c}.cell small{color:#e0eafa;font-weight:normal}.cell:focus-visible{outline:3px solid white}
+.golden{display:flex;gap:7px;flex-wrap:wrap}.step{padding:13px;background:#243c59;border:1px solid #426181;border-radius:9px;min-width:158px;flex:1}.step b{font-size:15px;display:block}.step span{color:#bdd5f5;font-size:12px}pre{overflow:auto;white-space:pre-wrap;color:#b9d7ff;font-size:12px}a{color:#aed4ff}.legend{font-size:12px;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted)}.dot{width:10px;height:10px;display:inline-block;margin-right:5px;border-radius:3px}
+@media(max-width:720px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head><body>
+<header><div class="eyebrow">Frontier Forms · Synthetic controlled fault injection · FCO/FCG</div><h1>Factorial LOMO evidence heatmap</h1>
+<p>All 16 module combinations, tiny → small → medium, with paired comparisons and exact-byte Merkle receipts. These experiments test deliberately seeded form errors, not AI model training or clinical effectiveness.</p></header>
+<main>
+<section class="panel"><div class="bar"><h2>Experiment size</h2><label>Dataset <select id="size"><option value="tiny">Tiny · 10 patients</option><option value="small">Small · 30 patients</option><option value="medium" selected>Medium · 100 patients</option></select></label></div>
+<p class="note">**Claim ceiling: DISCOVERY ONLY.** Synthetic faults target known correction rules; repairs may consult permitted source records. The existing PR #10 holdout was previously inspected. Exact McNemar on multiple rows per patient is descriptive; patient-cluster bootstrap addresses within-patient dependence. AUROC requires independent risk scores and is NOT_COMPUTED.</p>
+<div id="stats" class="cards" aria-live="polite"></div></section>
+<section class="panel"><h2>Golden path: source bytes → module additions → result root</h2><div id="golden" class="golden"></div><p id="roots" style="overflow-wrap:anywhere"></p></section>
+<section class="panel"><h2>All module combinations and error types</h2>
+<div class="legend"><span><i class="dot good"></i>Fully repaired</span><span><i class="dot partial"></i>Partially repaired</span><span><i class="dot bad"></i>Still failing</span><span><i class="dot neutral"></i>Missing evidence</span></div>
+<p>Columns show successful correction by attack type; the first columns display overall accuracy and paired improvement versus the deliberately impaired baseline.</p>
+<div class="scroll"><div id="matrix" class="grid"></div></div></section>
+<section class="panel"><h2>Selected cell — evidence and uncertainty</h2><pre id="detail" aria-live="polite">Choose an arm or challenge cell for exact evidence.</pre></section>
+<section class="panel"><h2>Methods and limits</h2>
+<p>Each arm uses the same synthetic patient cases and source bytes. Four independent source-bound correction modules challenge alphanumeric name suffixes, OCR confusables, postal-code truncation, and wrong-patient field binding. Clean controls ensure no false alteration. Tests use 2,000 patient-cluster bootstrap resamples and exact two-sided McNemar for each single-challenge stratum.</p>
+<p>All values shown are from the versioned JSON report, whose source and challenge roots are displayed above. Formal Lean 4 invariants verify Boolean fixture semantics and fail-closed admission—not the external truth of an LLM response or SHA-256 cryptography.</p>
+<p><a id="raw" href="results/medium/report.json">Inspect raw report JSON</a> · <a href="CONTRACT.md">Experiment contract</a> · <a href="FixtureInvariants.lean">Lean invariants</a></p>
+</section>
+</main><footer><p>Frontier Forms is separate from Vita DAISY, Cloudmer and knots. No real PHI, external inference, Epic writeback or teammate Supabase mutation occurs here.</p></footer>
+<script>
+(()=>{
+const ids=["name_suffix","ocr_confusable","postcode","patient_bind","clean"];const $=id=>document.getElementById(id);
+const label=x=>x.replace(/_/g," ").replace(/;/g," + ");
+const pretty=x=>typeof x==="number"?x.toFixed(3):x;
+function node(tag,text,klass,owner){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(klass)e.className=klass;if(owner)owner.appendChild(e);return e}
+function view(row,attack,d){const r=attack?row.attack_strata[attack]:row;const detail={arm:row.arm,modules:row.modules,attack:attack||"all",accuracy:attack?r.accuracy:row.accuracy,paired_vs_baseline:attack?r.vs_B0:row.vs_B0,paired_vs_full:attack?"See per-arm report":row.vs_full,source_manifest_sha256:d.source_manifest_sha256,challenge_root:d.challenge_root,prediction_sha256:row.prediction_sha256,result_merkle_root:row.result_merkle_root,claim_ceiling:d.warning};$("detail").textContent=JSON.stringify(detail,null,2)}
+async function load(){
+const name=$("size").value;let r;
+try{const result=await fetch("results/"+name+"/report.json",{cache:"no-store"});if(!result.ok)throw Error("HTTP "+result.status);r=await result.json()}
+catch(e){$("matrix").textContent="Cannot load reports; serve repository with python3 -m http.server --bind 127.0.0.1. "+e.message;return}
+const b=r.results[0],full=r.results[r.results.length-1],stats=$("stats");stats.replaceChildren();
+[[r.n_patient,"Synthetic patients"],[r.n_fault_cases,"Challenge form fields"],[r.results.length,"Module combinations"],[(100*(full.accuracy-b.accuracy)).toFixed(1)+" pp","By-design repair effect"]].forEach(([value,title])=>{const c=node("div",undefined,"card",stats);node("strong",String(value),null,c);node("small",title,null,c)});
+const path=$("golden");path.replaceChildren();
+const masks=["B0_injected","name_suffix","name_suffix;ocr_confusable","name_suffix;ocr_confusable;postcode","name_suffix;ocr_confusable;postcode;patient_bind"];
+masks.forEach((mask,i)=>{const a=r.results.find(x=>x.arm===mask);if(!a)return;const s=node("div",undefined,"step",path);node("b",(i===0?"Injected B0":"+"+label(mask.split(";").at(-1))),null,s);node("span",(100*a.accuracy).toFixed(1)+"% field pass · "+a.result_merkle_root.slice(0,12),null,s)});
+$("roots").textContent="Source manifest SHA-256: "+r.source_manifest_sha256+" | challenge Merkle root: "+r.challenge_root+" | leaf count: "+r.challenge_leaf_hashes.length;
+$("raw").href="results/"+name+"/report.json";
+const grid=$("matrix");grid.replaceChildren();grid.style.gridTemplateColumns="195px 110px 110px repeat(5, minmax(112px, 1fr))";
+["Module mask","Accuracy","Δ versus B0",...ids].forEach(h=>node("div",label(h),"cell head",grid));
+r.results.forEach(row=>{
+ node("div",row.arm==="B0_injected"?"B0 (corrupt input)":label(row.arm),"cell rowhead",grid);
+ for(const [val,attack] of [[row.accuracy,null],[row.vs_B0.delta,"overall"]]){
+ const e=node("button",(100*val).toFixed(1)+(attack?" pp":"%"),"cell "+(val===0?"bad":val>=.999?"good":"partial"),grid);
+ e.type="button";e.onclick=()=>view(row,null,r)}
+ ids.forEach(id=>{const v=row.attack_strata[id];const x=v?v.accuracy:null;
+ const c=node("button",x===null?"—":(100*x).toFixed(1)+"%", "cell "+(x===null?"neutral":x>=.999?"good":x<=0?"bad":"partial"),grid);
+ c.type="button";c.onclick=()=>view(row,id,r);c.title=row.arm+" / "+id;})
+});
+view(full,null,r)
+}
+$("size").addEventListener("change",load);load()
+})();
+</script></body></html>
