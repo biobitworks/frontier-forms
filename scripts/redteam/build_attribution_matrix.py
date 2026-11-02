@@ -28,12 +28,27 @@ LEAF = {'inputs_728': 'custody/snapshots/LN-MINI-ec719d04c3707ca1cb/manifest.jso
 LANE_NAME = {'L0': 'lfm2-1.2b-longevity-q4km:latest', 'L1': 'qwen3:1.7b (think off)', 'L2': 'qwen2.5vl:3b', 'L3': 'Insilico Qwen3-0.6B-Longevity (safetensors f547df5c…)'}
 
 
-def latest_run():
+def weights_registry():
+    reg = {}
+    for m in sorted((R / 'evidence/redteam/lanes').glob('*_META.json')):
+        d = json.loads(m.read_text()); name = d.get('model') or d.get('engine')
+        if name:
+            reg[name] = d.get('model_digest') or d.get('weights_sha256') or ('Vision.framework (macOS build in META)' if 'Vision' in name else 'UNKNOWN')
+    db = R / 'evidence/redteam/db/models.json'
+    if db.exists():
+        for name, e in json.loads(db.read_text())['models'].items():
+            reg.setdefault(name, e.get('weights_digest'))
+    return reg
+
+
+def latest_output(name):
+    """Most recent executed-notebook output of that name (runs are append-only, so search newest first)."""
     runs = sorted(R.glob('evidence/notebook_runs_redteam_v*'), key=lambda p: int(p.name.rsplit('v', 1)[1]))
     for run in reversed(runs):
-        if (run / 'outputs/exp011_lane_stats.json').exists():
-            return run
-    raise SystemExit('EXP011_OUTPUT_MISSING')
+        p = run / 'outputs' / name
+        if p.exists():
+            return json.loads(p.read_text()), run.name
+    return None, None
 
 
 def case_hash(split_name, split_m):
@@ -46,22 +61,54 @@ def fmt(v, nd=3):
 
 
 def main():
-    run = latest_run()
-    s11 = json.loads((run / 'outputs/exp011_lane_stats.json').read_text())
-    s12 = json.loads((run / 'outputs/exp012_forms.json').read_text()) if (run / 'outputs/exp012_forms.json').exists() else None
-    s13 = json.loads((run / 'outputs/exp013_attacks.json').read_text())
+    s11, run11 = latest_output('exp011_lane_stats.json')
+    s12, run12 = latest_output('exp012_forms.json')
+    s13, run13 = latest_output('exp013_attacks.json')
+    if s11 is None or s13 is None:
+        raise SystemExit('EXP011_OR_EXP013_OUTPUT_MISSING')
+    run = type('R', (), {'name': f'exp011:{run11} exp012:{run12} exp013:{run13}'})()
     split_m = json.loads((R / 'evidence/freeze/longebench_split_manifest.json').read_text())
     cases = {s: case_hash(s, split_m) for s in ('discovery', 'heldout')}
     metas = {m.name: json.loads(m.read_text()) for m in (R / 'evidence/redteam/lanes').glob('*_META.json')}
     records = []
     n = 0
 
+    REG = weights_registry()
+    MODEL_OF = {'L0': 'lfm2-1.2b-longevity-q4km:latest', 'L1': 'qwen3:1.7b', 'L2': 'qwen2.5vl:3b', 'L3': next((k for k in REG if k.startswith('insilicomedicine')), 'insilicomedicine/Qwen3-0.6B-Longevity')}
+
+    def weights_for(lane):
+        name = MODEL_OF.get(lane, lane); return {'name': name, 'digest': REG.get(name, 'UNKNOWN'), 'adapter': 'none'}
+
     def rec(**kw):
         nonlocal n
         n += 1
         base = {'experiment_id': f'RT-{n:03d}', 'parent_root': ROOT_15, 'parent_input_root': ROOT_728, 'parent_review_root': ROOT_REVIEW,
                 'parent_commit': PARENT_COMMIT, 'successor_root': 'NOT_COMPUTED_UNTIL_FREEZE', 'signature': 'NOT_SIGNED'}
-        base.update(kw); records.append(base); return base
+        base.update(kw)
+        # three separated quantities (ledger contract): weights / mechanism / outcome
+        lane = base.get('lane')
+        kind = base.get('kind', '')
+        if kind == 'MODEL_LANE' and 'table' in base:
+            tag = base['challenger'].split()[0]
+            base['weights'] = {'baseline': weights_for('L0'), 'challenger': weights_for(tag)}
+            base['mechanism'] = {'enabled': [], 'disabled': ['fco_context', 'fcg_context', 'proof_verify', 'verdict', 'swap'], 'changed': 'WEIGHTS_ONLY'}
+        elif kind == 'CONTEXT_PROJECTION':
+            tag = base['baseline'].split()[0]
+            base['weights'] = {'baseline': weights_for(tag), 'challenger': weights_for(tag)}
+            arm = base['challenger'].split()[-1]
+            base['mechanism'] = {'enabled': ['fco_context'] if arm == 'fco' else ['fco_context', 'fcg_context'], 'disabled': ['verdict', 'swap'], 'changed': 'MECHANISM_ONLY'}
+        elif kind in ('ANTIGENTIC_ADMISSION', 'PROMPT_INJECTION', 'INTEGRITY_GATE', 'CORRUPTED_LEAF_MODEL_SIDE', 'COLD_RESTART_REPLAY'):
+            base['weights'] = {'baseline': weights_for(lane), 'challenger': weights_for(lane)}
+            mech = base['candidate_leaf_or_edge'] if kind == 'ANTIGENTIC_ADMISSION' else base['intervention']
+            base['mechanism'] = {'enabled': [mech], 'disabled': [], 'changed': 'MECHANISM_ONLY'}
+        elif kind == 'EHR_FORMS_LANE':
+            base['weights'] = {'baseline': weights_for('L2'), 'challenger': weights_for('L2')}
+            base['mechanism'] = {'enabled': ['consistency_reread', 'identity', 'rules'], 'disabled': ['commitment'], 'changed': 'MECHANISM_ONLY'}
+        else:
+            base['weights'] = {'baseline': 'n/a', 'challenger': 'n/a'}
+            base['mechanism'] = {'enabled': [], 'disabled': [], 'changed': 'NONE'}
+        base['outcome'] = {k: base.get(k) for k in ('delta_abs', 'delta_rel', 'mcnemar_p', 'holm_p', 'bootstrap_ci95', 'coverage', 'false_admissions', 'attacker_success_rate', 'abstain', 'claim_status') if k in base}
+        records.append(base); return base
 
     # --- model-lane and context comparisons from EXP-011
     for split in ('discovery', 'heldout'):
@@ -143,6 +190,24 @@ def main():
         rec(kind='VERIFIER_ATTACK', split='n/a', candidate_leaf_or_edge='verifier scripts + ' + LEAF['edges'], intervention=k, baseline='untampered PASS', challenger=v,
             frozen_case_ids_sha256='n/a', mcnemar_p='NOT_APPLICABLE', bootstrap_ci95='NOT_APPLICABLE',
             claim_status='PASS' if v.startswith('REJECT') else ('CEILING_F01' if k == 'duplicate_last_leaf_and_count_forged' else 'FAIL'))
+    # --- gate factorial (SYNFORM2-ERR), one record per mechanism combination
+    gf_p = R / 'evidence/redteam/gate_factorial.json'
+    if gf_p.exists():
+        g = json.loads(gf_p.read_text()); none = g['configurations']['none']
+        for name, c in sorted(g['configurations'].items(), key=lambda kv: sum(kv[1]['config'].values())):
+            if name == 'none':
+                continue
+            v = c.get('vs_none', {})
+            r = rec(kind='GATE_FACTORIAL', split='synform2_err', lane='L2', candidate_leaf_or_edge='form FCO leaf mechanisms: ' + name, intervention='ENABLED ' + name + ' (others disabled)',
+                    baseline=f"no gate: detection {fmt(none['planted_detection_rate'])}, false adm {none['false_admissions']}", challenger=f"{name}: detection {fmt(c['planted_detection_rate'])}, false adm {c['false_admissions']}, coverage {fmt(c['coverage'])}",
+                    frozen_case_ids_sha256='SYNFORM2ERR-' + g['form_root'][:16], n=g['images_analyzed'], delta_abs=v.get('delta_success_rate'), mcnemar_p=v.get('p_mcnemar_exact_two_sided'), holm_p=v.get('p_holm'),
+                    bootstrap_ci95=v.get('ci95_delta_stratified_bootstrap'), planted_detection_rate=c['planted_detection_rate'], false_admission_rate_of_all=c['false_admission_rate_of_all'], coverage=c['coverage'],
+                    claim_status='PASS' if (v.get('mcnemar_gate_holm') and v.get('bootstrap_gate')) else 'NULL')
+            r['weights'] = {'baseline': {'primary': weights_for('L2'), 'challenger_extractor': {'name': 'Apple Vision OCR', 'digest': REG.get(next((k for k in REG if 'Vision' in k), ''), 'UNKNOWN')}},
+                            'challenger': 'same weights'}
+            r['mechanism'] = {'enabled': [m for m in g['mechanisms'] if c['config'][m]], 'disabled': [m for m in g['mechanisms'] if not c['config'][m]], 'changed': 'MECHANISM_ONLY'}
+            r['outcome'] = {'planted_detection_rate': c['planted_detection_rate'], 'false_admission_rate_of_all': c['false_admission_rate_of_all'], 'coverage': c['coverage'],
+                            'per_image_success_delta': v.get('delta_success_rate'), 'mcnemar_p': v.get('p_mcnemar_exact_two_sided'), 'holm_p': v.get('p_holm'), 'bootstrap_ci95': v.get('ci95_delta_stratified_bootstrap'), 'claim_status': r['claim_status']}
     # --- blocked / not tested lanes
     rec(kind='MODEL_LANE', split='n/a', lane='L4', candidate_leaf_or_edge='Fireworks serverless model', intervention='NOT_EXECUTED', baseline='n/a', challenger='n/a', frozen_case_ids_sha256='n/a',
         mcnemar_p='NOT_COMPUTED', bootstrap_ci95='NOT_COMPUTED', claim_status='BLOCKED_NO_CREDENTIAL', note='FIREWORKS_API_KEY unset on both hosts; CC BY-NC transfer not authorized; zero provider calls, zero cost')
@@ -177,8 +242,8 @@ def build_impact_view(s11, s12, s13):
             'ehr_forms': 'leaf 3 (Synthea zip) → SYNFORM root 36d12313… → 12 FORM_IMAGE_FCOs → extraction → draft FHIR',
             'duplicate_last_leaf (F-01)': 'root unchanged; leaf_count/leaf_order in unsigned manifest are the only binding → successor schema binds count in leaf 0',
         },
-        'downstream_dependents': {'leaf 6 ⇒ leaves 7,8,9,10 (split, both evals, paired stats)', 'leaf 7 ⇒ 8,9,10 and every red-team lane run',
-                                  'leaf 14 edges ⇒ fcg/inject arms and the deterministic gates'},
+        'downstream_dependents': ['leaf 6 ⇒ leaves 7,8,9,10 (split, both evals, paired stats)', 'leaf 7 ⇒ 8,9,10 and every red-team lane run',
+                                  'leaf 14 edges ⇒ fcg/inject arms and the deterministic gates'],
         'supported_results': {'integrity gates': 'deterministic, 100% abstain on forged leaf / missing edge where tested (see records)',
                               'context projection': 'see EXP-011 comparisons; any delta must pass McNemar+bootstrap+Holm on heldout to be more than noise',
                               'antigentic admission': 'selective metrics only; not a McNemar claim',
@@ -192,15 +257,28 @@ def write_md(out, s11, s12):
              f"Parent roots: 15-leaf `{ROOT_15}`, 728-input `{ROOT_728}`, review successor `{ROOT_REVIEW}`; parent commit `{PARENT_COMMIT}`. ",
              'Generated by `scripts/redteam/build_attribution_matrix.py` from the executed outputs in `' + out['run_dir'] + '`. A hash proves identity, not causation; ',
              'only the matched intervention rows below carry effect estimates, and every estimate keeps its gate status.', '',
+             '## Ledger contract', '',
+             'Every record separates three quantities: **weights** (checkpoint or adapter actually run, with its Ollama manifest digest or safetensors sha256), ',
+             '**mechanism** (which FCG/antigentic mechanisms were enabled or disabled for that row) and **outcome** (the measured difference with its gates). ',
+             'A row whose `mechanism.changed` is WEIGHTS_ONLY is a model comparison; MECHANISM_ONLY is a harness ablation; both at once would be CONFOUNDED and is not emitted. ',
+             'The same contract is written as JSON in `evidence/redteam/db/ledger.jsonl` and `evidence/redteam/attribution_matrix.json`.', '',
              '## Admission rule', '',
              'McNemar PASS (exact two-sided p<0.05, challenger wins more discordant pairs, Holm-corrected on heldout) ∧ bootstrap lower 95% CI > 0 ∧ independent replication PASS ∧ utility/safety guardrails PASS. ',
              'Discovery rows can never PASS (replication NOT_TESTED by construction). Selective-prediction rows report coverage/false admission instead of McNemar.', '',
              '## Matched model-lane and context-projection comparisons', '',
-             '| ID | split | kind | leaf/edge | intervention | baseline → challenger | n | b/c | Δacc (abs) | McNemar p | Holm p | bootstrap 95% CI | status |', '|---|---|---|---|---|---|---|---|---|---|---|---|---|']
+             '| ID | split | kind | weights (baseline → challenger, digest) | mechanism enabled | intervention | n | b/c | Δacc (abs) | McNemar p | Holm p | bootstrap 95% CI | status |', '|---|---|---|---|---|---|---|---|---|---|---|---|---|']
     for r in recs:
         if r['kind'] in ('MODEL_LANE', 'CONTEXT_PROJECTION') and 'table' in r:
-            t = r['table']
-            lines.append(f"| {r['experiment_id']} | {r['split']} | {r['kind']} | {r['candidate_leaf_or_edge'][:48]} | {r['intervention'][:60]} | {r['baseline']} → {r['challenger']} | {t['n']} | {t['baseline_only']}/{t['challenger_only']} | {r['delta_abs']:+.3f} | {r['mcnemar_p']:.4f} | {r['holm_p']:.4f} | [{r['bootstrap_ci95'][0]:+.3f}, {r['bootstrap_ci95'][1]:+.3f}] | **{r['claim_status']}** / {r['admission']} |")
+            t = r['table']; w = r['weights']
+            wtxt = f"{w['baseline']['name']} ({str(w['baseline']['digest'])[:12]}) → {w['challenger']['name']} ({str(w['challenger']['digest'])[:12]})"
+            lines.append(f"| {r['experiment_id']} | {r['split']} | {r['kind']} | {wtxt} | {', '.join(r['mechanism']['enabled']) or 'none'} | {r['intervention'][:60]} | {t['n']} | {t['baseline_only']}/{t['challenger_only']} | {r['delta_abs']:+.3f} | {r['mcnemar_p']:.4f} | {r['holm_p']:.4f} | [{r['bootstrap_ci95'][0]:+.3f}, {r['bootstrap_ci95'][1]:+.3f}] | **{r['claim_status']}** / {r['admission']} |")
+    gfr = [r for r in recs if r['kind'] == 'GATE_FACTORIAL']
+    if gfr:
+        lines += ['', '## Gate factorial on SYNFORM2-ERR (same weights; only the mechanism set changes)', '',
+                  '| ID | weights | mechanisms enabled | mechanisms disabled | planted detection | false adm. rate | coverage | per-image Δ vs none | Holm p | bootstrap 95% CI | status |', '|---|---|---|---|---|---|---|---|---|---|---|']
+        for r in gfr:
+            o = r['outcome']; w = r['weights']['baseline']
+            lines.append(f"| {r['experiment_id']} | {w['primary']['name']} ({str(w['primary']['digest'])[:12]}) + Vision | {', '.join(r['mechanism']['enabled'])} | {', '.join(r['mechanism']['disabled']) or '—'} | {fmt(o['planted_detection_rate'])} | {fmt(o['false_admission_rate_of_all'])} | {fmt(o['coverage'])} | {fmt(o['per_image_success_delta'])} | {fmt(o['holm_p'], 4)} | {o['bootstrap_ci95']} | **{o['claim_status']}** |")
     lines += ['', '## Antigentic admission, LOMO and injection (selective metrics; same weights, same base answer)', '',
               '| ID | lane | split | mechanism | coverage | selective acc | false adm. (of all) | admitted-injected | end-to-end acc | extra tokens | status |', '|---|---|---|---|---|---|---|---|---|---|---|']
     for r in recs:
