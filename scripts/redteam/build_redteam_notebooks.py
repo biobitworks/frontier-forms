@@ -231,3 +231,51 @@ assert attacks['pairs_untampered_control'] == 'PASS' and all(v.startswith('REJEC
 sup = json.loads((R / 'evidence/sources/supabase_source_intake.json').read_text())
 attacks['supabase_live_rows_as_benchmark'] = 'REJECT:state=' + sup['state'] + ';root=' + sup['snapshot_merkle_root']
 emit('exp013_attacks.json', attacks); print(json.dumps(attacks, indent=2))""")])
+
+# ---------------------------------------------------------------- EXP-014 OCR vs VLM and gate factorial on SYNFORM2 / SYNFORM2-ERR
+nb("14_redteam_ocr_vlm_gate_factorial.ipynb", "EXP-014 (red-team): Apple Vision OCR vs qwen2.5vl on frozen synthetic forms; gate factorial heat map",
+   {"1 Requirements and predeclared hypothesis": "H0 (extractors): single-pass field fidelity differs between Apple Vision OCR and qwen2.5vl:3b on the SYNFORM2 test split (46 images); no direction predeclared. H0 (gates): on SYNFORM2-ERR the full gate detects every planted class E1-E7 and no mechanism alone does; LOMO minus commitment admits E6/E7; LOMO minus consistency raises false admissions under variance. Lean 4 Gates.lean states the same logic and must compile.",
+    "2 Input source, license, hashes": "SYNFORM2 root aa447934…, SYNFORM2-ERR root 790a7dc6…, both derived from the frozen Synthea zip 990d5206… (synthetic). Public lane exports under evidence/redteam/lanes/ (OCR_*, VLM_*, OCRERR_*, VLMERR_*); evidence/redteam/gate_factorial.json (aggregates computed on the host).",
+    "3 Frozen settings": "Apple Vision .accurate en-US no language correction; qwen2.5vl:3b temperature 0 seed 20261102 format=json; forms served from 127.0.0.1 with sha verification.",
+    "4 Deterministic preprocessing": "frontier_forms.fhir_draft normalisation; gate verdicts per (image, field).",
+    "5 Model/harness execution": "replayed from receipts; no inference here.",
+    "6 Analysis": "per-field fidelity by extractor and variant; 16-configuration factorial with McNemar/bootstrap/Holm vs no-gate baseline; LOMO deltas.",
+    "7 Negative controls": "blank-page OCR control (all MISSING) recorded in META; clean forms must not be flagged by rules/identity; E6/E7 must NOT be caught by rules.",
+    "8 Outputs": "exp014_ocr_vlm.json, docs/architecture/gate_factorial_heatmap.svg|html (rendered by scripts/redteam/render_gate_heatmap.py).",
+    "9 FCO/FCG dependency changes": "adds EXECUTED edges Synthea leaf 3 -> SYNFORM2 -> SYNFORM2-ERR -> extraction receipts -> gate decisions; per-field commitment leaves are a NEW FCG mechanism.",
+    "10 Claim ceiling": CEILING + " Rendered forms, not scans; 23 patients in the test split."},
+   [code(COMMON + """import collections
+L = R / 'evidence/redteam/lanes'
+out = {'extractors': {}, 'gate_factorial': None, 'lean_gates': json.loads((R / 'evidence/redteam/lean_gates_compile_receipt.json').read_text())['result']}
+FIELDS = ('Synthetic case', 'Patient first', 'Patient last', 'Birth date', 'Gender', 'Encounter date', 'Visit class')
+def summarise(rows, correct_key):
+    by = collections.defaultdict(lambda: {'images': 0, 'all7': 0, 'fields_correct': 0, 'per_field': collections.Counter(), 'false_admissions': 0})
+    for r in rows:
+        d = by[r.get('variant', 'hidden')]; c = r[correct_key]
+        d['images'] += 1; d['all7'] += all(c.values()); d['fields_correct'] += sum(c.values()); d['false_admissions'] += r.get('false_admissions', 0)
+        for f in FIELDS: d['per_field'][f] += c[f]
+    return {v: dict(d, per_field=dict(d['per_field']), field_fidelity=d['fields_correct'] / (7 * d['images'])) for v, d in by.items()}
+for p in sorted(L.glob('OCR_apple-vision_synform2_*_PUBLIC.jsonl')) + sorted(L.glob('VLM_*_synform2_*_PUBLIC.jsonl')):
+    rows = jsonl(p); meta = json.loads(p.with_name(p.name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
+    key = 'correct' if 'OCR' in p.name else 'correct_extract'
+    out['extractors'][p.stem.replace('_PUBLIC', '')] = {'summary': summarise(rows, key), 'meta': {k: meta.get(k) for k in ('engine', 'model', 'images', 'wall_seconds', 'blank_page_control_all_missing', 'ocr_seconds_total', 'public_sha256')}}
+# paired OCR vs VLM on the same images (all-7-correct per image), when both exist for the test split
+ocr = {r['input_fco_id']: all(r['correct'].values()) for p in L.glob('OCR_apple-vision_synform2_test_PUBLIC.jsonl') for r in jsonl(p)}
+vlm = {r['input_fco_id']: all(r['correct_extract'].values()) for p in L.glob('VLM_*_synform2_test_PUBLIC.jsonl') for r in jsonl(p)}
+common = sorted(set(ocr) & set(vlm))
+if common:
+    from frontier_forms.redteam_stats import compare
+    strata = {k: ('scan' if k in {r['input_fco_id'] for p in L.glob('OCR_apple-vision_synform2_test_PUBLIC.jsonl') for r in jsonl(p) if r['variant'] == 'scan'} else 'clean') for k in common}
+    out['ocr_vs_vlm_all7'] = compare({k: ocr[k] for k in common}, {k: vlm[k] for k in common}, strata)
+gf = R / 'evidence/redteam/gate_factorial.json'
+if gf.exists():
+    g = json.loads(gf.read_text()); out['gate_factorial'] = {'dataset': g['dataset'], 'images': g['images_analyzed'], 'cells': g['cells'],
+        'full': {k: g['configurations']['identity+rules+commitment+consistency'][k] for k in ('planted_detection_rate', 'false_admission_rate_of_all', 'coverage', 'selective_accuracy')},
+        'none': {k: g['configurations']['none'][k] for k in ('planted_detection_rate', 'false_admission_rate_of_all', 'coverage', 'selective_accuracy')},
+        'lomo': g['lomo'], 'per_config_vs_none': {n: c.get('vs_none') for n, c in g['configurations'].items() if 'vs_none' in c}}
+    full = g['configurations']['identity+rules+commitment+consistency']
+    for v in ('E1_enc_before_birth', 'E2_invalid_gender', 'E3_case_id_swap', 'E4_missing_field', 'E5_bad_date_format', 'E6_name_swap', 'E7_digit_flip'):
+        bv = full['by_variant'][v]; assert bv['planted_detected'] == bv['planted_cells'], ('FULL_GATE_MISSED_PLANTED', v, bv)
+    rules_only = g['configurations']['rules']
+    assert rules_only['by_variant']['E7_digit_flip']['planted_detected'] < rules_only['by_variant']['E7_digit_flip']['planted_cells'], 'RULES_SHOULD_NOT_SEE_E7'
+emit('exp014_ocr_vlm.json', out); print(json.dumps(out, indent=1)[:6000])""")])
