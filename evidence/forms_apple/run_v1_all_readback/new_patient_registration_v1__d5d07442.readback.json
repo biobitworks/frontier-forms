@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Oscar Collier",
+    "text": "Oscar Collier"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1947-11-29",
+    "text": "1947-11-29"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-608-8768",
+    "text": "555-608-8768"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "747 Krajcik Hollow Unit 83",
+    "text": "747 Krajcik Hollow Unit 83"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Somerville",
+    "text": "Somerville"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02143",
+    "text": "02143"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

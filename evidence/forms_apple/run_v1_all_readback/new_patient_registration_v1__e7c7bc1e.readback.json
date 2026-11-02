@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roman Gutmann",
+    "text": "Roman Gutmann"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1986-07-10",
+    "text": "1986-07-10"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-575-8583",
+    "text": "555-575-8583"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "720 Baumbach Promenade Apt 60",
+    "text": "720 Baumbach Promenade Apt 60"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Mansfield",
+    "text": "Mansfield"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Widowed",
+    "text": "Widowed"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

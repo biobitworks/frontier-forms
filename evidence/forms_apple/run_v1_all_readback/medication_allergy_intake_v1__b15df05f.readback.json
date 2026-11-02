@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Georgie Glover",
+    "text": "Georgie Glover"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Only received primary school education (finding); Past pregnancy history of miscarriage (situation); Has a criminal record (finding); Full-time employment (finding); Gingivitis (disorder)",
+    "text": "Only received primary school education (finding); Past pregnancy history of miscarriage (situation); Has a criminal record (finding); Full-time employment (finding); Gingivitis (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "155.7",
+    "text": "155.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "67.4",
+    "text": "67.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "114/78",
+    "text": "114/78"
+  }
+}

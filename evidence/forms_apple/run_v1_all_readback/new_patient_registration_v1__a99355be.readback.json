@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Man Mertz",
+    "text": "Man Mertz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1973-05-07",
+    "text": "1973-05-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-980-9188",
+    "text": "555-980-9188"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "908 Greenholt Lane Suite 5",
+    "text": "908 Greenholt Lane Suite 5"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Sandwich",
+    "text": "Sandwich"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02563",
+    "text": "02563"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Uninsured",
+    "text": "Uninsured"
+  }
+}

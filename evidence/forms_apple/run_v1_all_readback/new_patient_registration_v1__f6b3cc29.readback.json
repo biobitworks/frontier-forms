@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Temple Wehner",
+    "text": "Temple Wehner"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1957-08-05",
+    "text": "1957-08-05"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-760-3656",
+    "text": "555-760-3656"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "944 Parker Dale Apt 60",
+    "text": "944 Parker Dale Apt 60"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Worcester",
+    "text": "Worcester"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01609",
+    "text": "01609"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Widowed",
+    "text": "Widowed"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

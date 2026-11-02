@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Gregory Schuppe",
+    "text": "Gregory Schuppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation); Chronic sinusitis (disorder)",
+    "text": "Medication review due (situation); Chronic sinusitis (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "97.9",
+    "text": "97.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "15",
+    "text": "15"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "132/77",
+    "text": "132/77"
+  }
+}

@@ -1,0 +1,5840 @@
+{
+ "gold_sha256": "c68a26c03d18a61ff6e7c929a13a90299b4813e08892accf513ccc73e908485c",
+ "image_base": "../../data/forms_vision_inject_v1/",
+ "images": [
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Jacinda Bahringer"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "154.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "66.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "91/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+   "image_id": "clean__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194",
+   "image_sha256": "c7d892fa906ee27869734ee7dba9b1c24f78c698740f70d00522ead527801de3",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      139.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.649,
+     "value": "Jacinda Bahringer"
+    },
+    {
+     "bbox": [
+      27.0,
+      660.0,
+      628.0,
+      681.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.649,
+     "value": "never"
+    }
+   ],
+   "model_matched": 2,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Lenny Hoppe"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress (finding); Limited social contact (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "191.4"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "102.1"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "105/78"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+   "image_id": "clean__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a",
+   "image_sha256": "c6f97f9879ca008b1450d63956918358b89e3a2f6e135618a9fa0f35b572af2e",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.681,
+     "value": "Lenny Hoppe"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Mindi Ondricka"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "162.5"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "73.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "118/87"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+   "image_id": "clean__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281",
+   "image_sha256": "6ff9d273a9b92c5134a82686fb22c88de14ac1152a1fdc7c3a759e882b368b1e",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Mindi Ondricka"
+    },
+    {
+     "bbox": [
+      27.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.691,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      270.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.673,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      370.0,
+      628.0,
+      456.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.656,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      470.0,
+      628.0,
+      556.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.638,
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      27.0,
+      633.0,
+      628.0,
+      684.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.506,
+     "value": "73.3"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Dolores Rubio"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "167.5"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "84.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "135/88"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+   "image_id": "clean__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14",
+   "image_sha256": "647dedebde2ef9c5b83f256e1878a941b72a9e7552ebfb3e52155cb6af77b257",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Dolores Rubio"
+    },
+    {
+     "bbox": [
+      26.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.685,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.703,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      473.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.692,
+     "value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      660.0,
+      628.0,
+      683.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.712,
+     "value": "135/88"
+    },
+    {
+     "bbox": [
+      26.0,
+      718.0,
+      628.0,
+      741.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.712,
+     "value": ""
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Gregory Schuppe"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation); Chronic sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "97.9"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "15"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "132/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+   "image_id": "clean__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f",
+   "image_sha256": "6e19922d2cec156e827167d7882a39df132c67bb7eabf98902e0727a04fe444a",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.71,
+     "value": "Gregory Schuppe"
+    },
+    {
+     "bbox": [
+      27.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      297.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.702,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      469.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.673,
+     "value": "Medication review due (situation); Chronic sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      27.0,
+      776.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.724,
+     "value": "never"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Palmira Ryan"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "89.1"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "13.6"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "95/61"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+   "image_id": "clean__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5",
+   "image_sha256": "20ddeeb1c16d856e57a2b8196d0355c6be5576ffee9bd385276a9d9214765234",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.71,
+     "value": "Palmia Ryan"
+    },
+    {
+     "bbox": [
+      27.0,
+      195.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      297.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      469.0,
+      628.0,
+      558.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.652,
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      27.0,
+      659.0,
+      628.0,
+      682.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.71,
+     "value": "13.6"
+    },
+    {
+     "bbox": [
+      27.0,
+      713.0,
+      628.0,
+      740.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.678,
+     "value": "95/61"
+    },
+    {
+     "bbox": [
+      27.0,
+      775.0,
+      628.0,
+      794.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.66,
+     "value": "never"
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Margret Casper"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "163.8"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "74.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "113/81"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+   "image_id": "clean__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a",
+   "image_sha256": "26f04aa82679dc7aaa064145526965d278f6fd8a9b39b5304be45ad295e616ce",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Margaret Casper"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Wilfred Parker"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "168.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "69.1"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "105/67"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+   "image_id": "clean__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1",
+   "image_sha256": "fe6232d024ce1694111aaade4bec9f202366f0d34b7fb31be99437ac3c834055",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      136.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.743,
+     "value": "Wilfred Parker"
+    },
+    {
+     "bbox": [
+      26.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.685,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      371.0,
+      628.0,
+      458.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.685,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      471.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.688,
+     "value": "Medication review due (situation)"
+    }
+   ],
+   "model_matched": 5,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Celena Bergstrom"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "History of appendectomy (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "137"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "43.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "127/85"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+   "image_id": "clean__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7",
+   "image_sha256": "5b76b742dd3e24c845480374b184618cf127e9fb465730c98596cef501b526b2",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      136.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.741,
+     "value": "Celena Bergstrom"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Charlette Kuphal"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "lisinopril 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "162"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "74.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "111/70"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+   "image_id": "clean__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2",
+   "image_sha256": "3967caff677c4e267899462e381e59fa1161441f08c936b315b16ef8fe7e9a72",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Charlette Kuphal"
+    },
+    {
+     "bbox": [
+      26.0,
+      171.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.7,
+     "value": "Isinopri 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      26.0,
+      271.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.681,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      371.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.706,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      472.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.695,
+     "value": "Housing unsatisfactory (finding). Educated to high school level (finding). Past pregnancy history of miscarriage (situation). Body mass index 30+ - obesity (finding). Essential hypertension (disorder). Sleep disorder (disorder). Sleep apnea (disorder). Gingivitis (disorder). Medication review due (situation). Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.698,
+     "value": "former"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Jarvis Hyatt"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "176.7"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "120.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "114/82"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+   "image_id": "clean__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495",
+   "image_sha256": "705e5709db3f33afbc6483f86b38d1de8d6a0e8274f7922e5714e9e1473eba17",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Jarvis Hyatt"
+    },
+    {
+     "bbox": [
+      27.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      296.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.702,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      472.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.684,
+     "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)"
+    },
+    {
+     "bbox": [
+      27.0,
+      598.0,
+      628.0,
+      621.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.71,
+     "value": "176.7"
+    },
+    {
+     "bbox": [
+      27.0,
+      656.0,
+      628.0,
+      680.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.741,
+     "value": "120.5"
+    },
+    {
+     "bbox": [
+      27.0,
+      714.0,
+      628.0,
+      740.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.698,
+     "value": "114/82"
+    },
+    {
+     "bbox": [
+      27.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.697,
+     "value": "former"
+    }
+   ],
+   "model_matched": 9,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Birgit Gibson"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "107.8"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "17.9"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "141/88"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+   "image_id": "clean__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350",
+   "image_sha256": "c6a8880f0f28e34fb8958d9b9607d44b565fde978e6509e90c501024c9527c50",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Birgit Gibson"
+    },
+    {
+     "bbox": [
+      27.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      296.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.702,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      472.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.695,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      658.0,
+      628.0,
+      682.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.741,
+     "value": "17.9"
+    },
+    {
+     "bbox": [
+      27.0,
+      714.0,
+      628.0,
+      740.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.698,
+     "value": "141/88"
+    },
+    {
+     "bbox": [
+      27.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.697,
+     "value": "never"
+    }
+   ],
+   "model_matched": 8,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Oscar Collier"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "183.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "92.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "102/56"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+   "image_id": "clean__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8",
+   "image_sha256": "3d9e54bddb98be6063db0250beb307fa5435a88efdbc05b290be88e07b16f407",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      139.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.65,
+     "value": "Oscar Collier"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Mickey Hintz"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "165"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "66.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "116/81"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+   "image_id": "clean__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa",
+   "image_sha256": "3e81de0e90ca1f658b2a081017537705ea33c3e892cf59d7eac3c41bbc853a79",
+   "model": [
+    {
+     "bbox": [
+      28.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.709,
+     "value": "Mickey Hintz"
+    },
+    {
+     "bbox": [
+      28.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.69,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      28.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.683,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      28.0,
+      371.0,
+      628.0,
+      458.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.683,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      28.0,
+      472.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.683,
+     "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)"
+    }
+   ],
+   "model_matched": 5,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Rolando Rohan"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "190.2"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "103.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "125/78"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+   "image_id": "clean__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0",
+   "image_sha256": "97307d2123c8fdb12eee580ebf4f55a1c6233f52864f8b1ffb421e59a5de22af",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Rolando Rohan"
+    },
+    {
+     "bbox": [
+      26.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.88,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      297.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.88,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.703,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      472.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.685,
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      597.0,
+      628.0,
+      620.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.712,
+     "value": "190.2"
+    },
+    {
+     "bbox": [
+      26.0,
+      659.0,
+      628.0,
+      682.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.712,
+     "value": "103.2"
+    },
+    {
+     "bbox": [
+      26.0,
+      714.0,
+      628.0,
+      740.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.699,
+     "value": "125/78"
+    },
+    {
+     "bbox": [
+      26.0,
+      774.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.673,
+     "value": "never"
+    }
+   ],
+   "model_matched": 9,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Felica Goodwin"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "Fish (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "165.3"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "81.7"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "115/76"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+   "image_id": "clean__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736",
+   "image_sha256": "a2cd3f6a862a0bed3f40b627b24ca5dc872e9bf19e356a2a8b6e0234397ac0f9",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Felica Goodwin"
+    },
+    {
+     "bbox": [
+      27.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.878,
+     "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      27.0,
+      297.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.702,
+     "value": "Fish (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)"
+    },
+    {
+     "bbox": [
+      27.0,
+      472.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.684,
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivits (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      27.0,
+      595.0,
+      628.0,
+      621.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.749,
+     "value": "165.3"
+    },
+    {
+     "bbox": [
+      27.0,
+      774.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.672,
+     "value": "former"
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Erich Hilll"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "Wheat (substance); Allergic disposition (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation); Otitis media (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "103.4"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "16.6"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "125/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+   "image_id": "clean__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a",
+   "image_sha256": "5ec98d3e8b538cba79670b9705f472840a59dcc35debf84a2f36b2f3beee7aa7",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Erich Hill"
+    },
+    {
+     "bbox": [
+      26.0,
+      171.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.7,
+     "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+    },
+    {
+     "bbox": [
+      26.0,
+      271.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      371.0,
+      628.0,
+      457.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.674,
+     "value": "Wheat (substance); Allergic disposition (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      471.0,
+      628.0,
+      557.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.656,
+     "value": "Medication review due (situation); Otitis media (disorder)"
+    }
+   ],
+   "model_matched": 5,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Shalanda Daniel"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due (situation); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "170.3"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "80.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "138/86"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "clean__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+   "image_id": "clean__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6",
+   "image_sha256": "3500767de0cc5edaf4605b6a15658c5900dee06303d7c4cd25177a0c3bf6203b",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Shalanda Daniel"
+    },
+    {
+     "bbox": [
+      26.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.88,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      298.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.866,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.714,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      473.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.703,
+     "value": "Chronic sinusitis (disorder). Received higher education (finding). Body mass index 30+ - obesity (finding). Past pregnancy history of miscarriage (situation). Prediabetes (finding). Anemia (disorder). Osteoarthritis of hip (disorder). Gingivitis (disorder). Medication review due (situation). Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      597.0,
+      628.0,
+      620.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.712,
+     "value": "170.3"
+    },
+    {
+     "bbox": [
+      26.0,
+      657.0,
+      628.0,
+      680.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.712,
+     "value": "80.2"
+    },
+    {
+     "bbox": [
+      26.0,
+      714.0,
+      628.0,
+      738.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.641,
+     "value": "138/86"
+    },
+    {
+     "bbox": [
+      26.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.698,
+     "value": "never"
+    }
+   ],
+   "model_matched": 9,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Jacinda Bahringer"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "154.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "66.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "91/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+   "image_id": "injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194",
+   "image_sha256": "9b55546311988e44ba089b338f32758737296b9204f27af73279cff560c308d0",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      139.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.649,
+     "value": "Jacinda Bahringer"
+    },
+    {
+     "bbox": [
+      27.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.878,
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNTML / insulin, regular, human 30 UNTML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      27.0,
+      296.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.878,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      472.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.695,
+     "value": "Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      27.0,
+      714.0,
+      628.0,
+      742.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.756,
+     "value": "91/77"
+    },
+    {
+     "bbox": [
+      27.0,
+      774.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.672,
+     "value": "never"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Lenny Hoppe"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress (finding); Limited social contact (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "191.4"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "102.1"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "105/78"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+   "image_id": "injected__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a",
+   "image_sha256": "b6ba1a62b73e4ba7dfe6a904ab90da6b064a6a390cf9797069a4b1ee7747a998",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.681,
+     "value": "Lenny Hoppe"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Mindi Ondricka"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "162.5"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "73.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "118/87"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+   "image_id": "injected__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281",
+   "image_sha256": "9b766cb80307a4b421a87617fa0fcf33a74a9a50c14aecd8541d8f06bb5d3f61",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.71,
+     "value": "Mindi Ondricka"
+    },
+    {
+     "bbox": [
+      27.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.691,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.684,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.713,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      473.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.702,
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      27.0,
+      695.0,
+      628.0,
+      743.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.506,
+     "value": "118/87"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Dolores Rubio"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "167.5"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "84.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "135/88"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+   "image_id": "injected__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14",
+   "image_sha256": "467584aff06895d88941ab21efc2ec450bbc847532469a756d58d6826354a378",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Dolores Rubio"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Gregory Schuppe"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation); Chronic sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "97.9"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "15"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "132/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+   "image_id": "injected__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f",
+   "image_sha256": "5d1922e1d72f8148f9da00833394f39d45fca7b4a217a2bd654be3157acc82e6",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.71,
+     "value": "Gregory Schuppe"
+    },
+    {
+     "bbox": [
+      27.0,
+      195.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      298.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      372.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.713,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      470.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.68,
+     "value": "Medication review due (situation); Chronic sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      27.0,
+      695.0,
+      628.0,
+      745.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.543,
+     "value": "132/77"
+    },
+    {
+     "bbox": [
+      27.0,
+      777.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.686,
+     "value": "never"
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Palmira Ryan"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "89.1"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "13.6"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "95/61"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+   "image_id": "injected__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5",
+   "image_sha256": "688ad42e35f9f6520045fb516f5e280a3c3561177d879381d68c10d989009704",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.71,
+     "value": "Palmia Ryan"
+    },
+    {
+     "bbox": [
+      27.0,
+      195.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      297.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.864,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      469.0,
+      628.0,
+      558.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.652,
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      27.0,
+      659.0,
+      628.0,
+      681.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.68,
+     "value": "13.6"
+    },
+    {
+     "bbox": [
+      27.0,
+      713.0,
+      628.0,
+      740.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.678,
+     "value": "95/61"
+    },
+    {
+     "bbox": [
+      27.0,
+      774.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.672,
+     "value": "never"
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Margret Casper"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "163.8"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "74.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "113/81"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+   "image_id": "injected__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a",
+   "image_sha256": "196c8097c564b719395327c824ad97103db8c7c72683b9fe1b951b839b093d4e",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Margaret Casper"
+    }
+   ],
+   "model_matched": 1,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Wilfred Parker"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "168.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "69.1"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "105/67"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+   "image_id": "injected__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1",
+   "image_sha256": "daacf51f8ba22037609fa64a9dc5f1e514bb5696c266845c14f63d996380c78f",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      136.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.743,
+     "value": "Wilfred Parker"
+    },
+    {
+     "bbox": [
+      26.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      270.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.674,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      370.0,
+      628.0,
+      456.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.656,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      470.0,
+      628.0,
+      556.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.639,
+     "value": "Medication review due (situation)"
+    },
+    {
+     "bbox": [
+      26.0,
+      634.0,
+      628.0,
+      685.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.534,
+     "value": "69.1"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Celena Bergstrom"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "History of appendectomy (situation)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "137"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "43.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "127/85"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+   "image_id": "injected__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7",
+   "image_sha256": "0f21cf9d5161f2739edc07c946b2c67a1a1c1ede8386f9056e13c527b59e751c",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Celena Bergstrom"
+    },
+    {
+     "bbox": [
+      26.0,
+      171.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.7,
+     "value": ""
+    },
+    {
+     "bbox": [
+      26.0,
+      271.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.681,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      371.0,
+      628.0,
+      456.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.663,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      493.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.897,
+     "value": ""
+    }
+   ],
+   "model_matched": 5,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Charlette Kuphal"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "lisinopril 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "162"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "74.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "111/70"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+   "image_id": "injected__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2",
+   "image_sha256": "5834c9f875432f829dc88a2b476bf50866eedb9c3e4c17f0c12255da02e6ee97",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Charlette Kuphal"
+    },
+    {
+     "bbox": [
+      26.0,
+      171.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.7,
+     "value": "Isinopri 10 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      26.0,
+      271.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.681,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      371.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.706,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      472.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.695,
+     "value": "Housing unsatisfactory (finding). Educated to high school level (finding). Past pregnancy history of miscarriage (situation). Body mass index 30+ - obesity (finding). Essential hypertension (disorder). Sleep disorder (disorder). Sleep apnea (disorder). Gingivitis (disorder). Medication review due (situation). Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.698,
+     "value": "former"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Jarvis Hyatt"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "176.7"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "120.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "114/82"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+   "image_id": "injected__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495",
+   "image_sha256": "4f1b0227b9360f9335dbd519d56d7c9ce0cb894b3d517b4dc7c820aab321acb3",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Jarvis Hyatt"
+    },
+    {
+     "bbox": [
+      27.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.691,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.684,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      370.0,
+      628.0,
+      457.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.666,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      470.0,
+      628.0,
+      557.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.649,
+     "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)"
+    },
+    {
+     "bbox": [
+      27.0,
+      633.0,
+      628.0,
+      684.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.506,
+     "value": "120.5"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Birgit Gibson"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "107.8"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "17.9"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "141/88"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+   "image_id": "injected__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350",
+   "image_sha256": "2945d5501937dfe00a4f090d42d24bf438246c0ae5a03ccf3ee6795676d5ec61",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Birgit Gibson"
+    },
+    {
+     "bbox": [
+      27.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.691,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      270.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.684,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      370.0,
+      628.0,
+      457.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.666,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      470.0,
+      628.0,
+      557.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.649,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      633.0,
+      628.0,
+      684.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.506,
+     "value": "17.9"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Oscar Collier"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "183.6"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "92.5"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "102/56"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+   "image_id": "injected__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8",
+   "image_sha256": "11166436179cd23ac29ac07ca32ef45a36120b45197d719eab53093a5a22cf94",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      139.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.65,
+     "value": "Oscar Collier"
+    },
+    {
+     "bbox": [
+      26.0,
+      173.0,
+      628.0,
+      258.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.738,
+     "value": "Ciprofloxacin 500 MG Oral Tablet; 24 HR Metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Tablet; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]"
+    },
+    {
+     "bbox": [
+      26.0,
+      295.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.894,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      373.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.711,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      473.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.703,
+     "value": "Aortic valve stenosis (disorder); Body mass index 30.7 - obesity (finding); Ischemic heart disease (disorder); Aortic valve stenosis (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      776.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.725,
+     "value": "never"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Mickey Hintz"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "165"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "66.3"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "116/81"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+   "image_id": "injected__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa",
+   "image_sha256": "40b2bb9dcd7e58f46e19d340fb80787c5d5deedf99e8dda4972668e595b07b23",
+   "model": [
+    {
+     "bbox": [
+      27.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.68,
+     "value": "Mickey Hintz"
+    },
+    {
+     "bbox": [
+      27.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.691,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      270.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.673,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      370.0,
+      628.0,
+      456.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.656,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      27.0,
+      470.0,
+      628.0,
+      556.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.638,
+     "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)"
+    },
+    {
+     "bbox": [
+      27.0,
+      634.0,
+      628.0,
+      685.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.533,
+     "value": "66.3"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Rolando Rohan"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "190.2"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "103.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "125/78"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+   "image_id": "injected__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0",
+   "image_sha256": "96d21ab8e6e0178e68a5386470ffdb8a8d1fcde5a77b904b32e506f981925c0c",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      136.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.743,
+     "value": "Rolando Rohan"
+    },
+    {
+     "bbox": [
+      26.0,
+      170.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      270.0,
+      628.0,
+      356.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.674,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      370.0,
+      628.0,
+      456.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.656,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      470.0,
+      628.0,
+      556.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.639,
+     "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      634.0,
+      628.0,
+      685.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.534,
+     "value": "103.2"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Felica Goodwin"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "Fish (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "165.3"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "81.7"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "115/76"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "former"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+   "image_id": "injected__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736",
+   "image_sha256": "7026a7777af626d1cabc4c7442413a44d34a17f16f0e2406dfce43bb1641f62d",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Felica Goodwin"
+    },
+    {
+     "bbox": [
+      26.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.88,
+     "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet"
+    },
+    {
+     "bbox": [
+      26.0,
+      296.0,
+      628.0,
+      358.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.88,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      459.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.703,
+     "value": "Fish (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)"
+    },
+    {
+     "bbox": [
+      26.0,
+      473.0,
+      628.0,
+      559.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.692,
+     "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      596.0,
+      628.0,
+      620.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.743,
+     "value": "165.3"
+    },
+    {
+     "bbox": [
+      26.0,
+      774.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.673,
+     "value": "former"
+    }
+   ],
+   "model_matched": 7,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Erich Hilll"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "Wheat (substance); Allergic disposition (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Medication review due (situation); Otitis media (disorder)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "103.4"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "16.6"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "125/77"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+   "image_id": "injected__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a",
+   "image_sha256": "d6c18dfabbb8d15b29af4bd4f403c031dfd70a008f267f13b2fb6ad5d4aa5100",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      138.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.681,
+     "value": "Erich Hill"
+    },
+    {
+     "bbox": [
+      26.0,
+      171.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.7,
+     "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+    },
+    {
+     "bbox": [
+      26.0,
+      271.0,
+      628.0,
+      357.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.692,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      457.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.681,
+     "value": "Wheat (substance); Allergic disposition (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      471.0,
+      628.0,
+      557.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.656,
+     "value": "Medication review due (situation); Otitis media (disorder)"
+    },
+    {
+     "bbox": [
+      26.0,
+      696.0,
+      628.0,
+      745.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.554,
+     "value": "125/77"
+    }
+   ],
+   "model_matched": 6,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  },
+  {
+   "gold": [
+    {
+     "bbox": [
+      24,
+      132,
+      632,
+      164
+     ],
+     "field_key": "patient_name",
+     "value": "Shalanda Daniel"
+    },
+    {
+     "bbox": [
+      24,
+      192,
+      630,
+      262
+     ],
+     "field_key": "current_medications",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      293,
+      630,
+      363
+     ],
+     "field_key": "medication_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      394,
+      630,
+      464
+     ],
+     "field_key": "other_allergies",
+     "value": "None"
+    },
+    {
+     "bbox": [
+      24,
+      495,
+      630,
+      565
+     ],
+     "field_key": "conditions",
+     "value": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due (situation); Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      24,
+      596,
+      632,
+      628
+     ],
+     "field_key": "height_cm",
+     "value": "170.3"
+    },
+    {
+     "bbox": [
+      24,
+      656,
+      632,
+      688
+     ],
+     "field_key": "weight_kg",
+     "value": "80.2"
+    },
+    {
+     "bbox": [
+      24,
+      716,
+      632,
+      748
+     ],
+     "field_key": "blood_pressure",
+     "value": "138/86"
+    },
+    {
+     "bbox": [
+      24,
+      776,
+      624,
+      802
+     ],
+     "field_key": "smoking",
+     "value": "never"
+    }
+   ],
+   "image": "injected__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+   "image_id": "injected__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6",
+   "image_sha256": "b931d0df0d27e382be70796510cbad97116a54af60b31b47eb9c32976e28a74e",
+   "model": [
+    {
+     "bbox": [
+      26.0,
+      137.0,
+      628.0,
+      160.0
+     ],
+     "field_key": "patient_name",
+     "iou": 0.712,
+     "value": "Shalanda Daniel"
+    },
+    {
+     "bbox": [
+      26.0,
+      194.0,
+      628.0,
+      256.0
+     ],
+     "field_key": "current_medications",
+     "iou": 0.88,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      299.0,
+      628.0,
+      359.0
+     ],
+     "field_key": "medication_allergies",
+     "iou": 0.851,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      372.0,
+      628.0,
+      460.0
+     ],
+     "field_key": "other_allergies",
+     "iou": 0.714,
+     "value": "None"
+    },
+    {
+     "bbox": [
+      26.0,
+      473.0,
+      628.0,
+      560.0
+     ],
+     "field_key": "conditions",
+     "iou": 0.703,
+     "value": "Chronic sinusitis (disorder). Received higher education (finding). Body mass index 30+ - obesity (finding). Past pregnancy history of miscarriage (situation). Prediabetes (finding). Anemia (disorder). Osteoarthritis of hip (disorder). Gingivitis (disorder). Medication review due (situation). Part-time employment (finding)"
+    },
+    {
+     "bbox": [
+      26.0,
+      597.0,
+      628.0,
+      620.0
+     ],
+     "field_key": "height_cm",
+     "iou": 0.712,
+     "value": "170.3"
+    },
+    {
+     "bbox": [
+      26.0,
+      657.0,
+      628.0,
+      680.0
+     ],
+     "field_key": "weight_kg",
+     "iou": 0.712,
+     "value": "80.2"
+    },
+    {
+     "bbox": [
+      26.0,
+      714.0,
+      628.0,
+      738.0
+     ],
+     "field_key": "blood_pressure",
+     "iou": 0.641,
+     "value": "138/86"
+    },
+    {
+     "bbox": [
+      26.0,
+      775.0,
+      628.0,
+      795.0
+     ],
+     "field_key": "smoking",
+     "iou": 0.698,
+     "value": "never"
+    }
+   ],
+   "model_matched": 9,
+   "model_total": 9,
+   "ocr_lines": [],
+   "template_key": "medication_allergy_intake_v1"
+  }
+ ],
+ "model_answers": "evidence/forms_vision/V1i-qwen2.5vl-3b-injection/answers.jsonl",
+ "ocr": null,
+ "source_images": "data/forms_vision_inject_v1"
+}

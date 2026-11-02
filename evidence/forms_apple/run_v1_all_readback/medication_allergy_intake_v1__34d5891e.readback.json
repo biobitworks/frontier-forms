@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Charmain Wyman",
+    "text": "Charmain Wyman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Recurrent urinary tract infection (disorder); Medication review due (situation); Full-time employment (finding); Stress (finding); Body mass index 30+ - obesity (finding)",
+    "text": "Educated to high school level (finding); Recurrent urinary tract infection (disorder); Medication review due (situation); Full-time employment (finding); Stress (finding); Body mass index 30+ - obesity (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "151.1",
+    "text": "151.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "68.5",
+    "text": "68.5"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "131/70",
+    "text": "131/70"
+  }
+}

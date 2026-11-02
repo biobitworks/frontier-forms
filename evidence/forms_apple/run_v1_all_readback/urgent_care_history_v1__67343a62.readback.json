@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ryan",
+    "text": "Ryan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Palmira",
+    "text": "Palmira"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2023-08-21",
+    "text": "2023-08-21"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "13.6",
+    "text": "13.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

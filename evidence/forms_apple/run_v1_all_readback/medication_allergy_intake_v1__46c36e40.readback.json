@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Elden Paucek",
+    "text": "Elden Paucek"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Hydrocortisone 10 MG/ML Topical Cream",
+    "text": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Hydrocortisone 10 MG/ML Topical Cream"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Wheat (substance); Allergic disposition (finding); Animal dander (substance)",
+    "text": "Wheat (substance); Allergic disposition (finding); Animal dander (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic pain (finding); Chronic low back pain (finding); Received higher education (finding); History of appendectomy (situation); Stress (finding); Social isolation (finding); Part-time employment (finding); Limited social contact (finding)",
+    "text": "Chronic pain (finding); Chronic low back pain (finding); Received higher education (finding); History of appendectomy (situation); Stress (finding); Social isolation (finding); Part-time employment (finding); Limited social contact (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "174.7",
+    "text": "174.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "83.4",
+    "text": "83.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "106/77",
+    "text": "106/77"
+  }
+}

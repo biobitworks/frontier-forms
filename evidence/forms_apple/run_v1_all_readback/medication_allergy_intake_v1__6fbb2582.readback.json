@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Virgil Rau",
+    "text": "Virgil Rau"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Astemizole 10 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; lisinopril 10 MG Oral Tablet",
+    "text": "Astemizole 10 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; lisinopril 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin",
+    "text": "Aspirin"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Allergic disposition (finding); Mold (organism)",
+    "text": "Allergic disposition (finding); Mold (organism)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Full-time employment (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Medication review due (situation); Body mass index 30+ - obesity (finding); Limited social contact (finding); Stress (finding); Victim of intimate partner abuse (finding)",
+    "text": "Received higher education (finding); Full-time employment (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Medication review due (situation); Body mass index 30+ - obesity (finding); Limited social contact (finding); Stress (finding); Victim of"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "173.9",
+    "text": "173.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "91.1",
+    "text": "91.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/98",
+    "text": "133/98"
+  }
+}

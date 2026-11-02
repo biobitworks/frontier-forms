@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Erich Hilll",
+    "text": "Erich Hilll"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2022-04-20",
+    "text": "2022-04-20"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-182-4163",
+    "text": "555-182-4163"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "759 Cassin Village Apt 27",
+    "text": "759 Cassin Village Apt 27"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02132",
+    "text": "02132"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}
