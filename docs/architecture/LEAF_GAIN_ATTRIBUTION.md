@@ -37,6 +37,26 @@ Discovery rows can never PASS (replication NOT_TESTED by construction). Selectiv
 | RT-015 | heldout | CONTEXT_PROJECTION | qwen2.5vl:3b (fb90415cde1e) → qwen2.5vl:3b (fb90415cde1e) | fco_context, fcg_context | ADDED FCG context block to system prompt (same weights, same | 39 | 0/0 | +0.000 | 1.0000 | 1.0000 | [+0.000, +0.000] | **NEGATIVE** / NULL |
 | RT-016 | heldout | CONTEXT_PROJECTION | qwen2.5vl:3b (fb90415cde1e) → qwen2.5vl:3b (fb90415cde1e) | fco_context | ADDED FCO context block to system prompt (same weights, same | 39 | 0/0 | +0.000 | 1.0000 | 1.0000 | [+0.000, +0.000] | **NEGATIVE** / NULL |
 
+## Gate factorial on SYNFORM2-ERR (same weights; only the mechanism set changes)
+
+| ID | weights | mechanisms enabled | mechanisms disabled | planted detection | false adm. rate | coverage | per-image Δ vs none | Holm p | bootstrap 95% CI | status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| RT-096 | qwen2.5vl:3b (fb90415cde1e) + Vision | commitment | identity, rules, consistency | 1.000 | 0.000 | 0.876 | 0.630 | 0.0000 | [0.6074074074074074, 0.6592592592592592] | **PASS** |
+| RT-097 | qwen2.5vl:3b (fb90415cde1e) + Vision | consistency | identity, rules, commitment | 0.315 | 0.078 | 0.851 | 0.148 | 0.0000 | [0.11851851851851852, 0.18518518518518517] | **PASS** |
+| RT-098 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity | rules, commitment, consistency | 0.259 | 0.093 | 0.881 | 0.000 | 1.0000 | [0.0, 0.0] | **NULL** |
+| RT-099 | qwen2.5vl:3b (fb90415cde1e) + Vision | rules | identity, commitment, consistency | 0.509 | 0.066 | 0.941 | 0.281 | 0.0000 | [0.2518518518518518, 0.3037037037037037] | **PASS** |
+| RT-100 | qwen2.5vl:3b (fb90415cde1e) + Vision | commitment, consistency | identity, rules | 1.000 | 0.000 | 0.772 | 0.630 | 0.0000 | [0.6074074074074074, 0.6592592592592592] | **PASS** |
+| RT-101 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, commitment | rules, consistency | 1.000 | 0.000 | 0.788 | 0.526 | 0.0000 | [0.5037037037037037, 0.5555555555555556] | **PASS** |
+| RT-102 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, consistency | rules, commitment | 0.426 | 0.066 | 0.761 | 0.133 | 0.0000 | [0.1111111111111111, 0.16296296296296298] | **PASS** |
+| RT-103 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, rules | commitment, consistency | 0.639 | 0.050 | 0.837 | 0.281 | 0.0000 | [0.2518518518518518, 0.3037037037037037] | **PASS** |
+| RT-104 | qwen2.5vl:3b (fb90415cde1e) + Vision | rules, commitment | identity, consistency | 1.000 | 0.000 | 0.875 | 0.630 | 0.0000 | [0.6074074074074074, 0.6592592592592592] | **PASS** |
+| RT-105 | qwen2.5vl:3b (fb90415cde1e) + Vision | rules, consistency | identity, commitment | 0.565 | 0.050 | 0.821 | 0.348 | 0.0000 | [0.31851851851851853, 0.3851851851851852] | **PASS** |
+| RT-106 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, commitment, consistency | rules | 1.000 | 0.000 | 0.695 | 0.526 | 0.0000 | [0.5037037037037037, 0.5555555555555556] | **PASS** |
+| RT-107 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, rules, commitment | consistency | 1.000 | 0.000 | 0.787 | 0.526 | 0.0000 | [0.5037037037037037, 0.5555555555555556] | **PASS** |
+| RT-108 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, rules, consistency | commitment | 0.676 | 0.037 | 0.731 | 0.333 | 0.0000 | [0.3111111111111111, 0.362962962962963] | **PASS** |
+| RT-109 | qwen2.5vl:3b (fb90415cde1e) + Vision | rules, commitment, consistency | identity | 1.000 | 0.000 | 0.771 | 0.630 | 0.0000 | [0.6074074074074074, 0.6592592592592592] | **PASS** |
+| RT-110 | qwen2.5vl:3b (fb90415cde1e) + Vision | identity, rules, commitment, consistency | — | 1.000 | 0.000 | 0.694 | 0.526 | 0.0000 | [0.5037037037037037, 0.5555555555555556] | **PASS** |
+
 ## Antigentic admission, LOMO and injection (selective metrics; same weights, same base answer)
 
 | ID | lane | split | mechanism | coverage | selective acc | false adm. (of all) | admitted-injected | end-to-end acc | extra tokens | status |
@@ -133,10 +153,10 @@ Discovery rows can never PASS (replication NOT_TESTED by construction). Selectiv
 | RT-093 | VERIFIER_ATTACK |  | removed_leaf | REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec | PASS |
 | RT-094 | VERIFIER_ATTACK |  | reordered_leaves | REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec | PASS |
 | RT-095 | VERIFIER_ATTACK |  | supabase_live_rows_as_benchmark | REJECT:state=REPORTED_IN_PROGRESS;root=NOT_COMPUTED | PASS |
-| RT-096 | MODEL_LANE | L4 | NOT_EXECUTED | n/a | BLOCKED_NO_CREDENTIAL |
-| RT-097 | HARNESS | L5 | NOT_EXECUTED | n/a | BLOCKED_NO_CREDENTIAL |
-| RT-098 | TRAINING | NVIDIA | NOT_EXECUTED | n/a | NOT_TESTED |
-| RT-099 | SOURCE | Supabase | NOT_OBSERVED | n/a | NOT_OBSERVED |
+| RT-111 | MODEL_LANE | L4 | NOT_EXECUTED | n/a | BLOCKED_NO_CREDENTIAL |
+| RT-112 | HARNESS | L5 | NOT_EXECUTED | n/a | BLOCKED_NO_CREDENTIAL |
+| RT-113 | TRAINING | NVIDIA | NOT_EXECUTED | n/a | NOT_TESTED |
+| RT-114 | SOURCE | Supabase | NOT_OBSERVED | n/a | NOT_OBSERVED |
 
 ## FCG impact view
 

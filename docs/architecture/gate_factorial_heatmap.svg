@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="576" viewBox="0 0 980 576" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">
+<rect width="980" height="576" fill="#ffffff"/>
+<text x="16" y="28" font-size="16" font-weight="600" fill="#111827">Gate factorial on SYNFORM2ERR-790a7dc6f9641fa6 (135 images, 945 field cells)</text>
+<text x="16" y="46" fill="#4b5563">primary extractor qwen2.5vl:3b single pass; challenger Apple Vision OCR + geometric parser; one row per mechanism combination; darker = larger value</text>
+<text x="415.0" y="62" text-anchor="middle" fill="#374151" font-weight="600">Planted-error detection rate</text>
+<text x="565.0" y="62" text-anchor="middle" fill="#374151" font-weight="600">False-admission rate</text>
+<text x="715.0" y="62" text-anchor="middle" fill="#374151" font-weight="600">Coverage</text>
+<text x="865.0" y="62" text-anchor="middle" fill="#374151" font-weight="600">Selective accuracy</text>
+<text x="330" y="87" text-anchor="end" fill="#1f2937">none (baseline)</text>
+<rect x="341" y="71" width="148" height="24" rx="4" fill="#cde2fb"><title>none: Planted-error detection rate = 0.13</title></rect>
+<text x="415.0" y="87" text-anchor="middle" fill="#1f2937">0.13</text>
+<rect x="491" y="71" width="148" height="24" rx="4" fill="#cde2fb"><title>none: False-admission rate (of all cells) = 0.109</title></rect>
+<text x="565.0" y="87" text-anchor="middle" fill="#1f2937">0.11</text>
+<rect x="641" y="71" width="148" height="24" rx="4" fill="#123a6e"><title>none: Coverage (admitted / cells) = 0.985</title></rect>
+<text x="715.0" y="87" text-anchor="middle" fill="#ffffff">0.99</text>
+<rect x="791" y="71" width="148" height="24" rx="4" fill="#184f95"><title>none: Selective accuracy (admitted correct / admitted) = 0.889</title></rect>
+<text x="865.0" y="87" text-anchor="middle" fill="#ffffff">0.89</text>
+<text x="330" y="113" text-anchor="end" fill="#1f2937">commitment</text>
+<rect x="341" y="97" width="148" height="24" rx="4" fill="#123a6e"><title>commitment: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="113" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="97" width="148" height="24" rx="4" fill="#f3f8fe"><title>commitment: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="113" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="97" width="148" height="24" rx="4" fill="#184f95"><title>commitment: Coverage (admitted / cells) = 0.876</title></rect>
+<text x="715.0" y="113" text-anchor="middle" fill="#ffffff">0.88</text>
+<rect x="791" y="97" width="148" height="24" rx="4" fill="#123a6e"><title>commitment: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="113" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="139" text-anchor="end" fill="#1f2937">consistency</text>
+<rect x="341" y="123" width="148" height="24" rx="4" fill="#86b6ef"><title>consistency: Planted-error detection rate = 0.315</title></rect>
+<text x="415.0" y="139" text-anchor="middle" fill="#1f2937">0.31 *</text>
+<rect x="491" y="123" width="148" height="24" rx="4" fill="#f3f8fe"><title>consistency: False-admission rate (of all cells) = 0.078</title></rect>
+<text x="565.0" y="139" text-anchor="middle" fill="#1f2937">0.08</text>
+<rect x="641" y="123" width="148" height="24" rx="4" fill="#184f95"><title>consistency: Coverage (admitted / cells) = 0.851</title></rect>
+<text x="715.0" y="139" text-anchor="middle" fill="#ffffff">0.85</text>
+<rect x="791" y="123" width="148" height="24" rx="4" fill="#184f95"><title>consistency: Selective accuracy (admitted correct / admitted) = 0.908</title></rect>
+<text x="865.0" y="139" text-anchor="middle" fill="#ffffff">0.91</text>
+<text x="330" y="165" text-anchor="end" fill="#1f2937">identity</text>
+<rect x="341" y="149" width="148" height="24" rx="4" fill="#86b6ef"><title>identity: Planted-error detection rate = 0.259</title></rect>
+<text x="415.0" y="165" text-anchor="middle" fill="#1f2937">0.26</text>
+<rect x="491" y="149" width="148" height="24" rx="4" fill="#cde2fb"><title>identity: False-admission rate (of all cells) = 0.093</title></rect>
+<text x="565.0" y="165" text-anchor="middle" fill="#1f2937">0.09</text>
+<rect x="641" y="149" width="148" height="24" rx="4" fill="#184f95"><title>identity: Coverage (admitted / cells) = 0.881</title></rect>
+<text x="715.0" y="165" text-anchor="middle" fill="#ffffff">0.88</text>
+<rect x="791" y="149" width="148" height="24" rx="4" fill="#184f95"><title>identity: Selective accuracy (admitted correct / admitted) = 0.894</title></rect>
+<text x="865.0" y="165" text-anchor="middle" fill="#ffffff">0.89</text>
+<text x="330" y="191" text-anchor="end" fill="#1f2937">rules</text>
+<rect x="341" y="175" width="148" height="24" rx="4" fill="#3987e5"><title>rules: Planted-error detection rate = 0.509</title></rect>
+<text x="415.0" y="191" text-anchor="middle" fill="#1f2937">0.51 *</text>
+<rect x="491" y="175" width="148" height="24" rx="4" fill="#f3f8fe"><title>rules: False-admission rate (of all cells) = 0.066</title></rect>
+<text x="565.0" y="191" text-anchor="middle" fill="#1f2937">0.07</text>
+<rect x="641" y="175" width="148" height="24" rx="4" fill="#123a6e"><title>rules: Coverage (admitted / cells) = 0.941</title></rect>
+<text x="715.0" y="191" text-anchor="middle" fill="#ffffff">0.94</text>
+<rect x="791" y="175" width="148" height="24" rx="4" fill="#123a6e"><title>rules: Selective accuracy (admitted correct / admitted) = 0.93</title></rect>
+<text x="865.0" y="191" text-anchor="middle" fill="#ffffff">0.93</text>
+<text x="330" y="217" text-anchor="end" fill="#1f2937">commitment+consistency</text>
+<rect x="341" y="201" width="148" height="24" rx="4" fill="#123a6e"><title>commitment+consistency: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="217" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="201" width="148" height="24" rx="4" fill="#f3f8fe"><title>commitment+consistency: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="217" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="201" width="148" height="24" rx="4" fill="#184f95"><title>commitment+consistency: Coverage (admitted / cells) = 0.772</title></rect>
+<text x="715.0" y="217" text-anchor="middle" fill="#ffffff">0.77</text>
+<rect x="791" y="201" width="148" height="24" rx="4" fill="#123a6e"><title>commitment+consistency: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="217" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="243" text-anchor="end" fill="#1f2937">identity+commitment</text>
+<rect x="341" y="227" width="148" height="24" rx="4" fill="#123a6e"><title>identity+commitment: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="243" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="227" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+commitment: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="243" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="227" width="148" height="24" rx="4" fill="#184f95"><title>identity+commitment: Coverage (admitted / cells) = 0.788</title></rect>
+<text x="715.0" y="243" text-anchor="middle" fill="#ffffff">0.79</text>
+<rect x="791" y="227" width="148" height="24" rx="4" fill="#123a6e"><title>identity+commitment: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="243" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="269" text-anchor="end" fill="#1f2937">identity+consistency</text>
+<rect x="341" y="253" width="148" height="24" rx="4" fill="#3987e5"><title>identity+consistency: Planted-error detection rate = 0.426</title></rect>
+<text x="415.0" y="269" text-anchor="middle" fill="#1f2937">0.43 *</text>
+<rect x="491" y="253" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+consistency: False-admission rate (of all cells) = 0.066</title></rect>
+<text x="565.0" y="269" text-anchor="middle" fill="#1f2937">0.07</text>
+<rect x="641" y="253" width="148" height="24" rx="4" fill="#184f95"><title>identity+consistency: Coverage (admitted / cells) = 0.761</title></rect>
+<text x="715.0" y="269" text-anchor="middle" fill="#ffffff">0.76</text>
+<rect x="791" y="253" width="148" height="24" rx="4" fill="#184f95"><title>identity+consistency: Selective accuracy (admitted correct / admitted) = 0.914</title></rect>
+<text x="865.0" y="269" text-anchor="middle" fill="#ffffff">0.91</text>
+<text x="330" y="295" text-anchor="end" fill="#1f2937">identity+rules</text>
+<rect x="341" y="279" width="148" height="24" rx="4" fill="#1c5cab"><title>identity+rules: Planted-error detection rate = 0.639</title></rect>
+<text x="415.0" y="295" text-anchor="middle" fill="#ffffff">0.64 *</text>
+<rect x="491" y="279" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+rules: False-admission rate (of all cells) = 0.05</title></rect>
+<text x="565.0" y="295" text-anchor="middle" fill="#1f2937">0.05</text>
+<rect x="641" y="279" width="148" height="24" rx="4" fill="#184f95"><title>identity+rules: Coverage (admitted / cells) = 0.837</title></rect>
+<text x="715.0" y="295" text-anchor="middle" fill="#ffffff">0.84</text>
+<rect x="791" y="279" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules: Selective accuracy (admitted correct / admitted) = 0.941</title></rect>
+<text x="865.0" y="295" text-anchor="middle" fill="#ffffff">0.94</text>
+<text x="330" y="321" text-anchor="end" fill="#1f2937">rules+commitment</text>
+<rect x="341" y="305" width="148" height="24" rx="4" fill="#123a6e"><title>rules+commitment: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="321" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="305" width="148" height="24" rx="4" fill="#f3f8fe"><title>rules+commitment: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="321" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="305" width="148" height="24" rx="4" fill="#184f95"><title>rules+commitment: Coverage (admitted / cells) = 0.875</title></rect>
+<text x="715.0" y="321" text-anchor="middle" fill="#ffffff">0.88</text>
+<rect x="791" y="305" width="148" height="24" rx="4" fill="#123a6e"><title>rules+commitment: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="321" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="347" text-anchor="end" fill="#1f2937">rules+consistency</text>
+<rect x="341" y="331" width="148" height="24" rx="4" fill="#3987e5"><title>rules+consistency: Planted-error detection rate = 0.565</title></rect>
+<text x="415.0" y="347" text-anchor="middle" fill="#ffffff">0.56 *</text>
+<rect x="491" y="331" width="148" height="24" rx="4" fill="#f3f8fe"><title>rules+consistency: False-admission rate (of all cells) = 0.05</title></rect>
+<text x="565.0" y="347" text-anchor="middle" fill="#1f2937">0.05</text>
+<rect x="641" y="331" width="148" height="24" rx="4" fill="#184f95"><title>rules+consistency: Coverage (admitted / cells) = 0.821</title></rect>
+<text x="715.0" y="347" text-anchor="middle" fill="#ffffff">0.82</text>
+<rect x="791" y="331" width="148" height="24" rx="4" fill="#123a6e"><title>rules+consistency: Selective accuracy (admitted correct / admitted) = 0.939</title></rect>
+<text x="865.0" y="347" text-anchor="middle" fill="#ffffff">0.94</text>
+<text x="330" y="373" text-anchor="end" fill="#1f2937">identity+commitment+consistency (LOMO)</text>
+<rect x="341" y="357" width="148" height="24" rx="4" fill="#123a6e"><title>identity+commitment+consistency: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="373" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="357" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+commitment+consistency: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="373" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="357" width="148" height="24" rx="4" fill="#1c5cab"><title>identity+commitment+consistency: Coverage (admitted / cells) = 0.695</title></rect>
+<text x="715.0" y="373" text-anchor="middle" fill="#ffffff">0.70</text>
+<rect x="791" y="357" width="148" height="24" rx="4" fill="#123a6e"><title>identity+commitment+consistency: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="373" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="399" text-anchor="end" fill="#1f2937">identity+rules+commitment (LOMO)</text>
+<rect x="341" y="383" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules+commitment: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="399" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="383" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+rules+commitment: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="399" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="383" width="148" height="24" rx="4" fill="#184f95"><title>identity+rules+commitment: Coverage (admitted / cells) = 0.787</title></rect>
+<text x="715.0" y="399" text-anchor="middle" fill="#ffffff">0.79</text>
+<rect x="791" y="383" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules+commitment: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="399" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="425" text-anchor="end" fill="#1f2937">identity+rules+consistency (LOMO)</text>
+<rect x="341" y="409" width="148" height="24" rx="4" fill="#1c5cab"><title>identity+rules+consistency: Planted-error detection rate = 0.676</title></rect>
+<text x="415.0" y="425" text-anchor="middle" fill="#ffffff">0.68 *</text>
+<rect x="491" y="409" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+rules+consistency: False-admission rate (of all cells) = 0.037</title></rect>
+<text x="565.0" y="425" text-anchor="middle" fill="#1f2937">0.04</text>
+<rect x="641" y="409" width="148" height="24" rx="4" fill="#1c5cab"><title>identity+rules+consistency: Coverage (admitted / cells) = 0.731</title></rect>
+<text x="715.0" y="425" text-anchor="middle" fill="#ffffff">0.73</text>
+<rect x="791" y="409" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules+consistency: Selective accuracy (admitted correct / admitted) = 0.949</title></rect>
+<text x="865.0" y="425" text-anchor="middle" fill="#ffffff">0.95</text>
+<text x="330" y="451" text-anchor="end" fill="#1f2937">rules+commitment+consistency (LOMO)</text>
+<rect x="341" y="435" width="148" height="24" rx="4" fill="#123a6e"><title>rules+commitment+consistency: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="451" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="435" width="148" height="24" rx="4" fill="#f3f8fe"><title>rules+commitment+consistency: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="451" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="435" width="148" height="24" rx="4" fill="#184f95"><title>rules+commitment+consistency: Coverage (admitted / cells) = 0.771</title></rect>
+<text x="715.0" y="451" text-anchor="middle" fill="#ffffff">0.77</text>
+<rect x="791" y="435" width="148" height="24" rx="4" fill="#123a6e"><title>rules+commitment+consistency: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="451" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="330" y="477" text-anchor="end" fill="#1f2937">identity+rules+commitment+consistency (FULL)</text>
+<rect x="341" y="461" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules+commitment+consistency: Planted-error detection rate = 1.0</title></rect>
+<text x="415.0" y="477" text-anchor="middle" fill="#ffffff">1.00 *</text>
+<rect x="491" y="461" width="148" height="24" rx="4" fill="#f3f8fe"><title>identity+rules+commitment+consistency: False-admission rate (of all cells) = 0.0</title></rect>
+<text x="565.0" y="477" text-anchor="middle" fill="#1f2937">0.00</text>
+<rect x="641" y="461" width="148" height="24" rx="4" fill="#1c5cab"><title>identity+rules+commitment+consistency: Coverage (admitted / cells) = 0.694</title></rect>
+<text x="715.0" y="477" text-anchor="middle" fill="#ffffff">0.69</text>
+<rect x="791" y="461" width="148" height="24" rx="4" fill="#123a6e"><title>identity+rules+commitment+consistency: Selective accuracy (admitted correct / admitted) = 1.0</title></rect>
+<text x="865.0" y="477" text-anchor="middle" fill="#ffffff">1.00</text>
+<text x="16" y="528" fill="#4b5563">* detection row passes Holm-corrected exact McNemar (p&lt;0.05, positive) AND stratified paired bootstrap lower 95% CI &gt; 0 versus the no-gate baseline on per-image success.</text>
+<text x="16" y="546" fill="#4b5563">Hashes bind bytes; gates bind admission. Rates are OBSERVED on rendered synthetic forms, not scanned paper. Generated 2026-11-02T23:05:03Z on magicSTUDIObox.local.</text>
+<text x="16" y="564" fill="#4b5563">Ramp: blue sequential 100→700 (light = near zero). Values printed in every cell; the grid is its own table view.</text>
+</svg>

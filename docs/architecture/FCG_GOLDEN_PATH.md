@@ -89,6 +89,15 @@ flowchart TD
 | ANTI-VERDICT-L2-heldout | ACCEPT/CHALLENGE verdict gate (LOMO: full minus swap) | ANTIGENTIC | **OBSERVED** | coverage 0.256, selective acc 0.600, false adm 4 |
 | ANTI-FULL-L2-heldout | full antigentic gate (verdict ∧ swap ∧ format) | ANTIGENTIC | **OBSERVED** | coverage 0.000, selective acc NOT_COMPUTED, false adm 0 |
 | INJ-L2-heldout | tool-note injection inside the FCG block | ATTACK | **OBSERVED** | excess injected rate 0.744, flips of clean-correct 0; swap gate admitted-injected flips 0 |
+| FORM-COMMIT | per-field salted commitments in the form FCO (new FCG leaf mechanism) | INTEGRITY_GATE | **GAIN** | commitment alone: detection 1.000, false adm rate 0.000; none: 0.130/0.109 |
+| FORM-IDENTITY | identity mechanism alone | GATE | **GAIN** | detection 0.259, false adm rate 0.093, coverage 0.881 |
+| FORM-RULES | rules mechanism alone | GATE | **GAIN** | detection 0.509, false adm rate 0.066, coverage 0.941 |
+| FORM-CONSISTENCY | consistency mechanism alone | GATE | **GAIN** | detection 0.315, false adm rate 0.078, coverage 0.851 |
+| FORM-FULL | full gate identity ∧ rules ∧ commitment ∧ consistency | GATE | **PASS** | detection 1.000, false adm 0, coverage 0.694; per-image success Δ 0.526, Holm p 0.0000, CI [0.5037037037037037, 0.5555555555555556] |
+| LOMO-minus_commitment | full gate minus one mechanism | LOMO | **OBSERVED** | Δdetection -0.324, Δfalse adm +35, Δcoverage +0.037 |
+| LOMO-minus_consistency | full gate minus one mechanism | LOMO | **OBSERVED** | Δdetection +0.000, Δfalse adm +0, Δcoverage +0.093 |
+| LOMO-minus_identity | full gate minus one mechanism | LOMO | **OBSERVED** | Δdetection +0.000, Δfalse adm +0, Δcoverage +0.077 |
+| LOMO-minus_rules | full gate minus one mechanism | LOMO | **OBSERVED** | Δdetection +0.000, Δfalse adm +0, Δcoverage +0.001 |
 
 ## Golden path (elements with a measured gain or a PASS gate)
 
@@ -107,6 +116,11 @@ flowchart TD
 * **GATE-EDGE-L2-discovery** — DERIVED_INPUT_AT edge required before inference: abstain 38/38
 * **GATE-PROOF-L2-heldout** — inclusion-proof verification before inference (forged leaf): abstain 39/39, model calls 0
 * **GATE-EDGE-L2-heldout** — DERIVED_INPUT_AT edge required before inference: abstain 39/39
+* **FORM-COMMIT** — per-field salted commitments in the form FCO (new FCG leaf mechanism): commitment alone: detection 1.000, false adm rate 0.000; none: 0.130/0.109
+* **FORM-IDENTITY** — identity mechanism alone: detection 0.259, false adm rate 0.093, coverage 0.881
+* **FORM-RULES** — rules mechanism alone: detection 0.509, false adm rate 0.066, coverage 0.941
+* **FORM-CONSISTENCY** — consistency mechanism alone: detection 0.315, false adm rate 0.078, coverage 0.851
+* **FORM-FULL** — full gate identity ∧ rules ∧ commitment ∧ consistency: detection 1.000, false adm 0, coverage 0.694; per-image success Δ 0.526, Holm p 0.0000, CI [0.5037037037037037, 0.5555555555555556]
 
 ## What did NOT help
 

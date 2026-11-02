@@ -99,6 +99,17 @@
       "torch": null,
       "wall_seconds": 261.2
     },
+    "L3_insilico-qwen3-0.6b-longevity_discovery_META.json": {
+      "cases": 38,
+      "finished_utc": "2026-11-02T22:33:15Z",
+      "model": "insilicomedicine/Qwen3-0.6B-Longevity@bffdda93:f547df5c8222",
+      "model_digest": null,
+      "ollama_version": null,
+      "public_sha256": "865e544bd0b6e33caeb0d911dfb837d5fcf5cb4c4e4d0592d86cda7433850ad4",
+      "split": "discovery",
+      "torch": "2.13.0",
+      "wall_seconds": 31.2
+    },
     "OCRERR_apple-vision_synform2_all_META.json": {
       "cases": null,
       "finished_utc": "2026-11-02T22:14:15Z",
@@ -5393,12 +5404,1016 @@
       }
     },
     {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.6074074074074074,
+        0.6592592592592592
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: commitment",
+      "challenger": "commitment: detection 1.000, false adm 0, coverage 0.876",
+      "claim_status": "PASS",
+      "coverage": 0.8761904761904762,
+      "delta_abs": 0.6296296296296297,
+      "experiment_id": "RT-096",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 7.754818242684634e-25,
+      "intervention": "ENABLED commitment (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 5.169878828456423e-26,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "rules",
+          "consistency"
+        ],
+        "enabled": [
+          "commitment"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.8761904761904762,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 7.754818242684634e-25,
+        "mcnemar_p": 5.169878828456423e-26,
+        "per_image_success_delta": 0.6296296296296297,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.11851851851851852,
+        0.18518518518518517
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: consistency",
+      "challenger": "consistency: detection 0.315, false adm 74, coverage 0.851",
+      "claim_status": "PASS",
+      "coverage": 0.8507936507936508,
+      "delta_abs": 0.14814814814814814,
+      "experiment_id": "RT-097",
+      "false_admission_rate_of_all": 0.07830687830687831,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 5.7220458984375e-06,
+      "intervention": "ENABLED consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 1.9073486328125e-06,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "rules",
+          "commitment"
+        ],
+        "enabled": [
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.11851851851851852,
+          0.18518518518518517
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.8507936507936508,
+        "false_admission_rate_of_all": 0.07830687830687831,
+        "holm_p": 5.7220458984375e-06,
+        "mcnemar_p": 1.9073486328125e-06,
+        "per_image_success_delta": 0.14814814814814814,
+        "planted_detection_rate": 0.3148148148148148
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.3148148148148148,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.0,
+        0.0
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity",
+      "challenger": "identity: detection 0.259, false adm 88, coverage 0.881",
+      "claim_status": "NULL",
+      "coverage": 0.8814814814814815,
+      "delta_abs": 0.0,
+      "experiment_id": "RT-098",
+      "false_admission_rate_of_all": 0.09312169312169312,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 1.0,
+      "intervention": "ENABLED identity (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 1.0,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "rules",
+          "commitment",
+          "consistency"
+        ],
+        "enabled": [
+          "identity"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "claim_status": "NULL",
+        "coverage": 0.8814814814814815,
+        "false_admission_rate_of_all": 0.09312169312169312,
+        "holm_p": 1.0,
+        "mcnemar_p": 1.0,
+        "per_image_success_delta": 0.0,
+        "planted_detection_rate": 0.25925925925925924
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.25925925925925924,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.2518518518518518,
+        0.3037037037037037
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: rules",
+      "challenger": "rules: detection 0.509, false adm 62, coverage 0.941",
+      "claim_status": "PASS",
+      "coverage": 0.9407407407407408,
+      "delta_abs": 0.2814814814814815,
+      "experiment_id": "RT-099",
+      "false_admission_rate_of_all": 0.0656084656084656,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 3.637978807091713e-11,
+      "intervention": "ENABLED rules (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 7.275957614183426e-12,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "commitment",
+          "consistency"
+        ],
+        "enabled": [
+          "rules"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.2518518518518518,
+          0.3037037037037037
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.9407407407407408,
+        "false_admission_rate_of_all": 0.0656084656084656,
+        "holm_p": 3.637978807091713e-11,
+        "mcnemar_p": 7.275957614183426e-12,
+        "per_image_success_delta": 0.2814814814814815,
+        "planted_detection_rate": 0.5092592592592593
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.5092592592592593,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.6074074074074074,
+        0.6592592592592592
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: commitment+consistency",
+      "challenger": "commitment+consistency: detection 1.000, false adm 0, coverage 0.772",
+      "claim_status": "PASS",
+      "coverage": 0.7724867724867724,
+      "delta_abs": 0.6296296296296297,
+      "experiment_id": "RT-100",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 7.754818242684634e-25,
+      "intervention": "ENABLED commitment+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 5.169878828456423e-26,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "rules"
+        ],
+        "enabled": [
+          "commitment",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7724867724867724,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 7.754818242684634e-25,
+        "mcnemar_p": 5.169878828456423e-26,
+        "per_image_success_delta": 0.6296296296296297,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.5037037037037037,
+        0.5555555555555556
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+commitment",
+      "challenger": "identity+commitment: detection 1.000, false adm 0, coverage 0.788",
+      "claim_status": "PASS",
+      "coverage": 0.7883597883597884,
+      "delta_abs": 0.5259259259259259,
+      "experiment_id": "RT-101",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 9.317362419797304e-21,
+      "intervention": "ENABLED identity+commitment (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 8.470329472543003e-22,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "rules",
+          "consistency"
+        ],
+        "enabled": [
+          "identity",
+          "commitment"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7883597883597884,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 9.317362419797304e-21,
+        "mcnemar_p": 8.470329472543003e-22,
+        "per_image_success_delta": 0.5259259259259259,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.1111111111111111,
+        0.16296296296296298
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+consistency",
+      "challenger": "identity+consistency: detection 0.426, false adm 62, coverage 0.761",
+      "claim_status": "PASS",
+      "coverage": 0.7608465608465609,
+      "delta_abs": 0.13333333333333333,
+      "experiment_id": "RT-102",
+      "false_admission_rate_of_all": 0.0656084656084656,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 1.52587890625e-05,
+      "intervention": "ENABLED identity+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 7.62939453125e-06,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "rules",
+          "commitment"
+        ],
+        "enabled": [
+          "identity",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.1111111111111111,
+          0.16296296296296298
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7608465608465609,
+        "false_admission_rate_of_all": 0.0656084656084656,
+        "holm_p": 1.52587890625e-05,
+        "mcnemar_p": 7.62939453125e-06,
+        "per_image_success_delta": 0.13333333333333333,
+        "planted_detection_rate": 0.42592592592592593
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.42592592592592593,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.2518518518518518,
+        0.3037037037037037
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+rules",
+      "challenger": "identity+rules: detection 0.639, false adm 47, coverage 0.837",
+      "claim_status": "PASS",
+      "coverage": 0.837037037037037,
+      "delta_abs": 0.2814814814814815,
+      "experiment_id": "RT-103",
+      "false_admission_rate_of_all": 0.04973544973544974,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 3.637978807091713e-11,
+      "intervention": "ENABLED identity+rules (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 7.275957614183426e-12,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "commitment",
+          "consistency"
+        ],
+        "enabled": [
+          "identity",
+          "rules"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.2518518518518518,
+          0.3037037037037037
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.837037037037037,
+        "false_admission_rate_of_all": 0.04973544973544974,
+        "holm_p": 3.637978807091713e-11,
+        "mcnemar_p": 7.275957614183426e-12,
+        "per_image_success_delta": 0.2814814814814815,
+        "planted_detection_rate": 0.6388888888888888
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.6388888888888888,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.6074074074074074,
+        0.6592592592592592
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: rules+commitment",
+      "challenger": "rules+commitment: detection 1.000, false adm 0, coverage 0.875",
+      "claim_status": "PASS",
+      "coverage": 0.8751322751322751,
+      "delta_abs": 0.6296296296296297,
+      "experiment_id": "RT-104",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 7.754818242684634e-25,
+      "intervention": "ENABLED rules+commitment (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 5.169878828456423e-26,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "consistency"
+        ],
+        "enabled": [
+          "rules",
+          "commitment"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.8751322751322751,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 7.754818242684634e-25,
+        "mcnemar_p": 5.169878828456423e-26,
+        "per_image_success_delta": 0.6296296296296297,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.31851851851851853,
+        0.3851851851851852
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: rules+consistency",
+      "challenger": "rules+consistency: detection 0.565, false adm 47, coverage 0.821",
+      "claim_status": "PASS",
+      "coverage": 0.8211640211640212,
+      "delta_abs": 0.34814814814814815,
+      "experiment_id": "RT-105",
+      "false_admission_rate_of_all": 0.04973544973544974,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 9.947598300641403e-14,
+      "intervention": "ENABLED rules+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 1.4210854715202004e-14,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity",
+          "commitment"
+        ],
+        "enabled": [
+          "rules",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.31851851851851853,
+          0.3851851851851852
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.8211640211640212,
+        "false_admission_rate_of_all": 0.04973544973544974,
+        "holm_p": 9.947598300641403e-14,
+        "mcnemar_p": 1.4210854715202004e-14,
+        "per_image_success_delta": 0.34814814814814815,
+        "planted_detection_rate": 0.5648148148148148
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.5648148148148148,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.5037037037037037,
+        0.5555555555555556
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+commitment+consistency",
+      "challenger": "identity+commitment+consistency: detection 1.000, false adm 0, coverage 0.695",
+      "claim_status": "PASS",
+      "coverage": 0.6952380952380952,
+      "delta_abs": 0.5259259259259259,
+      "experiment_id": "RT-106",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 9.317362419797304e-21,
+      "intervention": "ENABLED identity+commitment+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 8.470329472543003e-22,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "rules"
+        ],
+        "enabled": [
+          "identity",
+          "commitment",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.6952380952380952,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 9.317362419797304e-21,
+        "mcnemar_p": 8.470329472543003e-22,
+        "per_image_success_delta": 0.5259259259259259,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.5037037037037037,
+        0.5555555555555556
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+rules+commitment",
+      "challenger": "identity+rules+commitment: detection 1.000, false adm 0, coverage 0.787",
+      "claim_status": "PASS",
+      "coverage": 0.7873015873015873,
+      "delta_abs": 0.5259259259259259,
+      "experiment_id": "RT-107",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 9.317362419797304e-21,
+      "intervention": "ENABLED identity+rules+commitment (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 8.470329472543003e-22,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "consistency"
+        ],
+        "enabled": [
+          "identity",
+          "rules",
+          "commitment"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7873015873015873,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 9.317362419797304e-21,
+        "mcnemar_p": 8.470329472543003e-22,
+        "per_image_success_delta": 0.5259259259259259,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.3111111111111111,
+        0.362962962962963
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+rules+consistency",
+      "challenger": "identity+rules+consistency: detection 0.676, false adm 35, coverage 0.731",
+      "claim_status": "PASS",
+      "coverage": 0.7312169312169312,
+      "delta_abs": 0.3333333333333333,
+      "experiment_id": "RT-108",
+      "false_admission_rate_of_all": 0.037037037037037035,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 3.410605131648481e-13,
+      "intervention": "ENABLED identity+rules+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 5.684341886080802e-14,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "commitment"
+        ],
+        "enabled": [
+          "identity",
+          "rules",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.3111111111111111,
+          0.362962962962963
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7312169312169312,
+        "false_admission_rate_of_all": 0.037037037037037035,
+        "holm_p": 3.410605131648481e-13,
+        "mcnemar_p": 5.684341886080802e-14,
+        "per_image_success_delta": 0.3333333333333333,
+        "planted_detection_rate": 0.6759259259259259
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 0.6759259259259259,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.6074074074074074,
+        0.6592592592592592
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: rules+commitment+consistency",
+      "challenger": "rules+commitment+consistency: detection 1.000, false adm 0, coverage 0.771",
+      "claim_status": "PASS",
+      "coverage": 0.7714285714285715,
+      "delta_abs": 0.6296296296296297,
+      "experiment_id": "RT-109",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 7.754818242684634e-25,
+      "intervention": "ENABLED rules+commitment+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 5.169878828456423e-26,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [
+          "identity"
+        ],
+        "enabled": [
+          "rules",
+          "commitment",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.7714285714285715,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 7.754818242684634e-25,
+        "mcnemar_p": 5.169878828456423e-26,
+        "per_image_success_delta": 0.6296296296296297,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
+      "baseline": "no gate: detection 0.130, false adm 103",
+      "bootstrap_ci95": [
+        0.5037037037037037,
+        0.5555555555555556
+      ],
+      "candidate_leaf_or_edge": "form FCO leaf mechanisms: identity+rules+commitment+consistency",
+      "challenger": "identity+rules+commitment+consistency: detection 1.000, false adm 0, coverage 0.694",
+      "claim_status": "PASS",
+      "coverage": 0.6941798941798942,
+      "delta_abs": 0.5259259259259259,
+      "experiment_id": "RT-110",
+      "false_admission_rate_of_all": 0.0,
+      "frozen_case_ids_sha256": "SYNFORM2ERR-790a7dc6f9641fa6",
+      "holm_p": 9.317362419797304e-21,
+      "intervention": "ENABLED identity+rules+commitment+consistency (others disabled)",
+      "kind": "GATE_FACTORIAL",
+      "lane": "L2",
+      "mcnemar_p": 8.470329472543003e-22,
+      "mechanism": {
+        "changed": "MECHANISM_ONLY",
+        "disabled": [],
+        "enabled": [
+          "identity",
+          "rules",
+          "commitment",
+          "consistency"
+        ]
+      },
+      "n": 135,
+      "outcome": {
+        "bootstrap_ci95": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "claim_status": "PASS",
+        "coverage": 0.6941798941798942,
+        "false_admission_rate_of_all": 0.0,
+        "holm_p": 9.317362419797304e-21,
+        "mcnemar_p": 8.470329472543003e-22,
+        "per_image_success_delta": 0.5259259259259259,
+        "planted_detection_rate": 1.0
+      },
+      "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "planted_detection_rate": 1.0,
+      "signature": "NOT_SIGNED",
+      "split": "synform2_err",
+      "successor_root": "NOT_COMPUTED_UNTIL_FREEZE",
+      "weights": {
+        "baseline": {
+          "challenger_extractor": {
+            "digest": "Vision.framework (macOS build in META)",
+            "name": "Apple Vision OCR"
+          },
+          "primary": {
+            "adapter": "none",
+            "digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1",
+            "name": "qwen2.5vl:3b"
+          }
+        },
+        "challenger": "same weights"
+      }
+    },
+    {
       "baseline": "n/a",
       "bootstrap_ci95": "NOT_COMPUTED",
       "candidate_leaf_or_edge": "Fireworks serverless model",
       "challenger": "n/a",
       "claim_status": "BLOCKED_NO_CREDENTIAL",
-      "experiment_id": "RT-096",
+      "experiment_id": "RT-111",
       "frozen_case_ids_sha256": "n/a",
       "intervention": "NOT_EXECUTED",
       "kind": "MODEL_LANE",
@@ -5433,7 +6448,7 @@
       "candidate_leaf_or_edge": "Fireworks + Antigence MCP",
       "challenger": "n/a",
       "claim_status": "BLOCKED_NO_CREDENTIAL",
-      "experiment_id": "RT-097",
+      "experiment_id": "RT-112",
       "frozen_case_ids_sha256": "n/a",
       "intervention": "NOT_EXECUTED",
       "kind": "HARNESS",
@@ -5467,7 +6482,7 @@
       "candidate_leaf_or_edge": "receipts/megatron_git_head.txt (leaf 5)",
       "challenger": "n/a",
       "claim_status": "NOT_TESTED",
-      "experiment_id": "RT-098",
+      "experiment_id": "RT-113",
       "frozen_case_ids_sha256": "n/a",
       "intervention": "NOT_EXECUTED",
       "kind": "TRAINING",
@@ -5502,7 +6517,7 @@
       "candidate_leaf_or_edge": "evidence/sources/supabase_source_intake.json",
       "challenger": "n/a",
       "claim_status": "NOT_OBSERVED",
-      "experiment_id": "RT-099",
+      "experiment_id": "RT-114",
       "frozen_case_ids_sha256": "n/a",
       "intervention": "NOT_OBSERVED",
       "kind": "SOURCE",
