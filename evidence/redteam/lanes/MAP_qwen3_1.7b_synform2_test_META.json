@@ -1,0 +1,18 @@
+{
+  "dataset": "SYNFORM2-aa447934df526734",
+  "finished_utc": "2026-11-02T23:07:23Z",
+  "form_root": "aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e",
+  "host": "magicSTUDIObox.local",
+  "images": 46,
+  "model": "qwen3:1.7b",
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "ollama_version": "0.33.0",
+  "public_sha256": "3de1696f4fab7e1cd95c97a7907809f9532e85ef7a66aeb7e86e095a1d0f6776",
+  "python": "3.12.13",
+  "schema": "redteam.mapper_lane_run.v1",
+  "stage1": "Apple Vision OCR lines from OCR_apple-vision_synform2_test_LOCAL.jsonl",
+  "started_utc": "2026-11-02T23:05:03Z",
+  "think_off": true,
+  "values_exported": "YES_SYNTHETIC_OWNER_AUTHORISED",
+  "wall_seconds": 140.0
+}

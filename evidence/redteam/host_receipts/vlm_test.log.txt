@@ -1,0 +1,6 @@
+VLM 1 46 65997ab7 clean correct 7 /7 admitted 7 false_adm 0
+VLM 2 46 65997ab7 scan correct 7 /7 admitted 7 false_adm 0
+VLM 3 46 a40a00dd clean correct 7 /7 admitted 7 false_adm 0
+VLM 4 46 a40a00dd scan correct 7 /7 admitted 7 false_adm 0
+VLM 5 46 1668520e clean correct 7 /7 admitted 7 false_adm 0
+VLM 6 46 1668520e scan correct 7 /7 admitted 7 false_adm 0
