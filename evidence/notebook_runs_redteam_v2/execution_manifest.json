@@ -1,0 +1,29 @@
+{
+  "append_only": true,
+  "executed_utc": "2026-11-02T21:50:09Z",
+  "host": "vm",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS_REPLAYED_FROM_RECEIPTS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "10_redteam_independent_replay.ipynb",
+      "receipt_sha256": "e9b6e011b7a523be33d5856907418134197cde4f8eadb90559a3f10eeb6f443a",
+      "source_sha256": "8941d01d1f182212d36baac15749b4563efc8d4f46c654e32a610115ddfc050a"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "13_redteam_integrity_attacks.ipynb",
+      "receipt_sha256": "b7a159042f43a209ae558b2e1c07bab89508ae13011a515ff7581a779dbcd7af",
+      "source_sha256": "aca6200ecc3e3da7f1b698b4b4f4ac96536256f76e004349be44380730341de4"
+    }
+  ],
+  "outputs_sha256": {
+    "exp010_replay.json": "472982b36a74e22c644d823bd4f675c8d2246b44e3a8b2e0738222667e304035",
+    "exp013_attacks.json": "b37bf03c069443f65e44072a060aba9b5b9fd1cc577169d0068ca61efdcf8d0a"
+  },
+  "python": "3.13.18",
+  "run_dir": "notebook_runs_redteam_v2",
+  "schema": "notebook.execution.v2"
+}

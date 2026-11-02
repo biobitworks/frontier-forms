@@ -1,0 +1,205 @@
+{
+  "finished_utc": "2026-11-02T21:30:42Z",
+  "host": "magicSTUDIObox.local",
+  "meaning": "INTEGRITY_ONLY_NOT_TRUTH",
+  "mmr": "NOT_COMPUTED",
+  "pairs_38": {
+    "baseline_unparsed_outputs": 0,
+    "challenger_unparsed_outputs": 0,
+    "eval_gold_matches_private_oracle": true,
+    "eval_keys_identical": true,
+    "eval_status_all_executed": true,
+    "gold_agrees_between_eval_files": true,
+    "pair_flags_match_recomputed": true,
+    "pairs": 38,
+    "pairs_in_discovery_partition": 38,
+    "pairs_resolve_to_public_input": 38,
+    "pairs_task_matches_input": 38,
+    "partition_sizes": {
+      "LB-0307": {
+        "discovery": 10,
+        "heldout": 10,
+        "reserve": 25
+      },
+      "LB-0309": {
+        "discovery": 10,
+        "heldout": 10,
+        "reserve": 25
+      },
+      "LB-0314": {
+        "discovery": 10,
+        "heldout": 10,
+        "reserve": 25
+      },
+      "LB-0315": {
+        "discovery": 8,
+        "heldout": 9,
+        "reserve": 9
+      }
+    },
+    "recomputed_correct_matches_stored_flag": true,
+    "recomputed_mcnemar_exact_two_sided_p": 0.6875,
+    "recomputed_table": {
+      "baseline_correct": 25,
+      "baseline_only": 2,
+      "challenger_correct": 27,
+      "challenger_only": 4,
+      "n": 38
+    },
+    "split_keys_assigned_once": true,
+    "split_keys_resolve_to_public_input": 161,
+    "split_keys_task_matches_input": 161,
+    "split_keys_total": 161,
+    "split_manifest_sha256_match": true
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "project_15": {
+    "all_source_bytes_match": true,
+    "context_leaf_sha_match": true,
+    "edges_leaf_sha_match": true,
+    "leaf_count": 15,
+    "leaf_order_match": true,
+    "local_leaves_sha256": "db071f22bfd829dd2c2d1aaa15a117898dc9f95008652f40eacd12895a87e426",
+    "local_manifest_sha256": "c40c3501c3fa4791eb7c162678c814c1ee39cf909b4d343279a98cd5f6b57b13",
+    "manifest_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "negative_controls": {
+      "corrupt_leaf_changes_root": true,
+      "duplicate_last_leaf_appended_same_root": true
+    },
+    "parent_root_declared": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "parent_root_matches_728": true,
+    "recomputed_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "rehash_seconds": 1.938,
+    "root_match_expected": true,
+    "root_match_manifest": true,
+    "source_files": [
+      {
+        "path": "datasets/longebench/mini/eval-00000-of-00001.parquet",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "datasets/longebench/benchmark/eval-00000-of-00001.parquet",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "datasets/synthea_100_csv/synthea_sample_data_csv_latest.zip",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "models/Qwen3-0.6B-Longevity/model.safetensors",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "receipts/megatron_git_head.txt",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "custody/snapshots/LN-MINI-ec719d04c3707ca1cb/manifest.json",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "eval/longebench_split_manifest.json",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "eval/lb_mini_discovery_lfm2-1.2b-longevity-q4km_latest.jsonl",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "eval/insilico_qwen3_06b_discovery_attempt3.jsonl",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "eval/paired_discovery_mcnemar_bootstrap.json",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "eval/mcnemar_bootstrap.py",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "tests/test_paired_stats.py",
+        "sha_match": true,
+        "size_match": true
+      },
+      {
+        "path": "contracts/VALIDATION_PROTOCOL.md",
+        "sha_match": true,
+        "size_match": true
+      }
+    ]
+  },
+  "python": "3.12.13",
+  "schema": "redteam.independent_replay.v1",
+  "signature": "NOT_SIGNED",
+  "snapshot_728": {
+    "answer_like_keys_in_public_inputs": 0,
+    "assistant_role_in_public_inputs": 0,
+    "edges": 728,
+    "edges_consistent": true,
+    "gold_visibility_flag_all_prohibited": true,
+    "inclusion_proof_failures": 0,
+    "input_fco_id_mismatches": 0,
+    "inputs": 728,
+    "leaf_hash_mismatches": 0,
+    "manifest_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "negative_controls": {
+      "corrupt_leaf_breaks_its_proof": true,
+      "corrupt_leaf_changes_root": true,
+      "duplicate_last_leaf_appended_same_root": true,
+      "leaf_prefix_swap_changes_root": true,
+      "manifest_binds_leaf_count": true,
+      "node_prefix_swap_changes_root": true,
+      "remove_leaf_changes_root": true,
+      "reorder_changes_root": true,
+      "zero_pad_instead_of_dup_changes_root": true
+    },
+    "proof_index_mismatches": 0,
+    "proofs": 728,
+    "public_input_roles": {
+      "system": 728,
+      "user": 728
+    },
+    "recomputed_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "root_match_expected": true,
+    "root_match_manifest": true,
+    "source_fco_id_match": true,
+    "source_fco_raw_sha_match_manifest": true
+  },
+  "source_path": "REDACTED",
+  "split_regeneration": {
+    "byte_identical_to_frozen_manifest": true,
+    "deterministic_rule": "sorted by key; discovery=first min(10,n//3); heldout next; reserve rest",
+    "regenerated_sha256": "46c48f08add45a2bc5941fba2ddca682e0ac136d718232aafa5c011438f92007",
+    "rows_in_parquet": 728,
+    "status": "EXECUTED",
+    "structural_match": true,
+    "task_rows": {
+      "LB-0307": 45,
+      "LB-0309": 45,
+      "LB-0314": 45,
+      "LB-0315": 26
+    }
+  },
+  "started_utc": "2026-11-02T21:30:40Z",
+  "status": {
+    "duplicate_last_leaf_collision_present": true,
+    "oracle_isolation_public_inputs": "PASS",
+    "pair_binding_38": "PASS",
+    "root_15": "PASS",
+    "root_728": "PASS",
+    "split_regeneration": "PASS"
+  },
+  "verifier": "claude-redteam independent reimplementation"
+}

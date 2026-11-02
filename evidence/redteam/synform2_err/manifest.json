@@ -1,0 +1,30 @@
+{
+  "MMR": "NOT_COMPUTED",
+  "built_utc": "2026-11-02T22:13:52Z",
+  "cases": 23,
+  "dataset": "SYNFORM2ERR-790a7dc6f9641fa6",
+  "images": 230,
+  "leaf_count": 231,
+  "parent_project_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+  "parent_synform2_root": "aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e",
+  "private_planted_sha256": "26cf593406eaa039cece67d890d770ced3ad7543b1bdfd40ec2cd8b55444f2b7",
+  "public_export_of_planted_key": "NOT_AUTHORIZED",
+  "public_input_listing_sha256": "5b73e7cfcab58523116505e6f56c744b22a0230224c8c088c8c30986359b26c2",
+  "render_seconds": 5.2,
+  "root": "790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944",
+  "schema": "asi.forms.merkle.v2",
+  "scheme": "sha256(00||canonical_json); sha256(01||left||right); odd_duplicate; leaf0_binds_count",
+  "signed": "NOT_SIGNED",
+  "variants": [
+    "clean",
+    "E1_enc_before_birth",
+    "E2_invalid_gender",
+    "E3_case_id_swap",
+    "E4_missing_field",
+    "E5_bad_date_format",
+    "E6_name_swap",
+    "E7_digit_flip",
+    "V1_scan_sigma9",
+    "V2_scan_sigma25"
+  ]
+}
