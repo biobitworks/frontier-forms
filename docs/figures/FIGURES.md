@@ -24,6 +24,7 @@ These are the synthetic form renders the models read. They are stimuli, not char
 
 | Folder | Title | Caption | Source PR |
 |---|---|---|---|
+| [`bench/charts/`](../../bench/charts) | Teammate bench charts: Pi browser-tools vs Frontier Forms tools | model_speed.png/svg: per-model median completion time, same hosted model in both arms (lower is better). baseline_vs_improved and time_by_form: the original DeepSeek V4.1 Flash pilot. Small pilot (2 synthetic patients x 3 forms), no held-out set or statistics; numbers in LIVE_RESULTS.md. Fireworks-hosted models. | bench lane (teammate, main) |
 | [`data/forms_vision_v1/`](../../data/forms_vision_v1) | Rendered synthetic form images with gold DOM boxes | 57 PNG renders (3 blank templates + 54 filled held-out test forms) of the three Frontier Forms templates, filled from MITRE Synthea patients. GOLD_BOXES.json holds the browser DOM box of every field. Input to V1 qwen2.5vl, T1 Tesseract and the box validators. | #10 #19 |
 | [`data/forms_vision_inject_v1/`](../../data/forms_vision_inject_v1) | Paired clean / prompt-injected form images | 18 clean and 18 injected renders of the same forms; the injected copy carries an instruction-like note. Used by V1i (qwen2.5vl followed it 0/18). | #10 #29 |
 | [`redteam/ehr/data/forms/`](../../redteam/ehr/data/forms) | SYNFORM2 synthetic forms with planted-error twins | Red-team form renders; *.inj.png is the planted-error or injected twin of the clean image. Input to the admission-gate factorial and the Qwen mapper lanes. | #11 #20 #23 |

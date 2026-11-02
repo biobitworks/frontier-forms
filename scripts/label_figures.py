@@ -62,6 +62,9 @@ SVG = ("docs/architecture/gate_factorial_heatmap.svg",
        "Source: evidence/redteam/gate_factorial.json, PRs #20/#21. Discovery grade: replication NOT_TESTED.")
 
 IMAGE_SETS = [
+    ("bench/charts", "Teammate bench charts: Pi browser-tools vs Frontier Forms tools",
+     "model_speed.png/svg: per-model median completion time, same hosted model in both arms (lower is better). baseline_vs_improved and time_by_form: the original DeepSeek V4.1 Flash pilot. "
+     "Small pilot (2 synthetic patients x 3 forms), no held-out set or statistics; numbers in LIVE_RESULTS.md. Fireworks-hosted models.", "bench lane (teammate, main)"),
     ("data/forms_vision_v1", "Rendered synthetic form images with gold DOM boxes",
      "57 PNG renders (3 blank templates + 54 filled held-out test forms) of the three Frontier Forms templates, filled from MITRE Synthea patients. "
      "GOLD_BOXES.json holds the browser DOM box of every field. Input to V1 qwen2.5vl, T1 Tesseract and the box validators.", "#10 #19"),

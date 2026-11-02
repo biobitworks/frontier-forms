@@ -1,8 +1,8 @@
 {
  "schema": "frontier_forms.accomplishment_heatmap.v1",
- "as_of_utc": "2026-11-02T23:45:00Z",
- "main_commit": "908b6aa",
- "claim_ceiling": "Synthetic MITRE Synthea data only; local inference only; no clinical claim. Re-plots committed results; nothing new was run.",
+ "as_of_utc": "2026-11-02T23:55:00Z",
+ "main_commit": "e422def",
+ "claim_ceiling": "Synthetic MITRE Synthea data only; research lanes use local inference, the teammate bench lane (panel F) uses Fireworks-hosted models; no clinical claim. Re-plots committed results; nothing new was run.",
  "stages": [
   "Data frozen",
   "Implemented",
@@ -686,8 +686,282 @@
     }
    ],
    "note": "Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08)."
+  },
+  {
+   "title": "Teammate bench: same hosted model, Pi browser-tools vs Frontier Forms tools (pilot)",
+   "source": "bench/charts/LIVE_RESULTS.md and live_metrics.json at main@e422def (teammate lane, Fireworks-hosted models)",
+   "columns": [
+    "Fields correct, Pi",
+    "Fields correct, our tools",
+    "Time saved (1 - tools/Pi median)",
+    "Cost saved (1 - tools/Pi mean)"
+   ],
+   "lower_better": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "rows": [
+    {
+     "label": "DeepSeek V4.1 Flash [6/6 matched]",
+     "values": [
+      0.9835,
+      0.9835,
+      0.8174,
+      0.7993
+     ],
+     "grade": "partial"
+    },
+    {
+     "label": "GLM 5.3 [5/6 matched]",
+     "values": [
+      0.9714,
+      0.9619,
+      0.8601,
+      0.8616
+     ],
+     "grade": "partial"
+    },
+    {
+     "label": "Qwen Max [2/6 matched]",
+     "values": [
+      0.9697,
+      1.0,
+      0.7863,
+      0.8123
+     ],
+     "grade": "partial"
+    },
+    {
+     "label": "GPT-OSS 120B [2/6 matched]",
+     "values": [
+      0.2069,
+      1.0,
+      0.4167,
+      0.1818
+     ],
+     "grade": "partial"
+    }
+   ],
+   "note": "3 forms x 2 synthetic patients x 2 arms per model, temperature 0, one run per case, concurrency raised mid-run. No held-out set, no repetitions, no CI. Live numbers may change as runs finish."
   }
  ],
+ "ledger": [
+  {
+   "claim": "FCG harness L1+L3 on forms",
+   "result": "0.333 -> 0.556 (30/54), 12/0 discordant, p=0.00049, Holm p=0.0059, cluster CI [0.07, 0.37]",
+   "verdict": "discovery",
+   "source": "#10 #17 #18 #48"
+  },
+  {
+   "claim": "Single module L1, L2 or L3 added to B0",
+   "result": "0 change in form success on test (p=1.0 each)",
+   "verdict": "null",
+   "source": "#10"
+  },
+  {
+   "claim": "L2 unit validation in LOMO",
+   "result": "removing L2 changes nothing (delta 0)",
+   "verdict": "null",
+   "source": "#10"
+  },
+  {
+   "claim": "M3 source binding (injected errors)",
+   "result": "recall 0.989; LOMO removing M3 loses 0.563, p=2.5e-119; costs 4% false flags",
+   "verdict": "admitted",
+   "source": "#10"
+  },
+  {
+   "claim": "M1 Merkle breakpoint, M2 Lean 4",
+   "result": "single gains 0.16 / 0.27, but 0 unique contribution once M3 is present",
+   "verdict": "null",
+   "source": "#10"
+  },
+  {
+   "claim": "Per-field commitment gate (SYNFORM2-ERR)",
+   "result": "detection 0.13 -> 1.00, 0 false admissions; coverage falls 0.985 -> 0.876",
+   "verdict": "discovery",
+   "source": "#20 #21"
+  },
+  {
+   "claim": "Fault-injection factorial, 16 arms",
+   "result": "full modules repair 100% by construction; not a model gain",
+   "verdict": "discovery",
+   "source": "#12"
+  },
+  {
+   "claim": "Frontier Forms tools vs Pi browser-tools (hosted models)",
+   "result": "DeepSeek V4.1 Flash 92.0 -> 16.8 s median, fields 119/121 both; 4 models, small pilot, no held-out",
+   "verdict": "partial",
+   "source": "bench (#56 lane)"
+  },
+  {
+   "claim": "Same, GPT-OSS 120B",
+   "result": "fields 12/58 -> 58/58 on 2 matched cases",
+   "verdict": "partial",
+   "source": "bench"
+  },
+  {
+   "claim": "Same, GLM 5.3",
+   "result": "fields 102/105 -> 101/105 (one field worse) while 7x faster",
+   "verdict": "partial",
+   "source": "bench"
+  },
+  {
+   "claim": "Qwen text mappers vs deterministic parser",
+   "result": "qwen2.5:1.5b 209/322, qwen3:1.7b 109/322 vs parser 283/322",
+   "verdict": "negative",
+   "source": "#23"
+  },
+  {
+   "claim": "Trained logistic box validator",
+   "result": "540/540 = contour control 540/540; gain 0, p=1",
+   "verdict": "negative",
+   "source": "#14"
+  },
+  {
+   "claim": "Random Forest box-validator factorial",
+   "result": "F1 0.973-0.979 vs control 1.000 at 10/30/63 patients",
+   "verdict": "negative",
+   "source": "#15"
+  },
+  {
+   "claim": "D1 tiny segmentation detector",
+   "result": "recall 0.131, precision 0.099, F1 0.113",
+   "verdict": "failed",
+   "source": "#16"
+  },
+  {
+   "claim": "D2 candidate classifier",
+   "result": "recall 0.956, precision 0.656, 180 false boxes; same layouts only",
+   "verdict": "partial",
+   "source": "#16"
+  },
+  {
+   "claim": "Apple A2 OCR read-back of filled PDFs",
+   "result": "field acc 0.856 -> 0.802; dropdowns vanish, long lists cut; p=0.5",
+   "verdict": "negative",
+   "source": "#10"
+  },
+  {
+   "claim": "OCR on boxed overlay images",
+   "result": "Apple OCR 58/70 clean vs 0/70 with boxes drawn",
+   "verdict": "negative",
+   "source": "#51"
+  },
+  {
+   "claim": "Prompt injection, qwen3 with retrieved context",
+   "result": "attacker succeeds on 6/17 to 9/24 eligible cases",
+   "verdict": "failed",
+   "source": "#11"
+  },
+  {
+   "claim": "Prompt injection, qwen2.5vl on form images",
+   "result": "followed the injected note 0/18",
+   "verdict": "partial",
+   "source": "#29 (open)"
+  },
+  {
+   "claim": "Prompt injection, Tesseract",
+   "result": "copies the injected note as text in 19/57 images",
+   "verdict": "failed",
+   "source": "#19"
+  },
+  {
+   "claim": "FCG context in the prompt (LongevityBench)",
+   "result": "L0 25 -> 28/38 discovery (p=0.55); held-out 25/39 vs 25/39",
+   "verdict": "null",
+   "source": "#11"
+  },
+  {
+   "claim": "FCG context, Insilico Qwen3-0.6B (MPS)",
+   "result": "25 -> 24/38 and 22 -> 19/39",
+   "verdict": "negative",
+   "source": "#11"
+  },
+  {
+   "claim": "Insilico P-L3c CPU rerun",
+   "result": "stopped by Byron at 139/693; CPU matches MPS 38/38; C1/C2 negative",
+   "verdict": "partial",
+   "source": "#13"
+  },
+  {
+   "claim": "Liquid 1.2B vs Insilico 0.6B",
+   "result": "25/38 vs 27/38, p=0.6875",
+   "verdict": "null",
+   "source": "#1 #3"
+  },
+  {
+   "claim": "Historic Insilico score on a second stack",
+   "result": "27/38 became 25/38",
+   "verdict": "failed",
+   "source": "#11"
+  },
+  {
+   "claim": "qwen3:1.7b / qwen2.5vl on LongevityBench",
+   "result": "3/38 and similar: format failures",
+   "verdict": "negative",
+   "source": "#20"
+  },
+  {
+   "claim": "Custody attacks (red team)",
+   "result": "7 weaknesses reproduced: duplicate-last-leaf collision, uncommitted parent pointers, no edge integrity, under-reporting impact view, duplicate-key parse, phantom-index proof, oracle leak via prompt hashes",
+   "verdict": "failed",
+   "source": "#11 #20"
+  },
+  {
+   "claim": "Forged VERIFIED custody state",
+   "result": "accepted before the fix; now rejected",
+   "verdict": "admitted",
+   "source": "#8"
+  },
+  {
+   "claim": "Review verifier read the working tree (F-02)",
+   "result": "fixed by pinning to historical commits",
+   "verdict": "admitted",
+   "source": "#20"
+  },
+  {
+   "claim": "JSON-only gate, first scanner",
+   "result": "falsely returned PASS; fixed in 3c4c111",
+   "verdict": "failed",
+   "source": "#16"
+  },
+  {
+   "claim": "Trained model M1 SFT",
+   "result": "one epoch-0 val loss 1.005, no adapter saved; no gain admitted",
+   "verdict": "not_tested",
+   "source": "#18 T08"
+  },
+  {
+   "claim": "V2 YOLOv8n + OCR value validator",
+   "result": "pipeline merged, no result yet",
+   "verdict": "not_tested",
+   "source": "#19 T09"
+  },
+  {
+   "claim": "Fresh replication cohort",
+   "result": "not run",
+   "verdict": "not_tested",
+   "source": "T01"
+  },
+  {
+   "claim": "Named frontier-model baseline on the 54 test forms",
+   "result": "not run",
+   "verdict": "not_tested",
+   "source": "#56"
+  }
+ ],
+ "verdicts": {
+  "admitted": "Admitted / promoted (evidence or a verified fix)",
+  "discovery": "Positive, discovery grade (not promoted)",
+  "partial": "Partial or pilot",
+  "null": "Null: no detectable difference",
+  "negative": "Negative: worse than or equal to control",
+  "failed": "Failed or attack succeeded",
+  "not_tested": "Not tested yet"
+ },
  "grades": {
   "evidence": "Evidence grade: preregistered or independent run, synthetic data",
   "discovery": "Discovery grade: designed after seeing the test data; needs replication",
@@ -695,6 +969,7 @@
   "negative": "Negative: no gain over control",
   "exploratory": "Exploratory: designed after a failure, same layouts",
   "running": "Running / not yet scored",
-  "todo": "Not run"
+  "todo": "Not run",
+  "partial": "Pilot or partial: small n, no held-out set or no statistics"
  }
 }
