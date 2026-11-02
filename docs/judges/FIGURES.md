@@ -92,9 +92,49 @@ Heavier noise and rotation with no planted error; tests whether extraction stays
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_V2_scan_sigma25.png`
 
-## Figure 12 — Drawing boxes on an image breaks OCR
+## Figure 12 — Form filled by qwen2.5vl:3b
 
-![Figure 12](figures/fig12_boxes_break_ocr.png)
+![Figure 12](figures/fig12_filled_qwen2.5vl_3b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen2.5vl:3b (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5vl_3b__boxes.png`
+
+## Figure 13 — Form filled by Apple Vision OCR + rule parser
+
+![Figure 13](figures/fig13_filled_apple_vision_parser.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of Apple Vision OCR + rule parser (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__apple_vision_parser__boxes.png`
+
+## Figure 14 — Form filled by qwen2.5:1.5b mapper
+
+![Figure 14](figures/fig14_filled_qwen2.5_1.5b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen2.5:1.5b mapper (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5_1.5b__boxes.png`
+
+## Figure 15 — Form filled by qwen3:1.7b mapper
+
+![Figure 15](figures/fig15_filled_qwen3_1.7b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen3:1.7b mapper (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen3_1.7b__boxes.png`
+
+## Figure 16 — Same filled form without bounding boxes
+
+![Figure 16](figures/fig16_filled_noboxes.png)
+
+The viewer with overlays switched off, as a reviewer would see the plain scan next to the filled form.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5vl_3b__noboxes.png`
+
+## Figure 17 — Drawing boxes on an image breaks OCR
+
+![Figure 17](figures/fig17_boxes_break_ocr.png)
 
 Same 10 forms, same OCR engine and parser; the only change is the drawn bounding boxes. Lesson: run OCR on the clean render and keep overlays for humans.
 
@@ -102,8 +142,4 @@ Same 10 forms, same OCR engine and parser; the only change is the drawn bounding
 
 ## Not included (input missing at build time)
 
-- models/qwen2.5vl_3b
-- models/apple_vision_parser
-- models/qwen2.5_1.5b
-- models/qwen3_1.7b
 - preview captures
