@@ -21,3 +21,4 @@ private/
 *.db
 *.log
 .DS_Store
+.env.local

@@ -1,0 +1,59 @@
+{
+  "claims": "OFFLINE_PROTOCOL_AND_REPLAY_ONLY",
+  "clinician_assessment": "NOT_TESTED",
+  "execution_environment": "LOCAL_PYTHON3.12_IPYKERNEL",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "00_fco_merkle_replay.ipynb",
+      "receipt_sha256": "b29158db29d640d0d9fae232b0e93b27d7eb3d23c8d6760dc6a88ff7f7d83a0f"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "01_paired_mcnemar_bootstrap.ipynb",
+      "receipt_sha256": "38058b1966a1bdd72f4b3de392d689fc35ca500e613744c84d448c5993e94393"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "02_classification_auroc_fpr_fdr.ipynb",
+      "receipt_sha256": "51a95775ee78e028b1990a4e245e186d12e61a69e1c61239061089026792fe51"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "03_lomo_harness_ablation.ipynb",
+      "receipt_sha256": "c1ec2b21c7e734af5c315a3c4037d2115610d3ba9f3cea1d753da427f040e3dd"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "04_synthea_to_fhir_contract.ipynb",
+      "receipt_sha256": "a592d2297a01424bf78723924c3d103457a955172304372213009e1e06f6fc1c"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "05_fireworks_pricing_roi.ipynb",
+      "receipt_sha256": "0f621736b26335942f5065a6b6202c0db524fa5fdbdaa6f5633caba470a46a8a"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "06_lean_gsd_gsigmad_admission.ipynb",
+      "receipt_sha256": "feff2e63bde012d5f5c6fe7b22bf98530cd313876d37abbb0f0e2cfd66924a12"
+    },
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "07_supabase_source_gate.ipynb",
+      "receipt_sha256": "d6398650f93ee92b60857661d2cc53ccbc635dcdafbe98794dd0b833774a30da"
+    }
+  ],
+  "predecessor_run": "evidence/notebook_runs_v4",
+  "receipt_directory": "evidence/notebook_runs/RUN-20261102T212410Z-d716f689fd62",
+  "schema": "notebook.execution.v1"
+}
