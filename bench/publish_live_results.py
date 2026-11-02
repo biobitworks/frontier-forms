@@ -26,7 +26,7 @@ cases={c:f'case-{i+1:02}' for i,c in enumerate(sorted({(r['form'],r['patient']) 
 rows=[]
 for r,digest in raw:
  row={k:r.get(k) for k in METRICS};row.update(case=cases[(r['form'],r['patient'])],local_receipt_sha256=digest);rows.append(row)
-payload={'classification':'SYNTHETIC_AGGREGATE_METRICS_ONLY','expected_runs_per_model':12,'models':MODELS,'runs':rows}
+payload={'schema_version':2,'classification':'SYNTHETIC_AGGREGATE_METRICS_ONLY','expected_runs_per_model':12,'models':MODELS,'runs':rows}
 serialized=json.dumps(payload,indent=2,sort_keys=True)+'\n'
 p=OUT/'live_metrics.json'
 if p.exists() and p.read_text()==serialized:
@@ -35,7 +35,7 @@ p.write_text(serialized)
 plt.rcParams.update({'svg.hashsalt':'frontier-live','font.family':'DejaVu Sans','font.size':11})
 fig,axes=plt.subplots(4,1,figsize=(11,12));fig.subplots_adjust(left=.34,right=.88,top=.87,bottom=.09,hspace=.9)
 fig.suptitle('Real Pi baseline vs our tooling — by model',x=.035,y=.98,ha='left',fontsize=20,fontweight='bold')
-fig.text(.035,.93,'Same synthetic medical cases per model • median completion time • lower is better',color='#475569')
+fig.text(.035,.93,'Same synthetic medical cases per model • median runtime • read field scores alongside speed',color='#475569')
 lines=['# Live model benchmark results','','Real Pi + browser-tools versus the same model with Frontier Forms tools. Updated whenever a local run finishes. Only matched cases enter comparison bars; unfinished and failed cases remain visible below.','',
 '![Model speed comparisons](model_speed.png)','','| Model | Runs saved | Matched cases | Median Pi → tools | Correct fields Pi → tools | Mean estimated API cost Pi → tools | Failures Pi / tools |','|---|---:|---:|---|---|---|---|']
 for ax,model in zip(axes,MODELS):
@@ -65,7 +65,7 @@ fig.text(.035,.025,'Development pilot: one run per case/arm. Partial comparisons
 fig.savefig(OUT/'model_speed.png',dpi=170,bbox_inches='tight')
 svg=OUT/'model_speed.svg';fig.savefig(svg,bbox_inches='tight',metadata={'Date':None});svg.write_text('\n'.join(l.rstrip() for l in svg.read_text().splitlines())+'\n');plt.close(fig)
 lines+=['','## Conditions and limitations','','Three form types × two synthetic patients × two arms per model. Same hosted model ID per comparison, temperature zero and low reasoning effort. Shuffled cases; the first portion used three concurrent jobs, then the queue was increased to twelve for the submission deadline. This concurrency change can affect measured latency and is not a controlled speed comparison across models. Within-model bars use the exact same matched cases.','',
-'No held-out validation, repetitions, statistical confidence or clinical superiority is established. A partial result can change as more cases finish. If an arm fails or times out, its elapsed time must not be described as successful completion speed. Original DeepSeek [full pilot details](README.md) and [tooling explanation](TOOLING_WRITEUP.md).','',
+'Runtime is time until the agent stops, not proof of successful form completion. GPT-OSS stopped quickly but its Pi baseline scored only 19/121 fields; do not present that baseline as successful fast completion. GLM tooling scored 115/121 versus 118/121 for Pi, so its speed gain has a quality tradeoff. No held-out validation, repetitions, statistical confidence or clinical superiority is established. A partial result can change as more cases finish. If an arm fails or times out, its elapsed time must not be described as successful completion speed. Original DeepSeek [full pilot details](README.md) and [tooling explanation](TOOLING_WRITEUP.md).','',
 '[All sanitized run metrics](live_metrics.json) include completed single-arm cases before their counterpart finishes. Patient records, predictions, raw logs, failure messages and answer keys remain local. Receipt hashes identify the local artifacts.','']
 (OUT/'LIVE_RESULTS.md').write_text('\n'.join(lines))
 print('UPDATED',len(rows),'runs')
