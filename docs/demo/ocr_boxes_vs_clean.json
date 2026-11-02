@@ -1,0 +1,368 @@
+{
+ "boxes_fields_correct": 0,
+ "clean_fields_correct": 58,
+ "engine": "Apple Vision .accurate",
+ "fields_total": 70,
+ "images": 10,
+ "rows": {
+  "synform2-ce08cff8d07665997ab7_E3_case_id_swap": {
+   "clean": {
+    "correct_count": 5,
+    "fields": {
+     "Birth date": "2001-03-31",
+     "Encounter date": "2020-09-26",
+     "Gender": null,
+     "Patient first": "Cleo27",
+     "Patient last": "Paucek755",
+     "Synthetic case": "synform2-dOc 1b1664723a40a00dd",
+     "Visit class": "outpatient"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "12001-03-34.84",
+     "Encounter date": "2020-09-25094",
+     "Gender": "H0.85",
+     "Patient first": "Ceo2.70.80",
+     "Patient last": "Paucek/55p.94",
+     "Synthetic case": "syntorm2-doc1b 1664/23a40a00ddj 0.76",
+     "Visit class": "outpatient p79"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-ce08cff8d07665997ab7_E6_name_swap": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "2001-03-31",
+     "Encounter date": "2020-09-26",
+     "Gender": null,
+     "Patient first": "Paucek755",
+     "Patient last": "Cleo27",
+     "Synthetic case": "synform2-ce08cff8d07665997ab7",
+     "Visit class": "outpatient"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "2001-03-310.73",
+     "Encounter date": "2020-09-26.93",
+     "Gender": "Eb.84",
+     "Patient first": "Paucek/55\u0440.82",
+     "Patient last": "Cleo270.76",
+     "Synthetic case": "synform2-ce08ctT8d07665997ab70.72",
+     "Visit class": "putpatient .79"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-ce08cff8d07665997ab7_E7_digit_flip": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "2001-03-30",
+     "Encounter date": "2020-09-26",
+     "Gender": null,
+     "Patient first": "Cleo27",
+     "Patient last": "Paucek755",
+     "Synthetic case": "synform2-ce08cff8d07665997ab7",
+     "Visit class": "outpatient"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "200:-0K-30076",
+     "Encounter date": "2020-09-25094",
+     "Gender": "Bb.85",
+     "Patient first": "Cleo270.81",
+     "Patient last": "Paucek/55p.94",
+     "Synthetic case": "synform2-ce08ctf8d07665997ab7p7s",
+     "Visit class": "outpatient 7"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-ce08cff8d07665997ab7_V2_scan_sigma25": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "2001-03-31",
+     "Encounter date": "2020-09-26",
+     "Gender": null,
+     "Patient first": "Cleo27",
+     "Patient last": "Paucek755",
+     "Synthetic case": "synform2-ce08cff8d07665997ab7",
+     "Visit class": "outpatient"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "\u0414\u041e\u0422\u041e\u0419 \u041e\u041a\u0410\u041a\u0438 1\u0440.25",
+     "Encounter date": "20920.0193200.51",
+     "Gender": null,
+     "Patient first": "CBOYW 0.85",
+     "Patient last": "Paucek /53 0.57",
+     "Synthetic case": "vnfomz ce08c118007665997a57 1031",
+     "Visit class": "hpatien o27"
+    },
+    "lines": 15
+   }
+  },
+  "synform2-ce08cff8d07665997ab7_clean": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "2001-03-31",
+     "Encounter date": "2020-09-26",
+     "Gender": null,
+     "Patient first": "Cleo27",
+     "Patient last": "Paucek755",
+     "Synthetic case": "synform2-ce08cff8d07665997ab7",
+     "Visit class": "outpatient"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "12001-03-34.84",
+     "Encounter date": "2020-09-20094",
+     "Gender": "Bb.85",
+     "Patient first": "Ceo240.81",
+     "Patient last": "Paucek/55p.94",
+     "Synthetic case": "synform2-ce08ctf8d07665997ab7p7s",
+     "Visit class": "outpatient 0.79"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-ce08cff8d07665997ab7_scan": {
+   "clean": {
+    "correct_count": 7,
+    "fields": {
+     "Birth date": "2001-03-31",
+     "Encounter date": "2020-09-26",
+     "Gender": "F",
+     "Patient first": "Cleo27",
+     "Patient last": "Paucek755",
+     "Synthetic case": "synform2-ce08cff8d07665997ab7",
+     "Visit class": "outpatient"
+    },
+    "lines": 15
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Gender",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "I\u0420/\u041e. -\u041e-\u041a \u0440.82",
+     "Encounter date": null,
+     "Gender": "\u0428o.80",
+     "Patient first": "0.79",
+     "Patient last": "Paucekz5s",
+     "Synthetic case": "synform2-ce08c118\u011107665997ab7 0.52",
+     "Visit class": "putpatientp.77"
+    },
+    "lines": 17
+   }
+  },
+  "synform2-d0c1b1664723a40a00dd_clean": {
+   "clean": {
+    "correct_count": 5,
+    "fields": {
+     "Birth date": "1963-07-21",
+     "Encounter date": "1988-10-16",
+     "Gender": "M",
+     "Patient first": "Stephan 15",
+     "Patient last": "Emmerich580",
+     "Synthetic case": "synform2-dOc 1b1664723a40a00dd",
+     "Visit class": "ambulatory"
+    },
+    "lines": 15
+   },
+   "fields_changed_by_boxes": [
+    "Patient last",
+    "Birth date",
+    "Gender",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "11963-0-21.84",
+     "Encounter date": "0988-10-15094",
+     "Gender": "M 0.79",
+     "Patient first": "Stephan 15 6.83",
+     "Patient last": "Emmerch580$.86",
+     "Synthetic case": "|s\u00ffn\u2020\u043erm2-d\u00f2\u010d1b'1664723\u043040\u0430\u00f20\u0111\u0111|o.7\u0433",
+     "Visit class": "ambulatoryp.86"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-d0c1b1664723a40a00dd_scan": {
+   "clean": {
+    "correct_count": 5,
+    "fields": {
+     "Birth date": "1963-07-21",
+     "Encounter date": "1988-10-16",
+     "Gender": "M",
+     "Patient first": "Stephan 15",
+     "Patient last": "Emmerich580",
+     "Synthetic case": "synform2-d0c 1b 1664723a40a00dd",
+     "Visit class": "ambulatory"
+    },
+    "lines": 15
+   },
+   "fields_changed_by_boxes": [
+    "Patient last",
+    "Birth date",
+    "Gender",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "196K-02",
+     "Encounter date": "98587",
+     "Gender": "LVI 0.78",
+     "Patient first": "Stephan",
+     "Patient last": "-mmerich580 o82",
+     "Synthetic case": "syntorm2-dOc1b11664728a40a00agp 45",
+     "Visit class": "amburatory 0.84"
+    },
+    "lines": 18
+   }
+  },
+  "synform2-d25a62e4657d1668520e_clean": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "1970-02-22",
+     "Encounter date": "2016-03-13",
+     "Gender": null,
+     "Patient first": "Asha251",
+     "Patient last": "Champlin946",
+     "Synthetic case": "synform2-d25a62e4657d1668520e",
+     "Visit class": "wellness"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "1970-02-220.76",
+     "Encounter date": "ROXO-0K-1K 095",
+     "Gender": "Ep.84",
+     "Patient first": "Asha2510.75",
+     "Patient last": "Champlin9469.88",
+     "Synthetic case": "syntorm2-d25a62e465/d1668520ep.74",
+     "Visit class": "wellness .83"
+    },
+    "lines": 16
+   }
+  },
+  "synform2-d25a62e4657d1668520e_scan": {
+   "clean": {
+    "correct_count": 6,
+    "fields": {
+     "Birth date": "1970-02-22",
+     "Encounter date": "2016-03-13",
+     "Gender": null,
+     "Patient first": "Asha251",
+     "Patient last": "Champlin946",
+     "Synthetic case": "synform2-d25a62e4657d1668520e",
+     "Visit class": "wellness"
+    },
+    "lines": 14
+   },
+   "fields_changed_by_boxes": [
+    "Synthetic case",
+    "Patient first",
+    "Patient last",
+    "Birth date",
+    "Encounter date",
+    "Visit class"
+   ],
+   "with_boxes": {
+    "correct_count": 0,
+    "fields": {
+     "Birth date": "1572051",
+     "Encounter date": "PAUNIOHOK",
+     "Gender": "Ep.84",
+     "Patient first": "10.76",
+     "Patient last": "Chamblin9460.85",
+     "Synthetic case": "syntorm2-d25a62e4657d1668520g 0.59",
+     "Visit class": "wennessp.79"
+    },
+    "lines": 18
+   }
+  }
+ },
+ "schema": "redteam.ocr_boxes_vs_clean.v1"
+}
