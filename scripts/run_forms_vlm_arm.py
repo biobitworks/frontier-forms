@@ -46,16 +46,14 @@ def iou(a, b):
 
 
 def parse(raw):
-    m = re.search(r"\{.*\}", raw, re.S)
-    if not m:
-        return []
-    try:
-        obj = json.loads(m.group(0))
-    except ValueError:
-        return []
+    """Parse every complete {label, value, bbox} object, so a truncated reply still yields its finished fields."""
     out = []
-    for f in obj.get("fields", []) if isinstance(obj, dict) else []:
-        b = f.get("bbox") if isinstance(f, dict) else None
+    for m in re.finditer(r'\{[^{}]*"bbox"\s*:\s*\[[^\]]*\][^{}]*\}', raw, re.S):
+        try:
+            f = json.loads(m.group(0))
+        except ValueError:
+            continue
+        b = f.get("bbox")
         if isinstance(b, list) and len(b) == 4 and all(isinstance(x, (int, float)) for x in b):
             out.append({"label": str(f.get("label", "")), "value": str(f.get("value", "") or ""), "bbox": [float(x) for x in b]})
     return out
@@ -103,7 +101,7 @@ def main():
         b64 = base64.b64encode((DATA / g["image"]).read_bytes()).decode()
         t = time.perf_counter()
         r = post("/api/generate", {"model": args.model, "prompt": PROMPT, "images": [b64], "stream": False,
-                                   "options": {"temperature": 0, "seed": args.seed, "num_predict": 1500}})
+                                   "options": {"temperature": 0, "seed": args.seed, "num_predict": 3000}})
         dt = time.perf_counter() - t
         raw = r.get("response", "")
         pred = parse(raw)
