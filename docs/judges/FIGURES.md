@@ -91,3 +91,11 @@ Same 10 forms, same OCR engine and parser; the only change is the drawn bounding
 - models/qwen2.5_1.5b
 - models/qwen3_1.7b
 - preview captures
+
+## Independent audit successor — byte-level preservation
+
+A later independent review found that the original PR #51 demo manifest's stored SHA-256 and sizes did not match 10 annotation JSON files. That is a FAILED source-integrity check, not a model failure. The original manifest bytes are preserved as docs/demo/manifest_v1_pre_repair.json. The new manifest corrects exactly 10 entries, and docs/demo/MANIFEST_REPAIR_V2.json records every predecessor/new digest. CI verifies all 62 assets and the successor asset root. This root proves asset identity, not causal performance.
+
+Figure 10 measures a negative preprocessing effect: clean Apple Vision OCR matched 58 of 70 printed synthetic field values, but drawing bounding boxes before OCR resulted in 0/70 on the same 10 pages. The overlays should be applied for human inspection AFTER OCR of the clean image.
+
+Attribution: Figures 1–10 and the demonstration environment were developed by Claude Code (PR #51); this hash-reconciliation and its regression tests were performed independently by ChatGPT in this conversation. The common GitHub account is not evidence that all other PRs were created by either agent. Both follow the Vita DAISY-inspired custody method, but no Vita DAISY model weights or performance improvements were imported.

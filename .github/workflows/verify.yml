@@ -21,6 +21,8 @@ jobs:
       - name: Install pinned independent statistical engine dependencies
         run: python3 -m pip install --only-binary=:all: numpy==2.2.6 scipy==1.15.3
       - run: python3 -m unittest discover -s tests -v
+      - name: Verify synthetic judge demo asset manifest and preserved predecessor
+        run: python3 scripts/verify_judge_demo_manifest.py
       - name: Check prohibited raw payload types
         run: python3 scripts/check_public_payloads.py
       - name: Synthetic-only JSON publication gate (immutable legacy blob exemption)
