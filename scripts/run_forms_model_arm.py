@@ -47,15 +47,22 @@ def main():
         model = PeftModel.from_pretrained(model, args.adapter)
     model.to(dev).eval()
     calls = {"n": 0, "seconds": 0.0, "malformed": 0}
+    answers_log = []
+    adapter_sha = None
+    if args.adapter:
+        adapter_sha = {p.name: sha256_bytes(p.read_bytes()) for p in sorted(Path(args.adapter).glob("*")) if p.is_file()}
+    model_identity = {"base_model": args.base, "base_revision": getattr(model.config, "_commit_hash", None),
+                      "adapter_path": args.adapter, "adapter_sha256": adapter_sha}
 
     def generate(text):
         ids = tok(text, return_tensors="pt", add_special_tokens=False).to(dev)
         t = time.perf_counter()
         with torch.no_grad():
             out = model.generate(**ids, max_new_tokens=192, do_sample=False, pad_token_id=tok.eos_token_id)
+        dt = time.perf_counter() - t
         calls["n"] += 1
-        calls["seconds"] += time.perf_counter() - t
-        return tok.decode(out[0, ids["input_ids"].shape[1]:], skip_special_tokens=True)
+        calls["seconds"] += dt
+        return tok.decode(out[0, ids["input_ids"].shape[1]:], skip_special_tokens=True), dt
 
     def fill_plan(html, passport):
         ptxt = sft_data.passport_text(passport)
@@ -63,8 +70,12 @@ def main():
         for f in b0.inspect_form(html):
             field = {"label": f["label"], "type": f["type"] if f["type"] in ("textarea", "select", "number") else "text",
                      "options": f["options"]}
-            raw = generate(sft_data.prompt(field, ptxt))
+            prompt_text = sft_data.prompt(field, ptxt)
+            raw, dt = generate(prompt_text)
             dec, val = sft_data.parse_completion(raw)
+            answers_log.append({"patient_id": passport["patient_id"], "field_key": f["name"], "label": f["label"],
+                                "prompt_sha256": sha256_bytes(prompt_text.encode()), "raw_output": raw,
+                                "parsed_decision": dec, "written_value": val, "latency_s": round(dt, 3)})
             if not raw.strip().startswith("{"):
                 calls["malformed"] += 1
             answers.append({"field_key": f["name"], "decision": dec, "value": val,
@@ -89,11 +100,23 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     data = jsonl(rows)
     (out / "predictions.jsonl").write_bytes(data)
+    # join each raw model answer to its scored outcome
+    score = {(r["patient_id"], r["template_key"], k): v for r in rows for k, v in r["fields"].items()}
+    tkey_of = {}
+    for r in rows:
+        for k in r["fields"]:
+            tkey_of.setdefault((r["patient_id"], k), r["template_key"])
+    for a in answers_log:
+        a["template_key"] = tkey_of.get((a["patient_id"], a["field_key"]))
+        sc = score.get((a["patient_id"], a["template_key"], a["field_key"]), {})
+        a["outcome"] = sc.get("outcome")
+        a["gold_decision"] = sc.get("gold_decision")
+        a["model"] = args.name
+    (out / "answers.jsonl").write_bytes(jsonl(answers_log))
     summary = {"arm": args.name, "metrics": summarize(rows), "per_field_accuracy": per_field_accuracy(rows),
                "paired_vs_B0": paired_vs_b0(b0_rows, rows)}
     (out / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
-    receipt = {"arm": args.name, "base_model": args.base, "base_revision": getattr(model.config, "_commit_hash", None),
-               "adapter": args.adapter, "splits": sorted(keep), "n_patients": len(members), "n_cases": len(rows),
+    receipt = {"arm": args.name, **model_identity, "splits": sorted(keep), "n_patients": len(members), "n_cases": len(rows),
                "cohort_root_evaluated": cohort_root(members), "predictions_sha256": sha256_bytes(data),
                "output_root": output_root(rows), "decoding": "greedy, max_new_tokens=192",
                "model_calls": calls["n"], "model_seconds": round(calls["seconds"], 1),
