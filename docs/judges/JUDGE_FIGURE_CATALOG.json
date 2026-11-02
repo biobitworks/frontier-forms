@@ -1,0 +1,152 @@
+{
+  "figure_count": 12,
+  "figures": [
+    {
+      "alt": "Gate-factorial and Merkle/Lean/FCO experiment \u2014 OBSERVED",
+      "asset_kind": "image",
+      "caption": "Observed synthetic gate-factorial diagram; roots attest canonical identity, not causality.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "../../docs/architecture/gate_factorial_heatmap.svg",
+      "id": "FIG-01",
+      "path": "docs/architecture/gate_factorial_heatmap.svg",
+      "source_pr": 21,
+      "status": "OBSERVED",
+      "title": "Gate-factorial and Merkle/Lean/FCO experiment"
+    },
+    {
+      "alt": "Longitudinal progress dashboard \u2014 OBSERVED",
+      "asset_kind": "interactive HTML",
+      "caption": "Distinguishes actual model snapshots, weight-only comparisons, LOMO and cross-sectional ablations.",
+      "credited_lane": "ChatGPT / independent review lane",
+      "href": "../../dashboard/training_progress.html",
+      "id": "FIG-02",
+      "path": "dashboard/training_progress.html",
+      "source_pr": 18,
+      "status": "OBSERVED",
+      "title": "Longitudinal progress dashboard"
+    },
+    {
+      "alt": "Error detector factorial heatmap \u2014 DISCOVERY",
+      "asset_kind": "interactive HTML",
+      "caption": "702 injected errors; full M1+M2+M3 recall 694/702 with 236 false-positive clean fields.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "../../evidence/forms_detectors/run_v1/heatmap.html",
+      "id": "FIG-03",
+      "path": "evidence/forms_detectors/run_v1/heatmap.html",
+      "source_pr": 10,
+      "status": "DISCOVERY",
+      "title": "Error detector factorial heatmap"
+    },
+    {
+      "alt": "16-mask synthetic source-fault heatmap \u2014 DISCOVERY",
+      "asset_kind": "interactive HTML",
+      "caption": "Small/medium/tiny synthetic challenge fixtures; by-design corrections do not demonstrate model improvement.",
+      "credited_lane": "ChatGPT / independent review lane",
+      "href": "../../experiments/form_error_factorial/heatmap.html",
+      "id": "FIG-04",
+      "path": "experiments/form_error_factorial/heatmap.html",
+      "source_pr": 12,
+      "status": "DISCOVERY",
+      "title": "16-mask synthetic source-fault heatmap"
+    },
+    {
+      "alt": "Apple Vision / Qwen field-box overlay example \u2014 OBSERVED",
+      "asset_kind": "interactive HTML",
+      "caption": "Eight-field synthetic fixture; actual answers and boxes, not a 100-form clinical benchmark.",
+      "credited_lane": "ChatGPT / independent review lane",
+      "href": "../../experiments/form_error_factorial/vision_overlay.html",
+      "id": "FIG-05",
+      "path": "experiments/form_error_factorial/vision_overlay.html",
+      "source_pr": 12,
+      "status": "OBSERVED",
+      "title": "Apple Vision / Qwen field-box overlay example"
+    },
+    {
+      "alt": "Synthetic blank registration form \u2014 OBSERVED",
+      "asset_kind": "image",
+      "caption": "Browser raster of empty synthetic form; DOM gold box geometry is not independent annotation.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "../../data/forms_vision_v1/blank__new_patient_registration_v1.png",
+      "id": "FIG-06",
+      "path": "data/forms_vision_v1/blank__new_patient_registration_v1.png",
+      "source_pr": 10,
+      "status": "OBSERVED",
+      "title": "Synthetic blank registration form"
+    },
+    {
+      "alt": "Filled registration form from B0 \u2014 OBSERVED",
+      "asset_kind": "image",
+      "caption": "Synthetic patient values rendered in a test form; does not establish held-out clinical accuracy.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "../../data/forms_vision_v1/filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "id": "FIG-07",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "source_pr": 10,
+      "status": "OBSERVED",
+      "title": "Filled registration form from B0"
+    },
+    {
+      "alt": "Synthetic adversarial medication-allergy intake \u2014 OBSERVED",
+      "asset_kind": "image",
+      "caption": "Injected instruction is untrusted page content; compare against clean twin before robustness claims.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "id": "FIG-08",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "source_pr": 10,
+      "status": "OBSERVED",
+      "title": "Synthetic adversarial medication-allergy intake"
+    },
+    {
+      "alt": "Local Apple/Qwen demonstration raster \u2014 OBSERVED",
+      "asset_kind": "image",
+      "caption": "Single synthetic intake example with separate model/box receipts.",
+      "credited_lane": "ChatGPT / independent review lane",
+      "href": "../../experiments/form_error_factorial/sample_vision/synthetic_intake.png",
+      "id": "FIG-09",
+      "path": "experiments/form_error_factorial/sample_vision/synthetic_intake.png",
+      "source_pr": 12,
+      "status": "OBSERVED",
+      "title": "Local Apple/Qwen demonstration raster"
+    },
+    {
+      "alt": "Historical evidence admission heatmap \u2014 HISTORICAL",
+      "asset_kind": "interactive HTML",
+      "caption": "Earlier historical/planned statuses; do not use as evidence of new neural training gains.",
+      "credited_lane": "ChatGPT / independent review lane",
+      "href": "../../dashboard/training_heatmap.html",
+      "id": "FIG-10",
+      "path": "dashboard/training_heatmap.html",
+      "source_pr": 7,
+      "status": "HISTORICAL",
+      "title": "Historical evidence admission heatmap"
+    },
+    {
+      "alt": "Claude clean bounding-box overlay viewer (draft) \u2014 DRAFT_ONLY",
+      "asset_kind": "interactive HTML",
+      "caption": "Interactive JSON-derived overlay viewer from open PR #29; not merged. Model predictions, not oracle truth.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "https://github.com/biobitworks/frontier-forms/blob/96cc2340a24e53df5e2d3c164594f6739753ecef/evidence/forms_vision/bbox_overlays_v1.html",
+      "id": "FIG-11",
+      "path": "evidence/forms_vision/bbox_overlays_v1.html",
+      "source_pr": 29,
+      "status": "DRAFT_ONLY",
+      "title": "Claude clean bounding-box overlay viewer (draft)"
+    },
+    {
+      "alt": "Claude adversarial bounding-box overlay viewer (draft) \u2014 DRAFT_ONLY",
+      "asset_kind": "interactive HTML",
+      "caption": "Clean/injected synthetic viewer from open PR #29; its claimed robustness requires independent audit.",
+      "credited_lane": "Claude Code (documented lane)",
+      "href": "https://github.com/biobitworks/frontier-forms/blob/96cc2340a24e53df5e2d3c164594f6739753ecef/evidence/forms_vision/bbox_overlays_inject_v1.html",
+      "id": "FIG-12",
+      "path": "evidence/forms_vision/bbox_overlays_inject_v1.html",
+      "source_pr": 29,
+      "status": "DRAFT_ONLY",
+      "title": "Claude adversarial bounding-box overlay viewer (draft)"
+    }
+  ],
+  "parent_main_sha": "0fed9d81aee4e2b581e7a87dccee24fc7b5145f0",
+  "policy": "References existing images; no new public patient images or weights are generated.",
+  "schema": "FF-JUDGE-FIGURES-V1"
+}
