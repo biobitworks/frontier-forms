@@ -1,0 +1,73 @@
+exp_id: EXP-2.1
+record_schema_version: 3
+title: 'Claude red-team: local FCO/FCG/Antigence ablation on frozen LongevityBench
+  mini heldout'
+classification: CONFIRMATORY
+created_at: '2026-11-02T21:48:28.854222+00:00'
+author: ''
+hypothesis: &id001
+  h0: 'H0: no local lane, FCO/FCG context projection, or antigentic admission changes
+    strict-letter accuracy versus the L0 direct baseline on the predeclared heldout
+    partition (n=39) after Holm correction; forged leaf / removed edge are caught
+    deterministically; option-swap gate drives admitted-injected rate to zero'
+  h1: 'TODO: state alternative hypothesis'
+  test: 'TODO: specify statistical test'
+  alpha: 0.05
+  mesi: null
+power_analysis:
+  tier: TODO
+  test_type: TODO
+  required_n: null
+  effect_size_mesi: null
+  alpha: 0.05
+  achieved_power: null
+gates:
+  power_analysis: PENDING
+  decision_tree: PENDING
+  temporal_integrity: PENDING
+  red_team: PENDING
+  data_contract: PENDING
+claims: []
+replication_artifacts: []
+fdr_chain:
+  levels:
+  - name: primary
+    threshold: 0.05
+  method: none
+  tool: TODO
+  tool_version: TODO
+null_model:
+  strategy: TODO
+  n_permutations: null
+  baseline_description: 'TODO: describe the null baseline'
+  exchangeability_assumption: 'TODO: state what is exchangeable under null'
+  novel_space: false
+  justification: null
+  validation_evidence: null
+calibration_contract:
+  scored_fields: []
+  default_calibration:
+    calibrated: false
+    method: null
+    tool: null
+    tool_version: null
+    brier_score: null
+    ece_score: null
+    procedure_ref: null
+prompt_id: PROMPT-2.1
+task_id: TASK-2.1
+coordinate_version: v1.2.1.1
+status: planned
+prompt_artifact:
+  kind: experiment_registration
+  hash_standard: RFC8785
+  hash_algorithm: sha256
+  hash: 711675d06561ba44c1f9714d7e1c06c11cc5eec9921d01155597e0de96938fd2
+  payload:
+    command: register
+    classification: CONFIRMATORY
+    title: 'Claude red-team: local FCO/FCG/Antigence ablation on frozen LongevityBench
+      mini heldout'
+    hypothesis: *id001
+    prompt_id: PROMPT-2.1
+    task_id: TASK-2.1

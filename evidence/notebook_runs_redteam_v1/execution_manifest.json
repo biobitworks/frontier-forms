@@ -1,0 +1,28 @@
+{
+  "append_only": true,
+  "executed_utc": "2026-11-02T21:49:00Z",
+  "host": "vm",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS_REPLAYED_FROM_RECEIPTS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "10_redteam_independent_replay.ipynb",
+      "receipt_sha256": "5f482eee43dd82485316364c7f41c1e5d09e8132209d281b5ae73fc717c541b8",
+      "source_sha256": "06ed326aee4a81b1eac1a399cb03bf6972e6f1e2f9e3634ccb3e17e74418acdf"
+    },
+    {
+      "error": "CellExecutionError: An error occurred while executing the following cell:\n------------------\nimport json, hashlib, sys\nfrom pathlib import Path\nR = Path.cwd(); sys.path.insert(0, str(R / 'src')); sys.path.insert(0, str(R / 'scripts/redteam'))\ndef sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()\ndef jsonl(p): return [json.loads(x) for x in Path(p).read_text().splitlines() if x.strip()]\nOUT = R / 'evidence/notebook_runs_redteam_v1/outputs'; OUT.mkdir(parents=True, exist_ok=True)\ndef emit(name, obj):\n    p = OUT / name; p.write_text(json.dumps(obj, sort_keys=True, indent=2) + '\\n'); print('OUTPUT', name, sha(p)); return p\nimport tempfile, shutil, copy\nfrom redteam_verify_sources import leaf, root, proof_ok\nfrom verify_predecessor import verify\nfrom validate_pair_export import check\nattacks = {}\npred = R / 'evidence/freeze/predecessor'\nrows = jsonl(pred / 'leaves.jsonl'); man = json.loads((pred /",
+      "execution": "FAIL",
+      "notebook": "13_redteam_integrity_attacks.ipynb",
+      "receipt_sha256": null,
+      "source_sha256": "8d148f856de83def7bc7e2d5ddbf088a352a446afa60edeab2e756b4c5d0b2e4"
+    }
+  ],
+  "outputs_sha256": {
+    "exp010_replay.json": "472982b36a74e22c644d823bd4f675c8d2246b44e3a8b2e0738222667e304035"
+  },
+  "python": "3.13.18",
+  "run_dir": "notebook_runs_redteam_v1",
+  "schema": "notebook.execution.v2"
+}
