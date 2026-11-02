@@ -8,7 +8,7 @@ Everything below was executed. Anything that wasn't is marked NOT_TESTED or BLOC
 **integrity only**. No context projection, FCO leaf or FCG edge produced a reproducible accuracy gain
 on any model lane. The one discovery-set "gain" (L0 + full FCG, 25→28/38) is not significant
 (McNemar p = 0.55, Holm 1.0) and disappears on the untouched held-out set (25/39 vs 25/39).
-The historical Insilico 27/38 also failed to reproduce on a second stack (25/38). The custody layer itself
+The historical Insilico 27/38 also failed to reproduce on a second stack (25/38 on both MPS and CPU). The custody layer itself
 has seven reproducible weaknesses, listed in section 3.
 
 ## 1. Environment and lanes
@@ -19,7 +19,7 @@ has seven reproducible weaknesses, listed in section 3.
 | S-L1 | magicSTUDIObox.local | same | Ollama 0.33.0 | `qwen3:1.7b` 8f68893c685c… | EXECUTED |
 | P-L1 | MacBookPro (magicpro lane) | MacBook Pro M1 Pro, 16 GB, macOS 27.2 | Ollama 0.32.15 | `qwen3:1.7b` 8f68893c685c… (same digest) | EXECUTED |
 | P-L3 | MacBookPro | same | torch 2.8 MPS, transformers 4.57.3 | `insilicomedicine/Qwen3-0.6B-Longevity@bffdda93`, safetensors sha256 f547df5c… | PARTIAL: B0/C1/C2 valid on MPS; C3–R0 INVALID_INFRA_FAILURE (MPS OOM, below) |
-| P-L3c | MacBookPro | same, **CPU** (`FF_DEVICE=cpu`) | torch 2.8 CPU, transformers 4.57.3 | same checkpoint, sha256 f547df5c… | RUNNING (~16 s/record); results auto-pushed as `bits_P-L3c_*` |
+| P-L3c | MacBookPro | same, **CPU** (`FF_DEVICE=cpu`) | torch 2.8 CPU, transformers 4.57.3 | same checkpoint, sha256 f547df5c… | STOPPED at Byron's request after 139/693 records (discovery B0, C1, C2 complete; C3 25/38; held-out not run); 0 failed records |
 | L2 | — | — | — | `qwen2.5vl:3b` (installed on Studio) | NOT_TESTED here: the Synthea forms VLM lane belongs to PR #10; never pooled with LongevityBench |
 | L4/L5 | — | — | — | Fireworks serverless | OUT_OF_SCOPE: Byron set comparisons to local Qwen models only (the Fireworks backend was removed in aece7a1) |
 
@@ -97,7 +97,7 @@ Primary result (strict parser, H1 = C2 vs B0):
 | S-L1 qwen3 | 3→1/38 | 3→2/39 | NEGATIVE |
 | P-L1 qwen3 | 2→0/38 | 2→1/39 | NEGATIVE |
 | P-L3 Insilico (MPS) | 25→24/38, p 1.0 | 22→19/39 | NEGATIVE (B0/C1/C2 only valid) |
-| P-L3c Insilico (CPU) | running | running | PENDING |
+| P-L3c Insilico (CPU) | 25→24/38, p 1.0, CI [−0.16, +0.11] | NOT_TESTED (stopped) | NEGATIVE on discovery; replicates P-L3 exactly |
 
 - **No comparison passes** the admission rule (McNemar Holm < 0.05 ∧ bootstrap lower CI > 0 ∧ held-out replication ∧ guardrails).
   The best uncorrected signal is P-L1 C1 vs B0 on discovery (2→6/38, raw p 0.125, Holm 0.75, CI lower bound +0.026). It does
@@ -115,6 +115,13 @@ Primary result (strict parser, H1 = C2 vs B0):
 - **Model comparisons are labelled MODEL, not harness.** L0 vs L1 (25 vs 3/38) is a format-compliance gap, since qwen3 emits prose in 16 tokens.
   L0 vs L3 is 25 vs 25/38 on discovery and 25 vs 22/39 on held-out. The historical "Insilico 27/38" became 25/38 on this stack, so a
   two-case swing from environment alone equals the entire claimed advantage. The historical result stays **NEGATIVE / NOT_PROMOTED**.
+
+**Insilico CPU rerun (P-L3c), stopped early.** Byron stopped the rerun at 139 of 693 records ("do not do rerun"). The partial results are
+reported as they are, and nothing was relaunched. On discovery, CPU float32 gives exactly the MPS counts (B0 25, C1 28, C2 24 out of 38), and the
+B0 predictions agree on 38/38 cases (HARDWARE_REPLICATION). For this 0.6B checkpoint, MPS vs CPU is therefore not a source of drift, which leaves
+the historical 27/38 vs 25/38 gap to environment or harness differences. C1 vs B0 (25→28, Holm 0.75) and C2 vs B0 (25→24) are both NEGATIVE.
+C3 has only 25/38 cases. C4–R0 and the whole held-out partition are NOT_TESTED for P-L3c. The run was killed inside `run_logged.sh`,
+so the MBP command ledger has no end/exit row for P-L3c. The stop is recorded here and in a private `logs/drive_P_L3c.stopped` marker.
 
 AUROC is NOT_COMPUTED because letter-only decoding produces no continuous scores. Per-letter macro precision/recall/F1/FPR/FNR/FDR are in the
 lane summaries.
