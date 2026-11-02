@@ -1,0 +1,248 @@
+{
+  "comparisons": {
+    "L0:discovery": {
+      "direct~B0_baseline": {
+        "caveat": "byte-identical frozen messages expected",
+        "mine_correct": 25,
+        "mine_prompt_tokens": 19678,
+        "n_common": 38,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 19678,
+        "strict_correct_agreement": 38
+      },
+      "fcg~C2_full_fcg": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 24,
+        "mine_prompt_tokens": 36201,
+        "n_common": 38,
+        "sibling_correct": 28,
+        "sibling_prompt_tokens": 59097,
+        "strict_correct_agreement": 28
+      },
+      "fco~C1_fco_projection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 24,
+        "mine_prompt_tokens": 24711,
+        "n_common": 38,
+        "sibling_correct": 23,
+        "sibling_prompt_tokens": 25528,
+        "strict_correct_agreement": 33
+      },
+      "forged_noverify~C4_corrupt_leaf": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 24,
+        "mine_prompt_tokens": 36188,
+        "n_common": 38,
+        "sibling_correct": 28,
+        "sibling_prompt_tokens": 59086,
+        "strict_correct_agreement": 28
+      },
+      "inject_direct~C6_prompt_injection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 24,
+        "mine_prompt_tokens": 37910,
+        "n_common": 38,
+        "sibling_correct": 27,
+        "sibling_prompt_tokens": 60959,
+        "strict_correct_agreement": 29
+      }
+    },
+    "L0:heldout": {
+      "direct~B0_baseline": {
+        "caveat": "byte-identical frozen messages expected",
+        "mine_correct": 25,
+        "mine_prompt_tokens": 19332,
+        "n_common": 39,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 19332,
+        "strict_correct_agreement": 39
+      },
+      "fcg~C2_full_fcg": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 25,
+        "mine_prompt_tokens": 36236,
+        "n_common": 39,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 59668,
+        "strict_correct_agreement": 35
+      },
+      "fco~C1_fco_projection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 25,
+        "mine_prompt_tokens": 24517,
+        "n_common": 39,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 25314,
+        "strict_correct_agreement": 35
+      },
+      "forged_noverify~C4_corrupt_leaf": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 25,
+        "mine_prompt_tokens": 36246,
+        "n_common": 39,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 59658,
+        "strict_correct_agreement": 35
+      },
+      "inject_direct~C6_prompt_injection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 26,
+        "mine_prompt_tokens": 38009,
+        "n_common": 39,
+        "sibling_correct": 25,
+        "sibling_prompt_tokens": 61579,
+        "strict_correct_agreement": 32
+      }
+    },
+    "L1:discovery": {
+      "direct~B0_baseline": {
+        "caveat": "byte-identical frozen messages expected",
+        "mine_correct": 3,
+        "mine_prompt_tokens": 21732,
+        "n_common": 38,
+        "sibling_correct": 3,
+        "sibling_prompt_tokens": 21732,
+        "strict_correct_agreement": 38
+      },
+      "fcg~C2_full_fcg": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 42468,
+        "n_common": 38,
+        "sibling_correct": 1,
+        "sibling_prompt_tokens": 73819,
+        "strict_correct_agreement": 37
+      },
+      "fco~C1_fco_projection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 27346,
+        "n_common": 38,
+        "sibling_correct": 5,
+        "sibling_prompt_tokens": 29023,
+        "strict_correct_agreement": 33
+      },
+      "forged_noverify~C4_corrupt_leaf": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 42508,
+        "n_common": 38,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 73828,
+        "strict_correct_agreement": 36
+      },
+      "inject_direct~C6_prompt_injection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 44284,
+        "n_common": 38,
+        "sibling_correct": 0,
+        "sibling_prompt_tokens": 75187,
+        "strict_correct_agreement": 38
+      }
+    },
+    "L1:heldout": {
+      "direct~B0_baseline": {
+        "caveat": "byte-identical frozen messages expected",
+        "mine_correct": 3,
+        "mine_prompt_tokens": 21408,
+        "n_common": 39,
+        "sibling_correct": 3,
+        "sibling_prompt_tokens": 21408,
+        "strict_correct_agreement": 39
+      },
+      "fcg~C2_full_fcg": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 42681,
+        "n_common": 39,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 74936,
+        "strict_correct_agreement": 37
+      },
+      "fco~C1_fco_projection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 27171,
+        "n_common": 39,
+        "sibling_correct": 6,
+        "sibling_prompt_tokens": 28884,
+        "strict_correct_agreement": 33
+      },
+      "forged_noverify~C4_corrupt_leaf": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 42688,
+        "n_common": 39,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 74941,
+        "strict_correct_agreement": 37
+      },
+      "inject_direct~C6_prompt_injection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 0,
+        "mine_prompt_tokens": 44545,
+        "n_common": 39,
+        "sibling_correct": 0,
+        "sibling_prompt_tokens": 76340,
+        "strict_correct_agreement": 39
+      }
+    },
+    "L3:discovery": {
+      "direct~B0_baseline": {
+        "caveat": "byte-identical frozen messages expected",
+        "mine_correct": 2,
+        "mine_prompt_tokens": 3386,
+        "n_common": 4,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 3386,
+        "strict_correct_agreement": 4
+      },
+      "fcg~C2_full_fcg": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 2,
+        "mine_prompt_tokens": 5581,
+        "n_common": 4,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 8858,
+        "strict_correct_agreement": 2
+      },
+      "fco~C1_fco_projection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 2,
+        "mine_prompt_tokens": 4000,
+        "n_common": 4,
+        "sibling_correct": 2,
+        "sibling_prompt_tokens": 4156,
+        "strict_correct_agreement": 4
+      },
+      "forged_noverify~C4_corrupt_leaf": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 2,
+        "mine_prompt_tokens": 5587,
+        "n_common": 4,
+        "sibling_correct": 0,
+        "sibling_prompt_tokens": 0,
+        "strict_correct_agreement": 2
+      },
+      "inject_direct~C6_prompt_injection": {
+        "caveat": "arms are similar in intent but NOT byte-identical prompts (sibling C2 carries proof siblings; this lane does not)",
+        "mine_correct": 2,
+        "mine_prompt_tokens": 5775,
+        "n_common": 4,
+        "sibling_correct": 0,
+        "sibling_prompt_tokens": 0,
+        "strict_correct_agreement": 2
+      }
+    },
+    "L3:heldout": {
+      "mine_present": false,
+      "sibling_present": true,
+      "status": "NOT_COMPARABLE"
+    }
+  },
+  "note": "code-level replication only",
+  "schema": "redteam.sibling_crosscheck.v1",
+  "sibling_branch": "origin/redteam/claude-fcg-local-ablation-20261102",
+  "sibling_head": "d889437cce58c5965ed3b255ff07d779ee463c5c"
+}
