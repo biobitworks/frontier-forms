@@ -11,6 +11,8 @@ HISTORICAL_COMMITS={
   'REVIEW-2f1cfafda7de0153':'da953450d33a721682191f77589c275e0b49731c',
   # same repair for the post-merge custody successor created on the base branch (F-02 pattern recurred)
   'REVIEW-90761061e69fffe2':'da516222cffee97fa820b903b8259fa7c22b18e1',
+  # Pinned to history when the out-of-scope dataset-freeze lane was removed from the tree (2026-11-02).
+  'REVIEW-ad37deead74278b9':'ad2bba6bf5d4fdb00aea2eaa80a4105a5d0fb5af',
 }
 def sha(b):return hashlib.sha256(b).hexdigest()
 def canon(x):return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()

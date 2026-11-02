@@ -31,9 +31,9 @@ out.mkdir(parents=True,exist_ok=False)
 (out/'leaves.jsonl').write_bytes(b''.join(canon(x)+b'\n' for x in leaves))
 manifest={'schema':'fco.review_successor.v1','root':root,'leaf_count':len(leaves),
  'leaf_order':[x['path'] for x in leaves],
- 'parent_project_root':'2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2',
+ 'parent_project_root':'90761061e69fffe20213b07added848c8e44b3d391f91f93150bb664c80d3ea3',
  'origin_project_root':'9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a',
- 'parent_repo_commit':'da953450d33a721682191f77589c275e0b49731c',
+ 'parent_repo_commit':'9e2c5654fac129f349b54e4af83ea21d196c514e',
  'construction':'sha256(00||canonical_leaf);sha256(01||left_bytes||right_bytes);duplicate_last',
  'signature':'NOT_SIGNED','mmr':'NOT_COMPUTED','raw_source_export':'NOT_AUTHORIZED',
  'evaluation':'DISCOVERY_NEGATIVE','fireworks':'NOT_TESTED'}

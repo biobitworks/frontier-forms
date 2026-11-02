@@ -1,0 +1,23 @@
+# Gitleaks config for frontier-forms. Default rules, plus an allowlist for the
+# three non-secret identifier shapes that the generic-api-key rule flags in our
+# synthetic evidence files (full-history scan 2026-11-02: 7,920 findings, all of these):
+#   row_key_sha256 / case_digest_sha256 = 64-hex SHA-256 case digests
+#   case_key = Synthea patient UUIDs plus form ids
+#   template_key = form template names such as medication_allergy_intake_v1
+title = "frontier-forms"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Non-secret identifiers in synthetic evidence"
+regexTarget = "match"
+# Exact field names only, anchored at the start of the match, so a hex value
+# under api_key, secret_key or any other name is still reported. CI scans git
+# history (not the working-tree dir mode, which splits long JSONL lines and
+# cuts field names).
+regexes = [
+  '''^"?(row_key_sha256|case_digest_sha256|key)"?\s*[:=]\s*"?[0-9a-f]{64}"?$''',
+  '''^"?case_key"?\s*[:=]\s*"?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}''',
+  '''^"?template_key"?\s*[:=]\s*"?[a-z0-9_]+_v[0-9]+"?$''',
+]

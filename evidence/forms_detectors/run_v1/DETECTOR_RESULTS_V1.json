@@ -1,0 +1,565 @@
+{
+  "attribution_rule": "Gains are attributed only on single-leaf edges. A combination's recall over 'none' is the joint gain and is CONFOUNDED with respect to its members.",
+  "code_sha256": {
+    "lean/FormChecks.lean": "3bfa6d615a596b49f011aff3146f368b6b086be2bb706d17f77a5836fe94804c",
+    "scripts/score_detectors.py": "263a628b6189b3c92049573998c4695b251016e6362de41589445a2d212c9a24",
+    "src/frontier_forms/forms/arms.py": "d48e511b05fc3b7569978624ee8b08817c493e096c536cd940681c8f21b4cfd6",
+    "src/frontier_forms/forms/detectors.py": "ad7fb26005c3b6e157bf629eb3d8ad4b6a094d4dee67d3a728419a7b3d36f48f"
+  },
+  "combinations": {
+    "M1": {
+      "clean_fields": 5731,
+      "detected": 114,
+      "field_precision": 1.0,
+      "form_sensitivity": 0.2363,
+      "form_specificity": 1.0,
+      "fp_fields": 0,
+      "fp_rate_clean_fields": 0.0,
+      "instances": 702,
+      "mechanisms": [
+        "M1_merkle_breakpoint"
+      ],
+      "recall": 0.1624,
+      "recall_by_type": {
+        "E1_swap": 0.0,
+        "E2_wrong_patient": 0.0,
+        "E3_unit": 0.0,
+        "E4_fabricated_none": 0.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.0,
+        "E7_typo": 0.0,
+        "E8_stale": 0.0
+      }
+    },
+    "M1+M2": {
+      "clean_fields": 5731,
+      "detected": 299,
+      "field_precision": 0.9917,
+      "form_sensitivity": 0.5252,
+      "form_specificity": 0.9949,
+      "fp_fields": 3,
+      "fp_rate_clean_fields": 0.0005,
+      "instances": 702,
+      "mechanisms": [
+        "M1_merkle_breakpoint",
+        "M2_lean4_constraints"
+      ],
+      "recall": 0.4259,
+      "recall_by_type": {
+        "E1_swap": 0.8598,
+        "E2_wrong_patient": 0.0,
+        "E3_unit": 0.0217,
+        "E4_fabricated_none": 0.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.6471,
+        "E7_typo": 0.1293,
+        "E8_stale": 0.0
+      }
+    },
+    "M1+M2+M3": {
+      "clean_fields": 5731,
+      "detected": 694,
+      "field_precision": 0.7724,
+      "form_sensitivity": 0.9978,
+      "form_specificity": 0.7005,
+      "fp_fields": 236,
+      "fp_rate_clean_fields": 0.0412,
+      "instances": 702,
+      "mechanisms": [
+        "M1_merkle_breakpoint",
+        "M2_lean4_constraints",
+        "M3_fco_source_binding"
+      ],
+      "recall": 0.9886,
+      "recall_by_type": {
+        "E1_swap": 1.0,
+        "E2_wrong_patient": 1.0,
+        "E3_unit": 1.0,
+        "E4_fabricated_none": 1.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.9328,
+        "E7_typo": 1.0,
+        "E8_stale": 1.0
+      }
+    },
+    "M1+M3": {
+      "clean_fields": 5731,
+      "detected": 694,
+      "field_precision": 0.7747,
+      "form_sensitivity": 0.9978,
+      "form_specificity": 0.7056,
+      "fp_fields": 233,
+      "fp_rate_clean_fields": 0.0407,
+      "instances": 702,
+      "mechanisms": [
+        "M1_merkle_breakpoint",
+        "M3_fco_source_binding"
+      ],
+      "recall": 0.9886,
+      "recall_by_type": {
+        "E1_swap": 1.0,
+        "E2_wrong_patient": 1.0,
+        "E3_unit": 1.0,
+        "E4_fabricated_none": 1.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.9328,
+        "E7_typo": 1.0,
+        "E8_stale": 1.0
+      }
+    },
+    "M2": {
+      "clean_fields": 5731,
+      "detected": 188,
+      "field_precision": 0.988,
+      "form_sensitivity": 0.3654,
+      "form_specificity": 0.9949,
+      "fp_fields": 3,
+      "fp_rate_clean_fields": 0.0005,
+      "instances": 702,
+      "mechanisms": [
+        "M2_lean4_constraints"
+      ],
+      "recall": 0.2678,
+      "recall_by_type": {
+        "E1_swap": 0.8598,
+        "E2_wrong_patient": 0.0,
+        "E3_unit": 0.0217,
+        "E4_fabricated_none": 0.0,
+        "E5_post_seal_tamper": 0.0263,
+        "E6_dropped": 0.6471,
+        "E7_typo": 0.1293,
+        "E8_stale": 0.0
+      }
+    },
+    "M2+M3": {
+      "clean_fields": 5731,
+      "detected": 694,
+      "field_precision": 0.7724,
+      "form_sensitivity": 0.9978,
+      "form_specificity": 0.7005,
+      "fp_fields": 236,
+      "fp_rate_clean_fields": 0.0412,
+      "instances": 702,
+      "mechanisms": [
+        "M2_lean4_constraints",
+        "M3_fco_source_binding"
+      ],
+      "recall": 0.9886,
+      "recall_by_type": {
+        "E1_swap": 1.0,
+        "E2_wrong_patient": 1.0,
+        "E3_unit": 1.0,
+        "E4_fabricated_none": 1.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.9328,
+        "E7_typo": 1.0,
+        "E8_stale": 1.0
+      }
+    },
+    "M3": {
+      "clean_fields": 5731,
+      "detected": 694,
+      "field_precision": 0.7747,
+      "form_sensitivity": 0.9978,
+      "form_specificity": 0.7056,
+      "fp_fields": 233,
+      "fp_rate_clean_fields": 0.0407,
+      "instances": 702,
+      "mechanisms": [
+        "M3_fco_source_binding"
+      ],
+      "recall": 0.9886,
+      "recall_by_type": {
+        "E1_swap": 1.0,
+        "E2_wrong_patient": 1.0,
+        "E3_unit": 1.0,
+        "E4_fabricated_none": 1.0,
+        "E5_post_seal_tamper": 1.0,
+        "E6_dropped": 0.9328,
+        "E7_typo": 1.0,
+        "E8_stale": 1.0
+      }
+    },
+    "none": {
+      "clean_fields": 5731,
+      "detected": 0,
+      "field_precision": null,
+      "form_sensitivity": 0.0,
+      "form_specificity": 1.0,
+      "fp_fields": 0,
+      "fp_rate_clean_fields": 0.0,
+      "instances": 702,
+      "mechanisms": [],
+      "recall": 0.0,
+      "recall_by_type": {
+        "E1_swap": 0.0,
+        "E2_wrong_patient": 0.0,
+        "E3_unit": 0.0,
+        "E4_fabricated_none": 0.0,
+        "E5_post_seal_tamper": 0.0,
+        "E6_dropped": 0.0,
+        "E7_typo": 0.0,
+        "E8_stale": 0.0
+      }
+    }
+  },
+  "deviation": "FP-cost bootstrap uses 1000 reps (prereg said same test as gain: 10000).",
+  "edges": [
+    {
+      "child": "M1",
+      "fp_cost": -0.0,
+      "fp_cost_ci95": [
+        -0.0,
+        -0.0
+      ],
+      "fp_cost_mcnemar_p": 1.0,
+      "kind": "single_from_none",
+      "leaf": "M1_merkle_breakpoint",
+      "parent": "none",
+      "recall_gain": 0.1624,
+      "recall_gain_ci95": [
+        0.1623931623931624,
+        0.1623931623931624
+      ],
+      "recall_gain_mcnemar_p": 9.62964972193618e-35,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 0,
+        "both_wrong": 588,
+        "challenger_only": 114,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M2",
+      "fp_cost": 0.0005,
+      "fp_cost_ci95": [
+        -0.0,
+        0.0012
+      ],
+      "fp_cost_mcnemar_p": 0.25,
+      "kind": "single_from_none",
+      "leaf": "M2_lean4_constraints",
+      "parent": "none",
+      "recall_gain": 0.2678,
+      "recall_gain_ci95": [
+        0.24643874643874644,
+        0.28917378917378916
+      ],
+      "recall_gain_mcnemar_p": 5.0978941156238473e-57,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 0,
+        "both_wrong": 514,
+        "challenger_only": 188,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M3",
+      "fp_cost": 0.0407,
+      "fp_cost_ci95": [
+        0.0356,
+        0.0459
+      ],
+      "fp_cost_mcnemar_p": 1.448908652612274e-70,
+      "kind": "single_from_none",
+      "leaf": "M3_fco_source_binding",
+      "parent": "none",
+      "recall_gain": 0.9886,
+      "recall_gain_ci95": [
+        0.98005698005698,
+        0.9957264957264957
+      ],
+      "recall_gain_mcnemar_p": 2.4333972048578046e-209,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 0,
+        "both_wrong": 8,
+        "challenger_only": 694,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M1+M2",
+      "fp_cost": 0.0005,
+      "fp_cost_ci95": [
+        -0.0,
+        0.0012
+      ],
+      "fp_cost_mcnemar_p": 0.25,
+      "kind": "addition",
+      "leaf": "M2_lean4_constraints",
+      "parent": "M1",
+      "recall_gain": 0.2635,
+      "recall_gain_ci95": [
+        0.24216524216524216,
+        0.28347578347578345
+      ],
+      "recall_gain_mcnemar_p": 4.078315292499078e-56,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 114,
+        "both_wrong": 403,
+        "challenger_only": 185,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M1+M3",
+      "fp_cost": 0.0407,
+      "fp_cost_ci95": [
+        0.0356,
+        0.0459
+      ],
+      "fp_cost_mcnemar_p": 1.448908652612274e-70,
+      "kind": "addition",
+      "leaf": "M3_fco_source_binding",
+      "parent": "M1",
+      "recall_gain": 0.8262,
+      "recall_gain_ci95": [
+        0.8176638176638177,
+        0.8333333333333334
+      ],
+      "recall_gain_mcnemar_p": 5.053968264940244e-175,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 114,
+        "both_wrong": 8,
+        "challenger_only": 580,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M1+M2",
+      "fp_cost": -0.0,
+      "fp_cost_ci95": [
+        -0.0,
+        -0.0
+      ],
+      "fp_cost_mcnemar_p": 1.0,
+      "kind": "addition",
+      "leaf": "M1_merkle_breakpoint",
+      "parent": "M2",
+      "recall_gain": 0.1581,
+      "recall_gain_ci95": [
+        0.15242165242165243,
+        0.1623931623931624
+      ],
+      "recall_gain_mcnemar_p": 7.703719777548943e-34,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 188,
+        "both_wrong": 403,
+        "challenger_only": 111,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M2+M3",
+      "fp_cost": 0.0407,
+      "fp_cost_ci95": [
+        0.0356,
+        0.0459
+      ],
+      "fp_cost_mcnemar_p": 1.448908652612274e-70,
+      "kind": "addition",
+      "leaf": "M3_fco_source_binding",
+      "parent": "M2",
+      "recall_gain": 0.7208,
+      "recall_gain_ci95": [
+        0.7008547008547008,
+        0.7421652421652422
+      ],
+      "recall_gain_mcnemar_p": 9.546676135936265e-153,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 188,
+        "both_wrong": 8,
+        "challenger_only": 506,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M1+M3",
+      "fp_cost": -0.0,
+      "fp_cost_ci95": [
+        -0.0,
+        -0.0
+      ],
+      "fp_cost_mcnemar_p": 1.0,
+      "kind": "addition",
+      "leaf": "M1_merkle_breakpoint",
+      "parent": "M3",
+      "recall_gain": 0.0,
+      "recall_gain_ci95": [
+        0.0,
+        0.0
+      ],
+      "recall_gain_mcnemar_p": 1.0,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 694,
+        "both_wrong": 8,
+        "challenger_only": 0,
+        "n": 702
+      },
+      "verdict": "NO_GAIN"
+    },
+    {
+      "child": "M2+M3",
+      "fp_cost": 0.0005,
+      "fp_cost_ci95": [
+        -0.0,
+        0.0012
+      ],
+      "fp_cost_mcnemar_p": 0.25,
+      "kind": "addition",
+      "leaf": "M2_lean4_constraints",
+      "parent": "M3",
+      "recall_gain": 0.0,
+      "recall_gain_ci95": [
+        0.0,
+        0.0
+      ],
+      "recall_gain_mcnemar_p": 1.0,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 694,
+        "both_wrong": 8,
+        "challenger_only": 0,
+        "n": 702
+      },
+      "verdict": "NO_GAIN"
+    },
+    {
+      "child": "M1+M2+M3",
+      "fp_cost": 0.0407,
+      "fp_cost_ci95": [
+        0.0356,
+        0.0459
+      ],
+      "fp_cost_mcnemar_p": 1.448908652612274e-70,
+      "kind": "lomo_restore",
+      "leaf": "M3_fco_source_binding",
+      "parent": "M1+M2",
+      "recall_gain": 0.5627,
+      "recall_gain_ci95": [
+        0.5427350427350427,
+        0.5826210826210826
+      ],
+      "recall_gain_mcnemar_p": 2.4784588255035637e-119,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 299,
+        "both_wrong": 8,
+        "challenger_only": 395,
+        "n": 702
+      },
+      "verdict": "ATTRIBUTABLE_GAIN"
+    },
+    {
+      "child": "M1+M2+M3",
+      "fp_cost": 0.0005,
+      "fp_cost_ci95": [
+        -0.0,
+        0.0012
+      ],
+      "fp_cost_mcnemar_p": 0.25,
+      "kind": "lomo_restore",
+      "leaf": "M2_lean4_constraints",
+      "parent": "M1+M3",
+      "recall_gain": 0.0,
+      "recall_gain_ci95": [
+        0.0,
+        0.0
+      ],
+      "recall_gain_mcnemar_p": 1.0,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 694,
+        "both_wrong": 8,
+        "challenger_only": 0,
+        "n": 702
+      },
+      "verdict": "NO_GAIN"
+    },
+    {
+      "child": "M1+M2+M3",
+      "fp_cost": -0.0,
+      "fp_cost_ci95": [
+        -0.0,
+        -0.0
+      ],
+      "fp_cost_mcnemar_p": 1.0,
+      "kind": "lomo_restore",
+      "leaf": "M1_merkle_breakpoint",
+      "parent": "M2+M3",
+      "recall_gain": 0.0,
+      "recall_gain_ci95": [
+        0.0,
+        0.0
+      ],
+      "recall_gain_mcnemar_p": 1.0,
+      "recall_table": {
+        "baseline_only": 0,
+        "both_correct": 694,
+        "both_wrong": 8,
+        "challenger_only": 0,
+        "n": 702
+      },
+      "verdict": "NO_GAIN"
+    }
+  ],
+  "field_auroc_full_count_score": 0.9836,
+  "forms_sha256": "9a73b604b3e26caa373767827e21efc0738880974521a41bdfd06df21bdba926",
+  "lean_flags_sha256": "b1a9a3c97439d9204c601893ae8ee0ae756a062bf6c797b2712a744237e91d28",
+  "per_mechanism": {
+    "M1_merkle_breakpoint": {
+      "lomo_ci95": [
+        0.0,
+        0.0
+      ],
+      "lomo_fp_cost": -0.0,
+      "lomo_gain": 0.0,
+      "lomo_p": 1.0,
+      "single_gain": 0.1624,
+      "single_p": 9.62964972193618e-35,
+      "unique_contribution": "NO_GAIN"
+    },
+    "M2_lean4_constraints": {
+      "lomo_ci95": [
+        0.0,
+        0.0
+      ],
+      "lomo_fp_cost": 0.0005,
+      "lomo_gain": 0.0,
+      "lomo_p": 1.0,
+      "single_gain": 0.2678,
+      "single_p": 5.0978941156238473e-57,
+      "unique_contribution": "NO_GAIN"
+    },
+    "M3_fco_source_binding": {
+      "lomo_ci95": [
+        0.5427350427350427,
+        0.5826210826210826
+      ],
+      "lomo_fp_cost": 0.0407,
+      "lomo_gain": 0.5627,
+      "lomo_p": 2.4784588255035637e-119,
+      "single_gain": 0.9886,
+      "single_p": 2.4333972048578046e-209,
+      "unique_contribution": "ATTRIBUTABLE_GAIN"
+    }
+  },
+  "prereg_sha256": "51858396e1abc1fff077138f54d561a41faf14102394ca3ff86a0908a844ed91",
+  "run_id": "FF-DETECTOR-RUN-V1",
+  "truth_sha256": "7d46e365a764035adb4f25f9273febf8bc514a01218df5578a69c56fa32b179f"
+}

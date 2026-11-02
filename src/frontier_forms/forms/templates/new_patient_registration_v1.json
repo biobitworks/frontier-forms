@@ -1,0 +1,20 @@
+{
+  "template_key": "new_patient_registration_v1",
+  "title": "New patient registration (synthetic demo form)",
+  "family": "registration",
+  "splits": ["train", "validation", "test"],
+  "modality": "html",
+  "fields": [
+    {"field_key": "full_name", "label": "Full legal name", "type": "text", "required": true, "canonical_key": "patient.full_name"},
+    {"field_key": "date_of_birth", "label": "Date of birth (YYYY-MM-DD)", "type": "text", "required": true, "canonical_key": "patient.birth_date"},
+    {"field_key": "sex", "label": "Sex", "type": "select", "required": true, "options": ["", "female", "male", "other", "unknown"], "canonical_key": "patient.gender"},
+    {"field_key": "phone", "label": "Phone number", "type": "text", "required": true, "canonical_key": "patient.phone"},
+    {"field_key": "street", "label": "Street address", "type": "text", "required": true, "canonical_key": "patient.address_line"},
+    {"field_key": "city", "label": "City", "type": "text", "required": true, "canonical_key": "patient.city"},
+    {"field_key": "state", "label": "State", "type": "text", "required": true, "canonical_key": "patient.state"},
+    {"field_key": "zip", "label": "ZIP code", "type": "text", "required": true, "canonical_key": "patient.postal_code"},
+    {"field_key": "language", "label": "Preferred language", "type": "text", "required": false, "canonical_key": "patient.language"},
+    {"field_key": "marital", "label": "Marital status", "type": "text", "required": false, "canonical_key": "patient.marital_status"},
+    {"field_key": "insurance", "label": "Primary insurance company", "type": "text", "required": true, "canonical_key": "coverage.primary_payer"}
+  ]
+}

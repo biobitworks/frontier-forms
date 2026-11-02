@@ -1,0 +1,55 @@
+{
+  "arm": {
+    "description": "Deterministic keyword autofill over the served HTML form and the teammate passport. No model, no evidence ids, no validation, no FCO/FCG.",
+    "file": "src/frontier_forms/forms/b0.py",
+    "id": "B0-v1",
+    "sha256": "a56b7e2d71990ef9d2f44470a6aae14128d5a6251bc8a641cb43e30d64f93c54"
+  },
+  "claim_ceiling": "B0 metrics describe a deterministic rule filler on synthetic Synthea data against a code oracle. Not clinical accuracy, not model performance, not evidence for any later arm.",
+  "dataset": {
+    "id": "FF-SYNTHEA-FORMS-COHORT-V1",
+    "manifest_sha256": "784808eb2c33823d11dd5ae9ff8a557f611db9ad03a02be76d4c99bdc5d978b7",
+    "n_patients": 100,
+    "raw_cohort_root": "03a6909f40eb0b61407928c420218819120115cf48ec1a8059e39d17a64cc033",
+    "subset_cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df"
+  },
+  "date": "2026-11-02",
+  "freeze_id": "FF-FORMS-B0-FREEZE-V1",
+  "harness": {
+    "file": "src/frontier_forms/forms/harness.py",
+    "sha256": "212cd626d1fb08c964dbe09f75f43d319d8a6f6ee0b7c6f7a3bf23b48ee9352c"
+  },
+  "lane": "frontier-forms",
+  "open_review_items": [
+    "Gold rule condition.active_disorder_list counts only SNOMED '(disorder)'; e.g. Prediabetes (finding) is excluded. PI to confirm before admission.",
+    "Gold rule: absence of AllergyIntolerance is needs_user_input, not 'no known allergies'. PI to confirm.",
+    "Test split is 18 patients (54 forms); small-sample limits apply to any paired comparison.",
+    "Teammate Supabase cohort count is UNVERIFIED; this freeze does not use it."
+  ],
+  "oracle": {
+    "file": "src/frontier_forms/forms/oracle.py",
+    "id": "oracle-v1",
+    "independence": "reads raw FHIR only; does not import passport.py or b0.py",
+    "sha256": "504212c8b7b572c7230b390d967e3493fe3b4e0fd4145a666761cec2a4198cc7"
+  },
+  "purpose": "Reference arm B0 for incremental additions (B0 -> +source binding -> +FCO/FCG -> +validation -> full) and LOMO removals from the full candidate.",
+  "run_v1": {
+    "n_cases": 218,
+    "output_root": "0f9e3a65057940983991fb3bfc932bc658ea722e42f336ba5fdde0917b5d8833",
+    "predictions_sha256": "29e553abbdc0263306eb778d7db6a892b59917a22d555aef6290d530c74a0ba9",
+    "replay": "byte-identical on a second run",
+    "summary_sha256": "e26ddfea6157740ecffaabffc5f2928d8fcc5db83397da95c37c7bfeb02dc776"
+  },
+  "state": "FROZEN_PENDING_PI_REVIEW",
+  "teammate_passport_builder": {
+    "file": "scripts/import_fhir.py",
+    "note": "loaded unchanged; uuid4 row ids replaced by content ids in passport.py",
+    "sha256": "68da5f73b0f5ae8464b7a3faaa7e6b31438690bb2f61f37cab62d6e3cbfe053f"
+  },
+  "template_split_policy": "registration and medication_allergy templates in all splits; urgent_care_history_v1 is a held-out layout used only for test-split patients",
+  "templates": {
+    "medication_allergy_intake_v1.json": "acb3075d3b6af1bc94b2dd173c0e6dbc89c045e1a69efa9931590a3db89745ec",
+    "new_patient_registration_v1.json": "dfb0f996355fd41fc1eebc5fbe1fb37a707486d74222d75e78bc102f34690396",
+    "urgent_care_history_v1.json": "2b90dce460a41c456c4b9e9d5a4ddac9b0095d1425682feaf6663e788691e02b"
+  }
+}

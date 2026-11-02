@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Forms | Evidence Evolution</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1220;--panel:#151f31;--border:#30405a;--muted:#b5c3d8;--ink:#f5f7fb}
+*{box-sizing:border-box}body{background:radial-gradient(ellipse at 85% 0,#22314b,#0c1220 55%);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0}
+header,main,footer{max-width:1200px;margin:0 auto;padding:24px}
+header{padding-top:40px}h1{font-size:clamp(25px,4vw,39px);margin:3px 0 8px;letter-spacing:-.04em}h2{font-size:18px;margin:0 0 12px}p{color:var(--muted)}a{color:#bcd5ff}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:#a8c2e8;font-weight:700}
+.panel{background:#141f30e8;border:1px solid var(--border);border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 12px 32px #03091533}
+.overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat{border-radius:12px;padding:12px;background:#203149}.stat strong{font-size:26px;display:block}.stat span{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}select{background:#1c2c42;border:1px solid #536781;border-radius:8px;padding:9px;color:var(--ink)}
+.legend{display:flex;gap:9px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.chip{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:middle}
+.scroll{overflow-x:auto}.matrix{display:grid;gap:5px;min-width:850px}.matrix .cell{min-height:41px;border-radius:7px;border:1px solid #53627955;min-width:110px;display:flex;align-items:center;justify-content:center;padding:5px;text-align:center;font-size:11px;overflow-wrap:anywhere}
+.matrix .row-label{text-align:right;justify-content:flex-end;padding-right:14px;min-width:180px;background:#1c2b40;font-weight:600}
+.matrix .column-head{font-weight:600;color:#c6d9f4;background:#203149;flex-direction:column;align-items:center}
+.matrix .column-head small{display:block;color:#99aec9;font-size:10px}
+.matrix button.cell{cursor:pointer;color:#fff;font-weight:700}.matrix button.cell:hover,.matrix button.cell:focus{outline:2px solid white;outline-offset:-2px}
+.PASS,.SUPPORTED{background:#116f57}.FAIL,.FAILED{background:#a43e49}.NEGATIVE{background:#9b6030}.UNKNOWN,.REPORTED,.BLOCKED{background:#8e7532}.NOT_TESTED,.NOT_COMPUTED,.PROPOSED{background:#4a5365}.OBSERVED,.EXECUTED,.IMPLEMENTED{background:#356b94}
+.detail{min-height:180px}.detail dl{display:grid;grid-template-columns:140px 1fr;gap:7px 12px;margin:0}.detail dt{color:var(--muted)}.detail dd{margin:0;overflow-wrap:anywhere}
+.note{border-left:3px solid #597cb3;padding-left:12px;color:#becbe2}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+.metric{padding:14px;border:1px solid var(--border);border-radius:12px}.metric b{font-size:18px}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+@media(max-width:700px){.overview{grid-template-columns:repeat(2,1fr)}.detail dl{grid-template-columns:1fr}.detail dt{margin-top:7px}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">Frontier Forms · FCO / FCG · Evidence ledger</div>
+<h1>Model training & validation over time</h1>
+<p>Independent provenance and scientific gates, linked to source receipts. A green computation does not imply model superiority, and a future training plan is not a completed run.</p>
+<div class="overview" id="summary" aria-live="polite"></div>
+</header>
+<main>
+<section class="panel">
+<div class="toolbar"><h2>Evidence-state heatmap</h2><label>Display <select id="view"><option value="all">All milestones</option><option value="historical">Observed / executed only</option><option value="future">Planned model lanes</option></select></label></div>
+<div class="legend" id="legend"></div>
+<div class="scroll"><div id="matrix" class="matrix" role="group" aria-label="Validation gates by milestone"></div></div>
+<p style="font-size:12px">Columns represent evidence versions, not equal elapsed time. Select a cell to inspect its status, predecessor, notes and source. RED = failure; AMBER = reported/unknown; GREEN = tested PASS; GRAY = untested/proposed; ORANGE = negative statistical result.</p>
+</section>
+<section class="panel detail" id="details" aria-live="polite"><h2>Inspect a cell</h2><p>Choose a gate and milestone above. Every cell links back to the record it derives from.</p></section>
+<section class="panel"><h2>Scientific performance evolution</h2><div class="metrics" id="metrics"></div><p id="timeline-note" class="note">A model training improvement curve requires two or more independently evaluated runs on the same frozen holdout and scorer. Historical discovery is shown separately.</p></section>
+<section class="panel">
+<h2>Evidence-chain admission contract</h2>
+<p>source SHA-256 → frozen dataset → deterministic script → source-grounded oracle → checkpoint + inference receipt → paired score → McNemar / bootstrap → challenge receipt → successor FCO → signed or computed Merkle/MMR breakpoint (if verified).</p>
+<p><strong>Unknown is not PASS.</strong> This page reads a static public-safe JSON history. Supabase live access and raw model evidence are never embedded in the browser. New runs are appended through reviewed JSON/PR writeback, preserving previous entries.</p>
+<a href="training_history.json">Inspect machine-readable history</a>
+</section>
+</main>
+<footer><p>Decision support and reproducibility index only. No production Epic writeback, clinical diagnosis, or credential storage.</p></footer>
+<script>
+(async function(){
+const colors=["PASS","FAIL","NEGATIVE","UNKNOWN","REPORTED","NOT_TESTED","PROPOSED","OBSERVED","IMPLEMENTED","EXECUTED","SUPPORTED","NOT_COMPUTED","BLOCKED"];
+const el=id=>document.getElementById(id);
+const gateName=x=>x.replace(/_/g," ").replace(/\b\w/g,y=>y.toUpperCase());
+const add=(parent,tag,text,cls)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;parent.appendChild(n);return n};
+let data;
+try{const response=await fetch("training_history.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);data=await response.json();}
+catch(err){el("matrix").textContent="Could not load training_history.json. Run a local HTTP server in dashboard/ (python3 -m http.server 8787). "+err.message;return}
+const events=data.events; const stages=data.gate_order;
+const summary=el("summary");const tested=events.filter(x=>["OBSERVED","EXECUTED","NEGATIVE","SUPPORTED"].includes(x.state));
+[[events.length,"Ledger versions"],[events.filter(x=>x.state==="SUPPORTED").length,"Supported improvements"],[events.filter(x=>x.state==="NEGATIVE").length,"Negative comparisons"],[events.filter(x=>x.state==="NOT_TESTED"||x.state==="PROPOSED").length,"Planned / not tested"]].forEach(([n,label])=>{let box=add(summary,"div",undefined,"stat");add(box,"strong",String(n));add(box,"span",label)});
+colors.forEach(s=>{const d=add(el("legend"),"div",undefined);add(d,"span","", "chip "+s);add(d,"span",s.replace(/_/g," "))});
+function show(e,gate){
+const root=el("details");root.replaceChildren();add(root,"h2",gateName(gate)+" · "+e.label);const dl=add(root,"dl");
+for(const [k,v] of [["State",e.gates[gate]],["Milestone",e.id],["Overall",e.state],["Scope",e.task],["Model",e.model],["Predecessor",e.parent||"None registered"],["Dataset freeze",e.source_freeze_id||"NOT_COMPUTED / UNKNOWN"],["Checkpoint",e.checkpoint||"NOT_TESTED"],["Merkle root",e.merkle_root||"NOT_COMPUTED"]]){add(dl,"dt",k);add(dl,"dd",String(v))}
+add(root,"p",e.notes,"note");const a=add(root,"a","Open source evidence");a.href=e.evidence_url;a.target="_blank";a.rel="noopener noreferrer";
+}
+function display(){
+const mode=el("view").value; const vis=events.filter(e=>mode==="all"||(mode==="historical"?tested.includes(e):["NOT_TESTED","PROPOSED"].includes(e.state)));
+const m=el("matrix");m.replaceChildren();m.style.gridTemplateColumns="190px repeat("+vis.length+",minmax(113px,1fr))";
+add(m,"div","Validation layer","cell row-label");
+vis.forEach(e=>{let c=add(m,"div",undefined,"cell column-head");add(c,"span",e.label);add(c,"small",e.id)});
+stages.forEach(gate=>{add(m,"div",gateName(gate),"cell row-label");vis.forEach(e=>{const state=e.gates[gate];let b=add(m,"button",state.replace(/_/g," "),"cell "+state);b.type="button";b.title=e.label+" / "+gateName(gate)+": "+state;b.addEventListener("click",()=>show(e,gate))})});
+if(vis.length)show(vis[0],stages[0]);
+}
+el("view").addEventListener("change",display);display();
+const metricRoot=el("metrics");
+const paired=events.filter(e=>Number.isFinite(e.metrics?.paired_delta_pp));
+if(paired.length){paired.forEach(e=>{const b=add(metricRoot,"div",undefined,"metric");add(b,"b",(e.metrics.paired_delta_pp>=0?"+":"")+e.metrics.paired_delta_pp.toFixed(2)+" pp");add(b,"span",e.label+" · p="+e.metrics.mcnemar_p+" · "+e.state);const a=add(b,"a","Source");a.href=e.evidence_url;a.target="_blank";a.rel="noopener"})}
+else add(metricRoot,"p","No paired-model effect estimates available yet.");
+const ehr=paired.filter(x=>x.task.toLowerCase().includes("ehr"));
+el("timeline-note").textContent=ehr.length<2?"Training improvement curve: NOT_COMPUTED. "+ehr.length+" comparable EHR evaluations recorded; at least two matched runs required. Historical discovery experiments are not EHR model improvement.":"Comparable EHR evaluations exist; inspect paired statistics and holdout independence before promotion.";
+})();
+</script>
+</body>
+</html>

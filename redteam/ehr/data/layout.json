@@ -1,0 +1,99 @@
+{
+ "height": 1316,
+ "row_h": 72,
+ "rows": {
+  "birth_date": {
+   "fhir": "Patient.birthDate",
+   "label": "Date of birth (YYYY-MM-DD)",
+   "type": "date",
+   "y0": 332,
+   "y1": 390
+  },
+  "body_height_cm": {
+   "fhir": "Observation[8302-2].valueQuantity.value",
+   "label": "Height (cm)",
+   "type": "quantity",
+   "y0": 764,
+   "y1": 822
+  },
+  "body_weight_kg": {
+   "fhir": "Observation[29463-7].valueQuantity.value",
+   "label": "Weight (kg)",
+   "type": "quantity",
+   "y0": 836,
+   "y1": 894
+  },
+  "city": {
+   "fhir": "Patient.address[0].city",
+   "label": "City",
+   "type": "text",
+   "y0": 548,
+   "y1": 606
+  },
+  "diastolic_bp": {
+   "fhir": "Observation[8462-4].valueQuantity.value",
+   "label": "Diastolic BP (mmHg)",
+   "type": "quantity",
+   "y0": 980,
+   "y1": 1038
+  },
+  "family_name": {
+   "fhir": "Patient.name[0].family",
+   "label": "Last name",
+   "type": "text",
+   "y0": 188,
+   "y1": 246
+  },
+  "gender": {
+   "fhir": "Patient.gender",
+   "label": "Sex (M/F)",
+   "type": "code",
+   "y0": 404,
+   "y1": 462
+  },
+  "given_name": {
+   "fhir": "Patient.name[0].given[0]",
+   "label": "First name",
+   "type": "text",
+   "y0": 260,
+   "y1": 318
+  },
+  "heart_rate": {
+   "fhir": "Observation[8867-4].valueQuantity.value",
+   "label": "Heart rate (/min)",
+   "type": "quantity",
+   "y0": 1052,
+   "y1": 1110
+  },
+  "mrn": {
+   "fhir": "Patient.identifier[0].value",
+   "label": "MRN",
+   "type": "id",
+   "y0": 476,
+   "y1": 534
+  },
+  "postal_code": {
+   "fhir": "Patient.address[0].postalCode",
+   "label": "ZIP",
+   "type": "zip",
+   "y0": 692,
+   "y1": 750
+  },
+  "state": {
+   "fhir": "Patient.address[0].state",
+   "label": "State",
+   "type": "text",
+   "y0": 620,
+   "y1": 678
+  },
+  "systolic_bp": {
+   "fhir": "Observation[8480-6].valueQuantity.value",
+   "label": "Systolic BP (mmHg)",
+   "type": "quantity",
+   "y0": 908,
+   "y1": 966
+  }
+ },
+ "value_x": 420,
+ "width": 1008
+}

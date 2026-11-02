@@ -1,0 +1,190 @@
+{
+  "evidence_source": "PROVIDED",
+  "ln_mini_728": {
+    "assistant_turns_in_public_inputs": 0,
+    "inclusion_proofs_verified_against_pin": "728/728",
+    "input_records_identical_to_disk": "728/728",
+    "leaves": 729,
+    "odd_leaf_count_duplicate_ambiguity": "PRESENT",
+    "oracle_marker_strings_in_public_files": 0,
+    "pinned_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "recipe_sha_vs_manifest": "PASS",
+    "recomputed_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "root_vs_manifest": "PASS",
+    "root_vs_pin": "PASS",
+    "rows": 728,
+    "snapshot_id_rederived": "PASS",
+    "source_fco_id_vs_manifest": "PASS",
+    "source_sha256": "544e0bf2975b04cf1d2be6654b4baccbe04db3cf4f167d80c81e25a9fc3fe72c",
+    "source_sha_vs_manifest": "PASS"
+  },
+  "meaning": "INTEGRITY_ONLY_NOT_CAUSALITY",
+  "merkle_impl_sha256": "e6cff42e7405adb8ec16a63b4eed8e7fa341dced0c5e078fde676b032427b096",
+  "pins_reproduced": {
+    "LN_MINI_728": true,
+    "PREDECESSOR_15": true,
+    "REVIEW_66": true,
+    "REVIEW_79": true
+  },
+  "predecessor_15": {
+    "context_digest": "PASS",
+    "edges_digest": "PASS",
+    "fcg_dangling_endpoints": [
+      {
+        "end": "target",
+        "relation": "PROPOSED_SOURCE_FOR",
+        "status": "NOT_TESTED",
+        "value": "biobitworks/frontier-forms"
+      },
+      {
+        "end": "target",
+        "relation": "PROPOSED_COMPUTE",
+        "status": "NOT_EXECUTED",
+        "value": "DGX"
+      }
+    ],
+    "fcg_edges": 4,
+    "leaf_count": 15,
+    "leaf_order_vs_manifest": "PASS",
+    "odd_leaf_count_duplicate_ambiguity": "PRESENT",
+    "parent_root_in_context_matches_728_pin": "PASS",
+    "pinned_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "recomputed_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "root_vs_manifest": "PASS",
+    "root_vs_pin": "PASS",
+    "source_bytes": "PASS",
+    "source_files": [
+      {
+        "expected_sha256": "544e0bf2975b04cf1d2be6654b4baccbe04db3cf4f167d80c81e25a9fc3fe72c",
+        "observed_sha256": "544e0bf2975b04cf1d2be6654b4baccbe04db3cf4f167d80c81e25a9fc3fe72c",
+        "path": "datasets/longebench/mini/eval-00000-of-00001.parquet",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "6f8462be402bb95cba1aeb0043e5b9c78b01d0d35aa5d07de525b85231949e6b",
+        "observed_sha256": "6f8462be402bb95cba1aeb0043e5b9c78b01d0d35aa5d07de525b85231949e6b",
+        "path": "datasets/longebench/benchmark/eval-00000-of-00001.parquet",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "990d52064037bbf83d10f13163da428964b56ae673b7f39bf549d78c1e7eda16",
+        "observed_sha256": "990d52064037bbf83d10f13163da428964b56ae673b7f39bf549d78c1e7eda16",
+        "path": "datasets/synthea_100_csv/synthea_sample_data_csv_latest.zip",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "observed_sha256": "f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "path": "models/Qwen3-0.6B-Longevity/model.safetensors",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "2d3e992b480850b5c2c358e37f8a4b09cfb103a0f0b1cea80888d5ddfedc1595",
+        "observed_sha256": "2d3e992b480850b5c2c358e37f8a4b09cfb103a0f0b1cea80888d5ddfedc1595",
+        "path": "receipts/megatron_git_head.txt",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "6ba4e17f01f489d175a7d56f0d8eac4f52f12e4a2f3be479d638f6c1b40be1f3",
+        "observed_sha256": "6ba4e17f01f489d175a7d56f0d8eac4f52f12e4a2f3be479d638f6c1b40be1f3",
+        "path": "custody/snapshots/LN-MINI-ec719d04c3707ca1cb/manifest.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "46c48f08add45a2bc5941fba2ddca682e0ac136d718232aafa5c011438f92007",
+        "observed_sha256": "46c48f08add45a2bc5941fba2ddca682e0ac136d718232aafa5c011438f92007",
+        "path": "eval/longebench_split_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "6f721e37e62ba8f4251f01d9fb3f77fe797719086a7538cc66b12dfcca53c6bc",
+        "observed_sha256": "6f721e37e62ba8f4251f01d9fb3f77fe797719086a7538cc66b12dfcca53c6bc",
+        "path": "eval/lb_mini_discovery_lfm2-1.2b-longevity-q4km_latest.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "e853588825fdb2435efa3da1461a1b4485bceb239e740fab27c547bafae5cee6",
+        "observed_sha256": "e853588825fdb2435efa3da1461a1b4485bceb239e740fab27c547bafae5cee6",
+        "path": "eval/insilico_qwen3_06b_discovery_attempt3.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "ef4117e865eb7ebc7297ab0962719118684932dcfefa860b7d482929b484186a",
+        "observed_sha256": "ef4117e865eb7ebc7297ab0962719118684932dcfefa860b7d482929b484186a",
+        "path": "eval/paired_discovery_mcnemar_bootstrap.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "6ea8fc7b8a5b6d94fe1a20d4b7d8c9355e78c53fce3a59f13dd5e9c0027896fc",
+        "observed_sha256": "6ea8fc7b8a5b6d94fe1a20d4b7d8c9355e78c53fce3a59f13dd5e9c0027896fc",
+        "path": "eval/mcnemar_bootstrap.py",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "ba802babbbfdf61bdeff3704effbf46144c2484c4e4a7fd29bd351200d21d399",
+        "observed_sha256": "ba802babbbfdf61bdeff3704effbf46144c2484c4e4a7fd29bd351200d21d399",
+        "path": "tests/test_paired_stats.py",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "c45f7fc9313908c9ed0851912e46729adefd6c81614ce1c7b81200038c60ec03",
+        "observed_sha256": "c45f7fc9313908c9ed0851912e46729adefd6c81614ce1c7b81200038c60ec03",
+        "path": "contracts/VALIDATION_PROTOCOL.md",
+        "status": "PASS"
+      }
+    ]
+  },
+  "repo_head": "820e2f41a6540f74d7c0d7e82341dd376a36e686",
+  "review_successors": [
+    {
+      "bundle": "REVIEW-2f1cfafda7de0153",
+      "declared_parent_commit": "ee75d57a65ef27ed80811fea0f9c8571ab184ac1",
+      "declared_parent_exists": "PASS",
+      "declared_parent_root": "513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730",
+      "introducing_commit": "da953450d33a721682191f77589c275e0b49731c",
+      "leaf_byte_failures": [],
+      "leaf_bytes_at_introducing_commit": "PASS",
+      "leaf_count": 79,
+      "leaf_order_vs_manifest": "PASS",
+      "matches_pin": "REVIEW_79",
+      "parent_pointer_field_itself_hashed": "NO",
+      "parent_root_string_in_committed_leaf": "YES",
+      "recomputed_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "root_vs_manifest": "PASS"
+    },
+    {
+      "bundle": "REVIEW-37152dc823a8009f",
+      "declared_parent_commit": "67bf6b0ba51dc7ed792c139f37fcc648653611c4",
+      "declared_parent_exists": "PASS",
+      "declared_parent_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "introducing_commit": "bf58691bbf93753a9a63b4722e479d8b044fcb01",
+      "leaf_byte_failures": [],
+      "leaf_bytes_at_introducing_commit": "PASS",
+      "leaf_count": 65,
+      "leaf_order_vs_manifest": "PASS",
+      "parent_pointer_field_itself_hashed": "NO",
+      "parent_root_string_in_committed_leaf": "YES",
+      "recomputed_root": "37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7",
+      "root_vs_manifest": "PASS"
+    },
+    {
+      "bundle": "REVIEW-513cb1f8e83d0eae",
+      "declared_parent_commit": "bf58691bbf93753a9a63b4722e479d8b044fcb01",
+      "declared_parent_exists": "PASS",
+      "declared_parent_root": "37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7",
+      "introducing_commit": "ee75d57a65ef27ed80811fea0f9c8571ab184ac1",
+      "leaf_byte_failures": [],
+      "leaf_bytes_at_introducing_commit": "PASS",
+      "leaf_count": 66,
+      "leaf_order_vs_manifest": "PASS",
+      "matches_pin": "REVIEW_66",
+      "parent_pointer_field_itself_hashed": "NO",
+      "parent_root_string_in_committed_leaf": "YES",
+      "recomputed_root": "513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730",
+      "root_vs_manifest": "PASS"
+    }
+  ],
+  "schema": "claude.redteam.root_replay.v1",
+  "signature": "NOT_SIGNED",
+  "verifier_sha256": "8435977729e8ef79865100f40e23b2f11ed93b26e0b7198bdaf3665b7078af93"
+}
