@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Hoppe",
+    "text": "Hoppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Lenny",
+    "text": "Lenny"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "1938-03-19",
+    "text": "1938-03-19"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress (finding); Limited social contact (finding)",
+    "text": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "102.1",
+    "text": "102.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}
