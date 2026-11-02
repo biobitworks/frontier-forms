@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Frontier Forms — Checkpoint + LOMO Statistical Timeline</title>
+<style>
+:root{font:14px/1.45 -apple-system,BlinkMacSystemFont,Inter,Arial,sans-serif;color:#20364a;background:#f4f7fa}
+*{box-sizing:border-box}body{margin:0}header{padding:28px max(24px,calc((100vw - 1200px)/2));background:#10283d;color:#fff}
+header .eyebrow{letter-spacing:.13em;font-size:11px;color:#9cc3dd;font-weight:700}h1{font-size:25px;margin:7px 0}header p{color:#cbdbe8;max-width:900px;margin:0}
+main{max-width:1230px;padding:24px;margin:auto}.grid{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px;margin-bottom:18px}
+.card,.panel{background:#fff;border:1px solid #dde5ed;border-radius:12px;padding:16px;box-shadow:0 2px 9px #13283e09}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.07em;color:#627789;text-transform:uppercase}
+.value{font-size:27px;font-weight:750;margin:5px 0;color:#19364f}.note{font-size:12px;color:#5c6d7c}
+section{margin:0 0 16px}h2{font-size:17px;margin:0 0 12px;color:#17354c}
+.controls{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:10px 0}select{border:1px solid #bfcedb;border-radius:7px;padding:7px;background:#fff}
+.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}
+.bar{height:11px;background:#ebeff3;position:relative;border-radius:20px;overflow:visible;width:230px}
+.bar .zero{position:absolute;left:50%;top:-4px;height:19px;border-left:1px solid #879bab}
+.bar .effect{position:absolute;height:10px;top:1px;background:#557da5;border-radius:20px}
+.bar .range{position:absolute;height:3px;top:4px;background:#f0a34d}
+table{border-collapse:collapse;width:100%;font-size:12px;min-width:900px}th{text-align:left;font-size:11px;letter-spacing:.04em;color:#597083;background:#eff4f7;padding:9px}td{vertical-align:top;padding:9px;border-top:1px solid #e8edf2}tbody tr:hover{background:#f7fafc}
+.scroll{max-width:100%;overflow:auto}
+.state{font-weight:700;font-size:10px;white-space:nowrap;letter-spacing:.04em}
+.negative{color:#b04d27}.discovery{color:#1f7c60}.unknown{color:#697e92}
+#trainingChart{max-width:100%;display:block;background:linear-gradient(90deg,#fff,#fbfdfe);border-radius:8px}
+.caption{font-size:12px;color:#66798a;margin-top:6px}
+details{border-top:1px solid #dce5ed;margin-top:10px;padding-top:8px}summary{cursor:pointer;font-weight:600}
+a{color:#155b9b}code{font-size:12px}@media(max-width:750px){.grid{grid-template-columns:repeat(2,minmax(130px,1fr))}main{padding:12px}.card,.panel{padding:12px}}
+</style></head>
+<body><header><div class="eyebrow">FRONTIER FORMS  ·  SOURCE-BACKED AUDIT</div>
+<h1>Training checkpoints × FCO/FCG ablations</h1>
+<p>Three separate axes: <b>neural weights</b>, <b>single-leaf context/validator changes</b>, and <b>measured outcomes</b>. Root changes represent evidence identity, never proof of improvement. Vita DAISY is shown as an abstract admission gate only.</p></header>
+<main><div id="status" class="note">Loading local snapshot…</div>
+<div class="grid" id="summary"></div>
+<section class="panel"><h2>1. Actual model learning curve</h2>
+<div class="note">Qwen2.5-0.5B-Instruct LoRA · validation completion-token cross-entropy loss · epoch checkpoints only</div>
+<svg id="trainingChart" viewBox="0 0 1000 245" role="img" aria-label="Qwen validation loss by epoch"></svg>
+<div class="caption" id="trainNote"></div></section>
+<section class="panel"><h2>2. Same-case FCO/FCG LOMO outcomes</h2>
+<div class="controls"><label for="family">Evidence family</label>
+<select id="family"><option value="fco_lomo">Form filling — 54 test forms</option><option value="detector_lomo">Synthetic error detection — 702 injections</option></select>
+<span class="note">Effect size in percentage points; 95% CI shown where available.</span></div>
+<div class="scroll"><table><thead><tr><th>Single changed leaf / parent → child</th><th>Δ pp</th><th>95% CI</th><th>McNemar p</th><th>Holm-adjusted p</th><th>Evidence</th><th>Weights</th></tr></thead><tbody id="ablationRows"></tbody></table></div>
+<p class="caption" id="ablationNote"></p></section>
+<section class="panel"><h2>3. Trained weights by sample size — not successive epochs</h2>
+<p class="caption">Random Forest comparisons use distinct fitted checkpoints and the same 3 rendered layouts on 18 synthetic test patients. This is a sample-size sensitivity plot, not a longitudinal learning curve.</p>
+<div class="scroll"><table><thead><tr><th>Train patients</th><th>Model and checkpoint SHA-256</th><th>Held-out F1</th><th>CV control F1</th><th>Δ pp</th><th>95% patient CI (full-form)</th><th>State</th></tr></thead><tbody id="rfRows"></tbody></table></div></section>
+<section class="panel"><h2>4. Breakpoint and provenance ledger</h2>
+<div class="scroll"><table><thead><tr><th>Source / child</th><th>Metric</th><th>Verified root / weight</th><th>Status</th><th>Claim limit</th></tr></thead><tbody id="provenanceRows"></tbody></table></div>
+<details><summary>Strict interpretation and promotion gates</summary>
+<p class="caption">A point plotted under “training” must be a real time-ordered checkpoint of the <b>same model</b> with matching source, split, oracle, decoding and scoring. Different models, training sizes or FCO modules must never be connected as a learning curve. The success criterion is a paired outcome gain with exact McNemar, patient-level clustered bootstrap CI excluding zero, multiple-comparison adjustment where relevant, an independent untouched cohort/template and safety guardrails. Discovery-only tests cannot pass this gate merely because p &lt; 0.05.</p>
+<p class="caption">A single form’s fields and multiple forms from one patient are correlated. Exact case-level McNemar is descriptive when patient clusters repeat. The patient-cluster bootstrap is the more appropriate uncertainty assessment; even that does not repair test-set leakage.</p>
+</details></section><p class="note" id="footer"></p></main>
+<script>
+"use strict";
+const el=id=>document.getElementById(id);
+function esc(x){return String(x??"NULL").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function fmt(x,d=2){return typeof x==="number"?x.toFixed(d):"NOT_COMPUTED"}
+function pct(x){return typeof x==="number"?(x*100).toFixed(1):"—"}
+function short(x){return x?String(x).slice(0,13)+"…":"NOT_COMPUTED"}
+function status(s){let cl=/NEGATIVE|TIE/.test(s)?"negative":/POSITIVE/.test(s)?"discovery":"unknown";return '<span class="state '+cl+'">'+esc(s)+'</span>'}
+function cards(data){
+ const e=data.events,train=e.find(x=>x.family==="actual_training_snapshot");
+ let c=[
+ ["Training validation points",String((train?.points||[]).filter(x=>x.val_loss!=null).length),"No line across a single epoch"],
+ ["Confirmed trained accuracy gain","0","No validated model-weight superiority"],
+ ["Synthetic FCO LOMO edges",String(e.filter(x=>x.family==="fco_lomo").length),"Original benchmark; discovery only"],
+ ["Computed evidence root",short(data.root),"SHA-256 over the displayed immutable events"]];
+ el("summary").innerHTML=c.map(x=>'<div class="card"><div class="kicker">'+esc(x[0])+'</div><div class="value">'+esc(x[1])+'</div><div class="note">'+esc(x[2])+'</div></div>').join("")
+}
+function chart(train){
+ const svg=el("trainingChart"),pts=(train?.points||[]).filter(x=>x.val_loss!=null),w=1000,h=245;
+ const y0=35,y1=195,x0=85,x1=940;
+ let lo=Math.min(...pts.map(x=>x.val_loss),0.0),hi=Math.max(...pts.map(x=>x.val_loss),1.1);
+ if(hi<=lo)hi=lo+1;
+ const X=ep=>x0+(ep/(Math.max(2,...pts.map(p=>p.epoch||0))))*(x1-x0);
+ const Y=v=>y1-(v-lo)/(hi-lo)*(y1-y0);
+ let parts=['<line x1="85" x2="940" y1="195" y2="195" stroke="#93a9b7"/><line x1="85" x2="85" y1="35" y2="195" stroke="#93a9b7"/>'];
+ for(let i=0;i<=4;i++){let v=lo+(hi-lo)*i/4,y=Y(v);parts.push('<line x1="85" x2="940" y1="'+y+'" y2="'+y+'" stroke="#e9eef3"/><text x="75" y="'+(y+4)+'" text-anchor="end" font-size="12" fill="#597185">'+v.toFixed(3)+'</text>')}
+ pts.forEach(p=>parts.push('<circle cx="'+X(p.epoch||0)+'" cy="'+Y(p.val_loss)+'" r="6" fill="#2777ac"/><text x="'+(X(p.epoch||0)+12)+'" y="'+(Y(p.val_loss)-10)+'" font-size="12" fill="#19364f">epoch '+p.epoch+': '+p.val_loss.toFixed(5)+'</text>'));
+ if(pts.length>1){let path=pts.map(p=>X(p.epoch||0)+","+Y(p.val_loss)).join(" ");parts.push('<polyline points="'+path+'" fill="none" stroke="#2777ac" stroke-width="2"/>')}
+ parts.push('<text x="510" y="226" text-anchor="middle" fill="#597185" font-size="12">LoRA training epoch (not observation time)</text>');
+ svg.innerHTML=parts.join("");
+ el("trainNote").textContent=pts.length<=1?"Only initial validation loss observed; epoch-1 weight change and held-out paired gains are NOT_COMPUTED. Log SHA: "+short(train?.training_log_sha256):"Multiple epoch losses observed; loss decline is not a paired held-out accuracy gain. Check adapter hashes and matched evaluation separately."
+}
+let data;
+function ablations(){
+ if(!data)return;
+ const fam=el("family").value;
+ const rows=data.events.filter(x=>x.family===fam);
+ el("ablationRows").innerHTML=rows.map(r=>{
+ const ci=r.ci95_patient_cluster||r.ci95_error_type_stratified;
+ return '<tr><td><b>'+esc(r.leaf)+'</b><div class="note mono">'+esc(r.parent)+' → '+esc(r.child)+'</div></td>'+
+ '<td><b>'+fmt(r.delta*100,2)+'</b></td><td class="mono">'+(ci?'['+fmt(ci[0]*100,2)+', '+fmt(ci[1]*100,2)+'] pp':'NOT_COMPUTED')+'</td>'+
+ '<td class="mono">'+fmt(r.mcnemar_p_two_sided,6)+'</td><td class="mono">'+fmt(r.holm_adjusted_p,6)+'</td><td>'+status(r.status)+'</td><td class="note">UNCHANGED</td></tr>'
+ }).join("");
+ el("ablationNote").textContent=fam==="fco_lomo"?
+ "Test: 18 patients × 3 forms = 54 correlated observations. CI: 10,000 patient-cluster replicates; exact case-level McNemar p is descriptive. L1 and L3 interact. Design was informed by test data: no independent promotion.":
+ "Injection benchmark: 702 simulated errors. Main CI stratifies by error type, not patient. 4.1% source-binding false-positive cost; source-derived labels cause high detector recall by design. Not a trained-model or clinical improvement."
+}
+function models(){
+ const rows=data.events.filter(x=>x.family==="training_size_cross_section").sort((a,b)=>a.train_patients-b.train_patients);
+ el("rfRows").innerHTML=rows.map(r=>'<tr><td>'+r.train_patients+'</td><td>'+esc(r.model)+'<div class="mono note">'+short(r.model_weights_sha256)+'</div></td><td>'+fmt(r.value,4)+'</td><td>'+fmt(r.control_value,4)+'</td><td>'+fmt(r.delta*100,2)+'</td><td class="mono">['+r.ci95_patient_cluster.map(v=>fmt(v*100,2)).join(', ')+'] pp</td><td>'+status(r.status)+'</td></tr>').join("")
+}
+function provenance(){
+ const rows=data.events.filter(x=>!["fco_lomo","detector_lomo","training_size_cross_section"].includes(x.family));
+ el("provenanceRows").innerHTML=rows.map(r=>'<tr><td>'+esc(r.child)+'</td><td>'+esc(r.metric)+'</td><td class="mono">'+short(r.model_weights_sha256||r.source_root||r.source_graph_root)+'</td><td>'+status(r.status)+'</td><td>'+esc(r.claim_ceiling||r.critical_limitation||"")+'</td></tr>').join("")
+ el("footer").textContent="Frozen event snapshot: "+data.source_snapshot+" · Breakpoint root: "+data.root+" · observed "+data.observed_at_utc+" · Vita DAISY lane intentionally not merged."
+}
+fetch("./training_progress_latest.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(j=>{data=j;el("status").textContent="Last evidence snapshot: "+j.observed_at_utc+" · "+j.events.length+" verified-source event records · no external fetch";cards(j);chart(j.events.find(e=>e.family==="actual_training_snapshot"));models();provenance();ablations();el("family").addEventListener("change",ablations)}).catch(err=>{el("status").textContent="Snapshot not available: "+err.message+". Run from local dashboard directory: python3 -m http.server 8787 --bind 127.0.0.1";});
+</script></body></html>

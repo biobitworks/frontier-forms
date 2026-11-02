@@ -1,0 +1,42 @@
+{
+  "base_fcg_leaves": [
+    "L1_evidence_abstain"
+  ],
+  "base_model_weights_sha256": "NOT_APPLICABLE",
+  "baseline_prediction_file_sha256": "9169742764d28dece7a08284be28770fab81095fcbb8191a340c3a9fdc9ddcfe",
+  "bootstrap_reps": 10000,
+  "challenger_prediction_file_sha256": "2d38a32260503f846a9b36423fc23f6baa0cd078712361cdda9312bae56609ca",
+  "changed_leaves": [
+    "L3_clinical_filter"
+  ],
+  "child_fcg_leaves": [
+    "L1_evidence_abstain",
+    "L3_clinical_filter"
+  ],
+  "child_model_weights_sha256": "NOT_APPLICABLE",
+  "claim": "DISCOVERY_ONLY_NO_CAUSAL_PROMOTION",
+  "delta": 0.2222222222222222,
+  "frozen_cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "identical_harness_proof": "NOT_TESTED: add pinned prompts/parser/inference/model settings",
+  "independent_untouched_replication": "NOT_TESTED",
+  "intervention": "SINGLE_FCG_LEAF",
+  "matched_oracle_sha256": "NOT_COMPUTED: form case digests only; independent oracle digest to be provided",
+  "mcnemar_exact_two_sided": 0.00048828125,
+  "paired": {
+    "baseline_only": 0,
+    "both_correct": 18,
+    "both_wrong": 24,
+    "challenger_only": 12,
+    "matched_cases": 54,
+    "matched_patients": 18
+  },
+  "patient_cluster_bootstrap95": [
+    0.07407407407407407,
+    0.37037037037037035
+  ],
+  "schema": "frontier-forms.paired-checkpoint-gate.v1",
+  "seed": 20261102,
+  "split": "test",
+  "weight_change": false,
+  "weight_model_identity": "NOT_APPLICABLE: deterministic FCO arms"
+}
