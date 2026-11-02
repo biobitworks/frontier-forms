@@ -1,0 +1,13 @@
+{
+  "caught_during_authoring": "An example asserting inRange \"68.1\" 300 2500 = false failed to compile (68.1 cm is 681 tenths, inside the range); the example was wrong and was corrected before any scoring.",
+  "compile": "lean lean/FormChecks.lean -> exit 0 (all 11 native_decide examples hold)",
+  "output": "evidence/forms_detectors/run_v1/lean_flags.jsonl",
+  "output_sha256": "b1a9a3c97439d9204c601893ae8ee0ae756a062bf6c797b2712a744237e91d28",
+  "proof_strength": "native_decide: evaluated by compiled code, trusts the Lean compiler; not a pure kernel proof",
+  "run": "lean --run lean/FormChecks.lean data/forms_injected_v1/forms.jsonl",
+  "source": "lean/FormChecks.lean",
+  "source_sha256": "3bfa6d615a596b49f011aff3146f368b6b086be2bb706d17f77a5836fe94804c",
+  "tool": "Lean (version 4.15.0, x86_64-unknown-linux-gnu, commit 11651562caae, Release)",
+  "toolchain_archive": "https://github.com/leanprover/lean4/releases/download/v4.15.0/lean-4.15.0-linux.tar.zst",
+  "toolchain_archive_sha256": "af71a2569a9f68337de2434829b3008cd8e32c436e9cb6bd8c84a2c2ba3585c9"
+}

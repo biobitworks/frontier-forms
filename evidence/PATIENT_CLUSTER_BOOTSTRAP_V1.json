@@ -1,0 +1,488 @@
+{
+ "method": "paired bootstrap resampling patients with replacement (all forms of a patient move together); 10000 reps, seed 20261102, percentile 95% CI",
+ "rows": [
+  {
+   "child": "B0+L1",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.032
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0321
+   ],
+   "delta": 0.0138,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 0.25,
+   "n_forms": 218,
+   "parent": "B0",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 218,
+   "parent": "B0",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L3",
+   "ci_patient_cluster_95": [
+    0.0093,
+    0.0563
+   ],
+   "ci_template_stratified_95": [
+    0.0092,
+    0.055
+   ],
+   "delta": 0.0321,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 0.015625,
+   "n_forms": 218,
+   "parent": "B0",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.032
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0321
+   ],
+   "delta": 0.0138,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 0.25,
+   "n_forms": 218,
+   "parent": "B0+L2",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0+L2",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L3",
+   "ci_patient_cluster_95": [
+    0.1696,
+    0.2818
+   ],
+   "ci_template_stratified_95": [
+    0.1743,
+    0.2752
+   ],
+   "delta": 0.2248,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 3.1796787425264483e-13,
+   "n_forms": 218,
+   "parent": "B0+L3",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L3",
+   "ci_patient_cluster_95": [
+    0.0741,
+    0.3704
+   ],
+   "ci_template_stratified_95": [
+    0.1296,
+    0.3333
+   ],
+   "delta": 0.2222,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 0.00048828125,
+   "n_forms": 54,
+   "parent": "B0+L3",
+   "patients": 18,
+   "positive_under_both": true,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 218,
+   "parent": "B0+L1",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L2",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0+L1",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 218,
+   "parent": "B0+L3",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0+L3",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L3",
+   "ci_patient_cluster_95": [
+    0.1894,
+    0.2982
+   ],
+   "ci_template_stratified_95": [
+    0.1927,
+    0.289
+   ],
+   "delta": 0.2431,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 2.220446049250313e-16,
+   "n_forms": 218,
+   "parent": "B0+L1",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L3",
+   "ci_patient_cluster_95": [
+    0.0741,
+    0.3704
+   ],
+   "ci_template_stratified_95": [
+    0.1296,
+    0.3333
+   ],
+   "delta": 0.2222,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 0.00048828125,
+   "n_forms": 54,
+   "parent": "B0+L1",
+   "patients": 18,
+   "positive_under_both": true,
+   "split": "test"
+  },
+  {
+   "child": "B0+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0093,
+    0.0563
+   ],
+   "ci_template_stratified_95": [
+    0.0092,
+    0.055
+   ],
+   "delta": 0.0321,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 0.015625,
+   "n_forms": 218,
+   "parent": "B0+L2",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0+L2",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.1696,
+    0.2818
+   ],
+   "ci_template_stratified_95": [
+    0.1743,
+    0.2752
+   ],
+   "delta": 0.2248,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 3.1796787425264483e-13,
+   "n_forms": 218,
+   "parent": "B0+L2+L3",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0741,
+    0.3704
+   ],
+   "ci_template_stratified_95": [
+    0.1296,
+    0.3333
+   ],
+   "delta": 0.2222,
+   "family": "module_arms",
+   "leaf": "L1_evidence_abstain",
+   "mcnemar_p": 0.00048828125,
+   "n_forms": 54,
+   "parent": "B0+L2+L3",
+   "patients": 18,
+   "positive_under_both": true,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 218,
+   "parent": "B0+L1+L3",
+   "patients": 100,
+   "positive_under_both": false,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0,
+    0.0
+   ],
+   "ci_template_stratified_95": [
+    0.0,
+    0.0
+   ],
+   "delta": 0.0,
+   "family": "module_arms",
+   "leaf": "L2_unit_validation",
+   "mcnemar_p": 1.0,
+   "n_forms": 54,
+   "parent": "B0+L1+L3",
+   "patients": 18,
+   "positive_under_both": false,
+   "split": "test"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.1894,
+    0.2982
+   ],
+   "ci_template_stratified_95": [
+    0.1927,
+    0.289
+   ],
+   "delta": 0.2431,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 2.220446049250313e-16,
+   "n_forms": 218,
+   "parent": "B0+L1+L2",
+   "patients": 100,
+   "positive_under_both": true,
+   "split": "overall"
+  },
+  {
+   "child": "B0+L1+L2+L3",
+   "ci_patient_cluster_95": [
+    0.0741,
+    0.3704
+   ],
+   "ci_template_stratified_95": [
+    0.1296,
+    0.3333
+   ],
+   "delta": 0.2222,
+   "family": "module_arms",
+   "leaf": "L3_clinical_filter",
+   "mcnemar_p": 0.00048828125,
+   "n_forms": 54,
+   "parent": "B0+L1+L2",
+   "patients": 18,
+   "positive_under_both": true,
+   "split": "test"
+  }
+ ],
+ "sources_sha256": {
+  "FCG_ARMS_V1": "90b06b191b87fe7eb2a89624f8a3d4b7814b6928d38a367020ccd07a4845524d"
+ }
+}

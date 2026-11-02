@@ -1,0 +1,17 @@
+{
+  "F01_note": "duplicate_last_leaf_and_count_forged=PASS -> count binding must live inside a hashed leaf or a signature (fixed in fco.redteam_successor.v1 context leaf)",
+  "duplicate_last_leaf_and_count_forged": "PASS",
+  "duplicate_last_leaf_appended": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "forged_edge_status": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "forged_parent_root_in_context": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "forged_source_leaf_sha": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "pairs_dropped_case": "REJECT:PAIR_COUNT_OR_DUPLICATES",
+  "pairs_duplicate_case": "REJECT:PAIR_COUNT_OR_DUPLICATES",
+  "pairs_heldout_leak": "REJECT:NON_DISCOVERY_OR_LEAKED_HELDOUT_CASE",
+  "pairs_untampered_control": "PASS",
+  "pairs_wrong_task_binding": "REJECT:WRONG_TASK_OR_SPLIT_BINDING",
+  "removed_leaf": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "reordered_leaves": "REJECT:ROOT_MISMATCH expected=9e4d4df8aa7a887ec",
+  "supabase_live_rows_as_benchmark": "REJECT:state=REPORTED_IN_PROGRESS;root=NOT_COMPUTED",
+  "untampered_control": "PASS"
+}

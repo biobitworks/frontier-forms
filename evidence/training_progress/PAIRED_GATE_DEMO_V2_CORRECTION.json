@@ -1,0 +1,7 @@
+{
+ "predecessor":"PAIRED_GATE_SINGLE_FCG_L3_DEMO_V2.json",
+ "failure_state":"FAILED_TEST",
+ "cause":"The V2 receipt corrects the weight hash value to NOT_APPLICABLE but omits the explicitly required weight_model_identity field",
+ "repair":"V3 appends the explicit deterministic FCO/no-learned-weight classification without changing the paired outcomes",
+ "previous_result_preserved":true
+}

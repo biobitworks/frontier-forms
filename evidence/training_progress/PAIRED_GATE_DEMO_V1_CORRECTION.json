@@ -1,0 +1,8 @@
+{
+  "predecessor": "PAIRED_GATE_SINGLE_FCG_L3_DEMO_V1.json",
+  "original_state": "INVALID_WEIGHT_SHA256_TYPE",
+  "reason": "Deterministic FCO rules were incorrectly described in model_weights_sha256 by a non-hash string",
+  "repair": "Successor V2 explicitly declares neural weights NOT_APPLICABLE; no neural model weights involved",
+  "statistical_result": "UNCHANGED",
+  "status": "REPAIRED_APPEND_ONLY"
+}

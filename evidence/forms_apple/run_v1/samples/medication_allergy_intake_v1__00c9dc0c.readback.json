@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Lanny Volkman",
+    "text": "Lanny Volkman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Hydrocortisone 10 MG/ML Topical Cream; Acetaminophen 160 MG Chewable Tablet",
+    "text": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Hydrocortisone 10 MG/ML Topical Cream; Acetaminophen 160 MG Chewable Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Glycine max (substance); Eggs (edible) (substance); Tree nut (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Tree pollen (substance)",
+    "text": "Glycine max (substance); Eggs (edible) (substance); Tree nut (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Tree pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Seasonal allergic rhinitis (disorder); Atopic dermatitis (disorder); Laceration - injury (disorder); Laceration of forearm (disorder)",
+    "text": "Seasonal allergic rhinitis (disorder); Atopic dermatitis (disorder); Laceration - injury (disorder); Laceration of forearm (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "133.6",
+    "text": "133.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "34.9",
+    "text": "34.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "126/79",
+    "text": "126/79"
+  }
+}

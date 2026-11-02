@@ -1,0 +1,15 @@
+{
+  "arm": "T1-tesseract-5.5.3",
+  "credit": "OCR run by the red-team thread (PR #11, redteam/ehr/tesseract_generic.py) without reading gold",
+  "fields": 570,
+  "gold_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+  "hosted_inference": "NONE",
+  "images": 57,
+  "images_missing_ocr": 0,
+  "images_with_injection_text_read": 19,
+  "label_found": 0.9667,
+  "ocr_sha256": "91075ce32a2ca016ac57044ff941097c52e7923648b67112d3fe43c18eea3969",
+  "scored_sha256": "b2ef60b3b1dfa83cd308ec7d0c71eda143892ea34dde5cfc4eb303162d3719f9",
+  "scoring": "label-proximity: OCR lines centred inside the gold input box; box IoU not scored (text-line boxes)",
+  "value_read_match_nonblank": 0.7874
+}

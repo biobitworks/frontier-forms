@@ -1,0 +1,116 @@
+{
+  "bbox_format" : "normalized bottom-left x,y,width,height",
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "engine_version" : "OS-native",
+  "pages" : [
+    {
+      "lines" : [
+        {
+          "bbox_norm_bl" : [
+            0.073058486264240177,
+            0.92402055073114364,
+            0.47415552076950573,
+            0.030081390612053172
+          ],
+          "confidence" : 1,
+          "text" : "Synthetic Patient Intake Form"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308280174513671,
+            0.88939393895078456,
+            0.39849622140522872,
+            0.019191919191919204
+          ],
+          "confidence" : 1,
+          "text" : "Not real PHI • No Epic submission"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308268963196116,
+            0.82828282789090923,
+            0.16353383781084049,
+            0.017676767676767624
+          ],
+          "confidence" : 1,
+          "text" : "CITY: Franklin"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308273208059743,
+            0.77171717168036758,
+            0.21052631054049223,
+            0.017676767676767624
+          ],
+          "confidence" : 1,
+          "text" : "DOB: 1931-08-28"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308267596715229,
+            0.715116278654502,
+            0.18796993081086599,
+            0.017441861316411233
+          ],
+          "confidence" : 1,
+          "text" : "FIRST: Kendrick"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308269751153649,
+            0.65843023218854424,
+            0.17669173097298815,
+            0.018895349598894162
+          ],
+          "confidence" : 1,
+          "text" : "GENDER: male"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308270880037898,
+            0.60151515160658375,
+            0.23120300691891343,
+            0.017676767676767735
+          ],
+          "confidence" : 1,
+          "text" : "LAST: Oberbrunner"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073308274182008346,
+            0.54343434382183919,
+            0.27443608302696076,
+            0.019191919191919204
+          ],
+          "confidence" : 1,
+          "text" : "PHONE: 555-116-8255"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.073151493469677004,
+            0.48730935832289257,
+            0.23342396854575162,
+            0.02015969054867528
+          ],
+          "confidence" : 1,
+          "text" : "POSTCODE: 02038"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.072931437638511912,
+            0.43037427638313341,
+            0.13227699628842421,
+            0.020762215238628978
+          ],
+          "confidence" : 1,
+          "text" : "STATE: MA"
+        }
+      ],
+      "page_index" : 0,
+      "pixel_height" : 1980,
+      "pixel_width" : 1530
+    }
+  ],
+  "pdfkit_text" : "Synthetic Patient Intake Form\nNot real PHI • No Epic submission\nCITY: Franklin\nDOB: 1931-08-28\nFIRST: Kendrick\nGENDER: male\nLAST: Oberbrunner\nPHONE: 555-116-8255\nPOSTCODE: 02038\nSTATE: MA",
+  "pdfkit_text_is_not_ocr" : true
+}

@@ -1,0 +1,58 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "classifier": "sklearn.LogisticRegression",
+  "coef": [
+    0.8975155609526333,
+    0.6828229133150143,
+    0.9913347171762787,
+    -0.09493974598035101,
+    -0.6667441544488185,
+    0.6563963220470903,
+    0.2885731354326334,
+    -0.8353796704304017
+  ],
+  "features": [
+    "log_width",
+    "log_height",
+    "aspect_ratio",
+    "border_dark_fraction",
+    "interior_dark_fraction",
+    "interior_gray_mean",
+    "border_gray_mean",
+    "edge_pixels_fraction"
+  ],
+  "intercept": -3.369335501163125,
+  "model_sha256": "e4d33acb7e5764dfb09506f67495890d1728b5ffd782f864905af0efa20673b8",
+  "not_an_llm": true,
+  "provider": "LOCAL_CPU_ONLY",
+  "scaler_mean": [
+    3.6911445538622414,
+    3.0409759017959397,
+    4.757503946435244,
+    0.5612865308247083,
+    0.4572945324049366,
+    153.61819688462506,
+    146.54957369974875,
+    0.25160122774223803
+  ],
+  "scaler_scale": [
+    1.4962821407002196,
+    0.41059423878767654,
+    7.143373258778426,
+    0.12729518210232055,
+    0.265845521327715,
+    60.44522665442732,
+    37.285449877683995,
+    0.11524659964769057
+  ],
+  "schema": "frontier-forms.local-box-vision.v1.weights",
+  "seed": 20261102,
+  "threshold": 0.5,
+  "train_candidates": 131,
+  "train_image_count": 3,
+  "train_negative": 101,
+  "train_positive": 30
+}

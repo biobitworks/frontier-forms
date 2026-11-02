@@ -1,6 +1,6 @@
 {
   "schema": "frontier_forms.training_history.v1",
-  "source_note": "Public-safe static evidence status. Active experiment: local MITRE Synthea FHIR R4 cohort target N=100, read-only PostgreSQL parity, localhost form-fill, B0 then LOMO. Epic sandbox is a distinct optional read-only interoperability fixture. Fireworks excluded. Vita DAISY remains independently active.",
+  "source_note": "Public-safe static evidence status. Active experiment: local MITRE Synthea FHIR R4 cohort target N=100, read-only PostgreSQL parity, localhost form-fill, B0 then LOMO. Epic sandbox is a distinct optional read-only interoperability fixture. Fireworks excluded.",
   "parent_main_sha": "7779833a9d67f24528517575bfcd4b2f3e79b486",
   "gate_order": [
     "source_bytes",
@@ -78,38 +78,8 @@
       "notes": "Nine-table migration and importer committed; Supabase row counts reported only. Controlled re-import UUID identity stability failed."
     },
     {
-      "id": "FF-REDTEAM-PR6",
-      "sequence": 3,
-      "date": "2026-11-02",
-      "label": "Claude red-team fixture",
-      "task": "Synthetic pseudobulk — not Synthea",
-      "model": "Deterministic fixture attack verifier",
-      "state": "EXECUTED",
-      "parent": null,
-      "source_freeze_id": null,
-      "checkpoint": null,
-      "merkle_root": null,
-      "evidence_url": "https://github.com/biobitworks/frontier-forms/pull/6",
-      "gates": {
-        "source_bytes": "PASS",
-        "deterministic_replay": "PASS",
-        "split_isolation": "PASS",
-        "inference": "NOT_TESTED",
-        "evaluation": "NOT_TESTED",
-        "independent_replication": "NOT_TESTED",
-        "supabase": "NOT_TESTED",
-        "github_writeback": "NOT_TESTED"
-      },
-      "metrics": {
-        "unit_tests_passed": 13,
-        "unit_tests_total": 13,
-        "redteam_cases": 30
-      },
-      "notes": "13/13 locally tested, 30 synthetic attack cases recorded, identical output on replay. This does not measure model accuracy."
-    },
-    {
       "id": "FF-FHIR-FREEZE-001",
-      "sequence": 4,
+      "sequence": 3,
       "date": "2026-11-02",
       "label": "Source freeze successor (planned)",
       "task": "Synthetic EHR intake",
@@ -135,7 +105,7 @@
     },
     {
       "id": "FF-QWEN-BASE-001",
-      "sequence": 5,
+      "sequence": 4,
       "date": "2026-11-02",
       "label": "Base Qwen (not run)",
       "task": "EHR field mapping",
@@ -161,7 +131,7 @@
     },
     {
       "id": "FF-QWEN-TUNED-001",
-      "sequence": 6,
+      "sequence": 5,
       "date": "2026-11-02",
       "label": "Tuned Qwen (not trained)",
       "task": "EHR field mapping",
@@ -187,7 +157,7 @@
     },
     {
       "id": "FF-LOCAL-B0-LOMO",
-      "sequence": 7,
+      "sequence": 6,
       "date": "2026-11-02",
       "label": "Local forms B0 + LOMO",
       "task": "EHR test server, n=100 target",
@@ -210,32 +180,6 @@
       },
       "metrics": {},
       "notes": "Freeze B0 with n=100 distinct local Synthea patients after DB readback; full candidate + one-module-out ablations; paired McNemar and bootstrap; AUROC requires error labels and continuous risk scores. NONE executed."
-    },
-    {
-      "id": "VITA-DAISY-PARALLEL",
-      "sequence": 8,
-      "date": "2026-11-02",
-      "label": "Vita DAISY independent lane",
-      "task": "Separate DAISY/Genesis scientific training",
-      "model": "Existing authorized models, unchanged",
-      "state": "REPORTED",
-      "parent": null,
-      "source_freeze_id": null,
-      "checkpoint": null,
-      "merkle_root": null,
-      "evidence_url": "https://github.com/biobitworks/frontier-forms/pull/3",
-      "gates": {
-        "source_bytes": "NOT_TESTED",
-        "deterministic_replay": "NOT_TESTED",
-        "split_isolation": "NOT_TESTED",
-        "inference": "NOT_TESTED",
-        "evaluation": "NOT_TESTED",
-        "independent_replication": "NOT_TESTED",
-        "supabase": "NOT_TESTED",
-        "github_writeback": "NOT_TESTED"
-      },
-      "metrics": {},
-      "notes": "Separate program explicitly preserved. No DAISY job dispatched, stopped or reconfigured by this PR. Frontier Forms deltas cannot be interpreted as DAISY gains."
     }
   ]
 }

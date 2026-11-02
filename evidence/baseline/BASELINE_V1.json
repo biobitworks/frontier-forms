@@ -1,0 +1,170 @@
+{
+  "schema": "frontier_forms.before_after_baseline.v1",
+  "created_utc": "2026-11-02T23:00:00Z",
+  "lane": "frontier-forms only",
+  "baseline_number": {
+    "value": 0.333333,
+    "display": "33.3% (18/54)",
+    "metric": "full-form success: every required field correct, per form",
+    "cases": "54 forms = 18 held-out test patients x 3 templates (urgent_care_history_v1 appears only in test)",
+    "arm": "B0-v1 (frozen rule filler, evidence/forms_b0/B0_FREEZE_V1.json)",
+    "secondary": {
+      "field_accuracy": 0.807407,
+      "fields_correct": "436/540"
+    },
+    "why_test_split": "The SFT set (data/forms_sft_v1) trains on the 63 train and 19 validation patients. Only the 18 test patients are untouched by all three arms, so the all-forms 46.3% (101/218) cannot be the denominator for a post-training comparison."
+  },
+  "arms": {
+    "A0_pre_harness": {
+      "arm": "B0",
+      "state": "OBSERVED",
+      "test": {
+        "forms": 54,
+        "full_form_success_required": 0.333333,
+        "forms_succeeded": 18,
+        "field_accuracy": 0.807407,
+        "fields": 540
+      },
+      "all": {
+        "forms": 218,
+        "full_form_success_required": 0.463303,
+        "forms_succeeded": 101,
+        "field_accuracy": 0.856422,
+        "fields": 2180
+      },
+      "model_weights": "none (deterministic rules)"
+    },
+    "A1_fcg_harness": {
+      "arm": "B0+L1+L2+L3",
+      "state": "OBSERVED (discovery grade)",
+      "test": {
+        "forms": 54,
+        "full_form_success_required": 0.555556,
+        "forms_succeeded": 30,
+        "field_accuracy": 0.92963,
+        "fields": 540
+      },
+      "all": {
+        "forms": 218,
+        "full_form_success_required": 0.720183,
+        "forms_succeeded": 157,
+        "field_accuracy": 0.958716,
+        "fields": 2180
+      },
+      "paired_vs_A0_test": {
+        "n": 54,
+        "a0_correct": 18,
+        "a1_correct": 30,
+        "delta": 0.2222,
+        "discordant_a0_only": 0,
+        "discordant_a1_only": 12,
+        "exact_mcnemar_p": 0.00048828125,
+        "bootstrap_ci95_template_stratified": [
+          0.13,
+          0.33
+        ],
+        "bootstrap_ci95_patient_cluster": [
+          0.0741,
+          0.3704
+        ],
+        "bootstrap_note": "Patient-cluster CI recomputed here from the arm prediction files, 10,000 reps, seed 20261102, 18 patients resampled with all their forms."
+      },
+      "caveat": "L1-L3 were written after B0 errors were seen on all splits. Replicate on a new cohort or template set before admitting the gain."
+    },
+    "A2_post_training": {
+      "arm": "M1 = Qwen2.5-0.5B-Instruct SFT on data/forms_sft_v1 (local, Mac Studio)",
+      "state": "NOT_RUN",
+      "status_at_2026-11-02T22:55Z": "training running on magicSTUDIObox, epoch 0 val_loss 1.005; no checkpoint scored yet",
+      "required_design": "Score the trained checkpoint on the same 54 test forms, same server and oracle, both raw (M1) and inside the harness (M1+L1+L2+L3). Score the untrained base (M0) the same way so the training delta is separated from the model swap. Record checkpoint sha256 per ledger row."
+    }
+  },
+  "supabase_reconciliation": {
+    "state": "NOT_OBSERVED (no connector, no read-only DSN; cloud proxy blocks supabase.com)",
+    "teammate_reported": {
+      "source": "SUPABASE_Data_Helper_Script.md",
+      "cohort": "Synthea pre-generated sample synthea_sample_data_fhir_latest.zip (unpinned), 100 living of 112",
+      "patient_passports": 100,
+      "passport_facts": 8252,
+      "source_records": 8252
+    },
+    "local_frozen_cohort_same_importer": {
+      "cohort": "FF-SYNTHEA-FORMS-COHORT-V1, Synthea v3.4.0 seed 20261102 (data/forms_cohort_v1)",
+      "importer": "scripts/import_fhir.py PassportBuilder, unchanged",
+      "patients": 100,
+      "passport_facts": 11254,
+      "source_records": 11254,
+      "fact_keys": {
+        "allergy.environment": [
+          69,
+          22
+        ],
+        "allergy.food": [
+          29,
+          18
+        ],
+        "allergy.medication": [
+          9,
+          8
+        ],
+        "condition.active": [
+          926,
+          96
+        ],
+        "condition.resolved": [
+          2704,
+          100
+        ],
+        "immunization.history": [
+          1567,
+          100
+        ],
+        "insurance.primary": [
+          100,
+          100
+        ],
+        "medication.active": [
+          282,
+          61
+        ],
+        "medication.past": [
+          4971,
+          92
+        ],
+        "social.smoking_status": [
+          100,
+          100
+        ],
+        "vitals.blood_pressure": [
+          100,
+          100
+        ],
+        "vitals.bmi": [
+          97,
+          97
+        ],
+        "vitals.heart_rate": [
+          100,
+          100
+        ],
+        "vitals.height": [
+          100,
+          100
+        ],
+        "vitals.weight": [
+          100,
+          100
+        ]
+      },
+      "fact_keys_format": "[rows, patients]"
+    },
+    "conclusion": "Both hold 100 synthetic patients built by the same importer, but they are different Synthea cohorts (8,252 vs 11,254 facts). Every B0/harness number above is on the local frozen cohort, not on Supabase. To make Supabase the source, freeze a read-only snapshot and rerun A0-A2 on it as a successor; never mix the two."
+  },
+  "inputs": {
+    "evidence/forms_b0/run_v1/summary.json": "e26ddfea6157740ecffaabffc5f2928d8fcc5db83397da95c37c7bfeb02dc776",
+    "evidence/forms_b0/run_v1/predictions.jsonl": "29e553abbdc0263306eb778d7db6a892b59917a22d555aef6290d530c74a0ba9",
+    "evidence/forms_arms/run_v1/FCG_ARMS_V1.json": "90b06b191b87fe7eb2a89624f8a3d4b7814b6928d38a367020ccd07a4845524d",
+    "data/forms_sft_v1/MANIFEST.json": "76d8a1e3d64faa47053b1ec3efb63066af973dfad09395716b8f49efbc28b1a1",
+    "data/forms_cohort_v1/MANIFEST.json": "784808eb2c33823d11dd5ae9ff8a557f611db9ad03a02be76d4c99bdc5d978b7"
+  },
+  "claim_ceiling": "Synthetic patients, code oracle. Not clinical accuracy."
+}

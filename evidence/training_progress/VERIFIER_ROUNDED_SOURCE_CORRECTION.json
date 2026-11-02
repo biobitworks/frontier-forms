@@ -1,0 +1,15 @@
+{
+  "schema": "frontier-forms.training-progress-verifier-correction.v1",
+  "original_snapshot": "evidence/training_progress/OBS-20261102T225203Z-01e2f7e6c9d9",
+  "observed_failure": "Verifier DELTA_MISMATCH for detector gain fields rounded to 4 decimals by upstream original DETECTOR_RESULTS_V1.json",
+  "status_original": "FAILED",
+  "correction": "V2 successor rederives exact paired deltas from discordant counts and preserves the original source rounded delta separately; earlier snapshot bytes remain unchanged; independent verifier recognizes legacy upstream 4-decimal precision",
+  "relevant_cases": [
+    "none-to-M1",
+    "none-to-M2",
+    "none-to-M3",
+    "M1+M2-to-M1+M2+M3"
+  ],
+  "model_gain": "NOT_COMPUTED",
+  "current_state": "REPAIR_IMPLEMENTED_PENDING_REPLAY"
+}

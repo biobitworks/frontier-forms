@@ -1,0 +1,50 @@
+{
+  "OCR_readback": "NOT_TESTED",
+  "baseline_box_recall": 1.0,
+  "baseline_false_positives": 0,
+  "critical_limitation": "Same template layouts in train and eval; measures rendered-widget localization, not general OCR accuracy, EHR content accuracy, patient-specific model gain, or layout generalization.",
+  "data_kind": "MITRE Synthea synthetic rendered HTML forms",
+  "evaluation": "54 filled forms, 18 synthetic held-out patient IDs, same 3 layouts",
+  "external_inference": "NONE",
+  "input_dataset": "data/forms_vision_v1/GOLD_BOXES.json",
+  "learned_box_recall": 1.0,
+  "learned_false_positives": 0,
+  "learned_minus_baseline_recall": 0.0,
+  "library_versions": {
+    "numpy": "1.26.4",
+    "opencv": "4.11.0",
+    "python": "3.12.13",
+    "sklearn": "1.9.0"
+  },
+  "live_video": "NOT_TESTED",
+  "matched_discordants": {
+    "baseline_only": 0,
+    "learned_only": 0
+  },
+  "mcnemar_exact_two_sided": 1.0,
+  "model": "LOCAL_SKLEARN_LOGISTIC_BBOX_v1",
+  "model_answer_correctness": "NOT_TESTED",
+  "model_weights_changed_vs_control": "YES; fitted coefficient vector vs no learned coefficients",
+  "n_field_boxes": 540,
+  "n_test_images": 54,
+  "n_test_patients": 18,
+  "n_train_images": 3,
+  "paired_patient_bootstrap_95_ci": [
+    0.0,
+    0.0
+  ],
+  "parent_frozen_cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "patient_cluster_bootstrap_reps": 10000,
+  "prediction_root": "a93068f25301ff0e40d219cdce38c8759bfb78a4b6e63ce21d4a527660627da9",
+  "promotion": "DISCOVERY_ONLY_NOT_INDEPENDENT_LAYOUT_REPLICATION",
+  "root_scheme": "sha256_domain_separated_json_sorted_compact_duplicate_last",
+  "schema": "frontier-forms.local-box-vision.v1",
+  "score_only": "IoU>=0.5 bounding box vs DOM box",
+  "source_metadata_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+  "train_class_distribution": {
+    "negative": 101,
+    "positive": 30
+  },
+  "training": "3 blank forms, 0 patient records, no gradient from evaluation images",
+  "weights_sha256": "e4d33acb7e5764dfb09506f67495890d1728b5ffd782f864905af0efa20673b8"
+}
