@@ -85,3 +85,6 @@ and is cross-checked, not merged.
 Reproduce (container, no inference): `python3 scripts/redteam/execute_redteam_notebooks.py` → new `evidence/notebook_runs_redteam_v<N>/`.
 Reproduce (magicSTUDIObox, private evidence dir): see `scripts/redteam/*.py` docstrings; only `*_PUBLIC.jsonl`/`*_META.json` leave the host.
 Fireworks L4/L5, Snyk, NVIDIA training, live Supabase and Epic remain BLOCKED / NOT_TESTED in this lane.
+
+## App-plane integration and red-team review
+The project application baseline includes teammate [Supabase migration](supabase/migrations/20261102000000_initial_schema.sql) and [Synthea FHIR importer](scripts/import_fhir.py) merged from PR #4. The evidence workflow must not mutate that operational implementation without review. New review checks fail closed on exact frozen evaluation input byte mismatches; Jupyter reruns write new versioned receipt directories. The original predecessor Merkle root has not changed. Draft PR #5 reviews stable identity, nondestructive provenance and a canonical dataset snapshot; draft PR #6 provides a synthetic red-team comparison, not demonstrated improvements in live model accuracy.

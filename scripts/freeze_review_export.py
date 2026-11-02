@@ -3,6 +3,8 @@ import hashlib,json
 R=Path(__file__).resolve().parent.parent
 patterns=[
  'README.md','.gitignore','requirements-notebooks.txt',
+ 'Frontier_Forms_Project_Spec.md','SUPABASE_Data_Helper_Script.md',
+ 'scripts/requirements.txt','supabase/migrations/*.sql',
  'src/frontier_forms/*.py','scripts/*.py','tests/*.py','notebooks/*.ipynb',
  'docs/**/*.md','experiments/*.md','.planning/phases/*.md','.gsigmad/*.md',
  '.github/workflows/*.yml','lean/*.lean',
@@ -13,7 +15,8 @@ patterns=[
  'evidence/notebook_runs_v1/*.ipynb','evidence/notebook_runs_v1/*.json',
  'evidence/notebook_runs_v2_prekeyfix/*.ipynb','evidence/notebook_runs_v2_prekeyfix/*.json',
  'evidence/notebook_runs_v3/*.ipynb','evidence/notebook_runs_v3/*.json',
- 'evidence/notebook_runs_v4/*.ipynb','evidence/notebook_runs_v4/*.json']
+ 'evidence/notebook_runs_v4/*.ipynb','evidence/notebook_runs_v4/*.json',
+ 'evidence/notebook_runs/*/*.ipynb','evidence/notebook_runs/*/*.json']
 paths=sorted({p for pattern in patterns for p in R.glob(pattern) if p.is_file()})
 def canon(o):return json.dumps(o,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
 def sha(x):return hashlib.sha256(x).hexdigest()
@@ -28,9 +31,9 @@ out.mkdir(parents=True,exist_ok=False)
 (out/'leaves.jsonl').write_bytes(b''.join(canon(x)+b'\n' for x in leaves))
 manifest={'schema':'fco.review_successor.v1','root':root,'leaf_count':len(leaves),
  'leaf_order':[x['path'] for x in leaves],
- 'parent_project_root':'513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730',
+ 'parent_project_root':'2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2',
  'origin_project_root':'9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a',
- 'parent_repo_commit':'ee75d57a65ef27ed80811fea0f9c8571ab184ac1',
+ 'parent_repo_commit':'da953450d33a721682191f77589c275e0b49731c',
  'construction':'sha256(00||canonical_leaf);sha256(01||left_bytes||right_bytes);duplicate_last',
  'signature':'NOT_SIGNED','mmr':'NOT_COMPUTED','raw_source_export':'NOT_AUTHORIZED',
  'evaluation':'DISCOVERY_NEGATIVE','fireworks':'NOT_TESTED'}
