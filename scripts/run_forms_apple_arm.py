@@ -62,6 +62,7 @@ def main():
     ap.add_argument("--cohort", default=str(ROOT / "data/forms_cohort_v1/bundles"))
     ap.add_argument("--out", required=True)
     ap.add_argument("--limit", type=int, default=100)
+    ap.add_argument("--samples", type=int, default=0, help="keep the first N filled PDFs per template for spot checks")
     args = ap.parse_args()
 
     templates = load_templates()
@@ -85,6 +86,7 @@ def main():
     httpd = serve(FormState(members, bundles, templates))
     base = f"http://127.0.0.1:{httpd.server_address[1]}"
     rows = {"A1-apple-pdfkit": [], "A2-apple-ocr-rb": []}
+    sample_counts = {}
     t0 = time.perf_counter()
     try:
         with tempfile.TemporaryDirectory() as tmp:
@@ -103,6 +105,13 @@ def main():
                     vpath.write_text(json.dumps(values))
                     tool(args.tool, "fill", str(FORMS_DIR / f"{key}.pdf"), str(vpath), str(fpath))
                     rb = json.loads(tool(args.tool, "readback", str(fpath)))
+                    kept = sample_counts.get(key, 0)
+                    if kept < args.samples:
+                        sdir = Path(args.out) / "samples"
+                        sdir.mkdir(parents=True, exist_ok=True)
+                        (sdir / f"{key}__{m.patient_id[:8]}.pdf").write_bytes(fpath.read_bytes())
+                        (sdir / f"{key}__{m.patient_id[:8]}.readback.json").write_text(json.dumps(rb, indent=2, sort_keys=True))
+                        sample_counts[key] = kept + 1
                     gold = gold_answers(bundles[m.patient_id], t)
                     for arm, src in (("A1-apple-pdfkit", "pdf_value"), ("A2-apple-ocr-rb", "text")):
                         name_to_key = {f["name"]: f["field_key"] for f in inspected[key]["fields"]}
