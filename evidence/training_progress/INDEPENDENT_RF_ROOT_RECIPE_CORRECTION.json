@@ -1,0 +1,14 @@
+{
+  "schema": "frontier-forms.independent-cross-engine-hash-recipe-correction.v1",
+  "predecessor_snapshot_root": "2298972d1601ac449a1cf4953e31cb921fc32ca2036991125602bc0146ba778b",
+  "first_attempt_state": "FAILED",
+  "first_attempt_reason": "Independent RF Merkle verifier omitted a newline in canonical leaf JSON, so candidate root did not match upstream.",
+  "corrected_recipe": "SHA256(FF_VISION_LEAF_V1 + NUL + compact_sorted_utf8_JSON + newline); SHA256(FF_VISION_NODE_V1 + NUL + left_raw_digest + right_raw_digest); odd carry",
+  "independently_verified_roots": {
+    "tiny": "8ae98121b7e3bb2619447f421ff6b15f8b568538b08b43726c1acaa44588594d",
+    "small": "d4e44e449500dcae7b8de0650af70dbfd5fb5465489dc5261b75911b7dbd508f",
+    "medium": "bf27c82ad638d982b614f82c6a25c3cf4161569a294c0fe524e65f1cdfe16137"
+  },
+  "new_model_gain_claim": "NOT_COMPUTED",
+  "status": "VERIFIED_CORRECTION"
+}
