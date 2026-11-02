@@ -1,0 +1,75 @@
+{
+  "D1": {
+    "gold_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+    "identity_vs_truth": "Hashes attest identity only; controlled DOM synthetic metrics do not establish clinical utility",
+    "metrics": {
+      "f1_iou50": 0.11285,
+      "fn": 313,
+      "fp": 426,
+      "mean_iou_matched": 0.65212,
+      "precision_iou50": 0.09937,
+      "recall_iou50": 0.13056,
+      "tp": 47
+    },
+    "model_weights_sha256": "cfe38b0775b2b5f63e95d617ba58d74c92fe60d144ebebca80801649cd051f7f",
+    "new_template_generalization": "NOT_TESTED",
+    "predictions_sha256": "9f51c15fae4cacf7f9b57c368e2a2abd113abba123fd687e584af65b8b8252a3",
+    "status": "PASS",
+    "test_images": 36,
+    "test_patients": 12,
+    "train_patient_count": 0,
+    "validation_patients": 6
+  },
+  "D2": {
+    "gold_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+    "identity_vs_truth": "Hashes attest identity only; controlled DOM synthetic metrics do not establish clinical utility",
+    "metrics": {
+      "f1_iou50": 0.77828,
+      "fn": 16,
+      "fp": 180,
+      "mean_iou_matched": 1.0,
+      "precision_iou50": 0.65649,
+      "recall_iou50": 0.95556,
+      "tp": 344
+    },
+    "model_weights_sha256": "45a33e94568d32d17832792ea838304f92ee7b8b25966b48639ba30a8231cfc3",
+    "new_template_generalization": "NOT_TESTED",
+    "predictions_sha256": "252d198615bc1088a06b4cce389a7635eceade3a21afdebf1f8fae67aa8d5c9a",
+    "status": "PASS",
+    "test_images": 36,
+    "test_patients": 12,
+    "train_patient_count": 0,
+    "validation_patients": 6
+  },
+  "clinical_values_validated": "NOT_TESTED",
+  "d2_replay": {
+    "predictions_bytes_identical": true,
+    "weights_bytes_identical": true
+  },
+  "data_upload_destination": "GitHub_ONLY",
+  "execution": "OBSERVED",
+  "external_hosted_inference": "NONE",
+  "lineage": [
+    "D1-local-trained-segmenter",
+    "D2-local-trained-candidate-classifier-POST_HOC"
+  ],
+  "local_only": [
+    "pixel_images",
+    "PDFs",
+    "OCR inputs",
+    "model weights",
+    "raw training receipts"
+  ],
+  "merkle_root": "NOT_COMPUTED",
+  "model_promotion": "HOLD",
+  "policy_gate": {
+    "note": "Inherited draft PR10 payloads; migration required before merge",
+    "public_draft_contains_prohibited_payloads": 106,
+    "status": "FAIL"
+  },
+  "predecessor": "PR10@23a2ff5cf6e991125c44bdaf7b2448a244abb113",
+  "publication": "SYNTHETIC_AGGREGATES_JSON_ONLY",
+  "schema": "frontier-forms-bbox-audit-v1",
+  "scientific_status": "EXPLORATORY",
+  "train_data": "THREE_SYNTHETIC_BLANK_FORM_TEMPLATES"
+}
