@@ -1,0 +1,17 @@
+{
+  "actual_upload": "NOT_YET_PUSHED",
+  "legacy_nonconforming_bytes_pinned": 123,
+  "local_full_test_log_sha256": "92f58cf51364c1493dad2d6a328b8ecf3bac3028dc0d8f243666e5042f7e0122",
+  "modified_or_new_disallowed_files": 0,
+  "parent_receipt": "evidence/forms_bbox/JSON_GATE_POSTMERGE_CORRECTION_20261102.json",
+  "prepolicy_commit": "2c89dd45870ec093e2c72319ec231aebda268510",
+  "publication_scope": "NEW_AND_MODIFIED_DATA_JSON_ONLY",
+  "schema": "frontier-forms.json-policy-validation-receipt.v1",
+  "scientific_model_gain": "NOT_COMPUTED",
+  "security_review": "IMPLEMENTED_EXECUTED_OBSERVED",
+  "source_parent_commit": "dda6a66f189a93b96a625a7610d4e05856116357",
+  "staged_gitleaks": "PASS_ZERO_FINDINGS",
+  "test_command": "/opt/homebrew/bin/python3.12 -m unittest discover -s tests -q",
+  "test_count": 133,
+  "test_state": "PASS"
+}
