@@ -2,7 +2,9 @@
 
 Real Pi + browser-tools versus the same model with Frontier Forms tools. Updated whenever a local run finishes. Only matched cases enter comparison bars; unfinished and failed cases remain visible below.
 
-![Model speed comparisons](model_speed.png)
+![Runtime, accuracy and API cost by model](combined_benchmark.png)
+
+[Download SVG](combined_benchmark.svg) · [Speed-only chart](model_speed.png)
 
 | Model | Runs saved | Matched cases | Median Pi → tools | Correct fields Pi → tools | Mean estimated API cost Pi → tools | Failures Pi / tools |
 |---|---:|---:|---|---|---|---|
