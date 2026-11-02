@@ -22,3 +22,4 @@ private/
 *.log
 .DS_Store
 .env.local
+docs/demo/preview/winid

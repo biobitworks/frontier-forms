@@ -35,7 +35,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 | Epic | NOT_TESTED | 1, 3, 22 |
 | Snyk | BLOCKED | 1, 8, 20 |
 | Governance (GSD/gsigmad, TASKS) | EXECUTED | 9, 42, 44, 46, 47 |
-| Demo: form server, overlays, screenshots, PDFs | OBSERVED (this branch) | 7, 12, 18, this PR |
+| Demo: form server, overlays, screenshots, PDFs | OBSERVED (this branch); Preview capture FAILED | 7, 12, 18, this PR |
 
 ## Headline results
 
@@ -69,6 +69,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 - **Trained detector crops for OCR:** 9/46 vs 14/46 baseline, NULL (Holm p=0.534). A good detector (mAP50 0.912) did not make crop OCR better.
 - **LoRA SFT:** only an epoch-0 loss (1.0049872103490327) and no adapter, so the gain is NOT_TESTED (#18).
 - **Publication policy:** 123 legacy non-JSON files are exempt but not compliant (#22, #30).
+- **macOS Preview capture:** FAILED for 0/10 windows with "could not create image from window". The likely cause is that the process lacks macOS Screen Recording permission on magicSTUDIObox. The failure receipt is `docs/demo/preview/preview_ocr.json`. Headless Chromium screenshots of every image × model × boxes on/off are in `docs/demo/screenshots/models/`.
 - **External services:** Snyk and Fireworks BLOCKED. NVIDIA, live Supabase and Epic NOT_TESTED.
 
 ## What remains (ordered)
