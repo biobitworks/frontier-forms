@@ -1,0 +1,25 @@
+name: Frontier Forms deterministic CI
+on:
+  push:
+    branches: [main, 'chatgpt/**', 'claude/**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  offline-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Check generated notebook exact bytes
+        run: python scripts/build_notebooks.py --check
+      - name: Validate public pointer is not a proof
+        run: python -c "import json; p=json.load(open('governance/public_projection.json')); assert p['status']=='PUBLIC_PROJECTION_ONLY_NOT_SOURCE_OF_TRUTH'"
+      - name: Mandatory source-replay limitation
+        run: echo "SOURCE_REPLAY_NOT_TESTED_IN_PUBLIC_CI (restricted source bytes not published)"
+  # Lean 4 verifier requires pinned compiler + explicitly authorized CI setup.
+  # Snyk scan requires connected authenticated Snyk org; NOT_TESTED by default.

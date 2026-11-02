@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frontier Forms | FCO/FCG Evidence Map</title>
+<style>
+:root{font:15px/1.5 system-ui;background:#0d141d;color:#edf2f7}body{max-width:1100px;margin:36px auto;padding:0 18px}
+h1{font-size:30px;margin:0}.muted{color:#a9b7c8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:24px 0}
+button{cursor:pointer;color:inherit;font:inherit}.cell{padding:16px;text-align:left;min-height:110px;background:#1c2737;border:1px solid #415066;border-radius:10px}
+.cell:hover{border-color:#e4b96c}.pass{border-left:5px solid #4ebd93}.fail{border-left:5px solid #ee8585}
+.wait{border-left:5px solid #e4b96c}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+.panel{background:#17212f;border:1px solid #415066;border-radius:9px;padding:18px}
+.label{font-size:12px;font-weight:700;letter-spacing:.06em;color:#bbd0eb}
+a{color:#91c4f5}.small{font-size:13px}.signal{display:flex;gap:3px;align-items:end;min-height:150px}
+.bar{background:#4ebd93;flex:1;text-align:center;border-radius:4px 4px 0 0;min-width:55px}
+.bar.red{background:#ee8585}.bar i{font-style:normal;color:#07131d;font-weight:700}
+</style></head><body>
+<h1>Frontier Forms / Evidence graph</h1>
+<p class="muted">Public projection · sensitive canonical frozen leaves remain in the authorized science workspace. This diagram is not a cryptographic verification or measured industry victory.</p>
+<div class="grid" id="cells"></div>
+<div class="panel" id="details" aria-live="polite">Select any stage to inspect its endpoint and claim ceiling.</div>
+<h2>Discovery-only model comparison</h2>
+<div class="signal"><div class="bar" style="height:66%"><i>Liquid 25/38</i></div><div class="bar" style="height:71%"><i>Insilico 27/38</i></div></div>
+<p class="small muted">Exploratory 38 cases: exact McNemar p=0.6875; bootstrap interval includes zero. No supported superiority claim. Values are case counts, not training weights.</p>
+<p><a href="../README.md">README</a> · <a href="../docs/CUSTODY.md">Verification</a> · <a href="../docs/LAB_NOTEBOOK.md">Lab notebook</a> · <a href="../prompts/CLAUDE_REDTEAM.md">Independent review prompt</a></p>
+<script>
+const stages=[
+['LN-MINI input','PASS','728 source-bound input FCOs','5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1','Frozen source-only root; private answers segregated'],
+['Project freeze','PASS','15 leaves, 13 original files verified','9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a','Recomputed locally; MMR NOT_COMPUTED; NOT_SIGNED'],
+['Discovery McNemar','FAIL','p = 0.6875','EXP_DISCOVERY_38','No meaningful superiority claim; 38 paired cases'],
+['Discovery bootstrap','FAIL','95% [-7.9,+18.4] pp','EXP_DISCOVERY_38','Bootstrap interval crosses zero'],
+['Synthea source','PASS','Synthetic source ZIP hashed','990d52064037bbf83d10f13163da428964b56ae673b7f39bf549d78c1e7eda16','12 synthetic PNG test forms constructed in private successor; OCR NOT_TESTED'],
+['Fireworks serverless','WAIT','NOT_TESTED','FIREWORKS_ARM','Credentials and cost receipts required'],
+['Leave-one-module-out','WAIT','NOT_TESTED','LOMO_EXP','Freeze paired arms and tests before real ablation'],
+['Lean 4 / Snyk','WAIT','NOT_TESTED','SECURITY_AND_FORMAL','Formal verification and authenticated scanning pending']
+];
+const area=document.querySelector('#cells'),info=document.querySelector('#details');
+stages.forEach((s,i)=>{let button=document.createElement('button');button.className='cell '+(s[1]==='PASS'?'pass':s[1]==='FAIL'?'fail':'wait');
+button.innerHTML='<strong>'+s[0]+'</strong><div class="label">'+s[1]+'</div><div class="small">'+s[2]+'</div>';
+button.onclick=()=>{info.replaceChildren();let title=document.createElement('h3');title.textContent=s[0]+' · '+s[1];info.append(title);
+let content=document.createElement('pre');content.textContent='Endpoint / evidence identity: '+s[3]+'\nMeaning: '+s[4];info.append(content)};
+area.append(button)});
+</script></body></html>

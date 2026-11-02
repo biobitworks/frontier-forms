@@ -1,0 +1,50 @@
+{
+  "discovery": {
+    "baseline_correct": 25,
+    "challenger_correct": 27,
+    "mcnemar_exact_p": 0.6875,
+    "n": 38,
+    "paired_bootstrap_95pct_ci": [
+      -0.07894736842105263,
+      0.18421052631578946
+    ],
+    "superiority": "FAIL"
+  },
+  "gates": {
+    "Fireworks": "NOT_TESTED",
+    "LOMO": "NOT_TESTED",
+    "Lean4": "NOT_TESTED",
+    "MMR": "NOT_COMPUTED",
+    "Snyk": "NOT_TESTED",
+    "external": "NOT_TESTED",
+    "heldout": "NOT_TESTED",
+    "signature": "NOT_SIGNED"
+  },
+  "pinned": {
+    "forms_repo_base": "67bf6b0ba51dc7ed792c139f37fcc648653611c4",
+    "insilico_weights_sha256": "f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+    "megatron_repo_head": "631e146322af891b0c79b8d5a53bc579a69f01f3",
+    "synthea_zip_sha256": "990d52064037bbf83d10f13163da428964b56ae673b7f39bf549d78c1e7eda16"
+  },
+  "project": "FIREWORKS-ANTIGENCE-FRONTIER-FORMS",
+  "schema": "asi.public_locator.v1",
+  "source": {
+    "leaf_count": 15,
+    "parent_input_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+    "parent_snapshot": "LN-MINI-ec719d04c3707ca1cb",
+    "project_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "project_snapshot": "ASI-FRONTIER-9e4d4df8aa7a887e",
+    "source_export": "NOT_AUTHORIZED"
+  },
+  "status": "PUBLIC_PROJECTION_ONLY_NOT_SOURCE_OF_TRUTH",
+  "synthea_form_successor": {
+    "OCR_benchmark": "NOT_TESTED",
+    "form_images": 12,
+    "ordered_leaves": 13,
+    "original_manifest_public_export": "NOT_AUTHORIZED",
+    "parent_project_root": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "root": "36d12313c179ec207af81cd24356ce5bc172b430b584bdef397f383292375fe6",
+    "status": "EXECUTED_VERIFIED_CUSTODY_ONLY"
+  },
+  "verify_full_source": "python3 scripts/verify_freeze.py --source-root <authorized-source-workspace> --strict"
+}
