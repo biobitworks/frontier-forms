@@ -1,0 +1,374 @@
+{
+  "heldout_eval_patient_ids_sha256": [
+    "ef8bdd32c960527b5c47419c0c1c5ae1f0b88ecaabd6a75148e743f690347f65",
+    "224566ea57017d956ddf425684b1c1156f4cb1a57349306bffd49f0c83ac9d53",
+    "eb0a7e9322e870a308cdb366731e99ceac44895eaea9ffeb27205c89afd21bd0",
+    "9c1cbcf9f9ac8b27a1ecbb28c488889db488d77626cb2b5e1150532eebd55b5e",
+    "91d95d61d1491e1262b8aaa1ef0a554004f36ed0cfdd14ba7c5ed4f21a425d94",
+    "9d4e5c2c3f5d401d741616d3c49464ba743cbbf573bda301700d4bbded51cccd",
+    "0a0c1740c40e36e64899835c2b2efd0fb2eb2e3a06dd07320f349281a2aed8e8",
+    "64d5c15e8f26b4d144592d7fca915438b07bf10ba41dc0ae62dbb3635d4cafb1",
+    "d3461089a1446c88cc879b7b7f10bcacf7d11ca079b7b64cbd2832ceca4072ac",
+    "1cc6dd680ca19c077486d1835198b8123fe1263cc0281eb03507e15de30b1a35",
+    "16e87a59f1b9cade31c5220833c086a5e7606acc51ea8735409238e75932a783",
+    "83397698617882f33bc7444275b5e48555e0b96ffb042e56e896ec8f1c1aa3b9",
+    "defd553128fe9590e312109a4f565bf79e19ac9f1ce9b263f6b7ad8c3a914889",
+    "1d9e900a763c40df0240fad3e83e2e19bd89b6aabe10581a694413d01db1f1f7",
+    "e7a4cbd2d8beedf4933c002d5aaf41ec0c954a8d479fb70d9a748b5e09505e56",
+    "98bf24e0b10fd3a270b754785077c3c8b2c02282ab9e8eb1b2fb3cdc919918e7",
+    "59b6712f364360e0ae8db21ef26442229eb354ffc517816554592248ab34be07",
+    "b09d05b77168265351a40bd3ed4392c87643f543dcd48d8b67c7f2ac49c68784"
+  ],
+  "images": [
+    {
+      "image": "blank__medication_allergy_intake_v1.png",
+      "n_labels": 9,
+      "sample_group": "blank_train",
+      "sha256": "65bbb37c9f81cc37133e2ce849379b9a156487bfe5ec279916776cc2f045e2f4"
+    },
+    {
+      "image": "blank__new_patient_registration_v1.png",
+      "n_labels": 11,
+      "sample_group": "blank_train",
+      "sha256": "ca335fa60bfca192ba9a1ad89d6c7b15e006932f564b139f61810758d071a5e0"
+    },
+    {
+      "image": "blank__urgent_care_history_v1.png",
+      "n_labels": 10,
+      "sample_group": "blank_train",
+      "sha256": "97c9b8c68c0413b9d2860ffcc38bb2f0259da88f42998fac085d1588327f3f3a"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c7d892fa906ee27869734ee7dba9b1c24f78c698740f70d00522ead527801de3"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c6f97f9879ca008b1450d63956918358b89e3a2f6e135618a9fa0f35b572af2e"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "6ff9d273a9b92c5134a82686fb22c88de14ac1152a1fdc7c3a759e882b368b1e"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "647dedebde2ef9c5b83f256e1878a941b72a9e7552ebfb3e52155cb6af77b257"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "6e19922d2cec156e827167d7882a39df132c67bb7eabf98902e0727a04fe444a"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "20ddeeb1c16d856e57a2b8196d0355c6be5576ffee9bd385276a9d9214765234"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "26f04aa82679dc7aaa064145526965d278f6fd8a9b39b5304be45ad295e616ce"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "fe6232d024ce1694111aaade4bec9f202366f0d34b7fb31be99437ac3c834055"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "5b76b742dd3e24c845480374b184618cf127e9fb465730c98596cef501b526b2"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "3967caff677c4e267899462e381e59fa1161441f08c936b315b16ef8fe7e9a72"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "705e5709db3f33afbc6483f86b38d1de8d6a0e8274f7922e5714e9e1473eba17"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c6a8880f0f28e34fb8958d9b9607d44b565fde978e6509e90c501024c9527c50"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "3d9e54bddb98be6063db0250beb307fa5435a88efdbc05b290be88e07b16f407"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "3e81de0e90ca1f658b2a081017537705ea33c3e892cf59d7eac3c41bbc853a79"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "97307d2123c8fdb12eee580ebf4f55a1c6233f52864f8b1ffb421e59a5de22af"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "a2cd3f6a862a0bed3f40b627b24ca5dc872e9bf19e356a2a8b6e0234397ac0f9"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "5ec98d3e8b538cba79670b9705f472840a59dcc35debf84a2f36b2f3beee7aa7"
+    },
+    {
+      "image": "filled__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "n_labels": 9,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "3500767de0cc5edaf4605b6a15658c5900dee06303d7c4cd25177a0c3bf6203b"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "6c168a6ab5eaee5d4ea3bd19bc28d4114d99a9c732f1384abcc0163286ea805c"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "f186a989226ce14f4aab8e675dc5a8b33d165632502003cc9084f629d3428bd7"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "f859de3c9511492be5dd1983842fffa667f27c9bc8fa89f3ab097b1f3df42325"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c26bd9a1c3a4eb92daef46ef1863f4c3bd0a8e51de3d0563c83daaa319e106e4"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "071027ef2086b3d708268f9d333f945817d4293cc8638193080393c13f65c125"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "15c6a1587f683b71384cfcc847cb742bef5e481c47b44a95729705b9be7befe6"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "787a081d6f3f36876c89e41184a3db6b9470d5c075a203ee646bd7d0e2cebeb7"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "b69d0e61c7a052543ea84267907f2c86ebd9ac4e11dfe82c2eccdc59674ae185"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "a81738abfb1a383b0492bd6f6780cadc1d0a906319c719c43d3fe87b914f41ac"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "caba7245ab5222eeb0812fd7e51b1ad88a84ccea66bee011a76d98c60f5e112e"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "177f07080348ce771e879d3d6e443fc18e4118bd04c1af53444d29b874ac5233"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "e9365c8d557e6088eb18d12b561248bedfac26194d8c145fbe4efe812a39ba51"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "0a0e5949f0251837d9a95f5ab5e6bf382f1c8ec3a66a652b7d9cc1dd71101c9a"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c1d0efaa7f2d644ca63ad8215ed8ba1550706e4bb49b86d8114e68940bdf6c1f"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "450fb6d23a6d79717d66b487be5065d33400eb25e5faf5bf3f12cc7650317155"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "eef22733ff31fc669a2de2d03f9dc12e7a6d6e9e090d2f33fc775f59c2147874"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "60bdefd10085b7d2a7980146a42a8513821cd24d7c49d2926d191674d640a118"
+    },
+    {
+      "image": "filled__new_patient_registration_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "n_labels": 11,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "311b149d88fb85a187ed64ea30ba64f1f27626d7d7b82bdf681c2a6195e08d2e"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "fa96cb621a0f3b0e99ac79f43b17fa0e7fdd0dd53122054f6fb51503f35ab469"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "88a11bad40d128b93f07aa6a0ce1d7ce0cddc77c59c10e4ca9dbce23c738f33a"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "14d3995ac55304627f614406b8c6d32b0282a7e9753f317d4e6b5004c2829814"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c1410b5d4db9b6695c40dfa2a57f6dbf632802c40cc027cf1d671e345b3a1760"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "ddcb5749a49b4f772a83cb5fa9aee4e7a552c02882a024575d7cbbfa134353d0"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "fccb378350804beab52ff5934cc8bad4f7a8bc055e45520c89e73c58b486fb04"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "69bf48f7c7a03922a60fc6e7ccf19a61de83f7940afde6c0a521a1557e3fabae"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "edffc65afd3cb55ea7099671d0fc2a676062aa44784ca92bf07d1708ee58af25"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "02661c55c1f3891ef5c270a35e31cadd27a8ea472db807b1e2f5da3005e3aaa9"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "1fa9d5cb5da311eb2109f6e2af68ac60e3fb602949e4ae035809a3a34947f524"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "5afbbbfa3767b2f3b47ade2ccdfda5cd2db1350ed63bf9d2f2827063fe39d4bf"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "6651493428e57f96c98c95c0fe3da4f65e1b9b1ae8638c104dcf37e278845b17"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "3a8055a7234bf8f5e44ed3bcc62c178bd667d76fd293eacbcfdde5e77849a751"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "c673ce8e6d89facae0380584ab62a2f43abf94ea344fb847382f925b0265048f"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "f8cc54a82fa267ded83c5a9b070e562f145dd84d1197089066d4e33bf84ffd42"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "49f8d18baf9fe975586b655818e44677247a65f0d27091a55a323e7bb4378c3f"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "50c926cbb15262c0a43ea7322a5e066ac0e3e1e74308a28e20c168fb767ca1e5"
+    },
+    {
+      "image": "filled__urgent_care_history_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "n_labels": 10,
+      "sample_group": "heldout_filled_eval",
+      "sha256": "39cd3a5a3e90d0399f6295f95ac745a62c2dbc86cde023b4cf70c7960d33f643"
+    }
+  ],
+  "license": "Apache-2.0 MITRE Synthea v3.4.0 synthetic",
+  "schema": "frontier-forms.local-box-vision.v1.inputs",
+  "source_label_json_sha256": "70337a77e3ecdf71762e1b336681411067fd36eb91e769fdc41555b75f3ab246",
+  "train_keys": [
+    "blank__medication_allergy_intake_v1",
+    "blank__new_patient_registration_v1",
+    "blank__urgent_care_history_v1"
+  ]
+}

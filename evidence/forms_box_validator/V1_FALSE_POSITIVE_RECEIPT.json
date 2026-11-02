@@ -1,0 +1,16 @@
+{
+  "finding_classification": "FALSE_POSITIVE_HEX_IDENTIFIERS",
+  "finding_file": "evidence/forms_box_validator/run_v1/predictions.jsonl",
+  "findings": 18,
+  "predecessor_artifact_location": "local private archive /tmp/ff_box_validator_v1_prekeyfix; deliberately not in GitHub",
+  "predecessor_predictions_file_sha256": "d44c9e4e4d74b4d9cf053a46aaf2fd4847973e2affe5529ad11832de8eb49c3c",
+  "predecessor_root": "a93068f25301ff0e40d219cdce38c8759bfb78a4b6e63ce21d4a527660627da9",
+  "predecessor_weights_sha256": "e4d33acb7e5764dfb09506f67495890d1728b5ffd782f864905af0efa20673b8",
+  "privacy": "fully synthetic",
+  "repair": "new run_v2 changes synthetic patient identifier key name, with identical actual coordinates/metrics",
+  "scan": "GITLEAKS_GENERIC_API_KEY",
+  "schema": "frontier-forms.local-vision-scan-failure.v1",
+  "scientific_result": "NO_MODEL_GAIN",
+  "stage": "PREPUBLICATION",
+  "status": "FAILED_SCAN_REPAIRED_BY_SUCCESSOR"
+}

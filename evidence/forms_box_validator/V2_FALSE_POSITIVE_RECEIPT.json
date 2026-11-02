@@ -1,0 +1,12 @@
+{
+  "causal_pattern": "synthetic template_key property with a long form family label was classified as a key",
+  "findings": 18,
+  "outcome": "FAILED_SCAN_REPAIRED_BY_SUCCESSOR",
+  "predecessor_location": "local private /tmp/ff_box_validator_v2_prekeyfix; not committed",
+  "predecessor_predictions_file_sha256": "46933eb46f94b08069a6c3e732928fa424b7cbbb03d84c225136cf76490821fc",
+  "predecessor_root": "a93068f25301ff0e40d219cdce38c8759bfb78a4b6e63ce21d4a527660627da9",
+  "predecessor_weights_sha256": "e4d33acb7e5764dfb09506f67495890d1728b5ffd782f864905af0efa20673b8",
+  "repair": "successor run_v3 renames template_key to form_family in exported predictions; source artifact retained and model inputs unchanged",
+  "scan": "GITLEAKS_GENERIC_API_KEY",
+  "schema": "frontier-forms.local-vision-scan-failure.v2"
+}
