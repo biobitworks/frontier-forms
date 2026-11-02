@@ -9,6 +9,8 @@ HISTORICAL_COMMITS={
   # red-team successor fix F-02: pin the Supabase-intake review root to the PR #3 head that created it,
   # otherwise any later edit of README.md etc. reports LEAF_FILE_MISMATCH for an intact commitment.
   'REVIEW-2f1cfafda7de0153':'da953450d33a721682191f77589c275e0b49731c',
+  # same repair for the post-merge custody successor created on the base branch (F-02 pattern recurred)
+  'REVIEW-90761061e69fffe2':'da516222cffee97fa820b903b8259fa7c22b18e1',
 }
 def sha(b):return hashlib.sha256(b).hexdigest()
 def canon(x):return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
