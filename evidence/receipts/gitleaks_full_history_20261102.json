@@ -33,15 +33,15 @@
   },
   "with_repo_config": {
     "config": ".gitleaks.toml",
-    "git_full_history": 0,
-    "dir_working_tree": 0
+    "git_all_refs": 0,
+    "allowlist": "exact field names row_key_sha256 / case_digest_sha256 / key (64-hex), case_key (UUID), template_key (*_vN), anchored at match start"
   },
-  "canary": "an inserted fake api_key line is still reported with .gitleaks.toml",
+  "canary": "hex values under api_key and secret_key, and a non-UUID case_key, are still reported with .gitleaks.toml",
   "ci_rerun_all_refs": {
     "scope": "git log --all including all remote branches and PR heads, 115 commits",
     "default_rule_new_findings": 273,
     "source": "branch redteam/claude-fcg-local-ablation-20261102-cloud commit 33245d54, field named \"key\" holding 64-hex digests",
-    "verdict": "FALSE_POSITIVE; allowlist widened from _key to key (hex values only)",
+    "verdict": "FALSE_POSITIVE; covered by exact field name key with 64-hex value",
     "with_repo_config": 0
   }
 }

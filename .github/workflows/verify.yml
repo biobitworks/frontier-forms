@@ -27,4 +27,3 @@ jobs:
           echo "5bc41815076e6ed6ef8fbecc9d9b75bcae31f39029ceb55da08086315316e3ba  /tmp/gitleaks.tgz" | sha256sum -c -
           tar -xzf /tmp/gitleaks.tgz -C /tmp gitleaks
           /tmp/gitleaks git . --log-opts="--all" --config .gitleaks.toml --redact --exit-code 1
-          /tmp/gitleaks dir . --config .gitleaks.toml --redact --exit-code 1

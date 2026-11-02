@@ -12,11 +12,12 @@ useDefault = true
 [allowlist]
 description = "Non-secret identifiers in synthetic evidence"
 regexTarget = "match"
-# Keys are matched by suffix, and values may be cut short, because the dir
-# scanner splits long JSONL lines into chunks. Values must stay pure hex/uuid
-# or a lowercase *_vN template name, so a real token still fails.
+# Exact field names only, anchored at the start of the match, so a hex value
+# under api_key, secret_key or any other name is still reported. CI scans git
+# history (not the working-tree dir mode, which splits long JSONL lines and
+# cuts field names).
 regexes = [
-  '''(sha256|key)"?\s*[:=]\s*"?[0-9a-f]{8,64}"?$''',
-  '''_key"?\s*[:=]\s*"?[0-9a-f]{8}-[0-9a-f-]{1,27}''',
-  '''key"?\s*[:=]\s*"?[a-z0-9_]+_v[0-9]+"?$''',
+  '''^"?(row_key_sha256|case_digest_sha256|key)"?\s*[:=]\s*"?[0-9a-f]{64}"?$''',
+  '''^"?case_key"?\s*[:=]\s*"?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}''',
+  '''^"?template_key"?\s*[:=]\s*"?[a-z0-9_]+_v[0-9]+"?$''',
 ]
