@@ -1,5 +1,7 @@
 # Real Pi baseline versus Frontier Forms
 
+[Model-specific speed chart](model_speed.png) · [How the tooling achieves this](TOOLING_WRITEUP.md)
+
 ## Explain it in 20 seconds
 
 > We used the same DeepSeek model on the same six synthetic medical-form cases. With Pi, the model operates the browser through general tools. With our harness, code handles form inspection, record retrieval, validation and page filling, and the model maps questions to answers. Median completion time fell from 92.0 to 16.8 seconds (5.5× faster). Field scores were 119/121 versus 119/121. This is a small development pilot, not a clinical validation.
