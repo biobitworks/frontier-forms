@@ -1,0 +1,21 @@
+{
+  "append_only": true,
+  "executed_utc": "2026-11-02T22:19:45Z",
+  "host": "vm",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS_REPLAYED_FROM_RECEIPTS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "11_redteam_local_lanes_stats.ipynb",
+      "receipt_sha256": "013f536c0d8725f26b2c6b3e1f7b0be6730b69775a27c38d0e69c6d845b080b9",
+      "source_sha256": "982d95f82f3e4d9c9a2e91343ee78445b3251dad5bfbbdd1eba466bb74238bcf"
+    }
+  ],
+  "outputs_sha256": {
+    "exp011_lane_stats.json": "76951fa6b2029a1542ded2203d2b6bab13c4e4fa8a4e97e64adfc1986c0c684d"
+  },
+  "python": "3.13.18",
+  "run_dir": "notebook_runs_redteam_v4",
+  "schema": "notebook.execution.v2"
+}

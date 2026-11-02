@@ -82,8 +82,10 @@ strata = {k: t for t, p in split_m['task_partitions'].items() for s in ('discove
 LANES = R / 'evidence/redteam/lanes'
 runs = {}
 for meta in sorted(LANES.glob('*_META.json')):
-    m = json.loads(meta.read_text()); tag = m['tag']
-    if tag in ('smoke', 'smoke2') or 'forms12' in meta.name: continue
+    m = json.loads(meta.read_text())
+    if m.get('schema') != 'redteam.local_lane_run.v2': continue   # forms/OCR lanes have their own notebook (EXP-012/014)
+    tag = m['tag']
+    if tag in ('smoke', 'smoke2'): continue
     pub = meta.with_name(meta.name.replace('_META.json', '_PUBLIC.jsonl'))
     rows = load_public_lane(pub, m['split'], allowed[m['split']])
     assert len(rows) == len(allowed[m['split']]) == m['cases'], (meta.name, len(rows))
@@ -121,8 +123,23 @@ for split in ('discovery', 'heldout'):
     for k in fam:
         fam[k]['holm'] = h[k]
         fam[k]['admission'] = admission_rule(fam[k]['mcnemar_gate'] and h[k]['reject'], fam[k]['bootstrap_gate'],
-                                             'NOT_TESTED' if split == 'discovery' else 'SEE_HELDOUT_ROW', 'NOT_TESTED')
+                                             'NOT_TESTED' if split == 'discovery' else 'SEE_HELDOUT_ROW', 'NOT_TESTED',
+                                             p=h[k]['p_holm'], delta=fam[k]['delta_abs'])
     out['comparisons'][split] = fam
+    # SECONDARY family: lenient parser (first standalone letter), to separate format failure from reasoning failure
+    fam2 = {}
+    for (tag, sp), r in sorted(runs.items()):
+        if sp != split or r['meta'].get('arms') == 'direct': continue
+        base = arm_flags(r['rows'], 'direct', 'lenient_correct')
+        for arm in ('fco', 'fcg'):
+            fam2[f'{tag}:{arm}_vs_direct:lenient'] = compare(base, arm_flags(r['rows'], arm, 'lenient_correct'), strata)
+        if l0 is not None and tag != 'L0':
+            fam2[f'{tag}:direct_vs_L0:direct:lenient'] = compare(arm_flags(l0['rows'], 'direct', 'lenient_correct'), base, strata)
+    h2 = holm({k: v['p_mcnemar_exact_two_sided'] for k, v in fam2.items()})
+    for k in fam2:
+        fam2[k]['holm'] = h2[k]
+        fam2[k]['admission'] = admission_rule(fam2[k]['mcnemar_gate'] and h2[k]['reject'], fam2[k]['bootstrap_gate'], 'NOT_TESTED', 'NOT_TESTED', p=h2[k]['p_holm'], delta=fam2[k]['delta_abs'])
+    out.setdefault('comparisons_lenient_secondary', {})[split] = fam2
 # cold restart replay of L0 direct on discovery
 if ('L0', 'discovery') in runs and ('L0replay', 'discovery') in runs:
     a = arm_flags(runs[('L0', 'discovery')]['rows'], 'direct'); b = arm_flags(runs[('L0replay', 'discovery')]['rows'], 'direct')
@@ -131,7 +148,7 @@ if ('L0', 'discovery') in runs and ('L0replay', 'discovery') in runs:
                      'cold_vs_frozen_agreement': sum(1 for k in b if b[k] == frozen[k]), 'n': len(a),
                      'frozen_correct': sum(frozen.values()), 'warm_correct': sum(a.values()), 'cold_correct': sum(b.values())}
 emit('exp011_lane_stats.json', out)
-for split, fam in out['comparisons'].items():
+for split, fam in list(out['comparisons'].items()) + [(s + ' (LENIENT, secondary)', f) for s, f in out['comparisons_lenient_secondary'].items()]:
     print('==', split)
     for k, v in fam.items():
         print(f"{k:40s} acc {v['accuracy_baseline']:.3f}->{v['accuracy_challenger']:.3f} d={v['delta_abs']:+.3f} b/c={v['table']['baseline_only']}/{v['table']['challenger_only']} p={v['p_mcnemar_exact_two_sided']:.4f} holm={v['holm']['p_holm']:.4f} CI={v['ci95_delta_stratified_bootstrap']} -> {v['admission']}")

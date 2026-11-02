@@ -35,10 +35,11 @@ class TestIndependentStats(unittest.TestCase):
         r = compare(self.base, self.chal, self.strata, reps=2000)
         self.assertFalse(r['mcnemar_gate']); self.assertFalse(r['bootstrap_gate'])
         self.assertEqual(r['AUROC'], 'NOT_COMPUTED_NO_CONTINUOUS_SCORES')
-        self.assertEqual(admission_rule(r['mcnemar_gate'], r['bootstrap_gate'], 'NOT_TESTED', 'NOT_TESTED'), 'NOT_TESTED')
+        self.assertEqual(admission_rule(r['mcnemar_gate'], r['bootstrap_gate'], 'NOT_TESTED', 'NOT_TESTED'), 'NULL')
+        self.assertEqual(admission_rule(False, False, 'PASS', 'PASS', p=0.001, delta=-0.5), 'NEGATIVE_WORSE')
         self.assertEqual(admission_rule(True, True, 'NOT_TESTED', 'PASS'), 'BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED')
         self.assertEqual(admission_rule(True, True, 'PASS', 'PASS'), 'PASS')
-        self.assertEqual(admission_rule(True, False, 'PASS', 'PASS'), 'NEGATIVE')
+        self.assertEqual(admission_rule(True, False, 'PASS', 'PASS'), 'NULL')
 
     def test_holm(self):
         h = holm({'a': 0.01, 'b': 0.04, 'c': 0.03})

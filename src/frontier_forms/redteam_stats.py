@@ -85,16 +85,26 @@ def compare(base: Dict[str, bool], chal: Dict[str, bool], strata: Dict[str, str]
             'AUROC': 'NOT_COMPUTED_NO_CONTINUOUS_SCORES'}
 
 
-def admission_rule(mcnemar_gate: bool, bootstrap_gate: bool, replication: str, guardrails: str) -> str:
-    """McNemar PASS ∧ bootstrap lower CI > 0 ∧ independent replication PASS ∧ utility/safety guardrails PASS."""
+def admission_rule(mcnemar_gate: bool, bootstrap_gate: bool, replication: str, guardrails: str,
+                   p: Optional[float] = None, delta: Optional[float] = None, alpha: float = 0.05) -> str:
+    """McNemar PASS ∧ bootstrap lower CI > 0 ∧ independent replication PASS ∧ utility/safety guardrails PASS.
+    Vocabulary: PASS; NEGATIVE_WORSE (significantly worse than baseline); NULL (no admissible difference);
+    BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED (gates pass but the outer conditions were never run); NEGATIVE (outer condition failed)."""
+    if p is not None and delta is not None and p < alpha and delta < 0:
+        return 'NEGATIVE_WORSE'
+    if not (mcnemar_gate and bootstrap_gate):
+        return 'NULL'
     if replication == 'NOT_TESTED' or guardrails == 'NOT_TESTED':
-        return 'NOT_TESTED' if not (mcnemar_gate and bootstrap_gate) else 'BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED'
-    return 'PASS' if (mcnemar_gate and bootstrap_gate and replication == 'PASS' and guardrails == 'PASS') else 'NEGATIVE'
+        return 'BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED'
+    return 'PASS' if (replication == 'PASS' and guardrails == 'PASS') else 'NEGATIVE'
 
 
 def load_public_lane(path: Path, expected_split: str, allowed_keys: Optional[set] = None) -> List[dict]:
     """Load a PUBLIC lane export and fail closed on duplicates, split mismatch or keys outside the frozen partition."""
     rows = [json.loads(x) for x in Path(path).read_text().splitlines() if x.strip()]
+    for r in rows:  # successor field name after the gitleaks false-positive repair; value unchanged
+        if 'case_digest_sha256' in r and 'key' not in r:
+            r['key'] = r['case_digest_sha256']
     keys = [r['key'] for r in rows]
     if len(set(keys)) != len(keys):
         raise ValueError('DUPLICATE_CASE_KEY')

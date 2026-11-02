@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "file": "evidence/redteam/lanes/L0_lfm2-1.2b-longevity-q4km_latest_discovery_PUBLIC.jsonl",
+      "original_sha256": "4fa2e99f9806e6f36fd047206c6721b23a86770c17a30ea5895b84761bed006b",
+      "renamed_sha256": "e46b28d54a112795bd8334ef14a8dcf9e04a9d7237e192a1fcb570affeb9f8f2",
+      "rows": 38
+    },
+    {
+      "file": "evidence/redteam/lanes/L0_lfm2-1.2b-longevity-q4km_latest_heldout_PUBLIC.jsonl",
+      "original_sha256": "1f26cf30c735d4893d28dc0de0e49ea1d8d80447db5e558aff304ca84efd7fcd",
+      "renamed_sha256": "5ca80b44af6d590ccc0624ed802c422b9f9d0950c7ce424b721223463b287736",
+      "rows": 39
+    },
+    {
+      "file": "evidence/redteam/lanes/L0replay_lfm2-1.2b-longevity-q4km_latest_discovery_PUBLIC.jsonl",
+      "original_sha256": "dce964b632ec98d15331bdcd381a50aac43f5a9bb43d489700a7490786f040fa",
+      "renamed_sha256": "185060f9f9465290c4a4d5cd792a3c91610d76b4310c6a31402adeb4e1b6c265",
+      "rows": 38
+    },
+    {
+      "file": "evidence/redteam/lanes/L1_qwen3_1.7b_discovery_PUBLIC.jsonl",
+      "original_sha256": "45a4b05a82d3cb30802c8bbbbd71ff5c3493da7dd6cc2ff51bf63de562616e72",
+      "renamed_sha256": "034f66377905df88429263e851c4bff8695d3e1cb8a169d4ec2d047d4207b189",
+      "rows": 38
+    },
+    {
+      "file": "evidence/redteam/lanes/L1_qwen3_1.7b_heldout_PUBLIC.jsonl",
+      "original_sha256": "cae88e7e1f7cdc9088d85446117eb15c1a8974851fb16cb7bbcc7c6c16c4571d",
+      "renamed_sha256": "aa87c0187d1c51c20ab62dd0cf2ddf2691f43b4252fdc29eb10c1d2b8a1290a4",
+      "rows": 39
+    },
+    {
+      "file": "evidence/redteam/lanes/L2_qwen2.5vl_3b_discovery_PUBLIC.jsonl",
+      "original_sha256": "c099a9ac5f88c10585bcb607015a405f29aa83d5675519b9d4bb6126b25faa35",
+      "renamed_sha256": "1525be95fbb0c752f405fe77cd107f8086a6c29836dfbf6e2643e6dcf1709291",
+      "rows": 38
+    },
+    {
+      "file": "evidence/redteam/lanes/L2_qwen2.5vl_3b_heldout_PUBLIC.jsonl",
+      "original_sha256": "bbde8780516a4a3d495cc2c95e93f30cdedaaf86bab34bc364d83cdab7490f2f",
+      "renamed_sha256": "7eae02bc56e54e977de7677baf833d030c0e932a295facb1a4a1ef1578763711",
+      "rows": 39
+    },
+    {
+      "file": "evidence/redteam/lanes/L3_insilico-qwen3-0.6b-longevity_discovery_PUBLIC.jsonl",
+      "original_sha256": "4b942269a7cc8662854ba370b59ea76aea813f50769fe79c63dc4f102744e022",
+      "renamed_sha256": "e6f47452684eb185a89843f90827b78da9dc976f95047a2e6fa7146027af620d",
+      "rows": 4
+    }
+  ],
+  "predecessor_failure": "evidence/redteam/gitleaks_lanes_initial_failure.json",
+  "renamed_files": 8,
+  "schema": "security.scan.successor.v1",
+  "utc": "2026-11-02T22:19:23Z"
+}

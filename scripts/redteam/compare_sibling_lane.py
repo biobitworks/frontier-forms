@@ -36,7 +36,10 @@ def main():
                     continue
                 r = json.loads(line)
                 sib.setdefault(r['arm'], {})[r['row_key_sha256']] = r
-            mine = {json.loads(x)['key']: json.loads(x) for x in mine_files[0].read_text().splitlines() if x.strip()}
+            mine = {}
+            for x in mine_files[0].read_text().splitlines():
+                if x.strip():
+                    r = json.loads(x); mine[r.get('key') or r['case_digest_sha256']] = r
             comp = {}
             for my_arm, sib_arm in ARM_MAP.items():
                 if sib_arm not in sib:
