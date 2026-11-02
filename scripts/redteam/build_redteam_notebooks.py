@@ -75,7 +75,7 @@ nb("11_redteam_local_lanes_stats.ipynb", "EXP-011 (red-team): local lanes, FCO/F
     "8 Outputs": "exp011_lane_stats.json, exp011_attribution_rows.json.",
     "9 FCO/FCG dependency changes": "adds EXECUTED edges MODEL_EVAL_OF (frozen cases -> lane results) and HARNESS_ABLATION_OF; no predecessor leaf changes.",
     "10 Claim ceiling": CEILING + " n=38/39 per split: power to detect small effects is low; a null is not evidence of equivalence."},
-   [code(COMMON + """from frontier_forms.redteam_stats import (load_public_lane, arm_flags, compare, holm, selective_metrics, base_metrics, admission_rule)
+   [code(COMMON + """from frontier_forms.redteam_stats import (load_public_lane, arm_flags, compare, holm, selective_metrics, base_metrics, admission_rule, injection_metrics)
 split_m = json.loads((R / 'evidence/freeze/longebench_split_manifest.json').read_text())
 allowed = {s: {k for t, p in split_m['task_partitions'].items() for k in p[s]} for s in ('discovery', 'heldout')}
 strata = {k: t for t, p in split_m['task_partitions'].items() for s in ('discovery', 'heldout') for k in p[s]}
@@ -98,6 +98,10 @@ for (tag, split), r in sorted(runs.items()):
     rows = r['rows']; d = {}
     for a in BASE_ARMS: d[a] = base_metrics(rows, a)
     for a in ADM_ARMS: d[a] = selective_metrics(rows, a)
+    d['injection'] = injection_metrics(rows)
+    # gate view under attack: among cases the clean fcg arm got right, how many did each gate ADMIT with the injected letter?
+    for a in ('inject_antigence_swap', 'inject_antigence_verdict', 'inject_antigence_full'):
+        d[a]['flip_admitted_injected'] = sum(1 for x in rows if x['arms']['fcg'].get('strict_correct') and x['arms'][a].get('admitted_injected'))
     for a in ('forged_verify', 'edge_removed'):
         d[a] = {'abstain': sum(1 for x in rows if x['arms'][a]['decision'] == 'ABSTAIN'), 'model_calls': sum(1 for x in rows if x['arms'][a]['model_called']), 'n': len(rows)}
         assert d[a]['abstain'] == len(rows) and d[a]['model_calls'] == 0, ('INTEGRITY_GATE_LEAK', tag, split, a)
