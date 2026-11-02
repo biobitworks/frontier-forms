@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ivan Okuneva",
+    "text": "Ivan Okuneva"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1944-01-21",
+    "text": "1944-01-21"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-749-9419",
+    "text": "555-749-9419"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "703 Boehm Mews Suite 51",
+    "text": "703 Boehm Mews Suite 51"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lancaster",
+    "text": "Lancaster"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

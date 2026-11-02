@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Palmira Ryan",
+    "text": "Palmira Ryan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "89.1",
+    "text": "89.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "13.6",
+    "text": "13.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "95/61",
+    "text": "95/61"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frontier Forms • Evidence, Promotions & Negative Results</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1523;--panel:#182940;--border:#39506c;--txt:#ecf3fd;--muted:#aec0d6;--good:#4bc2a4;--neg:#ffb47a;--line:#7e99b8}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt)}
+header,main,footer{max-width:1240px;margin:auto;padding:22px}h1{font-size:clamp(27px,4vw,42px);letter-spacing:-.04em;margin:8px 0 4px}
+h2{font-size:19px;margin:0 0 10px}p,small{color:var(--muted)}a{color:#b7d7ff}code{overflow-wrap:anywhere;color:#d2e5ff}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.17em;font-weight:750;color:#96bfff}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.card,.section{border:1px solid var(--border);background:var(--panel);border-radius:12px;padding:16px}
+.card b{font-size:27px;display:block}.card span{color:var(--muted)}
+.section{margin-bottom:16px}.warn{border-left:3px solid var(--neg);padding:10px 13px;background:#443625;color:#ffe9d4}
+.row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:12px 0}
+input,select{background:#263d58;border:1px solid #627f9f;color:var(--txt);border-radius:7px;padding:10px;font:inherit}
+input{flex:1;min-width:200px}table{width:100%;border-collapse:collapse;font-size:12px;min-width:850px}
+th{text-align:left;background:#29435e;position:sticky;top:0;white-space:nowrap}
+td,th{padding:10px;border-bottom:1px solid #3b5370;vertical-align:top}
+td code{font-size:11px}tbody tr:hover{background:#243953}
+.wrap{overflow:auto;max-height:730px}strong.good{color:#78e4c5}strong.bad{color:#ffbd91}
+.pill{display:inline-block;border:1px solid #70859d;border-radius:20px;padding:2px 9px;font-size:11px}
+.pill.negative{border-color:#c18a5e;color:#ffcb9f}.pill.discovery{border-color:#a1c9ff;color:#c4d9ff}
+.pill.uncomputed{color:#dedede}.pill.approved{border-color:#4bc2a4;color:#81eacc}
+.level{font-size:12px;color:var(--muted);padding:8px 0}details{margin-top:8px}summary{cursor:pointer}
+figure{margin:0}nav{display:flex;gap:15px;flex-wrap:wrap;padding:12px 0}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head><body>
+<header><div class="kicker">Frontier Forms · append-only evidence review · synthetic</div><h1>Promotion and negative-results ledger</h1>
+<p>A single read-only view across frozen cohort, FCO/LOMO comparisons, training checkpoints, negative results, admission decisions and exact-byte source inventory.</p>
+<nav><a href="#outcomes">Outcome records</a><a href="#workstreams">Workstream heatmap</a><a href="#sources">Source file inventory</a></nav>
+</header><main>
+<div class="warn"><b>Scientific promotion ≠ engineering merge.</b> Discovery-positive results remain NOT_ADMITTED. Statistical significance, a successful build, and Merkle integrity are distinct from prospective model improvement. Vita DAISY is a methodology reference only.</div>
+<div class="cards" id="metrics" aria-live="polite"><div class="card">Loading index…</div></div>
+<section class="section"><h2>Freeze → challenge → replicate → admit</h2><div id="fcar" class="row"></div><p id="sourceCommit"></p>
+<details><summary>Receipt identity and limitations</summary><pre id="receipts" style="white-space:pre-wrap;overflow-wrap:anywhere;color:#c5dcf5"></pre></details></section>
+<section class="section" id="outcomes"><h2>Scientific outcome events — exact historical states</h2>
+<p>All recorded events are included. Delta, uncertainty, model-weight identity and source leaf hashes are shown only where the source actually records them. Empty fields mean not present, not zero.</p>
+<div class="row"><input id="search" aria-label="Search outcome events" placeholder="Search model, module, event, parent, child…"><select id="state" aria-label="Outcome status filter"><option value="all">All statuses</option></select></div>
+<p id="matches"></p>
+<div class="wrap"><table><thead><tr><th>Event and model</th><th>Family</th><th>Outcome state</th><th>Δ / metric</th><th>McNemar / CI</th><th>Weight digest / predecessor</th><th>Source event SHA-256</th></tr></thead><tbody id="outcomeRows"></tbody></table></div>
+</section>
+<section class="section" id="workstreams"><h2>Judge workstreams: accomplishment and unresolved gates</h2>
+<p>Stage states are reproduced from the existing judged-figure ledger, not independently promoted here.</p>
+<div class="wrap"><table><thead><tr id="stageHead"></tr></thead><tbody id="stageRows"></tbody></table></div></section>
+<section class="section" id="hosted"><h2>Teammate hosted-model synthetic benchmark — 48 runs</h2>
+<p>Paired cases preserve both faster tooling and correctness losses. This hosted teammate benchmark is distinct from the local Synthea vision/model-training lane; no hosted inference is called by this dashboard.</p>
+<p id="hostedSummary"></p><div class="wrap"><table><thead><tr><th>Model / case / form</th><th>Pi fields</th><th>Tools fields</th><th>Correctness delta</th><th>Runtime delta</th><th>Outcome</th></tr></thead><tbody id="hostedRows"></tbody></table></div></section>
+<section class="section" id="sources"><h2>All tracked synthetic-result JSON references</h2>
+<p>Exact-byte identities for JSON/JSONL files already committed in permitted evidence/data/document/dashboard locations. Patient source records are <strong>not copied into this view</strong>. Unchanged legacy JSONL paths may be indexed without authorizing new non-JSON publication.</p>
+<div class="row"><input id="fileSearch" aria-label="Search source files" placeholder="Filter path, hash or source family…"><span id="fileMatches"></span></div>
+<div class="wrap"><table><thead><tr><th>Source location</th><th>SHA-256 (exact file bytes)</th><th>Size</th></tr></thead><tbody id="fileRows"></tbody></table></div></section>
+</main><footer><p>No real PHI, DAISY weights, Fireworks inference or clinical admission claim is represented in this ledger. Every updated source state must create a successor receipt; do not overwrite this index.</p></footer>
+<script>
+(async function(){
+const $=id=>document.getElementById(id);
+function mk(tag,value,parent,klass){const el=document.createElement(tag);if(value!==undefined)el.textContent=String(value);if(klass)el.className=klass;parent.append(el);return el}
+function fmt(n){return n===null||n===undefined?"NULL/NOT_COMPUTED":typeof n==="number"?Number(n).toPrecision(4):String(n)}
+let d;
+try{const r=await fetch("../evidence/governance/OUTCOMES_AND_PROMOTIONS_20261102_V2.json",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);d=await r.json()}
+catch(err){$("metrics").textContent="Evidence file unavailable: "+err.message;return}
+const counts=d.evidence_counts.by_status;const summary=[
+[d.admission.scientifically_supported_promotions,"Scientifically admitted","NOT_ADMITTED"],
+[counts.DISCOVERY_POSITIVE_NOT_PROMOTED||0,"Positive discovery","Not promoted"],
+[(counts.NEGATIVE_OR_TIE||0)+(counts.NEGATIVE_NO_GAIN||0),"Negative / no-gain","Preserved"],
+[d.inventory_count,"Source identities indexed","Exact-byte SHA-256"]];
+$("metrics").replaceChildren();for(const [num,label,note] of summary){const card=mk("div",undefined,$("metrics"),"card");mk("b",num,card);mk("span",label,card);mk("small"," · "+note,card)}
+$("fcar").replaceChildren();
+for(const [title,value] of [["FREEZE",d.freeze.state],["CHALLENGE",d.evidence_counts.total+" events"],["REPLICATE",d.admission.prospective_replication],["ADMIT",d.admission.status]]){const item=mk("span",title+": "+value,$("fcar"),"pill "+(title==="ADMIT"?"negative":"discovery"))}
+$("sourceCommit").textContent="Parent main: "+d.parent_main_commit+" | source snapshot root: "+d.source_snapshot_root+" | index Merkle root: "+d.inventory_sha256_merkle_root;
+$("receipts").textContent=JSON.stringify({sources:d.source_sha256,recipe:d.inventory_merkle_recipe,limitations:d.limits,engineering:d.engineering_promotion},null,2);
+const states=Object.keys(counts).sort();for(const status of states){const o=mk("option",status+" ("+counts[status]+")",$("state"));o.value=status}
+function stateClass(v){return v.startsWith("NEGATIVE")?"negative":v.startsWith("DISCOVERY")?"discovery":"uncomputed"}
+function renderEvents(){
+const q=$("search").value.toLowerCase(),s=$("state").value;const items=d.scientific_events.filter(e=>(s==="all"||e.status===s)&&JSON.stringify(e).toLowerCase().includes(q));
+$("matches").textContent=items.length+" / "+d.scientific_events.length+" existing events; scientific promotions: 0";
+const body=$("outcomeRows");body.replaceChildren();
+for(const x of items){
+ const tr=mk("tr",undefined,body);
+ const name=mk("td",undefined,tr);mk("strong",x.id,name);mk("div",x.model||"No shared model checkpoint",name,"level");
+ mk("td",x.family,tr);
+ const status=mk("td",undefined,tr);mk("span",x.status,status,"pill "+stateClass(x.status));mk("div",x.scientific_promotion,status,"level");
+ const delta=mk("td",undefined,tr);mk("div",x.metric||"Not declared",delta);mk("strong","Δ: "+fmt(x.delta??x.delta_val_loss),delta);
+ const ci=mk("td",undefined,tr);mk("div","p: "+fmt(x.mcnemar_exact_two_sided),ci);mk("div","CI: "+fmt(x.ci95_patient_cluster),ci);mk("small",x.replication||"replication unknown",ci);
+ const wt=mk("td",undefined,tr);mk("code",x.model_weights_sha256||"NULL / NOT_APPLICABLE",wt);mk("div","parent: "+(x.parent||"NONE"),wt);
+ const sha=mk("td",undefined,tr);mk("code",x.source_event_sha256,sha)}
+}
+$("search").addEventListener("input",renderEvents);$("state").addEventListener("change",renderEvents);renderEvents();
+const head=$("stageHead");head.replaceChildren();mk("th","Workstream / PR",head);
+const stageKeys=Object.keys(d.judge_workstreams[0]?.stage_states||{});for(const key of stageKeys)mk("th",key,head);
+mk("th","Source note",head);
+const tbody=$("stageRows");for(const w of d.judge_workstreams){const tr=mk("tr",undefined,tbody);
+ const name=mk("td",undefined,tr);mk("strong",w.name,name);mk("div",w.prs_as_reported||"no PR",name,"level");
+ for(const key of stageKeys){let value=w.stage_states[key]||"UNKNOWN";mk("td",value,tr)}
+ mk("td",w.source_note||"",tr)}
+const bench=d.teammate_hosted_benchmark;
+$("hostedSummary").textContent=bench.n_runs+" runs, "+bench.n_matched_pairs+" matched comparisons, "+bench.n_quality_regressions+" quality regressions, "+bench.n_faster_tool_pairs+" faster-tool cases, checkpoint revision "+bench.model_revision;
+const bruns=new Map(bench.run_metrics.map(r=>[[r.model,r.case,r.form,r.repeat,r.arm].join("|"),r]));
+for(const p of bench.paired_observations){
+ const tr=mk("tr",undefined,$("hostedRows"));
+ const a=bruns.get([p.model,p.case,p.form,p.repeat,"pi+browser-tools"].join("|"));
+ const b=bruns.get([p.model,p.case,p.form,p.repeat,"frontier-tools"].join("|"));
+ mk("td",p.model+" / "+p.case+" / "+p.form,tr);
+ mk("td",a.correct+"/"+a.fields,tr);mk("td",b.correct+"/"+b.fields,tr);
+ mk("td",p.fields_correct_delta,tr);
+ mk("td",Number(p.elapsed_seconds_delta).toFixed(1)+"s",tr);
+ mk("td",p.quality_regressed?"NEGATIVE: fewer correct fields":"No fewer correct fields",tr);
+}
+function renderFiles(){const q=$("fileSearch").value.toLowerCase();const items=d.inventory.filter(x=>(x.path+" "+x.sha256).toLowerCase().includes(q));$("fileMatches").textContent=items.length+" / "+d.inventory_count;const body=$("fileRows");body.replaceChildren();
+ for(const x of items){const tr=mk("tr",undefined,body);mk("td",x.path,tr);const h=mk("td",undefined,tr);mk("code",x.sha256,h);mk("td",x.size_bytes+" B",tr)}}
+$("fileSearch").addEventListener("input",renderFiles);renderFiles()
+})();
+</script></body></html>

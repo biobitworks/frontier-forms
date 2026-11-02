@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Donita Metz",
+    "text": "Donita Metz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; budesonide 0.25 MG/ML Inhalation Suspension; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; albuterol 0.21 MG/ML Inhalation Solution",
+    "text": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; budesonide 0.25 MG/ML Inhalation Suspension; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet;"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin",
+    "text": "Aspirin"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Glycine max (substance); Fish (substance); Tree nut (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)",
+    "text": "Glycine max (substance); Fish (substance); Tree nut (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Serving in military service (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Metabolic syndrome X (disorder); Stress (finding); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Gingivitis (disorder)",
+    "text": "Serving in military service (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "167.7",
+    "text": "167.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "82",
+    "text": "82"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "110/87",
+    "text": "110/87"
+  }
+}

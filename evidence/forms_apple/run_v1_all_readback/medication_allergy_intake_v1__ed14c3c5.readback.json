@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Kenyatta Mayer",
+    "text": "Kenyatta Mayer"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Educated to high school level (finding); Body mass index 30+ - obesity (finding); Recurrent urinary tract infection (disorder); Impacted molars (disorder); Has a criminal record (finding); History of tubal ligation (situation); Medication review due (situation); Severe anxiety (panic) (finding); Full-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Educated to high school level (finding); Body mass index 30+ - obesity (finding); Recurrent urinary tract infection (disorder); Impacted molars (disorder); Has a criminal record (finding); History of tubal ligation (situation); Medication review due (situation);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "163.5",
+    "text": "163.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "77.8",
+    "text": "77.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "122/79",
+    "text": "122/79"
+  }
+}

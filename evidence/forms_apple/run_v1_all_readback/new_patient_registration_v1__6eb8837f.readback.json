@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mac Smith",
+    "text": "Mac Smith"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2023-12-04",
+    "text": "2023-12-04"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-960-4473",
+    "text": "555-960-4473"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "113 Towne Row Unit 51",
+    "text": "113 Towne Row Unit 51"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02118",
+    "text": "02118"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Vietnamese",
+    "text": "Vietnamese"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Dual Eligible",
+    "text": "Dual Eligible"
+  }
+}

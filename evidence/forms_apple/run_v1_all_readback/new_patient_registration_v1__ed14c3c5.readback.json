@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Kenyatta Mayer",
+    "text": "Kenyatta Mayer"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1983-12-28",
+    "text": "1983-12-28"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-859-3616",
+    "text": "555-859-3616"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "237 Windler Stravenue Unit 73",
+    "text": "237 Windler Stravenue Unit 73"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Middleborough",
+    "text": "Middleborough"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Russian (Russia)",
+    "text": "Russian (Russia)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

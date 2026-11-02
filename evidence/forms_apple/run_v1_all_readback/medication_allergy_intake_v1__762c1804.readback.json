@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Fernande Mraz",
+    "text": "Fernande Mraz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Received higher education (finding); Has a criminal record (finding); Chronic sinusitis (disorder); History of tubal ligation (situation); Full-time employment (finding); Medication review due (situation); Body mass index 30+ - obesity (finding); Limited social contact (finding); Reports of violence in the environment (finding)",
+    "text": "Risk activity involvement (finding); Received higher education (finding); Has a criminal record (finding); Chronic sinusitis (disorder); History of tubal ligation (situation); Full-time employment (finding); Medication review due (situation); Body mass index 30+ - obesity (finding); Limited"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "155.4",
+    "text": "155.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "72.8",
+    "text": "72.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "120/86",
+    "text": "120/86"
+  }
+}

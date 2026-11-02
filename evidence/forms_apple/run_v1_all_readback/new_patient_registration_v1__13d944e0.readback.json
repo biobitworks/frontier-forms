@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Kiyoko Schamberger",
+    "text": "Kiyoko Schamberger"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1980-04-16",
+    "text": "1980-04-16"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-996-6634",
+    "text": "555-996-6634"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1006 Kulas Lane",
+    "text": "1006 Kulas Lane"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Northampton",
+    "text": "Northampton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01053",
+    "text": "01053"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Korean",
+    "text": "Korean"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

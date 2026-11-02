@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Olin Gusikowski",
+    "text": "Olin Gusikowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Stress (finding); Unemployed (finding)",
+    "text": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Stress (finding); Unemployed (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "164.3",
+    "text": "164.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "73.4",
+    "text": "73.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "109/82",
+    "text": "109/82"
+  }
+}

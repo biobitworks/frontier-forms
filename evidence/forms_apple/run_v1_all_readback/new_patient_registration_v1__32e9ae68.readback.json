@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Dolores Rubio",
+    "text": "Dolores Rubio"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1957-12-09",
+    "text": "1957-12-09"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-777-1706",
+    "text": "555-777-1706"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "103 Wuckert Harbor Unit 70",
+    "text": "103 Wuckert Harbor Unit 70"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Monson",
+    "text": "Monson"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Spanish",
+    "text": "Spanish"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

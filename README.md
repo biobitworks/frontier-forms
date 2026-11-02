@@ -1,8 +1,15 @@
 # Frontier Forms — Antigentic EHR Form Intake
 
+> **Start here (judges, 2026-11-02).** Current status, results and priorities: [docs/STATUS_2026-11-02.md](docs/STATUS_2026-11-02.md). Accomplishment heatmap: [docs/figures/accomplishment_heatmap.png](docs/figures/accomplishment_heatmap.png) (interactive: [.html](docs/figures/accomplishment_heatmap.html)). Every figure and image with its caption and source PR: [docs/figures/FIGURES.md](docs/figures/FIGURES.md).
+> Headline on 54 held-out synthetic test forms: B0 33.3% (18/54) full-form success; B0 + FCG harness 55.6% (30/54), discovery grade; post-training arm not yet scored. Teammate bench pilot (same hosted model, Pi browser-tools vs our tools): DeepSeek V4.1 Flash median 92.0 → 16.8 s with fields 119/121 in both arms ([bench/charts/LIVE_RESULTS.md](bench/charts/LIVE_RESULTS.md)). Preregistered trained-gain test: learned OCR correction 14 → 22/46 all-fields-correct (Holm p=0.023, discovery); trained detector crops NULL. Every result, including null, negative and failed ones, is listed in Figure 1c of the heatmap. All data synthetic (MITRE Synthea). The sections below are the original pre-release protocol, and some of their NOT_TESTED rows have since been run (see the status file).
+
 **Repo:** https://github.com/biobitworks/frontier-forms
 **Parent commit:** 67bf6b0ba51dc7ed792c139f37fcc648653611c4
 **State:** PRE-RELEASE_EVIDENCE_PACKAGE; NO_LIVE_EHR_WRITE.
+
+## Hackathon: real Pi baseline versus our harness
+
+[Live multi-model horizontal charts and results](bench/charts/LIVE_RESULTS.md), updated as runs finish. [Original DeepSeek pilot and 20-second explanation](bench/charts/README.md). Same DeepSeek V4.1 Flash model, three synthetic medical forms, two patients, six matched cases per arm. Median completion: **92.0 s → 16.8 s (5.5× faster)**. Correct fields: **119/121 for both arms**. Mean estimated API cost: **$0.0269 → $0.0054 per form**. Small development pilot; no held-out or clinical superiority claim. [Sanitized paired metrics](bench/charts/paired_pilot.json).
 
 ## Business use case
 

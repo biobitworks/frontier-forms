@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Celena Bergstrom",
+    "text": "Celena Bergstrom"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2015-12-20",
+    "text": "2015-12-20"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-455-2019",
+    "text": "555-455-2019"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "290 Carroll Flat",
+    "text": "290 Carroll Flat"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "North Reading",
+    "text": "North Reading"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

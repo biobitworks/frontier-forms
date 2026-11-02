@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Loria D'Amore",
+    "text": "Loria D'Amore"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Prediabetes (finding); History of tubal ligation (situation); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Metabolic syndrome X (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Has a criminal record (finding); Gingivitis (disorder); Awaiting transplantation of kidney (situation); Chronic kidney disease stage 4 (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Victim of intimate partner abuse (finding); Medication review due (situation); Not in labor force (finding)",
+    "text": "Received higher education (finding); Prediabetes (finding); History of tubal ligation (situation); Essential hypertension (disorder); Body mass index 30+ - obesity (finding); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Metabolic"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "167.7",
+    "text": "167.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "77.6",
+    "text": "77.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "117/58",
+    "text": "117/58"
+  }
+}

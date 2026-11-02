@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Vance Ebert",
+    "text": "Vance Ebert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; budesonide 0.25 MG/ML Inhalation Suspension; albuterol 0.83 MG/ML Inhalation Solution",
+    "text": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; budesonide 0.25 MG/ML Inhalation Suspension; albuterol 0.83 MG/ML Inhalation Solution"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Penicillin V",
+    "text": "Penicillin V"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Fish (substance); Tree nut (substance); Allergic disposition (finding); Mold (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)",
+    "text": "Fish (substance); Tree nut (substance); Allergic disposition (finding); Mold (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Perennial allergic rhinitis with seasonal variation (disorder); Childhood asthma (disorder)",
+    "text": "Perennial allergic rhinitis with seasonal variation (disorder); Childhood asthma (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "92.3",
+    "text": "92.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "13.8",
+    "text": "13.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "104/87",
+    "text": "104/87"
+  }
+}

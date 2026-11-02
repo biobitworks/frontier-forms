@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Stevie Nolan",
+    "text": "Stevie Nolan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; 24 HR tacrolimus 1 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Disorder of kidney due to diabetes mellitus (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Gingivitis (disorder); Has a criminal record (finding); Proteinuria due to type 2 diabetes mellitus (disorder); Hyperlipidemia (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Alzheimer's disease (disorder); History of renal transplant (situation); Full-time employment (finding); Medication review due (situation); Injury of neck (disorder); Whiplash injury to neck (disorder)",
+    "text": "Received higher education (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Disorder of kidney due to diabetes mellitus (disorder); Microalbuminuria due to type 2 diabetes"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "191.4",
+    "text": "191.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "102.4",
+    "text": "102.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "97/73",
+    "text": "97/73"
+  }
+}

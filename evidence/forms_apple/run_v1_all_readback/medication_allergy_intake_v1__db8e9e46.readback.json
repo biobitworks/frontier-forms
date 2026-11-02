@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Emma Sanford",
+    "text": "Emma Sanford"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "117.2",
+    "text": "117.2"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "19.3",
+    "text": "19.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "119/84",
+    "text": "119/84"
+  }
+}

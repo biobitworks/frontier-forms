@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Teresa Atencio",
+    "text": "Teresa Atencio"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1969-07-29",
+    "text": "1969-07-29"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-931-5305",
+    "text": "555-931-5305"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "492 Farrell Esplanade",
+    "text": "492 Farrell Esplanade"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02136",
+    "text": "02136"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Spanish",
+    "text": "Spanish"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

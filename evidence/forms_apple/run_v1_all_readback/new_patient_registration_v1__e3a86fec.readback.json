@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Beckie Sanford",
+    "text": "Beckie Sanford"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1967-03-01",
+    "text": "1967-03-01"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-789-5576",
+    "text": "555-789-5576"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1039 Halvorson Road",
+    "text": "1039 Halvorson Road"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Haverhill",
+    "text": "Haverhill"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01832",
+    "text": "01832"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}
