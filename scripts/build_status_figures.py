@@ -47,6 +47,8 @@ WORK = [
      "Pipeline merged; run in progress on MacBookPro (T09)."),
     ("Qwen text mappers on OCR lines", "#23", ["done", "done", "done", "negative", "todo"],
      "Both Qwen mappers below the deterministic parser on identical input (209 and 109 vs 283 of 322 fields)."),
+    ("Trained OCR correction + detector crops (prereg)", "#51", ["done", "done", "done", "discovery", "todo"],
+     "Learned OCR correction 14 -> 22/46 all-7 (Holm p=0.023), promoted as discovery; detector-crop arms NULL. Test split touched once."),
     ("Post-training arm M0 / M1 SFT / M2", "T08", ["done", "done", "running", "todo", "todo"],
      "Qwen2.5-0.5B LoRA: one epoch-0 val loss (1.005), no adapter saved. Restart on MacBookPro."),
     ("Custody: Merkle, Lean 4, red-team replay", "#3 #8 #11 #13 #20", ["done", "done", "done", "done", "na"],
@@ -149,20 +151,24 @@ def vision():
 
 def models():
     return {
-        "title": "Local models vs deterministic code on identical input",
+        "title": "Local models and trained components vs deterministic code on identical input",
         "source": "evidence/redteam/lanes/MAP_*_synform2_test_META.json (PR #23); evidence/baseline/BASELINE_V1.json (PR #17)",
-        "columns": ["Fields correct (SYNFORM2 test, 322)", "Full-form success (54 test forms)"],
+        "columns": ["Fields correct (SYNFORM2 test, 322)", "Full-form success (B0 rows: 54 forms; A0-A3 rows: all 7 fields on 46 images)"],
         "lower_better": [False, False],
         "rows": [
             {"label": "Geometric parser (deterministic)", "values": [round(283 / 322, 4), None], "grade": "baseline"},
             {"label": "qwen2.5:1.5b mapper", "values": [round(209 / 322, 4), None], "grade": "negative"},
             {"label": "qwen3:1.7b mapper", "values": [round(109 / 322, 4), None], "grade": "negative"},
             {"label": "B0-v1 (frozen rules)", "values": [None, 0.3333], "grade": "baseline"},
+            {"label": "Page OCR + rule parser A0 [46 SYNFORM2 test, all-7]", "values": [round(283 / 322, 4), round(14 / 46, 4)], "grade": "baseline"},
+            {"label": "A0 + learned OCR correction A1 (trained, prereg)", "values": [round(296 / 322, 4), round(22 / 46, 4)], "grade": "discovery"},
+            {"label": "Trained detector crops + OCR A2 (prereg)", "values": [round(276 / 322, 4), round(9 / 46, 4)], "grade": "null"},
+            {"label": "A2 + learned correction A3 (prereg)", "values": [round(288 / 322, 4), round(15 / 46, 4)], "grade": "null"},
             {"label": "M0 Qwen2.5-0.5B base", "values": [None, None], "grade": "running"},
             {"label": "M1 Qwen2.5-0.5B SFT", "values": [None, None], "grade": "todo"},
             {"label": "M1 + harness", "values": [None, None], "grade": "todo"},
         ],
-        "note": "Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08).",
+        "note": "A0-A3 are the preregistered trained-gain test (evidence/redteam/trained_gain/trained_gain_summary.json, PR #51): only the learned OCR correction is promoted (discovery); detector crops are NULL. Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08).",
     }
 
 
@@ -180,6 +186,9 @@ LEDGER = [
     ("Frontier Forms tools vs Pi browser-tools (hosted models)", "DeepSeek V4.1 Flash 92.0 -> 16.8 s median, fields 119/121 both; 4 models, small pilot, no held-out", "partial", "bench (#56 lane)"),
     ("Same, GPT-OSS 120B", "fields 12/58 -> 58/58 on 2 matched cases", "partial", "bench"),
     ("Same, GLM 5.3", "fields 102/105 -> 101/105 (one field worse) while 7x faster", "partial", "bench"),
+    ("Learned OCR post-correction (A1), preregistered", "all-7-fields correct 14 -> 22/46 test images, 8/0 discordant, McNemar p=0.0078, Holm p=0.023, CI [+0.07, +0.28]; fields 283 -> 296/322", "discovery", "#51 (trained_gain)"),
+    ("Trained YOLOv8n detector crops + OCR (A2), preregistered", "14 -> 9/46, Holm p=0.53, CI [-0.26, +0.04]", "null", "#51 (trained_gain)"),
+    ("Detector crops + learned correction (A3), preregistered", "14 -> 15/46, Holm p=1.0, CI [-0.11, +0.15]", "null", "#51 (trained_gain)"),
     ("Qwen text mappers vs deterministic parser", "qwen2.5:1.5b 209/322, qwen3:1.7b 109/322 vs parser 283/322", "negative", "#23"),
     ("Trained logistic box validator", "540/540 = contour control 540/540; gain 0, p=1", "negative", "#14"),
     ("Random Forest box-validator factorial", "F1 0.973-0.979 vs control 1.000 at 10/30/63 patients", "negative", "#15"),
@@ -248,8 +257,8 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     data = {
         "schema": "frontier_forms.accomplishment_heatmap.v1",
-        "as_of_utc": "2026-11-02T23:55:00Z",
-        "main_commit": "e422def",
+        "as_of_utc": "2026-11-03T00:00:00Z",
+        "main_commit": "b9c322d",
         "claim_ceiling": "Synthetic MITRE Synthea data only; research lanes use local inference, the teammate bench lane (panel F) uses Fireworks-hosted models; no clinical claim. Re-plots committed results; nothing new was run.",
         "stages": STAGES,
         "workstreams": [{"name": n, "prs": p, "states": s, "note": note} for n, p, s, note in WORK],

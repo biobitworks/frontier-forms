@@ -1,7 +1,7 @@
 {
  "schema": "frontier_forms.accomplishment_heatmap.v1",
- "as_of_utc": "2026-11-02T23:55:00Z",
- "main_commit": "e422def",
+ "as_of_utc": "2026-11-03T00:00:00Z",
+ "main_commit": "b9c322d",
  "claim_ceiling": "Synthetic MITRE Synthea data only; research lanes use local inference, the teammate bench lane (panel F) uses Fireworks-hosted models; no clinical claim. Re-plots committed results; nothing new was run.",
  "stages": [
   "Data frozen",
@@ -142,6 +142,18 @@
     "todo"
    ],
    "note": "Both Qwen mappers below the deterministic parser on identical input (209 and 109 vs 283 of 322 fields)."
+  },
+  {
+   "name": "Trained OCR correction + detector crops (prereg)",
+   "prs": "#51",
+   "states": [
+    "done",
+    "done",
+    "done",
+    "discovery",
+    "todo"
+   ],
+   "note": "Learned OCR correction 14 -> 22/46 all-7 (Holm p=0.023), promoted as discovery; detector-crop arms NULL. Test split touched once."
   },
   {
    "name": "Post-training arm M0 / M1 SFT / M2",
@@ -617,11 +629,11 @@
    "note": "Rows are grouped by evaluation set: T1 and V1 on the same 57 renders (570 fields); the contour control and #14 on the same 54 filled test forms (540 boxes); D1 and D2 on 36 patient-disjoint test images (360 boxes), with no contour control on that set. Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000."
   },
   {
-   "title": "Local models vs deterministic code on identical input",
+   "title": "Local models and trained components vs deterministic code on identical input",
    "source": "evidence/redteam/lanes/MAP_*_synform2_test_META.json (PR #23); evidence/baseline/BASELINE_V1.json (PR #17)",
    "columns": [
     "Fields correct (SYNFORM2 test, 322)",
-    "Full-form success (54 test forms)"
+    "Full-form success (B0 rows: 54 forms; A0-A3 rows: all 7 fields on 46 images)"
    ],
    "lower_better": [
     false,
@@ -661,6 +673,38 @@
      "grade": "baseline"
     },
     {
+     "label": "Page OCR + rule parser A0 [46 SYNFORM2 test, all-7]",
+     "values": [
+      0.8789,
+      0.3043
+     ],
+     "grade": "baseline"
+    },
+    {
+     "label": "A0 + learned OCR correction A1 (trained, prereg)",
+     "values": [
+      0.9193,
+      0.4783
+     ],
+     "grade": "discovery"
+    },
+    {
+     "label": "Trained detector crops + OCR A2 (prereg)",
+     "values": [
+      0.8571,
+      0.1957
+     ],
+     "grade": "null"
+    },
+    {
+     "label": "A2 + learned correction A3 (prereg)",
+     "values": [
+      0.8944,
+      0.3261
+     ],
+     "grade": "null"
+    },
+    {
      "label": "M0 Qwen2.5-0.5B base",
      "values": [
       null,
@@ -685,7 +729,7 @@
      "grade": "todo"
     }
    ],
-   "note": "Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08)."
+   "note": "A0-A3 are the preregistered trained-gain test (evidence/redteam/trained_gain/trained_gain_summary.json, PR #51): only the learned OCR correction is promoted (discovery); detector crops are NULL. Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08)."
   },
   {
    "title": "Teammate bench: same hosted model, Pi browser-tools vs Frontier Forms tools (pilot)",
@@ -807,6 +851,24 @@
    "result": "fields 102/105 -> 101/105 (one field worse) while 7x faster",
    "verdict": "partial",
    "source": "bench"
+  },
+  {
+   "claim": "Learned OCR post-correction (A1), preregistered",
+   "result": "all-7-fields correct 14 -> 22/46 test images, 8/0 discordant, McNemar p=0.0078, Holm p=0.023, CI [+0.07, +0.28]; fields 283 -> 296/322",
+   "verdict": "discovery",
+   "source": "#51 (trained_gain)"
+  },
+  {
+   "claim": "Trained YOLOv8n detector crops + OCR (A2), preregistered",
+   "result": "14 -> 9/46, Holm p=0.53, CI [-0.26, +0.04]",
+   "verdict": "null",
+   "source": "#51 (trained_gain)"
+  },
+  {
+   "claim": "Detector crops + learned correction (A3), preregistered",
+   "result": "14 -> 15/46, Holm p=1.0, CI [-0.11, +0.15]",
+   "verdict": "null",
+   "source": "#51 (trained_gain)"
   },
   {
    "claim": "Qwen text mappers vs deterministic parser",
