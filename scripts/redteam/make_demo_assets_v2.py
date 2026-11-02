@@ -32,6 +32,12 @@ for w in list {
     print(w[kCGWindowNumber as String] as? Int ?? 0); exit(0)
   }
 }
+// window titles are hidden without Screen Recording permission: fall back to Preview's frontmost normal window
+for w in list {
+  let owner = w[kCGWindowOwnerName as String] as? String ?? ""
+  let layer = w[kCGWindowLayer as String] as? Int ?? 99
+  if owner == "Preview" && layer == 0 { print(w[kCGWindowNumber as String] as? Int ?? 0); exit(0) }
+}
 print(0)
 '''
 
@@ -107,17 +113,30 @@ def main():
         out = D / 'screenshots' / 'models'; out.mkdir(parents=True, exist_ok=True)
         srv = subprocess.Popen([sys.executable, a.server_script, '--root', str(D), '--port', str(a.port)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         time.sleep(1.5); n = 0
+        import tempfile
+        prof = tempfile.mkdtemp(prefix='ff-chrome-')   # isolated profile: never attach to the user's running Chrome
+
+        def chrome(args, url):
+            for attempt in range(3):
+                try:
+                    subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check', f'--user-data-dir={prof}', *args, url], check=True, timeout=45, capture_output=True)
+                    return True
+                except subprocess.TimeoutExpired:
+                    subprocess.run(['pkill', '-f', prof], capture_output=True)
+            return False
         try:
             for ident in anns:
                 for m in MODELS:
                     for bx in ('1', '0'):
                         url = f'http://127.0.0.1:{a.port}/viewer.html?id={ident}&model={m}&boxes={bx}'
                         stem = f"{ident}__{m.replace(':', '_')}__{'boxes' if bx == '1' else 'noboxes'}"
-                        subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--window-size=1440,820', f'--screenshot={out / (stem + ".png")}', url], check=True, timeout=60, capture_output=True)
+                        if (out / (stem + '.png')).exists():
+                            n += 1; continue
+                        chrome(['--hide-scrollbars', '--window-size=1440,820', f'--screenshot={out / (stem + ".png")}'], url)
                         if bx == '1':
-                            subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--no-pdf-header-footer', f'--print-to-pdf={out / (stem + ".pdf")}', url], check=True, timeout=60, capture_output=True)
+                            chrome(['--no-pdf-header-footer', f'--print-to-pdf={out / (stem + ".pdf")}'], url)
                         n += 1
-            subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--window-size=1200,700', f'--screenshot={D / "screenshots" / "index_models.png"}', f'http://127.0.0.1:{a.port}/'], check=True, timeout=60, capture_output=True)
+            chrome(['--window-size=1200,700', f'--screenshot={D / "screenshots" / "index_models.png"}'], f'http://127.0.0.1:{a.port}/')
         finally:
             srv.terminate()
         print('CHROME_SCREENSHOTS', n)
