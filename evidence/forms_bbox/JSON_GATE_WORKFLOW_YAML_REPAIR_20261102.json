@@ -1,0 +1,10 @@
+{
+ "schema":"frontier-forms.github-workflow-parse-repair.v1",
+ "predecessor_failed_run":"https://github.com/biobitworks/frontier-forms/actions/runs/41544529313",
+ "observed_state":"FAILED",
+ "reason":"GitHub Actions no jobs; YAML scanner error at unquoted --only-binary=:all: in run scalar",
+ "repair":"Use YAML literal run block for pip command; parse with PyYAML under Python3.12",
+ "local_yaml_parse":"PASS",
+ "new_ci":"NOT_YET_EXECUTED",
+ "model_gain":"NOT_COMPUTED"
+}
