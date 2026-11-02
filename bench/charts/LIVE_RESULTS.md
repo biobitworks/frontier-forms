@@ -7,9 +7,9 @@ Real Pi + browser-tools versus the same model with Frontier Forms tools. Updated
 | Model | Runs saved | Matched cases | Median Pi → tools | Correct fields Pi → tools | Mean estimated API cost Pi → tools | Failures Pi / tools |
 |---|---:|---:|---|---|---|---|
 | DeepSeek V4.1 Flash | 12/12 | 6/6 | 92.0 → 16.8 s | 119/121 → 119/121 | $0.0269 → $0.0054 | 0 / 0 |
-| GLM 5.3 | 10/12 | 4/6 | 61.1 → 9.0 s | 85/88 → 84/88 | $0.1083 → $0.0127 | 0 / 0 |
+| GLM 5.3 | 11/12 | 5/6 | 68.6 → 9.6 s | 102/105 → 101/105 | $0.1156 → $0.0160 | 0 / 0 |
 | Qwen Max | 8/12 | 2/6 | 79.1 → 16.9 s | 32/33 → 33/33 | $0.1918 → $0.0360 | 0 / 0 |
-| GPT-OSS 120B | 5/12 | 1/6 | 0.9 → 4.2 s | 8/29 → 29/29 | $0.0003 → $0.0017 | 0 / 0 |
+| GPT-OSS 120B | 7/12 | 2/6 | 7.2 → 4.2 s | 12/58 → 58/58 | $0.0022 → $0.0018 | 0 / 0 |
 
 ## Conditions and limitations
 
