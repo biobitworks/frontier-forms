@@ -85,10 +85,12 @@ def main():
                'apple_vision_parser': [L / 'OCR_apple-vision_synform2_test_LOCAL.jsonl', L / 'OCRERR_apple-vision_synform2_all_LOCAL.jsonl'],
                'qwen2.5:1.5b': [L / 'MAP_qwen2.5_1.5b_synform2_test_LOCAL.jsonl'], 'qwen3:1.7b': [L / 'MAP_qwen3_1.7b_synform2_test_LOCAL.jsonl']}
         by = {m: {r['input_fco_id']: r for p in ps if p.exists() for r in jsonl(p)} for m, ps in src.items()}
-        by_png = {r['png_sha256']: r['input_fco_id'] for p in a.inputs for r in jsonl(p)}
+        # NOTE: SYNFORM2-ERR 'clean' controls are byte-identical to SYNFORM2 clean renders, so the png sha alone is
+        # ambiguous; resolve within the annotation's own dataset (inputs given in order SYNFORM2, SYNFORM2-ERR).
         import hashlib
+        by_png = {ds: {r['png_sha256']: r['input_fco_id'] for r in jsonl(p)} for ds, p in zip(('synform2', 'synform2_err'), a.inputs)}
         for ident, ann in anns.items():
-            fco = by_png.get(hashlib.sha256((D / ann['image']).read_bytes()).hexdigest())
+            fco = by_png[ann['dataset']].get(hashlib.sha256((D / ann['image']).read_bytes()).hexdigest())
             ann['input_fco_id'] = fco
             ann['answers'] = {}
             for m_, rows in by.items():
