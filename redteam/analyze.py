@@ -104,54 +104,56 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
                 "completion_tokens_total": sum(r["completion_tokens"] or 0 for r in v),
                 "latency_median_s": statistics.median(r["latency_seconds"] for r in v),
             })
-        pvals = {}
-        recs = []
-        for cid, a0, a1, kind, fam in COMPARISONS:
-            if a0 not in arms or a1 not in arms:
-                continue
-            keys = sorted(set(arms[a0]) & set(arms[a1]))
-            b = [arms[a0][k]["correct_strict"] for k in keys]
-            c = [arms[a1][k]["correct_strict"] for k in keys]
-            strata = [arms[a0][k]["task"] for k in keys]
-            t = S.contingency(b, c)
-            p = S.mcnemar_exact(t["base_only"], t["chal_only"])
-            boot = S.stratified_bootstrap(b, c, strata)
-            acc0, acc1 = sum(b) / len(b), sum(c) / len(c)
-            prompt_identical = sum(arms[a0][k]["prompt_sha256"] == arms[a1][k]["prompt_sha256"] for k in keys)
-            rec = {
-                "experiment_id": f"RT-{lane}-{part}-{cid}",
-                "lane": lane, "partition": part, "comparison": cid, "kind": kind, "family": fam,
-                "parent_fco_root": PARENT_ROOT, "parent_review_root": REVIEW_ROOT,
-                "candidate_leaf_or_edge": CANDIDATE[cid],
-                "baseline": {"model": meta.get("model"), "model_digest": meta.get("model_digest"),
-                             "runtime": meta.get("runtime"), "harness": a0},
-                "challenger": {"model": meta.get("model"), "model_digest": meta.get("model_digest"),
-                               "runtime": meta.get("runtime"), "harness": a1},
-                "frozen_case_ids_sha256": hashlib.sha256("\n".join(keys).encode()).hexdigest(),
-                "n": len(keys), "baseline_correct": sum(b), "challenger_correct": sum(c),
-                "contingency": t, "delta_accuracy_abs": acc1 - acc0,
-                "delta_accuracy_rel": ((acc1 - acc0) / acc0) if acc0 else None,
-                "mcnemar_exact_p": p, "bootstrap": boot, "auroc": "NOT_COMPUTED",
-                "identical_prompts": prompt_identical,
-                "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE",
-                "successor_root": "NOT_COMPUTED",
-            }
-            if fam == "test":
-                pvals[cid] = p
-            recs.append(rec)
-        adj = S.holm(pvals) if pvals else {}
-        for rec in recs:
-            cid = rec["comparison"]
-            rec["holm_p"] = adj.get(cid)
-            if rec["family"] == "control":
-                rec["claim_status"] = "CONTROL"
-            elif rec["holm_p"] is not None and rec["holm_p"] < 0.05 and rec["bootstrap"]["ci95"][0] > 0:
-                rec["claim_status"] = "DISCOVERY_SIGNAL_REPLICATION_REQUIRED" if part == "discovery" else "HELDOUT_PASS_PENDING_GUARDRAILS"
-            elif rec["holm_p"] is not None and rec["holm_p"] < 0.05 and rec["bootstrap"]["ci95"][1] < 0:
-                rec["claim_status"] = "FAIL_HARM"
-            else:
-                rec["claim_status"] = "NEGATIVE"
-            matrix.append(rec)
+        for parser in ("strict", "lenient"):
+            pvals = {}
+            recs = []
+            for cid, a0, a1, kind, fam in COMPARISONS:
+                if a0 not in arms or a1 not in arms:
+                    continue
+                keys = sorted(set(arms[a0]) & set(arms[a1]))
+                b = [arms[a0][k][f"correct_{parser}"] for k in keys]
+                c = [arms[a1][k][f"correct_{parser}"] for k in keys]
+                strata = [arms[a0][k]["task"] for k in keys]
+                t = S.contingency(b, c)
+                p = S.mcnemar_exact(t["base_only"], t["chal_only"])
+                boot = S.stratified_bootstrap(b, c, strata)
+                acc0, acc1 = sum(b) / len(b), sum(c) / len(c)
+                prompt_identical = sum(arms[a0][k]["prompt_sha256"] == arms[a1][k]["prompt_sha256"] for k in keys)
+                rec = {
+                    "experiment_id": f"RT-{lane}-{part}-{cid}-{parser}",
+                    "lane": lane, "partition": part, "comparison": cid, "parser": parser,
+                    "parser_role": "PRIMARY" if parser == "strict" else "SECONDARY", "kind": kind, "family": fam,
+                    "parent_fco_root": PARENT_ROOT, "parent_review_root": REVIEW_ROOT,
+                    "candidate_leaf_or_edge": CANDIDATE[cid],
+                    "baseline": {"model": meta.get("model"), "model_digest": meta.get("model_digest"),
+                                 "runtime": meta.get("runtime"), "harness": a0},
+                    "challenger": {"model": meta.get("model"), "model_digest": meta.get("model_digest"),
+                                   "runtime": meta.get("runtime"), "harness": a1},
+                    "frozen_case_ids_sha256": hashlib.sha256("\n".join(keys).encode()).hexdigest(),
+                    "n": len(keys), "baseline_correct": sum(b), "challenger_correct": sum(c),
+                    "contingency": t, "delta_accuracy_abs": acc1 - acc0,
+                    "delta_accuracy_rel": ((acc1 - acc0) / acc0) if acc0 else None,
+                    "mcnemar_exact_p": p, "bootstrap": boot, "auroc": "NOT_COMPUTED",
+                    "identical_prompts": prompt_identical,
+                    "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE",
+                    "successor_root": "NOT_COMPUTED",
+                }
+                if fam == "test":
+                    pvals[cid] = p
+                recs.append(rec)
+            adj = S.holm(pvals) if pvals else {}
+            for rec in recs:
+                cid = rec["comparison"]
+                rec["holm_p"] = adj.get(cid)
+                if rec["family"] == "control":
+                    rec["claim_status"] = "CONTROL"
+                elif rec["holm_p"] is not None and rec["holm_p"] < 0.05 and rec["bootstrap"]["ci95"][0] > 0:
+                    rec["claim_status"] = "DISCOVERY_SIGNAL_REPLICATION_REQUIRED" if part == "discovery" else "HELDOUT_PASS_PENDING_GUARDRAILS"
+                elif rec["holm_p"] is not None and rec["holm_p"] < 0.05 and rec["bootstrap"]["ci95"][1] < 0:
+                    rec["claim_status"] = "FAIL_HARM"
+                else:
+                    rec["claim_status"] = "NEGATIVE"
+                matrix.append(rec)
     # cross-lane model comparisons (labelled MODEL, never harness)
     model_cmp = []
     for part in ("discovery", "heldout"):
@@ -174,8 +176,8 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
     admission = []
     for cid, *_ in COMPARISONS:
         for lane in sorted({k[0] for k in bits}):
-            d = next((m for m in matrix if m["lane"] == lane and m["partition"] == "discovery" and m["comparison"] == cid), None)
-            h = next((m for m in matrix if m["lane"] == lane and m["partition"] == "heldout" and m["comparison"] == cid), None)
+            d = next((m for m in matrix if m["parser"] == "strict" and m["lane"] == lane and m["partition"] == "discovery" and m["comparison"] == cid), None)
+            h = next((m for m in matrix if m["parser"] == "strict" and m["lane"] == lane and m["partition"] == "heldout" and m["comparison"] == cid), None)
             if not d:
                 continue
             ok = (d["family"] == "test" and h is not None and d["claim_status"].startswith("DISCOVERY_SIGNAL")
@@ -195,10 +197,11 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
     for r in arm_table:
         L.append(f"| {r['lane']} | {r['partition']} | {r['arm']} | {r['n']} | {r['correct_strict']} | {r['abstain_strict']} | "
                  f"{r['correct_lenient']} | {r['latency_median_s']:.2f} | {r['prompt_tokens_total']} |")
-    L += ["\n## Paired interventions (same weights, same cases)\n",
+    for parser in ("strict", "lenient"):
+      L += [f"\n## Paired interventions, {parser} parser ({'PRIMARY' if parser == 'strict' else 'SECONDARY'}; same weights, same cases)\n",
           "| id | lane | part | change | base | chal | b/c discordant | McNemar p | Holm p | boot 95% CI | status |",
           "|---|---|---|---|---|---|---|---|---|---|---|"]
-    for m in matrix:
+      for m in [x for x in matrix if x["parser"] == parser]:
         ci = m["bootstrap"]["ci95"]
         hp = f"{m['holm_p']:.3f}" if m["holm_p"] is not None else "n/a"
         L.append(f"| {m['comparison']} | {m['lane']} | {m['partition']} | {m['kind']} | {m['baseline_correct']}/{m['n']} | "
