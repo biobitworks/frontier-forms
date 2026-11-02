@@ -137,12 +137,19 @@ class HF:
         from transformers import AutoModelForCausalLM, AutoTokenizer
         self.torch = torch
         self.dev = "mps" if torch.backends.mps.is_available() else "cpu"
-        self.tok = AutoTokenizer.from_pretrained(path, local_files_only=True)
+        self.tok_workaround = "none"
+        try:
+            self.tok = AutoTokenizer.from_pretrained(path, local_files_only=True)
+        except AttributeError:
+            # tokenizer_config.json stores extra_special_tokens as a list (newer transformers format);
+            # transformers 4.57 expects a dict. Overriding with {} keeps the vocabulary in tokenizer.json.
+            self.tok = AutoTokenizer.from_pretrained(path, local_files_only=True, extra_special_tokens={})
+            self.tok_workaround = "extra_special_tokens={}"
         self.m = AutoModelForCausalLM.from_pretrained(path, local_files_only=True, torch_dtype=torch.float32).to(self.dev).eval()
         st = Path(path) / "model.safetensors"
         self.digest = "sha256:" + (sha_hex(st.read_bytes()) if st.is_file() else "NOT_FOUND")
         import transformers
-        self.version = f"torch {torch.__version__}; transformers {transformers.__version__}; device {self.dev}"
+        self.version = f"torch {torch.__version__}; transformers {transformers.__version__}; device {self.dev}; tokenizer_workaround {self.tok_workaround}"
         self.path = path
 
     def unload(self):
