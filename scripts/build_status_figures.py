@@ -166,6 +166,63 @@ def models():
     }
 
 
+
+# ---------------------------------------------------------------- ledger
+# Every claim we tested, admitted or not. verdict: admitted, discovery, negative, null, failed, partial, not_tested
+LEDGER = [
+    ("FCG harness L1+L3 on forms", "0.333 -> 0.556 (30/54), 12/0 discordant, p=0.00049, Holm p=0.0059, cluster CI [0.07, 0.37]", "discovery", "#10 #17 #18 #48"),
+    ("Single module L1, L2 or L3 added to B0", "0 change in form success on test (p=1.0 each)", "null", "#10"),
+    ("L2 unit validation in LOMO", "removing L2 changes nothing (delta 0)", "null", "#10"),
+    ("M3 source binding (injected errors)", "recall 0.989; LOMO removing M3 loses 0.563, p=2.5e-119; costs 4% false flags", "admitted", "#10"),
+    ("M1 Merkle breakpoint, M2 Lean 4", "single gains 0.16 / 0.27, but 0 unique contribution once M3 is present", "null", "#10"),
+    ("Per-field commitment gate (SYNFORM2-ERR)", "detection 0.13 -> 1.00, 0 false admissions; coverage falls 0.985 -> 0.876", "discovery", "#20 #21"),
+    ("Fault-injection factorial, 16 arms", "full modules repair 100% by construction; not a model gain", "discovery", "#12"),
+    ("Frontier Forms tools vs Pi browser-tools (hosted models)", "DeepSeek V4.1 Flash 92.0 -> 16.8 s median, fields 119/121 both; 4 models, small pilot, no held-out", "partial", "bench (#56 lane)"),
+    ("Same, GPT-OSS 120B", "fields 12/58 -> 58/58 on 2 matched cases", "partial", "bench"),
+    ("Same, GLM 5.3", "fields 102/105 -> 101/105 (one field worse) while 7x faster", "partial", "bench"),
+    ("Qwen text mappers vs deterministic parser", "qwen2.5:1.5b 209/322, qwen3:1.7b 109/322 vs parser 283/322", "negative", "#23"),
+    ("Trained logistic box validator", "540/540 = contour control 540/540; gain 0, p=1", "negative", "#14"),
+    ("Random Forest box-validator factorial", "F1 0.973-0.979 vs control 1.000 at 10/30/63 patients", "negative", "#15"),
+    ("D1 tiny segmentation detector", "recall 0.131, precision 0.099, F1 0.113", "failed", "#16"),
+    ("D2 candidate classifier", "recall 0.956, precision 0.656, 180 false boxes; same layouts only", "partial", "#16"),
+    ("Apple A2 OCR read-back of filled PDFs", "field acc 0.856 -> 0.802; dropdowns vanish, long lists cut; p=0.5", "negative", "#10"),
+    ("OCR on boxed overlay images", "Apple OCR 58/70 clean vs 0/70 with boxes drawn", "negative", "#51"),
+    ("Prompt injection, qwen3 with retrieved context", "attacker succeeds on 6/17 to 9/24 eligible cases", "failed", "#11"),
+    ("Prompt injection, qwen2.5vl on form images", "followed the injected note 0/18", "partial", "#29 (open)"),
+    ("Prompt injection, Tesseract", "copies the injected note as text in 19/57 images", "failed", "#19"),
+    ("FCG context in the prompt (LongevityBench)", "L0 25 -> 28/38 discovery (p=0.55); held-out 25/39 vs 25/39", "null", "#11"),
+    ("FCG context, Insilico Qwen3-0.6B (MPS)", "25 -> 24/38 and 22 -> 19/39", "negative", "#11"),
+    ("Insilico P-L3c CPU rerun", "stopped by Byron at 139/693; CPU matches MPS 38/38; C1/C2 negative", "partial", "#13"),
+    ("Liquid 1.2B vs Insilico 0.6B", "25/38 vs 27/38, p=0.6875", "null", "#1 #3"),
+    ("Historic Insilico score on a second stack", "27/38 became 25/38", "failed", "#11"),
+    ("qwen3:1.7b / qwen2.5vl on LongevityBench", "3/38 and similar: format failures", "negative", "#20"),
+    ("Custody attacks (red team)", "7 weaknesses reproduced: duplicate-last-leaf collision, uncommitted parent pointers, no edge integrity, under-reporting impact view, duplicate-key parse, phantom-index proof, oracle leak via prompt hashes", "failed", "#11 #20"),
+    ("Forged VERIFIED custody state", "accepted before the fix; now rejected", "admitted", "#8"),
+    ("Review verifier read the working tree (F-02)", "fixed by pinning to historical commits", "admitted", "#20"),
+    ("JSON-only gate, first scanner", "falsely returned PASS; fixed in 3c4c111", "failed", "#16"),
+    ("Trained model M1 SFT", "one epoch-0 val loss 1.005, no adapter saved; no gain admitted", "not_tested", "#18 T08"),
+    ("V2 YOLOv8n + OCR value validator", "pipeline merged, no result yet", "not_tested", "#19 T09"),
+    ("Fresh replication cohort", "not run", "not_tested", "T01"),
+    ("Named frontier-model baseline on the 54 test forms", "not run", "not_tested", "#56"),
+]
+
+
+def bench():
+    return {
+        "title": "Teammate bench: same hosted model, Pi browser-tools vs Frontier Forms tools (pilot)",
+        "source": "bench/charts/LIVE_RESULTS.md and live_metrics.json at main@e422def (teammate lane, Fireworks-hosted models)",
+        "columns": ["Fields correct, Pi", "Fields correct, our tools", "Time saved (1 - tools/Pi median)", "Cost saved (1 - tools/Pi mean)"],
+        "lower_better": [False, False, False, False],
+        "rows": [
+            {"label": "DeepSeek V4.1 Flash [6/6 matched]", "values": [round(119/121,4), round(119/121,4), round(1-16.8/92.0,4), round(1-0.0054/0.0269,4)], "grade": "partial"},
+            {"label": "GLM 5.3 [5/6 matched]", "values": [round(102/105,4), round(101/105,4), round(1-9.6/68.6,4), round(1-0.0160/0.1156,4)], "grade": "partial"},
+            {"label": "Qwen Max [2/6 matched]", "values": [round(32/33,4), 1.0, round(1-16.9/79.1,4), round(1-0.0360/0.1918,4)], "grade": "partial"},
+            {"label": "GPT-OSS 120B [2/6 matched]", "values": [round(12/58,4), 1.0, round(1-4.2/7.2,4), round(1-0.0018/0.0022,4)], "grade": "partial"},
+        ],
+        "note": "3 forms x 2 synthetic patients x 2 arms per model, temperature 0, one run per case, concurrency raised mid-run. No held-out set, no repetitions, no CI. Live numbers may change as runs finish.",
+    }
+
+
 GRADES = {
     "evidence": "Evidence grade: preregistered or independent run, synthetic data",
     "discovery": "Discovery grade: designed after seeing the test data; needs replication",
@@ -174,6 +231,16 @@ GRADES = {
     "exploratory": "Exploratory: designed after a failure, same layouts",
     "running": "Running / not yet scored",
     "todo": "Not run",
+    "partial": "Pilot or partial: small n, no held-out set or no statistics",
+}
+VERDICTS = {
+    "admitted": "Admitted / promoted (evidence or a verified fix)",
+    "discovery": "Positive, discovery grade (not promoted)",
+    "partial": "Partial or pilot",
+    "null": "Null: no detectable difference",
+    "negative": "Negative: worse than or equal to control",
+    "failed": "Failed or attack succeeded",
+    "not_tested": "Not tested yet",
 }
 
 
@@ -181,12 +248,14 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     data = {
         "schema": "frontier_forms.accomplishment_heatmap.v1",
-        "as_of_utc": "2026-11-02T23:45:00Z",
-        "main_commit": "908b6aa",
-        "claim_ceiling": "Synthetic MITRE Synthea data only; local inference only; no clinical claim. Re-plots committed results; nothing new was run.",
+        "as_of_utc": "2026-11-02T23:55:00Z",
+        "main_commit": "e422def",
+        "claim_ceiling": "Synthetic MITRE Synthea data only; research lanes use local inference, the teammate bench lane (panel F) uses Fireworks-hosted models; no clinical claim. Re-plots committed results; nothing new was run.",
         "stages": STAGES,
         "workstreams": [{"name": n, "prs": p, "states": s, "note": note} for n, p, s, note in WORK],
-        "panels": [forms_arms(), detectors(), gates(), vision(), models()],
+        "panels": [forms_arms(), detectors(), gates(), vision(), models(), bench()],
+        "ledger": [{"claim": c, "result": r, "verdict": v, "source": s} for c, r, v, s in LEDGER],
+        "verdicts": VERDICTS,
         "grades": GRADES,
     }
     (OUT / "accomplishment_heatmap.json").write_text(json.dumps(data, indent=1) + "\n")
