@@ -66,12 +66,12 @@
       "recall": 0.041666666666666664
     },
     "R0_cold_replay_baseline": {
-      "f1": 0.3,
+      "f1": 0.19354838709677416,
       "fdr": 0.5714285714285714,
-      "fnr": 0.8846153846153846,
-      "fpr": 0.2222222222222222,
+      "fnr": 0.9375,
+      "fpr": 0.13333333333333333,
       "precision": 0.42857142857142855,
-      "recall": 0.11538461538461539
+      "recall": 0.0625
     }
   },
   "host": "magicSTUDIObox.local",
@@ -87,11 +87,11 @@
   "max_new_tokens": 16,
   "model": "qwen3:1.7b",
   "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
-  "n_records": 334,
+  "n_records": 351,
   "num_ctx": 8192,
   "partition": "heldout",
   "platform": "macOS-27.0.1-arm64-arm-64bit",
-  "private_output_sha256": "b28963c6c8ce778b426364fa14354c8217871f35d50096057dd92cdc68572cad",
+  "private_output_sha256": "0cc95234ca283365c982cbdd521049732597716dd7561dc2e69cf1a311fff164",
   "runtime": "0.33.0",
   "seed": 20261102
 }
