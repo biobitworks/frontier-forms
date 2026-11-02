@@ -1,5 +1,11 @@
 {
   "access_path": "Desktop Commander connector (devices: Mac=magicSTUDIObox 00925fd7..., MacBookPro=magicPRO 607bdfaf...)",
+  "branch_collision_F04": {
+    "action": "this cloud session did NOT force-push or rebase onto that branch; its lane lives on redteam/claude-fcg-local-ablation-20261102-cloud (same parent da953450) so both lanes stay separately reviewable; the sibling lane is treated as an independent code-level replication and compared in the report",
+    "finding": "the requested branch name redteam/claude-fcg-local-ablation-20261102 already existed on origin with 8+ commits from a concurrent Claude Code session (Claude Opus 5.5, session_015q5z1zKr1rBHbSRyNW2L18) running the same mission locally on magicSTUDIObox and magicPRO (lanes S-L0, S-L1, P-L1, P-L3; files under redteam/ and notebooks/08_redteam_context_ablation.ipynb)",
+    "observed_utc": "2026-11-02T21:56Z",
+    "sibling_head_at_observation": "5dca9fe results: incremental public ablation bits (magicSTUDIObox, 1902 records total)"
+  },
   "concurrent_load_observed_utc_2154": {
     "action": "no process was stopped or modified by this session",
     "effect": "ollama served two to three models concurrently; the predecessor frozen L0 run (2026-11-02 11:xx local) load conditions are unknown",

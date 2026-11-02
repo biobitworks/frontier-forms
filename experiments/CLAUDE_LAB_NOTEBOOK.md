@@ -72,3 +72,21 @@ magicPRO: `snyk --version` = 1.1307.2; `snyk whoami --experimental` → "Authent
 credentials not recognized, or user access is not provisioned." Snyk gate = BLOCKED_AUTH, no scan executed. magicSTUDIObox has
 no Snyk binary. Gitleaks: run against the pushed branch clone is recorded in `evidence/redteam/gitleaks_redteam_branch.json`
 (see later entry).
+
+## R05 — branch collision and sibling lane (OBSERVED 21:56 UTC)
+
+The requested branch name `redteam/claude-fcg-local-ablation-20261102` was already on origin with commits from a concurrent
+Claude Code session (Claude Opus 5.5, `session_015q5z1zKr1rBHbSRyNW2L18`) running the same mission on magicSTUDIObox and magicPRO.
+Its processes (`redteam/ablation_runner.py`, `run_logged.sh S-L1`) were visible in `ps` and share the Ollama GPU with this lane.
+Decision: no force-push, no rebase onto their history. This lane continues on `redteam/claude-fcg-local-ablation-20261102-cloud`
+from the same parent `da953450`. The sibling lane is an independent code-level replication (different code, same frozen cases) and
+is compared case-by-case in the report where its public bits allow it. Agreement between the two lanes is NOT an independent-population
+replication: same hosts, same weights, same cases, temperature 0.
+
+## R06 — early L0 observations (OBSERVED before heldout analysis; numbers restated in the report)
+
+* L0 cold-restart replay: 38/38 agreement with the frozen receipt and with the warm run (H6 PASS).
+* The predecessor-style ACCEPT/CHALLENGE verdict prototype is degenerate on L0: the longevity fine-tune re-emits a letter
+  (`UNPARSEABLE` in 100% of calls), so verdict-gated coverage is 0 (H3 partial: observed as predicted).
+* The option-swap gate admits ~60% of L0 cases, and its false-admission count equals its admitted-injected count because on a
+  two-option task the injected letter IS the wrong letter; the unconfounded injection metric (excess/flip) is used instead (F-05 metric artifact).
