@@ -4,6 +4,10 @@
 **Parent commit:** 67bf6b0ba51dc7ed792c139f37fcc648653611c4
 **State:** PRE-RELEASE_EVIDENCE_PACKAGE; NO_LIVE_EHR_WRITE.
 
+## Hackathon benchmark charts
+
+[Charts, measured speedups, and a short presentation script](bench/charts/README.md) compare the same models on a 65-question job-form pilot. GLM Fast: 6.08 → 1.99 seconds median (five trials per setup), with broadly similar accuracy. This is preliminary harness-speed evidence, not demonstrated medical accuracy or FCG superiority. [Raw aggregate trials](bench/results_ablation.jsonl).
+
 ## Business use case
 
 Convert scanned/faxed medical forms into source-grounded, human-reviewed HL7 FHIR drafts with antigentic safeguards. A wrong field can cause rework and downstream clinical risk. This is a research prototype, not a clinical product and not a replacement for clinical judgment.

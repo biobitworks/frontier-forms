@@ -1,5 +1,7 @@
 # Harness benchmark (first local run)
 
+**Submission:** [charts and plain-language explanation](charts/README.md), built from the corrected aggregate ablation trials. Historical tables below have the limitations stated in their sections.
+
 Does a scripted harness fill forms faster and better than letting Qwen drive the form itself?
 
 Measured 2026-11-02 on an Apple M1 Max with 64 GB, Ollama 0.40.10 and llama-server 0.4.1. Form-filling times are from warm runs. These are pilot numbers: job application forms and a fictional applicant, not medical forms and not Fireworks. Don't quote them as Frontier Forms results (spec section 2).
