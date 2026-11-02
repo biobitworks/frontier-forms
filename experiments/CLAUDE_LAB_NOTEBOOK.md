@@ -90,3 +90,31 @@ replication: same hosts, same weights, same cases, temperature 0.
   (`UNPARSEABLE` in 100% of calls), so verdict-gated coverage is 0 (H3 partial: observed as predicted).
 * The option-swap gate admits ~60% of L0 cases, and its false-admission count equals its admitted-injected count because on a
   two-option task the injected letter IS the wrong letter; the unconfounded injection metric (excess/flip) is used instead (F-05 metric artifact).
+
+## R07 — owner directions received mid-lane (OBSERVED, acted on)
+
+1. **Why a Liquid longevity model at all?** Because the predecessor's frozen discovery (Liquid 25/38 vs Insilico 27/38 on
+   LongevityBench mini) is the evidence this lane was told to replay and extend; L0 is kept only as the pinned replay baseline.
+   The product lane is Qwen: qwen2.5vl:3b (vision), qwen3:1.7b, qwen2.5:0.5b/1.5b, qwen2.5-coder:1.5b (local) and the Insilico
+   Qwen3-0.6B fine-tune. The spec's Qwen3.8-27B on Fireworks is BLOCKED (no credential on either Mac).
+2. **Per-field actual answers must be exported.** The forms are Synthea-derived synthetic renders and the owner authorised the
+   export, so the lane now writes `evidence/redteam/db/field_answers.jsonl` (printed value, source value, every model's answer,
+   bbox, verdicts). LongevityBench oracle values remain unexported (CC BY-NC, predecessor policy).
+3. **Bounding boxes / small vision models.** Mistral OCR and any Fireworks vision model: BLOCKED_NO_CREDENTIAL. YOLO: no trained
+   form-field detector exists locally (NOT_USED; GT boxes from the renderer are the labels a detector would train on). Implemented:
+   Apple Vision boxes (already real-time, ~0.3 s/page after warm-up) and Qwen2.5-VL grounding (`bbox_2d`) scored by IoU against the
+   renderer's exact geometry.
+4. **Ledger contract.** Every attribution record now separates `weights` (checkpoint/adapter + digest), `mechanism` (enabled/disabled)
+   and `outcome` (measured delta with gates): `evidence/redteam/attribution_matrix.json`, `evidence/redteam/db/ledger.jsonl`,
+   `docs/architecture/LEAF_GAIN_ATTRIBUTION.md`.
+5. **Local JSON databases, no credentials:** `evidence/redteam/db/{models.json, field_answers.jsonl, ledger.jsonl}` built on the host
+   from lane files and pushed with the public exports.
+
+## R08 — operational notes (OBSERVED)
+
+* 22:18 UTC gitleaks pre-push scan on the first export: 273 `generic-api-key` matches on the JSON field `key` (64-hex case digest).
+  FAIL receipt preserved (`evidence/redteam/gitleaks_lanes_initial_failure.json`); successor renames the exported field to
+  `case_digest_sha256` (values unchanged, originals on host), loaders accept both; re-scan after the final push.
+* 22:30 UTC GPU contention on magicSTUDIObox (sibling lane holding qwen2.5:1.5b, my VLM-ERR pass, the Insilico MPS lane and a
+  newly queued mapper lane): Ollama began swapping qwen2.5vl in and out; the mapper driver was paused by the operator (this
+  session) and will be re-queued after the VLM passes. All latency/throughput receipts from this window are CONFOUNDED.

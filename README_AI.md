@@ -30,6 +30,12 @@ Do not edit anything under `evidence/freeze/`, `evidence/breakpoints/`, `evidenc
   Only `*_PUBLIC.jsonl` and `*_META.json` may be committed. `*_LOCAL.jsonl` contains gold answers and stays on the host.
 * Rebuild the attribution matrix: `python3 scripts/redteam/build_attribution_matrix.py`.
 
+## Local JSON databases (read these first; no credentials needed)
+* `evidence/redteam/db/models.json` — every checkpoint actually run, with its Ollama manifest digest / safetensors sha256 and the lanes it appeared in. Blocked models are listed with the reason.
+* `evidence/redteam/db/field_answers.jsonl` — one row per synthetic form image: for each of the 7 fields the printed value, the source value, whether an error was planted, and every model's actual answer (Apple Vision OCR, qwen2.5vl extraction + reread, OCR→Qwen mappers, Qwen2.5-VL grounding with bbox and IoU) plus validation verdicts.
+* `evidence/redteam/db/ledger.jsonl` and `evidence/redteam/attribution_matrix.json` — the attribution ledger. Each record separates **weights** (name + digest), **mechanism** (enabled/disabled FCG or antigentic mechanisms) and **outcome** (measured delta with McNemar/Holm/bootstrap and a claim status). `mechanism.changed = WEIGHTS_ONLY` rows are model comparisons; `MECHANISM_ONLY` rows are harness ablations.
+* `evidence/redteam/gate_factorial.json` + `docs/architecture/gate_factorial_heatmap.{svg,html}` — the 16-combination heat map on SYNFORM2-ERR.
+
 ## Things that look like results but are not
 * Discovery-split numbers (n=38) are hypothesis-generating. Only heldout rows (n=39) can pass the admission rule, and only with
   Holm-corrected McNemar PASS, bootstrap lower CI > 0, replication PASS and guardrails PASS.
