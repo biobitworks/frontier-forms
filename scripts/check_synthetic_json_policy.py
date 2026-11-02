@@ -44,7 +44,7 @@ def provenance_issues(root=ROOT):
     return issues
 
 def main():
-    names=[s.decode() for s in subprocess.check_output(["git","ls-files","-z"],cwd=ROOT).split(b"\\0") if s]
+    names=[s.decode() for s in subprocess.check_output(["git","ls-files","-z"],cwd=ROOT).split(bytes([0])) if s]
     problems=violations(names)+provenance_issues()
     print(json.dumps({"gate":"synthetic-json-only","files_checked":len(names),"status":"FAIL" if problems else "PASS","violations":problems},indent=2))
     return 1 if problems else 0
