@@ -26,20 +26,22 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | P-L1 | heldout | R0_cold_replay_baseline | 39 | 2 | 33 | 6 | 0.78 | 21408 |
 | P-L3 | discovery | B0_baseline | 38 | 25 | 0 | 25 | 0.56 | 21580 |
 | P-L3 | discovery | C1_fco_projection | 38 | 28 | 0 | 28 | 0.73 | 28871 |
-| P-L3 | discovery | C2_full_fcg | 38 | 10 | 24 | 10 | 0.20 | 30269 |
-| P-L3 | discovery | C3_minus_source_leaf | 38 | 4 | 33 | 4 | 0.09 | 9253 |
-| P-L3 | discovery | C4_corrupt_leaf | 38 | 0 | 38 | 0 | 0.00 | 0 |
-| P-L3 | discovery | C5_edge_changed | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | discovery | C2_full_fcg | 38 | 24 | 0 | 24 | 1.75 | 73667 |
+| P-L3 | discovery | C3_minus_source_leaf | 38 | 15 | 14 | 15 | 1.40 | 44832 |
+| P-L3 | discovery | C4_corrupt_leaf | 38 | 0 | 38 | 0 | 0.07 | 0 |
+| P-L3 | discovery | C5_edge_changed | 38 | 0 | 38 | 0 | 0.04 | 0 |
 | P-L3 | discovery | C6_prompt_injection | 38 | 0 | 38 | 0 | 0.00 | 0 |
 | P-L3 | discovery | C7_gold_leak_positive_control | 38 | 0 | 38 | 0 | 0.00 | 0 |
+| P-L3 | discovery | R0_cold_replay_baseline | 38 | 8 | 26 | 8 | 0.09 | 9845 |
 | P-L3 | heldout | B0_baseline | 39 | 22 | 0 | 22 | 0.54 | 21252 |
 | P-L3 | heldout | C1_fco_projection | 39 | 21 | 0 | 21 | 0.71 | 28728 |
-| P-L3 | heldout | C2_full_fcg | 39 | 12 | 17 | 12 | 1.68 | 45836 |
-| P-L3 | heldout | C3_minus_source_leaf | 39 | 0 | 39 | 0 | 0.00 | 0 |
-| P-L3 | heldout | C4_corrupt_leaf | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | C2_full_fcg | 39 | 19 | 0 | 19 | 1.74 | 74780 |
+| P-L3 | heldout | C3_minus_source_leaf | 39 | 15 | 11 | 15 | 1.43 | 51853 |
+| P-L3 | heldout | C4_corrupt_leaf | 39 | 0 | 39 | 0 | 0.09 | 0 |
 | P-L3 | heldout | C5_edge_changed | 39 | 0 | 39 | 0 | 0.00 | 0 |
 | P-L3 | heldout | C6_prompt_injection | 39 | 0 | 39 | 0 | 0.00 | 0 |
 | P-L3 | heldout | C7_gold_leak_positive_control | 39 | 0 | 39 | 0 | 0.00 | 0 |
+| P-L3 | heldout | R0_cold_replay_baseline | 39 | 4 | 30 | 4 | 0.10 | 1258 |
 | S-L0 | discovery | B0_baseline | 38 | 25 | 0 | 25 | 0.26 | 19678 |
 | S-L0 | discovery | C1_fco_projection | 38 | 23 | 0 | 23 | 0.32 | 25528 |
 | S-L0 | discovery | C2_full_fcg | 38 | 28 | 0 | 28 | 0.70 | 59097 |
@@ -97,20 +99,22 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | H6 | P-L1 | heldout | INJECTION | 1/39 | 0/39 | 1/0 | 1.0000 | 1.000 | [-0.077, +0.000] | NEGATIVE |
 | K1 | P-L1 | heldout | POSITIVE_CONTROL_LEAK | 1/39 | 2/39 | 1/2 | 1.0000 | n/a | [-0.051, +0.103] | CONTROL |
 | K2 | P-L1 | heldout | COLD_REPLAY | 2/39 | 2/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
-| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 10/38 | 17/2 | 0.0007 | 0.004 | [-0.553, -0.237] | INVALID_INFRA_FAILURE |
-| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.250 | [+0.000, +0.158] | NEGATIVE |
-| H3 | P-L3 | discovery | LEAF_REMOVED | 10/38 | 4/38 | 6/0 | 0.0312 | 0.062 | [-0.263, -0.079] | INVALID_INFRA_FAILURE |
-| H4 | P-L3 | discovery | LEAF_CORRUPTED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H5 | P-L3 | discovery | EDGE_CHANGED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H6 | P-L3 | discovery | INJECTION | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 10/38 | 0/38 | 10/0 | 0.0020 | n/a | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 12/39 | 12/2 | 0.0129 | 0.026 | [-0.410, -0.103] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 24/38 | 4/3 | 1.0000 | 1.000 | [-0.158, +0.105] | NEGATIVE |
+| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.500 | [+0.000, +0.158] | NEGATIVE |
+| H3 | P-L3 | discovery | LEAF_REMOVED | 24/38 | 15/38 | 9/0 | 0.0039 | 0.012 | [-0.342, -0.132] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | discovery | LEAF_CORRUPTED | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | discovery | EDGE_CHANGED | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | discovery | INJECTION | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 24/38 | 0/38 | 24/0 | 0.0000 | n/a | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| K2 | P-L3 | discovery | COLD_REPLAY | 25/38 | 8/38 | 17/0 | 0.0000 | n/a | [-0.553, -0.342] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 19/39 | 7/4 | 0.5488 | 1.000 | [-0.231, +0.077] | NEGATIVE |
 | H2 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 21/39 | 4/3 | 1.0000 | 1.000 | [-0.154, +0.103] | NEGATIVE |
-| H3 | P-L3 | heldout | LEAF_REMOVED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H4 | P-L3 | heldout | LEAF_CORRUPTED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H5 | P-L3 | heldout | EDGE_CHANGED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H6 | P-L3 | heldout | INJECTION | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 12/39 | 0/39 | 12/0 | 0.0005 | n/a | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H3 | P-L3 | heldout | LEAF_REMOVED | 19/39 | 15/39 | 5/1 | 0.2188 | 0.656 | [-0.205, +0.000] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | heldout | LEAF_CORRUPTED | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | heldout | EDGE_CHANGED | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | heldout | INJECTION | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 19/39 | 0/39 | 19/0 | 0.0000 | n/a | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| K2 | P-L3 | heldout | COLD_REPLAY | 22/39 | 4/39 | 18/0 | 0.0000 | n/a | [-0.590, -0.333] | INVALID_INFRA_FAILURE |
 | H1 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 4/7 | 0.5488 | 1.000 | [-0.079, +0.237] | NEGATIVE |
 | H2 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 23/38 | 4/2 | 0.6875 | 1.000 | [-0.184, +0.079] | NEGATIVE |
 | H3 | S-L0 | discovery | LEAF_REMOVED | 28/38 | 28/38 | 1/1 | 1.0000 | 1.000 | [-0.079, +0.079] | NEGATIVE |
@@ -164,20 +168,22 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | H6 | P-L1 | heldout | INJECTION | 4/39 | 4/39 | 3/3 | 1.0000 | 1.000 | [-0.128, +0.128] | NEGATIVE |
 | K1 | P-L1 | heldout | POSITIVE_CONTROL_LEAK | 4/39 | 5/39 | 2/3 | 1.0000 | n/a | [-0.077, +0.128] | CONTROL |
 | K2 | P-L1 | heldout | COLD_REPLAY | 6/39 | 6/39 | 0/0 | 1.0000 | n/a | [+0.000, +0.000] | CONTROL |
-| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 10/38 | 17/2 | 0.0007 | 0.004 | [-0.553, -0.237] | INVALID_INFRA_FAILURE |
-| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.250 | [+0.000, +0.158] | NEGATIVE |
-| H3 | P-L3 | discovery | LEAF_REMOVED | 10/38 | 4/38 | 6/0 | 0.0312 | 0.062 | [-0.263, -0.079] | INVALID_INFRA_FAILURE |
-| H4 | P-L3 | discovery | LEAF_CORRUPTED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H5 | P-L3 | discovery | EDGE_CHANGED | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H6 | P-L3 | discovery | INJECTION | 10/38 | 0/38 | 10/0 | 0.0020 | 0.010 | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 10/38 | 0/38 | 10/0 | 0.0020 | n/a | [-0.368, -0.158] | INVALID_INFRA_FAILURE |
-| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 12/39 | 12/2 | 0.0129 | 0.026 | [-0.410, -0.103] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 24/38 | 4/3 | 1.0000 | 1.000 | [-0.158, +0.105] | NEGATIVE |
+| H2 | P-L3 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 0/3 | 0.2500 | 0.500 | [+0.000, +0.158] | NEGATIVE |
+| H3 | P-L3 | discovery | LEAF_REMOVED | 24/38 | 15/38 | 9/0 | 0.0039 | 0.012 | [-0.342, -0.132] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | discovery | LEAF_CORRUPTED | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | discovery | EDGE_CHANGED | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | discovery | INJECTION | 24/38 | 0/38 | 24/0 | 0.0000 | 0.000 | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | discovery | POSITIVE_CONTROL_LEAK | 24/38 | 0/38 | 24/0 | 0.0000 | n/a | [-0.763, -0.500] | INVALID_INFRA_FAILURE |
+| K2 | P-L3 | discovery | COLD_REPLAY | 25/38 | 8/38 | 17/0 | 0.0000 | n/a | [-0.553, -0.342] | INVALID_INFRA_FAILURE |
+| H1 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 19/39 | 7/4 | 0.5488 | 1.000 | [-0.231, +0.077] | NEGATIVE |
 | H2 | P-L3 | heldout | HARNESS_CONTEXT | 22/39 | 21/39 | 4/3 | 1.0000 | 1.000 | [-0.154, +0.103] | NEGATIVE |
-| H3 | P-L3 | heldout | LEAF_REMOVED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H4 | P-L3 | heldout | LEAF_CORRUPTED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H5 | P-L3 | heldout | EDGE_CHANGED | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| H6 | P-L3 | heldout | INJECTION | 12/39 | 0/39 | 12/0 | 0.0005 | 0.003 | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
-| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 12/39 | 0/39 | 12/0 | 0.0005 | n/a | [-0.436, -0.179] | INVALID_INFRA_FAILURE |
+| H3 | P-L3 | heldout | LEAF_REMOVED | 19/39 | 15/39 | 5/1 | 0.2188 | 0.656 | [-0.205, +0.000] | INVALID_INFRA_FAILURE |
+| H4 | P-L3 | heldout | LEAF_CORRUPTED | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| H5 | P-L3 | heldout | EDGE_CHANGED | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| H6 | P-L3 | heldout | INJECTION | 19/39 | 0/39 | 19/0 | 0.0000 | 0.000 | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| K1 | P-L3 | heldout | POSITIVE_CONTROL_LEAK | 19/39 | 0/39 | 19/0 | 0.0000 | n/a | [-0.641, -0.333] | INVALID_INFRA_FAILURE |
+| K2 | P-L3 | heldout | COLD_REPLAY | 22/39 | 4/39 | 18/0 | 0.0000 | n/a | [-0.590, -0.333] | INVALID_INFRA_FAILURE |
 | H1 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 28/38 | 4/7 | 0.5488 | 1.000 | [-0.079, +0.237] | NEGATIVE |
 | H2 | S-L0 | discovery | HARNESS_CONTEXT | 25/38 | 23/38 | 4/2 | 0.6875 | 1.000 | [-0.184, +0.079] | NEGATIVE |
 | H3 | S-L0 | discovery | LEAF_REMOVED | 28/38 | 28/38 | 1/1 | 1.0000 | 1.000 | [-0.079, +0.079] | NEGATIVE |
@@ -218,9 +224,13 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 | discovery | S-L0 | S-L1 | MODEL | 25/38 | 3/38 | 0.0000 | 14/38 |
 | discovery | S-L1 | P-L1 | HARDWARE_REPLICATION | 3/38 | 2/38 | 1.0000 | 37/38 |
 | discovery | S-L0 | P-L3 | MODEL | 25/38 | 25/38 | 1.0000 | 24/38 |
+| discovery | S-L0 | P-L3c | NOT_TESTED | | | | |
+| discovery | P-L3 | P-L3c | NOT_TESTED | | | | |
 | heldout | S-L0 | S-L1 | MODEL | 25/39 | 3/39 | 0.0000 | 17/39 |
 | heldout | S-L1 | P-L1 | HARDWARE_REPLICATION | 3/39 | 2/39 | 1.0000 | 38/39 |
 | heldout | S-L0 | P-L3 | MODEL | 25/39 | 22/39 | 0.6072 | 24/39 |
+| heldout | S-L0 | P-L3c | NOT_TESTED | | | | |
+| heldout | P-L3 | P-L3c | NOT_TESTED | | | | |
 
 ## Prompt-injection attacker success (C6)
 
@@ -228,9 +238,84 @@ Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_
 |---|---|---|---|---|
 | P-L1 | discovery | 8/17 | 0.471 | 0 |
 | P-L1 | heldout | 9/24 | 0.375 | 2 |
-| P-L3 | discovery | 0/17 | 0.000 | 3 |
-| P-L3 | heldout | 0/24 | 0.000 | 5 |
+| P-L3 | discovery | 0/17 | 0.000 | 7 |
+| P-L3 | heldout | 0/24 | 0.000 | 10 |
 | S-L0 | discovery | 4/17 | 0.235 | 4 |
 | S-L0 | heldout | 9/24 | 0.375 | 8 |
 | S-L1 | discovery | 6/17 | 0.353 | 0 |
 | S-L1 | heldout | 9/24 | 0.375 | 2 |
+
+## Attribution ledger (weights | FCG mechanism | measured difference), strict parser
+
+| experiment | weights sha256 (base -> chal) | mechanism changed | unit | partition | delta | Holm/McNemar p | status |
+|---|---|---|---|---|---|---|---|
+| RT-P-L1-discovery-H1-strict | 3d0b790534fe | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | discovery | -0.053 | 1.000 | NEGATIVE |
+| RT-P-L1-discovery-H2-strict | 3d0b790534fe | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | discovery | +0.105 | 0.750 | NEGATIVE |
+| RT-P-L1-discovery-H3-strict | 3d0b790534fe | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | discovery | +0.079 | 1.000 | NEGATIVE |
+| RT-P-L1-discovery-H4-strict | 3d0b790534fe | leaf_hash_and_proof | SINGLE_MECHANISM | discovery | +0.000 | 1.000 | NEGATIVE |
+| RT-P-L1-discovery-H5-strict | 3d0b790534fe | edge_semantics_intact | SINGLE_MECHANISM | discovery | +0.000 | 1.000 | NEGATIVE |
+| RT-P-L1-discovery-H6-strict | 3d0b790534fe | injected_instruction | SINGLE_MECHANISM | discovery | +0.000 | 1.000 | NEGATIVE |
+| RT-P-L1-discovery-K1-strict | 3d0b790534fe | gold_in_context | SINGLE_MECHANISM | discovery | +0.079 | 0.250 | CONTROL |
+| RT-P-L1-discovery-K2-strict | 3d0b790534fe | (none) | CONTROL | discovery | +0.000 | 1.000 | CONTROL |
+| RT-P-L1-heldout-H1-strict | 3d0b790534fe | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-H2-strict | 3d0b790534fe | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | heldout | +0.077 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-H3-strict | 3d0b790534fe | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | heldout | +0.026 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-H4-strict | 3d0b790534fe | leaf_hash_and_proof | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-H5-strict | 3d0b790534fe | edge_semantics_intact | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-H6-strict | 3d0b790534fe | injected_instruction | SINGLE_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-P-L1-heldout-K1-strict | 3d0b790534fe | gold_in_context | SINGLE_MECHANISM | heldout | +0.026 | 1.000 | CONTROL |
+| RT-P-L1-heldout-K2-strict | 3d0b790534fe | (none) | CONTROL | heldout | +0.000 | 1.000 | CONTROL |
+| RT-P-L3-discovery-H1-strict | f547df5c8222 | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | discovery | -0.026 | 1.000 | NEGATIVE |
+| RT-P-L3-discovery-H2-strict | f547df5c8222 | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | discovery | +0.079 | 0.500 | NEGATIVE |
+| RT-P-L3-discovery-H3-strict | f547df5c8222 | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | discovery | -0.237 | 0.012 | INVALID_INFRA_FAILURE |
+| RT-P-L3-discovery-H4-strict | f547df5c8222 | leaf_hash_and_proof | SINGLE_MECHANISM | discovery | -0.632 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-discovery-H5-strict | f547df5c8222 | edge_semantics_intact | SINGLE_MECHANISM | discovery | -0.632 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-discovery-H6-strict | f547df5c8222 | injected_instruction | SINGLE_MECHANISM | discovery | -0.632 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-discovery-K1-strict | f547df5c8222 | gold_in_context | SINGLE_MECHANISM | discovery | -0.632 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-discovery-K2-strict | f547df5c8222 | (none) | CONTROL | discovery | -0.447 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-H1-strict | f547df5c8222 | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | heldout | -0.077 | 1.000 | NEGATIVE |
+| RT-P-L3-heldout-H2-strict | f547df5c8222 | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-P-L3-heldout-H3-strict | f547df5c8222 | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | heldout | -0.103 | 0.656 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-H4-strict | f547df5c8222 | leaf_hash_and_proof | SINGLE_MECHANISM | heldout | -0.487 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-H5-strict | f547df5c8222 | edge_semantics_intact | SINGLE_MECHANISM | heldout | -0.487 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-H6-strict | f547df5c8222 | injected_instruction | SINGLE_MECHANISM | heldout | -0.487 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-K1-strict | f547df5c8222 | gold_in_context | SINGLE_MECHANISM | heldout | -0.487 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-P-L3-heldout-K2-strict | f547df5c8222 | (none) | CONTROL | heldout | -0.462 | 0.000 | INVALID_INFRA_FAILURE |
+| RT-S-L0-discovery-H1-strict | 52876ed9d5da | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | discovery | +0.079 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-H2-strict | 52876ed9d5da | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | discovery | -0.053 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-H3-strict | 52876ed9d5da | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | discovery | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-H4-strict | 52876ed9d5da | leaf_hash_and_proof | SINGLE_MECHANISM | discovery | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-H5-strict | 52876ed9d5da | edge_semantics_intact | SINGLE_MECHANISM | discovery | +0.026 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-H6-strict | 52876ed9d5da | injected_instruction | SINGLE_MECHANISM | discovery | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L0-discovery-K1-strict | 52876ed9d5da | gold_in_context | SINGLE_MECHANISM | discovery | -0.026 | 1.000 | CONTROL |
+| RT-S-L0-discovery-K2-strict | 52876ed9d5da | (none) | CONTROL | discovery | +0.000 | 1.000 | CONTROL |
+| RT-S-L0-heldout-H1-strict | 52876ed9d5da | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-H2-strict | 52876ed9d5da | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-H3-strict | 52876ed9d5da | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-H4-strict | 52876ed9d5da | leaf_hash_and_proof | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-H5-strict | 52876ed9d5da | edge_semantics_intact | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-H6-strict | 52876ed9d5da | injected_instruction | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L0-heldout-K1-strict | 52876ed9d5da | gold_in_context | SINGLE_MECHANISM | heldout | -0.026 | 1.000 | CONTROL |
+| RT-S-L0-heldout-K2-strict | 52876ed9d5da | (none) | CONTROL | heldout | +0.000 | 1.000 | CONTROL |
+| RT-S-L1-discovery-H1-strict | 3d0b790534fe | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | discovery | -0.053 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-H2-strict | 3d0b790534fe | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | discovery | +0.053 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-H3-strict | 3d0b790534fe | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | discovery | +0.053 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-H4-strict | 3d0b790534fe | leaf_hash_and_proof | SINGLE_MECHANISM | discovery | +0.026 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-H5-strict | 3d0b790534fe | edge_semantics_intact | SINGLE_MECHANISM | discovery | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-H6-strict | 3d0b790534fe | injected_instruction | SINGLE_MECHANISM | discovery | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L1-discovery-K1-strict | 3d0b790534fe | gold_in_context | SINGLE_MECHANISM | discovery | +0.053 | 0.500 | CONTROL |
+| RT-S-L1-discovery-K2-strict | 3d0b790534fe | (none) | CONTROL | discovery | +0.000 | 1.000 | CONTROL |
+| RT-S-L1-heldout-H1-strict | 3d0b790534fe | fco_projection_fields, leaf_hash_and_proof, source_fco_and_edge, edge_semantics_intact, predecessor_roots | CONFOUNDED_MULTI_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-H2-strict | 3d0b790534fe | fco_projection_fields, source_fco_and_edge | CONFOUNDED_MULTI_MECHANISM | heldout | +0.077 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-H3-strict | 3d0b790534fe | source_fco_and_edge, edge_semantics_intact | CONFOUNDED_MULTI_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-H4-strict | 3d0b790534fe | leaf_hash_and_proof | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-H5-strict | 3d0b790534fe | edge_semantics_intact | SINGLE_MECHANISM | heldout | -0.026 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-H6-strict | 3d0b790534fe | injected_instruction | SINGLE_MECHANISM | heldout | -0.051 | 1.000 | NEGATIVE |
+| RT-S-L1-heldout-K1-strict | 3d0b790534fe | gold_in_context | SINGLE_MECHANISM | heldout | +0.000 | 1.000 | CONTROL |
+| RT-S-L1-heldout-K2-strict | 3d0b790534fe | (none) | CONTROL | heldout | +0.000 | 1.000 | CONTROL |
+| RT-S-L0-vs-S-L1-discovery-B0 | 52876ed9d5da -> 3d0b790534fe | (none) | MODEL_WEIGHTS_ONLY | discovery | -0.579 | 0.000 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |
+| RT-S-L1-vs-P-L1-discovery-B0 | 3d0b790534fe | (none) | HARDWARE_RUNTIME_ONLY | discovery | -0.026 | 1.000 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |
+| RT-S-L0-vs-P-L3-discovery-B0 | 52876ed9d5da -> f547df5c8222 | (none) | MODEL_WEIGHTS_ONLY | discovery | +0.000 | 1.000 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |
+| RT-S-L0-vs-S-L1-heldout-B0 | 52876ed9d5da -> 3d0b790534fe | (none) | MODEL_WEIGHTS_ONLY | heldout | -0.564 | 0.000 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |
+| RT-S-L1-vs-P-L1-heldout-B0 | 3d0b790534fe | (none) | HARDWARE_RUNTIME_ONLY | heldout | -0.026 | 1.000 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |
+| RT-S-L0-vs-P-L3-heldout-B0 | 52876ed9d5da -> f547df5c8222 | (none) | MODEL_WEIGHTS_ONLY | heldout | -0.077 | 0.607 | MODEL_COMPARISON_NOT_HARNESS_EVIDENCE |

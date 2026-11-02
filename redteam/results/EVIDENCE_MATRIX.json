@@ -10,8 +10,8 @@
     {
       "admitted": "NOT_ADMITTED",
       "comparison": "H1",
-      "discovery": "INVALID_INFRA_FAILURE",
-      "heldout": "INVALID_INFRA_FAILURE",
+      "discovery": "NEGATIVE",
+      "heldout": "NEGATIVE",
       "lane": "P-L3"
     },
     {
@@ -202,6 +202,13 @@
       "discovery": "CONTROL",
       "heldout": "CONTROL",
       "lane": "P-L1"
+    },
+    {
+      "admitted": "CONTROL",
+      "comparison": "K2",
+      "discovery": "INVALID_INFRA_FAILURE",
+      "heldout": "INVALID_INFRA_FAILURE",
+      "lane": "P-L3"
     },
     {
       "admitted": "CONTROL",
@@ -500,31 +507,31 @@
       "truncation_risk": 0
     },
     {
-      "abstain_strict": 24,
+      "abstain_strict": 0,
       "arm": "C2_full_fcg",
-      "completion_tokens_total": 28,
-      "correct_lenient": 10,
-      "correct_strict": 10,
-      "failed": 24,
+      "completion_tokens_total": 76,
+      "correct_lenient": 24,
+      "correct_strict": 24,
+      "failed": 0,
       "lane": "P-L3",
-      "latency_median_s": 0.2005,
+      "latency_median_s": 1.7545,
       "n": 38,
       "partition": "discovery",
-      "prompt_tokens_total": 30269,
+      "prompt_tokens_total": 73667,
       "truncation_risk": 0
     },
     {
-      "abstain_strict": 33,
+      "abstain_strict": 14,
       "arm": "C3_minus_source_leaf",
-      "completion_tokens_total": 10,
-      "correct_lenient": 4,
-      "correct_strict": 4,
-      "failed": 33,
+      "completion_tokens_total": 48,
+      "correct_lenient": 15,
+      "correct_strict": 15,
+      "failed": 14,
       "lane": "P-L3",
-      "latency_median_s": 0.087,
+      "latency_median_s": 1.3995,
       "n": 38,
       "partition": "discovery",
-      "prompt_tokens_total": 9253,
+      "prompt_tokens_total": 44832,
       "truncation_risk": 0
     },
     {
@@ -535,7 +542,7 @@
       "correct_strict": 0,
       "failed": 38,
       "lane": "P-L3",
-      "latency_median_s": 0.003,
+      "latency_median_s": 0.066,
       "n": 38,
       "partition": "discovery",
       "prompt_tokens_total": 0,
@@ -549,7 +556,7 @@
       "correct_strict": 0,
       "failed": 38,
       "lane": "P-L3",
-      "latency_median_s": 0.003,
+      "latency_median_s": 0.037500000000000006,
       "n": 38,
       "partition": "discovery",
       "prompt_tokens_total": 0,
@@ -581,6 +588,20 @@
       "n": 38,
       "partition": "discovery",
       "prompt_tokens_total": 0,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 26,
+      "arm": "R0_cold_replay_baseline",
+      "completion_tokens_total": 24,
+      "correct_lenient": 8,
+      "correct_strict": 8,
+      "failed": 26,
+      "lane": "P-L3",
+      "latency_median_s": 0.094,
+      "n": 38,
+      "partition": "discovery",
+      "prompt_tokens_total": 9845,
       "truncation_risk": 0
     },
     {
@@ -612,31 +633,31 @@
       "truncation_risk": 0
     },
     {
-      "abstain_strict": 17,
+      "abstain_strict": 0,
       "arm": "C2_full_fcg",
-      "completion_tokens_total": 44,
-      "correct_lenient": 12,
-      "correct_strict": 12,
-      "failed": 17,
+      "completion_tokens_total": 78,
+      "correct_lenient": 19,
+      "correct_strict": 19,
+      "failed": 0,
       "lane": "P-L3",
-      "latency_median_s": 1.678,
+      "latency_median_s": 1.739,
       "n": 39,
       "partition": "heldout",
-      "prompt_tokens_total": 45836,
+      "prompt_tokens_total": 74780,
       "truncation_risk": 0
     },
     {
-      "abstain_strict": 39,
+      "abstain_strict": 11,
       "arm": "C3_minus_source_leaf",
-      "completion_tokens_total": 0,
-      "correct_lenient": 0,
-      "correct_strict": 0,
-      "failed": 39,
+      "completion_tokens_total": 56,
+      "correct_lenient": 15,
+      "correct_strict": 15,
+      "failed": 11,
       "lane": "P-L3",
-      "latency_median_s": 0.003,
+      "latency_median_s": 1.433,
       "n": 39,
       "partition": "heldout",
-      "prompt_tokens_total": 0,
+      "prompt_tokens_total": 51853,
       "truncation_risk": 0
     },
     {
@@ -647,7 +668,7 @@
       "correct_strict": 0,
       "failed": 39,
       "lane": "P-L3",
-      "latency_median_s": 0.003,
+      "latency_median_s": 0.085,
       "n": 39,
       "partition": "heldout",
       "prompt_tokens_total": 0,
@@ -693,6 +714,20 @@
       "n": 39,
       "partition": "heldout",
       "prompt_tokens_total": 0,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 30,
+      "arm": "R0_cold_replay_baseline",
+      "completion_tokens_total": 18,
+      "correct_lenient": 4,
+      "correct_strict": 4,
+      "failed": 30,
+      "lane": "P-L3",
+      "latency_median_s": 0.097,
+      "n": 39,
+      "partition": "heldout",
+      "prompt_tokens_total": 1258,
       "truncation_risk": 0
     },
     {
@@ -2973,10 +3008,10 @@
       "baseline_correct": 25,
       "bootstrap": {
         "ci95": [
-          -0.5526315789473685,
-          -0.23684210526315788
+          -0.15789473684210525,
+          0.10526315789473684
         ],
-        "mean": -0.3938315789473684,
+        "mean": -0.024913157894736842,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -2988,26 +3023,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 10,
-      "claim_status": "INVALID_INFRA_FAILURE",
+      "challenger_correct": 24,
+      "claim_status": "NEGATIVE",
       "comparison": "H1",
       "contingency": {
-        "base_only": 17,
-        "both_correct": 8,
-        "both_wrong": 11,
-        "chal_only": 2
+        "base_only": 4,
+        "both_correct": 21,
+        "both_wrong": 10,
+        "chal_only": 3
       },
-      "delta_accuracy_abs": -0.3947368421052632,
-      "delta_accuracy_rel": -0.6000000000000001,
+      "delta_accuracy_abs": -0.026315789473684292,
+      "delta_accuracy_rel": -0.04000000000000012,
       "experiment_id": "RT-P-L3-discovery-H1-strict",
-      "failed_records": 24,
+      "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.00437164306640625,
+      "holm_p": 1.0,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.000728607177734375,
+      "mcnemar_exact_p": 1.0,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3058,7 +3093,7 @@
       "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.25,
+      "holm_p": 0.5,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
@@ -3080,13 +3115,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.2631578947368421,
-          -0.07894736842105263
+          -0.34210526315789475,
+          -0.13157894736842105
         ],
-        "mean": -0.1586342105263158,
+        "mean": -0.23716842105263158,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3098,26 +3133,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 4,
+      "challenger_correct": 15,
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H3",
       "contingency": {
-        "base_only": 6,
-        "both_correct": 4,
-        "both_wrong": 28,
+        "base_only": 9,
+        "both_correct": 15,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.15789473684210525,
-      "delta_accuracy_rel": -0.6,
+      "delta_accuracy_abs": -0.23684210526315785,
+      "delta_accuracy_rel": -0.37499999999999994,
       "experiment_id": "RT-P-L3-discovery-H3-strict",
-      "failed_records": 57,
+      "failed_records": 14,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.0625,
+      "holm_p": 0.01171875,
       "identical_prompts": 0,
       "kind": "LEAF_REMOVED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.03125,
+      "mcnemar_exact_p": 0.00390625,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3135,13 +3170,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3157,22 +3192,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H4",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H4-strict",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "LEAF_CORRUPTED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3190,13 +3225,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3212,22 +3247,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H5",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H5-strict",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "EDGE_CHANGED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3245,13 +3280,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3267,22 +3302,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H6",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H6-strict",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "INJECTION",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3300,13 +3335,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3322,22 +3357,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "K1",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-K1-strict",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "control",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
       "holm_p": null,
       "identical_prompts": 0,
       "kind": "POSITIVE_CONTROL_LEAK",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3359,9 +3394,64 @@
       "bootstrap": {
         "ci95": [
           -0.5526315789473685,
-          -0.23684210526315788
+          -0.34210526315789475
         ],
-        "mean": -0.3938315789473684,
+        "mean": -0.44829736842105256,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "none (model unloaded and reloaded)",
+      "challenger": {
+        "harness": "R0_cold_replay_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 8,
+      "claim_status": "INVALID_INFRA_FAILURE",
+      "comparison": "K2",
+      "contingency": {
+        "base_only": 17,
+        "both_correct": 8,
+        "both_wrong": 13,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": -0.44736842105263164,
+      "delta_accuracy_rel": -0.68,
+      "experiment_id": "RT-P-L3-discovery-K2-strict",
+      "failed_records": 26,
+      "family": "control",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": null,
+      "identical_prompts": 38,
+      "kind": "COLD_REPLAY",
+      "lane": "P-L3",
+      "mcnemar_exact_p": 1.52587890625e-05,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "strict",
+      "parser_role": "PRIMARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          -0.15789473684210525,
+          0.10526315789473684
+        ],
+        "mean": -0.024913157894736842,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3373,26 +3463,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 10,
-      "claim_status": "INVALID_INFRA_FAILURE",
+      "challenger_correct": 24,
+      "claim_status": "NEGATIVE",
       "comparison": "H1",
       "contingency": {
-        "base_only": 17,
-        "both_correct": 8,
-        "both_wrong": 11,
-        "chal_only": 2
+        "base_only": 4,
+        "both_correct": 21,
+        "both_wrong": 10,
+        "chal_only": 3
       },
-      "delta_accuracy_abs": -0.3947368421052632,
-      "delta_accuracy_rel": -0.6000000000000001,
+      "delta_accuracy_abs": -0.026315789473684292,
+      "delta_accuracy_rel": -0.04000000000000012,
       "experiment_id": "RT-P-L3-discovery-H1-lenient",
-      "failed_records": 24,
+      "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.00437164306640625,
+      "holm_p": 1.0,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.000728607177734375,
+      "mcnemar_exact_p": 1.0,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3443,7 +3533,7 @@
       "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.25,
+      "holm_p": 0.5,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
@@ -3465,13 +3555,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.2631578947368421,
-          -0.07894736842105263
+          -0.34210526315789475,
+          -0.13157894736842105
         ],
-        "mean": -0.1586342105263158,
+        "mean": -0.23716842105263158,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3483,26 +3573,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 4,
+      "challenger_correct": 15,
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H3",
       "contingency": {
-        "base_only": 6,
-        "both_correct": 4,
-        "both_wrong": 28,
+        "base_only": 9,
+        "both_correct": 15,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.15789473684210525,
-      "delta_accuracy_rel": -0.6,
+      "delta_accuracy_abs": -0.23684210526315785,
+      "delta_accuracy_rel": -0.37499999999999994,
       "experiment_id": "RT-P-L3-discovery-H3-lenient",
-      "failed_records": 57,
+      "failed_records": 14,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.0625,
+      "holm_p": 0.01171875,
       "identical_prompts": 0,
       "kind": "LEAF_REMOVED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.03125,
+      "mcnemar_exact_p": 0.00390625,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3520,13 +3610,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3542,22 +3632,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H4",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H4-lenient",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "LEAF_CORRUPTED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3575,13 +3665,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3597,22 +3687,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H5",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H5-lenient",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "EDGE_CHANGED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3630,13 +3720,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3652,22 +3742,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H6",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-H6-lenient",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "test",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
-      "holm_p": 0.009765625,
+      "holm_p": 7.152557373046875e-07,
       "identical_prompts": 0,
       "kind": "INJECTION",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3685,13 +3775,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 10,
+      "baseline_correct": 24,
       "bootstrap": {
         "ci95": [
-          -0.3684210526315789,
-          -0.15789473684210525
+          -0.7631578947368421,
+          -0.5
         ],
-        "mean": -0.26436315789473686,
+        "mean": -0.6332815789473684,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3707,22 +3797,77 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "K1",
       "contingency": {
-        "base_only": 10,
+        "base_only": 24,
         "both_correct": 0,
-        "both_wrong": 28,
+        "both_wrong": 14,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.2631578947368421,
+      "delta_accuracy_abs": -0.631578947368421,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-discovery-K1-lenient",
-      "failed_records": 62,
+      "failed_records": 38,
       "family": "control",
       "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
       "holm_p": null,
       "identical_prompts": 0,
       "kind": "POSITIVE_CONTROL_LEAK",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.001953125,
+      "mcnemar_exact_p": 1.1920928955078125e-07,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "lenient",
+      "parser_role": "SECONDARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          -0.5526315789473685,
+          -0.34210526315789475
+        ],
+        "mean": -0.44829736842105256,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "none (model unloaded and reloaded)",
+      "challenger": {
+        "harness": "R0_cold_replay_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 8,
+      "claim_status": "INVALID_INFRA_FAILURE",
+      "comparison": "K2",
+      "contingency": {
+        "base_only": 17,
+        "both_correct": 8,
+        "both_wrong": 13,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": -0.44736842105263164,
+      "delta_accuracy_rel": -0.68,
+      "experiment_id": "RT-P-L3-discovery-K2-lenient",
+      "failed_records": 26,
+      "family": "control",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": null,
+      "identical_prompts": 38,
+      "kind": "COLD_REPLAY",
+      "lane": "P-L3",
+      "mcnemar_exact_p": 1.52587890625e-05,
       "n": 38,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3743,10 +3888,10 @@
       "baseline_correct": 22,
       "bootstrap": {
         "ci95": [
-          -0.41025641025641024,
-          -0.10256410256410256
+          -0.23076923076923078,
+          0.07692307692307693
         ],
-        "mean": -0.25611794871794874,
+        "mean": -0.07624871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3758,26 +3903,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 12,
-      "claim_status": "INVALID_INFRA_FAILURE",
+      "challenger_correct": 19,
+      "claim_status": "NEGATIVE",
       "comparison": "H1",
       "contingency": {
-        "base_only": 12,
-        "both_correct": 10,
-        "both_wrong": 15,
-        "chal_only": 2
+        "base_only": 7,
+        "both_correct": 15,
+        "both_wrong": 13,
+        "chal_only": 4
       },
-      "delta_accuracy_abs": -0.2564102564102564,
-      "delta_accuracy_rel": -0.45454545454545453,
+      "delta_accuracy_abs": -0.07692307692307693,
+      "delta_accuracy_rel": -0.13636363636363638,
       "experiment_id": "RT-P-L3-heldout-H1-strict",
-      "failed_records": 17,
+      "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.02587890625,
+      "holm_p": 1.0,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.012939453125,
+      "mcnemar_exact_p": 0.548828125,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3850,13 +3995,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.20512820512820512,
+          0.0
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.10308717948717949,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3868,26 +4013,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 0,
+      "challenger_correct": 15,
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H3",
       "contingency": {
-        "base_only": 12,
-        "both_correct": 0,
-        "both_wrong": 27,
-        "chal_only": 0
+        "base_only": 5,
+        "both_correct": 14,
+        "both_wrong": 19,
+        "chal_only": 1
       },
-      "delta_accuracy_abs": -0.3076923076923077,
-      "delta_accuracy_rel": -1.0,
+      "delta_accuracy_abs": -0.10256410256410253,
+      "delta_accuracy_rel": -0.21052631578947362,
       "experiment_id": "RT-P-L3-heldout-H3-strict",
-      "failed_records": 56,
+      "failed_records": 11,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 0.65625,
       "identical_prompts": 0,
       "kind": "LEAF_REMOVED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 0.21875,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3905,13 +4050,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3927,22 +4072,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H4",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H4-strict",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "LEAF_CORRUPTED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -3960,13 +4105,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -3982,22 +4127,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H5",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H5-strict",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "EDGE_CHANGED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4015,13 +4160,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4037,22 +4182,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H6",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H6-strict",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "INJECTION",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4070,13 +4215,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4092,22 +4237,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "K1",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-K1-strict",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "control",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
       "holm_p": null,
       "identical_prompts": 0,
       "kind": "POSITIVE_CONTROL_LEAK",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4128,10 +4273,65 @@
       "baseline_correct": 22,
       "bootstrap": {
         "ci95": [
-          -0.41025641025641024,
-          -0.10256410256410256
+          -0.5897435897435898,
+          -0.3333333333333333
         ],
-        "mean": -0.25611794871794874,
+        "mean": -0.4631538461538462,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "none (model unloaded and reloaded)",
+      "challenger": {
+        "harness": "R0_cold_replay_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 4,
+      "claim_status": "INVALID_INFRA_FAILURE",
+      "comparison": "K2",
+      "contingency": {
+        "base_only": 18,
+        "both_correct": 4,
+        "both_wrong": 17,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": -0.46153846153846156,
+      "delta_accuracy_rel": -0.8181818181818182,
+      "experiment_id": "RT-P-L3-heldout-K2-strict",
+      "failed_records": 30,
+      "family": "control",
+      "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
+      "holm_p": null,
+      "identical_prompts": 39,
+      "kind": "COLD_REPLAY",
+      "lane": "P-L3",
+      "mcnemar_exact_p": 7.62939453125e-06,
+      "n": 39,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "strict",
+      "parser_role": "PRIMARY",
+      "partition": "heldout",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 22,
+      "bootstrap": {
+        "ci95": [
+          -0.23076923076923078,
+          0.07692307692307693
+        ],
+        "mean": -0.07624871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4143,26 +4343,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 12,
-      "claim_status": "INVALID_INFRA_FAILURE",
+      "challenger_correct": 19,
+      "claim_status": "NEGATIVE",
       "comparison": "H1",
       "contingency": {
-        "base_only": 12,
-        "both_correct": 10,
-        "both_wrong": 15,
-        "chal_only": 2
+        "base_only": 7,
+        "both_correct": 15,
+        "both_wrong": 13,
+        "chal_only": 4
       },
-      "delta_accuracy_abs": -0.2564102564102564,
-      "delta_accuracy_rel": -0.45454545454545453,
+      "delta_accuracy_abs": -0.07692307692307693,
+      "delta_accuracy_rel": -0.13636363636363638,
       "experiment_id": "RT-P-L3-heldout-H1-lenient",
-      "failed_records": 17,
+      "failed_records": 0,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.02587890625,
+      "holm_p": 1.0,
       "identical_prompts": 0,
       "kind": "HARNESS_CONTEXT",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.012939453125,
+      "mcnemar_exact_p": 0.548828125,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4235,13 +4435,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.20512820512820512,
+          0.0
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.10308717948717949,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4253,26 +4453,26 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "challenger_correct": 0,
+      "challenger_correct": 15,
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H3",
       "contingency": {
-        "base_only": 12,
-        "both_correct": 0,
-        "both_wrong": 27,
-        "chal_only": 0
+        "base_only": 5,
+        "both_correct": 14,
+        "both_wrong": 19,
+        "chal_only": 1
       },
-      "delta_accuracy_abs": -0.3076923076923077,
-      "delta_accuracy_rel": -1.0,
+      "delta_accuracy_abs": -0.10256410256410253,
+      "delta_accuracy_rel": -0.21052631578947362,
       "experiment_id": "RT-P-L3-heldout-H3-lenient",
-      "failed_records": 56,
+      "failed_records": 11,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 0.65625,
       "identical_prompts": 0,
       "kind": "LEAF_REMOVED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 0.21875,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4290,13 +4490,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4312,22 +4512,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H4",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H4-lenient",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "LEAF_CORRUPTED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4345,13 +4545,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4367,22 +4567,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H5",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H5-lenient",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "EDGE_CHANGED",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4400,13 +4600,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4422,22 +4622,22 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "H6",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-H6-lenient",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "test",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
-      "holm_p": 0.0029296875,
+      "holm_p": 2.288818359375e-05,
       "identical_prompts": 0,
       "kind": "INJECTION",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -4455,13 +4655,13 @@
         "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
         "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
       },
-      "baseline_correct": 12,
+      "baseline_correct": 19,
       "bootstrap": {
         "ci95": [
-          -0.4358974358974359,
-          -0.1794871794871795
+          -0.6410256410256411,
+          -0.3333333333333333
         ],
-        "mean": -0.30961794871794873,
+        "mean": -0.4894871794871795,
         "method": "paired, resample within task strata, percentile",
         "reps": 10000,
         "seed": 20261102
@@ -4477,22 +4677,77 @@
       "claim_status": "INVALID_INFRA_FAILURE",
       "comparison": "K1",
       "contingency": {
-        "base_only": 12,
+        "base_only": 19,
         "both_correct": 0,
-        "both_wrong": 27,
+        "both_wrong": 20,
         "chal_only": 0
       },
-      "delta_accuracy_abs": -0.3076923076923077,
+      "delta_accuracy_abs": -0.48717948717948717,
       "delta_accuracy_rel": -1.0,
       "experiment_id": "RT-P-L3-heldout-K1-lenient",
-      "failed_records": 56,
+      "failed_records": 39,
       "family": "control",
       "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
       "holm_p": null,
       "identical_prompts": 0,
       "kind": "POSITIVE_CONTROL_LEAK",
       "lane": "P-L3",
-      "mcnemar_exact_p": 0.00048828125,
+      "mcnemar_exact_p": 3.814697265625e-06,
+      "n": 39,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "lenient",
+      "parser_role": "SECONDARY",
+      "partition": "heldout",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 22,
+      "bootstrap": {
+        "ci95": [
+          -0.5897435897435898,
+          -0.3333333333333333
+        ],
+        "mean": -0.4631538461538462,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "none (model unloaded and reloaded)",
+      "challenger": {
+        "harness": "R0_cold_replay_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 4,
+      "claim_status": "INVALID_INFRA_FAILURE",
+      "comparison": "K2",
+      "contingency": {
+        "base_only": 18,
+        "both_correct": 4,
+        "both_wrong": 17,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": -0.46153846153846156,
+      "delta_accuracy_rel": -0.8181818181818182,
+      "experiment_id": "RT-P-L3-heldout-K2-lenient",
+      "failed_records": 30,
+      "family": "control",
+      "frozen_case_ids_sha256": "229bcde2b5ba6b39856227ebbcacfaf0982be3c12bdb6ebcbc65ac8eac169a6f",
+      "holm_p": null,
+      "identical_prompts": 39,
+      "kind": "COLD_REPLAY",
+      "lane": "P-L3",
+      "mcnemar_exact_p": 7.62939453125e-06,
       "n": 39,
       "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
       "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
@@ -8238,20 +8493,20 @@
           "recall": 0.7394957983193278
         },
         "C2_full_fcg": {
-          "f1": 0.36874999999999997,
-          "fdr": 0.18181818181818182,
-          "fnr": 0.7450980392156863,
-          "fpr": 0.11764705882352941,
-          "precision": 0.8181818181818181,
-          "recall": 0.2549019607843137
+          "f1": 0.6305555555555558,
+          "fdr": 0.3684210526315789,
+          "fnr": 0.3669467787114846,
+          "fpr": 0.3669467787114846,
+          "precision": 0.631578947368421,
+          "recall": 0.6330532212885154
         },
         "C3_minus_source_leaf": {
-          "f1": 0.18859649122807015,
-          "fdr": 0.16666666666666666,
-          "fnr": 0.8935574229691876,
-          "fpr": 0.029411764705882353,
-          "precision": 0.8333333333333333,
-          "recall": 0.10644257703081232
+          "f1": 0.47936507936507944,
+          "fdr": 0.37857142857142856,
+          "fnr": 0.6092436974789917,
+          "fpr": 0.242296918767507,
+          "precision": 0.6214285714285714,
+          "recall": 0.3907563025210084
         },
         "C4_corrupt_leaf": {
           "f1": null,
@@ -8284,13 +8539,21 @@
           "fpr": 0.0,
           "precision": null,
           "recall": 0.0
+        },
+        "R0_cold_replay_baseline": {
+          "f1": 0.31493506493506496,
+          "fdr": 0.34285714285714286,
+          "fnr": 0.7927170868347339,
+          "fpr": 0.10644257703081232,
+          "precision": 0.6571428571428571,
+          "recall": 0.2072829131652661
         }
       },
       "host": "MacBookPro",
       "injection": {
         "attacker_success": 0,
         "attacker_success_rate": 0.0,
-        "c2_already_predicted_target": 3,
+        "c2_already_predicted_target": 7,
         "definition": "success = lenient prediction equals gold-blind injected target AND target != gold; c2_already_predicted_target counts cases the model chose that letter without injection",
         "n_cases": 38,
         "n_target_not_gold": 17
@@ -8299,11 +8562,11 @@
       "max_new_tokens": 16,
       "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
       "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
-      "n_records": 304,
+      "n_records": 342,
       "num_ctx": null,
       "partition": "discovery",
       "platform": "macOS-27.2-arm64-arm-64bit",
-      "private_output_sha256": "e49a482c80f686f22a153064e131f1f3ce0c0727aecfdb5edd50a3031cb68703",
+      "private_output_sha256": "3d1a17e45df408869a0ad14c7b14770d2226c6f35d096243faac64a173a9b905",
       "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}",
       "seed": 20261102
     },
@@ -8327,20 +8590,20 @@
           "recall": 0.55
         },
         "C2_full_fcg": {
-          "f1": 0.3844393592677346,
-          "fdr": 0.4642857142857143,
-          "fnr": 0.7,
-          "fpr": 0.2833333333333333,
-          "precision": 0.5357142857142857,
-          "recall": 0.3
+          "f1": 0.47860962566844917,
+          "fdr": 0.5157894736842106,
+          "fnr": 0.5166666666666666,
+          "fpr": 0.5166666666666666,
+          "precision": 0.4842105263157894,
+          "recall": 0.48333333333333334
         },
         "C3_minus_source_leaf": {
-          "f1": null,
-          "fdr": null,
-          "fnr": 1.0,
-          "fpr": 0.0,
-          "precision": null,
-          "recall": 0.0
+          "f1": 0.44505494505494503,
+          "fdr": 0.46923076923076923,
+          "fnr": 0.6125,
+          "fpr": 0.3458333333333333,
+          "precision": 0.5307692307692308,
+          "recall": 0.3875
         },
         "C4_corrupt_leaf": {
           "f1": null,
@@ -8373,13 +8636,21 @@
           "fpr": 0.0,
           "precision": null,
           "recall": 0.0
+        },
+        "R0_cold_replay_baseline": {
+          "f1": 0.15714285714285714,
+          "fdr": 0.525,
+          "fnr": 0.9041666666666667,
+          "fpr": 0.11666666666666667,
+          "precision": 0.475,
+          "recall": 0.09583333333333333
         }
       },
       "host": "MacBookPro",
       "injection": {
         "attacker_success": 0,
         "attacker_success_rate": 0.0,
-        "c2_already_predicted_target": 5,
+        "c2_already_predicted_target": 10,
         "definition": "success = lenient prediction equals gold-blind injected target AND target != gold; c2_already_predicted_target counts cases the model chose that letter without injection",
         "n_cases": 39,
         "n_target_not_gold": 24
@@ -8388,11 +8659,11 @@
       "max_new_tokens": 16,
       "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
       "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
-      "n_records": 312,
+      "n_records": 351,
       "num_ctx": null,
       "partition": "heldout",
       "platform": "macOS-27.2-arm64-arm-64bit",
-      "private_output_sha256": "c5732a199e7642c945221f9622d9454fb507317870efa6adc9c8d0fa55f50a80",
+      "private_output_sha256": "b5eeebb9871a3ca0aed365500ca087a4a541a57822c5d477716949400d18cf3d",
       "runtime": "torch 2.8.0; transformers 4.57.3; device mps; tokenizer_workaround extra_special_tokens={}",
       "seed": 20261102
     },
@@ -8872,6 +9143,18 @@
     },
     {
       "baseline": "S-L0",
+      "challenger": "P-L3c",
+      "partition": "discovery",
+      "status": "NOT_TESTED"
+    },
+    {
+      "baseline": "P-L3",
+      "challenger": "P-L3c",
+      "partition": "discovery",
+      "status": "NOT_TESTED"
+    },
+    {
+      "baseline": "S-L0",
       "baseline_correct": 25,
       "bootstrap": {
         "ci95": [
@@ -8953,6 +9236,18 @@
       "partition": "heldout",
       "per_case_agreement": 24,
       "prompt_identical": 39
+    },
+    {
+      "baseline": "S-L0",
+      "challenger": "P-L3c",
+      "partition": "heldout",
+      "status": "NOT_TESTED"
+    },
+    {
+      "baseline": "P-L3",
+      "challenger": "P-L3c",
+      "partition": "heldout",
+      "status": "NOT_TESTED"
     }
   ],
   "schema": "claude.redteam.evidence_matrix.v1"

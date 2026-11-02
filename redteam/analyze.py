@@ -46,6 +46,79 @@ CANDIDATE = {
 }
 
 
+# Weight identity per lane: the actual tensor bytes, not just a tag. Ollama: sha256 of the GGUF model layer
+# from the local manifest (identical on both Macs for qwen3). HF: sha256 of model.safetensors (runner-computed).
+WEIGHTS = {
+    "S-L0": {"checkpoint": "lfm2-1.2b-longevity-q4km:latest", "format": "GGUF Q4_K_M (Ollama)",
+             "weights_sha256": "52876ed9d5dac35cf47c617ffa70f58464d5be55120b49a424200dd6a075d913", "adapter": "NONE_DECLARED"},
+    "S-L1": {"checkpoint": "qwen3:1.7b", "format": "GGUF (Ollama)",
+             "weights_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6", "adapter": "NONE"},
+    "P-L1": {"checkpoint": "qwen3:1.7b", "format": "GGUF (Ollama)",
+             "weights_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6", "adapter": "NONE"},
+    "P-L3": {"checkpoint": "insilicomedicine/Qwen3-0.6B-Longevity@bffdda93", "format": "safetensors fp32 (transformers)",
+             "weights_sha256": "f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce", "adapter": "NONE"},
+}
+WEIGHTS["P-L3c"] = dict(WEIGHTS["P-L3"], format="safetensors fp32 (transformers, CPU)")
+MECHANISMS = ["fco_projection_fields", "leaf_hash_and_proof", "source_fco_and_edge", "edge_semantics_intact",
+              "predecessor_roots", "injected_instruction", "gold_in_context"]
+ARM_MECH = {  # which FCG mechanisms are ENABLED in each arm (True), corrupted ("CORRUPTED") or off (False)
+    "B0_baseline": {},
+    "R0_cold_replay_baseline": {},
+    "C1_fco_projection": {"fco_projection_fields": True, "source_fco_and_edge": "ID_ONLY"},
+    "C2_full_fcg": {"fco_projection_fields": True, "leaf_hash_and_proof": True, "source_fco_and_edge": True,
+                    "edge_semantics_intact": True, "predecessor_roots": True},
+}
+ARM_MECH["C3_minus_source_leaf"] = dict(ARM_MECH["C2_full_fcg"], source_fco_and_edge=False, edge_semantics_intact=False)
+ARM_MECH["C4_corrupt_leaf"] = dict(ARM_MECH["C2_full_fcg"], leaf_hash_and_proof="CORRUPTED")
+ARM_MECH["C5_edge_changed"] = dict(ARM_MECH["C2_full_fcg"], edge_semantics_intact="CORRUPTED")
+ARM_MECH["C6_prompt_injection"] = dict(ARM_MECH["C2_full_fcg"], injected_instruction=True)
+ARM_MECH["C7_gold_leak_positive_control"] = dict(ARM_MECH["C2_full_fcg"], gold_in_context=True)
+
+
+def mech_vector(arm):
+    m = ARM_MECH[arm]
+    return {k: m.get(k, False) for k in MECHANISMS}
+
+
+def attribution_rows(matrix, model_cmp):
+    rows = []
+    for m in matrix:
+        if m["parser"] != "strict":
+            continue
+        a0, a1 = m["baseline"]["harness"], m["challenger"]["harness"]
+        v0, v1 = mech_vector(a0), mech_vector(a1)
+        changed = [k for k in MECHANISMS if v0[k] != v1[k]]
+        rows.append({
+            "experiment_id": m["experiment_id"],
+            "q1_weights": {"baseline": WEIGHTS.get(m["lane"]), "challenger": WEIGHTS.get(m["lane"]),
+                           "weights_changed": False},
+            "q2_fcg_mechanism": {"baseline_arm": a0, "challenger_arm": a1, "baseline": v0, "challenger": v1,
+                                 "changed": changed,
+                                 "attribution_unit": "SINGLE_MECHANISM" if len(changed) == 1 else
+                                 ("CONTROL" if m["family"] == "control" else "CONFOUNDED_MULTI_MECHANISM")},
+            "q3_outcome": {"partition": m["partition"], "n": m["n"], "baseline_correct": m["baseline_correct"],
+                           "challenger_correct": m["challenger_correct"], "delta_abs": m["delta_accuracy_abs"],
+                           "mcnemar_p": m["mcnemar_exact_p"], "holm_p": m["holm_p"], "ci95": m["bootstrap"]["ci95"],
+                           "claim_status": m["claim_status"]},
+        })
+    for c in model_cmp:
+        if c.get("status") == "NOT_TESTED":
+            continue
+        rows.append({
+            "experiment_id": f"RT-{c['baseline']}-vs-{c['challenger']}-{c['partition']}-B0",
+            "q1_weights": {"baseline": WEIGHTS.get(c["baseline"]), "challenger": WEIGHTS.get(c["challenger"]),
+                           "weights_changed": WEIGHTS[c["baseline"]]["weights_sha256"] != WEIGHTS[c["challenger"]]["weights_sha256"]},
+            "q2_fcg_mechanism": {"baseline_arm": "B0_baseline", "challenger_arm": "B0_baseline", "changed": [],
+                                 "attribution_unit": "MODEL_WEIGHTS_ONLY" if c["kind"] == "MODEL" else "HARDWARE_RUNTIME_ONLY"},
+            "q3_outcome": {"partition": c["partition"], "n": c["n"], "baseline_correct": c["baseline_correct"],
+                           "challenger_correct": c["challenger_correct"],
+                           "delta_abs": (c["challenger_correct"] - c["baseline_correct"]) / c["n"],
+                           "mcnemar_p": c["mcnemar_exact_p"], "ci95": c["bootstrap"]["ci95"],
+                           "claim_status": "MODEL_COMPARISON_NOT_HARNESS_EVIDENCE"},
+        })
+    return rows
+
+
 def export(private: Path, public_out: Path, summary_out: Path) -> None:
     rows = [json.loads(x) for x in private.read_text().splitlines() if x.strip()]
     meta_keys = ["lane", "backend", "model", "model_digest", "runtime", "host", "platform", "seed", "num_ctx",
@@ -162,7 +235,7 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
     # cross-lane model comparisons (labelled MODEL, never harness)
     model_cmp = []
     for part in ("discovery", "heldout"):
-        for l0, l1 in (("S-L0", "S-L1"), ("S-L1", "P-L1"), ("S-L0", "P-L3")):
+        for l0, l1 in (("S-L0", "S-L1"), ("S-L1", "P-L1"), ("S-L0", "P-L3"), ("S-L0", "P-L3c"), ("P-L3", "P-L3c")):
             a, b_ = bits.get((l0, part), {}).get("B0_baseline"), bits.get((l1, part), {}).get("B0_baseline")
             if not a or not b_:
                 model_cmp.append({"partition": part, "baseline": l0, "challenger": l1, "status": "NOT_TESTED"})
@@ -171,7 +244,7 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
             x = [a[k]["correct_strict"] for k in keys]
             y = [b_[k]["correct_strict"] for k in keys]
             t = S.contingency(x, y)
-            model_cmp.append({"partition": part, "baseline": l0, "challenger": l1, "kind": "MODEL" if l0[2:] != l1[2:] else "HARDWARE_REPLICATION",
+            model_cmp.append({"partition": part, "baseline": l0, "challenger": l1, "kind": "MODEL" if WEIGHTS[l0]["weights_sha256"] != WEIGHTS[l1]["weights_sha256"] else "HARDWARE_REPLICATION",
                               "n": len(keys), "baseline_correct": sum(x), "challenger_correct": sum(y), "contingency": t,
                               "mcnemar_exact_p": S.mcnemar_exact(t["base_only"], t["chal_only"]),
                               "bootstrap": S.stratified_bootstrap(x, y, [a[k]["task"] for k in keys]),
@@ -195,6 +268,8 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
            "lane_summaries": {f"{k[0]}|{k[1]}": v for k, v in sorted(summaries.items())},
            "claim_ceiling": "INTEGRITY_REPLAYED; CONTEXT_ABLATION_LOCAL_ONLY; NO_FIREWORKS; NO_ANTIGENCE_MCP"}
     out_json.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n")
+    ledger = attribution_rows(matrix, model_cmp)
+    (out_json.parent / "ATTRIBUTION_LEDGER.jsonl").write_text("".join(json.dumps(r, sort_keys=True) + "\n" for r in ledger))
     L = ["# Evidence matrix (generated by redteam/analyze.py report)\n",
          "Strict parser (identical to predecessor). Abstentions count as wrong. AUROC NOT_COMPUTED (letter-only outputs).\n",
          "## Accuracy per arm\n", "| lane | partition | arm | n | correct | abstain | lenient correct | median s | prompt tok |",
@@ -225,6 +300,16 @@ def report(results: Path, out_json: Path, out_md: Path) -> None:
         i = s["injection"]
         rate = f"{i['attacker_success_rate']:.3f}" if i["attacker_success_rate"] is not None else "n/a"
         L.append(f"| {lane} | {part} | {i['attacker_success']}/{i['n_target_not_gold']} | {rate} | {i['c2_already_predicted_target']} |")
+    L += ["\n## Attribution ledger (weights | FCG mechanism | measured difference), strict parser\n",
+          "| experiment | weights sha256 (base -> chal) | mechanism changed | unit | partition | delta | Holm/McNemar p | status |",
+          "|---|---|---|---|---|---|---|---|"]
+    for r in ledger:
+        w0, w1 = r["q1_weights"]["baseline"], r["q1_weights"]["challenger"]
+        ws = w0["weights_sha256"][:12] if not r["q1_weights"]["weights_changed"] else f"{w0['weights_sha256'][:12]} -> {w1['weights_sha256'][:12]}"
+        o = r["q3_outcome"]
+        p = o.get("holm_p") if o.get("holm_p") is not None else o["mcnemar_p"]
+        L.append(f"| {r['experiment_id']} | {ws} | {', '.join(r['q2_fcg_mechanism']['changed']) or '(none)'} | "
+                 f"{r['q2_fcg_mechanism']['attribution_unit']} | {o['partition']} | {o['delta_abs']:+.3f} | {p:.3f} | {o['claim_status']} |")
     out_md.write_text("\n".join(L) + "\n")
 
 

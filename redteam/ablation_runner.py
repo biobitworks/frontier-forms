@@ -136,7 +136,9 @@ class HF:
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
         self.torch = torch
-        self.dev = "mps" if torch.backends.mps.is_available() else "cpu"
+        import os
+        # FF_DEVICE=cpu: MBP unified memory was ~17.5 GiB occupied by other processes, so MPS OOMed mid-lane
+        self.dev = os.environ.get("FF_DEVICE") or ("mps" if torch.backends.mps.is_available() else "cpu")
         self.tok_workaround = "none"
         try:
             self.tok = AutoTokenizer.from_pretrained(path, local_files_only=True)
