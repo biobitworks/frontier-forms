@@ -34,7 +34,9 @@ def main():
     assert sha(listing) == manifest['public_input_listing_sha256'], 'SERVED_LISTING_SHA_MISMATCH'
     inputs = [json.loads(x) for x in listing.decode().splitlines() if x.strip()]
     variants = a.variants.split(',')
-    sel = [r for r in inputs if r['split'] == a.split and r['variant'] in variants]
+    sel = [r for r in inputs if (a.split == 'all' or r.get('split') == a.split) and (a.variants == 'all' or r.get('variant') in variants)]
+    for r in sel:
+        r.setdefault('split', a.split); r.setdefault('variant', 'hidden')
     if a.limit:
         sel = sel[:a.limit]
     oracle = {o['case_id']: o['gold_fields'] for o in jsonl(Path(a.dataset_dir) / '.private/oracle.jsonl')}
@@ -48,7 +50,7 @@ def main():
             png = http_get(a.server, r['png_relative_path'])
             if sha(png) != r['png_sha256']:
                 raise SystemExit('SERVED_PNG_SHA_MISMATCH ' + r['case_id'])
-            gold = oracle[r['case_id']]
+            gold = oracle[r.get('image_id', r['case_id'])]
             e1 = vlm(a.model, EXTRACT_PROMPT, png)
             f1 = {f: e1['parsed'].get(f) for f in FIELDS}
             reread = {}

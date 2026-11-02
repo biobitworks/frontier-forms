@@ -74,7 +74,9 @@ def main():
     assert sha(listing) == manifest['public_input_listing_sha256'], 'SERVED_LISTING_SHA_MISMATCH'
     inputs = [json.loads(x) for x in listing.decode().splitlines() if x.strip()]
     variants = a.variants.split(',')
-    sel = [r for r in inputs if r['split'] == a.split and r['variant'] in variants]
+    sel = [r for r in inputs if (a.split == 'all' or r.get('split') == a.split) and (a.variants == 'all' or r.get('variant') in variants)]
+    for r in sel:
+        r.setdefault('split', a.split); r.setdefault('variant', 'hidden')
     if a.limit:
         sel = sel[:a.limit]
     oracle = {o['case_id']: o['gold_fields'] for o in jsonl(Path(a.dataset_dir) / '.private/oracle.jsonl')}
@@ -102,7 +104,7 @@ def main():
         control_ok = all(v is None for v in blank_fields.values())
         with lp.open('x') as lf, pp.open('x') as pf:
             for e in ocr[:-1]:
-                r = fetched[e['path']]; gold = oracle[r['case_id']]
+                r = fetched[e['path']]; gold = oracle[r.get('image_id', r['case_id'])]
                 fields = parse_fields(e['lines']) if not e.get('error') else {f: None for f in FIELDS}
                 val = validate(fields, r['case_id'])
                 correct = {f: norm(f, fields[f]) == norm(f, gold.get(f)) for f in FIELDS}

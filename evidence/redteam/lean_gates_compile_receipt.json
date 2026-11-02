@@ -1,0 +1,12 @@
+{
+  "schema": "formal.compile.receipt.v1",
+  "file": "lean/Gates.lean", "file_sha256": "0b9bd64b2d976c9925e8be73d3e2732c98a7dab2a6ea1425a80c55ba2e590a68",
+  "host": "magicSTUDIObox.local", "toolchain": "Lean (version 4.15.0, arm64-apple-darwin23.6.0, commit 11651562caae, Release)",
+  "command": "~/.elan/bin/lean Gates.lean", "exit_code": 0, "stdout_stderr": "",
+  "first_attempt": "FAILED: List do-notation is not a monad in core Lean and `decide` got stuck on the 4096-case monotonicity check; repaired by flatMap construction and `native_decide` for that one theorem (compiler-evaluated, not kernel-reduced); all other theorems use kernel `decide`",
+  "theorems": ["full_rejects_E1", "full_rejects_E3", "full_rejects_E6", "full_rejects_E7", "full_rejects_V2", "full_admits_clean",
+               "lomo_identity_admits_E3 (records that commitment also covers E3)", "lomo_identity_sole_defence", "lomo_commitment_admits_E6", "lomo_commitment_admits_E7",
+               "lomo_consistency_admits_V2", "lomo_rules_still_rejects_E1_via_commitment", "nogates_admits_E7", "admit_antitone_in_config (native_decide)"],
+  "result": "COMPILED",
+  "scope_ceiling": "statements about the Boolean gate logic over abstract error vectors; they do not prove that any extractor, OCR engine or dataset realises those vectors. The empirical realisation is the SYNFORM2-ERR heat map."
+}
