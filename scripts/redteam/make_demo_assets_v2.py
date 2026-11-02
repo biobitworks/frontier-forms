@@ -162,7 +162,7 @@ def main():
                 time.sleep(0.8)
                 r = subprocess.run(['screencapture', '-x', '-o', f'-l{wid}', str(shot)], capture_output=True)
                 status = 'CAPTURED' if r.returncode == 0 and shot.exists() and shot.stat().st_size > 0 else f'CAPTURE_FAILED:{r.stderr.decode()[:120]}'
-            subprocess.run(['osascript', '-e', f'tell application "Preview" to close (every window whose name contains "{pdf.name}")'], capture_output=True)
+            # no osascript: controlling Preview needs an Automation permission prompt; windows are left open for the user
             res = {'window_id': wid, 'status': status}
             if status == 'CAPTURED':
                 o = ocr(a.ocr_bin, [shot])[0]
