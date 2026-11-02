@@ -1,6 +1,6 @@
 # Frontier Forms: where everything lives
 
-Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient cohort. There is no real PHI. Byron approved publishing these synthetic JSON, PNG, PDF and HTML files. Model weights and credentials are never committed.
+Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient cohort. There is no real PHI. Model weights and credentials are never committed. Since PR #30, `scripts/check_synthetic_json_policy.py` rejects **new** PNG/PDF files and only exempts the legacy ones already committed. New visual evidence is therefore JSON plus HTML viewers that draw onto the committed screenshots.
 
 ## Form server and forms
 | What | Path |
@@ -17,7 +17,7 @@ Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient coho
 |---|---|
 | Blank AcroForm PDFs (made by PDFKit) | `evidence/forms_apple/forms/*.pdf` |
 | Filled PDFs plus Apple Vision OCR read-back, sample of 6 | `evidence/forms_apple/run_v1/samples/` |
-| All 218 filled PDFs, one per patient-form, with read-back JSON | `evidence/forms_apple/run_v1_all_pdfs/` (added in a follow-up PR when the MacBookPro re-run finishes) |
+| All 218 filled forms as read-back JSON (the PDF field values plus the Apple Vision OCR text and boxes for each field) | `evidence/forms_apple/run_v1_all_readback/` (follow-up PR when the MacBookPro re-run finishes). The PDFs themselves stay local because the JSON-only gate blocks new PDFs. |
 | Single fixture PDF with Apple Vision boxes (PR #12) | `experiments/form_error_factorial/sample_vision/` |
 
 ## Screenshots
@@ -31,7 +31,7 @@ Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient coho
 | What | Path |
 |---|---|
 | Gold boxes (DOM input rectangles and the written values) | `data/forms_vision_v1/GOLD_BOXES.json`, `data/forms_vision_inject_v1/GOLD_BOXES.json` |
-| **Overlay images**: gold in green, qwen2.5vl box and value in red, Tesseract lines in blue, with an HTML gallery | `evidence/forms_vision/overlays_v1/index.html` (57), `evidence/forms_vision/overlays_inject_v1/index.html` (36) |
+| **Bounding-box overlays**: gold in green, qwen2.5vl box and value in red, Tesseract lines in blue. A JSON file plus an HTML viewer that draws them on the committed screenshots; open it from a local clone | `evidence/forms_vision/bbox_overlays_v1.{json,html}` (57), `evidence/forms_vision/bbox_overlays_inject_v1.{json,html}` (36) |
 | qwen2.5vl:3b predicted boxes and raw answers | `evidence/forms_vision/V1-qwen2.5vl-3b/answers.jsonl`, `V1i-qwen2.5vl-3b-injection/` |
 | Tesseract line boxes (red-team runner) and scoring | `evidence/forms_vision/T1-tesseract-redteam/` |
 | Trained box validators from other lanes (#14, #15, #16) | `evidence/forms_box_validator/`, `evidence/local_box_validator/`, `evidence/forms_bbox/` |
