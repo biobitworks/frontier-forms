@@ -1,6 +1,6 @@
 namespace FrontierForms
 
-/-- Formalized status of one deliberately corrupted synthetic field. 
+/-- Formalized status of one deliberately corrupted synthetic field.
     A correction module is enabled independently of the byte-level source gate. -/
 def correctAfter (faultPresent moduleEnabled : Bool) : Bool :=
   (!faultPresent) || moduleEnabled
