@@ -55,7 +55,7 @@ Code-level red-team findings in `scripts/import_fhir.py` (affect any future pari
 
 ## 6. FCO/FCG and Merkle evidence
 
-- cloudmer `DATASET_FREEZE_V1` (project files): independently recomputed root **`4a4c2714…b618b886` matches**; 39/39 stored atoms byte-match; 9 atoms (X001–X009) NOT_STORED/NOT_ACQUIRED. **HOLD is correct** — source bytes missing. (Leaf field list taken from `freezelib.build_leaf`; tree recipe implemented separately.) No cloudmer evidence copied here.
+- [Redacted 2026-11-02: a line about a different program's dataset freeze was removed. That program is not part of Frontier Forms.]
 - FCG impact-view finding (REPORTED by red-team lane, plausible from file list): source parquet edges do not reach discovery outputs/stats, so a source revision would under-propagate. Not yet independently replayed.
 - A Merkle PASS proves byte identity/inclusion only; it is **not** evidence of better form answers.
 
@@ -63,9 +63,9 @@ Code-level red-team findings in `scripts/import_fhir.py` (affect any future pari
 
 PRs #3–#8 merged to `main` by the PI (GitHub API lists them as closed with `merged_at` set). PR #1 (draft) open. Red-team branch has 4 commits, no PR. **No merge recommended now**; nothing in scope has passed a scientific gate.
 
-## 8. Vita DAISY continuity
+## 8. (Redacted)
 
-UNKNOWN for live run states: Kaggle is refused by the cloud proxy and no Kaggle receipt was rerun. Jobs not touched. Heatmap row `VITA-DAISY-PARALLEL` remains REPORTED (correct). No results or roots transferred across programs.
+[Redacted 2026-11-02: this section described a separate program that is not part of Frontier Forms.]
 
 ## 9. Missing tasks and next authorized action
 
@@ -79,5 +79,5 @@ Blockers, in order:
 Next action needing the PI: decide 2–4 (source pin and DB access) before any form-filling comparison.
 
 ```
-TURN_BREAKPOINT: PIPM-REVIEW-20261102-01 | PARENT main@e232fda | VERIFIED_NEW: DATASET_FREEZE_V1 root recomputed match (39 stored, 9 not stored); discovery McNemar p=0.6875 recomputed; review-successor roots replay PASS; tests 30/30 + 33/33 PASS | EXECUTED: unit tests, predecessor metadata replay, root replay, McNemar, bootstrap, read-only device inspection | OBSERVED: LB ablation running (S-L0 disc complete; S-L1, P-L1 partial); prereg timestamp after commit time; importer uses uuid4 + unpinned 'latest' archive | DECISIONS: no merge; no admission; V1 HOLD upheld | PROPOSED: pin Synthea archive, DB read-only snapshot, B0 freeze, arm rename | NOT_TESTED: N=100 DB count, B0, Bfull, LOMO (forms), local-vs-Postgres parity, Epic sandbox | FAILURES: Notion connector, Synthea fetch (proxy 403), Kaggle unreachable | UNRESOLVED: Vita DAISY live states, patient-cluster bootstrap, AUROC | NEXT_ACTION: PI to authorize source pin + read-only DB access
+TURN_BREAKPOINT: PIPM-REVIEW-20261102-01 | PARENT main@e232fda | VERIFIED_NEW: discovery McNemar p=0.6875 recomputed; review-successor roots replay PASS; tests 30/30 + 33/33 PASS | EXECUTED: unit tests, predecessor metadata replay, root replay, McNemar, bootstrap, read-only device inspection | OBSERVED: LB ablation running (S-L0 disc complete; S-L1, P-L1 partial); prereg timestamp after commit time; importer uses uuid4 + unpinned 'latest' archive | DECISIONS: no merge; no admission; V1 HOLD upheld | PROPOSED: pin Synthea archive, DB read-only snapshot, B0 freeze, arm rename | NOT_TESTED: N=100 DB count, B0, Bfull, LOMO (forms), local-vs-Postgres parity, Epic sandbox | FAILURES: Notion connector, Synthea fetch (proxy 403) | UNRESOLVED: patient-cluster bootstrap, AUROC | NEXT_ACTION: PI to authorize source pin + read-only DB access
 ```

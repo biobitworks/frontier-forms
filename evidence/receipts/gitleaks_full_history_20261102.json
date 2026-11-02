@@ -1,0 +1,24 @@
+{
+  "schema": "frontier_forms.gitleaks_receipt.v1",
+  "scanned_at_utc": "2026-11-02T22:45:00Z",
+  "tool": "gitleaks 8.21.2 (linux_x64, sha256 5bc41815076e6ed6ef8fbecc9d9b75bcae31f39029ceb55da08086315316e3ba)",
+  "scope": "git log --all, 68 commits, main@ad2bba6",
+  "default_rules": {
+    "findings": 7920,
+    "rules": {"generic-api-key": 7920},
+    "by_value_shape": {
+      "row_key_sha256 (64-hex case digest)": 3124,
+      "template_key = medication_allergy_intake_v1": 2530,
+      "case_key (Synthea patient UUID)": 2266,
+      "other": 0
+    },
+    "verdict": "ALL_FALSE_POSITIVE"
+  },
+  "manual_pattern_sweep": {
+    "patterns": ["postgres URLs", "DATABASE_URL=", "SUPABASE_PASSWORD=", "sb_secret_", "JWT eyJhbGciOi", "sk-", "hf_", "fw_", "nvapi-"],
+    "hits": "placeholders only (Frontier_Forms_Project_Spec.md DB_USER/YOUR_POOLER_HOST template, SUPABASE_Data_Helper_Script.md '...', a test string 'postgresql://something')",
+    "real_credentials_found": 0
+  },
+  "with_repo_config": {"config": ".gitleaks.toml", "git_full_history": 0, "dir_working_tree": 0},
+  "canary": "an inserted fake api_key line is still reported with .gitleaks.toml"
+}

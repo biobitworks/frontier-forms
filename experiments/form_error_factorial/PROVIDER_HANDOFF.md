@@ -1,6 +1,6 @@
 # Provider / checkpoint evidence handoff — Frontier Forms
 
-**Updated:** 2026-11-02. **Program:** FRONTIER_FORMS only, not Cloudmer, knots or Vita DAISY.
+**Updated:** 2026-11-02. **Program:** FRONTIER_FORMS only.
 
 ## Implemented, executed, observed
 
