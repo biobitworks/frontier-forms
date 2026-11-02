@@ -1,10 +1,8 @@
 {
   "generated_utc": "2026-11-02T23:32:51Z",
-  "source": "GitHub REST pulls/{n} and issues/{n}/comments for biobitworks/frontier-forms; receipts read from origin/main",
   "pr_counts": {
-    "merged": 27,
-    "open": 4,
     "closed_unmerged": 3,
+    "merged": 27,
     "missing_numbers_are_issues": [
       2,
       24,
@@ -19,24 +17,28 @@
       38,
       40,
       41
-    ]
+    ],
+    "open": 4
   },
   "prs": [
     {
-      "number": 1,
-      "title": "[REVIEW] EHR FCO/FCG source freeze, statistical notebooks and Claude red-team handoff",
-      "lane": "chatgpt",
-      "state": "closed_unmerged",
-      "merged_at": null,
-      "summary": "Original review draft that froze the Longevity/project/form-image Merkle states and handed off to a Claude red team. Closed by the owner as SUPERSEDED / NOT MERGED; unique fixtures tracked in issue #25.",
       "key_results": [
-        "728-input Longevity root 5f9a7e51…61b1; 15-leaf project root 9e4d4df8…d3a9a; 13-leaf form-image successor 36d12313…",
+        "728-input Longevity root 5f9a7e51\u202661b1; 15-leaf project root 9e4d4df8\u2026d3a9a; 13-leaf form-image successor 36d12313\u2026",
         "13/13 unit tests PASS",
         "38-case discovery: Liquid 25/38 vs Insilico 27/38; McNemar exact p=0.6875 FAIL",
         "paired bootstrap 95% CI [-0.07895,+0.18421] FAIL",
         "Snyk code test: BLOCKED_AUTH",
         "Gitleaks 8.30.1 PASS"
       ],
+      "lane": "chatgpt",
+      "merged_at": null,
+      "number": 1,
+      "open_items": [
+        "Port unique synthetic-form fixture scripts, form freeze logic and dashboard (issue #25)",
+        "T10 #41 closure sign-off",
+        "independent red-team issue #2 still open"
+      ],
+      "state": "closed_unmerged",
       "status_claims": [
         {
           "item": "Liquid vs Insilico superiority (38 discovery cases)",
@@ -55,26 +57,27 @@
           "status": "OBSERVED"
         }
       ],
-      "open_items": [
-        "Port unique synthetic-form fixture scripts, form freeze logic and dashboard (issue #25)",
-        "T10 #41 closure sign-off",
-        "independent red-team issue #2 still open"
-      ]
+      "summary": "Original review draft that froze the Longevity/project/form-image Merkle states and handed off to a Claude red team. Closed by the owner as SUPERSEDED / NOT MERGED; unique fixtures tracked in issue #25.",
+      "title": "[REVIEW] EHR FCO/FCG source freeze, statistical notebooks and Claude red-team handoff"
     },
     {
-      "number": 3,
-      "title": "Review: Frontier Forms FCO/FCG frozen evidence lab, paired stats and EHR protocols",
-      "lane": "chatgpt",
-      "state": "merged",
-      "merged_at": "2026-11-02T21:28:34Z",
-      "summary": "Source-bound FCO/FCG evidence lab: recomputed custody roots, seven runnable notebooks, paired McNemar/bootstrap, GSD/GSigmaD governance, LOMO protocol and Lean4 proposed rule. Remediation made the source-byte gate fail closed and notebook runs append-only before merge.",
       "key_results": [
-        "15-leaf root 9e4d4df8… and 13/13 source hashes PASS",
+        "15-leaf root 9e4d4df8\u2026 and 13/13 source hashes PASS",
         "728 FCO inclusion proofs PASS",
         "38 discovery cases: 25/38 vs 27/38, discordances 2 vs 4, McNemar p=0.6875 (FAIL)",
-        "review successor 95 leaves root 90761061…",
+        "review successor 95 leaves root 90761061\u2026",
         "19 unit tests PASS; eight notebook executions PASS offline"
       ],
+      "lane": "chatgpt",
+      "merged_at": "2026-11-02T21:28:34Z",
+      "number": 3,
+      "open_items": [
+        "evidence/stats/discovery_audit.json not regenerated through the new gate (post-merge review)",
+        "hard-coded parent pointers in freeze_review_export.py/execute_notebooks.py",
+        "rotate DB password shared over Discord",
+        "red-team A1/A2/A4/C6 findings unfixed"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "model superiority on discovery set",
@@ -101,24 +104,22 @@
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "evidence/stats/discovery_audit.json not regenerated through the new gate (post-merge review)",
-        "hard-coded parent pointers in freeze_review_export.py/execute_notebooks.py",
-        "rotate DB password shared over Discord",
-        "red-team A1/A2/A4/C6 findings unfixed"
-      ]
+      "summary": "Source-bound FCO/FCG evidence lab: recomputed custody roots, seven runnable notebooks, paired McNemar/bootstrap, GSD/GSigmaD governance, LOMO protocol and Lean4 proposed rule. Remediation made the source-byte gate fail closed and notebook runs append-only before merge.",
+      "title": "Review: Frontier Forms FCO/FCG frozen evidence lab, paired stats and EHR protocols"
     },
     {
-      "number": 4,
-      "title": "Add project spec and .gitignore",
-      "lane": "team-app",
-      "state": "merged",
-      "merged_at": "2026-11-02T20:51:46Z",
-      "summary": "Teammate application baseline: project spec, Supabase nine-table schema migration, Synthea FHIR importer and data helper doc. No PR description; scope taken from file list and later reviews.",
       "key_results": [
         "files: Frontier_Forms_Project_Spec.md, supabase/migrations/20261102000000_initial_schema.sql, scripts/import_fhir.py",
         "team-reported 100 patients / 8,252 facts (not independently queried)"
       ],
+      "lane": "team-app",
+      "merged_at": "2026-11-02T20:51:46Z",
+      "number": 4,
+      "open_items": [
+        "importer uses uuid4 ids, delete-then-reinsert and ordinal SYN- ids",
+        "live DB readback (T07 #37)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "Supabase schema and FHIR importer",
@@ -129,23 +130,24 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "importer uses uuid4 ids, delete-then-reinsert and ordinal SYN- ids",
-        "live DB readback (T07 #37)"
-      ]
+      "summary": "Teammate application baseline: project spec, Supabase nine-table schema migration, Synthea FHIR importer and data helper doc. No PR description; scope taken from file list and later reviews.",
+      "title": "Add project spec and .gitignore"
     },
     {
-      "number": 5,
-      "title": "Review: compare team Supabase implementation with FCO/FCG research lane",
-      "lane": "governance",
-      "state": "merged",
-      "merged_at": "2026-11-02T21:22:00Z",
-      "summary": "Docs-only comparison of the teammate Supabase build with the FCO/FCG lane; recommends keeping #4 as MVP baseline plus an append-only evidence plane.",
       "key_results": [
         "P0: identical synthetic FHIR bundle yields different source/fact UUIDs across replays",
         "PR #3 checkout: 16 unit tests PASS",
         "paired discovery result NEGATIVE (McNemar exact p=.6875)"
       ],
+      "lane": "governance",
+      "merged_at": "2026-11-02T21:22:00Z",
+      "number": 5,
+      "open_items": [
+        "importer UUID/ordinal identity fix",
+        "live Supabase count/RLS verification",
+        "source-bound FHIR cohort snapshot and locked gold labels"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "importer identity nondeterminism",
@@ -160,24 +162,23 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "importer UUID/ordinal identity fix",
-        "live Supabase count/RLS verification",
-        "source-bound FHIR cohort snapshot and locked gold labels"
-      ]
+      "summary": "Docs-only comparison of the teammate Supabase build with the FCO/FCG lane; recommends keeping #4 as MVP baseline plus an append-only evidence plane.",
+      "title": "Review: compare team Supabase implementation with FCO/FCG research lane"
     },
     {
-      "number": 6,
-      "title": "Lane frontier-forms: dataset-freeze red-team method (synthetic, public-safe)",
-      "lane": "claude-dataset-freeze",
-      "state": "merged",
-      "merged_at": "2026-11-02T21:21:47Z",
-      "summary": "Independent RFC 6962-style freeze/Merkle contract with 30 deterministic tamper/leakage challenges on a synthetic fixture. Later removed from main by #17 as cloudmer-derived.",
       "key_results": [
         "13 tests passed",
-        "synthetic freeze root a1024080…ce4a5",
+        "synthetic freeze root a1024080\u2026ce4a5",
         "30 deterministic challenges; byte-identical results across two runs"
       ],
+      "lane": "claude-dataset-freeze",
+      "merged_at": "2026-11-02T21:21:47Z",
+      "number": 6,
+      "open_items": [
+        "forged VERIFIED custody state fixed in #8",
+        "lane removed by #17 (cloudmer-derived); files remain in history"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "tamper detection on synthetic fixture",
@@ -188,22 +189,21 @@
           "status": "OBSERVED"
         }
       ],
-      "open_items": [
-        "forged VERIFIED custody state fixed in #8",
-        "lane removed by #17 (cloudmer-derived); files remain in history"
-      ]
+      "summary": "Independent RFC 6962-style freeze/Merkle contract with 30 deterministic tamper/leakage challenges on a synthetic fixture. Later removed from main by #17 as cloudmer-derived.",
+      "title": "Lane frontier-forms: dataset-freeze red-team method (synthetic, public-safe)"
     },
     {
-      "number": 7,
-      "title": "Add evidence-gated longitudinal heatmap for local forms + Vita DAISY boundary",
-      "lane": "chatgpt",
-      "state": "merged",
-      "merged_at": "2026-11-02T21:32:48Z",
-      "summary": "Static offline HTML/JSON gate heatmap of provenance/replay/evaluation status over time with a validator that rejects fabricated promotions; keeps Vita DAISY separate.",
       "key_results": [
         "validate_training_history.py PASS, 8 events",
         "8/8 heatmap tests PASS"
       ],
+      "lane": "chatgpt",
+      "merged_at": "2026-11-02T21:32:48Z",
+      "number": 7,
+      "open_items": [
+        "live model and production gates untested"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "static evidence dashboard",
@@ -218,22 +218,22 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "live model and production gates untested"
-      ]
+      "summary": "Static offline HTML/JSON gate heatmap of provenance/replay/evaluation status over time with a validator that rejects fabricated promotions; keeps Vita DAISY separate.",
+      "title": "Add evidence-gated longitudinal heatmap for local forms + Vita DAISY boundary"
     },
     {
-      "number": 8,
-      "title": "Security: reject forged Claude custody states and validate synthetic fixture bytes",
-      "lane": "chatgpt",
-      "state": "merged",
-      "merged_at": "2026-11-02T21:33:26Z",
-      "summary": "Fixes the #6 verifier bypass (self-declared VERIFIED custody) with an input-state allowlist and real readback, and replaces a filename-only payload gate with an exact SHA-256 allowlist.",
       "key_results": [
-        "107-leaf review successor root ad37deea…",
+        "107-leaf review successor root ad37deea\u2026",
         "22 unittest PASS, 15 Claude pytest PASS",
         "Gitleaks staged scan zero findings"
       ],
+      "lane": "chatgpt",
+      "merged_at": "2026-11-02T21:33:26Z",
+      "number": 8,
+      "open_items": [
+        "do not squash merge (replay depends on commit identities)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "forged custody state rejection",
@@ -244,22 +244,23 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "do not squash merge (replay depends on commit identities)"
-      ]
+      "summary": "Fixes the #6 verifier bypass (self-declared VERIFIED custody) with an input-state allowlist and real readback, and replaces a filename-only payload gate with an exact SHA-256 allowlist.",
+      "title": "Security: reject forged Claude custody states and validate synthetic fixture bytes"
     },
     {
-      "number": 9,
-      "title": "Review: independent PI/PM evidence review of Synthea form-filling vs B0",
-      "lane": "claude-pi-review",
-      "state": "merged",
-      "merged_at": "2026-11-02T22:41:37Z",
-      "summary": "Docs-only independent review of main@e232fda: forms B0 not yet implemented at that point, N=100 REPORTED only, and the McNemar/bootstrap results are NEGATIVE and about LongevityBench, not forms.",
       "key_results": [
         "McNemar p=0.6875 recomputed; bootstrap CI includes 0",
         "DATASET_FREEZE_V1 root matches; HOLD because 9 source atoms not stored",
         "30/30 unit tests passed"
       ],
+      "lane": "claude-pi-review",
+      "merged_at": "2026-11-02T22:41:37Z",
+      "number": 9,
+      "open_items": [
+        "importer risks: uuid4, unpinned latest Synthea archive, destructive reimport",
+        "prereg timestamp later than commit; B0 arm-name collision"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "forms B0/Bfull/LOMO at review time",
@@ -270,26 +271,28 @@
           "status": "NEGATIVE"
         }
       ],
-      "open_items": [
-        "importer risks: uuid4, unpinned latest Synthea archive, destructive reimport",
-        "prereg timestamp later than commit; B0 arm-name collision"
-      ]
+      "summary": "Docs-only independent review of main@e232fda: forms B0 not yet implemented at that point, N=100 REPORTED only, and the McNemar/bootstrap results are NEGATIVE and about LongevityBench, not forms.",
+      "title": "Review: independent PI/PM evidence review of Synthea form-filling vs B0"
     },
     {
-      "number": 10,
-      "title": "Frontier Forms: frozen cohort, local form server, B0, module/LOMO arms, Apple OCR arm, detector heatmap",
-      "lane": "claude-forms",
-      "state": "merged",
-      "merged_at": "2026-11-02T22:41:45Z",
-      "summary": "Core forms lane: frozen 100-patient Synthea v3.4.0 cohort, loopback form server, frozen B0 with independent oracle, L1–L3 module arms with LOMO, Apple Vision arm, preregistered injected-error detector benchmark and attribution ledger.",
       "key_results": [
         "100 synthetic patients, splits 63/19/18, two generations byte-identical",
-        "cohort subset root ee202dd8… recomputed by PI",
+        "cohort subset root ee202dd8\u2026 recomputed by PI",
         "module arms: test-split form success +0.222 (p=0.00049)",
         "654 forms with 702 injected errors; M1/M2/M3 detector combinations",
         "Tesseract: labels 0.967, values 0.787",
         "SFT: epoch-0 validation loss 1.0049872103490327, no adapter (PI comment)"
       ],
+      "lane": "claude-forms",
+      "merged_at": "2026-11-02T22:41:45Z",
+      "number": 10,
+      "open_items": [
+        "two oracle rules need PI sign-off (T02)",
+        "module arms designed after seeing B0 errors: replicate on new cohort (T01)",
+        "SFT M1, M0, qwen2.5vl, qwen3:1.7b results to follow",
+        "PI: add separately trained local bbox detector; no external inference"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "frozen cohort",
@@ -308,27 +311,24 @@
           "status": "BLOCKED"
         }
       ],
-      "open_items": [
-        "two oracle rules need PI sign-off (T02)",
-        "module arms designed after seeing B0 errors: replicate on new cohort (T01)",
-        "SFT M1, M0, qwen2.5vl, qwen3:1.7b results to follow",
-        "PI: add separately trained local bbox detector; no external inference"
-      ]
+      "summary": "Core forms lane: frozen 100-patient Synthea v3.4.0 cohort, loopback form server, frozen B0 with independent oracle, L1\u2013L3 module arms with LOMO, Apple Vision arm, preregistered injected-error detector benchmark and attribution ledger.",
+      "title": "Frontier Forms: frozen cohort, local form server, B0, module/LOMO arms, Apple OCR arm, detector heatmap"
     },
     {
-      "number": 11,
-      "title": "Red team: independent FCG root replay, custody attacks, local context ablation",
-      "lane": "claude-local-redteam",
-      "state": "merged",
-      "merged_at": "2026-11-02T22:42:27Z",
-      "summary": "Independent red team of PR #3: all roots recomputed, 7 custody weaknesses reproduced as tests, and a 9-arm preregistered context ablation found no admissible gain.",
       "key_results": [
         "728/15/66/79-leaf roots recomputed; all 728 inclusion proofs verify",
-        "L0 full FCG discovery 25→28/38 (p = 0.55); held-out 25/39 vs 25/39",
-        "Insilico MPS full FCG 25→24/38 and 22→19/39",
-        "Tesseract 5.5.3: 98–100% field accuracy; verifier cuts false admissions 3 to 1, all LOMO deltas 0",
+        "L0 full FCG discovery 25\u219228/38 (p = 0.55); held-out 25/39 vs 25/39",
+        "Insilico MPS full FCG 25\u219224/38 and 22\u219219/39",
+        "Tesseract 5.5.3: 98\u2013100% field accuracy; verifier cuts false admissions 3 to 1, all LOMO deltas 0",
         "33 tests OK; Lean Admission.lean compiles"
       ],
+      "lane": "claude-local-redteam",
+      "merged_at": "2026-11-02T22:42:27Z",
+      "number": 11,
+      "open_items": [
+        "Insilico CPU rerun P-L3c (\u2192 #13)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "FCO/FCG context gain",
@@ -355,24 +355,25 @@
           "status": "OBSERVED"
         }
       ],
-      "open_items": [
-        "Insilico CPU rerun P-L3c (→ #13)"
-      ]
+      "summary": "Independent red team of PR #3: all roots recomputed, 7 custody weaknesses reproduced as tests, and a 9-arm preregistered context ablation found no admissible gain.",
+      "title": "Red team: independent FCG root replay, custody attacks, local context ablation"
     },
     {
-      "number": 12,
-      "title": "[Frontier Forms] Synthetic factorial LOMO + checkpoint-bound Apple/Qwen vision evidence",
-      "lane": "chatgpt-vision",
-      "state": "merged",
-      "merged_at": "2026-11-02T22:42:50Z",
-      "summary": "Controlled synthetic fault injection with 16 module combinations at three scales, plus checkpoint-bound Apple Vision, qwen2.5vl:3b and qwen3:1.7b runs on one synthetic form.",
       "key_results": [
         "fault injection: 10 patients/44 cases, 30/136, 100/450; 16 combinations each",
         "Apple Vision OCR 8/8 fields; PDFKit 8/8",
         "qwen2.5vl:3b 8/8 fields, 40.905 seconds; qwen3:1.7b 8/8 fields, 9.806 seconds",
-        "field-result root 40c87c63… recomputed",
+        "field-result root 40c87c63\u2026 recomputed",
         "63 tests PASS; Lean 4.15 PASS"
       ],
+      "lane": "chatgpt-vision",
+      "merged_at": "2026-11-02T22:42:50Z",
+      "number": 12,
+      "open_items": [
+        "new untampered cohort/templates before promotion",
+        "PI: remove binary artifacts; add locally trained bbox detector"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "100% full-module correction (by design)",
@@ -391,23 +392,22 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "new untampered cohort/templates before promotion",
-        "PI: remove binary artifacts; add locally trained bbox detector"
-      ]
+      "summary": "Controlled synthetic fault injection with 16 module combinations at three scales, plus checkpoint-bound Apple Vision, qwen2.5vl:3b and qwen3:1.7b runs on one synthetic form.",
+      "title": "[Frontier Forms] Synthetic factorial LOMO + checkpoint-bound Apple/Qwen vision evidence"
     },
     {
-      "number": 13,
-      "title": "Red team follow-up: Insilico P-L3c CPU partial results (stopped at user request)",
-      "lane": "claude-local-redteam",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:07:51Z",
-      "summary": "Insilico CPU rerun stopped by the owner at 139 of 693 records; CPU float32 reproduced MPS counts exactly on discovery. Also fixes verify_roots for merge-commit bundles.",
       "key_results": [
         "139 of 693 records",
         "B0 25, C1 28, C2 24 of 38; B0 predictions agree 38/38 (HARDWARE_REPLICATION)",
         "C1 vs B0 Holm 0.75"
       ],
+      "lane": "claude-local-redteam",
+      "merged_at": "2026-11-02T23:07:51Z",
+      "number": 13,
+      "open_items": [
+        "remaining 554 records not run (stopped by owner)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "C1/C2 vs B0",
@@ -418,50 +418,50 @@
           "status": "OBSERVED"
         },
         {
-          "item": "C4–R0 and all held-out",
+          "item": "C4\u2013R0 and all held-out",
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "remaining 554 records not run (stopped by owner)"
-      ]
+      "summary": "Insilico CPU rerun stopped by the owner at 139 of 693 records; CPU float32 reproduced MPS counts exactly on discovery. Also fixes verify_roots for merge-commit bundles.",
+      "title": "Red team follow-up: Insilico P-L3c CPU partial results (stopped at user request)"
     },
     {
-      "number": 14,
-      "title": "LOCAL vision validator: trained synthetic bbox coefficients, independent zero-gain LOMO receipt",
-      "lane": "vision-validator",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:11:11Z",
-      "summary": "CPU-only OpenCV + logistic-regression widget-box detector trained on 3 blank templates and evaluated on 54 filled held-out forms; ties a deterministic contour control.",
       "key_results": [
         "learned 540/540 boxes at IoU>=0.5, 0 FP; contour control 540/540",
         "McNemar p=1.0; patient-cluster CI [0, 0]",
-        "weights e4d33acb…; prediction root a93068f2… replayed",
+        "weights e4d33acb\u2026; prediction root a93068f2\u2026 replayed",
         "62/62 unit tests PASS"
       ],
+      "lane": "vision-validator",
+      "merged_at": "2026-11-02T23:11:11Z",
+      "number": 14,
+      "open_items": [
+        "no unseen-layout replication",
+        "does not measure OCR, FHIR accuracy or Qwen improvement"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "learned vs deterministic box detection",
           "status": "NEGATIVE"
         }
       ],
-      "open_items": [
-        "no unseen-layout replication",
-        "does not measure OCR, FHIR accuracy or Qwen improvement"
-      ]
+      "summary": "CPU-only OpenCV + logistic-regression widget-box detector trained on 3 blank templates and evaluated on 54 filled held-out forms; ties a deterministic contour control.",
+      "title": "LOCAL vision validator: trained synthetic bbox coefficients, independent zero-gain LOMO receipt"
     },
     {
-      "number": 15,
-      "title": "Independent local Synthea image-box validator: factorial weight ablations and negative-gain receipts",
-      "lane": "vision-validator",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:11:31Z",
-      "summary": "Random Forest candidate-box classifier with all seven feature LOMO combinations at 10/30/63 training patients versus a deterministic OpenCV control; no gain.",
       "key_results": [
         "all-features F1 0.9792/0.9792/0.9734 vs contour F1 1.000",
         "full-page 34/54 vs 54/54; delta -20/54 = -37.0 pp; cluster CI [-51.85, -22.22] pp",
         "candidate AUROC 1.000 (not field-answer AUROC)"
       ],
+      "lane": "vision-validator",
+      "merged_at": "2026-11-02T23:11:31Z",
+      "number": 15,
+      "open_items": [
+        "new hidden layouts and scan perturbations before promotion"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "trained candidate validation vs deterministic",
@@ -472,22 +472,24 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "new hidden layouts and scan perturbations before promotion"
-      ]
+      "summary": "Random Forest candidate-box classifier with all seven feature LOMO combinations at 10/30/63 training patients versus a deterministic OpenCV control; no gain.",
+      "title": "Independent local Synthea image-box validator: factorial weight ablations and negative-gain receipts"
     },
     {
-      "number": 16,
-      "title": "Local-only trained bbox validator D1/D2 + independent JSON receipts (no hosted inference)",
-      "lane": "vision-validator",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:12:40Z",
-      "summary": "Locally trained PyTorch segmenter D1 (negative) and post-hoc candidate classifier D2 (exploratory), plus a fail-closed JSON-only publication checker.",
       "key_results": [
         "D1: 47 TP / 426 FP / 313 FN; recall 0.13056, precision 0.09937, F1 0.11285",
         "D2: 344 TP / 180 FP / 16 FN; recall 0.95556, precision 0.65649, F1 0.77828",
         "publication gate FAIL: 106 inherited violations (123 on combined tree per later review)"
       ],
+      "lane": "vision-validator",
+      "merged_at": "2026-11-02T23:12:40Z",
+      "number": 16,
+      "open_items": [
+        "pair boxes with Apple Vision OCR and FCO source leaves",
+        "V0/V1/V2/D1/D2 LOMO on new template-held-out cohort",
+        "privacy policy PASS (issue #24)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "D1 segmenter",
@@ -506,25 +508,24 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "pair boxes with Apple Vision OCR and FCO source leaves",
-        "V0/V1/V2/D1/D2 LOMO on new template-held-out cohort",
-        "privacy policy PASS (issue #24)"
-      ]
+      "summary": "Locally trained PyTorch segmenter D1 (negative) and post-hoc candidate classifier D2 (exploratory), plus a fail-closed JSON-only publication checker.",
+      "title": "Local-only trained bbox validator D1/D2 + independent JSON receipts (no hosted inference)"
     },
     {
-      "number": 17,
-      "title": "Before/after baseline v1; remove cloudmer-derived lane; gitleaks in CI",
-      "lane": "claude-forms",
-      "state": "merged",
-      "merged_at": "2026-11-02T22:56:46Z",
-      "summary": "Fixes the before/after denominator to the 54 held-out test forms, removes the cloudmer-derived lane, and adds checksum-pinned full-history gitleaks to CI.",
       "key_results": [
         "A0 B0: 0.333 (18/54), field acc 0.807",
         "A1 FCG harness: 0.556 (30/54), field acc 0.930; McNemar p=0.00049; cluster CI [0.07, 0.37]",
         "local importer on frozen cohort: 100 patients / 11,254 facts vs team-reported 100 / 8,252",
         "gitleaks: 7,920 generic-api-key hits triaged as digests; final 0 findings"
       ],
+      "lane": "claude-forms",
+      "merged_at": "2026-11-02T22:56:46Z",
+      "number": 17,
+      "open_items": [
+        "cloudmer files remain in git history (force-push decision left to owner)",
+        "A2 post-training arm"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "A0 baseline",
@@ -543,25 +544,24 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "cloudmer files remain in git history (force-push decision left to owner)",
-        "A2 post-training arm"
-      ]
+      "summary": "Fixes the before/after denominator to the 54 held-out test forms, removes the cloudmer-derived lane, and adds checksum-pinned full-history gitleaks to CI.",
+      "title": "Before/after baseline v1; remove cloudmer-derived lane; gitleaks in CI"
     },
     {
-      "number": 18,
-      "title": "Evidence: longitudinal Qwen checkpoint monitoring, Holm-corrected LOMO heatmap and Merkle breakpoints",
-      "lane": "chatgpt-audit",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:11:50Z",
-      "summary": "Separates observed neural training points from cross-sectional sweeps and deterministic FCO gains; adds a 24-event Merkle-snapshotted training progress dashboard and paired-checkpoint comparator.",
       "key_results": [
-        "final snapshot root a38f4704…",
+        "final snapshot root a38f4704\u2026",
         "18 McNemar tables; Holm over 12 FCO edges and 6 detector edges",
-        "B0+L1 → B0+L1+L3: 18/54 → 30/54, +0.2222, p=0.0004883, cluster CI [0.0741, 0.3704]",
+        "B0+L1 \u2192 B0+L1+L3: 18/54 \u2192 30/54, +0.2222, p=0.0004883, cluster CI [0.0741, 0.3704]",
         "Qwen2.5-0.5B LoRA: one epoch-0 validation loss 1.0049872103490327, no adapter",
         "95 unit tests PASS"
       ],
+      "lane": "chatgpt-audit",
+      "merged_at": "2026-11-02T23:11:50Z",
+      "number": 18,
+      "open_items": [
+        "append next epoch/adapter snapshot and matched inference when available"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "L1+L3 interaction (discovery only)",
@@ -576,22 +576,22 @@
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "append next epoch/adapter snapshot and matched inference when available"
-      ]
+      "summary": "Separates observed neural training points from cross-sectional sweeps and deterministic FCO gains; adds a 24-event Merkle-snapshotted training progress dashboard and paired-checkpoint comparator.",
+      "title": "Evidence: longitudinal Qwen checkpoint monitoring, Holm-corrected LOMO heatmap and Merkle breakpoints"
     },
     {
-      "number": 19,
-      "title": "Frontier Forms: trained field-box detector validator, qwen2.5vl + Tesseract vision arms, patient-cluster bootstrap",
-      "lane": "claude-forms",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:05:50Z",
-      "summary": "Adds the V2 YOLOv8n field-box detector pipeline (results not yet computed), scores qwen2.5vl:3b and Tesseract on 57 form images, and adds patient-cluster bootstrap.",
       "key_results": [
         "qwen2.5vl:3b on 57 images: box recall 0.821 at IoU 0.5, mean IoU 0.715, value read 0.736, 213 false boxes, 24 s per page",
         "Tesseract 5.5.3: labels 0.967, values 0.787",
         "L1+L3 test gain +0.222, cluster CI [0.074, 0.370]"
       ],
+      "lane": "claude-forms",
+      "merged_at": "2026-11-02T23:05:50Z",
+      "number": 19,
+      "open_items": [
+        "V2 detector, SFT M1, M0 zero-shot, qwen2.5vl injection set, qwen3:1.7b results"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "V2 YOLOv8n detector pipeline",
@@ -606,23 +606,24 @@
           "status": "OBSERVED"
         }
       ],
-      "open_items": [
-        "V2 detector, SFT M1, M0 zero-shot, qwen2.5vl injection set, qwen3:1.7b results"
-      ]
+      "summary": "Adds the V2 YOLOv8n field-box detector pipeline (results not yet computed), scores qwen2.5vl:3b and Tesseract on 57 form images, and adds patient-cluster bootstrap.",
+      "title": "Frontier Forms: trained field-box detector validator, qwen2.5vl + Tesseract vision arms, patient-cluster bootstrap"
     },
     {
-      "number": 20,
-      "title": "Red team (cloud): independent FCO/FCG replay, local Qwen/OCR lanes, gate factorial, per-epoch Merkle training ledger",
-      "lane": "claude-cloud-redteam",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:09:42Z",
-      "summary": "Cloud red-team lane (merged into feat/fcg-ehr-evidence-lab, carried to main by #21): independent replay, SYNFORM2/SYNFORM2-ERR datasets, 16-combination gate factorial and a YOLOv8n detector with per-epoch Merkle ledger.",
       "key_results": [
         "728 proofs, 13 source files, 38 pairs, p = 0.6875 reproduced",
-        "commitment leaf: planted-error detection 0.13 → 1.00, 0 false admissions, Holm p < 0.0001, CI [+0.61, +0.66]",
+        "commitment leaf: planted-error detection 0.13 \u2192 1.00, 0 false admissions, Holm p < 0.0001, CI [+0.61, +0.66]",
         "YOLOv8n full: test mAP50 0.912, 315/322 fields; LOMO no_scan 0.857, 316/322",
-        "SYNFORM2 aa447934…; SYNFORM2-ERR 790a7dc6…"
+        "SYNFORM2 aa447934\u2026; SYNFORM2-ERR 790a7dc6\u2026"
       ],
+      "lane": "claude-cloud-redteam",
+      "merged_at": "2026-11-02T23:09:42Z",
+      "number": 20,
+      "open_items": [
+        "Qwen mapper lanes, Qwen2.5-VL grounding boxes, 12-form legacy lane, JSON field-answer DB, notebooks 12/14/15/16 execution (NOT_TESTED)",
+        "F-01 duplicate-last-leaf in predecessor schemas"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "FCO/FCG context in prompt (heldout)",
@@ -653,38 +654,30 @@
           "status": "BLOCKED"
         }
       ],
-      "open_items": [
-        "Qwen mapper lanes, Qwen2.5-VL grounding boxes, 12-form legacy lane, JSON field-answer DB, notebooks 12/14/15/16 execution (NOT_TESTED)",
-        "F-01 duplicate-last-leaf in predecessor schemas"
-      ]
+      "summary": "Cloud red-team lane (merged into feat/fcg-ehr-evidence-lab, carried to main by #21): independent replay, SYNFORM2/SYNFORM2-ERR datasets, 16-combination gate factorial and a YOLOv8n detector with per-epoch Merkle ledger.",
+      "title": "Red team (cloud): independent FCO/FCG replay, local Qwen/OCR lanes, gate factorial, per-epoch Merkle training ledger"
     },
     {
-      "number": 21,
-      "title": "Red team (cloud) → main: independent FCO/FCG replay, gate factorial, per-epoch Merkle detector ledger",
-      "lane": "claude-cloud-redteam",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:10:49Z",
-      "summary": "Brings #20's content into main with verifier pins for review successors 90761061… and ad37deea… unified.",
       "key_results": [
         "all five review roots verify from history"
       ],
+      "lane": "claude-cloud-redteam",
+      "merged_at": "2026-11-02T23:10:49Z",
+      "number": 21,
+      "open_items": [
+        "same open items as #20"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "independent replay on main",
           "status": "OBSERVED"
         }
       ],
-      "open_items": [
-        "same open items as #20"
-      ]
+      "summary": "Brings #20's content into main with verifier pins for review successors 90761061\u2026 and ad37deea\u2026 unified.",
+      "title": "Red team (cloud) \u2192 main: independent FCO/FCG replay, gate factorial, per-epoch Merkle detector ledger"
     },
     {
-      "number": 22,
-      "title": "Frontier Forms: full 100-patient local acceptance runner, HTML/CSS→PDF and Qwen/vision receipts",
-      "lane": "acceptance",
-      "state": "open",
-      "merged_at": null,
-      "summary": "Local acceptance runner: FHIR loopback → B0 or local Qwen mapping → server submission → browser DOM → Chrome PDF → optional Apple Vision OCR. Draft; conflicts with main.",
       "key_results": [
         "B0 on 100 patients: 218 form cases, 2,180 fields, 1,867 matches / 313 errors (85.6422%), server echo errors 0",
         "qwen2.5:0.5b on 1 patient/2 forms: 12/20 correct",
@@ -692,6 +685,15 @@
         "93/93 tests PASS",
         "JSON-only checker FAIL: 123 existing tracked files"
       ],
+      "lane": "acceptance",
+      "merged_at": null,
+      "number": 22,
+      "open_items": [
+        "rebase onto main without reverting JSON policy/workflow fix",
+        "unified field-level receipt Qwen \u2192 HTML/CSS/PDF \u2192 Apple Vision \u2192 source binding",
+        "new held-out form family"
+      ],
+      "state": "open",
       "status_claims": [
         {
           "item": "100-patient B0 acceptance",
@@ -702,7 +704,7 @@
           "status": "NOT_TESTED"
         },
         {
-          "item": "full 100-patient Qwen, LoRA gain, Epic UI/OAuth, D2 integration, FCO×Lean×Merkle end-to-end",
+          "item": "full 100-patient Qwen, LoRA gain, Epic UI/OAuth, D2 integration, FCO\u00d7Lean\u00d7Merkle end-to-end",
           "status": "NOT_TESTED"
         },
         {
@@ -710,24 +712,22 @@
           "status": "BLOCKED"
         }
       ],
-      "open_items": [
-        "rebase onto main without reverting JSON policy/workflow fix",
-        "unified field-level receipt Qwen → HTML/CSS/PDF → Apple Vision → source binding",
-        "new held-out form family"
-      ]
+      "summary": "Local acceptance runner: FHIR loopback \u2192 B0 or local Qwen mapping \u2192 server submission \u2192 browser DOM \u2192 Chrome PDF \u2192 optional Apple Vision OCR. Draft; conflicts with main.",
+      "title": "Frontier Forms: full 100-patient local acceptance runner, HTML/CSS\u2192PDF and Qwen/vision receipts"
     },
     {
-      "number": 23,
-      "title": "Red team (cloud) follow-up: Qwen mapper lanes on SYNFORM2 test (+ VLM test pass and answer DB as they land)",
-      "lane": "claude-cloud-redteam",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:20:07Z",
-      "summary": "Apple Vision OCR lines → Qwen text mappers on 46 SYNFORM2 test images; later commits added the qwen2.5vl:3b test pass and JSON field-answer DB (evidence/redteam/db/).",
       "key_results": [
         "geometric parser 283/322; qwen2.5:1.5b 209/322; qwen3:1.7b 109/322",
         "qwen2.5vl:3b SYNFORM2 test: 318/322 fields, 42/46 images all-7 (db/ledger.jsonl)",
         "field_answers.jsonl 452 rows"
       ],
+      "lane": "claude-cloud-redteam",
+      "merged_at": "2026-11-02T23:20:07Z",
+      "number": 23,
+      "open_items": [
+        "gitleaks generic-api-key match in evidence/forms_apple/run_v1/predictions_A1.jsonl (case_key, other lane)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "Qwen mappers vs deterministic parser",
@@ -742,20 +742,20 @@
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "gitleaks generic-api-key match in evidence/forms_apple/run_v1/predictions_A1.jsonl (case_key, other lane)"
-      ]
+      "summary": "Apple Vision OCR lines \u2192 Qwen text mappers on 46 SYNFORM2 test images; later commits added the qwen2.5vl:3b test pass and JSON field-answer DB (evidence/redteam/db/).",
+      "title": "Red team (cloud) follow-up: Qwen mapper lanes on SYNFORM2 test (+ VLM test pass and answer DB as they land)"
     },
     {
-      "number": 26,
-      "title": "Add detailed plan v1: Qwen 3.8 27B baseline, Fireworks LoRA fine-tune, before/after evaluation",
-      "lane": "planning",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:17:44Z",
-      "summary": "Adds detailed_plan_v1.md: Qwen3.8-27B base vs Fireworks LoRA before/after design with A0/A1/A2/B arms and a $150 budget ceiling. Plan only.",
       "key_results": [
         "single file detailed_plan_v1.md (commit 6f3439f)"
       ],
+      "lane": "planning",
+      "merged_at": "2026-11-02T23:17:44Z",
+      "number": 26,
+      "open_items": [
+        "superseded in practice by PI no-external-inference directive; needs owner decision"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "Fireworks Qwen3.8-27B before/after",
@@ -766,62 +766,62 @@
           "status": "BLOCKED"
         }
       ],
-      "open_items": [
-        "superseded in practice by PI no-external-inference directive; needs owner decision"
-      ]
+      "summary": "Adds detailed_plan_v1.md: Qwen3.8-27B base vs Fireworks LoRA before/after design with A0/A1/A2/B arms and a $150 budget ceiling. Plan only.",
+      "title": "Add detailed plan v1: Qwen 3.8 27B baseline, Fireworks LoRA fine-tune, before/after evaluation"
     },
     {
-      "number": 27,
-      "title": "Security successor: JSON-only new data with exact-byte legacy freeze",
-      "lane": "security",
-      "state": "closed_unmerged",
-      "merged_at": null,
-      "summary": "Repairs the JSON-only gate by exempting only exact-unchanged legacy blobs from pre-policy commit 2c89dd45 and rejecting new non-JSON data. Closed as SUPERSEDED; integrated via #30/#39/#43.",
       "key_results": [
         "133/133 tests PASS (local)",
         "gate PASS on 761 tracked files: 123 exact-byte legacy exceptions, 0 new violations"
       ],
+      "lane": "security",
+      "merged_at": null,
+      "number": 27,
+      "open_items": [
+        "legacy-file exceptions still need separate policy assessment (issue #24)"
+      ],
+      "state": "closed_unmerged",
       "status_claims": [
         {
           "item": "JSON-only gate with legacy freeze",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "legacy-file exceptions still need separate policy assessment (issue #24)"
-      ]
+      "summary": "Repairs the JSON-only gate by exempting only exact-unchanged legacy blobs from pre-policy commit 2c89dd45 and rejecting new non-JSON data. Closed as SUPERSEDED; integrated via #30/#39/#43.",
+      "title": "Security successor: JSON-only new data with exact-byte legacy freeze"
     },
     {
-      "number": 28,
-      "title": "Fix CI regression: pin NumPy for independent paired-bootstrap tests",
-      "lane": "security",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:17:41Z",
-      "summary": "Pins numpy==1.26.4 in verify.yml after CI run 41543625565 failed on a missing NumPy import.",
       "key_results": [
         "124 tests, one import ERROR before fix"
       ],
+      "lane": "security",
+      "merged_at": "2026-11-02T23:17:41Z",
+      "number": 28,
+      "open_items": [
+        "JSON-only policy 123 inherited violations (issue #24)"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "CI dependency pin",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "JSON-only policy 123 inherited violations (issue #24)"
-      ]
+      "summary": "Pins numpy==1.26.4 in verify.yml after CI run 41543625565 failed on a missing NumPy import.",
+      "title": "Fix CI regression: pin NumPy for independent paired-bootstrap tests"
     },
     {
-      "number": 29,
-      "title": "Docs: open-PR review and gap analysis; V1i qwen2.5vl injection evidence",
-      "lane": "claude-forms",
-      "state": "open",
-      "merged_at": null,
-      "summary": "Gap analysis across PRs #1/#14/#15/#16/#18 and a paired injected-image test of qwen2.5vl:3b. Draft held for rebase/CI.",
       "key_results": [
         "qwen2.5vl:3b followed the injected note in 0 of 18 paired injected images",
         "not filled: replication cohort, oracle sign-off, noisy/scanned forms, PR #3 review, post-training arm"
       ],
+      "lane": "claude-forms",
+      "merged_at": null,
+      "number": 29,
+      "open_items": [
+        "rebase against main; rerun CI"
+      ],
+      "state": "open",
       "status_claims": [
         {
           "item": "qwen2.5vl injection resistance (18 pairs)",
@@ -832,74 +832,74 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "rebase against main; rerun CI"
-      ]
+      "summary": "Gap analysis across PRs #1/#14/#15/#16/#18 and a paired injected-image test of qwen2.5vl:3b. Draft held for rebase/CI.",
+      "title": "Docs: open-PR review and gap analysis; V1i qwen2.5vl injection evidence"
     },
     {
-      "number": 30,
-      "title": "Integrate JSON-only security successor with CI dependency conflict resolved",
-      "lane": "security",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:20:09Z",
-      "summary": "Merge integration of #27 onto main, keeping exact-byte legacy exemptions for 123 paths and full-history Gitleaks. No tests rerun per user instruction.",
       "key_results": [
         "123 historical paths exempt only if unchanged"
       ],
+      "lane": "security",
+      "merged_at": "2026-11-02T23:20:09Z",
+      "number": 30,
+      "open_items": [
+        "legacy binaries not reclassified as compliant"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "JSON-only CI gate on main",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "legacy binaries not reclassified as compliant"
-      ]
+      "summary": "Merge integration of #27 onto main, keeping exact-byte legacy exemptions for 123 paths and full-history Gitleaks. No tests rerun per user instruction.",
+      "title": "Integrate JSON-only security successor with CI dependency conflict resolved"
     },
     {
-      "number": 39,
-      "title": "Preserve NumPy 1.26.4 dependency pin and PR27 reconciliation receipt",
-      "lane": "security",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:21:16Z",
-      "summary": "Keeps NumPy 1.26.4 / SciPy 1.15.3 pins and #27's dependency-reconciliation receipt. No tests rerun.",
       "key_results": [],
+      "lane": "security",
+      "merged_at": "2026-11-02T23:21:16Z",
+      "number": 39,
+      "open_items": [],
+      "state": "merged",
       "status_claims": [
         {
           "item": "CI dependency provenance",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": []
+      "summary": "Keeps NumPy 1.26.4 / SciPy 1.15.3 pins and #27's dependency-reconciliation receipt. No tests rerun.",
+      "title": "Preserve NumPy 1.26.4 dependency pin and PR27 reconciliation receipt"
     },
     {
-      "number": 42,
-      "title": "Docs: track open Frontier Forms gaps as tasks",
-      "lane": "governance",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:25:59Z",
-      "summary": "Adds docs/TASKS.md with tasks T01–T10, owners, statuses and acceptance criteria, each tied to an issue.",
       "key_results": [
-        "T01 #31 … T10 #41"
+        "T01 #31 \u2026 T10 #41"
       ],
+      "lane": "governance",
+      "merged_at": "2026-11-02T23:25:59Z",
+      "number": 42,
+      "open_items": [
+        "T01\u2013T10 all open; T02/T07/T10 BLOCKED on Byron"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "task tracker",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": [
-        "T01–T10 all open; T02/T07/T10 BLOCKED on Byron"
-      ]
+      "summary": "Adds docs/TASKS.md with tasks T01\u2013T10, owners, statuses and acceptance criteria, each tied to an issue.",
+      "title": "Docs: track open Frontier Forms gaps as tasks"
     },
     {
-      "number": 43,
-      "title": "Fix CI YAML parsing of pinned dependencies; preserve failure receipt",
-      "lane": "security",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:22:25Z",
-      "summary": "Converts the pinned-dependency step to a YAML literal block after run 41544529313 failed to parse. No tests rerun; merged commit is not proof CI passed.",
       "key_results": [],
+      "lane": "security",
+      "merged_at": "2026-11-02T23:22:25Z",
+      "number": 43,
+      "open_items": [
+        "confirm CI green on main"
+      ],
+      "state": "merged",
       "status_claims": [
         {
           "item": "workflow YAML fix",
@@ -910,54 +910,52 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "confirm CI green on main"
-      ]
+      "summary": "Converts the pinned-dependency step to a YAML literal block after run 41544529313 failed to parse. No tests rerun; merged commit is not proof CI passed.",
+      "title": "Fix CI YAML parsing of pinned dependencies; preserve failure receipt"
     },
     {
-      "number": 44,
-      "title": "Integrate Merkle × LOMO × model-impact evidence contract",
-      "lane": "governance",
-      "state": "open",
-      "merged_at": null,
-      "summary": "Docs-only contract for canonical patient×form×field×model×module joins, exact-byte provenance and statistical gates. Draft pending review.",
       "key_results": [],
+      "lane": "governance",
+      "merged_at": null,
+      "number": 44,
+      "open_items": [
+        "independent reviewer signoff, scheme alignment with main, CI"
+      ],
+      "state": "open",
       "status_claims": [
         {
-          "item": "Merkle × LOMO × model-impact contract",
+          "item": "Merkle \u00d7 LOMO \u00d7 model-impact contract",
           "status": "PROPOSED"
         }
       ],
-      "open_items": [
-        "independent reviewer signoff, scheme alignment with main, CI"
-      ]
+      "summary": "Docs-only contract for canonical patient\u00d7form\u00d7field\u00d7model\u00d7module joins, exact-byte provenance and statistical gates. Draft pending review.",
+      "title": "Integrate Merkle \u00d7 LOMO \u00d7 model-impact evidence contract"
     },
     {
-      "number": 45,
-      "title": "Fix merged GitHub Actions YAML parse failure (NumPy/SciPy run block)",
-      "lane": "security",
-      "state": "closed_unmerged",
-      "merged_at": null,
-      "summary": "Equivalent YAML block repair; closed as SUPERSEDED by #43.",
       "key_results": [
         "local PyYAML parsed successor with 10 steps"
       ],
+      "lane": "security",
+      "merged_at": null,
+      "number": 45,
+      "open_items": [],
+      "state": "closed_unmerged",
       "status_claims": [
         {
           "item": "YAML repair",
           "status": "IMPLEMENTED"
         }
       ],
-      "open_items": []
+      "summary": "Equivalent YAML block repair; closed as SUPERSEDED by #43.",
+      "title": "Fix merged GitHub Actions YAML parse failure (NumPy/SciPy run block)"
     },
     {
-      "number": 46,
-      "title": "Document DAISY freeze–challenge–replicate–admit reuse without model transfer",
-      "lane": "governance",
-      "state": "merged",
-      "merged_at": "2026-11-02T23:29:44Z",
-      "summary": "Documents reuse of the DAISY freeze/challenge/replicate/admit method in Frontier Forms while keeping Vita DAISY/Cloudmer data, weights and gains isolated.",
       "key_results": [],
+      "lane": "governance",
+      "merged_at": "2026-11-02T23:29:44Z",
+      "number": 46,
+      "open_items": [],
+      "state": "merged",
       "status_claims": [
         {
           "item": "DAISY-specific gain",
@@ -972,19 +970,23 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": []
+      "summary": "Documents reuse of the DAISY freeze/challenge/replicate/admit method in Frontier Forms while keeping Vita DAISY/Cloudmer data, weights and gains isolated.",
+      "title": "Document DAISY freeze\u2013challenge\u2013replicate\u2013admit reuse without model transfer"
     },
     {
-      "number": 47,
-      "title": "Review: PR #3 after da953450 (T06)",
-      "lane": "claude-review",
-      "state": "open",
-      "merged_at": null,
-      "summary": "Reviews PR #3's post-da953450 delta and replays attacks A1/A2/A4: all review roots reproduce, repairs work, but none of five earlier red-team findings is fixed.",
       "key_results": [
         "roots 2f1cfafd, 37152dc8, 513cb1f8, 90761061, ad37deea reproduce",
         "19 tests pass at da51622"
       ],
+      "lane": "claude-review",
+      "merged_at": null,
+      "number": 47,
+      "open_items": [
+        "regenerate evidence/stats through gate",
+        "bind leaf_count/parent in leaf 0 or move to RFC 6962",
+        "merge to close T06 #36"
+      ],
+      "state": "open",
       "status_claims": [
         {
           "item": "review root replay",
@@ -999,16 +1001,17 @@
           "status": "NOT_TESTED"
         }
       ],
-      "open_items": [
-        "regenerate evidence/stats through gate",
-        "bind leaf_count/parent in leaf 0 or move to RFC 6962",
-        "merge to close T06 #36"
-      ]
+      "summary": "Reviews PR #3's post-da953450 delta and replays attacks A1/A2/A4: all review roots reproduce, repairs work, but none of five earlier red-team findings is fixed.",
+      "title": "Review: PR #3 after da953450 (T06)"
     }
   ],
+  "source": "GitHub REST pulls/{n} and issues/{n}/comments for biobitworks/frontier-forms; receipts read from origin/main",
   "workstreams": [
     {
+      "blocked_or_negative": "F-01/A1 duplicate-last-leaf, A2 uncommitted parent, A4 dangling edges still unfixed (#47)",
+      "highest_status_reached": "OBSERVED",
       "name": "Custody / Merkle root replay and review successors",
+      "next_step": "Bind leaf_count, parent root and parent commit in leaf 0 (or RFC 6962) and check edge endpoints",
       "prs": [
         1,
         3,
@@ -1021,19 +1024,19 @@
         21,
         47
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "F-01/A1 duplicate-last-leaf, A2 uncommitted parent, A4 dangling edges still unfixed (#47)",
-      "next_step": "Bind leaf_count, parent root and parent commit in leaf 0 (or RFC 6962) and check edge endpoints"
+      }
     },
     {
+      "blocked_or_negative": "25/38 vs 27/38, McNemar p=0.6875; qwen3:1.7b 3/39, qwen2.5vl:3b 6/39 NEGATIVE_WORSE; Insilico rerun stopped at 139/693",
+      "highest_status_reached": "NEGATIVE",
       "name": "LongevityBench model lanes (Liquid L0, Insilico L3, qwen3/qwen2.5vl)",
+      "next_step": "Keep quarantined; do not combine with forms results; Insilico heldout NOT_TESTED",
       "prs": [
         1,
         3,
@@ -1042,73 +1045,73 @@
         13,
         20
       ],
-      "highest_status_reached": "NEGATIVE",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "25/38 vs 27/38, McNemar p=0.6875; qwen3:1.7b 3/39, qwen2.5vl:3b 6/39 NEGATIVE_WORSE; Insilico rerun stopped at 139/693",
-      "next_step": "Keep quarantined; do not combine with forms results; Insilico heldout NOT_TESTED"
+      }
     },
     {
+      "blocked_or_negative": "NULL on heldout (25/39 vs 25/39; \u0394 0.000); Insilico full FCG NEGATIVE",
+      "highest_status_reached": "NULL",
       "name": "FCO/FCG context ablation (context in prompt)",
+      "next_step": "Reject the claim that FCO/FCG context improves reasoning; no further runs planned",
       "prs": [
         11,
         13,
         20
       ],
-      "highest_status_reached": "NULL",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "NULL on heldout (25/39 vs 25/39; Δ 0.000); Insilico full FCG NEGATIVE",
-      "next_step": "Reject the claim that FCO/FCG context improves reasoning; no further runs planned"
+      }
     },
     {
+      "blocked_or_negative": "Live counts/RLS NOT_TESTED; uuid4 + delete/reinsert identity; 11,254 local vs 8,252 reported facts",
+      "highest_status_reached": "EXECUTED",
       "name": "Supabase schema and FHIR importer",
+      "next_step": "T07 #37: owner decides N/A or readback from transformed JSON with SHA-256; rotate shared DB password",
       "prs": [
         4,
         5,
         9,
         17
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Live counts/RLS NOT_TESTED; uuid4 + delete/reinsert identity; 11,254 local vs 8,252 reported facts",
-      "next_step": "T07 #37: owner decides N/A or readback from transformed JSON with SHA-256; rotate shared DB password"
+      }
     },
     {
+      "blocked_or_negative": null,
+      "highest_status_reached": "OBSERVED",
       "name": "Synthea FHIR cohort freeze (forms_cohort_v1)",
+      "next_step": "T01 #31: fresh seed cohort, preregistered, scored once",
       "prs": [
         10,
         17
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": null,
-      "next_step": "T01 #31: fresh seed cohort, preregistered, scored once"
+      }
     },
     {
+      "blocked_or_negative": "Dropdown values don't render and long lists get cut off (Apple A2); PR #1 fixtures not ported (#25)",
+      "highest_status_reached": "OBSERVED",
       "name": "Synthetic form rendering and loopback form server (HTML/PDF/PNG)",
+      "next_step": "T03 #33: seeded noisy/scanned renders; new held-out form family",
       "prs": [
         1,
         10,
@@ -1117,38 +1120,38 @@
         20,
         22
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Dropdown values don't render and long lists get cut off (Apple A2); PR #1 fixtures not ported (#25)",
-      "next_step": "T03 #33: seeded noisy/scanned renders; new held-out form family"
+      }
     },
     {
-      "name": "B0 baseline and FCG module arms (L1–L3, LOMO)",
+      "blocked_or_negative": "Discovery grade only: modules designed after viewing test errors",
+      "highest_status_reached": "OBSERVED",
+      "name": "B0 baseline and FCG module arms (L1\u2013L3, LOMO)",
+      "next_step": "T01 #31 replication with frozen arms; T02 #32 oracle sign-off",
       "prs": [
         10,
         17,
         18,
         19
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Discovery grade only: modules designed after viewing test errors",
-      "next_step": "T01 #31 replication with frozen arms; T02 #32 oracle sign-off"
+      }
     },
     {
+      "blocked_or_negative": "Drops single-letter Gender box; missed 1/29 long medication list",
+      "highest_status_reached": "OBSERVED",
       "name": "Apple Vision OCR (and PDFKit readback)",
+      "next_step": "Score clean vs degraded renders (T03)",
       "prs": [
         10,
         12,
@@ -1156,19 +1159,19 @@
         22,
         23
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Drops single-letter Gender box; missed 1/29 long medication list",
-      "next_step": "Score clean vs degraded renders (T03)"
+      }
     },
     {
+      "blocked_or_negative": "213 false boxes on 57 images; NEGATIVE_WORSE on LongevityBench",
+      "highest_status_reached": "OBSERVED",
       "name": "qwen2.5vl:3b vision extraction",
+      "next_step": "Degraded-render evaluation and paired comparison vs Apple Vision on same scorer",
       "prs": [
         10,
         12,
@@ -1177,212 +1180,212 @@
         23,
         29
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "213 false boxes on 57 images; NEGATIVE_WORSE on LongevityBench",
-      "next_step": "Degraded-render evaluation and paired comparison vs Apple Vision on same scorer"
+      }
     },
     {
+      "blocked_or_negative": null,
+      "highest_status_reached": "OBSERVED",
       "name": "Tesseract OCR arm",
+      "next_step": "Include in T03 clean vs degraded comparison",
       "prs": [
         10,
         11,
         19
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": null,
-      "next_step": "Include in T03 clean vs degraded comparison"
+      }
     },
     {
+      "blocked_or_negative": "209/322 and 109/322 vs deterministic parser 283/322",
+      "highest_status_reached": "NEGATIVE",
       "name": "Qwen text mappers (qwen2.5:1.5b, qwen3:1.7b, qwen2.5:0.5b)",
+      "next_step": "Keep deterministic parser as control; only re-test with a trained mapper",
       "prs": [
         12,
         22,
         23
       ],
-      "highest_status_reached": "NEGATIVE",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "209/322 and 109/322 vs deterministic parser 283/322",
-      "next_step": "Keep deterministic parser as control; only re-test with a trained mapper"
+      }
     },
     {
+      "blocked_or_negative": "Only epoch-0 val loss 1.0049872103490327; no adapter; M1 stopped without adapter; gain NOT_TESTED",
+      "highest_status_reached": "EXECUTED",
       "name": "Qwen LoRA SFT / trained-model before-after (M0/M1/M2)",
+      "next_step": "T08 #38: restart M1 on MacBookPro, score M0/M1/M2 on 54 test forms with McNemar + cluster CI",
       "prs": [
         10,
         17,
         18,
         26
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Only epoch-0 val loss 1.0049872103490327; no adapter; M1 stopped without adapter; gain NOT_TESTED",
-      "next_step": "T08 #38: restart M1 on MacBookPro, score M0/M1/M2 on 54 test forms with McNemar + cluster CI"
+      }
     },
     {
+      "blocked_or_negative": "Logistic 540/540 = control; RF \u221220/54; D1 F1 0.11285; D2 exploratory on seen layouts",
+      "highest_status_reached": "NEGATIVE",
       "name": "Learned bbox validators (logistic, Random Forest, D1, D2)",
+      "next_step": "Evaluate on new template-held-out layouts paired with OCR and source leaves",
       "prs": [
         14,
         15,
         16
       ],
-      "highest_status_reached": "NEGATIVE",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Logistic 540/540 = control; RF −20/54; D1 F1 0.11285; D2 exploratory on seen layouts",
-      "next_step": "Evaluate on new template-held-out layouts paired with OCR and source leaves"
+      }
     },
     {
+      "blocked_or_negative": "V2 forms-thread results NOT_TESTED; LOMO paired test NOT_COMPUTED",
+      "highest_status_reached": "OBSERVED",
       "name": "YOLOv8n field detector (red-team SYNFORM2 and forms-thread V2)",
+      "next_step": "T09 #40: commit V2 flag recall/false-flag per perturbation vs contour and D2",
       "prs": [
         19,
         20,
         21
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "V2 forms-thread results NOT_TESTED; LOMO paired test NOT_COMPUTED",
-      "next_step": "T09 #40: commit V2 flag recall/false-flag per perturbation vs contour and D2"
+      }
     },
     {
+      "blocked_or_negative": "Replay notebook 16 not executed (NOT_TESTED)",
+      "highest_status_reached": "OBSERVED",
       "name": "Per-epoch Merkle training ledger",
+      "next_step": "Execute notebook 16; extend ledger to a second layout",
       "prs": [
         18,
         20,
         21
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Replay notebook 16 not executed (NOT_TESTED)",
-      "next_step": "Execute notebook 16; extend ledger to a second layout"
+      }
     },
     {
+      "blocked_or_negative": "Replication on a second template family NOT_TESTED (BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED); needs source record to exist",
+      "highest_status_reached": "OBSERVED",
       "name": "Gate factorial / per-field commitment gate",
+      "next_step": "Replicate on a freshly rendered template family and on a Synthea passport snapshot",
       "prs": [
         20,
         21,
         23
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Replication on a second template family NOT_TESTED (BLOCKED_REPLICATION_OR_GUARDRAIL_NOT_TESTED); needs source record to exist",
-      "next_step": "Replicate on a freshly rendered template family and on a Synthea passport snapshot"
+      }
     },
     {
+      "blocked_or_negative": "M3 recall near ceiling by construction; 4.1% clean-field flags",
+      "highest_status_reached": "OBSERVED",
       "name": "Injected-error detector benchmark (M1 Merkle / M2 Lean / M3 source binding)",
+      "next_step": "Test against real-world error sources, not oracle-defined injections",
       "prs": [
         10,
         18
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "M3 recall near ceiling by construction; 4.1% clean-field flags",
-      "next_step": "Test against real-world error sources, not oracle-defined injections"
+      }
     },
     {
+      "blocked_or_negative": "100% correction is by design, not a trained-model gain",
+      "highest_status_reached": "OBSERVED",
       "name": "Controlled fault-injection factorial (16 module masks, 3 scales)",
+      "next_step": "Re-run on new untampered cohort/templates",
       "prs": [
         12
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "100% correction is by design, not a trained-model gain",
-      "next_step": "Re-run on new untampered cohort/templates"
+      }
     },
     {
+      "blocked_or_negative": "Only one real training point exists",
+      "highest_status_reached": "OBSERVED",
       "name": "Longitudinal checkpoint monitoring and training dashboards",
+      "next_step": "Append snapshot when an adapter and matched inference exist",
       "prs": [
         7,
         18
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Only one real training point exists",
-      "next_step": "Append snapshot when an adapter and matched inference exist"
+      }
     },
     {
-      "name": "Acceptance runner (100-patient HTML→PDF→OCR loop)",
+      "blocked_or_negative": "PR open/conflicting; unified receipt NOT_TESTED; full Qwen run NOT_TESTED",
+      "highest_status_reached": "OBSERVED",
+      "name": "Acceptance runner (100-patient HTML\u2192PDF\u2192OCR loop)",
+      "next_step": "Rebase #22 on main, rerun CI, produce unified field-level receipt",
       "prs": [
         22
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "PR open/conflicting; unified receipt NOT_TESTED; full Qwen run NOT_TESTED",
-      "next_step": "Rebase #22 on main, rerun CI, produce unified field-level receipt"
+      }
     },
     {
+      "blocked_or_negative": "native_decide trusts the compiler; M2 cannot catch plausible wrong values",
+      "highest_status_reached": "EXECUTED",
       "name": "Lean 4 admission/constraint proofs",
+      "next_step": "Integrate into end-to-end FCO\u00d7Lean\u00d7Merkle admission run",
       "prs": [
         3,
         10,
@@ -1390,19 +1393,19 @@
         12,
         20
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "native_decide trusts the compiler; M2 cannot catch plausible wrong values",
-      "next_step": "Integrate into end-to-end FCO×Lean×Merkle admission run"
+      }
     },
     {
+      "blocked_or_negative": "Earlier template-resampling bootstrap ignored patient clustering (fixed in #19)",
+      "highest_status_reached": "EXECUTED",
       "name": "Paired statistics (McNemar, bootstrap, Holm, patient-cluster CI)",
+      "next_step": "Apply to every new arm; cost/latency per correct form (T05 #35)",
       "prs": [
         3,
         11,
@@ -1411,37 +1414,37 @@
         19,
         28
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Earlier template-resampling bootstrap ignored patient clustering (fixed in #19)",
-      "next_step": "Apply to every new arm; cost/latency per correct form (T05 #35)"
+      }
     },
     {
+      "blocked_or_negative": "Injection in retrieved context succeeds on qwen3; filter not built",
+      "highest_status_reached": "OBSERVED",
       "name": "Prompt injection",
+      "next_step": "T04 #34: deterministic injection filter, scored on inject and clean sets",
       "prs": [
         10,
         11,
         29
       ],
-      "highest_status_reached": "OBSERVED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Injection in retrieved context succeeds on qwen3; filter not built",
-      "next_step": "T04 #34: deterministic injection filter, scored on inject and clean sets"
+      }
     },
     {
+      "blocked_or_negative": "123 legacy PNG/PDF/HTML/JSONL files exempt but not compliant (#24); no CI rerun after #43",
+      "highest_status_reached": "EXECUTED",
       "name": "Security: gitleaks, custody allowlist, JSON-only publication policy, CI pins",
+      "next_step": "Resolve issue #24; confirm CI green on main",
       "prs": [
         8,
         16,
@@ -1453,19 +1456,19 @@
         43,
         45
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "123 legacy PNG/PDF/HTML/JSONL files exempt but not compliant (#24); no CI rerun after #43",
-      "next_step": "Resolve issue #24; confirm CI green on main"
+      }
     },
     {
+      "blocked_or_negative": "BLOCKED_NO_CREDENTIAL / prohibited by PI no-external-inference directive",
+      "highest_status_reached": "BLOCKED",
       "name": "Fireworks hosted inference/fine-tune",
+      "next_step": "Owner decision on whether plan v1 (#26) is retired",
       "prs": [
         1,
         3,
@@ -1473,57 +1476,57 @@
         20,
         26
       ],
-      "highest_status_reached": "BLOCKED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": false,
         "EXECUTED": false,
+        "IMPLEMENTED": false,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "BLOCKED_NO_CREDENTIAL / prohibited by PI no-external-inference directive",
-      "next_step": "Owner decision on whether plan v1 (#26) is retired"
+      }
     },
     {
+      "blocked_or_negative": "NOT_TESTED; external providers excluded by PI",
+      "highest_status_reached": "NOT_TESTED",
       "name": "NVIDIA / DGX / Megatron training",
+      "next_step": "None while local-only policy holds",
       "prs": [
         1,
         3,
         12,
         20
       ],
-      "highest_status_reached": "NOT_TESTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": false,
         "EXECUTED": false,
+        "IMPLEMENTED": false,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "NOT_TESTED; external providers excluded by PI",
-      "next_step": "None while local-only policy holds"
+      }
     },
     {
+      "blocked_or_negative": "No live Epic writes; Epic UI/OAuth NOT_TESTED",
+      "highest_status_reached": "NOT_TESTED",
       "name": "Epic integration (open.epic spec, writeback)",
+      "next_step": "Keep as synthetic JSON spec only",
       "prs": [
         1,
         3,
         7,
         22
       ],
-      "highest_status_reached": "NOT_TESTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": false,
         "EXECUTED": false,
+        "IMPLEMENTED": false,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "No live Epic writes; Epic UI/OAuth NOT_TESTED",
-      "next_step": "Keep as synthetic JSON spec only"
+      }
     },
     {
+      "blocked_or_negative": "CLI BLOCKED_AUTH / SNYK-0005 (a GitHub Snyk check was reported PASS on #16)",
+      "highest_status_reached": "BLOCKED",
       "name": "Snyk static scan",
+      "next_step": "Operator authenticates Snyk; record receipt",
       "prs": [
         1,
         3,
@@ -1531,19 +1534,19 @@
         11,
         20
       ],
-      "highest_status_reached": "BLOCKED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": false,
         "EXECUTED": false,
+        "IMPLEMENTED": false,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "CLI BLOCKED_AUTH / SNYK-0005 (a GitHub Snyk check was reported PASS on #16)",
-      "next_step": "Operator authenticates Snyk; record receipt"
+      }
     },
     {
+      "blocked_or_negative": "PR #1 port (#25), T02/T07/T10 blocked on owner; #44 contract PROPOSED",
+      "highest_status_reached": "EXECUTED",
       "name": "Governance (GSD/gsigmad, PI reviews, TASKS, DAISY boundary, evidence contract)",
+      "next_step": "Merge #47 (T06) and #29; owner decisions on T02/T07/T10",
       "prs": [
         3,
         5,
@@ -1556,35 +1559,32 @@
         46,
         47
       ],
-      "highest_status_reached": "EXECUTED",
       "stages": {
-        "PROPOSED": true,
-        "IMPLEMENTED": true,
         "EXECUTED": true,
+        "IMPLEMENTED": true,
         "OBSERVED": false,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "PR #1 port (#25), T02/T07/T10 blocked on owner; #44 contract PROPOSED",
-      "next_step": "Merge #47 (T06) and #29; owner decisions on T02/T07/T10"
+      }
     },
     {
+      "blocked_or_negative": "Drawing boxes on images drops Apple OCR from 58/70 to 0/70 fields; per-model Chrome screenshots and Preview captures still generating",
+      "highest_status_reached": "OBSERVED",
       "name": "Demo: form server, overlays, screenshots",
+      "next_step": "open PR for docs/demo and docs/judges from redteam/claude-fcg-local-ablation-20261102-cloud",
       "prs": [
         7,
         10,
         12,
         18
       ],
-      "highest_status_reached": "IMPLEMENTED",
       "stages": {
-        "PROPOSED": true,
+        "EXECUTED": true,
         "IMPLEMENTED": true,
-        "EXECUTED": false,
-        "OBSERVED": false,
+        "OBSERVED": true,
+        "PROPOSED": true,
         "SUPPORTED": false
-      },
-      "blocked_or_negative": "Red-team demo commits (per-model annotations, boxed vs clean OCR) sit on branch redteam/claude-fcg-local-ablation-20261102-cloud with no PR",
-      "next_step": "Open a PR for the demo branch commits"
+      }
     }
   ]
 }

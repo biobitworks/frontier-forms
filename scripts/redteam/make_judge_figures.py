@@ -57,7 +57,7 @@ def heatmap(rows, cols, values, labels, cell=(118, 30), left=330, top=60, title_
         for k, part in enumerate(textwrap.wrap(c, 16)[:3]):
             d.text((left + j * cell[0] + 6, 4 + 16 * k), a(part), fill=INK, font=F(13))
     for i, r in enumerate(rows):
-        d.text((8, top + i * cell[1] + 8), a(r)[:62], fill=INK, font=F(13))
+        d.text((8, top + i * cell[1] + 8), a(r)[:92], fill=INK, font=F(13))
         for j, _ in enumerate(cols):
             v = values[i][j]; x, y = left + j * cell[0], top + i * cell[1]
             d.rounded_rectangle([x + 1, y + 1, x + cell[0] - 2, y + cell[1] - 2], 4, fill=shade(v) if v is not None else BG, outline=LINE)
@@ -103,11 +103,11 @@ def main():
         for w in ws:
             st = w.get('stages', {})
             row = [1.0 if st.get(s) else 0.0 for s in stages]
-            neg = (w.get('blocked_or_negative') or '').upper()
-            vals.append(row); labs.append(['✓' if x else ('BLOCKED' if ('BLOCK' in neg and k >= 2) else '—') for k, x in enumerate(row)])
-        body = heatmap([f"{w['name']} (#{', #'.join(str(p) for p in w.get('prs', [])[:4])})" for w in ws], stages, vals, labs, cell=(120, 28), left=520)
+            vals.append(row + [None]); labs.append(['yes' if x else '-' for x in row] + [w.get('highest_status_reached', '')])
+        names = [f"{w['name']} (#{', #'.join(str(p) for p in w.get('prs', [])[:4])})" for w in ws]
+        body = heatmap(names, stages + ['Outcome'], vals, labs, cell=(112, 26), left=640, title_cols=stages + ['Outcome (highest status / result)'])
         add('What we accomplished: workstreams × evidence stage', fit(body),
-            'Each row is a workstream across all pull requests; a filled cell means the PRs show that stage was reached (PROPOSED → IMPLEMENTED → EXECUTED → OBSERVED → SUPPORTED). SUPPORTED requires McNemar + bootstrap + independent replication + guardrails; BLOCKED marks lanes stopped by access or policy (e.g. hosted inference).',
+            'Each row is a workstream across all 34 pull requests (27 merged, 4 open, 3 closed as superseded). Blue cells = the PRs show that stage was reached. Outcome keeps the honest result: NEGATIVE / NULL results and BLOCKED lanes (hosted inference, Snyk) are shown, not hidden. No workstream is SUPPORTED yet: that needs McNemar + bootstrap + an independent replication cohort + guardrails.',
             'docs/judges/pr_inventory.json (built from every PR in biobitworks/frontier-forms)', 'accomplishment_heatmap')
     else:
         skipped.append('accomplishment heat map (pr_inventory.json missing)')
