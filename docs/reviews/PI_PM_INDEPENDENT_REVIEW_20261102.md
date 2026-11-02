@@ -5,6 +5,8 @@ Every result below was rerun or recomputed by this reviewer unless marked REPORT
 
 Reviewed heads: `main@e232fda`, `redteam/claude-fcg-local-ablation-20261102@25c56b1`, draft PR #1 `@4634098`.
 
+> **Point-in-time scope:** This review describes the state as of 21:45Z. PRs #10–#12 were opened after it and claim a frozen cohort, a local form server, B0 and LOMO arms. Those claims are **NOT_REVIEWED** here, so a successor review must check them independently. "B0 NOT_IMPLEMENTED" below applies only to the heads listed above.
+
 ## 1. Current source and baseline state
 
 | Item | State | Evidence |
