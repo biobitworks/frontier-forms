@@ -1,0 +1,36 @@
+{
+  "schema": "redteam.environment.v1",
+  "lane": "redteam/claude-fcg-local-ablation-20261102",
+  "parent_commit": "da953450d33a721682191f77589c275e0b49731c",
+  "parent_branch": "feat/fcg-ehr-evidence-lab-20261102",
+  "parent_pr": "https://github.com/biobitworks/frontier-forms/pull/3",
+  "worktree_state_at_branch_creation": "clean checkout of da953450 (git status empty)",
+  "access_path": "Desktop Commander connector (devices: Mac=magicSTUDIObox 00925fd7..., MacBookPro=magicPRO 607bdfaf...)",
+  "hosts": {
+    "magicSTUDIObox.local": {"os": "macOS 27.0.1 (26A434)", "arch": "arm64 Apple M1 Max", "ram_bytes": 34359738368,
+      "python_default": "3.15.0 /opt/homebrew/bin/python3", "python_torch": "/opt/homebrew/bin/python3.12 3.12.13 torch 2.13.0 transformers 5.8.1",
+      "evidence_venv": ".venv python 3.12.13 pyarrow 23.0.1 (no torch)", "ollama": "0.33.0",
+      "ollama_models_relevant": {"lfm2-1.2b-longevity-q4km:latest": "3839bfb14341", "qwen3:1.7b": "8f68893c685c", "qwen2.5vl:3b": "fb90415cde1e"},
+      "lean": "4.15.0 (~/.elan/bin, not on PATH)", "lake": "5.0.0", "gh": "authenticated biobitworks", "gitleaks": "installed", "snyk": "NOT_INSTALLED",
+      "claude_code": "2.1.212", "gsigmad": "source checkout ~/projects/active/gsigmad, runnable via uv run python -m gsigmad",
+      "FIREWORKS_API_KEY": "UNSET (sh and zsh -l)", "evidence_dir": "/Users/byron/projects/active/fireworks-antigence-eval-20261102 (present, not git)",
+      "frontier_forms_clone": "HEAD da953450 on feat/fcg-ehr-evidence-lab-20261102, clean"},
+    "MacBookPro (magicPRO)": {"os": "macOS 27.2 (26B123)", "arch": "arm64 Apple M1 Pro", "ram_bytes": 17179869184, "python_default": "3.9.6 torch 2.8.0 MPS",
+      "ollama": "0.32.15 (qwen3:1.7b present; no longevity or VL model)", "snyk": "1.1307.2 auth error SNYK-0005", "gitleaks": "installed",
+      "gh": "authenticated biobitworks", "claude_code": "2.1.314", "lean": "NOT_INSTALLED", "FIREWORKS_API_KEY": "UNSET",
+      "evidence_dir": "ABSENT", "frontier_forms_clone": "ABSENT"},
+    "cloud_container": {"os": "Linux 6.18.44 x86_64", "python": "3.13.18", "installed_for_lane": "nbformat 5.11.1 nbclient 0.11.0 ipykernel 7.4.0 scipy 1.18.1 numpy 2.5.3",
+      "gitleaks": "DOWNLOAD_DENIED_BY_SANDBOX_POLICY", "ollama": "ABSENT", "github": "MCP tools; gh search only"}
+  },
+  "lanes": {
+    "L0": {"model": "lfm2-1.2b-longevity-q4km:latest", "status": "AVAILABLE magicSTUDIObox"},
+    "L1": {"model": "qwen3:1.7b", "status": "AVAILABLE magicSTUDIObox (think disabled)"},
+    "L2": {"model": "qwen2.5vl:3b", "status": "AVAILABLE magicSTUDIObox"},
+    "L3": {"model": "insilicomedicine/Qwen3-0.6B-Longevity@bffdda93 safetensors f547df5c...", "status": "AVAILABLE magicSTUDIObox transformers/MPS"},
+    "L4": {"model": "Fireworks serverless", "status": "BLOCKED_NO_CREDENTIAL (FIREWORKS_API_KEY unset on both hosts; no request sent; CC BY-NC transfer not authorized)"},
+    "L5": {"model": "Fireworks + Antigence/FCG", "status": "BLOCKED_NO_CREDENTIAL"}
+  },
+  "dataset_rights": {"longebench": "CC BY-NC 4.0; raw parquet and oracle stay on magicSTUDIObox; public export = hashed keys + booleans only",
+                     "insilico_checkpoint": "CC BY-ND 4.0; not copied, not modified", "synthea_forms12": "synthetic, rendered locally; oracle values not exported"},
+  "signature": "NOT_SIGNED", "mmr": "NOT_COMPUTED"
+}
