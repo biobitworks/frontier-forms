@@ -160,5 +160,5 @@ three quantities separate on every row: `q1_weights` (checkpoint/adapter and wei
 and `q3_outcome` (paired counts, McNemar, Holm, bootstrap CI, status). A row is only read as a mechanism effect when weights_changed is false
 and the unit is SINGLE_MECHANISM; a weights change is labelled MODEL.
 
-**Scope separation.** LongevityBench numbers (sections 4–5) are never combined with the Synthea forms lane or with Vita DAISY.
+**Scope separation.** LongevityBench numbers (sections 4–5) are never combined with the Synthea forms lane.
 Insilico is evaluated inference-only within its own frozen cases; raw outputs and gold stay in the private directory on the devices.

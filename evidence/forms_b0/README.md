@@ -1,6 +1,6 @@
 # Frontier Forms B0: frozen local form-filling baseline
 
-**State:** FROZEN_PENDING_PI_REVIEW (2026-11-02). Lane: frontier-forms only. No Vita DAISY or cloudmer data, results or checkpoints are used here.
+**State:** FROZEN_PENDING_PI_REVIEW (2026-11-02). Lane: frontier-forms only. No data, results or checkpoints from other programs are used here.
 
 ## What is frozen
 

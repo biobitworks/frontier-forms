@@ -1,4 +1,4 @@
-# Training evidence heatmap — local/private Frontier Forms + separate Vita DAISY
+# Training evidence heatmap — local/private Frontier Forms
 
 **Scope:** Static, public-safe FCO/FCG validation evidence viewer. No Supabase or Epic credentials. The dashboard is **not a production model monitor** or a claim of newly observed improvement.
 
@@ -18,7 +18,7 @@ Open `http://127.0.0.1:8787/training_heatmap.html`. The HTML loads `training_his
 - `open.epic` provides technical specifications and an Epic FHIR R4 sandbox with **different test patients**. It is not interchangeable with Synthea and it does not establish patient ground truth. Epic sandbox read operations are optional, scoped and authorization-gated; no production writes.
 - Freeze teammate's local form-filling baseline **B0**, then create versioned successor modules and evaluate **Bfull**, followed by **LOMO = Bfull minus one module** with identical cases/weights/scorer and isolated intervention receipts.
 - Local/private/approved model inference only. Fireworks/NVIDIA comparisons are deferred for this particular benchmark.
-- Keep the **Vita DAISY** training program independent and unchanged, on its own dataset, runner, frozen protocol, and evidence roots. This local dashboard does not dispatch or stop DAISY jobs.
+- This dashboard covers Frontier Forms only. Other programs are not tracked here.
 
 ## Scoring
 

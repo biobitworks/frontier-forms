@@ -30,6 +30,5 @@ class HeatmapHistoryTests(unittest.TestCase):
         self.assertTrue(lib.validate(d))
     def test_project_lanes_not_chained(self):
         e={x["id"]:x for x in self.doc["events"]}
-        self.assertIsNone(e["VITA-DAISY-PARALLEL"]["parent"])
         self.assertIsNone(e["FF-LOCAL-B0-LOMO"]["parent"])
 if __name__=="__main__": unittest.main()

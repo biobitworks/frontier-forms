@@ -1,4 +1,4 @@
-"""Supervised fine-tuning data for the frontier-forms field mapper (separate lane from Vita DAISY).
+"""Supervised fine-tuning data for the frontier-forms field mapper.
 
 One example per (patient, template, field). The model sees what B0 sees: the
 field as rendered (label, type, options) and a compact text view of the

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """LoRA SFT of a small open model as the frontier-forms field mapper (local only).
 
-Lane: frontier-forms. No Vita DAISY / cloudmer data, checkpoints or results.
+Lane: frontier-forms only. No data, checkpoints or results from other programs.
 No hosted inference. Runs on Apple MPS, CUDA or CPU.
 
     python3 scripts/train_forms_sft.py --base Qwen/Qwen2.5-0.5B-Instruct --out runs/forms_sft_v1

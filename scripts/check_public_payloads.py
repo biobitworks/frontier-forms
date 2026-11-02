@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
-"""Reject private payloads; exact-byte exception for public synthetic red-team fixture."""
+"""Reject private payloads. Exact-byte exceptions only, by path and SHA-256 (none at present)."""
 import hashlib
 import subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent.parent
-ALLOWED_SYNTHETIC={
-    "lanes/frontier-forms/dataset-freeze-redteam/fixtures/synthetic_pseudobulk_v1.bin":
-    "6dcb568dfa631b1030f7e47d1f36029681986becee314f006c25e3739f2421b5",
-}
+ALLOWED_SYNTHETIC={}
 DENIED={".safetensors",".parquet",".zip",".p12",".pfx",".pem",".key",".bin"}
-def check(paths,root=ROOT):
+def check(paths,root=ROOT,allowed=None):
+    allowed=ALLOWED_SYNTHETIC if allowed is None else allowed
     for name in paths:
         path=Path(name)
         if path.suffix.lower() not in DENIED:
             continue
-        expected=ALLOWED_SYNTHETIC.get(path.as_posix())
+        expected=allowed.get(path.as_posix())
         if not expected or not (root/path).is_file():
             raise AssertionError("PUBLIC_PROHIBITED_FILE "+path.as_posix())
         h=hashlib.sha256((root/path).read_bytes()).hexdigest()
