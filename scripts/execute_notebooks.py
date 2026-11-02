@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory(prefix='frontier-forms-kernels-') as tmp:
     os.environ['JUPYTER_PATH']=tmp+os.pathsep+os.environ.get('JUPYTER_PATH','')
     import nbformat
     from nbclient import NotebookClient
-    out=R/'evidence/notebook_runs_v3';out.mkdir(parents=True,exist_ok=True)
+    out=R/'evidence/notebook_runs_v4';out.mkdir(parents=True,exist_ok=True)
     results=[]
     for p in sorted((R/'notebooks').glob('*.ipynb')):
       nb=nbformat.read(str(p),as_version=4)

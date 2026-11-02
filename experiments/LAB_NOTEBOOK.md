@@ -17,3 +17,6 @@ First staged Gitleaks scan FAILED with 38 generic-api-key pattern matches on has
 
 ## P01 verifier failure and successor (2026-11-02)
 Previous review root 37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7 was COMPUTED, but the initial independent verifier FAILED with KeyError signed (manifest used signature). Preserved exact predecessor at Git commit bf58691bbf93753a9a63b4722e479d8b044fcb01, then created a new verifier that reads predecessor bytes from Git history and current bytes from current tree. Old failure not promoted to PASS.
+
+## P02 source intake: Supabase (2026-11-02)
+The user reported a Supabase-hosted dataset under construction. No project reference, tables, data classification, row count, transaction snapshot or model-labeled records were supplied. Intake is REPORTED_IN_PROGRESS, NOT_OBSERVED. Source root NOT_COMPUTED and export NOT_AUTHORIZED. Added source contract and notebook protocol; no Supabase API calls or SQL executed. Prior project root and both review successors remain unchanged. New successor shall reference old review root and this intake event only.

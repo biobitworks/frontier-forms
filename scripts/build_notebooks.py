@@ -141,3 +141,23 @@ for f in required:
 print(json.dumps({'documentation_presence':'PASS','lean_compilation':'NOT_TESTED',
 'gsigmad_experiment_audit':'NOT_TESTED','gsd_phase_runner':'NOT_TESTED',
 'snyk_scan':'NOT_TESTED','claims_gate':'HOLD'},indent=2))"""])
+
+nb("07_supabase_source_gate.ipynb","EXP-007: Supabase dataset intake, no premature freeze",
+"- A source link, access authority, schema and data classification are prerequisites for a database query.\n- No actual row/transaction/source hash is asserted without an observed snapshot.",
+"- evidence/sources/supabase_source_intake.json (user-reported dataset under construction; contains no raw rows).",
+"- Validate explicit UNKNOWN/NULL/NOT_COMPUTED states and a nonadmitted source edge; verify frozen predecessor is preserved.",
+"- Report SOURCE=REPORTED_IN_PROGRESS, FROZEN=NO, SOURCE_MERKLE=NOT_COMPUTED and block Fireworks training/evaluation admission.",
+["""import json
+from pathlib import Path
+r=Path.cwd()
+s=json.loads((r/'evidence/sources/supabase_source_intake.json').read_text())
+assert s['schema']=='fco.supabase.source_intake.v1'
+assert s['state']=='REPORTED_IN_PROGRESS'
+assert s['rows_observed'] is None
+assert s['project_ref'] is None
+assert s['snapshot_merkle_root']=='NOT_COMPUTED'
+assert s['actual_supabase_query']=='NOT_EXECUTED'
+assert s['source_to_fcg_edge']['state']=='NOT_TESTED'
+print(json.dumps({'source_intake':'PASS','dataset_freeze':'NOT_EXECUTED',
+ 'row_count':'UNKNOWN','snapshot_root':'NOT_COMPUTED',
+ 'fireworks_admission':'BLOCKED_SOURCE_NOT_FROZEN'},indent=2))"""])

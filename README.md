@@ -67,3 +67,6 @@ Future paired harness comparison: A0 closed frontier if event rules require; A1 
 Require directionally positive exact McNemar p<0.05, 95% stratified paired bootstrap lower bound>0, independent untouched replication, denominators for FPR/FDR, continuous scores for AUROC, authorized task success guardrail and source-backed token ROI. Do not preregister an outcome as true. All unexecuted actions remain NOT_TESTED.
 
 See the experiment protocol, FCG chain, lab notebook, source-rights boundary, GSD phases and independent Claude review handoff in docs.
+
+## Supabase upstream intake (reported, not frozen)
+The user reports a dataset being built in Supabase. The project and schema are not yet linked to this repository, and its row count, sensitivity, source version and contents are UNKNOWN. We register this as a **prospective upstream source** in [the Supabase source contract](docs/protocols/SUPABASE_SOURCE_CONTRACT.md) and [the source-intake ledger](evidence/sources/supabase_source_intake.json). This does not replace the frozen LongevityBench root or authorize an export. EXP-007 checks that these unresolved gates fail closed. Only an observed consistent snapshot and separately computed Merkle commitment can advance the Supabase lane.

@@ -3,17 +3,20 @@
 from pathlib import Path
 import json,hashlib,subprocess
 R=Path(__file__).resolve().parent.parent
-OLD_COMMIT='bf58691bbf93753a9a63b4722e479d8b044fcb01'
+HISTORICAL_COMMITS={
+  'REVIEW-37152dc823a8009f':'bf58691bbf93753a9a63b4722e479d8b044fcb01',
+  'REVIEW-513cb1f8e83d0eae':'ee75d57a65ef27ed80811fea0f9c8571ab184ac1',
+}
 def sha(b):return hashlib.sha256(b).hexdigest()
 def canon(x):return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
 for folder in sorted((R/'evidence/freeze/review_successor').glob('REVIEW-*')):
     m=json.loads((folder/'manifest.json').read_text())
     rows=[json.loads(x) for x in (folder/'leaves.jsonl').read_text().splitlines()]
     assert m['leaf_count']==len(rows) and m['leaf_order']==[r['path'] for r in rows]
-    historical=folder.name=='REVIEW-37152dc823a8009f'
+    historical=folder.name in HISTORICAL_COMMITS
     for r in rows:
         if historical:
-            proc=subprocess.run(['git','show',OLD_COMMIT+':'+r['path']],
+            proc=subprocess.run(['git','show',HISTORICAL_COMMITS[folder.name]+':'+r['path']],
                 cwd=R,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
             if proc.returncode:raise RuntimeError('HISTORICAL_FILE_MISSING '+r['path'])
             raw=proc.stdout
