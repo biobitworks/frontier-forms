@@ -1,0 +1,74 @@
+{
+  "claim_ceiling": "Synthetic injected errors on synthetic patients. Detection rates describe these declared error types only.",
+  "combinations": "all 8 subsets of {M1,M2,M3}; the empty set detects nothing",
+  "dataset": {
+    "cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+    "error_type_counts": {
+      "E1_swap": 107,
+      "E2_wrong_patient": 107,
+      "E3_unit": 46,
+      "E4_fabricated_none": 50,
+      "E5_post_seal_tamper": 114,
+      "E6_dropped": 119,
+      "E7_typo": 116,
+      "E8_stale": 43
+    },
+    "errors_per_form": {
+      "0": 197,
+      "1": 274,
+      "2": 121,
+      "3": 62
+    },
+    "forms_sha256": "9a73b604b3e26caa373767827e21efc0738880974521a41bdfd06df21bdba926",
+    "n_error_instances": 702,
+    "n_forms": 654,
+    "truth_sha256": "7d46e365a764035adb4f25f9273febf8bc514a01218df5578a69c56fa32b179f"
+  },
+  "date": "2026-11-02",
+  "endpoints": {
+    "primary": "error-instance recall: an instance is detected when any of its fields is flagged",
+    "secondary": [
+      "per-error-type recall",
+      "false-positive rate on fields not touched by injection",
+      "form-level sensitivity and specificity (form has >=1 error)",
+      "field-level AUROC of the count of mechanisms flagging (full set)"
+    ]
+  },
+  "injection": {
+    "code_sha256": "990783f1ad8325f25c1dbc0459c4a834dd91c46383c3688467c0f3cae7770438",
+    "error_types": {
+      "E1_swap": "values of two filled single-line text fields exchanged",
+      "E2_wrong_patient": "a filled value replaced by the same field's value from another patient",
+      "E3_unit": "a number written in the wrong unit (kg<->lb, cm->in)",
+      "E4_fabricated_none": "a field whose correct answer is 'ask the patient' filled with 'None'",
+      "E5_post_seal_tamper": "a value changed after the form was sealed (one digit, or another patient's value)",
+      "E6_dropped": "a required filled field left blank",
+      "E7_typo": "one character replaced by an OCR-confusable character",
+      "E8_stale": "a vital sign replaced by an older observation of the same code"
+    },
+    "n_errors_weights": {
+      "0": 0.3,
+      "1": 0.4,
+      "2": 0.2,
+      "3": 0.1
+    },
+    "seed": 20261102,
+    "variants_per_case": 3,
+    "version": "inject-v1"
+  },
+  "lane": "frontier-forms",
+  "mechanisms": {
+    "M1_merkle_breakpoint": "Recompute every field leaf sha256(form_id|field_key|value) and the form Merkle root; a field is flagged when its leaf differs from the sealed leaf (the breakpoint). Sees only the form and its seal.",
+    "M2_lean4_constraints": "Lean 4 (v4.15.0) program lean/FormChecks.lean evaluates declared per-field constraints (identity text fields required and well formed; ISO date not after 2026-11-01; phone NNN-NNN-NNNN; 5-digit ZIP; 2-letter state; select value in options; height_cm 30-250, weight_kg 0.5-350, weight_lb 1-800; blood pressure S/D integers with 40<=D<S<=300). Counts only if lean compiles the file, including its proof examples.",
+    "M3_fco_source_binding": "Recompute each field from the teammate passport served by the local server, using the full candidate mapping (B0+L1+L2+L3); flag when the form value disagrees (lists as sets, numbers within 0.05, blanks compared)."
+  },
+  "prereg_id": "FF-DETECTOR-PREREG-V1",
+  "statistics": {
+    "alpha": 0.05,
+    "attribution": "a gain is attributed to mechanism m only on single-leaf edges; multi-leaf differences are reported as CONFOUNDED",
+    "fp_cost": "the same paired test is applied to clean fields to report the false-positive cost of each edge",
+    "single_leaf_edges": "S -> S+{m} for every S not containing m; LOMO = {M1,M2,M3}-{m} -> full",
+    "test": "exact two-sided McNemar on paired error instances; paired bootstrap 10000 reps, seed 20261102, stratified by error type"
+  },
+  "written_before": "any detector code exists in the repo; detectors are committed in a later commit"
+}

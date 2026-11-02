@@ -1,0 +1,215 @@
+{
+  "A1_output_root": "8e443458ce00e6bd23c0d4d40266b78b274a42382344f3de6f97986f4b8bfd7a",
+  "A1_predictions_sha256": "bda5099115c00051c2119ddefbbf5684e0de0731a945b72d9f75c13492f55dd5",
+  "A2_output_root": "3f828d6c7e8d531b5817b54aba30d618ec8572679f67f08113dc8b02152b8e43",
+  "A2_predictions_sha256": "ea0ea42bec7583887bdc4ae8307a5851a05e1b8367652cc97c2451f455df7416",
+  "arms": [
+    "A1-apple-pdfkit",
+    "A2-apple-ocr-rb"
+  ],
+  "cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "frozen_pdf_forms_sha256": {
+    "medication_allergy_intake_v1.pdf": "bea2caaa525feba2689ee43f32d32e88ddf6cbd604a442b9b5514d8fe9c0a545",
+    "new_patient_registration_v1.pdf": "21a30b84b59276f3b8e34c42b56b8f4dd19b164caffdfa188a5603381007588c",
+    "urgent_care_history_v1.pdf": "d2f4dae2c52a4fab600b23cbb4483e17bf1d175face54dce02b670f1db43fa03"
+  },
+  "host": {
+    "machine": "arm64",
+    "macos": "27.2",
+    "python": "3.9.6"
+  },
+  "hosted_inference": "NONE",
+  "inspected_labels": {
+    "medication_allergy_intake_v1": [
+      [
+        "patient_name",
+        "text0",
+        "Patient name",
+        1
+      ],
+      [
+        "current_medications",
+        "text1",
+        "List all medications you currently take",
+        1
+      ],
+      [
+        "medication_allergies",
+        "text2",
+        "Do you have any medication allergies? If yes, list them",
+        1
+      ],
+      [
+        "other_allergies",
+        "text3",
+        "Food or environmental allergies",
+        1
+      ],
+      [
+        "conditions",
+        "text4",
+        "Current medical conditions",
+        1
+      ],
+      [
+        "height_cm",
+        "text5",
+        "Height (cm)",
+        1
+      ],
+      [
+        "weight_kg",
+        "text6",
+        "Weight (kg)",
+        1
+      ],
+      [
+        "blood_pressure",
+        "text7",
+        "Most recent blood pressure (systolic/diastolic)",
+        1
+      ],
+      [
+        "smoking",
+        "choice0",
+        "Smoking status",
+        1
+      ]
+    ],
+    "new_patient_registration_v1": [
+      [
+        "full_name",
+        "text0",
+        "Full legal name",
+        1
+      ],
+      [
+        "date_of_birth",
+        "text1",
+        "Date of birth (YYYY-MM-DD)",
+        1
+      ],
+      [
+        "sex",
+        "choice0",
+        "Sex",
+        1
+      ],
+      [
+        "phone",
+        "text2",
+        "Phone number",
+        1
+      ],
+      [
+        "street",
+        "text3",
+        "Street address",
+        1
+      ],
+      [
+        "city",
+        "text4",
+        "City",
+        1
+      ],
+      [
+        "state",
+        "text5",
+        "State",
+        1
+      ],
+      [
+        "zip",
+        "text6",
+        "ZIP code",
+        1
+      ],
+      [
+        "language",
+        "text7",
+        "Preferred language",
+        1
+      ],
+      [
+        "marital",
+        "text8",
+        "Marital status",
+        1
+      ],
+      [
+        "insurance",
+        "text9",
+        "Primary insurance company",
+        1
+      ]
+    ],
+    "urgent_care_history_v1": [
+      [
+        "surname",
+        "text0",
+        "Patient surname",
+        1
+      ],
+      [
+        "first",
+        "text1",
+        "First name",
+        1
+      ],
+      [
+        "dob",
+        "text2",
+        "Birth date (YYYY-MM-DD)",
+        1
+      ],
+      [
+        "meds_now",
+        "text3",
+        "Medicines you are taking now",
+        1
+      ],
+      [
+        "drug_allergies",
+        "text4",
+        "Drug allergies",
+        1
+      ],
+      [
+        "ongoing",
+        "text5",
+        "Ongoing health problems",
+        1
+      ],
+      [
+        "weight_lb",
+        "text6",
+        "Weight (Ib)",
+        1
+      ],
+      [
+        "tobacco",
+        "choice0",
+        "Tobacco use",
+        1
+      ],
+      [
+        "carrier",
+        "text7",
+        "Insurance carrier",
+        1
+      ],
+      [
+        "pregnant",
+        "choice1",
+        "Are you currently pregnant?",
+        1
+      ]
+    ]
+  },
+  "mapping_rules": "B0-v1",
+  "n_patients": 100,
+  "oracle": "oracle-v1",
+  "tool_source_sha256": "1418d2a4e79a9d2f6143c68817c70a4aad9c3d54b66e7db08aa05ce8b2831902",
+  "wall_seconds": 172.4
+}

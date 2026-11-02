@@ -1,0 +1,31 @@
+{
+  "dataset_id": "FF-SYNTHEA-FORMS-COHORT-V1",
+  "lane": "frontier-forms (separate from Vita DAISY / cloudmer; no shared datasets or results)",
+  "generator": {
+    "name": "MITRE Synthea",
+    "version": "v3.4.0",
+    "license": "Apache-2.0",
+    "artifact_url": "https://github.com/synthetichealth/synthea/releases/download/v3.4.0/synthea-with-dependencies.jar",
+    "artifact_sha256": "38678aab1e667d26671163824aad60ee5e30fa366f3d59d5ea5765ebb5702432",
+    "java": "OpenJDK 21.0.12"
+  },
+  "command": "java -Xmx3g -jar synthea-with-dependencies.jar -s 20261102 -cs 20261102 -p 110 -r 20261101 --exporter.baseDirectory=./out --exporter.fhir.export=true --exporter.csv.export=false --exporter.ccda.export=false --exporter.years_of_history=10 Massachusetts",
+  "seed": 20261102,
+  "clinician_seed": 20261102,
+  "reference_date": "2026-11-01",
+  "state": "Massachusetts",
+  "raw_output": {
+    "patient_bundles": 129,
+    "living": 104,
+    "fhir_version": "R4 (4.0.1)"
+  },
+  "determinism_check": "Two independent generations in separate directories gave byte-identical SHA-256 for all 127 patient bundle files (hospital/practitioner file names carry a timestamp and are excluded).",
+  "selection": "living patients sorted by Patient.id, first 100 (src/frontier_forms/forms/cohort.py load_cohort)",
+  "split_rule": "split-v1: int(sha256('split-v1|'+patient_id)[:8],16)%100 -> <70 train, <85 validation, else test",
+  "subset_transform": "forms-subset-v1 (scripts/build_forms_subset.py); B0 and oracle outputs verified identical on raw vs subset for all 218 cases",
+  "data_classification": "SYNTHETIC. Byron approved committing synthetic patient bundles to this repo on 2026-11-02. No real PHI.",
+  "not_this_dataset": [
+    "Teammate Supabase/PostgreSQL import (synthea-sample-data-fhir-latest, unpinned, count UNVERIFIED pending a rotated read-only credential)",
+    "Epic open.epic FHIR R4 sandbox test patients"
+  ]
+}

@@ -1,0 +1,6671 @@
+{
+ "blank__medication_allergy_intake_v1": {
+  "image": "blank__medication_allergy_intake_v1.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": null,
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "blank__new_patient_registration_v1": {
+  "image": "blank__new_patient_registration_v1.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": null,
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "blank__urgent_care_history_v1": {
+  "image": "blank__urgent_care_history_v1.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": null,
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194": {
+  "image": "filled__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "09be8301-7f67-3e55-8eeb-51dbd3f7a194",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Jacinda Bahringer",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "154.6",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "66.3",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "91/77",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194": {
+  "image": "filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "09be8301-7f67-3e55-8eeb-51dbd3f7a194",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Jacinda Bahringer",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1947-03-26",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-625-2320",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "720 Mohr Tunnel Apt 62",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Easton",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Divorced",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194": {
+  "image": "filled__urgent_care_history_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "09be8301-7f67-3e55-8eeb-51dbd3f7a194",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Bahringer",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Jacinda",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1947-03-26",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "66.3",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a": {
+  "image": "filled__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "1adf3d69-412a-6603-93ad-ba4038f78f4a",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Lenny Hoppe",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress (finding); Limited social contact (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "191.4",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "102.1",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "105/78",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a": {
+  "image": "filled__new_patient_registration_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "1adf3d69-412a-6603-93ad-ba4038f78f4a",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Lenny Hoppe",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1938-03-19",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-478-6949",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "681 Pollich Wall",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Brookline",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "02467",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Divorced",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a": {
+  "image": "filled__urgent_care_history_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "1adf3d69-412a-6603-93ad-ba4038f78f4a",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Hoppe",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Lenny",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1938-03-19",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Housing unsatisfactory (finding); Received higher education (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Gingivitis (disorder); Full-time employment (finding); Stress (finding); Limited social contact (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "102.1",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281": {
+  "image": "filled__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "2087329c-1f62-80b2-6a64-2612660c9281",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Mindi Ondricka",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "162.5",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "73.3",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "118/87",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__2087329c-1f62-80b2-6a64-2612660c9281": {
+  "image": "filled__new_patient_registration_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "2087329c-1f62-80b2-6a64-2612660c9281",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Mindi Ondricka",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1952-07-13",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-433-9136",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "464 Russel Fork Suite 88",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Methuen",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01841",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__2087329c-1f62-80b2-6a64-2612660c9281": {
+  "image": "filled__urgent_care_history_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "2087329c-1f62-80b2-6a64-2612660c9281",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Ondricka",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Mindi",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1952-07-13",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); History of tubal ligation (situation); Chronic pain (finding); Chronic neck pain (finding); Gingivitis (disorder); Medication review due (situation); Social isolation (finding); Unemployed (finding); Limited social contact (finding); Stress (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "73.3",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14": {
+  "image": "filled__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "32e9ae68-2a60-6a46-a96c-07ee69299c14",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Dolores Rubio",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "167.5",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "84.5",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "135/88",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14": {
+  "image": "filled__new_patient_registration_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "32e9ae68-2a60-6a46-a96c-07ee69299c14",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Dolores Rubio",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1957-12-09",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-777-1706",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "103 Wuckert Harbor Unit 70",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Monson",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "Spanish",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14": {
+  "image": "filled__urgent_care_history_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "32e9ae68-2a60-6a46-a96c-07ee69299c14",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Rubio",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Dolores",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1957-12-09",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Risk activity involvement (finding); Received higher education (finding); Refugee (person); Victim of intimate partner abuse (finding); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Stress (finding); Part-time employment (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "84.5",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f": {
+  "image": "filled__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "5bc25376-89c8-7f52-c63d-d0e71f9c422f",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Gregory Schuppe",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Medication review due (situation); Chronic sinusitis (disorder)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "97.9",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "15",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "132/77",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f": {
+  "image": "filled__new_patient_registration_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "5bc25376-89c8-7f52-c63d-d0e71f9c422f",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Gregory Schuppe",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2023-01-07",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-627-8961",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "1093 Weimann Course",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Seekonk",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Uninsured",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f": {
+  "image": "filled__urgent_care_history_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "5bc25376-89c8-7f52-c63d-d0e71f9c422f",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Schuppe",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Gregory",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2023-01-07",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Medication review due (situation); Chronic sinusitis (disorder)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "15",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Uninsured",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5": {
+  "image": "filled__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "67343a62-afe0-dc97-4913-8d4ed061b3d5",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Palmira Ryan",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Medication review due (situation)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "89.1",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "13.6",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "95/61",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5": {
+  "image": "filled__new_patient_registration_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "67343a62-afe0-dc97-4913-8d4ed061b3d5",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Palmira Ryan",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2023-08-21",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-367-4544",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "448 Senger Throughway",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Lynn",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01904",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicaid",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5": {
+  "image": "filled__urgent_care_history_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "67343a62-afe0-dc97-4913-8d4ed061b3d5",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Ryan",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Palmira",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2023-08-21",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Medication review due (situation)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "13.6",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicaid",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a": {
+  "image": "filled__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "792e8798-3941-8301-dec4-f7960c33941a",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Margret Casper",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Stress (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "163.8",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "74.3",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "113/81",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__792e8798-3941-8301-dec4-f7960c33941a": {
+  "image": "filled__new_patient_registration_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "792e8798-3941-8301-dec4-f7960c33941a",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Margret Casper",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2005-12-03",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-249-1731",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "1050 O'Conner Parade Unit 71",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Marlborough",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01752",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__792e8798-3941-8301-dec4-f7960c33941a": {
+  "image": "filled__urgent_care_history_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "792e8798-3941-8301-dec4-f7960c33941a",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Casper",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Margret",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2005-12-03",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; Ibuprofen 400 MG Oral Tablet [Ibu]; budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Past pregnancy history of miscarriage (situation); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Prediabetes (finding); Only received primary school education (finding); Recurrent urinary tract infection (disorder); Anemia (disorder); Full-time employment (finding); Medication review due (situation); Limited social contact (finding); Stress (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "74.3",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1": {
+  "image": "filled__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "7d64bd02-5bd7-1607-9519-9ffb3bcc84e1",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Wilfred Parker",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Medication review due (situation)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "168.6",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "69.1",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "105/67",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "former",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1": {
+  "image": "filled__new_patient_registration_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "7d64bd02-5bd7-1607-9519-9ffb3bcc84e1",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Wilfred Parker",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2009-11-22",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-363-3132",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "581 Klocko Flat Apt 41",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Somerville",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "02144",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Humana",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1": {
+  "image": "filled__urgent_care_history_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "7d64bd02-5bd7-1607-9519-9ffb3bcc84e1",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Parker",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Wilfred",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2009-11-22",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Medication review due (situation)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "69.1",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "former",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Humana",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7": {
+  "image": "filled__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "82917f5d-0215-1755-e88b-2cbfe1ededf7",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Celena Bergstrom",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "History of appendectomy (situation)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "137",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "43.2",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "127/85",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7": {
+  "image": "filled__new_patient_registration_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "82917f5d-0215-1755-e88b-2cbfe1ededf7",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Celena Bergstrom",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2015-12-20",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-455-2019",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "290 Carroll Flat",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "North Reading",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7": {
+  "image": "filled__urgent_care_history_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "82917f5d-0215-1755-e88b-2cbfe1ededf7",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Bergstrom",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Celena",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2015-12-20",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "History of appendectomy (situation)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "43.2",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2": {
+  "image": "filled__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "9c93a67e-459b-c1b7-51ac-b704c66983c2",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Charlette Kuphal",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "lisinopril 10 MG Oral Tablet",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "162",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "74.3",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "111/70",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "former",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2": {
+  "image": "filled__new_patient_registration_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "9c93a67e-459b-c1b7-51ac-b704c66983c2",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Charlette Kuphal",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1973-06-08",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-806-7181",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "418 Walter Ferry Unit 77",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Middleborough",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Dual Eligible",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2": {
+  "image": "filled__urgent_care_history_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "9c93a67e-459b-c1b7-51ac-b704c66983c2",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Kuphal",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Charlette",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1973-06-08",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "lisinopril 10 MG Oral Tablet",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "74.3",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "former",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Dual Eligible",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495": {
+  "image": "filled__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "9f0f8c98-718e-c835-18b5-77a28abb4495",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Jarvis Hyatt",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "176.7",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "120.5",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "114/82",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "former",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__9f0f8c98-718e-c835-18b5-77a28abb4495": {
+  "image": "filled__new_patient_registration_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "9f0f8c98-718e-c835-18b5-77a28abb4495",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Jarvis Hyatt",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1990-04-29",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-383-3433",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "724 Weber Pathway Unit 98",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Foxborough",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "02035",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "Hindi",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "UnitedHealthcare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__9f0f8c98-718e-c835-18b5-77a28abb4495": {
+  "image": "filled__urgent_care_history_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "9f0f8c98-718e-c835-18b5-77a28abb4495",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Hyatt",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Jarvis",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1990-04-29",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Stress (finding); Full-time employment (finding); Misuses drugs (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "120.5",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "former",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "UnitedHealthcare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350": {
+  "image": "filled__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "bc82704e-ddb3-d2f4-1975-3334d4798350",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Birgit Gibson",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "None",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "107.8",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "17.9",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "141/88",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__bc82704e-ddb3-d2f4-1975-3334d4798350": {
+  "image": "filled__new_patient_registration_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "bc82704e-ddb3-d2f4-1975-3334d4798350",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Birgit Gibson",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2022-03-12",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-920-3894",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "269 Schultz Crossroad",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Worcester",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01545",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__bc82704e-ddb3-d2f4-1975-3334d4798350": {
+  "image": "filled__urgent_care_history_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "bc82704e-ddb3-d2f4-1975-3334d4798350",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Gibson",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Birgit",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2022-03-12",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "None",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "17.9",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8": {
+  "image": "filled__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "d5d07442-fba5-35e8-bdc1-1aa6153105f8",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Oscar Collier",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "183.6",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "92.5",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "102/56",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8": {
+  "image": "filled__new_patient_registration_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "d5d07442-fba5-35e8-bdc1-1aa6153105f8",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Oscar Collier",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1947-11-29",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-608-8768",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "747 Krajcik Hollow Unit 83",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Somerville",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "02143",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Divorced",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8": {
+  "image": "filled__urgent_care_history_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "d5d07442-fba5-35e8-bdc1-1aa6153105f8",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Collier",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Oscar",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1947-11-29",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "92.5",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa": {
+  "image": "filled__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "dbdffa16-b4d5-e004-d62d-4f4e57b192fa",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Mickey Hintz",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "165",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "66.3",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "116/81",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "former",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa": {
+  "image": "filled__new_patient_registration_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "dbdffa16-b4d5-e004-d62d-4f4e57b192fa",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Mickey Hintz",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2000-05-07",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-493-7675",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "1006 Kozey Avenue",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Northampton",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01062",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Aetna",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa": {
+  "image": "filled__urgent_care_history_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "dbdffa16-b4d5-e004-d62d-4f4e57b192fa",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Hintz",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Mickey",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2000-05-07",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "66.3",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "former",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Aetna",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0": {
+  "image": "filled__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "ddb4edb6-146f-76f1-43a2-4898d83df4b0",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Rolando Rohan",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "190.2",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "103.2",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "125/78",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0": {
+  "image": "filled__new_patient_registration_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "ddb4edb6-146f-76f1-43a2-4898d83df4b0",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Rolando Rohan",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1981-06-18",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-666-1540",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "260 Cassin Byway",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Yarmouth",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0": {
+  "image": "filled__urgent_care_history_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "ddb4edb6-146f-76f1-43a2-4898d83df4b0",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Rohan",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Rolando",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1981-06-18",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "103.2",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Cigna Health",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736": {
+  "image": "filled__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "e5c9cb54-8c48-5f9c-5dc7-89abc7179736",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Felica Goodwin",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "Fish (substance); Allergic disposition (finding); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance)",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "165.3",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "81.7",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "115/76",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "former",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736": {
+  "image": "filled__new_patient_registration_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "e5c9cb54-8c48-5f9c-5dc7-89abc7179736",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Felica Goodwin",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1962-03-29",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-342-5242",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "244 Padberg Brook Unit 97",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Sudbury",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "00000",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "Chinese",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Humana",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736": {
+  "image": "filled__urgent_care_history_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "e5c9cb54-8c48-5f9c-5dc7-89abc7179736",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Goodwin",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Felica",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1962-03-29",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "Chlorpheniramine Maleate 2 MG/ML Oral Solution; Levothyroxine Sodium 0.075 MG Oral Tablet",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Housing unsatisfactory (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Refugee (person); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Traumatic or nontraumatic brain injury (disorder); Full-time employment (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "81.7",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "former",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Humana",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a": {
+  "image": "filled__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "e8282861-e7a9-6044-e067-cb437d114e2a",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Erich Hilll",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "Wheat (substance); Allergic disposition (finding)",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Medication review due (situation); Otitis media (disorder)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "103.4",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "16.6",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "125/77",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__e8282861-e7a9-6044-e067-cb437d114e2a": {
+  "image": "filled__new_patient_registration_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "e8282861-e7a9-6044-e067-cb437d114e2a",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Erich Hilll",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "2022-04-20",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "male",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-182-4163",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "759 Cassin Village Apt 27",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Boston",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "02132",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Never Married",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Humana",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__e8282861-e7a9-6044-e067-cb437d114e2a": {
+  "image": "filled__urgent_care_history_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "e8282861-e7a9-6044-e067-cb437d114e2a",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Hilll",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Erich",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "2022-04-20",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Medication review due (situation); Otitis media (disorder)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "16.6",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Humana",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ },
+ "filled__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6": {
+  "image": "filled__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+  "template_key": "medication_allergy_intake_v1",
+  "patient_id": "e8349fda-1bd2-84a5-d665-cacec40856d6",
+  "fields": [
+   {
+    "field_key": "patient_name",
+    "label": "Patient name",
+    "value": "Shalanda Daniel",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "current_medications",
+    "label": "List all medications you currently take",
+    "value": "None",
+    "bbox": [
+     24,
+     192,
+     630,
+     262
+    ]
+   },
+   {
+    "field_key": "medication_allergies",
+    "label": "Do you have any medication allergies? If yes, list them",
+    "value": "None",
+    "bbox": [
+     24,
+     293,
+     630,
+     363
+    ]
+   },
+   {
+    "field_key": "other_allergies",
+    "label": "Food or environmental allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     394,
+     630,
+     464
+    ]
+   },
+   {
+    "field_key": "conditions",
+    "label": "Current medical conditions",
+    "value": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due (situation); Part-time employment (finding)",
+    "bbox": [
+     24,
+     495,
+     630,
+     565
+    ]
+   },
+   {
+    "field_key": "height_cm",
+    "label": "Height (cm)",
+    "value": "170.3",
+    "bbox": [
+     24,
+     596,
+     632,
+     628
+    ]
+   },
+   {
+    "field_key": "weight_kg",
+    "label": "Weight (kg)",
+    "value": "80.2",
+    "bbox": [
+     24,
+     656,
+     632,
+     688
+    ]
+   },
+   {
+    "field_key": "blood_pressure",
+    "label": "Most recent blood pressure (systolic/diastolic)",
+    "value": "138/86",
+    "bbox": [
+     24,
+     716,
+     632,
+     748
+    ]
+   },
+   {
+    "field_key": "smoking",
+    "label": "Smoking status",
+    "value": "never",
+    "bbox": [
+     24,
+     776,
+     624,
+     802
+    ]
+   }
+  ]
+ },
+ "filled__new_patient_registration_v1__e8349fda-1bd2-84a5-d665-cacec40856d6": {
+  "image": "filled__new_patient_registration_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+  "template_key": "new_patient_registration_v1",
+  "patient_id": "e8349fda-1bd2-84a5-d665-cacec40856d6",
+  "fields": [
+   {
+    "field_key": "full_name",
+    "label": "Full legal name",
+    "value": "Shalanda Daniel",
+    "bbox": [
+     24,
+     132,
+     632,
+     164
+    ]
+   },
+   {
+    "field_key": "date_of_birth",
+    "label": "Date of birth (YYYY-MM-DD)",
+    "value": "1948-01-30",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "sex",
+    "label": "Sex",
+    "value": "female",
+    "bbox": [
+     24,
+     252,
+     624,
+     278
+    ]
+   },
+   {
+    "field_key": "phone",
+    "label": "Phone number",
+    "value": "555-558-7283",
+    "bbox": [
+     24,
+     306,
+     632,
+     338
+    ]
+   },
+   {
+    "field_key": "street",
+    "label": "Street address",
+    "value": "552 Gorczany Course Unit 11",
+    "bbox": [
+     24,
+     366,
+     632,
+     398
+    ]
+   },
+   {
+    "field_key": "city",
+    "label": "City",
+    "value": "Wilmington",
+    "bbox": [
+     24,
+     426,
+     632,
+     458
+    ]
+   },
+   {
+    "field_key": "state",
+    "label": "State",
+    "value": "MA",
+    "bbox": [
+     24,
+     486,
+     632,
+     518
+    ]
+   },
+   {
+    "field_key": "zip",
+    "label": "ZIP code",
+    "value": "01887",
+    "bbox": [
+     24,
+     546,
+     632,
+     578
+    ]
+   },
+   {
+    "field_key": "language",
+    "label": "Preferred language",
+    "value": "English (United States)",
+    "bbox": [
+     24,
+     606,
+     632,
+     638
+    ]
+   },
+   {
+    "field_key": "marital",
+    "label": "Marital status",
+    "value": "Divorced",
+    "bbox": [
+     24,
+     666,
+     632,
+     698
+    ]
+   },
+   {
+    "field_key": "insurance",
+    "label": "Primary insurance company",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     726,
+     632,
+     758
+    ]
+   }
+  ]
+ },
+ "filled__urgent_care_history_v1__e8349fda-1bd2-84a5-d665-cacec40856d6": {
+  "image": "filled__urgent_care_history_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+  "template_key": "urgent_care_history_v1",
+  "patient_id": "e8349fda-1bd2-84a5-d665-cacec40856d6",
+  "fields": [
+   {
+    "field_key": "surname",
+    "label": "Patient surname",
+    "value": "Daniel",
+    "bbox": [
+     24,
+     192,
+     632,
+     224
+    ]
+   },
+   {
+    "field_key": "first",
+    "label": "First name",
+    "value": "Shalanda",
+    "bbox": [
+     24,
+     252,
+     632,
+     284
+    ]
+   },
+   {
+    "field_key": "dob",
+    "label": "Birth date (YYYY-MM-DD)",
+    "value": "1948-01-30",
+    "bbox": [
+     24,
+     312,
+     632,
+     344
+    ]
+   },
+   {
+    "field_key": "meds_now",
+    "label": "Medicines you are taking now",
+    "value": "None",
+    "bbox": [
+     24,
+     372,
+     630,
+     442
+    ]
+   },
+   {
+    "field_key": "drug_allergies",
+    "label": "Drug allergies",
+    "value": "None",
+    "bbox": [
+     24,
+     473,
+     630,
+     543
+    ]
+   },
+   {
+    "field_key": "ongoing",
+    "label": "Ongoing health problems",
+    "value": "Chronic sinusitis (disorder); Received higher education (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Osteoarthritis of hip (disorder); Gingivitis (disorder); Medication review due (situation); Part-time employment (finding)",
+    "bbox": [
+     24,
+     574,
+     630,
+     644
+    ]
+   },
+   {
+    "field_key": "weight_lb",
+    "label": "Weight (lb)",
+    "value": "80.2",
+    "bbox": [
+     24,
+     675,
+     632,
+     707
+    ]
+   },
+   {
+    "field_key": "tobacco",
+    "label": "Tobacco use",
+    "value": "never",
+    "bbox": [
+     24,
+     735,
+     624,
+     761
+    ]
+   },
+   {
+    "field_key": "carrier",
+    "label": "Insurance carrier",
+    "value": "Medicare",
+    "bbox": [
+     24,
+     789,
+     632,
+     821
+    ]
+   },
+   {
+    "field_key": "pregnant",
+    "label": "Are you currently pregnant?",
+    "value": "",
+    "bbox": [
+     24,
+     849,
+     624,
+     875
+    ]
+   }
+  ]
+ }
+}

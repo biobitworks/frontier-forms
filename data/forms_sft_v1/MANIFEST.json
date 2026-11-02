@@ -1,0 +1,17 @@
+{
+  "cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "dataset_id": "FF-FORMS-SFT-V1",
+  "excluded": "test-split patients; urgent_care_history_v1 (held-out layout)",
+  "lane": "frontier-forms",
+  "prompt_version": "sft-prompt-v1",
+  "train": {
+    "examples": 1260,
+    "patients": 63,
+    "sha256": "5bf82e91b6d27d8ffbc7d729f7f96620e3a8b1a4cff16743a3fd81c2ffa3e059"
+  },
+  "validation": {
+    "examples": 380,
+    "patients": 19,
+    "sha256": "cf7b481a271e127e3889a0d519843da9c9d33f3ce13e72b99aaf46b7b7a8ae16"
+  }
+}

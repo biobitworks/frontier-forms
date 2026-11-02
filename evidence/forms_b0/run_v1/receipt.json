@@ -1,0 +1,32 @@
+{
+  "arm": "B0-v1",
+  "code_sha256": {
+    "scripts/import_fhir.py": "68da5f73b0f5ae8464b7a3faaa7e6b31438690bb2f61f37cab62d6e3cbfe053f",
+    "src/frontier_forms/forms/__init__.py": "2db301ed4512a4785e8c5c3f72d1ea95480334bdfa6ef7a773e56bff702e9750",
+    "src/frontier_forms/forms/b0.py": "a56b7e2d71990ef9d2f44470a6aae14128d5a6251bc8a641cb43e30d64f93c54",
+    "src/frontier_forms/forms/cohort.py": "613a7073ec3dfbfc1e899ab11ac3654aeaa8aff9ddfd428938b1220d3e9a2d0a",
+    "src/frontier_forms/forms/harness.py": "212cd626d1fb08c964dbe09f75f43d319d8a6f6ee0b7c6f7a3bf23b48ee9352c",
+    "src/frontier_forms/forms/oracle.py": "504212c8b7b572c7230b390d967e3493fe3b4e0fd4145a666761cec2a4198cc7",
+    "src/frontier_forms/forms/passport.py": "57eaa67591c505d029bfd74d7b3e68158b133b3dccacad2cbe77fd66edf7b56a",
+    "src/frontier_forms/forms/server.py": "93142cf3b3eb48e7f7e77a3323f65f64ba772af9f420e6430a585cfa5fe8647e",
+    "src/frontier_forms/forms/templates.py": "8ac9ac7b5f580a65b42663a6a1314f6e48e6902eb88ccd93919382f9d1366fed",
+    "src/frontier_forms/forms/templates/medication_allergy_intake_v1.json": "acb3075d3b6af1bc94b2dd173c0e6dbc89c045e1a69efa9931590a3db89745ec",
+    "src/frontier_forms/forms/templates/new_patient_registration_v1.json": "dfb0f996355fd41fc1eebc5fbe1fb37a707486d74222d75e78bc102f34690396",
+    "src/frontier_forms/forms/templates/urgent_care_history_v1.json": "2b90dce460a41c456c4b9e9d5a4ddac9b0095d1425682feaf6663e788691e02b"
+  },
+  "cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "hosted_inference": "NONE",
+  "n_cases": 218,
+  "n_patients": 100,
+  "oracle": "oracle-v1",
+  "output_root": "0f9e3a65057940983991fb3bfc932bc658ea722e42f336ba5fdde0917b5d8833",
+  "predictions_sha256": "29e553abbdc0263306eb778d7db6a892b59917a22d555aef6290d530c74a0ba9",
+  "server": "127.0.0.1 ephemeral port, loopback only",
+  "split_counts": {
+    "test": 18,
+    "train": 63,
+    "validation": 19
+  },
+  "summary_sha256": "e26ddfea6157740ecffaabffc5f2928d8fcc5db83397da95c37c7bfeb02dc776",
+  "wall_seconds": 1.91
+}
