@@ -1043,6 +1043,53 @@
       "wrong": 0
     },
     {
+      "arm": "pi+browser-tools",
+      "cached": 263522,
+      "case": "case-06",
+      "correct": 14,
+      "cost_usd": 0.1686285,
+      "evidence_needed": 13,
+      "evidence_valid": 13,
+      "fabricated": 0,
+      "failed": false,
+      "fields": 14,
+      "form": "urgent_care_history",
+      "full_form": true,
+      "input": 39290,
+      "local_receipt_sha256": "65e9be3d7b8114b112262eaec420b67dc57b3769460bb7adcd459e90f98d5d5a",
+      "missed": 0,
+      "model": "qwen3p8-max",
+      "model_calls": 10,
+      "output": 4028,
+      "repeat": 1,
+      "seconds": 87.6,
+      "sensitivity": {
+        "closed": {
+          "correct": 18,
+          "fabricated": 0,
+          "field_accuracy": 0.8182,
+          "fields": 22,
+          "full_form": false,
+          "missed": 4
+        },
+        "open": {
+          "correct": 18,
+          "fabricated": 4,
+          "field_accuracy": 0.8182,
+          "fields": 22,
+          "full_form": false,
+          "missed": 0
+        }
+      },
+      "submitted": false,
+      "timed_out": false,
+      "unknown": 1,
+      "unknown_flagged": 1,
+      "unknown_held": 1,
+      "unsafe": 0,
+      "wrong": 0
+    },
+    {
       "arm": "frontier-tools",
       "cached": 462,
       "case": "case-01",
