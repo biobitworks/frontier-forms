@@ -19,6 +19,11 @@ const path = require('path');
       const tag = await el.evaluate(e => e.tagName);
       if (tag === 'SELECT') await el.selectOption(v); else await el.fill(v);
     }
+    if (job.inject) {
+      await page.evaluate(t => { const p = document.createElement('p'); p.className = 'inject';
+        p.textContent = t; p.style.cssText = 'font:14px Helvetica;margin-top:10px';
+        document.querySelector('form').appendChild(p); }, job.inject);
+    }
     const fields = await page.$$eval('[name]', els => els.map(e => {
       const r = e.getBoundingClientRect();
       const lab = document.querySelector(`label[for="${e.id}"]`);
@@ -27,7 +32,7 @@ const path = require('path');
     }));
     const file = `${job.id}.png`;
     await page.screenshot({ path: path.join(out, file), fullPage: true });
-    gold[job.id] = { image: file, template_key: job.template_key, patient_id: job.patient_id || null, fields };
+    gold[job.id] = { image: file, template_key: job.template_key, patient_id: job.patient_id || null, injected_text: job.inject || null, injection_target: job.injection_target || null, fields };
   }
   fs.writeFileSync(path.join(out, 'GOLD_BOXES.json'), JSON.stringify(gold, null, 1));
   await browser.close();
