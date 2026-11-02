@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Forms Accomplishment Heatmap</title>
+<style>
+:root{
+  --surface:#fcfcfb; --surface-2:#f3f2ef; --border:#dedcd6; --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#77766f;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b; --run:#2a78d6; --todo:#e7e5e0; --na:#f6f5f2;
+  --s0:#f0efec; --s1:#cde2fb; --s2:#9ec5f4; --s3:#6da7ec; --s4:#3987e5; --s5:#256abf; --s6:#184f95;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f;
+  --run:#3987e5; --todo:#33332f; --na:#20201e; --s0:#2a2a27;
+}}
+:root[data-theme="dark"]{
+  --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f;
+  --run:#3987e5; --todo:#33332f; --na:#20201e; --s0:#2a2a27;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:24px;margin:0 0 4px} h2{font-size:18px;margin:32px 0 4px} h3{font-size:15px;margin:22px 0 4px}
+.sub{color:var(--ink-2);margin:0 0 12px}
+.fig{border:1px solid var(--border);border-radius:8px;padding:16px;background:var(--surface);margin-top:12px}
+.figlabel{font-weight:600;color:var(--ink-2);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.caption{color:var(--ink-2);font-size:13px;margin-top:10px;border-top:1px solid var(--border);padding-top:8px}
+.scroll{overflow-x:auto}
+table{border-collapse:separate;border-spacing:2px;width:100%}
+th{font-size:12px;font-weight:600;color:var(--ink-2);text-align:left;padding:4px 6px;vertical-align:bottom}
+td{padding:6px;border-radius:4px;font-size:12.5px;white-space:nowrap}
+td.rowh{background:transparent;white-space:normal;min-width:220px;color:var(--ink)}
+td.rowh small{color:var(--ink-3);display:block}
+td.st{text-align:center;font-weight:600;min-width:96px}
+.st-done{background:color-mix(in srgb,var(--good) 26%,var(--surface))}
+.st-discovery{background:color-mix(in srgb,var(--warn) 34%,var(--surface))}
+.st-negative{background:color-mix(in srgb,var(--serious) 32%,var(--surface))}
+.st-running{background:color-mix(in srgb,var(--run) 22%,var(--surface));outline:2px dashed var(--run);outline-offset:-3px}
+.st-todo{background:var(--todo);color:var(--ink-2);font-weight:500}
+.st-na{background:var(--na);color:var(--ink-3);font-weight:400}
+td.v{text-align:center;min-width:92px;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin:8px 0 4px;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:22px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--border)}
+.ramp{display:inline-flex;border-radius:3px;overflow:hidden;border:1px solid var(--border)}
+.ramp i{width:16px;height:14px;display:block}
+.grade{font-size:11px;color:var(--ink-3)}
+#tip{position:fixed;pointer-events:none;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:12.5px;max-width:340px;box-shadow:0 4px 14px rgba(0,0,0,.15);display:none;z-index:9;white-space:normal}
+.bar{display:flex;gap:8px;align-items:center;justify-content:flex-end}
+button{font:inherit;font-size:12px;border:1px solid var(--border);background:var(--surface-2);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+<div class="bar"><button id="theme" type="button">Toggle light/dark</button></div>
+<h1>Frontier Forms: what was accomplished (status as of 2026-11-02)</h1>
+<p class="sub" id="ceiling"></p>
+<p class="sub">Source: status PR of 2026-11-02 (docs/STATUS_2026-11-02.md). Index of every figure: docs/figures/FIGURES.md. Rebuild: <code>python3 scripts/build_status_figures.py</code>.</p>
+
+<section class="fig" aria-labelledby="f1">
+  <div class="figlabel">Figure 1a</div>
+  <h2 id="f1" style="margin-top:2px">Workstream status by research stage</h2>
+  <p class="sub">Rows: workstreams (merged PR numbers or open task IDs). Columns: the five stages a result must pass before it can be claimed. Hover a row for its key number.</p>
+  <div class="legend" id="legendA"></div>
+  <div class="scroll"><table id="tA"></table></div>
+  <p class="caption" id="capA"></p>
+</section>
+
+<section class="fig" aria-labelledby="f2">
+  <div class="figlabel">Figure 1b</div>
+  <h2 id="f2" style="margin-top:2px">Mechanisms and combinations versus outcomes</h2>
+  <p class="sub">Each panel: rows are mechanisms or combinations on identical cases, columns are outcome metrics (0 to 1). Cell shade encodes how good the value is: darker blue = better, so columns marked "lower better" are shaded by 1 &minus; value. The printed number is always the raw value. Grey cells were not measured or not run; they are never zero.</p>
+  <div class="legend" id="legendB"></div>
+  <div id="panels"></div>
+  <p class="caption" id="capB"></p>
+</section>
+</main>
+<div id="tip" role="tooltip"></div>
+<script>
+const DATA={"schema": "frontier_forms.accomplishment_heatmap.v1", "as_of_utc": "2026-11-02T23:45:00Z", "main_commit": "908b6aa", "claim_ceiling": "Synthetic MITRE Synthea data only; local inference only; no clinical claim. Re-plots committed results; nothing new was run.", "stages": ["Data frozen", "Implemented", "Executed", "Paired stats", "Replicated / new cohort"], "workstreams": [{"name": "Synthea cohort, form server, oracle", "prs": "#10", "states": ["done", "done", "done", "na", "todo"], "note": "100 patients, splits 63/19/18, byte-reproducible. Two oracle rules still need PI sign-off (T02)."}, {"name": "B0 baseline (frozen rule filler)", "prs": "#10 #17", "states": ["done", "done", "done", "na", "todo"], "note": "33.3% full-form success (18/54) on the held-out test split."}, {"name": "FCG harness L1-L3 + LOMO", "prs": "#10 #17 #18 #19", "states": ["done", "done", "done", "discovery", "todo"], "note": "0.333 -> 0.556 (12/0 discordant, p=0.00049). Discovery grade: modules written after B0 errors were seen (T01)."}, {"name": "Injected-error detectors M1-M3", "prs": "#10", "states": ["done", "done", "done", "done", "todo"], "note": "Preregistered: 654 forms, 702 injected errors. M3 source binding recall 0.99; LOMO: no single unique contribution."}, {"name": "Admission-gate factorial (SYNFORM2-ERR)", "prs": "#20 #21", "states": ["done", "done", "done", "discovery", "todo"], "note": "Per-field commitment leaf: detection 0.13 -> 1.00, 0 false admissions. Replication NOT_TESTED."}, {"name": "Fault-injection factorial, 16 arms", "prs": "#12", "states": ["done", "done", "done", "discovery", "todo"], "note": "Seeded faults with known corrections; 100% repair is by design, not a model gain."}, {"name": "OCR arms: Tesseract, Apple Vision/PDFKit", "prs": "#10 #11 #19", "states": ["done", "done", "done", "negative", "todo"], "note": "Tesseract labels 0.967 / values 0.787. Apple A2 read-back loses dropdowns and long lists (p=0.5)."}, {"name": "VLM qwen2.5vl:3b boxes + injection", "prs": "#19 (#29 open)", "states": ["done", "done", "done", "discovery", "todo"], "note": "Box recall 0.821, value read 0.736, 24 s/page. Injection followed 0/18 (V1i on open PR #29)."}, {"name": "Trained box validators (#14 #15 #16)", "prs": "#14 #15 #16", "states": ["done", "done", "done", "negative", "todo"], "note": "No gain over deterministic contour control. D2 recall 0.956 / precision 0.656 is exploratory; no new-layout test."}, {"name": "V2 YOLOv8n detector + OCR value check", "prs": "#19", "states": ["done", "done", "running", "todo", "todo"], "note": "Pipeline merged; run in progress on MacBookPro (T09)."}, {"name": "Qwen text mappers on OCR lines", "prs": "#23", "states": ["done", "done", "done", "negative", "todo"], "note": "Both Qwen mappers below the deterministic parser on identical input (209 and 109 vs 283 of 322 fields)."}, {"name": "Post-training arm M0 / M1 SFT / M2", "prs": "T08", "states": ["done", "done", "running", "todo", "todo"], "note": "Qwen2.5-0.5B LoRA: one epoch-0 val loss (1.005), no adapter saved. Restart on MacBookPro."}, {"name": "Custody: Merkle, Lean 4, red-team replay", "prs": "#3 #8 #11 #13 #20", "states": ["done", "done", "done", "done", "na"], "note": "All roots recomputed independently; 7 custody weaknesses reproduced as tests; forged-custody fix (#8)."}, {"name": "CI, gitleaks, JSON-only publication gate", "prs": "#17 #27 #30 #39 #43", "states": ["na", "done", "done", "na", "na"], "note": "Full-history gitleaks; 123 legacy files pinned by exact blob; new images under data/evidence/experiments rejected."}, {"name": "Prompt-injection filter", "prs": "T04", "states": ["done", "todo", "todo", "todo", "todo"], "note": "Measured (V1i, Tesseract reads the note in 19/57) but no filter exists."}, {"name": "Noisy / scanned renders", "prs": "T03", "states": ["todo", "todo", "todo", "todo", "todo"], "note": "All arms read clean browser renders."}, {"name": "Cost / latency per correct form", "prs": "T05", "states": ["na", "todo", "discovery", "todo", "todo"], "note": "Per-page latency recorded for some arms; no seconds-per-correct-form metric."}, {"name": "Fresh replication cohort", "prs": "T01", "states": ["todo", "todo", "todo", "todo", "todo"], "note": "Needs a preregistered new Synthea seed scored once with frozen arms."}], "panels": [{"title": "Form filling: B0 plus harness modules (54 held-out test forms)", "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (PR #10)", "columns": ["Full-form success", "Field accuracy", "Unsupported answers (lower better)", "Missing-data recall"], "lower_better": [false, false, true, false], "rows": [{"label": "B0", "values": [0.333333, 0.807407, 0.099617, 0.257143], "grade": "baseline"}, {"label": "B0+L1", "values": [0.333333, 0.859259, 0.0, 1.0], "grade": "discovery"}, {"label": "B0+L2", "values": [0.333333, 0.840741, 0.099617, 0.257143], "grade": "discovery"}, {"label": "B0+L3", "values": [0.333333, 0.862963, 0.099617, 0.257143], "grade": "discovery"}, {"label": "B0+L1+L2", "values": [0.333333, 0.892593, 0.0, 1.0], "grade": "discovery"}, {"label": "B0+L1+L3", "values": [0.555556, 0.896296, 0.0, 1.0], "grade": "discovery"}, {"label": "B0+L2+L3", "values": [0.333333, 0.896296, 0.099617, 0.257143], "grade": "discovery"}, {"label": "B0+L1+L2+L3", "values": [0.555556, 0.92963, 0.0, 1.0], "grade": "discovery"}], "note": "L1 evidence abstain, L2 unit validation, L3 clinical filter. Only L1+L3 together move form success (+0.222, p=0.00049). Discovery grade."}, {"title": "Injected-error detectors (preregistered: 654 forms, 702 errors)", "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json (PR #10)", "columns": ["Error recall", "False-flag rate, clean fields (lower better)", "Form sensitivity", "Form specificity"], "lower_better": [false, true, false, false], "rows": [{"label": "none", "values": [0.0, 0.0, 0.0, 1.0], "grade": "baseline"}, {"label": "M1", "values": [0.1624, 0.0, 0.2363, 1.0], "grade": "evidence"}, {"label": "M2", "values": [0.2678, 0.0005, 0.3654, 0.9949], "grade": "evidence"}, {"label": "M3", "values": [0.9886, 0.0407, 0.9978, 0.7056], "grade": "evidence"}, {"label": "M1+M2", "values": [0.4259, 0.0005, 0.5252, 0.9949], "grade": "evidence"}, {"label": "M1+M3", "values": [0.9886, 0.0407, 0.9978, 0.7056], "grade": "evidence"}, {"label": "M2+M3", "values": [0.9886, 0.0412, 0.9978, 0.7005], "grade": "evidence"}, {"label": "M1+M2+M3", "values": [0.9886, 0.0412, 0.9978, 0.7005], "grade": "evidence"}], "note": "M1 Merkle breakpoint, M2 Lean 4 constraints, M3 source binding. Single-leaf edges are attributable; combinations are joint."}, {"title": "Admission-gate factorial (SYNFORM2-ERR: 135 images, 945 field cells)", "source": "evidence/redteam/gate_factorial.json (PRs #20/#21); all 16 rows in docs/architecture/gate_factorial_heatmap.html", "columns": ["Planted-error detection", "False admissions (lower better)", "Coverage", "Selective accuracy"], "lower_better": [false, true, false, false], "rows": [{"label": "none", "values": [0.12962962962962962, 0.10899470899470899, 0.9851851851851852, 0.8893662728249194], "grade": "baseline"}, {"label": "identity", "values": [0.25925925925925924, 0.09312169312169312, 0.8814814814814815, 0.8943577430972389], "grade": "discovery"}, {"label": "rules", "values": [0.5092592592592593, 0.0656084656084656, 0.9407407407407408, 0.9302587176602924], "grade": "discovery"}, {"label": "consistency", "values": [0.3148148148148148, 0.07830687830687831, 0.8507936507936508, 0.9079601990049752], "grade": "discovery"}, {"label": "commitment", "values": [1.0, 0.0, 0.8761904761904762, 1.0], "grade": "discovery"}, {"label": "identity+rules", "values": [0.6388888888888888, 0.04973544973544974, 0.837037037037037, 0.9405815423514539], "grade": "discovery"}, {"label": "rules+consistency", "values": [0.5648148148148148, 0.04973544973544974, 0.8211640211640212, 0.9394329896907216], "grade": "discovery"}, {"label": "rules+commitment", "values": [1.0, 0.0, 0.8751322751322751, 1.0], "grade": "discovery"}, {"label": "identity+rules+commitment+consistency", "values": [1.0, 0.0, 0.6941798941798942, 1.0], "grade": "discovery"}], "note": "Extractor qwen2.5vl:3b; challenger Apple Vision OCR. Commitment = salted per-field hash in the FCG leaf. Replication NOT_TESTED."}, {"title": "Reading the form image (57 synthetic renders, 570 fields)", "source": "evidence/forms_vision/*/summary.json (PR #19); box validators from PRs #14 #15 #16", "columns": ["Value read exactly", "Box recall @IoU 0.5", "Box precision"], "lower_better": [false, false, false], "rows": [{"label": "Tesseract 5.5.3 (T1)", "values": [0.7874, null, null], "grade": "evidence"}, {"label": "qwen2.5vl:3b (V1)", "values": [0.7356, 0.8211, 0.6872], "grade": "evidence"}, {"label": "Contour control (deterministic)", "values": [null, 1.0, 1.0], "grade": "baseline"}, {"label": "Logistic box validator (#14)", "values": [null, 1.0, 1.0], "grade": "negative"}, {"label": "D1 tiny segmenter (#16)", "values": [null, 0.1306, 0.0994], "grade": "negative"}, {"label": "D2 candidate classifier (#16)", "values": [null, 0.9556, 0.6565], "grade": "exploratory"}, {"label": "V2 YOLOv8n + OCR check (#19)", "values": [null, null, null], "grade": "running"}], "note": "Box precision for V1 = matched boxes / (matched + 213 false boxes). #14 and the contour control tie at 540/540 (gain 0). #15 RF F1 0.973 vs control 1.000."}, {"title": "Local models vs deterministic code on identical input", "source": "evidence/redteam/lanes/MAP_*_synform2_test_META.json (PR #23); evidence/baseline/BASELINE_V1.json (PR #17)", "columns": ["Fields correct (SYNFORM2 test, 322)", "Full-form success (54 test forms)"], "lower_better": [false, false], "rows": [{"label": "Geometric parser (deterministic)", "values": [0.8789, null], "grade": "baseline"}, {"label": "qwen2.5:1.5b mapper", "values": [0.6491, null], "grade": "negative"}, {"label": "qwen3:1.7b mapper", "values": [0.3385, null], "grade": "negative"}, {"label": "B0-v1 (frozen rules)", "values": [null, 0.3333], "grade": "baseline"}, {"label": "M0 Qwen2.5-0.5B base", "values": [null, null], "grade": "running"}, {"label": "M1 Qwen2.5-0.5B SFT", "values": [null, null], "grade": "todo"}, {"label": "M1 + harness", "values": [null, null], "grade": "todo"}], "note": "Empty cells are NOT RUN, never zero. The post-training arm is the main missing result (T08)."}], "grades": {"evidence": "Evidence grade: preregistered or independent run, synthetic data", "discovery": "Discovery grade: designed after seeing the test data; needs replication", "baseline": "Baseline / control", "negative": "Negative: no gain over control", "exploratory": "Exploratory: designed after a failure, same layouts", "running": "Running / not yet scored", "todo": "Not run"}};
+const STATE={done:["✓","Done"],discovery:["◐","Discovery grade"],negative:["−","Done, negative result"],running:["◔","Running"],todo:["○","Not started"],na:["—","Not applicable"]};
+const tip=document.getElementById('tip');
+function showTip(e,html){tip.innerHTML=html;tip.style.display='block';const x=Math.min(e.clientX+14,innerWidth-360);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.style.display='none'}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+document.getElementById('ceiling').textContent=DATA.claim_ceiling+' Main at '+DATA.main_commit+'.';
+// legend A
+document.getElementById('legendA').innerHTML=Object.entries(STATE).map(([k,[i,l]])=>`<span><i class="sw st-${k}"></i>${i} ${l}</span>`).join('');
+// table A
+let h='<thead><tr><th>Workstream</th>'+DATA.stages.map(s=>`<th>${esc(s)}</th>`).join('')+'</tr></thead><tbody>';
+DATA.workstreams.forEach((w,ri)=>{h+=`<tr data-r="${ri}"><td class="rowh">${esc(w.name)}<small>${esc(w.prs)}</small></td>`+w.states.map((s,ci)=>`<td class="st st-${s}" data-r="${ri}" data-c="${ci}">${STATE[s][0]} ${STATE[s][1].split(',')[0]}</td>`).join('')+'</tr>'});
+document.getElementById('tA').innerHTML=h+'</tbody>';
+document.getElementById('tA').addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.r===undefined){hideTip();return}const w=DATA.workstreams[+td.dataset.r];const c=td.dataset.c;showTip(e,`<b>${esc(w.name)}</b>${c!==undefined?'<br>'+esc(DATA.stages[c])+': '+STATE[w.states[c]][1]:''}<br>${esc(w.note)}<br><span class="grade">Source: ${esc(w.prs)}</span>`)});
+document.getElementById('tA').addEventListener('mouseleave',hideTip);
+document.getElementById('capA').textContent='Figure 1a. Status of each Frontier Forms workstream across five evidence stages, compiled from merged PRs #3–#43 and open tasks T01–T10 (docs/TASKS.md). "Discovery grade" means the result was produced on data the designers had already seen and must be replicated on a fresh cohort before it can be claimed. Data: docs/figures/accomplishment_heatmap.json.';
+// legend B
+const RAMP=['--s1','--s2','--s3','--s4','--s5','--s6'];
+document.getElementById('legendB').innerHTML='<span>Worse <span class="ramp">'+RAMP.map(v=>`<i style="background:var(${v})"></i>`).join('')+'</span> Better</span><span><i class="sw st-todo"></i>Not measured / not run</span><span><b>Row tags:</b> '+Object.entries(DATA.grades).map(([k,v])=>`${k}`).join(' · ')+' (hover for meaning)</span>';
+function shade(v,lower){if(v===null||v===undefined)return null;let g=lower?1-v:v;g=Math.max(0,Math.min(1,g));return Math.min(5,Math.floor(g*6))}
+const P=document.getElementById('panels');
+DATA.panels.forEach((p,pi)=>{
+  let t=`<h3>${String.fromCharCode(65+pi)}. ${esc(p.title)}</h3><div class="scroll"><table data-p="${pi}"><thead><tr><th>Mechanism / combination</th>`+p.columns.map(c=>`<th>${esc(c)}</th>`).join('')+'</tr></thead><tbody>';
+  p.rows.forEach((r,ri)=>{t+=`<tr><td class="rowh" data-p="${pi}" data-r="${ri}">${esc(r.label)}<small>${esc(r.grade)}</small></td>`+r.values.map((v,ci)=>{const s=shade(v,p.lower_better[ci]);if(s===null)return `<td class="v st-todo" data-p="${pi}" data-r="${ri}" data-c="${ci}">${r.grade==='running'?'running':'not measured'}</td>`;const dark=s>=3;return `<td class="v" data-p="${pi}" data-r="${ri}" data-c="${ci}" style="background:var(${RAMP[s]});color:${dark?'#fff':'var(--ink)'}">${(+v).toFixed(3)}</td>`}).join('')+'</tr>'});
+  t+=`</tbody></table></div><p class="grade">${esc(p.note)} Source: ${esc(p.source)}</p>`;
+  const d=document.createElement('div');d.innerHTML=t;P.appendChild(d);
+});
+P.addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.p===undefined){hideTip();return}const p=DATA.panels[+td.dataset.p],r=p.rows[+td.dataset.r];let s=`<b>${esc(r.label)}</b><br>${esc(DATA.grades[r.grade]||r.grade)}`;if(td.dataset.c!==undefined){const v=r.values[+td.dataset.c];s+=`<br>${esc(p.columns[+td.dataset.c])}: ${v===null?'not measured':(+v).toFixed(4)}`}showTip(e,s+`<br><span class="grade">${esc(p.source)}</span>`)});
+P.addEventListener('mouseleave',hideTip);
+document.getElementById('capB').textContent='Figure 1b. Outcome of every tested mechanism and combination, re-plotted from committed evidence files on main (each panel names its file and PR). Panels A–C are paired on identical synthetic cases; panel D compares image readers on the same 57 renders; panel E compares local Qwen models with deterministic code. All data are synthetic (MITRE Synthea) and all inference was local. Discovery-grade rows are not yet claimable gains.';
+document.getElementById('theme').onclick=()=>{const r=document.documentElement;const cur=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=cur==='dark'?'light':'dark'};
+</script>
+</body>
+</html>
