@@ -7,7 +7,7 @@ const path = require('path');
   const [base, jobsPath, out] = process.argv.slice(2);
   const jobs = JSON.parse(fs.readFileSync(jobsPath, 'utf8'));
   fs.mkdirSync(out, { recursive: true });
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.PW_EXECUTABLE ? { executablePath: process.env.PW_EXECUTABLE } : {});
   const page = await browser.newPage({ viewport: { width: 900, height: 1100 }, deviceScaleFactor: 1 });
   await page.addStyleTag({ content: '' }).catch(() => {});
   const gold = {};
