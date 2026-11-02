@@ -3,8 +3,7 @@
 
 Backends:
   ollama    : local VLM (e.g. qwen2.5vl:3b) with image input, JSON output, temperature 0
-  fireworks : OpenAI-compatible Fireworks vision endpoint; refuses unless FIREWORKS_API_KEY is in the
-              environment (never passed on the command line) -> otherwise BLOCKED record
+  (Fireworks removed: out of scope per Byron 2026-11-02, comparisons are local Qwen models only)
   tesseract : classical OCR with native word boxes + template matching (no LLM weights)
 Arms (model-call level):
   V0_plain            clean form, field list only
@@ -85,27 +84,6 @@ class Ollama:
         return r["message"]["content"], r.get("prompt_eval_count"), r.get("eval_count")
 
 
-class Fireworks:
-    def __init__(self, model):
-        self.model = model
-        self.key = os.environ.get("FIREWORKS_API_KEY")
-        self.digest = "PROVIDER_MANAGED_" + model
-        self.runtime = "fireworks serverless"
-        if not self.key:
-            raise RuntimeError("BLOCKED_NO_FIREWORKS_API_KEY")
-
-    def run(self, png: bytes, text: str):
-        body = {"model": self.model, "temperature": 0, "max_tokens": 900, "response_format": {"type": "json_object"},
-                "messages": [{"role": "user", "content": [
-                    {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(png).decode()}},
-                    {"type": "text", "text": text}]}]}
-        req = urllib.request.Request("https://api.fireworks.ai/inference/v1/chat/completions", data=json.dumps(body).encode(),
-                                     headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.key})
-        r = json.load(urllib.request.urlopen(req, timeout=300))
-        u = r.get("usage", {})
-        return r["choices"][0]["message"]["content"], u.get("prompt_tokens"), u.get("completion_tokens")
-
-
 class Tesseract:
     """Word boxes from tesseract TSV; value = words right of VALUE_X-20 inside the field's row band."""
     def __init__(self, layout):
@@ -140,7 +118,7 @@ class Tesseract:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", type=Path, required=True)
-    ap.add_argument("--backend", choices=["ollama", "fireworks", "tesseract"], required=True)
+    ap.add_argument("--backend", choices=["ollama", "tesseract"], required=True)
     ap.add_argument("--model", default="")
     ap.add_argument("--lane", required=True)
     ap.add_argument("--out", type=Path, required=True)
@@ -148,8 +126,7 @@ def main() -> int:
     a = ap.parse_args()
     layout = json.loads((a.data / "layout.json").read_text())
     gts = [json.loads(x) for x in (a.data / "ground_truth.jsonl").read_text().splitlines()]
-    be = {"ollama": lambda: Ollama(a.model), "fireworks": lambda: Fireworks(a.model),
-          "tesseract": lambda: Tesseract(layout)}[a.backend]()
+    be = {"ollama": lambda: Ollama(a.model), "tesseract": lambda: Tesseract(layout)}[a.backend]()
     done = set()
     if a.out.exists():
         done = {(r["arm"], r["case_id"]) for r in map(json.loads, a.out.read_text().splitlines())}
