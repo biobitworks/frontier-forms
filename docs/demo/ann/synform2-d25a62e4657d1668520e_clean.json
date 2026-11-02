@@ -9,7 +9,15 @@
    "Synthetic case": "synform2-d25a62e4657d1668520e",
    "Visit class": "wellness"
   },
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "Gender",
+   "Patient first": "Champlin",
+   "Patient last": "946",
+   "Synthetic case": "Asha251",
+   "Visit class": "wellness"
+  },
   "qwen2.5vl:3b": {
    "Birth date": "1970-02-22",
    "Encounter date": "2016-03-13",
@@ -19,7 +27,15 @@
    "Synthetic case": "synform2-d25a62e4657d1668520e",
    "Visit class": "wellness"
   },
-  "qwen3:1.7b": null
+  "qwen3:1.7b": {
+   "Birth date": "Birth date:",
+   "Encounter date": "Encounter date:",
+   "Gender": "Gender:",
+   "Patient first": "Patient first:",
+   "Patient last": "Patient last:",
+   "Synthetic case": "Synthetic case:",
+   "Visit class": "Visit class:"
+  }
  },
  "dataset": "synform2",
  "detector_boxes": [
@@ -191,7 +207,7 @@
  },
  "id": "synform2-d25a62e4657d1668520e_clean",
  "image": "img/synform2-d25a62e4657d1668520e_clean.png",
- "input_fco_id": "fco:e0cc9b321398ef008bf186c03a55594d405f0dfb285b097b63844f71412361d3",
+ "input_fco_id": "fco:ccc64f9c0d3fbe758910b21d266c50e1fbbfd116418ce69bf21b6dbcffc7a086",
  "ocr_boxes": [
   {
    "box": [

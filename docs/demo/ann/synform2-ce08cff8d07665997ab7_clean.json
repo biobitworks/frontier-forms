@@ -9,7 +9,15 @@
    "Synthetic case": "synform2-ce08cff8d07665997ab7",
    "Visit class": "outpatient"
   },
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "Male",
+   "Patient first": "Paucek755",
+   "Patient last": "Paucek755",
+   "Synthetic case": "Cleo27",
+   "Visit class": "outpatient"
+  },
   "qwen2.5vl:3b": {
    "Birth date": "2001-03-31",
    "Encounter date": "2020-09-26",
@@ -19,7 +27,15 @@
    "Synthetic case": "synform2-ce08cff8d07665997ab7",
    "Visit class": "outpatient"
   },
-  "qwen3:1.7b": null
+  "qwen3:1.7b": {
+   "Birth date": "Birth date:",
+   "Encounter date": "Encounter date:",
+   "Gender": "Gender:",
+   "Patient first": "Patient first:",
+   "Patient last": "Patient last:",
+   "Synthetic case": "Synthetic case:",
+   "Visit class": "Visit class:"
+  }
  },
  "dataset": "synform2",
  "detector_boxes": [
@@ -191,7 +207,7 @@
  },
  "id": "synform2-ce08cff8d07665997ab7_clean",
  "image": "img/synform2-ce08cff8d07665997ab7_clean.png",
- "input_fco_id": "fco:0675cb2bf676285ef873ca880751f8af14a7db6d0f24b8584dcf6283540b4b59",
+ "input_fco_id": "fco:5f4af7f815279f5d2f63fac04d8bf02a6df15b9211195529b963f6aa1842b1c4",
  "ocr_boxes": [
   {
    "box": [

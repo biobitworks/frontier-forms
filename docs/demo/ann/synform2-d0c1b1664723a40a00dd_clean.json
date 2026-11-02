@@ -9,7 +9,15 @@
    "Synthetic case": "synform2-dOc 1b1664723a40a00dd",
    "Visit class": "ambulatory"
   },
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": {
+   "Birth date": "1963-07-21",
+   "Encounter date": "1988-10-16",
+   "Gender": "M",
+   "Patient first": "Stephan",
+   "Patient last": "Emmerich580",
+   "Synthetic case": "Emmerich580",
+   "Visit class": "ambulatory"
+  },
   "qwen2.5vl:3b": {
    "Birth date": "1963-07-21",
    "Encounter date": "1988-10-16",
@@ -19,7 +27,15 @@
    "Synthetic case": "synform2-d0c1b1664723a40a00dd",
    "Visit class": "ambulatory"
   },
-  "qwen3:1.7b": null
+  "qwen3:1.7b": {
+   "Birth date": "Birth date:",
+   "Encounter date": "Encounter date:",
+   "Gender": "Gender:",
+   "Patient first": "Patient first:",
+   "Patient last": "Patient last:",
+   "Synthetic case": "Synthetic case:",
+   "Visit class": "Visit class:"
+  }
  },
  "dataset": "synform2",
  "detector_boxes": [
@@ -191,7 +207,7 @@
  },
  "id": "synform2-d0c1b1664723a40a00dd_clean",
  "image": "img/synform2-d0c1b1664723a40a00dd_clean.png",
- "input_fco_id": "fco:7d7d7259ac92e165c7b4dca8b35e13c5a2e6babeb23da6d2a4c2973908cc0ee7",
+ "input_fco_id": "fco:90b11483feada0149bdf07385b19eefd0d9c65556c03921f2df36709d31b7c6f",
  "ocr_boxes": [
   {
    "box": [

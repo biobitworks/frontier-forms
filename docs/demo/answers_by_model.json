@@ -25,9 +25,9 @@
  },
  "synform2-ce08cff8d07665997ab7_clean": {
   "apple_vision_parser": 6,
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": 4,
   "qwen2.5vl:3b": 7,
-  "qwen3:1.7b": null
+  "qwen3:1.7b": 0
  },
  "synform2-ce08cff8d07665997ab7_scan": {
   "apple_vision_parser": 7,
@@ -37,9 +37,9 @@
  },
  "synform2-d0c1b1664723a40a00dd_clean": {
   "apple_vision_parser": 5,
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": 5,
   "qwen2.5vl:3b": 7,
-  "qwen3:1.7b": null
+  "qwen3:1.7b": 0
  },
  "synform2-d0c1b1664723a40a00dd_scan": {
   "apple_vision_parser": 5,
@@ -49,9 +49,9 @@
  },
  "synform2-d25a62e4657d1668520e_clean": {
   "apple_vision_parser": 6,
-  "qwen2.5:1.5b": null,
+  "qwen2.5:1.5b": 3,
   "qwen2.5vl:3b": 7,
-  "qwen3:1.7b": null
+  "qwen3:1.7b": 0
  },
  "synform2-d25a62e4657d1668520e_scan": {
   "apple_vision_parser": 6,
