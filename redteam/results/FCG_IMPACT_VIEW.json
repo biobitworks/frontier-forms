@@ -1,0 +1,98 @@
+{
+  "arm10_changed_source_version": {
+    "declared_downstream_via_fcg_edges": [
+      {
+        "from": "datasets/longebench/mini/eval-00000-of-00001.parquet",
+        "relation": "DERIVED_TO",
+        "to": "custody/snapshots/LN-MINI-ec719d04c3707ca1cb/manifest.json"
+      }
+    ],
+    "earliest_changed_leaf": {
+      "index": 1,
+      "path": "datasets/longebench/mini/eval-00000-of-00001.parquet"
+    },
+    "finding": "impact view under-reports: discovery outputs, split manifest and statistics consume the parquet but FCG_EDGES declares only parquet->snapshot manifest; a source revision would not be propagated to them by graph traversal",
+    "outputs_that_depend_on_source_but_have_no_declared_edge": [
+      "eval/lb_mini_discovery_lfm2-1.2b-longevity-q4km_latest.jsonl",
+      "eval/insilico_qwen3_06b_discovery_attempt3.jsonl",
+      "eval/paired_discovery_mcnemar_bootstrap.json",
+      "eval/longebench_split_manifest.json"
+    ],
+    "predecessor_root_retained": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+    "simulated_successor_root": "83af1baa845005a939a7b03e24f6a4cdf656aa3a4411f34dd8c13627516b2466",
+    "successor_root_status": "SIMULATED_IN_MEMORY_NOT_A_FREEZE"
+  },
+  "chain": [
+    {
+      "child": "37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7",
+      "child_leaves": 65,
+      "comparable": "NO_DIFFERENT_LEAF_SCHEMA",
+      "parent": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a",
+      "parent_leaves": 15
+    },
+    {
+      "added": 1,
+      "added_paths": [
+        "evidence/receipts/review_verifier_mismatch.json"
+      ],
+      "child": "513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730",
+      "child_leaves": 66,
+      "comparable": "YES",
+      "earliest_changed_index": 0,
+      "earliest_changed_path": ".github/workflows/verify.yml",
+      "modified": 4,
+      "modified_paths": [
+        ".github/workflows/verify.yml",
+        "experiments/LAB_NOTEBOOK.md",
+        "scripts/freeze_review_export.py",
+        "scripts/verify_review_export.py"
+      ],
+      "parent": "37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7",
+      "parent_leaves": 65,
+      "removed": 0,
+      "removed_paths": []
+    },
+    {
+      "added": 13,
+      "added_paths": [
+        "docs/protocols/SUPABASE_SOURCE_CONTRACT.md",
+        "evidence/notebook_runs_v4/00_fco_merkle_replay_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/01_paired_mcnemar_bootstrap_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/02_classification_auroc_fpr_fdr_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/03_lomo_harness_ablation_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/04_synthea_to_fhir_contract_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/05_fireworks_pricing_roi_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/06_lean_gsd_gsigmad_admission_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/07_supabase_source_gate_EXECUTED.ipynb",
+        "evidence/notebook_runs_v4/execution_manifest.json",
+        "evidence/sources/supabase_source_intake.json",
+        "notebooks/07_supabase_source_gate.ipynb",
+        "tests/test_supabase_intake.py"
+      ],
+      "child": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "child_leaves": 79,
+      "comparable": "YES",
+      "earliest_changed_index": 4,
+      "earliest_changed_path": "README.md",
+      "modified": 7,
+      "modified_paths": [
+        "README.md",
+        "docs/reviews/CLAUDE_HANDOFF.md",
+        "experiments/LAB_NOTEBOOK.md",
+        "scripts/build_notebooks.py",
+        "scripts/execute_notebooks.py",
+        "scripts/freeze_review_export.py",
+        "scripts/verify_review_export.py"
+      ],
+      "parent": "513cb1f8e83d0eae653c94000552fa6680b37827bcc8100af35fed3fc7d0f730",
+      "parent_leaves": 66,
+      "removed": 0,
+      "removed_paths": []
+    }
+  ],
+  "dangling_edge_targets": [
+    "DGX",
+    "biobitworks/frontier-forms"
+  ],
+  "schema": "claude.redteam.fcg_impact_view.v1"
+}
