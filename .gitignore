@@ -2,3 +2,14 @@
 .env.local
 .venv/
 __pycache__/
+.DS_Store
+node_modules/
+
+# Local benchmark records, hidden oracles, rendered fixtures and agent transcripts.
+/bench/harness/data/
+/bench/site/
+/bench/logs/
+/bench/results/
+/bench/*.log
+/bench/results*.jsonl
+!/bench/results_ablation.jsonl
