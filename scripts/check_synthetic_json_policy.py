@@ -12,6 +12,7 @@ import subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+PRE_POLICY_MAIN="2c89dd45870ec093e2c72319ec231aebda268510"
 RESTRICTED_DIRS=("data/","evidence/","experiments/")
 BINARY={".png",".jpg",".jpeg",".webp",".gif",".pdf",".pt",".pth",".safetensors",".ckpt",".onnx",".bin",".zip",".parquet"}
 PUBLIC_DATA_ALLOWED={".json"}
@@ -43,10 +44,46 @@ def provenance_issues(root=ROOT):
         issues.append({"path":str(p),"rule":"MISSING_PINNED_GENERATOR"})
     return issues
 
+def git_blobs(ref,root=ROOT):
+    """Return Git blob identities for a commit or the index."""
+    cmd=["git","ls-files","-s","-z"] if ref=="INDEX" else ["git","ls-tree","-r","-z",ref]
+    raw=subprocess.check_output(cmd,cwd=root)
+    result={}
+    for item in raw.split(bytes([0])):
+        if not item:continue
+        meta,path=item.split(bytes([9]),1)
+        parts=meta.decode().split()
+        if ref=="INDEX":
+            if parts[-1]!="0":raise AssertionError("STAGED_CONFLICT")
+            sha=parts[1]
+        else:
+            if parts[1]!="blob":continue
+            sha=parts[2]
+        result[path.decode()]=sha
+    return result
+
+def incremental_violations(current,baseline):
+    """Reject every new/modified disallowed file; keep identical legacy blobs only."""
+    bad=[];legacy=[]
+    for item in violations(sorted(current)):
+        name=item["path"]
+        if baseline.get(name)==current.get(name):
+            legacy.append({"path":name,"state":"LEGACY_UNCHANGED"})
+        else:
+            bad.append({**item,"state":"NEW_OR_CHANGED_REJECTED"})
+    return bad,legacy
+
 def main():
-    names=[s.decode() for s in subprocess.check_output(["git","ls-files","-z"],cwd=ROOT).split(bytes([0])) if s]
-    problems=violations(names)+provenance_issues()
-    print(json.dumps({"gate":"synthetic-json-only","files_checked":len(names),"status":"FAIL" if problems else "PASS","violations":problems},indent=2))
+    current=git_blobs("INDEX")
+    baseline=git_blobs(PRE_POLICY_MAIN)
+    problems,legacy=incremental_violations(current,baseline)
+    problems.extend(provenance_issues())
+    print(json.dumps({"gate":"synthetic-json-only-successor",
+       "pre_policy_main_commit":PRE_POLICY_MAIN,
+       "files_checked":len(current),
+       "legacy_unchanged_noncompliant":len(legacy),
+       "status":"FAIL" if problems else "PASS",
+       "violations":problems},indent=2))
     return 1 if problems else 0
 
 if __name__=="__main__":

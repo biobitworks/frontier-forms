@@ -17,7 +17,11 @@ try:  # scipy is optional at import time so the module can still report NOT_COMP
     from scipy.stats import binomtest as _binomtest
 except Exception:  # pragma: no cover
     _binomtest = None
-import numpy as np
+try:  # numpy is optional: CI runs on a bare interpreter; a seeded pure-Python bootstrap is used instead
+    import numpy as np
+except Exception:  # pragma: no cover
+    np = None
+import random as _random
 
 
 def exact_mcnemar_p(b: int, c: int) -> float:
@@ -46,18 +50,25 @@ def stratified_paired_bootstrap(base: Dict[str, bool], chal: Dict[str, bool], st
     """Resample cases within each stratum with replacement; statistic = mean(chal - base). Percentile CI."""
     if set(base) != set(chal) or not base:
         raise ValueError('UNPAIRED_OR_EMPTY')
-    rng = np.random.default_rng(seed)
     groups = defaultdict(list)
     for k in sorted(base):
         groups[strata[k]].append(int(chal[k]) - int(base[k]))
-    arrays = [np.array(v) for v in groups.values()]
     n = len(base)
-    sums = np.zeros(reps)
-    for arr in arrays:
-        idx = rng.integers(0, len(arr), size=(reps, len(arr)))
-        sums += arr[idx].sum(axis=1)
-    deltas = np.sort(sums / n)
-    lo, hi = np.quantile(deltas, [alpha / 2, 1 - alpha / 2])
+    if np is not None:
+        rng = np.random.default_rng(seed)
+        sums = np.zeros(reps)
+        for arr in (np.array(v) for v in groups.values()):
+            idx = rng.integers(0, len(arr), size=(reps, len(arr)))
+            sums += arr[idx].sum(axis=1)
+        deltas = np.sort(sums / n)
+        lo, hi = np.quantile(deltas, [alpha / 2, 1 - alpha / 2])
+    else:
+        rng = _random.Random(seed)
+        deltas = sorted(sum(sum(rng.choice(v) for _ in v) for v in groups.values()) / n for _ in range(reps))
+        def q(x):  # linear-interpolated quantile, same convention as numpy's default
+            j = (len(deltas) - 1) * x; i = int(j); f = j - i
+            return deltas[i] + (deltas[min(i + 1, len(deltas) - 1)] - deltas[i]) * f
+        lo, hi = q(alpha / 2), q(1 - alpha / 2)
     return [float(lo), float(hi)]
 
 
