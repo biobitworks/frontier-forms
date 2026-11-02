@@ -1,0 +1,356 @@
+{
+ "answers": {
+  "apple_vision_parser": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": null,
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "synform2-d25a62e4657d1668520e",
+   "Visit class": "wellness"
+  },
+  "qwen2.5:1.5b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "Gender",
+   "Patient first": "Champlin",
+   "Patient last": "946",
+   "Synthetic case": "Asha251",
+   "Visit class": "wellness"
+  },
+  "qwen2.5vl:3b": {
+   "Birth date": "1970-02-22",
+   "Encounter date": "2016-03-13",
+   "Gender": "F",
+   "Patient first": "Asha251",
+   "Patient last": "Champlin946",
+   "Synthetic case": "synform2-d25a62e4657d1668520e",
+   "Visit class": "wellness"
+  },
+  "qwen3:1.7b": {
+   "Birth date": "Birth date:",
+   "Encounter date": "Encounter date:",
+   "Gender": "Gender:",
+   "Patient first": "Patient first:",
+   "Patient last": "Patient last:",
+   "Synthetic case": "Synthetic case:",
+   "Visit class": "Visit class:"
+  }
+ },
+ "dataset": "synform2",
+ "detector_boxes": [
+  {
+   "box": [
+    289.7418518066406,
+    405.5252380371094,
+    381.9678955078125,
+    417.4330139160156
+   ],
+   "class": "value:Encounter date",
+   "conf": 0.9481285214424133
+  },
+  {
+   "box": [
+    288.7143859863281,
+    229.80828857421875,
+    395.8434753417969,
+    244.68350219726562
+   ],
+   "class": "value:Patient last",
+   "conf": 0.8832007646560669
+  },
+  {
+   "box": [
+    290.2272033691406,
+    347.68804931640625,
+    300.46624755859375,
+    360.17413330078125
+   ],
+   "class": "value:Gender",
+   "conf": 0.8413161635398865
+  },
+  {
+   "box": [
+    288.1167907714844,
+    463.2301025390625,
+    359.4081115722656,
+    477.51531982421875
+   ],
+   "class": "value:Visit class",
+   "conf": 0.8335379362106323
+  },
+  {
+   "box": [
+    290.52069091796875,
+    288.5926818847656,
+    381.5091552734375,
+    302.17303466796875
+   ],
+   "class": "value:Birth date",
+   "conf": 0.7551497220993042
+  },
+  {
+   "box": [
+    288.8478088378906,
+    172.566162109375,
+    360.0939636230469,
+    186.00186157226562
+   ],
+   "class": "value:Patient first",
+   "conf": 0.7541876435279846
+  },
+  {
+   "box": [
+    291.29022216796875,
+    114.22329711914062,
+    574.4314575195312,
+    133.93836975097656
+   ],
+   "class": "value:Synthetic case",
+   "conf": 0.7419652938842773
+  }
+ ],
+ "fields": {
+  "Birth date": {
+   "ocr": "1970-02-22",
+   "printed": "1970-02-22",
+   "validation": "OK",
+   "vlm": "1970-02-22",
+   "vlm_correct_vs_printed": true
+  },
+  "Encounter date": {
+   "ocr": "2016-03-13",
+   "printed": "2016-03-13",
+   "validation": "OK",
+   "vlm": "2016-03-13",
+   "vlm_correct_vs_printed": true
+  },
+  "Gender": {
+   "ocr": null,
+   "printed": "F",
+   "validation": "OK",
+   "vlm": "F",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient first": {
+   "ocr": "Asha251",
+   "printed": "Asha251",
+   "validation": "OK",
+   "vlm": "Asha251",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient last": {
+   "ocr": "Champlin946",
+   "printed": "Champlin946",
+   "validation": "OK",
+   "vlm": "Champlin946",
+   "vlm_correct_vs_printed": true
+  },
+  "Synthetic case": {
+   "ocr": "synform2-d25a62e4657d1668520e",
+   "printed": "synform2-d25a62e4657d1668520e",
+   "validation": "OK",
+   "vlm": "synform2-d25a62e4657d1668520e",
+   "vlm_correct_vs_printed": true
+  },
+  "Visit class": {
+   "ocr": "wellness",
+   "printed": "wellness",
+   "validation": "OK",
+   "vlm": "wellness",
+   "vlm_correct_vs_printed": true
+  }
+ },
+ "gt_boxes": {
+  "Birth date": [
+   290,
+   289,
+   382,
+   302
+  ],
+  "Encounter date": [
+   290,
+   405,
+   382,
+   418
+  ],
+  "Gender": [
+   290,
+   347,
+   301,
+   360
+  ],
+  "Patient first": [
+   290,
+   173,
+   361,
+   186
+  ],
+  "Patient last": [
+   290,
+   230,
+   397,
+   248
+  ],
+  "Synthetic case": [
+   290,
+   114,
+   575,
+   132
+  ],
+  "Visit class": [
+   290,
+   463,
+   360,
+   476
+  ]
+ },
+ "id": "synform2-d25a62e4657d1668520e_clean",
+ "image": "img/synform2-d25a62e4657d1668520e_clean.png",
+ "input_fco_id": "fco:ccc64f9c0d3fbe758910b21d266c50e1fbbfd116418ce69bf21b6dbcffc7a086",
+ "ocr_boxes": [
+  {
+   "box": [
+    51.99999705000005,
+    43.99999978333332,
+    429.99999705000005,
+    69.99999978333335
+   ],
+   "conf": 1,
+   "text": "SYNTHETIC ENCOUNTER INTAKE - NOT CLINICAL"
+  },
+  {
+   "box": [
+    55.92783339944832,
+    109.6227759998819,
+    190.07216628519052,
+    136.37722393689359
+   ],
+   "conf": 1,
+   "text": "Synthetic case:"
+  },
+  {
+   "box": [
+    55.99999986842104,
+    167.999999968421,
+    163.99999986842104,
+    191.99999996842104
+   ],
+   "conf": 1,
+   "text": "Patient first:"
+  },
+  {
+   "box": [
+    55.92369068436119,
+    225.65834710326803,
+    162.07630909256432,
+    250.34165284362447
+   ],
+   "conf": 1,
+   "text": "Patient last:"
+  },
+  {
+   "box": [
+    55.96084581301449,
+    283.845712623802,
+    150.03915391848324,
+    308.15428634664136
+   ],
+   "conf": 1,
+   "text": "Birth date:"
+  },
+  {
+   "box": [
+    57.938484092083684,
+    341.8193797696389,
+    128.06151570829462,
+    366.1806201566018
+   ],
+   "conf": 1,
+   "text": "Gender:"
+  },
+  {
+   "box": [
+    57.99999988833335,
+    399.99999998,
+    195.99999988833335,
+    423.99999998
+   ],
+   "conf": 1,
+   "text": "Encounter date:"
+  },
+  {
+   "box": [
+    57.97459016409371,
+    457.9022187808724,
+    150.02540956106637,
+    482.0977811435432
+   ],
+   "conf": 1,
+   "text": "Visit class:"
+  },
+  {
+   "box": [
+    287.6700108626475,
+    106.54001617200922,
+    578.2123387435068,
+    136.28200530775138
+   ],
+   "conf": 1,
+   "text": "synform2-d25a62e4657d1668520e"
+  },
+  {
+   "box": [
+    287.99999993333336,
+    167.99999994285716,
+    363.99999993333336,
+    191.99999994285713
+   ],
+   "conf": 1,
+   "text": "Asha251"
+  },
+  {
+   "box": [
+    285.99999920000005,
+    223.99999974000002,
+    401.99999920000005,
+    249.99999973999996
+   ],
+   "conf": 1,
+   "text": "Champlin946"
+  },
+  {
+   "box": [
+    287.9254950475031,
+    283.6920442263148,
+    386.07450475209293,
+    308.30795571007945
+   ],
+   "conf": 1,
+   "text": "1970-02-22"
+  },
+  {
+   "box": [
+    287.87794485790164,
+    399.4914521894476,
+    386.1220549653235,
+    424.5085477552435
+   ],
+   "conf": 1,
+   "text": "2016-03-13"
+  },
+  {
+   "box": [
+    285.9734991683679,
+    457.9135865723591,
+    364.0265005721765,
+    482.0864133393269
+   ],
+   "conf": 1,
+   "text": "wellness"
+  }
+ ],
+ "subtitle": "case synform2-d25a62e4657d1668520e \u00b7 input FCO fco:ccc64f9c0d3fbe75\u2026 \u00b7 png sha256 3f9ba19a67c8621c\u2026",
+ "title": "SYNFORM2 test \u00b7 clean",
+ "vlm_available": true
+}

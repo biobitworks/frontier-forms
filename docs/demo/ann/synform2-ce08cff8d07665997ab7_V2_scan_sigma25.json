@@ -1,0 +1,330 @@
+{
+ "answers": {
+  "apple_vision_parser": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": null,
+   "Patient first": "Cleo27",
+   "Patient last": "Paucek755",
+   "Synthetic case": "synform2-ce08cff8d07665997ab7",
+   "Visit class": "outpatient"
+  },
+  "qwen2.5:1.5b": null,
+  "qwen2.5vl:3b": {
+   "Birth date": "2001-03-31",
+   "Encounter date": "2020-09-26",
+   "Gender": "F",
+   "Patient first": "Cleo27",
+   "Patient last": "Paucek755",
+   "Synthetic case": "synform2-ce08cff8d07665997ab7",
+   "Visit class": "outpatient"
+  },
+  "qwen3:1.7b": null
+ },
+ "dataset": "synform2_err",
+ "detector_boxes": [
+  {
+   "box": [
+    290.3021545410156,
+    173.72900390625,
+    348.61602783203125,
+    189.23231506347656
+   ],
+   "class": "value:Patient first",
+   "conf": 0.8498646020889282
+  },
+  {
+   "box": [
+    290.2862854003906,
+    231.8252410888672,
+    378.5274353027344,
+    246.1574249267578
+   ],
+   "class": "value:Patient last",
+   "conf": 0.568168044090271
+  },
+  {
+   "box": [
+    289.3829650878906,
+    404.6352844238281,
+    383.3158874511719,
+    418.685546875
+   ],
+   "class": "value:Encounter date",
+   "conf": 0.5060750842094421
+  },
+  {
+   "box": [
+    287.00592041015625,
+    113.732666015625,
+    595.31591796875,
+    135.98524475097656
+   ],
+   "class": "value:Synthetic case",
+   "conf": 0.3118029832839966
+  },
+  {
+   "box": [
+    297.06036376953125,
+    462.53125,
+    381.5814208984375,
+    478.146484375
+   ],
+   "class": "value:Encounter date",
+   "conf": 0.26722288131713867
+  },
+  {
+   "box": [
+    289.6404113769531,
+    289.374267578125,
+    380.61553955078125,
+    304.3916015625
+   ],
+   "class": "value:Patient last",
+   "conf": 0.25146976113319397
+  }
+ ],
+ "fields": {
+  "Birth date": {
+   "ocr": "2001-03-31",
+   "printed": "2001-03-31",
+   "validation": "OK",
+   "vlm": "2001-03-31",
+   "vlm_correct_vs_printed": true
+  },
+  "Encounter date": {
+   "ocr": "2020-09-26",
+   "printed": "2020-09-26",
+   "validation": "OK",
+   "vlm": "2020-09-26",
+   "vlm_correct_vs_printed": true
+  },
+  "Gender": {
+   "ocr": null,
+   "printed": "F",
+   "validation": "OK",
+   "vlm": "F",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient first": {
+   "ocr": "Cleo27",
+   "printed": "Cleo27",
+   "validation": "OK",
+   "vlm": "Cleo27",
+   "vlm_correct_vs_printed": true
+  },
+  "Patient last": {
+   "ocr": "Paucek755",
+   "printed": "Paucek755",
+   "validation": "OK",
+   "vlm": "Paucek755",
+   "vlm_correct_vs_printed": true
+  },
+  "Synthetic case": {
+   "ocr": "synform2-ce08cff8d07665997ab7",
+   "printed": "synform2-ce08cff8d07665997ab7",
+   "validation": "OK",
+   "vlm": "synform2-ce08cff8d07665997ab7",
+   "vlm_correct_vs_printed": true
+  },
+  "Visit class": {
+   "ocr": "outpatient",
+   "printed": "outpatient",
+   "validation": "OK",
+   "vlm": "outpatient",
+   "vlm_correct_vs_printed": true
+  }
+ },
+ "gt_boxes": {
+  "Birth date": [
+   290,
+   289,
+   382,
+   302
+  ],
+  "Encounter date": [
+   290,
+   405,
+   382,
+   418
+  ],
+  "Gender": [
+   290,
+   347,
+   301,
+   360
+  ],
+  "Patient first": [
+   290,
+   173,
+   348,
+   186
+  ],
+  "Patient last": [
+   290,
+   231,
+   380,
+   244
+  ],
+  "Synthetic case": [
+   290,
+   114,
+   569,
+   132
+  ],
+  "Visit class": [
+   290,
+   462,
+   377,
+   480
+  ]
+ },
+ "id": "synform2-ce08cff8d07665997ab7_V2_scan_sigma25",
+ "image": "img/synform2-ce08cff8d07665997ab7_V2_scan_sigma25.png",
+ "input_fco_id": "fco:436106748138e51110d0f69385eedd29dd4d4cce589920544cdfa166ac0b4ad9",
+ "ocr_boxes": [
+  {
+   "box": [
+    49.810328091437924,
+    50.43615384193869,
+    422.2018075836254,
+    72.51240773292986
+   ],
+   "conf": 1,
+   "text": "SYNTHETIC ENCOUNTER INTAKE - NOT CLINICAL"
+  },
+  {
+   "box": [
+    55.99999980625,
+    117.99999996875,
+    183.99999980625,
+    137.99999996875
+   ],
+   "conf": 1,
+   "text": "Synthetic case:"
+  },
+  {
+   "box": [
+    283.619054453763,
+    108.4202772430759,
+    568.3558403424349,
+    136.4374166778904
+   ],
+   "conf": 1,
+   "text": "synform2-ce08cff8d07665997ab7"
+  },
+  {
+   "box": [
+    55.999999897916666,
+    175.99999998125003,
+    157.99999989791667,
+    193.99999998124994
+   ],
+   "conf": 1,
+   "text": "Patient first:"
+  },
+  {
+   "box": [
+    285.99999990333333,
+    173.99999997000003,
+    347.99999990333333,
+    191.99999996999998
+   ],
+   "conf": 1,
+   "text": "Cleo27"
+  },
+  {
+   "box": [
+    57.81667769657406,
+    234.60844272913567,
+    158.148205406535,
+    251.84689945520984
+   ],
+   "conf": 1,
+   "text": "Patient last:"
+  },
+  {
+   "box": [
+    57.970855555312134,
+    291.85969921413766,
+    144.0291441295309,
+    310.1403007156025
+   ],
+   "conf": 1,
+   "text": "Birth date:"
+  },
+  {
+   "box": [
+    285.82019265863613,
+    230.1403141705175,
+    380.3232596752377,
+    250.30666930357413
+   ],
+   "conf": 1,
+   "text": "Paucek755"
+  },
+  {
+   "box": [
+    287.71455333887724,
+    286.99591734943823,
+    384.1821284121194,
+    307.28472807941876
+   ],
+   "conf": 1,
+   "text": "2001-03-31"
+  },
+  {
+   "box": [
+    57.950431099993665,
+    349.8165204618874,
+    124.04956745253273,
+    368.1834790800515
+   ],
+   "conf": 1,
+   "text": "Gender:"
+  },
+  {
+   "box": [
+    59.645602378765425,
+    405.11549848657427,
+    192.22705379478106,
+    427.1539983187276
+   ],
+   "conf": 1,
+   "text": "Encounter date:"
+  },
+  {
+   "box": [
+    287.81950576735204,
+    404.8569710256003,
+    386.13173873854345,
+    423.14421582235315
+   ],
+   "conf": 1,
+   "text": "2020-09-26"
+  },
+  {
+   "box": [
+    59.932459943561376,
+    465.6793630771557,
+    144.06753837373716,
+    484.32063657569086
+   ],
+   "conf": 1,
+   "text": "Visit class"
+  },
+  {
+   "box": [
+    289.81425817121044,
+    464.61463615418427,
+    380.2577090989448,
+    484.1203105163669
+   ],
+   "conf": 1,
+   "text": "outpatient"
+  }
+ ],
+ "subtitle": "case synform2-ce08cff8d07665997ab7 \u00b7 input FCO fco:436106748138e511\u2026 \u00b7 png sha256 0b0b2773fb6610ba\u2026",
+ "title": "SYNFORM2-ERR \u00b7 planted V2_scan_sigma25 (fields changed: none)",
+ "vlm_available": true
+}
