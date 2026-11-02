@@ -31,3 +31,14 @@ Dependencies: locally installed PyTorch, Pillow, NumPy, SciPy; no new model down
 ## Promotion gates
 
 Report IoU50 recall/precision/F1, mean matched IoU, per-field matched/missed/extra counts, number of form layouts tested, synthetic patient overlap and latency. Compare V0, V1, V2, V3, V4, V5 on a **new** patient and template holdout with matched evaluation criteria. Preserve failures and abstentions, with exact model weights hash, image/annotation hash, decision source leaf and FCO linkage. No auto-merge without reviewed privacy and scientific gates.
+
+## PR #16 successor: immutable historical publication exception
+The original synthetic JSON-only gate failed because earlier branches had
+already committed synthetic PNG and JSONL. The successor pins all existing
+historical bytes to pre-policy main commit
+2c89dd45870ec093e2c72319ec231aebda268510.
+Existing nonconforming paths remain allowed only when their Git blob is
+identical. Any new or changed synthetic image, PDF, JSONL or model weight
+file is denied, as are all non-JSON data files. The original image bytes
+are not re-authorized for new upload. CI invokes this corrected gate.
+This is a policy repair, not a new scientific or model performance result.

@@ -1,0 +1,12 @@
+{
+  "schema": "frontier-forms.synthetic-json-policy-correction.v1",
+  "parent_pr": 16,
+  "original_state": "FAILED",
+  "original_failure": "New repository-wide check rejected pre-existing synthetic PNG and JSONL files present before PR #16",
+  "decision": "Grandfather only exact unchanged Git blobs present at pre-policy main commit, reject every new or modified non-JSON data payload",
+  "pre_policy_main_commit": "2c89dd45870ec093e2c72319ec231aebda268510",
+  "truth_classification": "policy_reconciliation_not_model_gain",
+  "successor_state": "IMPLEMENTED_REQUIRES_TEST",
+  "patient_data": "SYNTHETIC_ONLY",
+  "legacy_bytes_are_not_approved_for_new_publication": true
+}
