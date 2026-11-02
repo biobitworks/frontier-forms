@@ -11,6 +11,7 @@
 //
 // Build: swiftc -O tools/apple_forms/AppleForms.swift -o AppleForms
 import AppKit
+import CoreML
 import Foundation
 import PDFKit
 import Vision
@@ -118,6 +119,15 @@ func ocr(_ image: CGImage, region: CGRect? = nil) -> [Line] {
     req.recognitionLevel = .accurate
     req.usesLanguageCorrection = false
     req.recognitionLanguages = ["en-US"]
+    // Pin every Vision stage to the CPU: reproducible across runs and does not
+    // contend with the Neural Engine or GPU used by other local training jobs.
+    if let stages = try? req.supportedComputeStageDevices {
+        for (stage, devices) in stages {
+            if let cpu = devices.first(where: { if case .cpu = $0 { return true } else { return false } }) {
+                req.setComputeDevice(cpu, for: stage)
+            }
+        }
+    }
     if let r = region {
         req.regionOfInterest = CGRect(x: r.minX / pageRect.width, y: r.minY / pageRect.height,
                                       width: r.width / pageRect.width, height: r.height / pageRect.height)
