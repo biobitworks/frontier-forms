@@ -5,7 +5,9 @@
   "scope": "git log --all, 68 commits, main@ad2bba6",
   "default_rules": {
     "findings": 7920,
-    "rules": {"generic-api-key": 7920},
+    "rules": {
+      "generic-api-key": 7920
+    },
     "by_value_shape": {
       "row_key_sha256 (64-hex case digest)": 3124,
       "template_key = medication_allergy_intake_v1": 2530,
@@ -15,10 +17,31 @@
     "verdict": "ALL_FALSE_POSITIVE"
   },
   "manual_pattern_sweep": {
-    "patterns": ["postgres URLs", "DATABASE_URL=", "SUPABASE_PASSWORD=", "sb_secret_", "JWT eyJhbGciOi", "sk-", "hf_", "fw_", "nvapi-"],
+    "patterns": [
+      "postgres URLs",
+      "DATABASE_URL=",
+      "SUPABASE_PASSWORD=",
+      "sb_secret_",
+      "JWT eyJhbGciOi",
+      "sk-",
+      "hf_",
+      "fw_",
+      "nvapi-"
+    ],
     "hits": "placeholders only (Frontier_Forms_Project_Spec.md DB_USER/YOUR_POOLER_HOST template, SUPABASE_Data_Helper_Script.md '...', a test string 'postgresql://something')",
     "real_credentials_found": 0
   },
-  "with_repo_config": {"config": ".gitleaks.toml", "git_full_history": 0, "dir_working_tree": 0},
-  "canary": "an inserted fake api_key line is still reported with .gitleaks.toml"
+  "with_repo_config": {
+    "config": ".gitleaks.toml",
+    "git_full_history": 0,
+    "dir_working_tree": 0
+  },
+  "canary": "an inserted fake api_key line is still reported with .gitleaks.toml",
+  "ci_rerun_all_refs": {
+    "scope": "git log --all including all remote branches and PR heads, 115 commits",
+    "default_rule_new_findings": 273,
+    "source": "branch redteam/claude-fcg-local-ablation-20261102-cloud commit 33245d54, field named \"key\" holding 64-hex digests",
+    "verdict": "FALSE_POSITIVE; allowlist widened from _key to key (hex values only)",
+    "with_repo_config": 0
+  }
 }

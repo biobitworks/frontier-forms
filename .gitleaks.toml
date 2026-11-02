@@ -16,7 +16,7 @@ regexTarget = "match"
 # scanner splits long JSONL lines into chunks. Values must stay pure hex/uuid
 # or a lowercase *_vN template name, so a real token still fails.
 regexes = [
-  '''(sha256|_key)"?\s*[:=]\s*"?[0-9a-f]{8,64}"?$''',
+  '''(sha256|key)"?\s*[:=]\s*"?[0-9a-f]{8,64}"?$''',
   '''_key"?\s*[:=]\s*"?[0-9a-f]{8}-[0-9a-f-]{1,27}''',
   '''key"?\s*[:=]\s*"?[a-z0-9_]+_v[0-9]+"?$''',
 ]
