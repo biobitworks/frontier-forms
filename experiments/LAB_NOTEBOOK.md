@@ -14,3 +14,6 @@ Synthetic form render/OCR/FHIR, Fireworks, NVIDIA training, Microsoft Document I
 
 ## P01 security failure and repair successor (2026-11-02)
 First staged Gitleaks scan FAILED with 38 generic-api-key pattern matches on hashed case identifiers in the review export. No actual API secret was identified in this controlled exported field. Renamed the exported field from row_key_sha256 to case_digest_sha256; kept the 38 actual digest values unchanged; preserved security failure receipt. Staged security rerun PASS, zero findings. The original P01 notebook run output remains in notebook_runs_v2_prekeyfix; new execution is a successor.
+
+## P01 verifier failure and successor (2026-11-02)
+Previous review root 37152dc823a8009fc8d7a7a2b7abaf819fa00e6bc3377b2b2ea1f50cfe7641e7 was COMPUTED, but the initial independent verifier FAILED with KeyError signed (manifest used signature). Preserved exact predecessor at Git commit bf58691bbf93753a9a63b4722e479d8b044fcb01, then created a new verifier that reads predecessor bytes from Git history and current bytes from current tree. Old failure not promoted to PASS.

@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
-"""Independent successor verifier: rehash all listed files and rebuild root."""
+"""Independently replay current and historical public-review Merkle roots."""
 from pathlib import Path
-import json,hashlib
+import json,hashlib,subprocess
 R=Path(__file__).resolve().parent.parent
+OLD_COMMIT='bf58691bbf93753a9a63b4722e479d8b044fcb01'
 def sha(b):return hashlib.sha256(b).hexdigest()
-def canon(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')
+def canon(x):return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
 for folder in sorted((R/'evidence/freeze/review_successor').glob('REVIEW-*')):
-    m=json.loads((folder/'manifest.json').read_bytes())
-    leaves=[json.loads(s) for s in (folder/'leaves.jsonl').read_text().splitlines()]
-    if len(leaves)!=m['leaf_count'] or [x['path'] for x in leaves]!=m['leaf_order']:
-        raise AssertionError('ORDER_OR_COUNT')
-    for x in leaves:
-        raw=(R/x['path']).read_bytes()
-        if len(raw)!=x['size_bytes'] or sha(raw)!=x['sha256']:
-            raise AssertionError('FILE_CHANGED: '+x['path'])
-    nodes=[bytes.fromhex(sha(b'\x00'+canon(x))) for x in leaves]
-    while len(nodes)>1:
-        if len(nodes)%2:nodes.extend(nodes[-1:])
-        nodes=[hashlib.sha256(b'\x01'+nodes[i]+nodes[i+1]).digest()
-               for i in range(0,len(nodes),2)]
-    if nodes[0].hex()!=m['root']:
-        raise AssertionError('MERKLE_ROOT_MISMATCH')
-    assert m['signed']=='NOT_SIGNED' and m['mmr']=='NOT_COMPUTED'
-    print('PUBLIC_REVIEW_ROOT_PASS',m['root'],'LEAVES',len(leaves),'RAW_SOURCES','NOT_REEXPORTED')
+    m=json.loads((folder/'manifest.json').read_text())
+    rows=[json.loads(x) for x in (folder/'leaves.jsonl').read_text().splitlines()]
+    assert m['leaf_count']==len(rows) and m['leaf_order']==[r['path'] for r in rows]
+    historical=folder.name=='REVIEW-37152dc823a8009f'
+    for r in rows:
+        if historical:
+            proc=subprocess.run(['git','show',OLD_COMMIT+':'+r['path']],
+                cwd=R,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+            if proc.returncode:raise RuntimeError('HISTORICAL_FILE_MISSING '+r['path'])
+            raw=proc.stdout
+        else:
+            raw=(R/r['path']).read_bytes()
+        if len(raw)!=r['size_bytes'] or sha(raw)!=r['sha256']:
+            raise AssertionError('LEAF_FILE_MISMATCH '+r['path'])
+    v=[hashlib.sha256(b'\x00'+canon(x)).digest() for x in rows]
+    while len(v)>1:
+        if len(v)%2:v.append(v[-1])
+        v=[hashlib.sha256(b'\x01'+v[i]+v[i+1]).digest() for i in range(0,len(v),2)]
+    assert v[0].hex()==m['root']
+    assert m['signature']=='NOT_SIGNED' and m['mmr']=='NOT_COMPUTED'
+    print('ROOT_VERIFIED',m['root'],'LEAVES',len(rows),
+          'SOURCE','HISTORICAL_GIT_COMMIT' if historical else 'CURRENT_FILES')
