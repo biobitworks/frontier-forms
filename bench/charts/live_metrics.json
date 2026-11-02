@@ -903,6 +903,53 @@
     },
     {
       "arm": "pi+browser-tools",
+      "cached": 433082,
+      "case": "case-02",
+      "correct": 15,
+      "cost_usd": 0.20855249999999997,
+      "evidence_needed": 12,
+      "evidence_valid": 12,
+      "fabricated": 0,
+      "failed": false,
+      "fields": 16,
+      "form": "insurance_update",
+      "full_form": false,
+      "input": 39092,
+      "local_receipt_sha256": "7b5371132d236cd932e39b0de98fb104d0f9c6dddc867902622b25f64b03dc9b",
+      "missed": 1,
+      "model": "qwen3p8-max",
+      "model_calls": 15,
+      "output": 3683,
+      "repeat": 1,
+      "seconds": 110.9,
+      "sensitivity": {
+        "closed": {
+          "correct": 15,
+          "fabricated": 0,
+          "field_accuracy": 0.9375,
+          "fields": 16,
+          "full_form": false,
+          "missed": 1
+        },
+        "open": {
+          "correct": 15,
+          "fabricated": 0,
+          "field_accuracy": 0.9375,
+          "fields": 16,
+          "full_form": false,
+          "missed": 1
+        }
+      },
+      "submitted": false,
+      "timed_out": false,
+      "unknown": 3,
+      "unknown_flagged": 3,
+      "unknown_held": 3,
+      "unsafe": 0,
+      "wrong": 0
+    },
+    {
+      "arm": "pi+browser-tools",
       "cached": 247798,
       "case": "case-03",
       "correct": 28,
