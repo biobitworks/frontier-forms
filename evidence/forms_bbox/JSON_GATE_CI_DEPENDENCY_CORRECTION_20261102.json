@@ -1,0 +1,12 @@
+{
+ "schema": "frontier-forms.ci-dependency-correction.v1",
+ "parent_pr": 27,
+ "failed_ci_run": "https://github.com/biobitworks/frontier-forms/actions/runs/41544123866",
+ "failure_class": "FAILED_CI",
+ "observed_failure": "test_redteam_stats import raises ModuleNotFoundError: No module named numpy under GitHub Actions Python 3.12 runner",
+ "reason": "Current main workflow lacks pinned runtime NumPy/SciPy for independently implemented bootstrap statistics",
+ "implemented_successor": "Pin binary NumPy 2.2.6 and SciPy 1.15.3 before running the complete test suite",
+ "previous_local_result": "PASS 133 tests on Mac Python 3.12 with NumPy already installed",
+ "new_github_ci_result": "NOT_YET_EXECUTED",
+ "merkle_root": "NOT_COMPUTED"
+}
