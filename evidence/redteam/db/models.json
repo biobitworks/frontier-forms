@@ -4,7 +4,7 @@
     "Qwen/Qwen3.8-27B via Fireworks": "BLOCKED_NO_CREDENTIAL",
     "YOLO": "NOT_USED_NO_TRAINED_FIELD_DETECTOR"
   },
-  "generated_utc": "2026-11-02T23:15:42Z",
+  "generated_utc": "2026-11-02T23:18:22Z",
   "host": "magicSTUDIObox.local",
   "models": {
     "Apple Vision VNRecognizeTextRequest .accurate, usesLanguageCorrection=false, en-US": {
@@ -141,6 +141,14 @@
           "public_sha256": "bbde8780516a4a3d495cc2c95e93f30cdedaaf86bab34bc364d83cdab7490f2f",
           "split": "heldout",
           "wall_seconds": 261.2
+        },
+        {
+          "dataset": "SYNFORM2-aa447934df526734",
+          "images_or_cases": 46,
+          "meta_file": "VLM_qwen2.5vl_3b_synform2_test_META.json",
+          "public_sha256": "350e05f942fe360d239f26f85e85df838b679fa1cdd08c2aa7ab8c07760ac882",
+          "split": "test",
+          "wall_seconds": 509.8
         }
       ],
       "weights_digest": "fb90415cde1ef08aa669ae74b082d49b158729b6db1ab183c941417d507e71a1"
