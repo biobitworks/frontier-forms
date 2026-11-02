@@ -71,7 +71,15 @@ def main():
         pdf = FORMS_DIR / f"{key}.pdf"
         if not pdf.exists():
             tool(args.tool, "make-pdf", str(TEMPLATE_DIR / f"{key}.json"), str(pdf))
-        inspected[key] = json.loads(tool(args.tool, "inspect", str(pdf)))
+        ins = json.loads(tool(args.tool, "inspect", str(pdf)))
+        # PDFKit renames widgets on save (text0, choice0, ...). Widgets are laid out
+        # top to bottom in template order, so geometry gives the scoring key.
+        ordered = sorted(ins["fields"], key=lambda f: -f["rect"][1])
+        if len(ordered) != len(templates[key]["fields"]):
+            raise SystemExit(f"WIDGET_COUNT_MISMATCH:{key}")
+        for f, tf in zip(ordered, templates[key]["fields"]):
+            f["field_key"] = tf["field_key"]
+        inspected[key] = ins
 
     members, bundles = load_cohort(Path(args.cohort), limit=args.limit)
     httpd = serve(FormState(members, bundles, templates))
@@ -97,11 +105,13 @@ def main():
                     rb = json.loads(tool(args.tool, "readback", str(fpath)))
                     gold = gold_answers(bundles[m.patient_id], t)
                     for arm, src in (("A1-apple-pdfkit", "pdf_value"), ("A2-apple-ocr-rb", "text")):
-                        pred = {k: answer_from(v[src]) for k, v in rb.items()}
+                        name_to_key = {f["name"]: f["field_key"] for f in inspected[key]["fields"]}
+                        pred = {name_to_key[k]: answer_from(v[src]) for k, v in rb.items()}
                         fields = {k: score_field(g, pred.get(k)) for k, g in sorted(gold.items())}
                         if arm == "A2-apple-ocr-rb":
                             for k in fields:
-                                fields[k]["ocr_min_confidence"] = round(rb.get(k, {}).get("min_confidence", 0.0), 3)
+                                nm = next(n for n, fk in name_to_key.items() if fk == k)
+                                fields[k]["ocr_min_confidence"] = round(rb[nm]["min_confidence"], 3)
                         case_key = f"{m.patient_id}|{key}"
                         rows[arm].append({
                             "case_key": case_key,
@@ -125,7 +135,7 @@ def main():
         "n_patients": len(members), "cohort_root": cohort_root(members),
         "frozen_pdf_forms_sha256": {p.name: sha256_file(p) for p in sorted(FORMS_DIR.glob("*.pdf"))},
         "tool_source_sha256": sha256_file(ROOT / "tools/apple_forms/AppleForms.swift"),
-        "inspected_labels": {k: [(f["name"], f["label"], round(f["label_confidence"], 3)) for f in v["fields"]]
+        "inspected_labels": {k: [(f["field_key"], f["name"], f["label"], round(f["label_confidence"], 3)) for f in v["fields"]]
                              for k, v in inspected.items()},
         "host": {"machine": platform.machine(), "macos": platform.mac_ver()[0], "python": platform.python_version()},
         "hosted_inference": "NONE", "wall_seconds": round(elapsed, 1),
