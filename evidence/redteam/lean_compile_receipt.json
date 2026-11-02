@@ -1,0 +1,10 @@
+{
+  "schema": "formal.compile.receipt.v1",
+  "file": "lean/Admission.lean", "file_sha256": "9f74867b29845d5733f1d145cbfbde4ce90085f9d78bb65631c83901ea259bd0",
+  "host": "magicSTUDIObox.local", "toolchain": "Lean (version 4.15.0, arm64-apple-darwin23.6.0, commit 11651562caae, Release); Lake 5.0.0-1165156",
+  "command": "~/.elan/bin/lean Admission.lean", "exit_code": 0, "stdout_stderr": "", "runs": 2,
+  "result": "COMPILED",
+  "theorems": ["FrontierForms.no_admit_on_mcnemar_fail", "FrontierForms.no_admit_on_bootstrap_fail"],
+  "scope_ceiling": "Boolean conjunction gate only; proves nothing about McNemar/bootstrap computation, data, or clinical validity. No Mathlib dependency; core Lean only.",
+  "predecessor_state": "lean4 NOT_TESTED -> successor COMPILED (predecessor leaf unchanged)"
+}

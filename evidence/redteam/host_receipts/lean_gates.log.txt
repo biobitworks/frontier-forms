@@ -1,0 +1,24 @@
+Gates.lean:69:32: error: invalid `do` notation, expected type is not a monad application
+  List Config
+You can use the `do` notation in pure code by writing `Id.run do` instead of `do`, where `Id` is the identity monad.
+Gates.lean:71:37: error: invalid `do` notation, expected type is not a monad application
+  List ErrorVector
+You can use the `do` notation in pure code by writing `Id.run do` instead of `do`, where `Id` is the identity monad.
+Gates.lean:77:64: error: tactic 'decide' failed for proposition
+  (allConfigs.all fun c₁ => allConfigs.all fun c₂ => allVectors.all fun e => !leq c₁ c₂ || !admit c₂ e || admit c₁ e) =
+    true
+since its 'Decidable' instance
+  instDecidableEqBool
+    (allConfigs.all fun c₁ => allConfigs.all fun c₂ => allVectors.all fun e => !leq c₁ c₂ || !admit c₂ e || admit c₁ e)
+    true
+did not reduce to 'isTrue' or 'isFalse'.
+
+After unfolding the instances 'instDecidableEqBool' and 'Bool.decEq', reduction got stuck at the 'Decidable' instance
+  match
+    allConfigs.all fun c₁ => allConfigs.all fun c₂ => allVectors.all fun e => !leq c₁ c₂ || !admit c₂ e || admit c₁ e,
+    true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯
+LEAN_GATES_EXIT=1

@@ -1,0 +1,19 @@
+path: /private/tmp/claude-redteam-20261102/yolo/dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: "value:Synthetic case"
+  1: "value:Patient first"
+  2: "value:Patient last"
+  3: "value:Birth date"
+  4: "value:Gender"
+  5: "value:Encounter date"
+  6: "value:Visit class"
+  7: "label:Synthetic case"
+  8: "label:Patient first"
+  9: "label:Patient last"
+  10: "label:Birth date"
+  11: "label:Gender"
+  12: "label:Encounter date"
+  13: "label:Visit class"

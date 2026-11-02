@@ -71,6 +71,21 @@ See the experiment protocol, FCG chain, lab notebook, source-rights boundary, GS
 ## Supabase upstream intake (reported, not frozen)
 The user reports a dataset being built in Supabase. The project and schema are not yet linked to this repository, and its row count, sensitivity, source version and contents are UNKNOWN. We register this as a **prospective upstream source** in [the Supabase source contract](docs/protocols/SUPABASE_SOURCE_CONTRACT.md) and [the source-intake ledger](evidence/sources/supabase_source_intake.json). This does not replace the frozen LongevityBench root or authorize an export. EXP-007 checks that these unresolved gates fail closed. Only an observed consistent snapshot and separately computed Merkle commitment can advance the Supabase lane.
 
+## Claude red-team lane (cloud session, append-only successor)
+
+Branch `redteam/claude-fcg-local-ablation-20261102-cloud` (parent PR #3 head `da953450`). Independent re-verification of every
+root above with separate code, matched local-model lanes (L0 Liquid longevity, L1 qwen3:1.7b, L2 qwen2.5vl:3b, L3 Insilico
+checkpoint) over the frozen discovery (38) and heldout (39) partitions with FCO/FCG context, forged-leaf, removed-edge, prompt
+injection, verdict and option-swap antigentic gates, a cold-restart replay, and a synthetic-form VLM extraction lane with a
+deterministic FHIR draft scorer. Results, gates and claim ceilings: [docs/reviews/CLAUDE_REDTEAM_REPORT.md](docs/reviews/CLAUDE_REDTEAM_REPORT.md),
+[docs/architecture/LEAF_GAIN_ATTRIBUTION.md](docs/architecture/LEAF_GAIN_ATTRIBUTION.md), [experiments/CLAUDE_LAB_NOTEBOOK.md](experiments/CLAUDE_LAB_NOTEBOOK.md).
+Agent instructions: [README_AI.md](README_AI.md). A concurrent local Claude lane lives on `redteam/claude-fcg-local-ablation-20261102`
+and is cross-checked, not merged.
+
+Reproduce (container, no inference): `python3 scripts/redteam/execute_redteam_notebooks.py` → new `evidence/notebook_runs_redteam_v<N>/`.
+Reproduce (magicSTUDIObox, private evidence dir): see `scripts/redteam/*.py` docstrings; only `*_PUBLIC.jsonl`/`*_META.json` leave the host.
+Fireworks L4/L5, Snyk, NVIDIA training, live Supabase and Epic remain BLOCKED / NOT_TESTED in this lane.
+
 ## App-plane integration and red-team review
 The project application baseline includes teammate [Supabase migration](supabase/migrations/20261102000000_initial_schema.sql) and [Synthea FHIR importer](scripts/import_fhir.py) merged from PR #4. The evidence workflow must not mutate that operational implementation without review. New review checks fail closed on exact frozen evaluation input byte mismatches; Jupyter reruns write new versioned receipt directories. The original predecessor Merkle root has not changed. Draft PR #5 reviews stable identity, nondestructive provenance and a canonical dataset snapshot; draft PR #6 provides a synthetic red-team comparison, not demonstrated improvements in live model accuracy.
 

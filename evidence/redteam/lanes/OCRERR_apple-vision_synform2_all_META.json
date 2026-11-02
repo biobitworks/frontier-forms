@@ -1,0 +1,25 @@
+{
+  "blank_page_control_all_missing": true,
+  "dataset": "SYNFORM2ERR-790a7dc6f9641fa6",
+  "engine": "Apple Vision VNRecognizeTextRequest .accurate, usesLanguageCorrection=false, en-US",
+  "fetch_seconds": 0.145,
+  "finished_utc": "2026-11-02T22:14:15Z",
+  "form_root": "790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944",
+  "host": "magicSTUDIObox.local",
+  "images": 230,
+  "local_file_export": "NOT_AUTHORIZED_CONTAINS_ORACLE",
+  "local_sha256": "83a427539bfb7c046080f031b9efd2fc3f677e2ab78ec0fd33bd97da4671a9ec",
+  "macos": "27.0.1",
+  "ocr_binary_sha256": "432d896f751738023c0114aaf79583f5e48122454717ab3799869961b05b440b",
+  "ocr_seconds_total": 21.838,
+  "public_sha256": "6d9525104772efd3a6f3b09e175d816fcfd2c3cb23a821857090dfa7f30da481",
+  "python": "3.12.13",
+  "schema": "redteam.ocr_lane_run.v1",
+  "served_from": "http://127.0.0.1:8766",
+  "split": "all",
+  "started_utc": "2026-11-02T22:13:53Z",
+  "variants": [
+    "all"
+  ],
+  "wall_seconds": 22.1
+}

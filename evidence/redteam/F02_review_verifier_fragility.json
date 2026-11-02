@@ -1,0 +1,16 @@
+{
+  "schema": "fco.failure.successor.v1",
+  "finding": "F-02_REVIEW_SUCCESSOR_2f1c_PINNED_TO_WORKING_TREE",
+  "observed_by": "claude-redteam",
+  "observed_at_utc": "2026-11-02T21:5xZ",
+  "predecessor_git_commit": "da953450d33a721682191f77589c275e0b49731c",
+  "predecessor_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+  "failure": "scripts/verify_review_export.py verifies REVIEW-2f1cfafda7de0153 against CURRENT_FILES instead of a pinned Git commit; any later edit to one of its 79 leaf files (demonstrated: appending a comment line to README.md in a scratch clone of da953450) makes the CI job fail with 'LEAF_FILE_MISMATCH README.md' (exit 1) although the historical commitment is intact.",
+  "reproduction": "git clone <repo> scratch && git checkout da953450 && printf '\\n<!-- any later edit -->\\n' >> README.md && python3 scripts/verify_review_export.py",
+  "observed_output": "AssertionError: LEAF_FILE_MISMATCH README.md ; exit=1",
+  "effect": "a passing root could be reported as FAIL by any successor commit; the predecessor's own review PR would break its CI on the first follow-up edit",
+  "recovery": "successor verifier pins REVIEW-2f1cfafda7de0153 to Git commit da953450d33a721682191f77589c275e0b49731c (the PR #3 head that created it); the 79 leaves and root are unchanged; new red-team successor roots get their own pin",
+  "predecessor_state": "PRESERVED_UNCHANGED",
+  "signature": "NOT_SIGNED",
+  "mmr": "NOT_COMPUTED"
+}
