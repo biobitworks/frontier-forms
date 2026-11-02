@@ -38,10 +38,12 @@ def main():
             if len(c) == 12 and c[11].strip() and float(c[10]) >= 0:
                 x, y, w, h = map(int, c[6:10])
                 lines[(int(c[2]), int(c[3]), int(c[4]))].append((x, y, x + w, y + h, c[11], float(c[10])))
-        fields, text_lines = [], []
+        fields, text_lines, line_boxes = [], [], []
         for key in sorted(lines, key=lambda k: (min(w[1] for w in lines[k]), k)):
             ws = sorted(lines[key])
             text_lines.append(" ".join(w[4] for w in ws))
+            line_boxes.append({"text": text_lines[-1], "bbox": [min(w[0] for w in ws), min(w[1] for w in ws),
+                               max(w[2] for w in ws), max(w[3] for w in ws)], "min_conf": min(w[5] for w in ws)})
             idx = next((i for i, w in enumerate(ws) if w[4].endswith(":")), None)
             if idx is None:
                 continue
@@ -54,13 +56,15 @@ def main():
                            "bbox": [min(w[0] for w in val), min(w[1] for w in val), max(w[2] for w in val), max(w[3] for w in val)],
                            "min_conf": min(w[5] for w in val)})
         rows.append({"image_id": p.stem, "image_sha256": sha(p.read_bytes()), "seconds": round(secs, 3),
-                     "raw_output": "\n".join(text_lines), "fields": fields})
+                     "raw_output": "\n".join(text_lines), "fields": fields, "lines": line_boxes})
     out.write_text("".join(json.dumps(r, sort_keys=True) + "\n" for r in rows))
     rec.write_text(json.dumps({"tesseract_version": ver, "eng_traineddata_sha256": sha(td.read_bytes()), "psm": PSM,
                                "runner": "redteam/ehr/tesseract_generic.py", "runner_sha256": sha(Path(__file__).read_bytes()),
                                "images": len(rows), "output_sha256": sha(out.read_bytes()),
                                "bbox_semantics": "value-text box (union of OCR words right of the 'Label:' token); input boxes not detected",
-                               "gold_read": False}, indent=1, sort_keys=True) + "\n")
+                               "gold_read": False,
+                               "note": "fields = only 'Label: value' on one OCR line; web-style forms with labels above input boxes yield "
+                                       "few fields, so every OCR line with its box is also emitted under 'lines' for label-proximity scoring"}, indent=1, sort_keys=True) + "\n")
     print("DONE", len(rows))
 
 
