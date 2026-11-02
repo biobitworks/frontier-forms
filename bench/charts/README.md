@@ -1,37 +1,38 @@
-# Benchmark charts and submission explanation
+# Real Pi baseline versus Frontier Forms
 
-## The 20-second explanation
+## Explain it in 20 seconds
 
-> We speed up the work around the model: ask independent questions in parallel, request shorter answers, and fill the page in one browser operation. On our 65-question job-form pilot, the same GLM model went from 6.08 seconds to 1.99 seconds—about three times faster—with broadly similar accuracy. We are now testing this approach on synthetic medical forms; medical superiority has not been established.
+> We used the same DeepSeek model on the same six synthetic medical-form cases. With Pi, the model operates the browser through general tools. With our harness, code handles form inspection, record retrieval, validation and page filling, and the model maps questions to answers. Median completion time fell from 92.0 to 16.8 seconds (5.5× faster). Field scores were 119/121 versus 119/121. This is a small development pilot, not a clinical validation.
 
-## Measured speed improvement
+![Baseline versus improved](baseline_vs_improved.png)
 
-| Same model | Agent loop | Optimized harness | Speedup | Time reduction |
-|---|---:|---:|---:|---:|
-| GLM 5.3 Fast | 6.08 s | 1.99 s | 3.06× | 67.3% |
-| GLM 5.3 Flash | 8.98 s | 3.29 s | 2.73× | 63.4% |
-| MiniMax Flash | 16.43 s | 2.06 s | 7.98× | 87.5% |
+![Time per form](time_by_form.png)
 
-![Completion time](speed.png)
+## Exact setup
 
-![Accuracy](accuracy.png)
+- Baseline: Pi 1.5.0 with the browser-tools skill and DeepSeek `deepseek-v4p1-flash` on Fireworks.
+- Improved: Frontier Forms `packages/fill-tools`, using the same model/provider, temperature 0 and low reasoning effort.
+- Same 3 form types, same 2 synthetic patients, same browser-state scorer and task restrictions; 12 runs total, 6 per arm. Shuffled order, up to 3 concurrent runs. One patient was used during development; this is not a held-out result.
+- Timing covers harness execution from launch through completion, before the common scoring step. It excludes browser startup. Summaries use median time and mean cost/calls/tokens.
+- Failures: 0/6 baseline, 0/6 improved. Full-form successes: 4/6 versus 4/6. Fabricated fields: 0 versus 0; unsafe fields: 0 versus 0.
+- Mean tokens per form (uncached input + cached input + output): 509,160 versus 10,963. Estimated API spend is based on configured token rates, not an invoice.
 
-![Individual configurations](ablation.png)
+## Accuracy and the absent-fact rule
 
-## Why it helps
+The main score is neutral: unsupported Yes is wrong; defensible No/blank for an absent fact is excluded. Both arms use identical scoring. Missing/conflicted/expired facts, signatures and accidental submission are checked separately. Correct-field percentages include safe abstention; they are not the fraction of fields physically filled.
 
-1. **Ask together:** split independent questions into six concurrent groups, reducing serial waiting.
-2. **Say less:** use compact answer lines instead of verbose JSON. This pilot omits evidence/confidence in compact output; medical answers need that information restored.
-3. **Write together:** apply answers in one browser operation and read controls back, falling back to slower field filling when needed. No fallback was needed on these plain HTML forms.
+| Policy | Pi baseline | Our harness + tools |
+|---|---:|---:|
+| Neutral | 119/121 | 119/121 |
+| Closed: absent means No | 119/135 | 120/135 |
+| Open: absent means unknown | 133/135 | 132/135 |
 
-## What the numbers establish
+## What changed
 
-The charts use corrected saved aggregate results, not newly executed model runs. There are five trials for every plotted model/configuration. The full source contains 105 trials across both form sizes; these charts show the 75 trials on the 65-question form. Times are medians from warm runs; latency uncertainty and independent replication have not been established. Accuracy uses actual page state. The baseline is a simplified three-tool agent loop, not real Pi. These are harness speed measurements, not evidence that one model is intrinsically better, that FCG causes an improvement, or that medical accuracy improved.
+Our harness gives the model relevant record facts and structured questions in parallel batches. Code then validates proposed answers, applies them through browser controls, and verifies page state. Pi uses general browser operations and a longer agent conversation. These are two whole-system configurations; the pilot does not isolate each mechanism's contribution.
 
-Keep the medical lane separate: two preliminary Pi dev-form fills exist locally; there is no completed medical tools-versus-Pi comparison, fine-tuning result, or improvement-over-time study. The 280 oracle checks verify the form/scoring fixtures; they are not 280 successful model runs.
+No medical accuracy superiority, fine-tuning gain or improvement-over-time claim is established. There is one run per case/arm, no confidence interval or independent replication, and no model weight digest from the hosted provider. Historical job-form charts are [separate](../job_form_charts/README.md); they are not the Pi baseline.
 
-## Reproduce the charts
+## Data and reproduction
 
-`python bench/plot_results.py` requires matplotlib and numpy; it makes no model calls. See [aggregate trial source](../results_ablation.jsonl), [plotted summary CSV](summary.csv), and [benchmark methodology](../README.md). PNG and SVG versions are provided for slides.
-
-Source SHA-256: `2e0a05ad0b2d07510ba3d27314bbafc8357f9642a673861afe4ca9de4b928827`.
+[Sanitized paired metrics](paired_pilot.json) contain only numeric outcomes, opaque matched-case IDs and local artifact hashes; patient records, predictions, answer keys and transcripts stay private. [Summary CSV](summary.csv). Rebuild with `python bench/plot_pi_comparison.py` (matplotlib required). The underlying pilot is `bench/harness/pilot.py`; raw runs require the private frozen synthetic export and API access. Source snapshots and receipt hashes identify this pilot's provenance; they do not independently prove model outputs.

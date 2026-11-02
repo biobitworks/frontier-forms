@@ -56,13 +56,16 @@ def child_env(extra: dict[str, str] | None = None, agent_dir: Path | None = None
             **({"PI_CODING_AGENT_DIR": str(agent_dir)} if agent_dir else {}), **(extra or {})}
 
 
-def run_pi(args: list[str], run_dir: Path, agent_dir: Path, *, timeout: float, extra_env: dict[str, str] | None = None,
-           stdout, stderr) -> tuple[int | None, bool]:
-    """Returns (exit code, timed out). A timed-out run is killed and scored on whatever it left on the form."""
+def run_pi(args: list[str], run_dir: Path, agent_dir: Path, **options) -> tuple[int | None, bool]:
+    return run_contained([str(BENCH / "pi/node_modules/.bin/pi"), *args], run_dir, agent_dir, **options)
+
+
+def run_contained(command: list[str], run_dir: Path, agent_dir: Path, *, timeout: float, extra_env: dict[str, str] | None = None,
+                  stdout, stderr) -> tuple[int | None, bool]:
+    """Every arm runs through here. Returns (exit code, timed out). A timed-out run is killed and scored on whatever it left."""
     rules = run_dir / ".sandbox.sb"
     rules.write_text(profile(run_dir, agent_dir))
-    command = ["/usr/bin/sandbox-exec", "-f", str(rules), str(BENCH / "pi/node_modules/.bin/pi"), *args]
-    proc = subprocess.Popen(command, cwd=run_dir, env=child_env(extra_env, agent_dir), stdout=stdout, stderr=stderr,
+    proc = subprocess.Popen(["/usr/bin/sandbox-exec", "-f", str(rules), *command], cwd=run_dir, env=child_env(extra_env, agent_dir), stdout=stdout, stderr=stderr,
                             stdin=subprocess.DEVNULL)
     try:
         return proc.wait(timeout=timeout), False

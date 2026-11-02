@@ -1,6 +1,6 @@
 # Harness benchmark (first local run)
 
-**Submission:** [charts and plain-language explanation](charts/README.md), built from the corrected aggregate ablation trials. Historical tables below have the limitations stated in their sections.
+**Submission:** [real Pi versus our medical harness: horizontal charts and explanation](charts/README.md). The older job-form ablation below is a different experiment; its [historical charts](job_form_charts/README.md) use a simplified tool loop, not Pi.
 
 Does a scripted harness fill forms faster and better than letting Qwen drive the form itself?
 

@@ -83,11 +83,11 @@ def oracle_fill(page, form, p) -> None:
             if f.kind in ("matrix", "ariamatrix"):
                 for i, (key, _) in enumerate(f.rows):
                     g = pp.gold(p, key)
-                    if g.decision == "fill":
+                    if g.decision in ("fill", "absent"):
                         set_field(page, f"{f.fid}_{i}", f, entry(f, key, g))
                 continue
             g = pp.gold(p, f.gold)
-            if g.decision != "fill" or (f.when and not scorer.gate_open(p, f)):
+            if g.decision not in ("fill", "absent") or (f.when and not scorer.gate_open(p, f)):
                 continue
             value = entry(f, f.gold, g)
             if value in ([], None, ""):
@@ -196,6 +196,14 @@ def negatives(people: dict, parts: dict, forms: dict) -> dict:
     results["a blank answerable field is missed"] = outcome(with_history, "first", "") == "missed"
     results["a wrong name is wrong"] = outcome(with_history, "first", "Notaname") == "wrong"
     results["a submitted form cannot be a full success"] = not scorer.score(form, with_history, {"values": {}, "submitted": True})["full_form"]
+
+    urgent = forms["urgent_care_history"]
+    fid, f, key = next(row for row in urgent.scored() if pp.gold(with_history, row[2]).decision == "absent")
+    g = pp.gold(with_history, key)
+    expected = {("No", "neutral"): "skipped", ("", "neutral"): "skipped", ("Yes", "neutral"): "wrong", ("No", "closed"): "correct", ("", "closed"): "missed",
+                ("Yes", "closed"): "wrong", ("No", "open"): "fabricated", ("", "open"): "correct", ("Yes", "open"): "fabricated"}
+    for (value, policy), want in expected.items():
+        results[f"absent fact, {policy}, {value or 'blank'} is {want}"] = scorer.score_field(g, f, key, value, policy) == want
     return results
 
 
@@ -238,6 +246,9 @@ def main() -> None:
                     continue
                 if errors:
                     failures.append(f"js {name} {sid}: {errors[:2]}")
+                closed = result["sensitivity"]["closed"]
+                if closed["correct"] != closed["fields"]:
+                    failures.append(f"oracle closed-world {name} {sid}: {closed}")
                 if result["correct"] != result["fields"]:
                     bad = [(r["fid"], r["outcome"], r["value"][:40], r["expect"][:60]) for r in result["rows"] if r["outcome"] not in ("correct", "skipped")]
                     failures.append(f"oracle {name} {sid}: {bad[:5]}")

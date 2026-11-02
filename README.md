@@ -4,9 +4,9 @@
 **Parent commit:** 67bf6b0ba51dc7ed792c139f37fcc648653611c4
 **State:** PRE-RELEASE_EVIDENCE_PACKAGE; NO_LIVE_EHR_WRITE.
 
-## Hackathon benchmark charts
+## Hackathon: real Pi baseline versus our harness
 
-[Charts, measured speedups, and a short presentation script](bench/charts/README.md) compare the same models on a 65-question job-form pilot. GLM Fast: 6.08 → 1.99 seconds median (five trials per setup), with broadly similar accuracy. This is preliminary harness-speed evidence, not demonstrated medical accuracy or FCG superiority. [Raw aggregate trials](bench/results_ablation.jsonl).
+[Horizontal comparison charts, exact numbers and a 20-second explanation](bench/charts/README.md). Same DeepSeek V4.1 Flash model, three synthetic medical forms, two patients, six matched cases per arm. Median completion: **92.0 s → 16.8 s (5.5× faster)**. Correct fields: **119/121 for both arms**. Mean estimated API cost: **$0.0269 → $0.0054 per form**. Small development pilot; no held-out or clinical superiority claim. [Sanitized paired metrics](bench/charts/paired_pilot.json).
 
 ## Business use case
 

@@ -1,6 +1,6 @@
 # Medical form benchmark scaffold
 
-This suite generates unbranded synthetic forms, deterministic gold answers and patient/form splits. It is work in progress: the spec's medical fill tools, full comparison, charts and longitudinal study are not implemented. Pi smoke tests demonstrate integration only. See `../SUPERVISION_STATUS.md` for the local checkpoint.
+This suite generates unbranded synthetic forms, deterministic gold answers and patient/form splits. A small real Pi-versus-Frontier-Tools development pilot and horizontal charts are available at `../charts/README.md`. The full held-out comparison and longitudinal study remain incomplete. See `../SUPERVISION_STATUS.md` for the local checkpoint.
 
 From the repository root, with Python 3.12:
 
@@ -25,7 +25,7 @@ bench/.venv/bin/python bench/harness/serve.py --port 8787
 
 The initial freeze writes generated files; `--refreeze` is permitted only before held-out model results have been inspected. These commands use private local data and do not call a model. The oracle and blank checks validate fixtures and scoring; their scores are not model accuracy measurements.
 
-For the Pi runner, install pinned packages with `npm ci --prefix bench/pi`. Their normal install scripts are required for the agent-browser launcher; using `--ignore-scripts` requires repairing that launcher before runs will work. Configure only `FIREWORKS_API_KEY` in the root `.env`. Model calls incur API charges; run development cases first and estimate a full run before launching it. `pi_fill.py --help` lists supported options. The computer-use adapter exercises CDP browser controls, not desktop interaction.
+For the Pi runner, install pinned packages with `npm ci --prefix bench/pi`. Their normal install scripts are required for the agent-browser launcher; using `--ignore-scripts` requires repairing that launcher before runs will work. Configure only `FIREWORKS_API_KEY` in the root `.env`. Model calls incur API charges; run development cases first and estimate a full run before launching it. `fill.py --help` lists supported options. The computer-use adapter exercises CDP browser controls, not desktop interaction.
 
 Patient exports, derived passports, schemas, answer keys, freeze manifests, rendered pages and raw agent logs are ignored by Git. Keep them in controlled local storage; a fresh clone needs the private export and a new build before validation. The job-form pilot's aggregate ablation metrics are tracked separately at `../results_ablation.jsonl`; older local result files are intentionally not published.
 

@@ -200,7 +200,8 @@ def age_ok(raw: dict) -> bool:
 @dataclass
 class Gold:
     """What a correct form holds for one field. decision: fill, ask (needs_user_input), review (needs_review),
-    blank (must stay empty whatever is known, such as a signature), or any (not scored)."""
+    blank (must stay empty whatever is known, such as a signature), any (not scored), or absent: a yes/no question
+    whose only basis for "no" is that the record has no matching entry. score.POLICIES says how that is judged."""
     decision: str
     expect: Any = None
     forbid: list[str] = field(default_factory=list)
@@ -223,7 +224,8 @@ def _from(p: dict, key: str, pick=lambda v: v) -> Gold:
 
 
 def _yes(flag: bool) -> Gold:
-    return Gold("fill", "yes" if flag else "no")
+    """A record can show that something is true. Not finding it never shows that it is false."""
+    return Gold("fill", "yes") if flag else Gold("absent", "no")
 
 
 def _smoking(p: dict) -> Gold:
@@ -409,6 +411,8 @@ def evidence(p: dict, key: str) -> list[str]:
     source = source_key(key)
     if source is None:
         return []
+    if key == "full_name":
+        return ["demographics.given_name", "demographics.family_name"]
     if source.startswith(("demographics.", "contact.address", "contact.phone")):
         return [source]
     stem = source.removesuffix("*")

@@ -1,0 +1,16 @@
+<!doctype html><title>Widget fixture</title><style>[hidden]{display:none}</style>
+<form><section><h2>Fixture</h2>
+<fieldset><legend>Date you started</legend><select aria-label="Month"><option value="">Month</option><option value="3">March</option></select><select aria-label="Year"><option value="">Year</option><option value="2020">2020</option></select></fieldset>
+<p>Mark each one</p><div><span id="a1">Hay fever</span><div role="radiogroup" aria-labelledby="a1"><div role="radio" aria-checked="false">Yes</div><div role="radio" aria-checked="false">No</div></div></div>
+<fieldset><legend>Your vehicles</legend><div class="w"><div class="r"><label>Make <input name="m1"></label><label>Colour <input name="c1"></label></div></div><button type="button" id="plus">+ Add vehicle</button></fieldset>
+<div id="host"></div>
+<iframe src="widgets_frame.html" title="part"></iframe>
+<input type="password" name="secret" hidden><div style="position:absolute;left:-9999px"><label>Leave empty <input name="trap"></label></div>
+<label>Patient signature <input name="sig"></label>
+<button type="submit">Submit</button></section></form>
+<script>
+document.querySelectorAll('[role=radio]').forEach(r=>r.onclick=()=>{r.parentElement.querySelectorAll('[role=radio]').forEach(x=>x.setAttribute('aria-checked','false'));r.setAttribute('aria-checked','true')});
+document.getElementById('plus').onclick=()=>{const w=document.querySelector('.w'),n=w.children.length+1,d=document.createElement('div');d.className='r';d.innerHTML=`<label>Make <input name="m${n}"></label><label>Colour <input name="c${n}"></label>`;w.append(d)};
+document.getElementById('host').attachShadow({mode:'open'}).innerHTML='<label for="s1">Nickname</label><input id="s1" name="nick">';
+document.querySelector('form').onsubmit=e=>{e.preventDefault();window.submitted=true};
+</script>

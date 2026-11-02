@@ -13,7 +13,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / 'results_ablation.jsonl'
-OUT = ROOT / 'charts'
+OUT = ROOT / 'job_form_charts'
 OUT.mkdir(exist_ok=True)
 rows = [json.loads(line) for line in SOURCE.read_text().splitlines()]
 runs = [r for r in rows if 'trial' in r]

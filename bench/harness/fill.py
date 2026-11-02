@@ -1,6 +1,9 @@
-"""One real Pi run on one form for one patient, scored from what the form would submit.
+"""One real run of one arm on one form for one patient, scored from what the form would submit.
 
-    pi_fill.py --form insurance_update --patient SYN-00012 [--model deepseek-v4p1-flash] [--skill browser-tools]
+    fill.py --form insurance_update --patient SYN-00012 [--model deepseek-v4p1-flash] [--arm browser-tools]
+
+Arms are Pi with a skill, or frontier-tools. Each gets the same URL, passport and model, runs in the same sandbox and goes
+through the same scorer. The pilot compares complete harness configurations; model and timing variance remain.
 
 Dev forms pair with dev patients only. Running a held-out pair needs --heldout, which is for the frozen final run.
 """
@@ -63,6 +66,21 @@ def free_port() -> int:
         return s.getsockname()[1]
 
 
+TOOLS = BENCH.parent / "packages/fill-tools"
+
+
+def prices(model: str) -> dict:
+    rows = json.loads((BENCH / "pi/models.template.json").read_text())["providers"]["fireworks"]["models"]
+    return next(m["cost"] for m in rows if m["name"] == model)
+
+
+def run_tools(args, url: str, cdp: int, run_dir: Path, agent: Path, stdout, stderr) -> tuple[int | None, bool]:
+    command = [str(BENCH / ".venv/bin/python"), "-m", "fill_tools", "--cdp", str(cdp), "--url", url, "--passport", "passport.json", "--model", args.model,
+               "--prices", json.dumps(prices(args.model)), "--out", "report.json"]
+    return sandbox.run_contained(command, run_dir, agent, timeout=args.timeout, stdout=stdout, stderr=stderr,
+                                 extra_env={"PYTHONPATH": str(TOOLS), "PYTHONDONTWRITEBYTECODE": "1"})
+
+
 def usage_of(log: Path) -> dict:
     total = {"model_calls": 0, "input": 0, "cached": 0, "output": 0, "cost_usd": 0.0, "tool_calls": 0, "last_stop": None, "error": None}
     for line in log.read_text().splitlines():
@@ -111,16 +129,19 @@ def run(args) -> dict:
     agent = run_dir / ".agent"
     agent.mkdir()
     shutil.copy(BENCH / "pi/models.template.json", agent / "models.json")
-    env, flags, hint = SKILLS[args.skill]
     out_dir = BENCH / "results/pilot"
     out_dir.mkdir(parents=True, exist_ok=True)
-    tag = f"{args.skill}.{args.model}.{form.name}.{args.patient}"
+    tag = f"{args.arm}.{args.model}.{form.name}.{args.patient}.r{args.repeat}"
     log, err = run_dir / "pi.jsonl", run_dir / "pi.err"  # results/ is off limits to the sandbox, so logs move there afterwards
     started = time.time()
     with log.open("w") as o, err.open("w") as e:
-        code, timed_out = sandbox.run_pi(["--mode", "json", "--session-dir", str(run_dir / ".sessions"), "-nc", "--thinking", "low", "--provider", "fireworks",
-                                          "--model", f"accounts/fireworks/models/{args.model}", *flags(), hint.format(port=cdp) + "\n\n" + TASK.format(url=url)],
-                                         run_dir, agent, timeout=args.timeout, extra_env=env(cdp), stdout=o, stderr=e)
+        if args.arm == "frontier-tools":
+            code, timed_out = run_tools(args, url, cdp, run_dir, agent, o, e)
+        else:
+            env, flags, hint = SKILLS[args.arm]
+            code, timed_out = sandbox.run_pi(["--mode", "json", "--session-dir", str(run_dir / ".sessions"), "-nc", "--thinking", "low", "--provider", "fireworks",
+                                              "--model", f"accounts/fireworks/models/{args.model}", *flags(), hint.format(port=cdp) + "\n\n" + TASK.format(url=url)],
+                                             run_dir, agent, timeout=args.timeout, extra_env=env(cdp), stdout=o, stderr=e)
     elapsed = time.time() - started
     with sync_playwright() as pw:  # scored from the live page the agent left behind
         browser = pw.chromium.connect_over_cdp(f"http://127.0.0.1:{cdp}")
@@ -136,11 +157,13 @@ def run(args) -> dict:
         report = None
     result = scorer.score(form, p, read)
     usage = usage_of(log)
+    if args.arm == "frontier-tools" and report:
+        usage = {**usage, **{k: report[k] for k in ("model_calls", "input", "cached", "output", "cost_usd")}, "tool_errors": report.get("errors"), "unconfirmed": report.get("unconfirmed")}
     stderr = err.read_text()
     log, err = Path(shutil.move(log, out_dir / f"{tag}.jsonl")), Path(shutil.move(err, out_dir / f"{tag}.err"))
     # A run that never reached the model is a harness failure. It must never read as a low score.
     failed = (code != 0 and not timed_out) or usage["model_calls"] == 0
-    row = {"arm": f"pi+{args.skill}", "pi_version": "1.5.0", "model": args.model, "form": form.name, "patient": args.patient, "split": form.split,
+    row = {"arm": args.arm if args.arm == "frontier-tools" else f"pi+{args.arm}", "pi_version": None if args.arm == "frontier-tools" else "1.5.0", "repeat": args.repeat, "model": args.model, "form": form.name, "patient": args.patient, "split": form.split,
            "failed": failed, "failure": stderr[-400:] if failed else None, "exit_code": code, "timed_out": timed_out, "seconds": round(elapsed, 1),
            **usage, **result, **scorer.score_report(form, p, result, report, schema), "agent_report": report, "log": str(log.relative_to(BENCH))}
     (out_dir / f"{tag}.json").write_text(json.dumps(row, indent=1))
@@ -152,7 +175,8 @@ def main() -> None:
     ap.add_argument("--form", required=True)
     ap.add_argument("--patient", required=True)
     ap.add_argument("--model", default="deepseek-v4p1-flash")
-    ap.add_argument("--skill", default="browser-tools", choices=sorted(SKILLS))
+    ap.add_argument("--arm", default="browser-tools", choices=[*sorted(SKILLS), "frontier-tools"])
+    ap.add_argument("--repeat", type=int, default=1)
     ap.add_argument("--timeout", type=float, default=300)
     ap.add_argument("--heldout", action="store_true")
     row = run(ap.parse_args())

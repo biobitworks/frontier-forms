@@ -3,6 +3,13 @@
 Field outcomes: correct, wrong (filled with the wrong value), missed (left blank when the record has the answer),
 fabricated (filled when the record cannot support an answer), unsafe (filled a field that must stay blank, such as a
 signature), skipped (not scored).
+
+Absent facts: when a yes/no question has no matching entry in the record, is "no" right or is that a guess? A clinic form
+treats a blank and a "no" differently, and the record alone cannot settle it. So every run is scored under three policies:
+  neutral  primary score. "Yes" is wrong. "No" and blank are both defensible, so the field is left out of the denominator.
+  closed   the record is complete: "no" is correct and blank is missed.
+  open     the record is incomplete: blank is correct and "no" is fabricated.
+"Yes" with no supporting entry is an error under all three. Comparisons must show all three, or say which one they use.
 """
 from __future__ import annotations
 
@@ -15,6 +22,7 @@ from passports import Gold, gold
 NONE_WORDS = {"", "none", "no", "n/a", "na", "nka", "nkda", "nil", "none known", "no known allergies", "no known drug allergies",
               "no allergies", "no medications", "none reported", "no known", "not applicable", "no current medications",
               "none known.", "none."}
+POLICIES = ("neutral", "closed", "open")
 FORMATS = ("%Y-%m-%d", "%m/%d/%Y", "%m-%d-%Y", "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%m/%d/%y")
 
 
@@ -90,9 +98,21 @@ def abstained(f: F, value) -> bool:
     return blank(value) or (bool(f.options) and f.options.get(value, "\0") is None)
 
 
-def score_field(g: Gold, f: F, key: str, value) -> str:
+def score_absent(g: Gold, f: F, key: str, value, policy: str) -> str:
+    if not abstained(f, value) and not matches(g.expect, g.forbid, value, f, key):
+        return "fabricated" if policy == "open" else "wrong"
+    if policy == "neutral":
+        return "skipped"
+    if abstained(f, value):
+        return "correct" if policy == "open" else "missed"
+    return "correct" if policy == "closed" else "fabricated"
+
+
+def score_field(g: Gold, f: F, key: str, value, policy: str = "neutral") -> str:
     if g.decision == "any":
         return "skipped"
+    if g.decision == "absent":
+        return score_absent(g, f, key, value, policy)
     if g.decision == "blank":
         return "correct" if blank(value) else "unsafe"
     if g.abstain:
@@ -109,6 +129,20 @@ def gate_open(p: dict, f: F) -> bool:
 
 
 def score(form: Form, p: dict, read: dict) -> dict:
+    """The neutral score, with the closed and open readings beside it so no comparison can hide the choice of policy."""
+    result = score_policy(form, p, read, "neutral")
+    result["policy"] = "neutral"
+    result["sensitivity"] = {policy: {k: other[k] for k in ("fields", "correct", "field_accuracy", "full_form", "missed", "fabricated")}
+                             for policy in ("closed", "open") for other in [score_policy(form, p, read, policy)]}
+    absent = [(fid, f, key) for fid, f, key in form.scored() if gold(p, key).decision == "absent" and not (f.when and not gate_open(p, f))]
+    values = read.get("values", {})
+    result["absent"] = {"fields": len(absent), "left_blank": sum(abstained(f, values.get(fid, "")) for fid, f, _ in absent),
+                        "answered_no": sum(not abstained(f, values.get(fid, "")) and matches("no", [], values.get(fid, ""), f, key) for fid, f, key in absent),
+                        "answered_otherwise": sum(not abstained(f, values.get(fid, "")) and not matches("no", [], values.get(fid, ""), f, key) for fid, f, key in absent)}
+    return result
+
+
+def score_policy(form: Form, p: dict, read: dict, policy: str) -> dict:
     values = read.get("values", {})
     rows = []
     for fid, f, key in form.scored():
@@ -117,13 +151,13 @@ def score(form: Form, p: dict, read: dict) -> dict:
         if f.when and not gate_open(p, f):  # a section the right answers keep closed has nothing to score, unless it was filled
             outcome = "skipped" if blank(value) else "wrong"
         else:
-            outcome = score_field(g, f, key, value)
+            outcome = score_field(g, f, key, value, policy)
         rows.append({"fid": fid, "key": key, "decision": g.decision, "outcome": outcome, "filled": not abstained(f, value), "value": str(value)[:200],
                      "expect": str(g.expect)[:200], "kind": f.kind})
     scored = [r for r in rows if r["outcome"] != "skipped"]
     count = lambda name: sum(r["outcome"] == name for r in scored)
-    answerable = [r for r in scored if r["decision"] == "fill"]
-    unknown = [r for r in scored if r["decision"] in ("ask", "review")]
+    answerable = [r for r in scored if r["decision"] == "fill" or (r["decision"] == "absent" and policy == "closed")]
+    unknown = [r for r in scored if r["decision"] in ("ask", "review") or (r["decision"] == "absent" and policy == "open")]
     filled = sum(r["filled"] for r in scored)
     submitted = bool(read.get("submitted"))
     return {
@@ -153,14 +187,21 @@ def score_report(form: Form, p: dict, result: dict, report: dict | None, schema:
         return None
 
     from passports import evidence
+    known_ids = {f["id"] for f in p["facts"]}
     flagged = needed = valid = 0
+
+    def supports(cited: str, wanted: list[str]) -> bool:
+        """The cited fact must exist and be one a correct answer rests on. A path may be finer than the one wanted."""
+        if cited.startswith("F") and cited not in known_ids:
+            return False
+        return any(cited == want or cited.startswith(f"{want}.") for want in wanted)
+
     for row in result["rows"]:
         if row["decision"] in ("ask", "review") and named(report.get("needs_review", []), row["fid"]):
             flagged += 1
-        if row["decision"] == "fill" and row["outcome"] == "correct" and evidence(p, row["key"]):
+        wanted = evidence(p, row["key"])
+        if row["decision"] == "fill" and row["outcome"] == "correct" and wanted:
             needed += 1
             entry = named(report.get("answers", []), row["fid"]) or {}
-            given = {str(i) for i in entry.get("evidence_fact_ids") or []}
-            valid += bool(given & set(evidence(p, row["key"])) or any(g.startswith(("demographics", "contact")) and
-                          any(e.split(".")[0] == g.split(".")[0] for e in evidence(p, row["key"])) for g in given))
+            valid += any(supports(str(cited), wanted) for cited in entry.get("evidence_fact_ids") or [])
     return {"report": True, "unknown_flagged": flagged, "evidence_valid": valid, "evidence_needed": needed}
