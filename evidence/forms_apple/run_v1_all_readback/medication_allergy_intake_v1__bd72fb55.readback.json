@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Adelle Smitham",
+    "text": "Adelle Smitham"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "127.3",
+    "text": "127.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "30.2",
+    "text": "30.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/83",
+    "text": "133/83"
+  }
+}

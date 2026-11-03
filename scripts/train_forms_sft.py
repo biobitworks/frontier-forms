@@ -54,17 +54,27 @@ def main():
     ap.add_argument("--max-len", type=int, default=1536)
     ap.add_argument("--seed", type=int, default=20261102)
     ap.add_argument("--rank", type=int, default=16)
+    ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16", "float16"],
+                    help="base-weight dtype; LoRA adapter weights stay float32")
+    ap.add_argument("--grad-ckpt", action="store_true", help="gradient checkpointing (less memory, slower)")
     args = ap.parse_args()
 
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     dev = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu")
     tok = AutoTokenizer.from_pretrained(args.base, revision=args.revision)
-    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=torch.float32)
+    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=getattr(torch, args.dtype))
     base_rev = getattr(model.config, "_commit_hash", None)
+    if args.grad_ckpt:
+        model.gradient_checkpointing_enable()
+        model.enable_input_require_grads()
+        model.config.use_cache = False
     model = get_peft_model(model, LoraConfig(r=args.rank, lora_alpha=2 * args.rank, lora_dropout=0.05, task_type="CAUSAL_LM",
                                              target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
                                                              "gate_proj", "up_proj", "down_proj"]))
+    for p in model.parameters():
+        if p.requires_grad:
+            p.data = p.data.float()
     model.to(dev)
     opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=args.lr, weight_decay=0.0)
     train, val = load("train"), load("validation")
@@ -121,13 +131,14 @@ def main():
         "run_id": out.name, "lane": "frontier-forms", "task": "field mapper SFT (prompt sft-prompt-v1)",
         "base_model": args.base, "base_revision": base_rev, "method": "LoRA", "lora_rank": args.rank,
         "hyperparameters": {"epochs": args.epochs, "lr": args.lr, "grad_accum": args.accum, "max_len": args.max_len,
-                            "seed": args.seed, "dtype": "float32", "warmup_steps": 20, "schedule": "linear decay"},
+                            "seed": args.seed, "dtype": args.dtype, "adapter_dtype": "float32", "gradient_checkpointing": args.grad_ckpt, "warmup_steps": 20, "schedule": "linear decay"},
         "data": {"train_sha256": sha(DATA / "train.jsonl"), "validation_sha256": sha(DATA / "validation.jsonl"),
                  "manifest_sha256": sha(DATA / "MANIFEST.json")},
         "selected_epoch": best[0], "selected_val_loss": best[1], "log": log,
         "adapter_sha256": adapter_files, "device": dev,
         "host": {"machine": platform.machine(), "platform": platform.platform(), "torch": torch.__version__},
         "wall_seconds": round(time.time() - t0), "hosted_inference": "NONE",
+        "selection_rule": "lowest validation loss across epochs; test split never read",
     }
     (out / "TRAIN_RECEIPT.json").write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n")
     print("DONE", json.dumps({"selected_epoch": best[0], "val_loss": best[1]}), flush=True)

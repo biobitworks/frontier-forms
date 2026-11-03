@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Emma Sanford",
+    "text": "Emma Sanford"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2020-07-07",
+    "text": "2020-07-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-801-7286",
+    "text": "555-801-7286"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "591 Kemmer Highlands",
+    "text": "591 Kemmer Highlands"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Fall River",
+    "text": "Fall River"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02721",
+    "text": "02721"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

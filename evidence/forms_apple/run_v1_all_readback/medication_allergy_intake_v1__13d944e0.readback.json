@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Kiyoko Schamberger",
+    "text": "Kiyoko Schamberger"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Astemizole 10 MG Oral Tablet; NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal System",
+    "text": "Astemizole 10 MG Oral Tablet; NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal System"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Allergic disposition (finding); Grass pollen (substance)",
+    "text": "Allergic disposition (finding); Grass pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Has a criminal record (finding); Prediabetes (finding); Full-time employment (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Chronic sinusitis (disorder); Medication review due (situation)",
+    "text": "Received higher education (finding); Has a criminal record (finding); Prediabetes (finding); Full- time employment (finding); Body mass index 30+ - obesity (finding); Past pregnancy history of miscarriage (situation); Chronic sinusitis (disorder); Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "165.8",
+    "text": "165.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "81",
+    "text": "81"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "125/77",
+    "text": "125/77"
+  }
+}

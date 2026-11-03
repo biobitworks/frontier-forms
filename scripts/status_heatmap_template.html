@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Forms Accomplishment Heatmap</title>
+<style>
+:root{
+  --surface:#fcfcfb; --surface-2:#f3f2ef; --border:#dedcd6; --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#77766f;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b; --run:#2a78d6; --todo:#e7e5e0; --na:#f6f5f2;
+  --s0:#f0efec; --s1:#cde2fb; --s2:#9ec5f4; --s3:#6da7ec; --s4:#3987e5; --s5:#256abf; --s6:#184f95;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f;
+  --run:#3987e5; --todo:#33332f; --na:#20201e; --s0:#2a2a27;
+}}
+:root[data-theme="dark"]{
+  --surface:#1a1a19; --surface-2:#242422; --border:#3a3a37; --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#9a998f;
+  --run:#3987e5; --todo:#33332f; --na:#20201e; --s0:#2a2a27;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:24px;margin:0 0 4px} h2{font-size:18px;margin:32px 0 4px} h3{font-size:15px;margin:22px 0 4px}
+.sub{color:var(--ink-2);margin:0 0 12px}
+.fig{border:1px solid var(--border);border-radius:8px;padding:16px;background:var(--surface);margin-top:12px}
+.figlabel{font-weight:600;color:var(--ink-2);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.caption{color:var(--ink-2);font-size:13px;margin-top:10px;border-top:1px solid var(--border);padding-top:8px}
+.scroll{overflow-x:auto}
+table{border-collapse:separate;border-spacing:2px;width:100%}
+th{font-size:12px;font-weight:600;color:var(--ink-2);text-align:left;padding:4px 6px;vertical-align:bottom}
+td{padding:6px;border-radius:4px;font-size:12.5px;white-space:nowrap}
+td.rowh{background:transparent;white-space:normal;min-width:220px;color:var(--ink)}
+td.rowh small{color:var(--ink-3);display:block}
+td.st{text-align:center;font-weight:600;min-width:96px}
+.st-done{background:color-mix(in srgb,var(--good) 26%,var(--surface))}
+.st-discovery{background:color-mix(in srgb,var(--warn) 34%,var(--surface))}
+.st-negative{background:color-mix(in srgb,var(--serious) 32%,var(--surface))}
+.st-running{background:color-mix(in srgb,var(--run) 22%,var(--surface));outline:2px dashed var(--run);outline-offset:-3px}
+.st-todo{background:var(--todo);color:var(--ink-2);font-weight:500}
+.st-na{background:var(--na);color:var(--ink-3);font-weight:400}
+td.v{text-align:center;min-width:92px;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin:8px 0 4px;font-size:12.5px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:22px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--border)}
+.ramp{display:inline-flex;border-radius:3px;overflow:hidden;border:1px solid var(--border)}
+.ramp i{width:16px;height:14px;display:block}
+.grade{font-size:11px;color:var(--ink-3)}
+#tip{position:fixed;pointer-events:none;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:12.5px;max-width:340px;box-shadow:0 4px 14px rgba(0,0,0,.15);display:none;z-index:9;white-space:normal}
+.bar{display:flex;gap:8px;align-items:center;justify-content:flex-end}
+button{font:inherit;font-size:12px;border:1px solid var(--border);background:var(--surface-2);color:var(--ink);border-radius:6px;padding:4px 10px;cursor:pointer}
+</style>
+</head>
+<body>
+<main>
+<div class="bar"><button id="theme" type="button">Toggle light/dark</button></div>
+<h1>Frontier Forms: what was accomplished (status as of 2026-11-02)</h1>
+<p class="sub" id="ceiling"></p>
+<p class="sub">Source: status PR of 2026-11-02 (docs/STATUS_2026-11-02.md). Index of every figure: docs/figures/FIGURES.md. Rebuild: <code>python3 scripts/build_status_figures.py</code>.</p>
+
+<section class="fig" aria-labelledby="f1">
+  <div class="figlabel">Figure 1a</div>
+  <h2 id="f1" style="margin-top:2px">Workstream status by research stage</h2>
+  <p class="sub">Rows: workstreams (merged PR numbers or open task IDs). Columns: the five stages a result must pass before it can be claimed. Hover a row for its key number.</p>
+  <div class="legend" id="legendA"></div>
+  <div class="scroll"><table id="tA"></table></div>
+  <p class="caption" id="capA"></p>
+</section>
+
+<section class="fig" aria-labelledby="f2">
+  <div class="figlabel">Figure 1b</div>
+  <h2 id="f2" style="margin-top:2px">Mechanisms and combinations versus outcomes</h2>
+  <p class="sub">Each panel: rows are mechanisms or combinations on identical cases, columns are outcome metrics (0 to 1). Cell shade encodes how good the value is: darker blue = better, so columns marked "lower better" are shaded by 1 &minus; value. The printed number is always the raw value. Grey cells were not measured or not run; they are never zero.</p>
+  <div class="legend" id="legendB"></div>
+  <div id="panels"></div>
+  <p class="caption" id="capB"></p>
+</section>
+
+<section class="fig" aria-labelledby="f3">
+  <div class="figlabel">Figure 1c</div>
+  <h2 id="f3" style="margin-top:2px">Every result, admitted or not</h2>
+  <p class="sub">One row per tested claim, including null, negative and failed results and successful attacks. Verdict is shown as icon + label. Counts by verdict are in the legend.</p>
+  <div class="legend" id="legendC"></div>
+  <div class="scroll"><table id="tC"></table></div>
+  <p class="caption" id="capC"></p>
+</section>
+</main>
+<div id="tip" role="tooltip"></div>
+<script>
+const DATA=/*__DATA__*/null;
+const STATE={done:["✓","Done"],discovery:["✓◐","Admitted (PI), discovery provenance"],negative:["−","Done, negative result"],running:["◔","Running"],todo:["○","Not started"],na:["—","Not applicable"]};
+const tip=document.getElementById('tip');
+function showTip(e,html){tip.innerHTML=html;tip.style.display='block';const x=Math.min(e.clientX+14,innerWidth-360);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.style.display='none'}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+document.getElementById('ceiling').textContent=DATA.claim_ceiling+' Main at '+DATA.main_commit+'.';
+// legend A
+document.getElementById('legendA').innerHTML=Object.entries(STATE).map(([k,[i,l]])=>`<span><i class="sw st-${k}"></i>${i} ${l}</span>`).join('');
+// table A
+let h='<thead><tr><th>Workstream</th>'+DATA.stages.map(s=>`<th>${esc(s)}</th>`).join('')+'</tr></thead><tbody>';
+DATA.workstreams.forEach((w,ri)=>{h+=`<tr data-r="${ri}"><td class="rowh">${esc(w.name)}<small>${esc(w.prs)}</small></td>`+w.states.map((s,ci)=>`<td class="st st-${s}" data-r="${ri}" data-c="${ci}">${STATE[s][0]} ${STATE[s][1].split(',')[0]}</td>`).join('')+'</tr>'});
+document.getElementById('tA').innerHTML=h+'</tbody>';
+document.getElementById('tA').addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.r===undefined){hideTip();return}const w=DATA.workstreams[+td.dataset.r];const c=td.dataset.c;showTip(e,`<b>${esc(w.name)}</b>${c!==undefined?'<br>'+esc(DATA.stages[c])+': '+STATE[w.states[c]][1]:''}<br>${esc(w.note)}<br><span class="grade">Source: ${esc(w.prs)}</span>`)});
+document.getElementById('tA').addEventListener('mouseleave',hideTip);
+document.getElementById('capA').textContent='Figure 1a. Status of each Frontier Forms workstream across five evidence stages, compiled from merged PRs #3–#43 and open tasks T01–T10 (docs/TASKS.md). "Admitted (PI), discovery provenance" means the PI admitted the result on 2026-11-02, but it was produced on data the designers had already seen and has not been replicated on a fresh cohort. Data: docs/figures/accomplishment_heatmap.json.';
+// legend B
+const RAMP=['--s1','--s2','--s3','--s4','--s5','--s6'];
+document.getElementById('legendB').innerHTML='<span>Worse <span class="ramp">'+RAMP.map(v=>`<i style="background:var(${v})"></i>`).join('')+'</span> Better</span><span><i class="sw st-todo"></i>Not measured / not run</span><span><b>Row tags:</b> '+Object.entries(DATA.grades).map(([k,v])=>`${k}`).join(' · ')+' (hover for meaning)</span>';
+function shade(v,lower){if(v===null||v===undefined)return null;let g=lower?1-v:v;g=Math.max(0,Math.min(1,g));return Math.min(5,Math.floor(g*6))}
+const P=document.getElementById('panels');
+DATA.panels.forEach((p,pi)=>{
+  let t=`<h3>${String.fromCharCode(65+pi)}. ${esc(p.title)}</h3><div class="scroll"><table data-p="${pi}"><thead><tr><th>Mechanism / combination</th>`+p.columns.map(c=>`<th>${esc(c)}</th>`).join('')+'</tr></thead><tbody>';
+  p.rows.forEach((r,ri)=>{t+=`<tr><td class="rowh" data-p="${pi}" data-r="${ri}">${esc(r.label)}<small>${esc(r.grade)}</small></td>`+r.values.map((v,ci)=>{const s=shade(v,p.lower_better[ci]);if(s===null)return `<td class="v st-todo" data-p="${pi}" data-r="${ri}" data-c="${ci}">${r.grade==='running'?'running':'not measured'}</td>`;const dark=s>=3;return `<td class="v" data-p="${pi}" data-r="${ri}" data-c="${ci}" style="background:var(${RAMP[s]});color:${dark?'#fff':'var(--ink)'}">${(+v).toFixed(3)}</td>`}).join('')+'</tr>'});
+  t+=`</tbody></table></div><p class="grade">${esc(p.note)} Source: ${esc(p.source)}</p>`;
+  const d=document.createElement('div');d.innerHTML=t;P.appendChild(d);
+});
+P.addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.p===undefined){hideTip();return}const p=DATA.panels[+td.dataset.p],r=p.rows[+td.dataset.r];let s=`<b>${esc(r.label)}</b><br>${esc(DATA.grades[r.grade]||r.grade)}`;if(td.dataset.c!==undefined){const v=r.values[+td.dataset.c];s+=`<br>${esc(p.columns[+td.dataset.c])}: ${v===null?'not measured':(+v).toFixed(4)}`}showTip(e,s+`<br><span class="grade">${esc(p.source)}</span>`)});
+P.addEventListener('mouseleave',hideTip);
+document.getElementById('capB').textContent='Figure 1b. Outcome of every tested mechanism and combination, re-plotted from committed evidence files on main (each panel names its file and PR). Panels A–C are paired on identical synthetic cases; panel D groups image readers by evaluation set (labelled in brackets on each row), so compare rows only within a set; panel E compares local Qwen models with deterministic code; panel F is the teammate pilot of hosted models with and without the Frontier Forms tools. All data are synthetic (MITRE Synthea). Panels A–E used local inference only; panel F used Fireworks-hosted models (teammate bench lane). Rows tagged discovery were admitted by the PI on 2026-11-02 and keep their provenance caveat: designed after seeing the data, not replicated.';
+
+const VER={admitted:["✓","st-done"],discovery:["✓◐","st-discovery"],partial:["◔","st-running"],null:["=","st-na"],negative:["−","st-negative"],failed:["✕","st-negative"],not_tested:["○","st-todo"]};
+const cnt={};DATA.ledger.forEach(r=>cnt[r.verdict]=(cnt[r.verdict]||0)+1);
+document.getElementById('legendC').innerHTML=Object.entries(DATA.verdicts).map(([k,v])=>`<span><i class="sw ${VER[k][1]}"></i>${VER[k][0]} ${esc(v)} (${cnt[k]||0})</span>`).join('');
+let hc='<thead><tr><th>Claim tested</th><th>Result</th><th>Verdict</th><th>Source</th></tr></thead><tbody>';
+DATA.ledger.forEach(r=>{hc+=`<tr><td class="rowh">${esc(r.claim)}</td><td style="white-space:normal">${esc(r.result)}</td><td class="st ${VER[r.verdict][1]}">${VER[r.verdict][0]} ${esc(DATA.verdicts[r.verdict].split(':')[0].split(' (')[0])}</td><td>${esc(r.source)}</td></tr>`});
+document.getElementById('tC').innerHTML=hc+'</tbody>';
+document.getElementById('capC').textContent='Figure 1c. Complete results ledger: every mechanism, model comparison, attack and fix tested in the merged PRs (plus open PRs #29 and #51 where marked), with the measured result and its verdict. Negative, null and failed results are kept on purpose. LongevityBench rows are a separate benchmark, not forms. Data: docs/figures/accomplishment_heatmap.json.';
+document.getElementById('theme').onclick=()=>{const r=document.documentElement;const cur=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=cur==='dark'?'light':'dark'};
+</script>
+</body>
+</html>

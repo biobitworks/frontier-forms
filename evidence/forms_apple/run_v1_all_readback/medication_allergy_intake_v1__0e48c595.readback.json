@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Graig Kub",
+    "text": "Graig Kub"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Astemizole 10 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Astemizole 10 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "cefdinir",
+    "text": "cefdinir"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Wheat (substance); Allergic disposition (finding)",
+    "text": "Wheat (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Essential hypertension (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Prediabetes (finding); Part-time employment (finding); Reports of violence in the environment (finding)",
+    "text": "Educated to high school level (finding); Essential hypertension (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Prediabetes (finding); Part-time employment (finding); Reports of violence in the environment (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "172.9",
+    "text": "172.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "83.9",
+    "text": "83.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "131/68",
+    "text": "131/68"
+  }
+}

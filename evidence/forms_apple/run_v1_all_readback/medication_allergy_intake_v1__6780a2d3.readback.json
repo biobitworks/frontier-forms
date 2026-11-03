@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Abdul Sipes",
+    "text": "Abdul Sipes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Naproxen sodium 220 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Hydrochlorothiazide 25 MG Oral Tablet; albuterol 5 MG/ML Inhalation Solution; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; 60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",
+    "text": "Naproxen sodium 220 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Hydrochlorothiazide 25 MG Oral Tablet; albuterol 5 MG/ML"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Chronic intractable migraine without aura (disorder); Chronic pain (finding); Impacted molars (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Essential hypertension (disorder); Has a criminal record (finding); Dependent drug abuse (disorder); Prediabetes (finding); Body mass index 30+ - obesity (finding); Metabolic syndrome X (disorder); Gingivitis (disorder); Anemia (disorder); Osteoarthritis of knee (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Chronic obstructive bronchitis (disorder); Sepsis (disorder); Medication review due (situation); Part-time employment (finding)",
+    "text": "Educated to high school level (finding); Chronic intractable migraine without aura (disorder); Chronic pain (finding); Impacted molars (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Essential hypertension (disorder); Has a criminal record (finding); Dependent drug"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "175.2",
+    "text": "175.2"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "84.7",
+    "text": "84.7"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "114/74",
+    "text": "114/74"
+  }
+}

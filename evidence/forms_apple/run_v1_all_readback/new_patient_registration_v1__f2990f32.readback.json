@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Laurie Powlowski",
+    "text": "Laurie Powlowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1992-07-19",
+    "text": "1992-07-19"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-573-9317",
+    "text": "555-573-9317"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "299 Ryan Trafficway",
+    "text": "299 Ryan Trafficway"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02124",
+    "text": "02124"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "security.scan.blocked.v1",
+  "tool": "snyk", "version": "1.1307.2", "host": "MacBookPro (magicPRO)", "observed_utc": "2026-11-02T21:41:53Z",
+  "command": "snyk whoami --experimental",
+  "observed_output": "ERROR Authentication error (SNYK-0005) Authentication credentials not recognized, or user access is not provisioned. Revise credentials and try again, or request access from your Snyk",
+  "result": "BLOCKED_AUTH_NO_SCAN_EXECUTED",
+  "magicSTUDIObox": "snyk binary NOT_INSTALLED",
+  "cloud_container": "snyk NOT_INSTALLED",
+  "claim": "No Snyk Code/Open Source/Container/IaC result exists for this branch; the gate stays NOT_TESTED, not PASS."
+}

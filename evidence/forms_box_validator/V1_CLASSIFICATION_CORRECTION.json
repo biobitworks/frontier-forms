@@ -1,0 +1,8 @@
+{
+  "corrected_state": "OBSERVED_TEMPLATE_KEY_FALSE_POSITIVE",
+  "correction": "Initial explanation that hashed patient identifier caused the scan was disproven by redacted match-field analysis in v2. The reported rule is generic-api-key and the actual matched property was template_key; diagnosis corrected append-only.",
+  "evidence": "redacted staged Gitleaks rule + matching property in line 1-18",
+  "preceding_statement": "FAILED_DIAGNOSIS",
+  "predecessor_record": "V1_FALSE_POSITIVE_RECEIPT.json",
+  "schema": "frontier-forms.scan-correction.v1"
+}

@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Schuppe",
+    "text": "Schuppe"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Gregory",
+    "text": "Gregory"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2023-01-07",
+    "text": "2023-01-07"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation); Chronic sinusitis (disorder)",
+    "text": "Medication review due (situation); Chronic sinusitis (disorder)"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "15",
+    "text": "15"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Uninsured",
+    "text": "Uninsured"
+  }
+}

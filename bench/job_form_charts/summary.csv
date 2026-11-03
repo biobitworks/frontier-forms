@@ -1,0 +1,16 @@
+model,setup,trials,median_seconds,min_seconds,max_seconds,median_correct,min_correct,max_correct,fields
+glm-5p3-fast,Agent loop,5,6.08,5.49,8.04,63,61,63,65
+glm-5p3-fast,Parallel groups,5,5.41,5.24,5.69,63,62,63,65
+glm-5p3-fast,+ Compact replies,5,5.58,5.05,5.61,62,62,62,65
+glm-5p3-fast,Parallel + one write,5,2.49,1.92,2.99,63,62,63,65
+glm-5p3-fast,All improvements,5,1.99,1.75,2.22,62,62,62,65
+glm-5p3-flash,Agent loop,5,8.98,8.45,10.57,64,64,64,65
+glm-5p3-flash,Parallel groups,5,6.84,6.23,8.6,62,62,62,65
+glm-5p3-flash,+ Compact replies,5,5.78,5.64,6.84,64,63,64,65
+glm-5p3-flash,Parallel + one write,5,4.2,2.83,6.31,62,62,63,65
+glm-5p3-flash,All improvements,5,3.29,2.52,3.42,64,63,64,65
+minimax-m3p1-flash,Agent loop,5,16.43,15.47,45.26,64,63,64,65
+minimax-m3p1-flash,Parallel groups,5,6.34,5.77,6.88,63,63,63,65
+minimax-m3p1-flash,+ Compact replies,5,5.56,5.09,5.72,64,64,64,65
+minimax-m3p1-flash,Parallel + one write,5,3.0,2.18,3.84,63,63,63,65
+minimax-m3p1-flash,All improvements,5,2.06,1.93,4.91,64,64,64,65

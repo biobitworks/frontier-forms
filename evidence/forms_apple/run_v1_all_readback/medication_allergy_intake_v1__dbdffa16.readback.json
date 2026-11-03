@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mickey Hintz",
+    "text": "Mickey Hintz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full-time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)",
+    "text": "Risk activity involvement (finding); Received higher education (finding); Stress (finding); Full- time employment (finding); Limited social contact (finding); Viral sinusitis (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "165",
+    "text": "165"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "66.3",
+    "text": "66.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "116/81",
+    "text": "116/81"
+  }
+}

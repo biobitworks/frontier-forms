@@ -1,0 +1,19 @@
+{
+  "event_count": 24,
+  "events_file_sha256": "c2c107cad6b75190063fa813b58de52f83f1040a7cade8796f42289c325b2632",
+  "fco_ablation_graph_root": "43684d54e9c21c968b05d789dcceb91e2eb7d730cb3a948d669d0f82fb4facfc",
+  "multiple_testing": "Holm adjustment separately for FCO and synthetic detector families",
+  "predecessor_snapshot_path": "evidence/training_progress/OBS-20261102T225425Z-2298972d1601",
+  "predecessor_snapshot_root": "2298972d1601ac449a1cf4953e31cb921fc32ca2036991125602bc0146ba778b",
+  "program_id": "frontier-forms",
+  "root": "a38f4704aa6ea6f55cac09bcda3681fde58cfc0d58f2250800ef92c45a6a3993",
+  "root_scheme": "SHA256(0x00||canonical_json_event); SHA256(0x01||left||right), duplicate-last",
+  "schema": "frontier-forms.training-progress-snapshot.v1",
+  "scientific_status": "DISCOVERY_ONLY; no live model training gain admitted",
+  "signed": "NOT_SIGNED",
+  "source_code_commit": "a058ba4b826fb3baa01e54d9993732dc4db01eb9",
+  "source_cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "timestamp_utc": "2026-11-02T22:56:23.628033+00:00",
+  "vita_daisy_scope": "ABSTRACTION_ONLY_SEPARATE_LANE",
+  "weights_vs_mechanism_separate": true
+}

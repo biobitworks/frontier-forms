@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jake West",
+    "text": "Jake West"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2026-07-07",
+    "text": "2026-07-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-440-9073",
+    "text": "555-440-9073"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "695 Hermiston Grove",
+    "text": "695 Hermiston Grove"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lexington",
+    "text": "Lexington"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02421",
+    "text": "02421"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

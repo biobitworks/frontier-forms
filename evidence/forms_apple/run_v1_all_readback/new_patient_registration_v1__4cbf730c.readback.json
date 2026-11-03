@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Trenton Kessler",
+    "text": "Trenton Kessler"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1979-07-17",
+    "text": "1979-07-17"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-131-6675",
+    "text": "555-131-6675"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "582 Rice Port",
+    "text": "582 Rice Port"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "New Bedford",
+    "text": "New Bedford"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02746",
+    "text": "02746"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

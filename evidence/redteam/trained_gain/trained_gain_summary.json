@@ -1,0 +1,128 @@
+{
+  "arms": {
+    "A0": "page OCR + rule parser (untrained)",
+    "A1": "A0 + learned correction",
+    "A2": "trained detector crops + OCR",
+    "A3": "A2 + learned correction"
+  },
+  "ceiling": "discovery promotion only; replication cohort NOT_TESTED; synthetic renders only",
+  "comparisons_vs_A0": {
+    "A1": {
+      "arm_all7": 22,
+      "arm_only": 8,
+      "baseline_all7": 14,
+      "baseline_fields_correct": 283,
+      "baseline_only": 0,
+      "ci95_bootstrap_stratified": [
+        0.06521739130434782,
+        0.2826086956521739
+      ],
+      "decision": "PROMOTE_DISCOVERY (replication NOT_TESTED)",
+      "delta_all7_rate": 0.17391304347826086,
+      "fields_correct": 296,
+      "fields_total": 322,
+      "n": 46,
+      "p_holm": 0.0234375,
+      "p_mcnemar_exact_two_sided": 0.0078125
+    },
+    "A2": {
+      "arm_all7": 9,
+      "arm_only": 4,
+      "baseline_all7": 14,
+      "baseline_fields_correct": 283,
+      "baseline_only": 9,
+      "ci95_bootstrap_stratified": [
+        -0.2608695652173913,
+        0.043478260869565216
+      ],
+      "decision": "NULL",
+      "delta_all7_rate": -0.10869565217391304,
+      "fields_correct": 276,
+      "fields_total": 322,
+      "n": 46,
+      "p_holm": 0.53369140625,
+      "p_mcnemar_exact_two_sided": 0.266845703125
+    },
+    "A3": {
+      "arm_all7": 15,
+      "arm_only": 6,
+      "baseline_all7": 14,
+      "baseline_fields_correct": 283,
+      "baseline_only": 5,
+      "ci95_bootstrap_stratified": [
+        -0.10869565217391304,
+        0.15217391304347827
+      ],
+      "decision": "NULL",
+      "delta_all7_rate": 0.021739130434782608,
+      "fields_correct": 288,
+      "fields_total": 322,
+      "n": 46,
+      "p_holm": 1.0,
+      "p_mcnemar_exact_two_sided": 1.0
+    }
+  },
+  "field_level": {
+    "A0:Birth date": 46,
+    "A0:Encounter date": 46,
+    "A0:Gender": 25,
+    "A0:Patient first": 38,
+    "A0:Patient last": 42,
+    "A0:Synthetic case": 41,
+    "A0:Visit class": 45,
+    "A1:Birth date": 46,
+    "A1:Encounter date": 46,
+    "A1:Gender": 25,
+    "A1:Patient first": 44,
+    "A1:Patient last": 44,
+    "A1:Synthetic case": 46,
+    "A1:Visit class": 45,
+    "A2:Birth date": 46,
+    "A2:Encounter date": 46,
+    "A2:Gender": 17,
+    "A2:Patient first": 41,
+    "A2:Patient last": 39,
+    "A2:Synthetic case": 41,
+    "A2:Visit class": 46,
+    "A3:Birth date": 46,
+    "A3:Encounter date": 46,
+    "A3:Gender": 17,
+    "A3:Patient first": 44,
+    "A3:Patient last": 44,
+    "A3:Synthetic case": 45,
+    "A3:Visit class": 46
+  },
+  "host": "magicSTUDIObox.local",
+  "preregistered_in": "scripts/redteam/trained_gain_eval.py docstring",
+  "schema": "redteam.trained_gain.v1",
+  "split_evaluated": "test (46 images), touched once",
+  "trained_components": {
+    "post_correction": {
+      "char_map": {
+        "Birth date": {},
+        "Encounter date": {},
+        "Gender": {},
+        "Patient first": {},
+        "Patient last": {},
+        "Synthetic case": {
+          "O->0": 1
+        },
+        "Visit class": {}
+      },
+      "fit_on": "SYNFORM2 train split Apple OCR (132 images)",
+      "strip_spaces": {
+        "Birth date": true,
+        "Encounter date": true,
+        "Gender": true,
+        "Patient first": true,
+        "Patient last": true,
+        "Synthetic case": true,
+        "Visit class": true
+      }
+    },
+    "trained_on": "SYNFORM2 train split (132 images)",
+    "yolov8n_detector_best_sha256": "d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba"
+  },
+  "utc": "2026-11-02T23:51:55Z",
+  "wall_seconds": 112.1
+}

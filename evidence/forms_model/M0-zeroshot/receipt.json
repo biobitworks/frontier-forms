@@ -1,0 +1,28 @@
+{
+  "adapter_path": null,
+  "adapter_sha256": null,
+  "arm": "M0-zeroshot-qwen2.5-0.5b",
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "cohort_root_evaluated": "3cd5eff2eb2b2eb7bda436ae8aaa5f18dbd23c8051d63d3b0f249608c0ff8ce6",
+  "decoding": "greedy, max_new_tokens=192",
+  "device": "mps",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "torch": "2.8.0"
+  },
+  "hosted_inference": "NONE",
+  "malformed_outputs": 0,
+  "model_calls": 920,
+  "model_seconds": 3410.1,
+  "n_cases": 92,
+  "n_patients": 37,
+  "output_root": "c86a2a6dd2a7ef596b247826c50a3ff98b92f83dfb39437ff0201d2ed6b36a0b",
+  "predictions_sha256": "c77406a08e62d8650da124ac4c95a3f4aa5750191cb164314bd5c9d5051d65e8",
+  "splits": [
+    "test",
+    "validation"
+  ],
+  "wall_seconds": 3423.0
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Man Mertz",
+    "text": "Man Mertz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Hydrocortisone 10 MG/ML Topical Cream; diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; doxycycline hyclate 100 MG; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "text": "Hydrocortisone 10 MG/ML Topical Cream; diphenhydrAMINE Hydrochloride 25 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; doxycycline hyclate 100 MG; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin; Penicillin V",
+    "text": "Aspirin; Penicillin V"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Allergic disposition (finding)",
+    "text": "Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Only received primary school education (finding); Misuses drugs (finding); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Stress (finding); Not in labor force (finding)",
+    "text": "Chronic sinusitis (disorder); Only received primary school education (finding); Misuses drugs (finding); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "174.5",
+    "text": "174.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "85.9",
+    "text": "85.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "105/59",
+    "text": "105/59"
+  }
+}

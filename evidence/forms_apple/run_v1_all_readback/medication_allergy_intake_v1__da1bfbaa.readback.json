@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Margeret Ferry",
+    "text": "Margeret Ferry"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; 24 HR tacrolimus 1 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Chronic sinusitis (disorder); Diabetes mellitus type 2 (disorder); Past pregnancy history of miscarriage (situation); Nonproliferative diabetic retinopathy due to type 2 diabetes mellitus (disorder); Hypertriglyceridemia (disorder); History of tubal ligation (situation); Metabolic syndrome X (disorder); Disorder of kidney due to diabetes mellitus (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Has a criminal record (finding); Proteinuria due to type 2 diabetes mellitus (disorder); Body mass index 30+ - obesity (finding); History of renal transplant (situation); Essential hypertension (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Chronic kidney disease stage 1 (disorder); Chronic kidney disease stage 2 (disorder); Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Gingivitis (disorder); Chronic kidney disease stage 3 (disorder); Chronic kidney disease stage 4 (disorder); Awaiting transplantation of kidney (situation); End-stage renal disease (disorder); Macular edema and retinopathy due to type 2 diabetes mellitus (disorder); Part-time employment (finding); Medication review due (situation)",
+    "text": "Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Chronic sinusitis (disorder); Diabetes mellitus type 2 (disorder); Past pregnancy history of miscarriage (situation); Nonproliferative diabetic retinopathy due to type 2 diabetes mellitus (disorder);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "173.9",
+    "text": "173.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "85.9",
+    "text": "85.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "94/52",
+    "text": "94/52"
+  }
+}

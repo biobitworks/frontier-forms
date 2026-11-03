@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jarred Cartwright",
+    "text": "Jarred Cartwright"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1992-06-24",
+    "text": "1992-06-24"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-927-5490",
+    "text": "555-927-5490"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "799 Kohler Promenade",
+    "text": "799 Kohler Promenade"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Somerville",
+    "text": "Somerville"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02155",
+    "text": "02155"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

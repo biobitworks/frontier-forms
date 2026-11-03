@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Wilfred Parker",
+    "text": "Wilfred Parker"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Medication review due (situation)",
+    "text": "Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "168.6",
+    "text": "168.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "69.1",
+    "text": "69.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "105/67",
+    "text": "105/67"
+  }
+}

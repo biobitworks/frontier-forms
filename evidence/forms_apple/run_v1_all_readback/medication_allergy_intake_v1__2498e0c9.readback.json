@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Weston Schroeder",
+    "text": "Weston Schroeder"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "100.3",
+    "text": "100.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "16.2",
+    "text": "16.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "139/77",
+    "text": "139/77"
+  }
+}

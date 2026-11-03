@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ramon Reichert",
+    "text": "Ramon Reichert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1967-04-11",
+    "text": "1967-04-11"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-518-1761",
+    "text": "555-518-1761"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "604 Hoeger Gardens",
+    "text": "604 Hoeger Gardens"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02113",
+    "text": "02113"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

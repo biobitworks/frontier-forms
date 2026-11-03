@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ethelyn Ebert",
+    "text": "Ethelyn Ebert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+    "text": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Glycine max (substance); Shellfish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)",
+    "text": "Glycine max (substance); Shellfish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Received higher education (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Social isolation (finding); Body mass index 30+ - obesity (finding); Limited social contact (finding); Stress (finding); Unhealthy alcohol drinking behavior (finding); Medication review due (situation); Part-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Received higher education (finding); Past pregnancy history of miscarriage (situation); Prediabetes (finding); Anemia (disorder); Social isolation (finding); Body mass index 30+ - obesity (finding); Limited social contact (finding); Stress (finding); Unhealthy"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "170.9",
+    "text": "170.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "83.7",
+    "text": "83.7"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "130/78",
+    "text": "130/78"
+  }
+}

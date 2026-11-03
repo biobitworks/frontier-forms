@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ted Renner",
+    "text": "Ted Renner"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2014-09-21",
+    "text": "2014-09-21"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-962-5670",
+    "text": "555-962-5670"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1092 Blanda Dale",
+    "text": "1092 Blanda Dale"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lynn",
+    "text": "Lynn"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01906",
+    "text": "01906"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

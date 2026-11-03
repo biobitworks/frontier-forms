@@ -1,0 +1,109 @@
+{
+  "arms": [
+    {
+      "arm": "A1",
+      "baseline_all7": 14,
+      "both_correct": 14,
+      "both_incorrect": 24,
+      "challenger_all7": 22,
+      "delta_all7": 0.17391304347826086,
+      "discordant_baseline_only": 0,
+      "discordant_challenger_only": 8,
+      "discovery_positive": true,
+      "effect_type": "OCR_POST_CORRECTION_TABLE",
+      "mcnemar_exact": 0.0078125,
+      "model_weights_sha256": null,
+      "n_images": 46,
+      "n_synthetic_cases": 23,
+      "p_holm_3_comparisons": 0.0234375,
+      "patient_cluster_bootstrap95": [
+        0.043478260869565216,
+        0.32608695652173914
+      ],
+      "patient_cluster_bootstrap_reps": 10000,
+      "source_bootstrap_stratified_by_render": [
+        0.06521739130434782,
+        0.2826086956521739
+      ],
+      "status": "NOT_PROMOTED_EXTERNAL_REPLICATION_PENDING"
+    },
+    {
+      "arm": "A2",
+      "baseline_all7": 14,
+      "both_correct": 5,
+      "both_incorrect": 28,
+      "challenger_all7": 9,
+      "delta_all7": -0.10869565217391304,
+      "discordant_baseline_only": 9,
+      "discordant_challenger_only": 4,
+      "discovery_positive": false,
+      "effect_type": "DETECTOR_CROP_COMPARISON",
+      "mcnemar_exact": 0.266845703125,
+      "model_weights_sha256": null,
+      "n_images": 46,
+      "n_synthetic_cases": 23,
+      "p_holm_3_comparisons": 0.53369140625,
+      "patient_cluster_bootstrap95": [
+        -0.2826086956521739,
+        0.06521739130434782
+      ],
+      "patient_cluster_bootstrap_reps": 10000,
+      "source_bootstrap_stratified_by_render": [
+        -0.2608695652173913,
+        0.043478260869565216
+      ],
+      "status": "NULL_OR_NEGATIVE_NO_PROMOTION"
+    },
+    {
+      "arm": "A3",
+      "baseline_all7": 14,
+      "both_correct": 9,
+      "both_incorrect": 26,
+      "challenger_all7": 15,
+      "delta_all7": 0.021739130434782608,
+      "discordant_baseline_only": 5,
+      "discordant_challenger_only": 6,
+      "discovery_positive": false,
+      "effect_type": "DETECTOR_CROP_COMPARISON",
+      "mcnemar_exact": 1.0,
+      "model_weights_sha256": null,
+      "n_images": 46,
+      "n_synthetic_cases": 23,
+      "p_holm_3_comparisons": 1.0,
+      "patient_cluster_bootstrap95": [
+        -0.13043478260869565,
+        0.1956521739130435
+      ],
+      "patient_cluster_bootstrap_reps": 10000,
+      "source_bootstrap_stratified_by_render": [
+        -0.10869565217391304,
+        0.15217391304347827
+      ],
+      "status": "NULL_OR_NEGATIVE_NO_PROMOTION"
+    }
+  ],
+  "correction_parameters_sha256": "34088191240ed2f09d2b3683d38e2661468e909015511988cd03b5a2266cc5c2",
+  "daisy_performance_gain": "NOT_COMPUTED",
+  "detector_checkpoint_bytes_independently_rehashed": false,
+  "detector_weights_sha256_recorded": "d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba",
+  "external_daisy_model_or_data_used": false,
+  "observed_discovery_positive_arms": 1,
+  "ocr_event_root": "5acbf8276ed1c184423ea68b9973acec96a3a47e030d296f83e23c1c005071cb",
+  "patient_cluster_bootstrap": "23 paired cases, 10,000 whole-case resamples, same clean+scan pair each draw",
+  "performance_heterogeneity": "clean/scan correlated and same family layout; no cross-template replication",
+  "predecessor_judge_outcome_root": "71d3bdac181ca273537a4493ea967a41bd618eabfc83590c750b633d180ceae6",
+  "preregistration_state": "SELF_REPORTED_SCRIPT_DOCSTRING_PRETEST_TIMESTAMP_NOT_INDEPENDENTLY_VERIFIED",
+  "program": "frontier-forms",
+  "root_recipe": "SHA256(0x00+sorted_compact_UTF8_JSON_arm); SHA256(0x01+left_raw+right_raw); duplicate last",
+  "rows_case_variant_sha256": "144b4fcc12ef76dac14180b1785d49c7080114b930b6dabcc62c585813237922",
+  "schema": "frontier-forms.ocr-correction-independent-paired-successor.v2",
+  "scientific_admission": "HOLD_PENDING_INDEPENDENT_PROSPECTIVE_PATIENT_AND_TEMPLATE_REPLICATION",
+  "scope": "SYNFORM2 synthetic 23 cases x clean/scan, 46 images, 7 fields",
+  "source_file_sha256": {
+    "evidence/redteam/trained_gain/trained_gain_rows.json": "df92911f8700a1af858c59928b3ab02ae5104c3261a1e9d61d6e17be3b5ca69c",
+    "evidence/redteam/trained_gain/trained_gain_summary.json": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+  },
+  "source_form_weight_type": "FITTED_OCR_CORRECTION_TABLE_NOT_NEURAL_WEIGHTS",
+  "source_multiplicity": "Holm across A1/A2/A3",
+  "source_test_split": "reported one test touch (46 images); preregistration chronology not independently proven from a pre-test signed receipt"
+}

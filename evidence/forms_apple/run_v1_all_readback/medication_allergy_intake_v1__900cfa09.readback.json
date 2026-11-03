@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Marry Dickens",
+    "text": "Marry Dickens"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Glycopyrrolate 1.5 MG Oral Tablet [Glycate]; NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal System; Ibuprofen 400 MG Oral Tablet [Ibu]",
+    "text": "Glycopyrrolate 1.5 MG Oral Tablet [Glycate]; NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal System; Ibuprofen 400 MG Oral Tablet [Ibu]"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Cerebral palsy (disorder); Spasticity (finding); Epilepsy (disorder); Gastroesophageal reflux disease (disorder); Excessive salivation (disorder); Dribbling from mouth (finding); Gingivitis (disorder); Received higher education (finding); Chronic pain (finding); Chronic low back pain (finding); Unemployed (finding); Stress (finding)",
+    "text": "Cerebral palsy (disorder); Spasticity (finding); Epilepsy (disorder); Gastroesophageal reflux disease (disorder); Excessive salivation (disorder); Dribbling from mouth (finding); Gingivitis (disorder); Received higher education (finding); Chronic pain (finding); Chronic low back pain"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "153.8",
+    "text": "153.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "66",
+    "text": "66"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "108/80",
+    "text": "108/80"
+  }
+}

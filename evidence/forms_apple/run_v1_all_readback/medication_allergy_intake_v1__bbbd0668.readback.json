@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Denise Schroeder",
+    "text": "Denise Schroeder"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+    "text": "Acetaminophen 325 MG Oral Tablet [Tylenol]"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Chronic pain (finding); Chronic low back pain (finding); Past pregnancy history of miscarriage (situation); Stress (finding); Medication review due (situation); Full-time employment (finding); Severe anxiety (panic) (finding); Normal pregnancy (finding)",
+    "text": "Educated to high school level (finding); Chronic pain (finding); Chronic low back pain (finding); Past pregnancy history of miscarriage (situation); Stress (finding); Medication review due (situation); Full-time employment (finding); Severe anxiety (panic) (finding); Normal pregnancy"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "161.9",
+    "text": "161.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "71",
+    "text": "71"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "115/68",
+    "text": "115/68"
+  }
+}

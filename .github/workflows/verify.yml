@@ -18,9 +18,24 @@ jobs:
       - run: python3 scripts/verify_predecessor.py --bundle evidence/freeze/predecessor
       - run: python3 scripts/verify_review_export.py
       - run: python3 scripts/validate_pair_export.py
+      - name: Install pinned independent statistical engine
+        run: |
+          python3 -m pip install --disable-pip-version-check --only-binary=:all: numpy==1.26.4 scipy==1.15.3
       - run: python3 -m unittest discover -s tests -v
+      - name: Independently verify judge demo synthetic manifest
+        run: python3 scripts/verify_judge_demo_manifest.py
+      - name: Recompute judge FCO/YOLO negative and admission evidence
+        run: python3 scripts/verify_judge_outcome_successor.py
+      - name: Verify discovery admission and standard-vs-integrated novelty ledger
+        run: python3 scripts/build_discovery_admission_v2.py
+      - name: Recompute independent paired OCR correction and patient bootstrap
+        run: python3 scripts/verify_ocr_correction_successor.py
+      - name: Frontier Forms FCAR boundary and admission gate
+        run: python3 scripts/check_fcar_admission.py
       - name: Check prohibited raw payload types
         run: python3 scripts/check_public_payloads.py
+      - name: Synthetic-only JSON publication gate (immutable legacy blob exemption)
+        run: python3 scripts/check_synthetic_json_policy.py
       - name: Gitleaks (full history, pinned binary)
         run: |
           curl -sSfL -o /tmp/gitleaks.tgz https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz

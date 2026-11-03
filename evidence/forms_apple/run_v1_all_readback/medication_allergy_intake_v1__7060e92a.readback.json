@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Antione Blick",
+    "text": "Antione Blick"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; aspirin 81 MG Oral Tablet; 24 HR metoprolol succinate 25 MG Extended Release Oral Tablet; simvastatin 40 MG Oral Tablet; lisinopril 20 MG Oral Tablet; carvedilol 25 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet; Furosemide 40 MG Oral Tablet; losartan potassium 50 MG Oral Tablet; 24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet; lisinopril 10 MG Oral Tablet; Simvastatin 10 MG Oral Tablet",
+    "text": "Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; aspirin 81 MG Oral Tablet; 24 HR metoprolol succinate 25 MG Extended Release Oral Tablet; simvastatin 40 MG Oral Tablet;"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 40+ - severely obese (finding); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Diabetes mellitus type 2 (disorder); Hyperglycemia (disorder); Hypertriglyceridemia (disorder); Nonproliferative diabetic retinopathy due to type 2 diabetes mellitus (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Acute non-ST segment elevation myocardial infarction (disorder); History of myocardial infarction (situation); Gingivitis (disorder); Full-time employment (finding); Chronic congestive heart failure (disorder); Stress (finding)",
+    "text": "Chronic sinusitis (disorder); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 40+ - severely obese (finding); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Diabetes"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "173.9",
+    "text": "173.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "111.7",
+    "text": "111.7"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "87/33",
+    "text": "87/33"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Rohan",
+    "text": "Rohan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Rolando",
+    "text": "Rolando"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "1981-06-18",
+    "text": "1981-06-18"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)",
+    "text": "Educated to high school level (finding); Body mass index 30+ - obesity (finding); Medication review due (situation); Full-time employment (finding); Stress (finding)"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "103.2",
+    "text": "103.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

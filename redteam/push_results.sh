@@ -4,7 +4,8 @@
 # Only redteam/results/bits_*.jsonl and summary_*.json are staged. Gold/raw stay private.
 P="$1"; G="$2"; PY="${PY:-python3}"
 set -e
-git pull -q --rebase origin redteam/claude-fcg-local-ablation-20261102
+B=$(git rev-parse --abbrev-ref HEAD)  # push to whatever branch the clone has checked out
+git pull -q --rebase origin "$B"
 for f in $P/out_$G.jsonl; do
   [ -s "$f" ] && $PY redteam/analyze.py export --private "$f" --results redteam/results
 done
@@ -15,5 +16,5 @@ git commit -q -m "results: incremental public ablation bits ($(hostname -s), $n 
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_015q5z1zKr1rBHbSRyNW2L18"
-for i in 1 2 3 4; do git pull -q --rebase origin redteam/claude-fcg-local-ablation-20261102 && git push -q origin HEAD:redteam/claude-fcg-local-ablation-20261102 && echo PUSHED && exit 0; sleep $((i*2)); done
+for i in 1 2 3 4; do git pull -q --rebase origin "$B" && git push -q origin HEAD:"$B" && echo PUSHED && exit 0; sleep $((i*2)); done
 exit 1

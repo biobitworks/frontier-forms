@@ -177,7 +177,9 @@ def check_728(evidence: Path | None) -> dict:
 
 def introducing_commit(repo: Path, rel: str) -> str:
     out = git(repo, "log", "--diff-filter=A", "--format=%H", "--", rel).decode().split()
-    return out[-1]
+    if not out:  # bundle introduced inside a merge commit (e.g. REVIEW-90761061 on main): diff merges too
+        out = git(repo, "log", "-m", "--diff-filter=A", "--format=%H", "--", rel).decode().split()
+    return out[-1] if out else "HEAD"
 
 
 def check_reviews(repo: Path) -> list[dict]:

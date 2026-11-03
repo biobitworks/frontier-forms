@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Hans Friesen",
+    "text": "Hans Friesen"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1979-07-22",
+    "text": "1979-07-22"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-730-6117",
+    "text": "555-730-6117"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "817 Konopelski Stravenue",
+    "text": "817 Konopelski Stravenue"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Attleboro",
+    "text": "Attleboro"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02703",
+    "text": "02703"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

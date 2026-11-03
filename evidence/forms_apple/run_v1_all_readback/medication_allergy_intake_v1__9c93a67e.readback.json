@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Charlette Kuphal",
+    "text": "Charlette Kuphal"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "lisinopril 10 MG Oral Tablet",
+    "text": "lisinopril 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Educated to high school level (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Sleep disorder (disorder); Sleep apnea (disorder); Gingivitis (disorder); Medication"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "162",
+    "text": "162"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "74.3",
+    "text": "74.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "111/70",
+    "text": "111/70"
+  }
+}

@@ -18,6 +18,13 @@
       "admitted": "NOT_ADMITTED",
       "comparison": "H1",
       "discovery": "NEGATIVE",
+      "heldout": "NOT_TESTED",
+      "lane": "P-L3c"
+    },
+    {
+      "admitted": "NOT_ADMITTED",
+      "comparison": "H1",
+      "discovery": "NEGATIVE",
       "heldout": "NEGATIVE",
       "lane": "S-L0"
     },
@@ -46,6 +53,13 @@
       "admitted": "NOT_ADMITTED",
       "comparison": "H2",
       "discovery": "NEGATIVE",
+      "heldout": "NOT_TESTED",
+      "lane": "P-L3c"
+    },
+    {
+      "admitted": "NOT_ADMITTED",
+      "comparison": "H2",
+      "discovery": "NEGATIVE",
       "heldout": "NEGATIVE",
       "lane": "S-L0"
     },
@@ -69,6 +83,13 @@
       "discovery": "INVALID_INFRA_FAILURE",
       "heldout": "INVALID_INFRA_FAILURE",
       "lane": "P-L3"
+    },
+    {
+      "admitted": "NOT_ADMITTED",
+      "comparison": "H3",
+      "discovery": "NEGATIVE",
+      "heldout": "NOT_TESTED",
+      "lane": "P-L3c"
     },
     {
       "admitted": "NOT_ADMITTED",
@@ -728,6 +749,62 @@
       "n": 39,
       "partition": "heldout",
       "prompt_tokens_total": 1258,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 0,
+      "arm": "B0_baseline",
+      "completion_tokens_total": 76,
+      "correct_lenient": 25,
+      "correct_strict": 25,
+      "failed": 0,
+      "lane": "P-L3c",
+      "latency_median_s": 14.379999999999999,
+      "n": 38,
+      "partition": "discovery",
+      "prompt_tokens_total": 21580,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 0,
+      "arm": "C1_fco_projection",
+      "completion_tokens_total": 76,
+      "correct_lenient": 28,
+      "correct_strict": 28,
+      "failed": 0,
+      "lane": "P-L3c",
+      "latency_median_s": 15.827,
+      "n": 38,
+      "partition": "discovery",
+      "prompt_tokens_total": 28871,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 0,
+      "arm": "C2_full_fcg",
+      "completion_tokens_total": 76,
+      "correct_lenient": 24,
+      "correct_strict": 24,
+      "failed": 0,
+      "lane": "P-L3c",
+      "latency_median_s": 18.964,
+      "n": 38,
+      "partition": "discovery",
+      "prompt_tokens_total": 73667,
+      "truncation_risk": 0
+    },
+    {
+      "abstain_strict": 0,
+      "arm": "C3_minus_source_leaf",
+      "completion_tokens_total": 50,
+      "correct_lenient": 15,
+      "correct_strict": 15,
+      "failed": 0,
+      "lane": "P-L3c",
+      "latency_median_s": 17.686,
+      "n": 25,
+      "partition": "discovery",
+      "prompt_tokens_total": 47011,
       "truncation_risk": 0
     },
     {
@@ -4761,6 +4838,336 @@
       "auroc": "NOT_COMPUTED",
       "baseline": {
         "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          -0.15789473684210525,
+          0.10526315789473684
+        ],
+        "mean": -0.024913157894736842,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "C2 context block (FCO projection + leaf hash + proof + root + edge + predecessor roots): ADDED",
+      "challenger": {
+        "harness": "C2_full_fcg",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 24,
+      "claim_status": "NEGATIVE",
+      "comparison": "H1",
+      "contingency": {
+        "base_only": 4,
+        "both_correct": 21,
+        "both_wrong": 10,
+        "chal_only": 3
+      },
+      "delta_accuracy_abs": -0.026315789473684292,
+      "delta_accuracy_rel": -0.04000000000000012,
+      "experiment_id": "RT-P-L3c-discovery-H1-strict",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": 1.0,
+      "identical_prompts": 0,
+      "kind": "HARNESS_CONTEXT",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 1.0,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "strict",
+      "parser_role": "PRIMARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.15789473684210525
+        ],
+        "mean": 0.07941315789473684,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "C1 FCO projection fields: ADDED",
+      "challenger": {
+        "harness": "C1_fco_projection",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 28,
+      "claim_status": "NEGATIVE",
+      "comparison": "H2",
+      "contingency": {
+        "base_only": 0,
+        "both_correct": 25,
+        "both_wrong": 10,
+        "chal_only": 3
+      },
+      "delta_accuracy_abs": 0.07894736842105254,
+      "delta_accuracy_rel": 0.11999999999999986,
+      "experiment_id": "RT-P-L3c-discovery-H2-strict",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": 0.75,
+      "identical_prompts": 0,
+      "kind": "HARNESS_CONTEXT",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 0.25,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "strict",
+      "parser_role": "PRIMARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "C2_full_fcg",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 15,
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "source FCO leaf id + DERIVED_INPUT_AT edge: REMOVED",
+      "challenger": {
+        "harness": "C3_minus_source_leaf",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 15,
+      "claim_status": "NEGATIVE",
+      "comparison": "H3",
+      "contingency": {
+        "base_only": 0,
+        "both_correct": 15,
+        "both_wrong": 10,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": 0.0,
+      "delta_accuracy_rel": 0.0,
+      "experiment_id": "RT-P-L3c-discovery-H3-strict",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "b42243979cc0d96e2e1a87058aa576dcd907165c622115891079fbf00c17cc4f",
+      "holm_p": 1.0,
+      "identical_prompts": 0,
+      "kind": "LEAF_REMOVED",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 1.0,
+      "n": 25,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "strict",
+      "parser_role": "PRIMARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          -0.15789473684210525,
+          0.10526315789473684
+        ],
+        "mean": -0.024913157894736842,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "C2 context block (FCO projection + leaf hash + proof + root + edge + predecessor roots): ADDED",
+      "challenger": {
+        "harness": "C2_full_fcg",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 24,
+      "claim_status": "NEGATIVE",
+      "comparison": "H1",
+      "contingency": {
+        "base_only": 4,
+        "both_correct": 21,
+        "both_wrong": 10,
+        "chal_only": 3
+      },
+      "delta_accuracy_abs": -0.026315789473684292,
+      "delta_accuracy_rel": -0.04000000000000012,
+      "experiment_id": "RT-P-L3c-discovery-H1-lenient",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": 1.0,
+      "identical_prompts": 0,
+      "kind": "HARNESS_CONTEXT",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 1.0,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "lenient",
+      "parser_role": "SECONDARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.15789473684210525
+        ],
+        "mean": 0.07941315789473684,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "C1 FCO projection fields: ADDED",
+      "challenger": {
+        "harness": "C1_fco_projection",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 28,
+      "claim_status": "NEGATIVE",
+      "comparison": "H2",
+      "contingency": {
+        "base_only": 0,
+        "both_correct": 25,
+        "both_wrong": 10,
+        "chal_only": 3
+      },
+      "delta_accuracy_abs": 0.07894736842105254,
+      "delta_accuracy_rel": 0.11999999999999986,
+      "experiment_id": "RT-P-L3c-discovery-H2-lenient",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "a359daf5a8ae3cbb313674dc32fc010f3d76f70cb055c55dadacf24fea35bc94",
+      "holm_p": 0.75,
+      "identical_prompts": 0,
+      "kind": "HARNESS_CONTEXT",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 0.25,
+      "n": 38,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "lenient",
+      "parser_role": "SECONDARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "C2_full_fcg",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "baseline_correct": 15,
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "candidate_leaf_or_edge": "source FCO leaf id + DERIVED_INPUT_AT edge: REMOVED",
+      "challenger": {
+        "harness": "C3_minus_source_leaf",
+        "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+        "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+        "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}"
+      },
+      "challenger_correct": 15,
+      "claim_status": "NEGATIVE",
+      "comparison": "H3",
+      "contingency": {
+        "base_only": 0,
+        "both_correct": 15,
+        "both_wrong": 10,
+        "chal_only": 0
+      },
+      "delta_accuracy_abs": 0.0,
+      "delta_accuracy_rel": 0.0,
+      "experiment_id": "RT-P-L3c-discovery-H3-lenient",
+      "failed_records": 0,
+      "family": "test",
+      "frozen_case_ids_sha256": "b42243979cc0d96e2e1a87058aa576dcd907165c622115891079fbf00c17cc4f",
+      "holm_p": 1.0,
+      "identical_prompts": 0,
+      "kind": "LEAF_REMOVED",
+      "lane": "P-L3c",
+      "mcnemar_exact_p": 1.0,
+      "n": 25,
+      "parent_fco_root": "5f9a7e51f1ee03d70d34e99358fe14230efa396f7fd851df21f424e6843f61b1",
+      "parent_review_root": "2f1cfafda7de0153fc932c52f36ce49d7ea25307b218ba392bae80b8d72c95a2",
+      "parser": "lenient",
+      "parser_role": "SECONDARY",
+      "partition": "discovery",
+      "successor_root": "NOT_COMPUTED",
+      "token_roi": "NOT_COMPUTED_LOCAL_NO_PRICED_USAGE"
+    },
+    {
+      "auroc": "NOT_COMPUTED",
+      "baseline": {
+        "harness": "B0_baseline",
         "model": "lfm2-1.2b-longevity-q4km:latest",
         "model_digest": "3839bfb14341e133de5e2bfd4f894da27ea69d35a90c7ea0e230e1824eca9016",
         "runtime": "0.33.0"
@@ -8473,6 +8880,63 @@
       "runtime": "0.32.15",
       "seed": 20261102
     },
+    "P-L3c|discovery": {
+      "backend": "hf",
+      "classification": {
+        "B0_baseline": {
+          "f1": 0.6576576576576576,
+          "fdr": 0.3295454545454546,
+          "fnr": 0.3319327731092437,
+          "fpr": 0.3319327731092437,
+          "precision": 0.6704545454545454,
+          "recall": 0.6680672268907563
+        },
+        "C1_fco_projection": {
+          "f1": 0.7361111111111112,
+          "fdr": 0.2631578947368421,
+          "fnr": 0.26050420168067223,
+          "fpr": 0.26050420168067223,
+          "precision": 0.736842105263158,
+          "recall": 0.7394957983193278
+        },
+        "C2_full_fcg": {
+          "f1": 0.6305555555555558,
+          "fdr": 0.3684210526315789,
+          "fnr": 0.3669467787114846,
+          "fpr": 0.3669467787114846,
+          "precision": 0.631578947368421,
+          "recall": 0.6330532212885154
+        },
+        "C3_minus_source_leaf": {
+          "f1": 0.5941558441558441,
+          "fdr": 0.40584415584415584,
+          "fnr": 0.40584415584415584,
+          "fpr": 0.40584415584415584,
+          "precision": 0.5941558441558441,
+          "recall": 0.5941558441558441
+        }
+      },
+      "host": "MacBookPro",
+      "injection": {
+        "attacker_success": 0,
+        "attacker_success_rate": null,
+        "c2_already_predicted_target": 0,
+        "definition": "success = lenient prediction equals gold-blind injected target AND target != gold; c2_already_predicted_target counts cases the model chose that letter without injection",
+        "n_cases": 0,
+        "n_target_not_gold": 0
+      },
+      "lane": "P-L3c",
+      "max_new_tokens": 16,
+      "model": "/Users/byron/.cache/huggingface/hub/models--insilicomedicine--Qwen3-0.6B-Longevity/snapshots/bffdda93f7f228280c375db8e7078162d9446a4c",
+      "model_digest": "sha256:f547df5c82226b524fc44748876685000f34208efe80aeef8f8eb7238b5a5cce",
+      "n_records": 139,
+      "num_ctx": null,
+      "partition": "discovery",
+      "platform": "macOS-27.2-arm64-arm-64bit",
+      "private_output_sha256": "d0c3d9bac0a53818ed799f36f28a8a1d222dec1461b9fbaddc6cbf4575ad6d76",
+      "runtime": "torch 2.8.0; transformers 4.57.3; device cpu; tokenizer_workaround extra_special_tokens={}",
+      "seed": 20261102
+    },
     "P-L3|discovery": {
       "backend": "hf",
       "classification": {
@@ -9143,15 +9607,59 @@
     },
     {
       "baseline": "S-L0",
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          -0.15789473684210525,
+          0.18421052631578946
+        ],
+        "mean": -1.5789473684210516e-05,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
       "challenger": "P-L3c",
+      "challenger_correct": 25,
+      "contingency": {
+        "base_only": 7,
+        "both_correct": 18,
+        "both_wrong": 6,
+        "chal_only": 7
+      },
+      "kind": "MODEL",
+      "mcnemar_exact_p": 1.0,
+      "n": 38,
       "partition": "discovery",
-      "status": "NOT_TESTED"
+      "per_case_agreement": 24,
+      "prompt_identical": 38
     },
     {
       "baseline": "P-L3",
+      "baseline_correct": 25,
+      "bootstrap": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "method": "paired, resample within task strata, percentile",
+        "reps": 10000,
+        "seed": 20261102
+      },
       "challenger": "P-L3c",
+      "challenger_correct": 25,
+      "contingency": {
+        "base_only": 0,
+        "both_correct": 25,
+        "both_wrong": 13,
+        "chal_only": 0
+      },
+      "kind": "HARDWARE_REPLICATION",
+      "mcnemar_exact_p": 1.0,
+      "n": 38,
       "partition": "discovery",
-      "status": "NOT_TESTED"
+      "per_case_agreement": 38,
+      "prompt_identical": 38
     },
     {
       "baseline": "S-L0",

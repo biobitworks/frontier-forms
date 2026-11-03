@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Oscar Collier",
+    "text": "Oscar Collier"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Levothyroxine Sodium 0.075 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG /"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic hypothyroidism (disorder); Gingivitis (disorder); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Alzheimer's disease (disorder); Medication review due (situation); Stress (finding); Limited social contact (finding); Part-time employment (finding)",
+    "text": "Risk activity involvement (finding); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Idiopathic atrophic"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "183.6",
+    "text": "183.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "92.5",
+    "text": "92.5"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "102/56",
+    "text": "102/56"
+  }
+}

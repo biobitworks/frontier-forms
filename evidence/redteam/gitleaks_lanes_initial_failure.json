@@ -1,0 +1,12 @@
+{
+  "affected_files": "evidence/redteam/lanes/*_PUBLIC.jsonl (LongevityBench lanes)",
+  "finding_count": 273,
+  "note": "the first export commit 33245d5 was pushed before the finding was acted on; the successor renames the field to case_digest_sha256 in exported copies (values unchanged), originals stay on the host; re-scan recorded separately",
+  "observed_utc": "2026-11-02T22:18Z",
+  "reason": "JSON field named \"key\" holding a 64-hex case digest matches the generic-api-key pattern; no secret present (same false-positive class the predecessor hit with row_key_sha256)",
+  "result": "FAIL",
+  "review_status": "NO_SECRET_IDENTIFIED",
+  "rule_id": "generic-api-key",
+  "schema": "security.scan.failure.v1",
+  "tool": "gitleaks (magicSTUDIObox, dir mode, pre-push)"
+}

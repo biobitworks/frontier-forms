@@ -1,0 +1,21 @@
+{
+  "claim": "INTEGRITY_ONLY_NOT_TRUTH",
+  "finding_F01": "duplicate-last-odd: appending a copy of the last leaf keeps the root; leaf_count must be bound outside the root (it is, unsigned)",
+  "host_receipt_status": {
+    "duplicate_last_leaf_collision_present": true,
+    "oracle_isolation_public_inputs": "PASS",
+    "pair_binding_38": "PASS",
+    "root_15": "PASS",
+    "root_728": "PASS",
+    "split_regeneration": "PASS"
+  },
+  "negative_controls": {
+    "corrupt": true,
+    "duplicate_last_same_root": true,
+    "prefix_swap": true,
+    "remove": true,
+    "reorder": true,
+    "zero_pad": true
+  },
+  "root_15_recomputed": "9e4d4df8aa7a887ecc8b792a1d099832b584c16f81ea821897fcd437f6fd3a9a"
+}

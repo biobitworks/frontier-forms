@@ -1,0 +1,16 @@
+{
+  "event_count": 24,
+  "events_file_sha256": "62156c0bfed5e059192bc64e6e93130b19d462282def458ec82b6f8d613c5261",
+  "fco_ablation_graph_root": "43684d54e9c21c968b05d789dcceb91e2eb7d730cb3a948d669d0f82fb4facfc",
+  "program_id": "frontier-forms",
+  "root": "01e2f7e6c9d9ec9ea0457190adeb0ccaf546911d063e32a7bfd667cc4ff95168",
+  "root_scheme": "SHA256(0x00||canonical_json_event); SHA256(0x01||left||right), duplicate-last",
+  "schema": "frontier-forms.training-progress-snapshot.v1",
+  "scientific_status": "DISCOVERY_ONLY; no live model training gain admitted",
+  "signed": "NOT_SIGNED",
+  "source_code_commit": "a058ba4b826fb3baa01e54d9993732dc4db01eb9",
+  "source_cohort_root": "ee202dd8427bae0648624518797506422304976a5af43bb8b8dce79600d208df",
+  "timestamp_utc": "2026-11-02T22:52:03.876196+00:00",
+  "vita_daisy_scope": "ABSTRACTION_ONLY_SEPARATE_LANE",
+  "weights_vs_mechanism_separate": true
+}

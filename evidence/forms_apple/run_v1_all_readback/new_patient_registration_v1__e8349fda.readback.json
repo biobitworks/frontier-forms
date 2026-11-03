@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Shalanda Daniel",
+    "text": "Shalanda Daniel"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1948-01-30",
+    "text": "1948-01-30"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-558-7283",
+    "text": "555-558-7283"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "552 Gorczany Course Unit 11",
+    "text": "552 Gorczany Course Unit 11"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Wilmington",
+    "text": "Wilmington"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01887",
+    "text": "01887"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}
