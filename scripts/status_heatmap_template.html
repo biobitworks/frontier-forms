@@ -88,7 +88,7 @@ button{font:inherit;font-size:12px;border:1px solid var(--border);background:var
 <div id="tip" role="tooltip"></div>
 <script>
 const DATA=/*__DATA__*/null;
-const STATE={done:["✓","Done"],discovery:["◐","Discovery grade"],negative:["−","Done, negative result"],running:["◔","Running"],todo:["○","Not started"],na:["—","Not applicable"]};
+const STATE={done:["✓","Done"],discovery:["✓◐","Admitted (PI), discovery provenance"],negative:["−","Done, negative result"],running:["◔","Running"],todo:["○","Not started"],na:["—","Not applicable"]};
 const tip=document.getElementById('tip');
 function showTip(e,html){tip.innerHTML=html;tip.style.display='block';const x=Math.min(e.clientX+14,innerWidth-360);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
 function hideTip(){tip.style.display='none'}
@@ -102,7 +102,7 @@ DATA.workstreams.forEach((w,ri)=>{h+=`<tr data-r="${ri}"><td class="rowh">${esc(
 document.getElementById('tA').innerHTML=h+'</tbody>';
 document.getElementById('tA').addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.r===undefined){hideTip();return}const w=DATA.workstreams[+td.dataset.r];const c=td.dataset.c;showTip(e,`<b>${esc(w.name)}</b>${c!==undefined?'<br>'+esc(DATA.stages[c])+': '+STATE[w.states[c]][1]:''}<br>${esc(w.note)}<br><span class="grade">Source: ${esc(w.prs)}</span>`)});
 document.getElementById('tA').addEventListener('mouseleave',hideTip);
-document.getElementById('capA').textContent='Figure 1a. Status of each Frontier Forms workstream across five evidence stages, compiled from merged PRs #3–#43 and open tasks T01–T10 (docs/TASKS.md). "Discovery grade" means the result was produced on data the designers had already seen and must be replicated on a fresh cohort before it can be claimed. Data: docs/figures/accomplishment_heatmap.json.';
+document.getElementById('capA').textContent='Figure 1a. Status of each Frontier Forms workstream across five evidence stages, compiled from merged PRs #3–#43 and open tasks T01–T10 (docs/TASKS.md). "Admitted (PI), discovery provenance" means the PI admitted the result on 2026-11-02, but it was produced on data the designers had already seen and has not been replicated on a fresh cohort. Data: docs/figures/accomplishment_heatmap.json.';
 // legend B
 const RAMP=['--s1','--s2','--s3','--s4','--s5','--s6'];
 document.getElementById('legendB').innerHTML='<span>Worse <span class="ramp">'+RAMP.map(v=>`<i style="background:var(${v})"></i>`).join('')+'</span> Better</span><span><i class="sw st-todo"></i>Not measured / not run</span><span><b>Row tags:</b> '+Object.entries(DATA.grades).map(([k,v])=>`${k}`).join(' · ')+' (hover for meaning)</span>';
@@ -116,9 +116,9 @@ DATA.panels.forEach((p,pi)=>{
 });
 P.addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td||td.dataset.p===undefined){hideTip();return}const p=DATA.panels[+td.dataset.p],r=p.rows[+td.dataset.r];let s=`<b>${esc(r.label)}</b><br>${esc(DATA.grades[r.grade]||r.grade)}`;if(td.dataset.c!==undefined){const v=r.values[+td.dataset.c];s+=`<br>${esc(p.columns[+td.dataset.c])}: ${v===null?'not measured':(+v).toFixed(4)}`}showTip(e,s+`<br><span class="grade">${esc(p.source)}</span>`)});
 P.addEventListener('mouseleave',hideTip);
-document.getElementById('capB').textContent='Figure 1b. Outcome of every tested mechanism and combination, re-plotted from committed evidence files on main (each panel names its file and PR). Panels A–C are paired on identical synthetic cases; panel D groups image readers by evaluation set (labelled in brackets on each row), so compare rows only within a set; panel E compares local Qwen models with deterministic code; panel F is the teammate pilot of hosted models with and without the Frontier Forms tools. All data are synthetic (MITRE Synthea). Panels A–E used local inference only; panel F used Fireworks-hosted models (teammate bench lane). Discovery-grade rows are not yet claimable gains.';
+document.getElementById('capB').textContent='Figure 1b. Outcome of every tested mechanism and combination, re-plotted from committed evidence files on main (each panel names its file and PR). Panels A–C are paired on identical synthetic cases; panel D groups image readers by evaluation set (labelled in brackets on each row), so compare rows only within a set; panel E compares local Qwen models with deterministic code; panel F is the teammate pilot of hosted models with and without the Frontier Forms tools. All data are synthetic (MITRE Synthea). Panels A–E used local inference only; panel F used Fireworks-hosted models (teammate bench lane). Rows tagged discovery were admitted by the PI on 2026-11-02 and keep their provenance caveat: designed after seeing the data, not replicated.';
 
-const VER={admitted:["✓","st-done"],discovery:["◐","st-discovery"],partial:["◔","st-running"],null:["=","st-na"],negative:["−","st-negative"],failed:["✕","st-negative"],not_tested:["○","st-todo"]};
+const VER={admitted:["✓","st-done"],discovery:["✓◐","st-discovery"],partial:["◔","st-running"],null:["=","st-na"],negative:["−","st-negative"],failed:["✕","st-negative"],not_tested:["○","st-todo"]};
 const cnt={};DATA.ledger.forEach(r=>cnt[r.verdict]=(cnt[r.verdict]||0)+1);
 document.getElementById('legendC').innerHTML=Object.entries(DATA.verdicts).map(([k,v])=>`<span><i class="sw ${VER[k][1]}"></i>${VER[k][0]} ${esc(v)} (${cnt[k]||0})</span>`).join('');
 let hc='<thead><tr><th>Claim tested</th><th>Result</th><th>Verdict</th><th>Source</th></tr></thead><tbody>';

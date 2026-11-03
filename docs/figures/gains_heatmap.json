@@ -1,6 +1,6 @@
 {
  "schema": "frontier_forms.gains_heatmap.v1",
- "as_of_utc": "2026-11-03T00:05:00Z",
+ "as_of_utc": "2026-11-03T00:15:00Z",
  "rule": "green = gain, red = loss, grey = null (p >= 0.05 or |delta| < 0.005); lighter = no p-value; blank = not measured",
  "metrics": [
   "Field accuracy",
@@ -17,6 +17,8 @@
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 evidence abstain",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "B0 rules",
    "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)"
   },
@@ -24,6 +26,8 @@
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L2 unit validation",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "B0 rules",
    "source": "FCG_ARMS_V1.json (#10)"
   },
@@ -31,20 +35,26 @@
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L3 clinical filter",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "B0 rules",
    "source": "FCG_ARMS_V1.json (#10)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L3",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "B0 rules",
    "source": "FCG_ARMS_V1.json (#10, #17, #48)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L2 + L3 (full harness)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "B0 rules",
    "source": "FCG_ARMS_V1.json (#10, #17)"
   },
@@ -52,13 +62,17 @@
    "group": "Form filling, 218 forms",
    "intervention": "Apple Vision OCR read-back of filled PDF (A2)",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "B0 rules",
    "source": "evidence/forms_apple/README.md (#10)"
   },
   {
    "group": "Trained components, 46 SYNFORM2 test images (prereg)",
    "intervention": "Learned OCR post-correction (A1)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "page OCR + rules (A0)",
    "source": "evidence/redteam/trained_gain/trained_gain_summary.json (#51)"
   },
@@ -66,6 +80,8 @@
    "group": "Trained components, 46 SYNFORM2 test images (prereg)",
    "intervention": "Trained YOLOv8n detector crops (A2)",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "A0",
    "source": "trained_gain_summary.json (#51)"
   },
@@ -73,6 +89,8 @@
    "group": "Trained components, 46 SYNFORM2 test images (prereg)",
    "intervention": "Detector crops + learned correction (A3)",
    "grade": "Null / negative",
+   "kind": "Mixed",
+   "provenance": "",
    "baseline": "A0",
    "source": "trained_gain_summary.json (#51)"
   },
@@ -80,6 +98,8 @@
    "group": "Local Qwen vs deterministic parser, 322 fields",
    "intervention": "qwen2.5:1.5b mapper",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "geometric parser",
    "source": "evidence/redteam/lanes/MAP_* (#23)"
   },
@@ -87,6 +107,8 @@
    "group": "Local Qwen vs deterministic parser, 322 fields",
    "intervention": "qwen3:1.7b mapper",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "geometric parser",
    "source": "evidence/redteam/lanes/MAP_* (#23)"
   },
@@ -94,6 +116,8 @@
    "group": "Injected-error detectors, 702 preregistered errors",
    "intervention": "M1 Merkle breakpoint",
    "grade": "Admitted",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no detector",
    "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json (#10)"
   },
@@ -101,6 +125,8 @@
    "group": "Injected-error detectors, 702 preregistered errors",
    "intervention": "M2 Lean 4 constraints",
    "grade": "Admitted",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no detector",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
@@ -108,6 +134,8 @@
    "group": "Injected-error detectors, 702 preregistered errors",
    "intervention": "M3 source binding",
    "grade": "Admitted",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no detector",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
@@ -115,6 +143,8 @@
    "group": "Injected-error detectors, 702 preregistered errors",
    "intervention": "M1 + M2 + M3",
    "grade": "Admitted",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no detector",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
@@ -122,34 +152,44 @@
    "group": "Injected-error detectors, 702 preregistered errors",
    "intervention": "Remove M3 from full set (LOMO)",
    "grade": "Admitted",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "M1 + M2 + M3",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Identity gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "no gate",
    "source": "evidence/redteam/gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Rules gate (Lean-checked)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "no gate",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Consistency gate (Apple OCR vs qwen2.5vl)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "no gate",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Per-field commitment gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "baseline": "no gate",
    "source": "gate_factorial.json (#20, #21); descriptive cell rates (the Holm test there covers image-level success)"
   },
@@ -157,6 +197,8 @@
    "group": "Box detection vs deterministic contour control",
    "intervention": "Logistic box validator",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "contour control",
    "source": "evidence/forms_box_validator/run_v3 (#14)"
   },
@@ -164,6 +206,8 @@
    "group": "Box detection vs deterministic contour control",
    "intervention": "Random Forest box validator (63 patients)",
    "grade": "Null / negative",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "contour control",
    "source": "evidence/local_box_validator/v2_medium.json (#15)"
   },
@@ -171,6 +215,8 @@
    "group": "FCG context in the prompt (LongevityBench, not forms)",
    "intervention": "Full FCG, L0 model, discovery 38",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no context",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
@@ -178,6 +224,8 @@
    "group": "FCG context in the prompt (LongevityBench, not forms)",
    "intervention": "Full FCG, L0 model, held-out 39",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no context",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
@@ -185,6 +233,8 @@
    "group": "FCG context in the prompt (LongevityBench, not forms)",
    "intervention": "Full FCG, Insilico 0.6B, held-out 39",
    "grade": "Null / negative",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "no context",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
@@ -192,6 +242,8 @@
    "group": "Hosted-model bench: same model, our tools vs Pi browser-tools (pilot)",
    "intervention": "DeepSeek V4.1 Flash",
    "grade": "Pilot",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "Pi browser-tools",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
@@ -199,6 +251,8 @@
    "group": "Hosted-model bench: same model, our tools vs Pi browser-tools (pilot)",
    "intervention": "GLM 5.3",
    "grade": "Pilot",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "Pi browser-tools",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
@@ -206,6 +260,8 @@
    "group": "Hosted-model bench: same model, our tools vs Pi browser-tools (pilot)",
    "intervention": "Qwen Max",
    "grade": "Pilot",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "Pi browser-tools",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
@@ -213,6 +269,8 @@
    "group": "Hosted-model bench: same model, our tools vs Pi browser-tools (pilot)",
    "intervention": "GPT-OSS 120B",
    "grade": "Pilot",
+   "kind": "Novel",
+   "provenance": "",
    "baseline": "Pi browser-tools",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
@@ -220,6 +278,8 @@
    "group": "Not yet measured",
    "intervention": "Trained form-filling LLM (Qwen2.5-0.5B SFT, M1)",
    "grade": "Untested",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "B0 rules",
    "source": "T08"
   },
@@ -227,10 +287,34 @@
    "group": "Not yet measured",
    "intervention": "V2 YOLOv8n detector + OCR value check",
    "grade": "Untested",
+   "kind": "Standard",
+   "provenance": "",
    "baseline": "contour control",
    "source": "T09"
   }
  ],
+ "kinds": {
+  "Novel": "Frontier Forms mechanism (FCG harness, evidence graph, source binding, Merkle, Lean admission, LOMO, learned OCR correction, tool layer)",
+  "Standard": "Off-the-shelf training or model (LoRA SFT, OCR, VLM, small LLM, box detector or classifier)",
+  "Mixed": "Standard component combined with a novel one"
+ },
+ "gain_by_kind": {
+  "Novel": {
+   "gain": 28,
+   "loss": 5,
+   "null": 8
+  },
+  "Standard": {
+   "gain": 0,
+   "loss": 5,
+   "null": 4
+  },
+  "Mixed": {
+   "gain": 1,
+   "loss": 0,
+   "null": 1
+  }
+ },
  "cells": [
   {
    "group": "Form filling, 54 held-out test forms",
@@ -243,6 +327,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)"
   },
   {
@@ -256,6 +342,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)"
   },
   {
@@ -269,6 +357,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "FCG_ARMS_V1.json (#10)"
   },
   {
@@ -282,6 +372,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "FCG_ARMS_V1.json (#10)"
   },
   {
@@ -295,6 +387,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "FCG_ARMS_V1.json (#10)"
   },
   {
@@ -308,12 +402,14 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "FCG_ARMS_V1.json (#10)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L3",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "B0 rules",
    "metric": "Field accuracy",
    "raw_delta": 0.0889,
@@ -321,12 +417,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "FCG_ARMS_V1.json (#10, #17, #48)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L3",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "B0 rules",
    "metric": "Full-form success",
    "raw_delta": 0.2222,
@@ -334,12 +432,14 @@
    "p": 0.00049,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "FCG_ARMS_V1.json (#10, #17, #48)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L2 + L3 (full harness)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "B0 rules",
    "metric": "Field accuracy",
    "raw_delta": 0.1222,
@@ -347,12 +447,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "FCG_ARMS_V1.json (#10, #17)"
   },
   {
    "group": "Form filling, 54 held-out test forms",
    "intervention": "B0 + L1 + L2 + L3 (full harness)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "B0 rules",
    "metric": "Full-form success",
    "raw_delta": 0.2222,
@@ -360,6 +462,8 @@
    "p": 0.00049,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "FCG_ARMS_V1.json (#10, #17)"
   },
   {
@@ -373,6 +477,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/forms_apple/README.md (#10)"
   },
   {
@@ -386,12 +492,14 @@
    "p": 0.5,
    "class": "null",
    "p_note": "",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/forms_apple/README.md (#10)"
   },
   {
    "group": "Trained components, 46 SYNFORM2 test images (prereg)",
    "intervention": "Learned OCR post-correction (A1)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "page OCR + rules (A0)",
    "metric": "Field accuracy",
    "raw_delta": 0.0404,
@@ -399,12 +507,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "evidence/redteam/trained_gain/trained_gain_summary.json (#51)"
   },
   {
    "group": "Trained components, 46 SYNFORM2 test images (prereg)",
    "intervention": "Learned OCR post-correction (A1)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "page OCR + rules (A0)",
    "metric": "Full-form success",
    "raw_delta": 0.1739,
@@ -412,6 +522,8 @@
    "p": 0.0234,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "evidence/redteam/trained_gain/trained_gain_summary.json (#51)"
   },
   {
@@ -425,6 +537,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "trained_gain_summary.json (#51)"
   },
   {
@@ -438,6 +552,8 @@
    "p": 0.534,
    "class": "null",
    "p_note": "",
+   "kind": "Standard",
+   "provenance": "",
    "source": "trained_gain_summary.json (#51)"
   },
   {
@@ -451,6 +567,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Mixed",
+   "provenance": "",
    "source": "trained_gain_summary.json (#51)"
   },
   {
@@ -464,6 +582,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Mixed",
+   "provenance": "",
    "source": "trained_gain_summary.json (#51)"
   },
   {
@@ -477,6 +597,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/redteam/lanes/MAP_* (#23)"
   },
   {
@@ -490,6 +612,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/redteam/lanes/MAP_* (#23)"
   },
   {
@@ -503,6 +627,8 @@
    "p": 9.6e-35,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -516,6 +642,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -529,6 +657,8 @@
    "p": 5.1e-57,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -542,6 +672,8 @@
    "p": null,
    "class": "null",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -555,6 +687,8 @@
    "p": 2.4e-209,
    "class": "gain",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -568,6 +702,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -581,6 +717,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -594,6 +732,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -607,6 +747,8 @@
    "p": 2.5e-119,
    "class": "loss",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
@@ -620,12 +762,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "DETECTOR_RESULTS_V1.json (#10)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Identity gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "Errors caught (recall)",
    "raw_delta": 0.129,
@@ -633,12 +777,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "evidence/redteam/gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Identity gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "False flags / admissions (lower is better)",
    "raw_delta": -0.016,
@@ -646,12 +792,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "evidence/redteam/gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Rules gate (Lean-checked)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "Errors caught (recall)",
    "raw_delta": 0.379,
@@ -659,12 +807,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Rules gate (Lean-checked)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "False flags / admissions (lower is better)",
    "raw_delta": -0.043,
@@ -672,12 +822,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Consistency gate (Apple OCR vs qwen2.5vl)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "Errors caught (recall)",
    "raw_delta": 0.185,
@@ -685,12 +837,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Consistency gate (Apple OCR vs qwen2.5vl)",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "False flags / admissions (lower is better)",
    "raw_delta": -0.031,
@@ -698,12 +852,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Per-field commitment gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "Errors caught (recall)",
    "raw_delta": 0.87,
@@ -711,12 +867,14 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21); descriptive cell rates (the Holm test there covers image-level success)"
   },
   {
    "group": "Admission gates, 945 field cells (SYNFORM2-ERR)",
    "intervention": "Per-field commitment gate",
-   "grade": "Discovery",
+   "grade": "Admitted (PI), discovery provenance",
    "baseline": "no gate",
    "metric": "False flags / admissions (lower is better)",
    "raw_delta": -0.109,
@@ -724,6 +882,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort.",
    "source": "gate_factorial.json (#20, #21); descriptive cell rates (the Holm test there covers image-level success)"
   },
   {
@@ -737,6 +897,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/forms_box_validator/run_v3 (#14)"
   },
   {
@@ -750,6 +912,8 @@
    "p": null,
    "class": "null",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/forms_box_validator/run_v3 (#14)"
   },
   {
@@ -763,6 +927,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Standard",
+   "provenance": "",
    "source": "evidence/local_box_validator/v2_medium.json (#15)"
   },
   {
@@ -776,6 +942,8 @@
    "p": 0.55,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
   {
@@ -789,6 +957,8 @@
    "p": 1.0,
    "class": "null",
    "p_note": "",
+   "kind": "Novel",
+   "provenance": "",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
   {
@@ -802,6 +972,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "redteam/REDTEAM_REPORT.md (#11)"
   },
   {
@@ -815,6 +987,8 @@
    "p": null,
    "class": "null",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -828,6 +1002,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -841,6 +1017,8 @@
    "p": null,
    "class": "loss",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -854,6 +1032,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -867,6 +1047,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -880,6 +1062,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -893,6 +1077,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   },
   {
@@ -906,6 +1092,8 @@
    "p": null,
    "class": "gain",
    "p_note": "none (pilot or descriptive)",
+   "kind": "Novel",
+   "provenance": "",
    "source": "bench/charts/LIVE_RESULTS.md"
   }
  ]

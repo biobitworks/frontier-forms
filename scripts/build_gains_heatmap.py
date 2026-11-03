@@ -90,7 +90,31 @@ ROWS = [
     ("Not yet measured", "V2 YOLOv8n detector + OCR value check", "U", "contour control", "T09", {}),
 ]
 
-GRADE = {"A": "Admitted", "D": "Discovery", "N": "Null / negative", "P": "Pilot", "U": "Untested"}
+GRADE = {"A": "Admitted", "D": "Admitted (PI), discovery provenance", "N": "Null / negative", "P": "Pilot", "U": "Untested"}
+# Byron (PI) admitted all discovery-grade results on 2026-11-02. They keep a provenance caveat:
+# designed or analysed after seeing the data, and not yet replicated on a fresh cohort.
+PROVENANCE = {"D": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort."}
+
+# Novel = a Frontier Forms mechanism; Standard = off-the-shelf training, OCR, VLM, LLM or detector.
+KIND = {
+    "B0 + L1 evidence abstain": "Novel", "B0 + L2 unit validation": "Novel", "B0 + L3 clinical filter": "Novel",
+    "B0 + L1 + L3": "Novel", "B0 + L1 + L2 + L3 (full harness)": "Novel",
+    "Apple Vision OCR read-back of filled PDF (A2)": "Standard",
+    "Learned OCR post-correction (A1)": "Novel",
+    "Trained YOLOv8n detector crops (A2)": "Standard",
+    "Detector crops + learned correction (A3)": "Mixed",
+    "qwen2.5:1.5b mapper": "Standard", "qwen3:1.7b mapper": "Standard",
+    "M1 Merkle breakpoint": "Novel", "M2 Lean 4 constraints": "Novel", "M3 source binding": "Novel",
+    "M1 + M2 + M3": "Novel", "Remove M3 from full set (LOMO)": "Novel",
+    "Identity gate": "Novel", "Rules gate (Lean-checked)": "Novel",
+    "Consistency gate (Apple OCR vs qwen2.5vl)": "Novel", "Per-field commitment gate": "Novel",
+    "Logistic box validator": "Standard", "Random Forest box validator (63 patients)": "Standard",
+    "Full FCG, L0 model, discovery 38": "Novel", "Full FCG, L0 model, held-out 39": "Novel",
+    "Full FCG, Insilico 0.6B, held-out 39": "Novel",
+    "DeepSeek V4.1 Flash": "Novel", "GLM 5.3": "Novel", "Qwen Max": "Novel", "GPT-OSS 120B": "Novel",
+    "Trained form-filling LLM (Qwen2.5-0.5B SFT, M1)": "Standard",
+    "V2 YOLOv8n detector + OCR value check": "Standard",
+}
 
 
 def classify(metric, raw, p):
@@ -98,6 +122,14 @@ def classify(metric, raw, p):
     if abs(gain) < 0.005 or (p is not None and p >= 0.05):
         return gain, "null"
     return gain, ("gain" if gain > 0 else "loss")
+
+
+def summary(cells):
+    out = {}
+    for k in ("Novel", "Standard", "Mixed"):
+        cs = [c for c in cells if c["kind"] == k]
+        out[k] = {c: sum(1 for x in cs if x["class"] == c) for c in ("gain", "loss", "null")}
+    return out
 
 
 def main():
@@ -110,11 +142,17 @@ def main():
             gain, cls = classify(key, raw, p)
             cells.append({"group": group, "intervention": label, "grade": GRADE[grade], "baseline": base, "metric": name,
                           "raw_delta": raw, "gain_delta": round(gain, 4), "p": p, "class": cls,
-                          "p_note": "none (pilot or descriptive)" if p is None else "", "source": src})
-    data = {"schema": "frontier_forms.gains_heatmap.v1", "as_of_utc": "2026-11-03T00:05:00Z",
+                          "p_note": "none (pilot or descriptive)" if p is None else "", "kind": KIND[label],
+                          "provenance": PROVENANCE.get(grade, ""), "source": src})
+    data = {"schema": "frontier_forms.gains_heatmap.v1", "as_of_utc": "2026-11-03T00:15:00Z",
             "rule": "green = gain, red = loss, grey = null (p >= 0.05 or |delta| < 0.005); lighter = no p-value; blank = not measured",
             "metrics": [n for _, n in METRICS], "lower_better": [n for k, n in METRICS if k in LOWER_BETTER],
-            "rows": [{"group": g, "intervention": l, "grade": GRADE[gr], "baseline": b, "source": s} for g, l, gr, b, s, _ in ROWS],
+            "rows": [{"group": g, "intervention": l, "grade": GRADE[gr], "kind": KIND[l], "provenance": PROVENANCE.get(gr, ""),
+                      "baseline": b, "source": s} for g, l, gr, b, s, _ in ROWS],
+            "kinds": {"Novel": "Frontier Forms mechanism (FCG harness, evidence graph, source binding, Merkle, Lean admission, LOMO, learned OCR correction, tool layer)",
+                      "Standard": "Off-the-shelf training or model (LoRA SFT, OCR, VLM, small LLM, box detector or classifier)",
+                      "Mixed": "Standard component combined with a novel one"},
+            "gain_by_kind": summary(cells),
             "cells": cells}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "gains_heatmap.json").write_text(json.dumps(data, indent=1) + "\n")
@@ -124,7 +162,7 @@ def main():
         w.writerows(cells)
     tpl = (ROOT / "scripts" / "gains_heatmap_template.html").read_text()
     (OUT / "gains_heatmap.html").write_text(tpl.replace("/*__DATA__*/null", json.dumps(data)))
-    print("cells", len(cells), "rows", len(ROWS))
+    print("cells", len(cells), "rows", len(ROWS), data["gain_by_kind"])
 
 
 if __name__ == "__main__":
