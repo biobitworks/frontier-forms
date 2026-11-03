@@ -72,6 +72,16 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 - **macOS Preview capture:** FAILED for 0/10 windows with "could not create image from window". The likely cause is that the process lacks macOS Screen Recording permission on magicSTUDIObox. The failure receipt is `docs/demo/preview/preview_ocr.json`. Headless Chromium screenshots of every image × model × boxes on/off are in `docs/demo/screenshots/models/`.
 - **External services:** Snyk and Fireworks BLOCKED. NVIDIA, live Supabase and Epic NOT_TESTED.
 
+## Data available on request
+
+Some files are kept off GitHub on purpose. The team can provide the following on request; open an issue on this repository to ask.
+
+- **Trained YOLOv8n field-detector weights.** These are the best weights for both runs, full `d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba` and no-scan `903e00e7a3f5a7c740193a3187345c01997767b7379756d93034a42611927160`, plus every per-epoch checkpoint. The sha256 values committed in the epoch ledgers let anyone check the files they receive.
+- **Raw per-image lane outputs for the synthetic forms.** These are the Apple Vision OCR, qwen2.5vl:3b and Qwen mapper files with every extracted value and timing, plus the run logs.
+- **The private planted-error list for SYNFORM2-ERR,** for audit. Publishing it openly would unblind that dataset for any future replication.
+
+Two items cannot be redistributed by us because of their third-party licences: the LongevityBench gold answers (CC BY-NC) and the Insilico Qwen3-0.6B checkpoint (CC BY-ND). Obtain them from their publishers. Our hashed case keys and per-case correct/incorrect results for them are already public in `evidence/redteam/lanes/`.
+
 ## What remains (ordered)
 
 1. **Fresh replication cohort (T01 #31).** Preregister and score it once.

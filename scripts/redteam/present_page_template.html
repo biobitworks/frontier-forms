@@ -180,6 +180,21 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px sol
   <figure><img id="img-overlay" alt="Synthetic intake form with renderer ground truth, OCR line boxes and detector boxes"><figcaption>A frozen test render with three kinds of boxes: renderer ground truth (green dashed), Apple Vision OCR lines (blue) and the trained YOLOv8n detector with confidence (orange).</figcaption></figure>
 </section>
 
+<section aria-labelledby="h-avail">
+  <div class="sec-head"><h2 id="h-avail">Data available on request</h2>
+    <p class="muted">Some files are kept off GitHub on purpose. The team can provide them on request through an issue on the repository.</p></div>
+  <div class="compare">
+    <div class="panel"><h3>Available on request</h3><ul>
+      <li>Trained YOLOv8n field-detector weights for both runs, plus every per-epoch checkpoint. The sha256 values in the epoch ledgers verify the files you receive.</li>
+      <li>Raw per-image outputs from the Apple Vision OCR, qwen2.5vl:3b and Qwen mapper lanes on the synthetic forms, with run logs</li>
+      <li>The private planted-error list for SYNFORM2-ERR, for audit. Publishing it openly would unblind the dataset.</li></ul></div>
+    <div class="panel"><h3>Not ours to redistribute</h3><ul>
+      <li>LongevityBench gold answers (CC BY-NC)</li>
+      <li>The Insilico Qwen3-0.6B checkpoint (CC BY-ND)</li>
+      <li>Get these from their publishers. Our hashed case keys and per-case results for them are already public.</li></ul></div>
+  </div>
+</section>
+
 <footer>
   <details><summary>Source files and sha256</summary><div class="src" id="sources"></div></details>
   <span id="built"></span>

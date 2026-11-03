@@ -3,7 +3,8 @@
   "Insilico lane stopped by owner",
   "Fireworks not used (no external data upload)",
   "PNG/PDF published only under docs/",
-  "gate statistics relabelled to their tested endpoint after review"
+  "gate statistics relabelled to their tested endpoint after review",
+  "withheld files (trained detector weights, raw synthetic lane outputs, planted-error list) offered on request; third-party-licensed LongevityBench gold and Insilico checkpoint not redistributed"
  ],
  "id": "CLAUDE-REDTEAM-CLOUD-20261103-FINAL",
  "lane": "claude-redteam (cloud)",
@@ -21,7 +22,7 @@
  "pointers": [
   {
    "path": "docs/reviews/CLAUDE_REDTEAM_REPORT.md",
-   "sha256": "9415a203c2e95fca8d025997c78ce6927ee3182ae180245d2095d19ad45c94e6"
+   "sha256": "929d8fd2b3337c5217e384f6f71a8d7c174ae5fe62c6ee52ac33f4b69e1c762c"
   },
   {
    "path": "docs/architecture/LEAF_GAIN_ATTRIBUTION.md",
@@ -73,11 +74,11 @@
   },
   {
    "path": "docs/judges/present.html",
-   "sha256": "58f343152ca8fb34eaf038bb63818e444f28997dd50ae5a93a86a71cd66f0ec2"
+   "sha256": "59953c1c4bf7b5cc39171465cf35430b2639021c139a46f6cf6c597ea2db5134"
   },
   {
    "path": "docs/judges/NOVEL_VS_STANDARD_TRAINING.md",
-   "sha256": "e89850b6f28feb71b95302e22fb96f1d8f455ef3ba1544a4078b9444d292f3fe"
+   "sha256": "5b93f773aee30aa85fc05480ebf0acd916d2cb1f4afb4595fd263ebe51079329"
   }
  ],
  "program_id": "frontier-forms",

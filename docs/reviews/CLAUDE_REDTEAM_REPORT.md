@@ -26,7 +26,7 @@ Findings: **F-01** duplicate-last-leaf collision (a forged extra leaf plus a for
 4. **What breaks when a leaf or edge is removed.** Forged input leaf or removed DERIVED_INPUT_AT edge: 100% abstain before inference in every lane, zero model calls. LOMO on the form gate: minus commitment loses 0.32 detection and adds 35 false admissions; minus identity, rules or consistency lose no detection (commitment covers them) but raise coverage. Detector LOMO (no scan-variant training images): test mAP50 0.912 → 0.857, image pass 39/46 → 40/46 (paired test NOT_COMPUTED).
 5. **Regressions / false admissions.** FCO/FCG context in the system prompt: NULL on L0 heldout (Δ 0.000, p 1.0); it breaks the output format of qwen3:1.7b (strict 0.077 → 0.000). The ACCEPT/CHALLENGE verdict prototype is degenerate on the longevity fine-tune (0% parseable). The option-swap gate admits ~60% with ~45% false admissions on L0.
 6. **Cost per valid result.** Local only: token and wall-clock receipts are in the lane META files; dollar cost NOT_COMPUTED (no observed machine-hour rate); energy NOT_OBSERVED. Fireworks: BLOCKED_NO_CREDENTIAL by policy (no data leaves the Macs except GitHub JSON).
-7. **Reject / quarantine / defer.** Reject: any claim that FCO/FCG context improves model reasoning. Quarantine: L1/L2 LongevityBench numbers (format artefacts); latency from 22:30–23:05 UTC (GPU contention). Defer: commitment-gate generalisation (needs a second template family), Insilico heldout (stopped by owner decision), Qwen mapper lanes, Qwen2.5-VL grounding boxes, 12-form legacy lane and the JSON field-answer database (not completed before the finish request: NOT_TESTED).
+7. **Reject / quarantine / defer.** Reject: any claim that FCO/FCG context improves model reasoning. Quarantine: L1/L2 LongevityBench numbers (format artefacts); latency from 22:30–23:05 UTC (GPU contention). Defer: commitment-gate generalisation (needs a second template family), Insilico heldout (stopped by owner decision), Qwen2.5-VL grounding boxes and the 12-form legacy lane (NOT_TESTED). The Qwen mapper lanes and the JSON field-answer database were completed after the finish request (see section 5 and `evidence/redteam/db/`).
 8. **Next teammate-reviewed experiment.** Replicate the commitment gate on a freshly rendered template family and on real Synthea FHIR passports from the Supabase schema (snapshot first); complete the qwen3:1.7b / qwen2.5 mapper lanes behind Apple Vision; fine-tune the detector on a second layout and keep the per-epoch ledger.
 
 ## 3. Training over time (per-epoch Merkle breakpoints)
@@ -69,6 +69,16 @@ The learned correction is small. It strips spaces in every field, because no tra
 | Not tested recorded | 2 |
 
 The five admitted records are the learned OCR correction and four gate configurations. The learned correction keeps a positive patient-cluster CI of [+0.043, +0.326]. The four gate configurations are commitment, rules, consistency and all four combined. Novel versus standard: `docs/judges/NOVEL_VS_STANDARD_TRAINING.md`.
+
+## Data available on request
+
+Some files are kept off GitHub on purpose. The team can provide the following on request; open an issue on this repository to ask.
+
+- **Trained YOLOv8n field-detector weights.** These are the best weights for both runs, full `d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba` and no-scan `903e00e7a3f5a7c740193a3187345c01997767b7379756d93034a42611927160`, plus every per-epoch checkpoint. The sha256 values committed in the epoch ledgers let anyone check the files they receive.
+- **Raw per-image lane outputs for the synthetic forms.** These are the Apple Vision OCR, qwen2.5vl:3b and Qwen mapper files with every extracted value and timing, plus the run logs.
+- **The private planted-error list for SYNFORM2-ERR,** for audit. Publishing it openly would unblind that dataset for any future replication.
+
+Two items cannot be redistributed by us because of their third-party licences: the LongevityBench gold answers (CC BY-NC) and the Insilico Qwen3-0.6B checkpoint (CC BY-ND). Obtain them from their publishers. Our hashed case keys and per-case correct/incorrect results for them are already public in `evidence/redteam/lanes/`.
 
 ## TURN_BREAKPOINT
 
