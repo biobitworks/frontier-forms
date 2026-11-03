@@ -1,6 +1,6 @@
 {
  "schema": "frontier_forms.nvidia_tooling.v1",
- "updated_utc": "2026-11-03T02:46:00Z",
+ "updated_utc": "2026-11-03T06:45:00Z",
  "label": "post-deadline, host-approved",
  "policy": "All NVIDIA components run locally on Apple silicon (magicSTUDIObox, MPS/CPU). No DGX, no CUDA, no NVIDIA-hosted inference (NIM/API), no data upload.",
  "used": [
@@ -25,8 +25,9 @@
     "S1 LoRA r16 2 epochs",
     "S2 LoRA r16 4 epochs"
    ],
-   "status": "queued behind S1 on magicSTUDIObox",
-   "evidence": "evidence/forms_model/selection_v1/ (per run) and evidence/forms_model/SFT_STATUS.json"
+   "status": "D1 done; D2 queued",
+   "evidence": "evidence/forms_model/selection_v1/ (per run) and evidence/forms_model/SFT_STATUS.json",
+   "result": "D1 DoRA vs S1 LoRA (r16, lr 2e-4, 2 epochs, same data and seed), validation only: full forms 28/38 vs 28/38; field accuracy 0.9526 vs 0.9500; best val loss 0.00740 vs 0.00742. Cost on Apple MPS: training 9509 s vs 3417 s, validation scoring 3124 s vs 237 s (adapter not merged)."
   }
  ],
  "pinned_not_run": [

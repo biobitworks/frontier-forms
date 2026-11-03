@@ -70,12 +70,15 @@
    "run": "D1-dora-r16-e2-lr2e-4",
    "try": 3,
    "started_utc": "2026-11-03T03:02:12Z",
-   "status": "RUNNING"
+   "status": "DONE",
+   "finished_utc": "2026-11-03T06:34:06Z",
+   "evidence": "evidence/forms_model/selection_v1/D1-dora-r16-e2-lr2e-4"
   },
   {
    "run": "S2-lora-r16-e4-lr2e-4",
    "try": 3,
-   "status": "QUEUED"
+   "status": "RUNNING",
+   "started_utc": "2026-11-03T06:34:06Z"
   },
   {
    "run": "D2-dora-r16-e4-lr2e-4",

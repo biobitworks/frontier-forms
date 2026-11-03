@@ -176,6 +176,21 @@ def main():
                              "outcome": outcome(res["overall"], "required_fields_correct per form", "validation"),
                              "attribution": "SINGLE_MODEL_CHANGE",
                              "note": "same base weights, prompt and harness; only the trained adapter differs"})
+        # LoRA vs DoRA matched pairs (same rank, lr, epochs, data, seed): only the adapter method differs
+        for dp in sorted(sd.glob("D*-dora-*/receipt.json")):
+            ld = sd / ("S" + dp.parent.name[1:].replace("-dora-", "-lora-", 1))
+            if not (ld / "receipt.json").exists():
+                continue
+            ident = lambda d: {**{k: json.loads((d / "receipt.json").read_text()).get(k) for k in ("base_model", "base_revision", "adapter_sha256")},
+                               "method": json.loads((d / "train_receipt.json").read_text()).get("method")}
+            res = paired_vs_b0(load(ld), load(dp.parent))
+            rows.append({"family": "sft_selection", "post_deadline": True, "parent_arm": ld.name, "child_arm": dp.parent.name,
+                         "model_weights": {"parent": ident(ld), "child": ident(dp.parent), "changed": True},
+                         "mechanism": {"changed": []},
+                         "outcome": outcome(res["overall"], "required_fields_correct per form", "validation"),
+                         "attribution": "SINGLE_MODEL_CHANGE",
+                         "note": "LoRA -> DoRA (NVIDIA), all other training settings matched",
+                         "evidence": {"path": rel(dp.parent / "predictions.jsonl"), "sha256": sha(dp.parent / "predictions.jsonl")}})
         af = sd / "ATTEMPTS.json"
         if af.exists():
             for a in json.loads(af.read_text())["attempts"]:
