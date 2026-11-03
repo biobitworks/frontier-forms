@@ -35,7 +35,7 @@
   {
    "run": "S1",
    "config": "LoRA r16, lr 2e-4, 2 epochs",
-   "status": "training (epoch 1; train loss 1.02 -> 0.013 by step 80)",
+   "status": "training (epoch 1 of 2; train loss 0.28 at step 20 -> 0.013 at step 80)",
    "val_loss": "1.017 (before training)",
    "test_field_accuracy": "",
    "test_full_form": ""

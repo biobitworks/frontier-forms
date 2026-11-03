@@ -91,7 +91,7 @@ This is a live operational status block generated from the latest local SFT rece
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
-| S1 | LoRA r16, lr 2e-4, 2 epochs | training (epoch 1; train loss 1.02 -> 0.013 by step 80) | 1.017 (before training) | — | — |
+| S1 | LoRA r16, lr 2e-4, 2 epochs | training (epoch 1 of 2; train loss 0.28 at step 20 -> 0.013 at step 80) | 1.017 (before training) | — | — |
 | D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | queued | — | — | — |
 | S2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
 | D2 | DoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
