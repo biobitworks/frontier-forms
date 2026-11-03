@@ -54,8 +54,13 @@ class JudgeVisualV3(unittest.TestCase):
         self.assertEqual(r.count('<!-- sft-status:end -->'),1)
         self.assertIn('docs/judges/present_v3.html',r)
         j=json.loads((ROOT/'evidence/forms_model/SFT_STATUS.json').read_text())
-        self.assertEqual([v['status'] for v in j['runs']],['training','queued','queued'])
-        self.assertIn('matched held-out Qwen-LoRA gain remains NOT_COMPUTED',r)
+        self.assertEqual(len(j['runs']),3)
+        self.assertTrue(all(v.get('status') for v in j['runs']))
+        import sys
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from update_readme_sft import render,START,END
+        self.assertEqual(r[r.index(START):r.index(END)+len(END)],render(j))
+        self.assertIn('no trained-Qwen superiority is admitted',r)
     def test_append_only_visual_successor_receipt(self):
         m=json.loads((ROOT/'docs/judges/PRESENTATION_VISUAL_V3_SUCCESSOR_20261102.json').read_text())
         self.assertEqual(m['status'],'PRESENTATION_ONLY_OBSERVED_BROWSER_RENDER_NOT_SCIENTIFIC_PROMOTION')
@@ -63,6 +68,8 @@ class JudgeVisualV3(unittest.TestCase):
         self.assertEqual(m['new_merkle_root'],'NOT_COMPUTED')
         self.assertEqual(m['new_model_inference'],'NOT_EXECUTED')
         self.assertEqual(m['scientific_promotion'],'HOLD')
+        self.assertIn('mutable_training_status_at_v3_build',m)
+        self.assertNotIn('evidence/forms_model/SFT_STATUS.json',m['source_sha256'])
         for f,h in m['source_sha256'].items():
             self.assertEqual(sha(f),h,'BYTE_DRIFT:'+f)
         self.assertEqual(m['prior_present_v1_sha256'],sha('docs/judges/present.html'))

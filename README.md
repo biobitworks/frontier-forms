@@ -68,7 +68,7 @@
 
 ### Ongoing training · pending SFT evidence
 
-Qwen SFT is ongoing. The source-linked status below is not an observed trained-model improvement; matched held-out Qwen-LoRA gain remains NOT_COMPUTED until validation selection and frozen-test scoring finish.
+This is a live operational status block generated from the latest local SFT receipt. Read the per-run training, queued, stalled, failed or completed states below; no trained-Qwen superiority is admitted before validation-only checkpoint selection and held-out test scoring. Results here remain distinct from the completed FCO and fitted-OCR synthetic discoveries.
 
 <!-- sft-status:start -->
 
@@ -86,13 +86,13 @@ Qwen SFT is ongoing. The source-linked status below is not an observed trained-m
 | B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
 | B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
 
-**Runs (status as of 2026-11-03T01:00:00Z):**
+**Runs (status as of 2026-11-03T01:12:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
-| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | training | — | — | — |
+| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory | — | — | — |
 | SFT-2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
-| SFT-3 | larger rank, higher lr | queued | — | — | — |
+| SFT-3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
 
 **Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
 Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.

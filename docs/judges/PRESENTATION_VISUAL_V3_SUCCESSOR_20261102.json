@@ -10,6 +10,11 @@
     "README_SFT_MOVED_BELOW_JUDGE_RESULTS",
     "BROWSER_SCREENSHOT_VISUAL_PREVIEW"
   ],
+  "mutable_training_status_at_v3_build": {
+    "note": "Mutable operational training status, not an input to present_v3.html; PR81 later recorded SFT-1 stall, separate from synthetic discovery figures",
+    "path": "evidence/forms_model/SFT_STATUS.json",
+    "sha256_at_build": "ca21c51b5888741617c0c696ec92c97c2fe35dd3cf2167263c2db19c81e5a292"
+  },
   "new_merkle_root": "NOT_COMPUTED",
   "new_model_inference": "NOT_EXECUTED",
   "new_scientific_evidence": "NOT_COMPUTED",
@@ -42,7 +47,6 @@
     "docs/judges/present_v2.html": "8814a0e33596edd0d1970d1037fc76b0c437f894152f343a7c3ae020c87c7636",
     "docs/judges/present_v3.html": "d85f58304ab8c9876c5ca2bcac9837c4ab52d5dcdbcbb22af8d9f3505418e797",
     "evidence/admission/REDTEAM_DISCOVERY_ADMISSION_V1.json": "96d90eee64a06604b37bee6eeddff14813299d4ce833e082639b7185702c4b09",
-    "evidence/forms_model/SFT_STATUS.json": "ca21c51b5888741617c0c696ec92c97c2fe35dd3cf2167263c2db19c81e5a292",
     "evidence/redteam/gate_factorial.json": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed",
     "scripts/redteam/build_present_page.py": "666f3403d61945ac6bebbb82302da05b82e00319fcd9a43b03702243285efb94",
     "scripts/redteam/build_present_page_v3.py": "b6b3d685d46572891c18347406d53e638a9e78c05c0adca8c73c62360ac63dde",
