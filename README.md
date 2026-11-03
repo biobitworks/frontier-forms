@@ -1,9 +1,36 @@
 # Frontier Forms — Antigentic EHR Form Intake
 
+
+## Judges — start here: visual results and evidence
+
+**[Notion judge review: figures, results and team attribution](https://app.notion.com/p/40d58ec71eb281db9ba2db19e7f7adf6)** · **[Public GitHub figures and captions](docs/judges/FIGURES.md)** · **[Presentation guide](docs/judges/VIDEO_START_HERE_20261102.md)** · **[Self-contained judge presentation HTML](docs/judges/present.html)**
+
+**On display below:** the source-linked results heatmap and accomplishment/status heatmap. These are real committed PNGs, visible directly in the public GitHub README without installing software or opening Notion.
+
+### Measured improvements, failures, and untested cells
+
+![Frontier Forms source-backed gains heatmap: measured gains, regressions, null outcomes and unmeasured interventions](docs/figures/gains_heatmap.png)
+
+[Open full-size gains image](docs/figures/gains_heatmap.png) · [Open interactive HTML locally](docs/figures/gains_heatmap.html) · [Inspect source CSV](docs/figures/gains_heatmap.csv)
+
+### What the team implemented and actually evaluated
+
+![Frontier Forms accomplishment heatmap covering model, training, evidence and integration gates](docs/figures/accomplishment_heatmap.png)
+
+[Open full-size accomplishment image](docs/figures/accomplishment_heatmap.png) · [Open all 17 synthetic example images](docs/judges/figures) · [Figure-by-figure captions and originating PRs](docs/judges/FIGURES.md)
+
+**Results:** FCO L1×L3 improved synthetic complete-form success **18/54 → 30/54 (+22.22 percentage points)**. Fitted OCR *text correction* improved all-seven-field synthetic success **14/46 → 22/46 (+17.39 points; Holm p = 0.0234)**. YOLO crop alternatives were not supported gains; trained logistic bounding boxes tied the deterministic contour control. **Scientific promotion: HOLD** pending independent prospective replication. A Merkle root establishes receipt identity, not clinical accuracy.
+
+**Contributors:** Claude Code and teammates produced the form pipeline, local experiments, OCR/model training and original examples. ChatGPT's parallel lane contributed independent paired-statistics review, Merkle/checkpoint audits, negative-result attribution and the source-bound discovery register. These statements do not assign unverified authorship to shared-account commits.
+
+**Display limitation:** The PNGs and repo are public. Notion page content is verified through the connected workspace, but **anonymous Notion publication has not been established**; judges can always use the public GitHub images. The HTML files are GitHub source views, not publicly hosted interactive apps. To run locally, serve the checkout with \`python3 -m http.server 8787 --bind 127.0.0.1\`, then open \`http://127.0.0.1:8787/docs/judges/present.html\`.
+
+---
+
 > **VIDEO / TEAMMATE REVIEW:** [Start here—four-minute protocol, private vs hosted execution and actor comparison](docs/judges/VIDEO_START_HERE_20261102.md) · [color-coded interactive storyboard](docs/judges/VIDEO_EVIDENCE_STORYBOARD_20261102.html) · [10 frozen source receipts](docs/judges/VIDEO_EVIDENCE_MANIFEST_20261102.json). Serve the repository with localhost HTTP to render HTML. Both **FCO +22.22 pp** and **OCR correction +17.39 pp** have discovery evidence; prospective independently replicated scientific superiority remains HOLD. LOMO negatives and Merkle scopes are visible.
 
 > **Start here (judges, 2026-11-02).** Current status, results and priorities: [docs/STATUS_2026-11-02.md](docs/STATUS_2026-11-02.md). Accomplishment heatmap: [docs/figures/accomplishment_heatmap.png](docs/figures/accomplishment_heatmap.png) (interactive: [.html](docs/figures/accomplishment_heatmap.html)). **Where we gain (colour-coded):** [docs/figures/gains_heatmap.png](docs/figures/gains_heatmap.png) (interactive [.html](docs/figures/gains_heatmap.html), cell data [CSV](docs/figures/gains_heatmap.csv)). Every figure and image with its caption and source PR: [docs/figures/FIGURES.md](docs/figures/FIGURES.md).
-> Headline on 54 held-out synthetic test forms: B0 33.3% (18/54) full-form success; B0 + FCG harness 55.6% (30/54), admitted by the PI on 2026-11-02 with discovery provenance (not yet replicated); post-training arm not yet scored. Teammate bench pilot (same hosted model, Pi browser-tools vs our tools): DeepSeek V4.1 Flash median 92.0 → 16.8 s with fields 119/121 in both arms ([bench/charts/LIVE_RESULTS.md](bench/charts/LIVE_RESULTS.md)). Preregistered trained-gain test: learned OCR correction 14 → 22/46 all-fields-correct (Holm p=0.023, admitted by the PI); trained detector crops NULL. Every significant gain comes from a novel Frontier Forms mechanism, not from standard training or off-the-shelf models: see [Novel versus standard](docs/STATUS_2026-11-02.md#novel-versus-standard-where-the-gains-come-from). Every result, including null, negative and failed ones, is listed in Figure 1c of the heatmap. All data synthetic (MITRE Synthea). The sections below are the original pre-release protocol, and some of their NOT_TESTED rows have since been run (see the status file).
+> Headline on 54 held-out synthetic test forms: B0 33.3% (18/54) full-form success; B0 + FCG harness 55.6% (30/54), admitted by the PI on 2026-11-02 with discovery provenance (not yet replicated); post-training arm not yet scored. Teammate bench pilot (same hosted model, Pi browser-tools vs our tools): DeepSeek V4.1 Flash median 92.0 → 16.8 s with fields 119/121 in both arms ([bench/charts/LIVE_RESULTS.md](bench/charts/LIVE_RESULTS.md)). Preregistered trained-gain test: learned OCR correction 14 → 22/46 all-fields-correct (Holm p=0.023, admitted by the PI); trained detector crops NULL. The measured gains arise from specific Frontier Forms interventions or a fitted OCR correction table; this is not proof of new neural architectures or worldwide novelty: see [Novel versus standard](docs/STATUS_2026-11-02.md#novel-versus-standard-where-the-gains-come-from). Every result, including null, negative and failed ones, is listed in Figure 1c of the heatmap. All data synthetic (MITRE Synthea). The sections below are the original pre-release protocol, and some of their NOT_TESTED rows have since been run (see the status file).
 
 **Discovery admission and what is distinctive versus standard training:** [Source-backed standard-versus-project comparison](docs/judges/STANDARD_TRAINING_VS_FRONTIER_FORMS_DISCOVERIES.md) · [machine-readable gate and negative outcomes](evidence/admission/FF_DISCOVERY_AND_NOVELTY_V1.json). Scientific admission remains HOLD; A1 is fitted OCR post-correction, **not** Qwen neural fine-tuning.
 
