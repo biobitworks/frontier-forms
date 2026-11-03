@@ -1,0 +1,244 @@
+{
+  "arm": "S2-lora-r16-e4-lr2e-4",
+  "metrics": {
+    "by_split": {
+      "validation": {
+        "echo_validation_failures": 0,
+        "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+        "field_accuracy": 0.957895,
+        "fields": 380,
+        "forms": 38,
+        "full_form_success_all_fields": 0.710526,
+        "full_form_success_required": 0.710526,
+        "missing_data_recall": 1.0,
+        "outcomes": {
+          "correct": 364,
+          "missed_fill": 6,
+          "wrong_value": 10
+        },
+        "unsupported_answer_rate": 0.0
+      }
+    },
+    "by_split_template": {
+      "validation|medication_allergy_intake_v1": {
+        "echo_validation_failures": 0,
+        "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+        "field_accuracy": 0.912281,
+        "fields": 171,
+        "forms": 19,
+        "full_form_success_all_fields": 0.473684,
+        "full_form_success_required": 0.473684,
+        "missing_data_recall": 1.0,
+        "outcomes": {
+          "correct": 156,
+          "missed_fill": 6,
+          "wrong_value": 9
+        },
+        "unsupported_answer_rate": 0.0
+      },
+      "validation|new_patient_registration_v1": {
+        "echo_validation_failures": 0,
+        "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+        "field_accuracy": 0.995215,
+        "fields": 209,
+        "forms": 19,
+        "full_form_success_all_fields": 0.947368,
+        "full_form_success_required": 0.947368,
+        "missing_data_recall": null,
+        "outcomes": {
+          "correct": 208,
+          "wrong_value": 1
+        },
+        "unsupported_answer_rate": 0.0
+      }
+    },
+    "by_template": {
+      "medication_allergy_intake_v1": {
+        "echo_validation_failures": 0,
+        "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+        "field_accuracy": 0.912281,
+        "fields": 171,
+        "forms": 19,
+        "full_form_success_all_fields": 0.473684,
+        "full_form_success_required": 0.473684,
+        "missing_data_recall": 1.0,
+        "outcomes": {
+          "correct": 156,
+          "missed_fill": 6,
+          "wrong_value": 9
+        },
+        "unsupported_answer_rate": 0.0
+      },
+      "new_patient_registration_v1": {
+        "echo_validation_failures": 0,
+        "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+        "field_accuracy": 0.995215,
+        "fields": 209,
+        "forms": 19,
+        "full_form_success_all_fields": 0.947368,
+        "full_form_success_required": 0.947368,
+        "missing_data_recall": null,
+        "outcomes": {
+          "correct": 208,
+          "wrong_value": 1
+        },
+        "unsupported_answer_rate": 0.0
+      }
+    },
+    "overall": {
+      "echo_validation_failures": 0,
+      "evidence_correctness": "NOT_COMPUTED: B0 emits no evidence ids",
+      "field_accuracy": 0.957895,
+      "fields": 380,
+      "forms": 38,
+      "full_form_success_all_fields": 0.710526,
+      "full_form_success_required": 0.710526,
+      "missing_data_recall": 1.0,
+      "outcomes": {
+        "correct": 364,
+        "missed_fill": 6,
+        "wrong_value": 10
+      },
+      "unsupported_answer_rate": 0.0
+    }
+  },
+  "paired_vs_B0": {
+    "endpoint": "required_fields_correct per form",
+    "overall": {
+      "alpha": 0.05,
+      "bootstrap_positive_gate": true,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261102,
+      "ci_delta_bootstrap_stratified_95": [
+        0.07894736842105263,
+        0.34210526315789475
+      ],
+      "delta": 0.21052631578947367,
+      "mcnemar_positive_gate": true,
+      "n": 38,
+      "p_mcnemar_exact_two_sided": 0.021484375,
+      "patient_cluster_bootstrap": {
+        "ci_delta_patient_cluster_95": [
+          0.07894736842105263,
+          0.34210526315789475
+        ],
+        "patients": 19,
+        "positive_gate": true,
+        "reps": 10000,
+        "seed": 20261102
+      },
+      "phase": "discovery",
+      "promotion": "NO_SUPERIORITY_CLAIM",
+      "replication_gate": "NOT_TESTED",
+      "table": {
+        "baseline_only": 1,
+        "both_correct": 18,
+        "both_wrong": 10,
+        "challenger_only": 9,
+        "n": 38
+      }
+    }
+  },
+  "per_field_accuracy": {
+    "medication_allergy_intake_v1.blood_pressure": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.conditions": {
+      "accuracy": 0.631579,
+      "correct": 12,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.current_medications": {
+      "accuracy": 0.736842,
+      "correct": 14,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.height_cm": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.medication_allergies": {
+      "accuracy": 0.894737,
+      "correct": 17,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.other_allergies": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.patient_name": {
+      "accuracy": 0.947368,
+      "correct": 18,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.smoking": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "medication_allergy_intake_v1.weight_kg": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.city": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.date_of_birth": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.full_name": {
+      "accuracy": 0.947368,
+      "correct": 18,
+      "n": 19
+    },
+    "new_patient_registration_v1.insurance": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.language": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.marital": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.phone": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.sex": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.state": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.street": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    },
+    "new_patient_registration_v1.zip": {
+      "accuracy": 1.0,
+      "correct": 19,
+      "n": 19
+    }
+  }
+}
