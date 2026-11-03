@@ -54,7 +54,7 @@ class JudgeVisualV3(unittest.TestCase):
         self.assertEqual(r.count('<!-- sft-status:end -->'),1)
         self.assertIn('docs/judges/present_v3.html',r)
         j=json.loads((ROOT/'evidence/forms_model/SFT_STATUS.json').read_text())
-        self.assertEqual(len(j['runs']),3)
+        self.assertGreaterEqual(len(j['runs']),3)  # S1/D1/S2/D2/S3 since the DoRA pairs were added
         self.assertTrue(all(v.get('status') for v in j['runs']))
         import sys
         sys.path.insert(0,str(ROOT/'scripts'))

@@ -56,6 +56,8 @@ def main():
     ap.add_argument("--rank", type=int, default=16)
     ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16", "float16"],
                     help="base-weight dtype; LoRA adapter weights stay float32")
+    ap.add_argument("--dora", action="store_true",
+                    help="DoRA (weight-decomposed low-rank adaptation, NVIDIA; Liu et al. 2024) instead of plain LoRA")
     ap.add_argument("--grad-ckpt", action="store_true", help="gradient checkpointing (less memory, slower)")
     args = ap.parse_args()
 
@@ -69,7 +71,7 @@ def main():
         model.gradient_checkpointing_enable()
         model.enable_input_require_grads()
         model.config.use_cache = False
-    model = get_peft_model(model, LoraConfig(r=args.rank, lora_alpha=2 * args.rank, lora_dropout=0.05, task_type="CAUSAL_LM",
+    model = get_peft_model(model, LoraConfig(r=args.rank, lora_alpha=2 * args.rank, lora_dropout=0.05, task_type="CAUSAL_LM", use_dora=args.dora,
                                              target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
                                                              "gate_proj", "up_proj", "down_proj"]))
     for p in model.parameters():
@@ -129,7 +131,7 @@ def main():
     adapter_files = {p.name: sha(p) for p in sorted((out / "adapter").glob("*")) if p.is_file()}
     receipt = {
         "run_id": out.name, "lane": "frontier-forms", "task": "field mapper SFT (prompt sft-prompt-v1)",
-        "base_model": args.base, "base_revision": base_rev, "method": "LoRA", "lora_rank": args.rank,
+        "base_model": args.base, "base_revision": base_rev, "method": "DoRA" if args.dora else "LoRA", "lora_rank": args.rank,
         "hyperparameters": {"epochs": args.epochs, "lr": args.lr, "grad_accum": args.accum, "max_len": args.max_len,
                             "seed": args.seed, "dtype": args.dtype, "adapter_dtype": "float32", "gradient_checkpointing": args.grad_ckpt, "warmup_steps": 20, "schedule": "linear decay"},
         "data": {"train_sha256": sha(DATA / "train.jsonl"), "validation_sha256": sha(DATA / "validation.jsonl"),

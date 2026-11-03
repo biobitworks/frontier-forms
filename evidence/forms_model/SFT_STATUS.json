@@ -1,19 +1,82 @@
 {
  "schema": "frontier_forms.sft_status.v1",
- "updated_utc": "2026-11-03T01:12:00Z",
+ "updated_utc": "2026-11-03T02:15:00Z",
  "label": "In progress (post-deadline, host-approved)",
- "model": "Qwen2.5-0.5B-Instruct + LoRA (local MacBookPro, bf16, gradient checkpointing)",
+ "model": "Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
- "protocol": "Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.",
+ "protocol": "Each config keeps its lowest-validation-loss epoch, then is scored on the 38 validation forms only. The config with the best validation full-form success (ties: validation field accuracy) is chosen and scored once on the frozen 54-form test split. No retries on test. LoRA vs DoRA pairs share rank, lr and epochs.",
  "comparators": [
-  {"arm": "M0 untrained Qwen2.5-0.5B (zero-shot)", "field_accuracy": "41.7% (225/540 test fields)", "full_form": "0/54 test, 0/38 validation", "source": "evidence/forms_model/M0-zeroshot/summary.json (#62)"},
-  {"arm": "B0 frozen rules", "field_accuracy": "", "full_form": "33.3% (18/54)", "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)"},
-  {"arm": "B0 + FCG harness (L1+L2+L3)", "field_accuracy": "", "full_form": "55.6% (30/54)", "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)"}
+  {
+   "arm": "M0 untrained Qwen2.5-0.5B (zero-shot)",
+   "field_accuracy": "41.7% (225/540 test fields)",
+   "full_form": "0/54 test, 0/38 validation",
+   "source": "evidence/forms_model/M0-zeroshot/summary.json (#62)"
+  },
+  {
+   "arm": "B0 frozen rules",
+   "field_accuracy": "",
+   "full_form": "33.3% (18/54)",
+   "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)"
+  },
+  {
+   "arm": "B0 + FCG harness (L1+L2+L3)",
+   "field_accuracy": "",
+   "full_form": "55.6% (30/54)",
+   "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)"
+  },
+  {
+   "arm": "N1 NVIDIA Nemotron-Mini 4B (zero-shot, local Ollama)",
+   "field_accuracy": "41.5% (validation+test)",
+   "full_form": "0/92 validation+test",
+   "source": "evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json"
+  }
  ],
  "runs": [
-  {"run": "SFT-1", "config": "LoRA r16, lr 2e-4, 2 epochs", "status": "stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""},
-  {"run": "SFT-2", "config": "LoRA r16, lr 2e-4, 4 epochs", "status": "queued", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""},
-  {"run": "SFT-3", "config": "LoRA r32, lr 5e-4, 3 epochs", "status": "queued", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""}
+  {
+   "run": "S1",
+   "config": "LoRA r16, lr 2e-4, 2 epochs",
+   "status": "training (epoch 1 of 2; train loss 0.28 at step 20 -> 0.013 at step 80)",
+   "val_loss": "1.017 (before training)",
+   "test_field_accuracy": "",
+   "test_full_form": ""
+  },
+  {
+   "run": "D1",
+   "config": "DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA)",
+   "status": "queued",
+   "val_loss": "",
+   "test_field_accuracy": "",
+   "test_full_form": ""
+  },
+  {
+   "run": "S2",
+   "config": "LoRA r16, lr 2e-4, 4 epochs",
+   "status": "queued",
+   "val_loss": "",
+   "test_field_accuracy": "",
+   "test_full_form": ""
+  },
+  {
+   "run": "D2",
+   "config": "DoRA r16, lr 2e-4, 4 epochs",
+   "status": "queued",
+   "val_loss": "",
+   "test_field_accuracy": "",
+   "test_full_form": ""
+  },
+  {
+   "run": "S3",
+   "config": "LoRA r32, lr 5e-4, 3 epochs",
+   "status": "queued",
+   "val_loss": "",
+   "test_field_accuracy": "",
+   "test_full_form": ""
+  }
  ],
- "results_will_appear": ["evidence/forms_model/ (one folder per run: receipt, answers, summary)", "evidence/FIGURES.html (SFT chart added when results land)", "docs/figures/gains_heatmap (Not yet measured row becomes measured)"]
+ "results_will_appear": [
+  "evidence/forms_model/ (one folder per run: receipt, answers, summary)",
+  "evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)",
+  "docs/figures/gains_heatmap (Not yet measured row becomes measured)"
+ ],
+ "note": "Moved from the MacBookPro (out of memory) to magicSTUDIObox per Byron, 2026-11-03 01:47Z, with a 25% free-memory guard so Vita DAISY keeps priority."
 }

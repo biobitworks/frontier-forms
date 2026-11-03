@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Build evidence/FIGURES.html: every headline result as a static figure (inline SVG, no JS,
-no network), plus evidence/FIGURES_DATA.json with the exact numbers each figure plots.
+"""Build evidence/FIGURES_LIVE.html: every headline result as a static figure (inline SVG, no JS,
+no network), plus evidence/FIGURES_LIVE_DATA.json with the exact numbers each figure plots.
 
 The repo's JSON-only gate rejects new PNG/PDF files, so figures are SVG inside one HTML
 page. Open it in any browser (double-click it from a local clone, or use GitHub's
@@ -152,12 +152,12 @@ body{{font:14px system-ui,sans-serif;margin:16px auto;max-width:800px;color:{C['
 figure{{margin:24px 0}}figcaption{{margin-bottom:6px}}svg{{width:100%;height:auto;font-family:system-ui,sans-serif}}
 </style></head><body><h1>Frontier Forms: results at a glance</h1>
 <p>Synthetic patients only (MITRE Synthea). All inference local. Numbers are read from committed evidence by
-<code>scripts/build_figures.py</code>; the exact values are in <code>evidence/FIGURES_DATA.json</code>.</p>
+<code>scripts/build_figures.py</code>; the exact values are in <code>evidence/FIGURES_LIVE_DATA.json</code>.</p>
 {''.join(figs)}</body></html>
 """
-    (EV / "FIGURES.html").write_text(page)
-    (EV / "FIGURES_DATA.json").write_text(json.dumps(data, indent=1, sort_keys=True) + "\n")
-    print(len(figs), "figures -> evidence/FIGURES.html")
+    (EV / "FIGURES_LIVE.html").write_text(page)
+    (EV / "FIGURES_LIVE_DATA.json").write_text(json.dumps(data, indent=1, sort_keys=True) + "\n")
+    print(len(figs), "figures -> evidence/FIGURES_LIVE.html")
 
 
 if __name__ == "__main__":
