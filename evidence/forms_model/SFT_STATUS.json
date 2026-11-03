@@ -1,6 +1,6 @@
 {
  "schema": "frontier_forms.sft_status.v1",
- "updated_utc": "2026-11-03T01:00:00Z",
+ "updated_utc": "2026-11-03T01:12:00Z",
  "label": "In progress (post-deadline, host-approved)",
  "model": "Qwen2.5-0.5B-Instruct + LoRA (local MacBookPro, bf16, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
@@ -11,9 +11,9 @@
   {"arm": "B0 + FCG harness (L1+L2+L3)", "field_accuracy": "", "full_form": "55.6% (30/54)", "source": "evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)"}
  ],
  "runs": [
-  {"run": "SFT-1", "config": "LoRA r16, lr 2e-4, 2 epochs", "status": "training", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""},
+  {"run": "SFT-1", "config": "LoRA r16, lr 2e-4, 2 epochs", "status": "stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""},
   {"run": "SFT-2", "config": "LoRA r16, lr 2e-4, 4 epochs", "status": "queued", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""},
-  {"run": "SFT-3", "config": "larger rank, higher lr", "status": "queued", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""}
+  {"run": "SFT-3", "config": "LoRA r32, lr 5e-4, 3 epochs", "status": "queued", "val_loss": "", "test_field_accuracy": "", "test_full_form": ""}
  ],
  "results_will_appear": ["evidence/forms_model/ (one folder per run: receipt, answers, summary)", "evidence/FIGURES.html (SFT chart added when results land)", "docs/figures/gains_heatmap (Not yet measured row becomes measured)"]
 }
