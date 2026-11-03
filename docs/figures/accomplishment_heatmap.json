@@ -733,7 +733,7 @@
   },
   {
    "title": "Teammate bench: same hosted model, Pi browser-tools vs Frontier Forms tools (pilot)",
-   "source": "bench/charts/LIVE_RESULTS.md and live_metrics.json at main@e422def (teammate lane, Fireworks-hosted models)",
+   "source": "bench/charts/LIVE_RESULTS.md and live_metrics.json (6/6 matched cases per model, 2026-11-03) (teammate lane, Fireworks-hosted models)",
    "columns": [
     "Fields correct, Pi",
     "Fields correct, our tools",
@@ -758,32 +758,32 @@
      "grade": "partial"
     },
     {
-     "label": "GLM 5.3 [5/6 matched]",
+     "label": "GLM 5.3 [6/6 matched]",
      "values": [
-      0.9714,
-      0.9619,
-      0.8601,
-      0.8616
+      0.9752,
+      0.9504,
+      0.8686,
+      0.8837
      ],
      "grade": "partial"
     },
     {
-     "label": "Qwen Max [2/6 matched]",
+     "label": "Qwen Max [6/6 matched]",
      "values": [
-      0.9697,
+      0.9587,
       1.0,
-      0.7863,
-      0.8123
+      0.8166,
+      0.8425
      ],
      "grade": "partial"
     },
     {
-     "label": "GPT-OSS 120B [2/6 matched]",
+     "label": "GPT-OSS 120B [6/6 matched]",
      "values": [
-      0.2069,
-      1.0,
-      0.4167,
-      0.1818
+      0.157,
+      0.9421,
+      0.3409,
+      0.3824
      ],
      "grade": "partial"
     }
@@ -842,13 +842,19 @@
   },
   {
    "claim": "Same, GPT-OSS 120B",
-   "result": "fields 12/58 -> 58/58 on 2 matched cases",
+   "result": "fields 19/121 -> 114/121 on 6/6 matched cases; 8.8 -> 5.8 s",
    "verdict": "partial",
    "source": "bench"
   },
   {
    "claim": "Same, GLM 5.3",
-   "result": "fields 102/105 -> 101/105 (one field worse) while 7x faster",
+   "result": "fields 118/121 -> 115/121 (3 fields worse) while 70.0 -> 9.2 s",
+   "verdict": "partial",
+   "source": "bench"
+  },
+  {
+   "claim": "Same, Qwen Max",
+   "result": "fields 116/121 -> 121/121; 81.8 -> 15.0 s",
    "verdict": "partial",
    "source": "bench"
   },
@@ -1017,7 +1023,7 @@
  ],
  "verdicts": {
   "admitted": "Admitted / promoted (evidence or a verified fix)",
-  "discovery": "Positive, discovery grade (not promoted)",
+  "discovery": "PI-admitted (2026-11-02): positive, discovery provenance, not replicated",
   "partial": "Partial or pilot",
   "null": "Null: no detectable difference",
   "negative": "Negative: worse than or equal to control",
@@ -1026,7 +1032,7 @@
  },
  "grades": {
   "evidence": "Evidence grade: preregistered or independent run, synthetic data",
-  "discovery": "Discovery grade: designed after seeing the test data; needs replication",
+  "discovery": "Admitted by the PI (2026-11-02), discovery provenance: designed after seeing the data; not replicated",
   "baseline": "Baseline / control",
   "negative": "Negative: no gain over control",
   "exploratory": "Exploratory: designed after a failure, same layouts",
