@@ -77,18 +77,29 @@
   {
    "run": "S2-lora-r16-e4-lr2e-4",
    "try": 3,
-   "status": "RUNNING",
-   "started_utc": "2026-11-03T06:34:06Z"
+   "status": "DONE",
+   "started_utc": "2026-11-03T06:34:06Z",
+   "finished_utc": "2026-11-03T10:14:10Z",
+   "evidence": "evidence/forms_model/selection_v1/S2-lora-r16-e4-lr2e-4"
   },
   {
    "run": "D2-dora-r16-e4-lr2e-4",
    "try": 3,
-   "status": "QUEUED"
+   "status": "ABORTED_BEFORE_FIRST_EPOCH",
+   "started_utc": "2026-11-03T10:14:10Z",
+   "reason": "stopped after 4 min (no weights saved) so S3 runs first; DoRA takes ~2.8x longer, so D2 now runs last"
   },
   {
    "run": "S3-lora-r32-e3-lr5e-4",
    "try": 3,
-   "status": "QUEUED"
+   "status": "RUNNING",
+   "started_utc": "2026-11-03T10:18:31Z"
+  },
+  {
+   "run": "D2-dora-r16-e4-lr2e-4",
+   "try": 4,
+   "status": "QUEUED",
+   "note": "after S3"
   }
  ],
  "base_model_cache": "Qwen/Qwen2.5-0.5B-Instruct revision 7ae557604adf67be50417f59c2c2f167def9a775 (same revision S1 used)",
