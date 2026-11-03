@@ -1,3 +1,5 @@
+> **Video-friendly overview:** [Two-actor local/private Frontier Forms evidence storyboard](VIDEO_EVIDENCE_STORYBOARD_20261102.html), [video opening protocol and sponsor handoff](VIDEO_START_HERE_20261102.md), [frozen source manifest](VIDEO_EVIDENCE_MANIFEST_20261102.json). Interactive HTML requires a localhost static server; GitHub Pages availability has not been verified. The separate [Claude per-cell gains heatmap](../figures/gains_heatmap.html) is linked from the repository start page after PR #65.
+
 # Figures for judges
 
 SYNTHETIC DATA ONLY (MITRE Synthea sample) — not clinical, no PHI, no hosted inference.

@@ -1,0 +1,369 @@
+{
+  "admission_rows": [
+    {
+      "claim_ceiling": "Pinned local synthetic benchmark, train/validation/test 63/19/18",
+      "classification": "STANDARD_DATA_GENERATION",
+      "evidence_state": "ADMITTED_SYNTHETIC_TEST_ASSET",
+      "id": "FF-DATA-SYNTHEA",
+      "kind": "DATA",
+      "label": "100 synthetic Synthea FHIR subset patients",
+      "limits": "Not real clinical records, Epic sandbox population or 100 independent replications.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "freeze",
+        "baseline"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "Form image evaluation asset",
+      "classification": "PROJECT_SPECIFIC_SYNTHETIC_FIXTURE",
+      "evidence_state": "ADMITTED_SYNTHETIC_TEST_ASSET",
+      "id": "FF-DATA-SYNFORM2",
+      "kind": "DATA",
+      "label": "111-case SYNFORM2 / 222 synthetic images",
+      "limits": "Private oracle not exported; independent new-template clinical validation NOT_TESTED.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "synform2"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "Known implanted error benchmark for source-binding and detection",
+      "classification": "PROJECT_SPECIFIC_SYNTHETIC_FIXTURE",
+      "evidence_state": "ADMITTED_SYNTHETIC_CHALLENGE",
+      "id": "FF-DATA-SYNFORM2-ERR",
+      "kind": "DATA",
+      "label": "23-case / 230-image planted-error derivative",
+      "limits": "Planted keys remain private and causal estimates depend on fixture design.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "synform2_err"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "18/54 test forms required fields complete; no neural weights",
+      "classification": "STANDARD_DETERMINISTIC_BASELINE",
+      "evidence_state": "OBSERVED",
+      "id": "FF-BASE-B0",
+      "kind": "BASELINE",
+      "label": "B0 deterministic baseline 18/54 full forms",
+      "limits": "No cross-cohort guarantee.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "baseline"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "381/920 fields; 0/92 complete forms on validation+test",
+      "classification": "STANDARD_ZERO_SHOT_INFERENCE",
+      "evidence_state": "OBSERVED_NEGATIVE",
+      "id": "FF-BASE-M0",
+      "kind": "BASELINE",
+      "label": "Local zero-shot Qwen2.5-0.5B 0/92 full forms",
+      "limits": "Nontrivial model swap is not improvement; M1 fine-tuned successor not established.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "m0"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "18/54 to 30/54 forms, deterministic modules, same weights",
+      "classification": "PROJECT_SPECIFIC_INTEGRATION",
+      "evidence_state": "OBSERVED_DISCOVERY_POSITIVE_NOT_ADMITTED",
+      "id": "FF-FCO-01",
+      "kind": "DISCOVERY",
+      "label": "Source-bound FCO/FCG L1+L3 harness +22.22 pp",
+      "limits": "Rules built after baseline errors exposed; not preregistered independent cohort replication.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "baseline",
+        "progress",
+        "fcar"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "A0 14/46 to A1 22/46 complete seven-field images; Holm p 0.0234375",
+      "classification": "STANDARD_FITTED_POSTPROCESSING_APPLIED_TO_PROJECT",
+      "evidence_state": "PROMOTE_DISCOVERY_ONLY_NOT_SCIENTIFIC",
+      "id": "FF-OCR-01",
+      "kind": "DISCOVERY",
+      "label": "Learned OCR post-correction +17.39 pp",
+      "limits": "23 synthetic cases paired across clean/scan; preregistration timing and new cohort unverified. Correction table learned, not Qwen weight training.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "ocr",
+        "ocr_source",
+        "fcar"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "Compared with A0 14/46; confidence intervals include zero",
+      "classification": "STANDARD_TRAINED_DETECTOR",
+      "evidence_state": "NULL_NOT_PROMOTED",
+      "id": "FF-CROP-A2A3",
+      "kind": "NEGATIVE_OR_NULL",
+      "label": "YOLO crops A2=9/46, A3=15/46",
+      "limits": "Failure to improve complete-form accuracy; do not use mAP alone to claim model gain.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "ocr",
+        "ocr_source"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "Learned-versus-contour recall delta 0; paired McNemar p=1",
+      "classification": "STANDARD_TRAINED_CLASSIFIER",
+      "evidence_state": "NEGATIVE_NO_GAIN",
+      "id": "FF-BBOX-LOGIT",
+      "kind": "NEGATIVE_OR_NULL",
+      "label": "Trained logistic vs deterministic contour 540/540 tie",
+      "limits": "Training on three blank layouts does not prove generalization.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "logit"
+      ],
+      "work_lane": "CHATGPT_INDEPENDENT"
+    },
+    {
+      "claim_ceiling": "D1 recall 13.06%; D2 recall 95.56% with 65.65% precision",
+      "classification": "STANDARD_NEURAL_BOX_CLASSIFICATION",
+      "evidence_state": "NEGATIVE_D1_EXPLORATORY_D2",
+      "id": "FF-BBOX-D1D2",
+      "kind": "NEGATIVE_OR_NULL",
+      "label": "D1 bad, D2 post-hoc exploratory",
+      "limits": "Post-hoc candidate classifier, 180 false positives, no new-template test.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "bbox"
+      ],
+      "work_lane": "CHATGPT_INDEPENDENT"
+    },
+    {
+      "claim_ceiling": "Full 315/322 fields vs no-scan 316/322; epoch GAIN/LOSS/NEUTRAL logged",
+      "classification": "PROJECT_SPECIFIC_LEDGER_ON_STANDARD_TRAINING",
+      "evidence_state": "EXECUTED_NO_SCIENTIFIC_PROMOTION",
+      "id": "FF-YOLO-LOMO",
+      "kind": "NEGATIVE_OR_NULL",
+      "label": "YOLO full/no-scan 30-epoch training and control",
+      "limits": "Merklized training ledger establishes recorded byte lineage, not performance benefit.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "yolo_full",
+        "yolo_no_scan",
+        "judge"
+      ],
+      "work_lane": "CLAUDE"
+    },
+    {
+      "claim_ceiling": "24 matched pairs; 23 faster tool pairs, 3 quality regressions",
+      "classification": "STANDARD_MODEL_COMPARISON",
+      "evidence_state": "SEPARATE_REPORTED_PILOT",
+      "id": "FF-HOSTED-PILOT",
+      "kind": "PILOT",
+      "label": "Teammate 48 hosted benchmark runs",
+      "limits": "Hosted weights/revision unknown; do not attribute to local Qwen or clinical model improvement.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "hosted"
+      ],
+      "work_lane": "TEAMMATE"
+    },
+    {
+      "claim_ceiling": "Synthetic benchmark assets and discovery claims retained with source identities",
+      "classification": "PROJECT_SPECIFIC_ADMISSION_GATE",
+      "evidence_state": "HOLD_NO_INDEPENDENT_PI_ADMISSION",
+      "id": "FF-ADMISSION-FCAR",
+      "kind": "ADMISSION",
+      "label": "Scientific admission and independent replication",
+      "limits": "Prospective replication, interop/clinical tests and independent PI signoff NOT_TESTED.",
+      "scientific_admitted": false,
+      "source_keys": [
+        "fcar",
+        "ocr",
+        "judge"
+      ],
+      "work_lane": "CHATGPT_INDEPENDENT"
+    }
+  ],
+  "discovery_ocr_independent_status": "NOT_PROMOTED_EXTERNAL_REPLICATION_PENDING",
+  "discovery_ocr_internal_label": "PROMOTE_DISCOVERY",
+  "discovery_positive_count": 2,
+  "gate_policy": "Data accepted as synthetic benchmark assets and observations; conditional discovery evidence retained; NO independent scientific, clinical or external novelty admission.",
+  "independent_replication": "NOT_TESTED",
+  "model_weight_gain": "NOT_COMPUTED_FOR_QUALIFYING_FINE_TUNE",
+  "new_merkle_root": "NOT_COMPUTED",
+  "novelty_matrix": [
+    {
+      "baseline": "Established tooling, standard supervised, zero-shot and transfer learning",
+      "effect": "Descriptive system integration; no new training algorithm claimed",
+      "evidence": [
+        "freeze",
+        "m0",
+        "ocr",
+        "yolo_full"
+      ],
+      "feature": "Use Synthea FHIR/HTML forms, PDF creation, Apple OCR, Qwen, YOLO/LoRA",
+      "novelty_level": "STANDARD_COMPONENTS_PROJECT_INTEGRATION",
+      "our_contribution": "Integrated local synthetic form loopback and separate model/OCR arms",
+      "prior_art": "NOT_REVIEWED"
+    },
+    {
+      "baseline": "Deterministic validation/error handling and paired rule ablations are known",
+      "effect": "Discovery +22.22 pp on exposed synthetic test; neural weights UNCHANGED",
+      "evidence": [
+        "baseline",
+        "progress"
+      ],
+      "feature": "Source-bound FCO/FCG action gate L1 evidence-abstain, L2 unit checks, L3 source binding",
+      "novelty_level": "PROJECT_SPECIFIC_DESIGN_CANDIDATE",
+      "our_contribution": "Per-field source-grounded conditional correction with explicit abstention, provenance and LOMO edges",
+      "prior_art": "NOT_REVIEWED"
+    },
+    {
+      "baseline": "Merkle integrity, formal constraints, test ablation and model checkpointing are established",
+      "effect": "Inspectability of experimental process, not proof of causal superiority",
+      "evidence": [
+        "judge",
+        "yolo_full",
+        "yolo_no_scan",
+        "fcar"
+      ],
+      "feature": "Merkle/Lean/FCO LOMO \u00d7 local model training epoch lineage",
+      "novelty_level": "PROJECT_SPECIFIC_EVIDENCE_ARCHITECTURE",
+      "our_contribution": "Joined source leaves, constraints, trained model epoch receipts, negative/hold decisions and audit replay",
+      "prior_art": "NOT_REVIEWED"
+    },
+    {
+      "baseline": "Fitted text normalization / postprocessing is a standard method, not fine-tuning LLM neural weights",
+      "effect": "A1 discovery +17.39 pp; NOT_PROMOTED_EXTERNAL_REPLICATION_PENDING",
+      "evidence": [
+        "ocr",
+        "ocr_source"
+      ],
+      "feature": "Learned OCR correction from synthetic training split",
+      "novelty_level": "STANDARD_METHOD_NEW_OBSERVED_LOCAL_RESULT",
+      "our_contribution": "Same-case paired clean/scan evaluation with three arms and separate null controls",
+      "prior_art": "NOT_REVIEWED"
+    },
+    {
+      "baseline": "Rigorous research practice, not novel as a scientific method",
+      "effect": "Prevents claims of promotion from just Git merges or model training",
+      "evidence": [
+        "progress",
+        "hosted",
+        "judge"
+      ],
+      "feature": "Negative results preserved beside positive findings",
+      "novelty_level": "PROJECT_SPECIFIC_WORKFLOW_INTEGRATION",
+      "our_contribution": "Append-only outcomes linked to distinct PRs, source-byte identities and admission states",
+      "prior_art": "NOT_REVIEWED"
+    }
+  ],
+  "parent_commit": "900dae04a99d58792cb216f03f02aab6c0315fdd",
+  "schema": "frontier_forms.observation_discovery_novelty.v1",
+  "scientific_admission": "HOLD_NO_INDEPENDENT_PI_ADMISSION",
+  "scope": "SYNTHETIC_ONLY_LOCAL_AND_SEPARATE_HOSTED_PILOT",
+  "source_files_sha256": {
+    "baseline": {
+      "bytes": 5967,
+      "path": "evidence/baseline/BASELINE_V1.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "21431b03cd46041180984f6bdc2aad2d7642f0d47fb14c5ddb15fbf746a77382"
+    },
+    "bbox": {
+      "bytes": 2564,
+      "path": "evidence/forms_bbox/LOCAL_BBOX_D1_D2_AUDIT_20261102.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "8e20aa92da0122d4523082db4d9805637109a6bf097a02feacda5b30d7b80948"
+    },
+    "fcar": {
+      "bytes": 1596,
+      "path": "evidence/admission/FF_FCAR_GATE_ASSESSMENT_V1.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "05e8ebff7d482b4c3790ef50daf07bcb0491801b18f0abd55d9eb7ded0273279"
+    },
+    "freeze": {
+      "bytes": 1923,
+      "path": "data/forms_cohort_v1/GENERATION.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "ca8d699f5638732b9a722360045e1ab25ee552570303dc2b27e8b25840b60297"
+    },
+    "hosted": {
+      "bytes": 162949,
+      "path": "evidence/governance/OUTCOMES_AND_PROMOTIONS_20261102_V2.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "b129f660892ec97df40aa1ac12bc516bd16dfa4a306a88b1ab15db2a253fc0fa"
+    },
+    "judge": {
+      "bytes": 50303,
+      "path": "docs/judges/JUDGE_OUTCOMES_SUCCESSOR_V1.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "69e93af7d46fbc370aaa85c6262d2454c3891a6a2b962f7e89c918ce4da29dbb"
+    },
+    "logit": {
+      "bytes": 2085,
+      "path": "evidence/forms_box_validator/run_v3/summary.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "5ba8d2f543e6713ba5b65449c958a364c732750309ff1e8922213d323ba83d11"
+    },
+    "m0": {
+      "bytes": 10896,
+      "path": "evidence/forms_model/M0-zeroshot/summary.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "601c78b880af66e1fe01c330e0d226464302d2dbadf7b580c0d3b64898925b5c"
+    },
+    "ocr": {
+      "bytes": 4469,
+      "path": "docs/judges/OCR_CORRECTION_SUCCESSOR_V2.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "ae50de6661b53db271aef0168cdd434743bc29f55137b865db590df4dd2112f0"
+    },
+    "ocr_source": {
+      "bytes": 3549,
+      "path": "evidence/redteam/trained_gain/trained_gain_summary.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+    },
+    "progress": {
+      "bytes": 34020,
+      "path": "dashboard/training_progress_latest.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "22013d1b675d0544a5d27bd317d4f16e69c5d030a5676347b1d4d154f87158b1"
+    },
+    "synform2": {
+      "bytes": 1181,
+      "path": "evidence/redteam/synform2/manifest.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "6f7ba4560a9c348908278dade1b546673693df5f17468f2a953091305dae6589"
+    },
+    "synform2_err": {
+      "bytes": 1110,
+      "path": "evidence/redteam/synform2_err/manifest.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "6c10d024b1451f348de7c443a8e6b3d097891417af3043234bf1fab66a95975c"
+    },
+    "yolo_full": {
+      "bytes": 1138,
+      "path": "evidence/redteam/detector/full/final_receipt.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "179c66c3292d3a934d8486cb9be88d9feb9fa25e9788b13cb7def43ea55e6c02"
+    },
+    "yolo_no_scan": {
+      "bytes": 1147,
+      "path": "evidence/redteam/detector/no_scan/final_receipt.json",
+      "scope": "exact file identity only; not accuracy, replication or independent scientific admission",
+      "sha256": "d12fe3bf81c45c4ac991d4086c4ef22b77dcc20ec3fa9680b7b67e26aefbf543"
+    }
+  },
+  "status_taxonomy": "PROPOSED IMPLEMENTED EXECUTED OBSERVED SUPPORTED FAILED NULL NEGATIVE DEFERRED NOT_TESTED UNKNOWN NOT_COMPUTED",
+  "true_external_novelty": "UNKNOWN_PRIOR_ART_NOT_REVIEWED",
+  "vithia_daisy_cross_program_transfer": "NONE"
+}

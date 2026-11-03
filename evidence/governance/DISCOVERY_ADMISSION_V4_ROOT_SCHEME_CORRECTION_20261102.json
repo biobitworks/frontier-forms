@@ -1,0 +1,14 @@
+{
+  "admitted_89_event_root": "32fded207b7eae8e09071c8a3c8e4737e6648705e9765af5a09d28ff04292b61",
+  "corrected_successor_root": "8c20b817e0da230e1faac2c8309a33b062d8297ca23ee35a4d99e35685d12ede",
+  "failure": "V3 used literal ASCII backslash-x00 prefix instead of a single 0x00 domain-separation byte",
+  "original_v3_status": "FAILED_DECLARED_ROOT_SCHEME",
+  "predecessor_v3_declared_root_did_not_use_nul": true,
+  "predecessor_v3_file_sha256": "93dc6786dacd07823e6df5557b6d917500600f2375073d64972cd863e0fba426",
+  "predecessor_v3_root": "850bce37c0f039df4d6eb627cb680c068384b7345c2eec4755a2f524f1df2467",
+  "repair": "Use SHA256(bytes([0]) + canonical_sorted_compact_UTF8_JSON_manifest_without_root)",
+  "schema": "frontier-forms.discovery-root-recipe-correction.v4",
+  "scientific_promotions": 0,
+  "source_presentation": "PR67 updated the heatmap file; the 89 underlying source event leaves remain identical",
+  "status": "PASS_INDEPENDENT_ROOT_SCHEME_SUCCESSOR"
+}
