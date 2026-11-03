@@ -93,7 +93,13 @@ def prepare_print_page(page,answers,template):
                 # Report the mismatch; do not silently force a different dropdown.
                 pass
         else:
-            loc.fill(vals[k])
+            try:
+                loc.fill(vals[k])
+            except Exception:
+                # e.g. "34.9 kg" into input[type=number]: the browser rejects it.
+                # Leave the field empty so the DOM-vs-answer comparison records the
+                # mismatch instead of aborting the whole acceptance run.
+                pass
     page.evaluate("""() => {
       for(const el of document.querySelectorAll('input,textarea,select')){
         let sp=document.createElement('span');
