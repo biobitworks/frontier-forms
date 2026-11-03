@@ -1,0 +1,347 @@
+<title>Frontier Forms Evidence</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: an intake-form ledger — one reading column, numbered sections only where the order is the argument, evidence boxes styled like form fields. */
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --ink:#14202e; --muted:#566476; --line:#dce2ea; --field:#eef2f7;
+  --accent:#1f5fbf; --accent-soft:#dbe7fb;
+  --good:#1d7a4f; --good-bg:#ddf2e6; --warn:#9a5a06; --warn-bg:#fbecd2; --bad:#b42318; --bad-bg:#fbe1de; --null:#5f6b7a; --null-bg:#e9edf2;
+  --s1:#1f5fbf; --s2:#c2410c;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e131a; --surface:#151c26; --ink:#e5eaf1; --muted:#9aa7b7; --line:#2a3443; --field:#1b2430;
+  --accent:#78a6ff; --accent-soft:#1d2e4d;
+  --good:#5cc994; --good-bg:#16352a; --warn:#e8ad55; --warn-bg:#3a2a12; --bad:#f2837a; --bad-bg:#3d1c1a; --null:#a3adba; --null-bg:#232c38;
+  --s1:#78a6ff; --s2:#f0915c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e131a; --surface:#151c26; --ink:#e5eaf1; --muted:#9aa7b7; --line:#2a3443; --field:#1b2430;
+  --accent:#78a6ff; --accent-soft:#1d2e4d;
+  --good:#5cc994; --good-bg:#16352a; --warn:#e8ad55; --warn-bg:#3a2a12; --bad:#f2837a; --bad-bg:#3d1c1a; --null:#a3adba; --null-bg:#232c38;
+  --s1:#78a6ff; --s2:#f0915c; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:24px;font-weight:600}
+h3{font-size:16px;font-weight:600}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)}
+.eyebrow{overflow-wrap:anywhere;font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:14px}
+.banner{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 var(--mono);padding:6px 9px;border-radius:4px;background:var(--null-bg);color:var(--null);white-space:nowrap}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.chip.good{background:var(--good-bg);color:var(--good)} .chip.warn{background:var(--warn-bg);color:var(--warn)} .chip.bad{background:var(--bad-bg);color:var(--bad)} .chip.acc{background:var(--accent-soft);color:var(--accent)}
+section{display:grid;gap:16px;min-width:0}
+.wrap>*,.grid2>*,.compare>*,.shots>*,.sec-head{min-width:0}
+.sec-head{display:grid;gap:6px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.field{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:4px;min-width:0}
+.field .lab{font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.field .val{font:600 26px/1.15 var(--display);font-variant-numeric:tabular-nums}
+.field .val small{font:500 14px var(--body);color:var(--muted)}
+.field .note{font-size:13px;color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:12px;min-width:0}
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.chart .lbl{fill:var(--ink);font-family:var(--body);font-size:12.5px}
+.chart .val{fill:var(--ink);font-weight:500}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:720px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--field);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 12px var(--mono);padding:7px 10px;border-radius:4px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.compare ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+figure{margin:0;display:grid;gap:8px;min-width:0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{font-size:13px;color:var(--muted)}
+code,.hash{font-family:var(--mono);font-size:12px;word-break:break-all}
+details{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+summary{cursor:pointer;font-weight:600}
+.src{display:grid;gap:6px;margin-top:10px}
+footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:16px}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--mono);padding:6px 8px;border-radius:4px;max-width:280px;z-index:20;opacity:0;transition:opacity .1s}
+@media (prefers-reduced-motion:reduce){#tip{transition:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Frontier Forms · Claude red-team lane · synthetic intake forms</span>
+  <h1>Do trained local models fill medical intake forms better, and can we prove it?</h1>
+  <p class="muted">Every number on this page is read from committed evidence files in the repository and pinned by sha256 at the bottom. Patients are MITRE Synthea synthetic records, so there is no PHI. Models ran locally, and no weights are published.</p>
+  <div class="banner">
+    <span class="chip acc">Discovery ledger only</span>
+    <span class="chip warn">Scientific promotion: HOLD</span>
+    <span class="chip">Replication cohort: NOT_TESTED</span>
+    <span class="chip">Nothing marked SUPPORTED</span>
+  </div>
+</header>
+
+<section aria-labelledby="h-key">
+  <div class="sec-head"><h2 id="h-key">Key results</h2></div>
+  <div class="fields" id="kpis"></div>
+</section>
+
+<section aria-labelledby="h-trained">
+  <div class="sec-head">
+    <span class="eyebrow">Preregistered · test split scored once</span>
+    <h2 id="h-trained">Trained components vs the untrained baseline</h2>
+    <p class="muted">Baseline: Apple Vision OCR plus a rule parser, with no learned parameters. Each arm changes only the trained part, and the OCR engine stays the same. The unit is one image; there are 46 test images (23 patients, each rendered clean and as a scan). Success means all 7 fields equal the printed value.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Forms with all 7 fields correct, out of 46</h3><svg class="chart" id="c-arms" role="img" aria-label="Forms fully correct per arm"></svg></div>
+    <div class="panel"><h3>Change vs baseline, with 95% patient-cluster CI</h3><svg class="chart" id="c-delta" role="img" aria-label="Change in success rate with confidence intervals"></svg>
+      <p class="muted" style="font-size:13px">A row is admitted only if Holm-corrected exact McNemar p &lt; 0.05 and the whole interval sits above zero.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-gates">
+  <div class="sec-head">
+    <span class="eyebrow">2⁴ factorial · same model weights throughout</span>
+    <h2 id="h-gates">Which admission checks catch planted errors?</h2>
+    <p class="muted">There are 108 planted field errors across 135 forms. Each check either admits or rejects an extracted field. Detection is the share of planted errors rejected. False admissions are wrong values that got through. The commitment check compares each value with a salted hash of its source, so it catches any changed value by design. The finding is how much the other checks miss.</p>
+  </div>
+  <div class="panel"><svg class="chart" id="c-gates" role="img" aria-label="Planted error detection and false admissions for 16 check combinations"></svg>
+    <div class="legend"><span><i style="background:var(--s1)"></i>planted-error detection (bar)</span><span>number at right = false admissions</span></div></div>
+</section>
+
+<section aria-labelledby="h-epochs">
+  <div class="sec-head">
+    <span class="eyebrow">Per-epoch Merkle ledger</span>
+    <h2 id="h-epochs">Detector training, one committed leaf per epoch</h2>
+    <p class="muted">The YOLOv8n field detector was fine-tuned on the training split only. After every epoch it was scored on the dev split and compared with the previous epoch using a paired exact McNemar test. The epoch was then committed as a hash-chained leaf marked GAIN, LOSS or NEUTRAL. The second run drops the scan variants (leave one mechanism out).</p>
+  </div>
+  <div class="panel"><svg class="chart" id="c-epochs" role="img" aria-label="Dev pass rate per epoch for two training runs"></svg>
+    <div class="legend" id="epoch-legend"></div></div>
+</section>
+
+<section aria-labelledby="h-models">
+  <div class="sec-head">
+    <span class="eyebrow">Same 46 test images · post hoc, never promotable</span>
+    <h2 id="h-models">Pretrained models on the same forms</h2>
+    <p class="muted">None of these weights were trained by this lane. The comparison was not preregistered, so it is recorded and cannot be promoted.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>Forms with all 7 fields correct, out of 46</h3><svg class="chart" id="c-models" role="img" aria-label="Forms fully correct per model"></svg></div>
+    <div class="panel"><h3>Drawing bounding boxes on the image breaks OCR</h3>
+      <div class="fields" id="boxes"></div>
+      <p class="muted" style="font-size:13px">Same forms, same OCR engine and parser. The only change is the overlay. OCR has to run on the clean render, and boxes are for people.</p></div>
+  </div>
+  <div class="shots">
+    <figure><img id="img-qwen25vl" alt="Form server: scan-like synthetic form beside the intake form filled by qwen2.5vl:3b"><figcaption>qwen2.5vl:3b reading the scan-like form. Green fields match the printed value.</figcaption></figure>
+    <figure><img id="img-qwen3" alt="Form server: the same form filled by the qwen3:1.7b text mapper, with swapped name fields"><figcaption>The qwen3:1.7b text mapper on the same form. It put the label text in the case id and swapped first and last name.</figcaption></figure>
+  </div>
+</section>
+
+<section aria-labelledby="h-ledger">
+  <div class="sec-head">
+    <span class="eyebrow">evidence/admission/REDTEAM_DISCOVERY_ADMISSION_V1.json</span>
+    <h2 id="h-ledger">Every decision, including null, negative and failed</h2>
+    <p class="muted">The ledger is rebuilt and checked byte for byte in CI. Promotion is HOLD on every row.</p>
+  </div>
+  <div class="filters" id="filters" role="group" aria-label="Filter by admission state"></div>
+  <div class="tbl"><table><thead><tr><th>Record</th><th>Question</th><th>Result</th><th>Holm p</th><th>State</th></tr></thead><tbody id="ledger"></tbody></table></div>
+</section>
+
+<section aria-labelledby="h-novel">
+  <div class="sec-head"><h2 id="h-novel">What was standard and what this lane added</h2></div>
+  <div class="compare">
+    <div class="panel"><h3>Standard, used as-is</h3><ul>
+      <li>YOLOv8n fine-tuning with Ultralytics defaults</li>
+      <li>Apple Vision OCR, untrained</li>
+      <li>Pretrained Qwen models through Ollama, inference only</li>
+      <li>A post-OCR correction table built by counting</li>
+      <li>Exact McNemar, paired bootstrap, Holm correction</li></ul></div>
+    <div class="panel"><h3>Added by this lane</h3><ul>
+      <li>Every training epoch committed as a hash-chained leaf with its weights hash and a paired test against the previous epoch</li>
+      <li>A preregistered trained-versus-untrained comparison, fit on train only and scored on test once</li>
+      <li>Per-field salted source commitments used as an admission gate, measured in a full 2⁴ factorial with leave-one-mechanism-out</li>
+      <li>A planted-error dataset with opaque image ids and a private list of what was planted</li>
+      <li>Weights, mechanism and outcome recorded separately for every comparison</li></ul></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-overlay">
+  <div class="sec-head"><h2 id="h-overlay">What the evidence looks like</h2></div>
+  <figure><img id="img-overlay" alt="Synthetic intake form with renderer ground truth, OCR line boxes and detector boxes"><figcaption>A frozen test render with three kinds of boxes: renderer ground truth (green dashed), Apple Vision OCR lines (blue) and the trained YOLOv8n detector with confidence (orange).</figcaption></figure>
+</section>
+
+<footer>
+  <details><summary>Source files and sha256</summary><div class="src" id="sources"></div></details>
+  <span id="built"></span>
+  <span>Synthetic data only (MITRE Synthea sample). Not clinical. No PHI, no hosted inference, no EHR writes.</span>
+</footer>
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const NS = 'http://www.w3.org/2000/svg';
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const rec = id => D.admission.records.find(r => r.id === id);
+const pct = x => (x * 100).toFixed(0) + '%';
+const fmtp = p => p == null ? '—' : p < 0.0001 ? '<0.0001' : p.toFixed(p < 0.01 ? 4 : 3);
+function el(tag, attrs, parent, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+const tip = $('#tip');
+function hover(node, text) {
+  node.addEventListener('pointermove', ev => { tip.textContent = text; tip.style.opacity = 1; const x = Math.min(ev.clientX + 14, innerWidth - tip.offsetWidth - 8); tip.style.left = x + 'px'; tip.style.top = (ev.clientY + 14) + 'px'; });
+  node.addEventListener('pointerleave', () => { tip.style.opacity = 0; });
+}
+
+const A = ['A1', 'A2', 'A3'].map(a => rec('RT-ADM-TRAINED-' + a));
+const base = A[0].outcome.baseline_success;
+const gateCommit = rec('RT-ADM-GATE-COMMITMENT');
+const vl = rec('RT-ADM-POSTHOC-QWEN2_5VL');
+
+// Key results
+const kpis = [
+  ['Trained OCR correction', `${base} → ${A[0].outcome.challenger_success}<small> / 46 forms</small>`, `Holm p = ${fmtp(A[0].outcome.holm_p)} · admitted to discovery ledger`],
+  ['Commitment check', `${pct(gateCommit.outcome.planted_detection_rate)}<small> planted errors caught</small>`, `0 false admissions · rules alone catch ${pct(rec('RT-ADM-GATE-RULES').outcome.planted_detection_rate)}`],
+  ['qwen2.5vl:3b, pretrained', `${vl.outcome.challenger_success}<small> / 46 forms</small>`, `vs ${base} for OCR plus parser · post hoc`],
+  ['Boxes drawn on the image', `${D.boxes.clean} → ${D.boxes.boxed}<small> / ${D.boxes.total} fields</small>`, 'Apple OCR on the same 10 forms'],
+];
+$('#kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="field"><span class="lab">${l}</span><span class="val">${v}</span><span class="note">${n}</span></div>`).join('');
+$('#boxes').innerHTML = `<div class="field"><span class="lab">Clean render</span><span class="val">${D.boxes.clean}<small> / ${D.boxes.total}</small></span></div><div class="field"><span class="lab">With boxes drawn</span><span class="val">${D.boxes.boxed}<small> / ${D.boxes.total}</small></span></div>`;
+
+// Horizontal bar chart
+function hbars(svg, rows, max, opts = {}) {
+  const W = 480, lw = opts.lw || 190, rh = 34, top = 8, h = top + rows.length * rh + 22, x0 = lw, x1 = W - 70;
+  svg.setAttribute('viewBox', `0 0 ${W} ${h}`);
+  const sx = v => x0 + (x1 - x0) * v / max;
+  [0, max / 2, max].forEach(t => { el('line', { x1: sx(t), x2: sx(t), y1: top, y2: h - 18, stroke: css('--line') }, svg); el('text', { x: sx(t), y: h - 4, 'text-anchor': 'middle' }, svg, Math.round(t)); });
+  rows.forEach((r, i) => {
+    const y = top + i * rh;
+    el('text', { x: 0, y: y + 21, class: 'lbl' }, svg, r.label);
+    const w = Math.max(2, sx(r.v) - x0);
+    const g = el('g', {}, svg);
+    el('rect', { x: x0, y: y + 7, width: w, height: rh - 14, rx: 3, fill: r.color || css('--s1') }, g);
+    el('rect', { x: x0, y: y, width: x1 - x0 + 60, height: rh, fill: 'transparent' }, g);
+    el('text', { x: x0 + w + 6, y: y + 21, class: 'val' }, svg, r.text ?? r.v);
+    hover(g, r.tip);
+  });
+}
+hbars($('#c-arms'), [
+  { label: 'A0 untrained baseline', v: base, color: css('--null'), tip: `A0 page OCR + rule parser: ${base}/46` },
+  ...A.map((r, i) => ({ label: ['A1 + learned correction', 'A2 detector crops + OCR', 'A3 crops + correction'][i], v: r.outcome.challenger_success,
+    color: r.admission_state === 'DISCOVERY_LEDGER_ADMITTED' ? css('--s1') : css('--null'),
+    tip: `${r.id}: ${r.outcome.challenger_success}/46 forms · Holm p ${fmtp(r.outcome.holm_p)} · ${r.decision}`, text: `${r.outcome.challenger_success}` }))
+], 46);
+
+// Delta + CI dot-and-whisker
+(function () {
+  const svg = $('#c-delta'), W = 480, lw = 190, rh = 40, top = 8, n = A.length, h = top + n * rh + 24, lo = -0.4, hi = 0.4, x0 = lw, x1 = W - 16;
+  svg.setAttribute('viewBox', `0 0 ${W} ${h}`);
+  const sx = v => x0 + (x1 - x0) * (v - lo) / (hi - lo);
+  [-0.4, -0.2, 0, 0.2, 0.4].forEach(t => { el('line', { x1: sx(t), x2: sx(t), y1: top, y2: h - 20, stroke: t === 0 ? css('--muted') : css('--line'), 'stroke-dasharray': t === 0 ? '' : '2 3' }, svg); el('text', { x: sx(t), y: h - 4, 'text-anchor': 'middle' }, svg, (t > 0 ? '+' : '') + t.toFixed(1)); });
+  A.forEach((r, i) => {
+    const o = r.outcome, y = top + i * rh + rh / 2, [a, b] = o.ci95_patient_cluster_bootstrap, ok = r.admission_state === 'DISCOVERY_LEDGER_ADMITTED';
+    const c = ok ? css('--s1') : css('--null');
+    el('text', { x: 0, y: y + 4, class: 'lbl' }, svg, ['A1 learned correction', 'A2 detector crops', 'A3 crops + correction'][i]);
+    const g = el('g', {}, svg);
+    el('line', { x1: sx(a), x2: sx(b), y1: y, y2: y, stroke: c, 'stroke-width': 2 }, g);
+    [a, b].forEach(v => el('line', { x1: sx(v), x2: sx(v), y1: y - 6, y2: y + 6, stroke: c, 'stroke-width': 2 }, g));
+    el('circle', { cx: sx(o.delta_rate), cy: y, r: 5.5, fill: c, stroke: css('--surface'), 'stroke-width': 2 }, g);
+    el('rect', { x: x0, y: y - rh / 2, width: x1 - x0, height: rh, fill: 'transparent' }, g);
+    hover(g, `${r.id}: Δ ${(o.delta_rate >= 0 ? '+' : '') + o.delta_rate.toFixed(3)} · CI [${a.toFixed(3)}, ${b.toFixed(3)}] · Holm p ${fmtp(o.holm_p)} · ${r.decision}`);
+  });
+})();
+
+// Gate factorial
+(function () {
+  const svg = $('#c-gates'), rows = [...D.gates].sort((a, b) => b.detection - a.detection || a.false_admissions - b.false_admissions);
+  const W = 760, lw = 290, rh = 26, top = 6, h = top + rows.length * rh + 22, x0 = lw, x1 = W - 90;
+  svg.setAttribute('viewBox', `0 0 ${W} ${h}`);
+  const sx = v => x0 + (x1 - x0) * v;
+  [0, 0.25, 0.5, 0.75, 1].forEach(t => { el('line', { x1: sx(t), x2: sx(t), y1: top, y2: h - 18, stroke: css('--line') }, svg); el('text', { x: sx(t), y: h - 4, 'text-anchor': 'middle' }, svg, pct(t)); });
+  el('text', { x: W - 4, y: top + 10, 'text-anchor': 'end' }, svg, 'false adm.');
+  rows.forEach((r, i) => {
+    const y = top + 14 + i * rh, name = r.config === 'none' ? 'no checks' : r.config.replaceAll('+', ' + ');
+    el('text', { x: 0, y: y + 13, class: 'lbl' }, svg, name);
+    const g = el('g', {}, svg);
+    el('rect', { x: x0, y: y + 4, width: Math.max(2, sx(r.detection) - x0), height: rh - 10, rx: 3, fill: r.config.includes('commitment') ? css('--s1') : css('--null') }, g);
+    el('rect', { x: x0, y: y, width: W - x0, height: rh, fill: 'transparent' }, g);
+    el('text', { x: W - 4, y: y + 13, 'text-anchor': 'end', class: 'val' }, svg, r.false_admissions);
+    hover(g, `${name}: detection ${pct(r.detection)} of ${r.planted} planted · ${r.false_admissions} false admissions · coverage ${pct(r.coverage)}`);
+  });
+})();
+
+// Epoch chart: dev pass rate per epoch, two runs, status markers
+(function () {
+  const svg = $('#c-epochs'), W = 760, h = 260, l = 44, r = 16, t = 12, b = 30, runs = [['full', css('--s1'), 'full run'], ['no_scan', css('--s2'), 'no-scan run (LOMO)']];
+  svg.setAttribute('viewBox', `0 0 ${W} ${h}`);
+  const maxE = Math.max(...Object.values(D.epochs).map(e => e.length));
+  const sx = e => l + (W - l - r) * (e - 1) / (maxE - 1), sy = v => t + (h - t - b) * (1 - v);
+  [0, 0.25, 0.5, 0.75, 1].forEach(v => { el('line', { x1: l, x2: W - r, y1: sy(v), y2: sy(v), stroke: css('--line') }, svg); el('text', { x: l - 6, y: sy(v) + 4, 'text-anchor': 'end' }, svg, pct(v)); });
+  [1, 5, 10, 15, 20, 25, 30].filter(e => e <= maxE).forEach(e => el('text', { x: sx(e), y: h - 10, 'text-anchor': 'middle' }, svg, e));
+  el('text', { x: W - r, y: h - 10, 'text-anchor': 'end' }, svg, '');
+  for (const [run, color] of runs) {
+    const pts = D.epochs[run];
+    el('path', { d: pts.map((p, i) => (i ? 'L' : 'M') + sx(p.epoch) + ' ' + sy(p.dev_pass_rate)).join(' '), fill: 'none', stroke: color, 'stroke-width': 2 }, svg);
+    pts.forEach(p => {
+      const g = el('g', {}, svg);
+      const isG = p.status === 'GAIN', isL = p.status === 'LOSS';
+      if (isG || isL) el('circle', { cx: sx(p.epoch), cy: sy(p.dev_pass_rate), r: 6.5, fill: isG ? css('--good') : css('--bad'), stroke: css('--surface'), 'stroke-width': 2 }, g);
+      el('circle', { cx: sx(p.epoch), cy: sy(p.dev_pass_rate), r: 12, fill: 'transparent' }, g);
+      hover(g, `${run} epoch ${p.epoch}: ${p.status} · dev ${p.dev_pass}/${p.dev_images} forms · mAP50 ${p.map50} · p vs prev ${p.p == null ? '—' : fmtp(p.p)}`);
+    });
+  }
+  const st = r => D.epochs[r].reduce((a, p) => (a[p.status] = (a[p.status] || 0) + 1, a), {});
+  $('#epoch-legend').innerHTML = runs.map(([r, c, n]) => `<span><i style="background:${c}"></i>${n}: ${st(r).GAIN || 0} GAIN · ${st(r).LOSS || 0} LOSS · ${st(r).NEUTRAL || 0} NEUTRAL</span>`).join('') +
+    `<span><i style="background:var(--good);border-radius:50%"></i>GAIN epoch</span><span><i style="background:var(--bad);border-radius:50%"></i>LOSS epoch</span><span>y-axis: dev forms with all 7 fields detected</span>`;
+})();
+
+// Models
+hbars($('#c-models'), [
+  { label: 'Apple OCR + rule parser', v: base, color: css('--null'), tip: `baseline ${base}/46` },
+  ...[['QWEN2_5VL', 'qwen2.5vl:3b vision'], ['QWEN2_5', 'qwen2.5:1.5b mapper'], ['QWEN3', 'qwen3:1.7b mapper']].map(([k, n]) => {
+    const r = rec('RT-ADM-POSTHOC-' + k), o = r.outcome;
+    return { label: n, v: o.challenger_success, color: o.delta_rate > 0 ? css('--s1') : css('--bad'), tip: `${n}: ${o.challenger_success}/46 forms · ${o.fields_correct}/322 fields · Holm p ${fmtp(o.holm_p)} · ${r.decision}` };
+  })
+], 46);
+
+// Ledger table with filters
+const STATE = { DISCOVERY_LEDGER_ADMITTED: ['admitted', 'good'], DATA_ADMITTED: ['data', 'acc'], POSTHOC_RECORDED: ['post hoc', ''], NULL_RECORDED: ['null', ''], NEGATIVE_RECORDED: ['negative', 'bad'], FAILED_RECORDED: ['failed', 'bad'], BLOCKED_RECORDED: ['blocked', 'warn'], NOT_TESTED_RECORDED: ['not tested', 'warn'] };
+function result(r) {
+  const o = r.outcome || {};
+  if (o.baseline_success != null) return `${o.baseline_success} → ${o.challenger_success} / ${o.n}` + (o.ci95_patient_cluster_bootstrap ? ` · CI [${o.ci95_patient_cluster_bootstrap.map(x => x.toFixed(2)).join(', ')}]` : '');
+  if (o.planted_detection_rate != null) return `detection ${pct(o.planted_detection_rate)} · false adm. ${pct(o.false_admission_rate_of_all)}`;
+  if (o.delta_abs != null) return `Δ ${(o.delta_abs >= 0 ? '+' : '') + o.delta_abs.toFixed(3)}`;
+  if (o.epochs != null) return `${o.epochs} epochs · ${o.GAIN} gain · ${o.LOSS} loss`;
+  if (o.merkle_root) return `root ${o.merkle_root.slice(0, 12)}…`;
+  if (o.clean_fields_correct != null) return `${o.clean_fields_correct} → ${o.boxes_fields_correct} / ${o.fields_total} fields`;
+  if (o.captured != null) return `${o.captured} / ${o.images} captured`;
+  return o.claim_status || '—';
+}
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let filter = 'ALL';
+function renderLedger() {
+  $('#ledger').innerHTML = D.admission.records.filter(r => filter === 'ALL' || r.admission_state === filter).map(r => {
+    const [lab, cls] = STATE[r.admission_state] || [r.admission_state, ''];
+    return `<tr><td><code>${esc(r.id.replace('RT-ADM-', ''))}</code></td><td>${esc(r.question)}</td><td class="num">${esc(result(r))}</td><td class="num">${fmtp(r.outcome && r.outcome.holm_p)}</td><td><span class="chip ${cls}">${lab}</span></td></tr>`;
+  }).join('');
+}
+const counts = D.admission.counts_by_admission_state;
+$('#filters').innerHTML = [['ALL', `all ${D.admission.records.length}`], ...Object.keys(STATE).filter(k => counts[k]).map(k => [k, `${STATE[k][0]} ${counts[k]}`])]
+  .map(([k, l]) => `<button type="button" id="f-${k}" data-k="${k}" aria-pressed="${k === 'ALL'}">${l}</button>`).join('');
+$('#filters').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; filter = b.dataset.k; document.querySelectorAll('#filters button').forEach(x => x.setAttribute('aria-pressed', x === b)); renderLedger(); });
+renderLedger();
+
+// Images, sources
+$('#img-overlay').src = D.images.overlay; $('#img-qwen3').src = D.images.qwen3; $('#img-qwen25vl').src = D.images.qwen25vl;
+$('#sources').innerHTML = D.sources.map(s => `<div><code>${esc(s.path)}</code><br><span class="hash muted">${s.sha256}</span></div>`).join('');
+$('#built').textContent = `Built by scripts/redteam/build_present_page.py from repository commit ${D.built_from_commit}. Repository: github.com/biobitworks/frontier-forms`;
+</script>
