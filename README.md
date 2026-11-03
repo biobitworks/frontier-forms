@@ -74,9 +74,11 @@ This is a live operational status block generated from the latest local SFT rece
 
 <!-- sft-status:start -->
 
-## In progress (post-deadline, host-approved): trained form-filling model (SFT)
+## Done (post-deadline, host-approved): trained form-filling model (SFT)
 
-**What:** Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). 5 configs are being trained.
+**What:** Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). 5 configs were trained.
+
+**Result:** The config chosen on validation (S3: LoRA r32, lr 5e-4, 3 epochs) was scored once on the frozen 54-form test split as `M3-sft-S3-lora-r32`: **29/54 full forms (53.7%)** and 83.7% field accuracy. On the same 54 forms the frozen rule baseline B0 gets 18/54 (paired: 13 forms only the model gets right, 2 only B0; +20.4 pts, 95% CI [11.1, 27.8], exact McNemar p=0.0074), and the untrained Qwen2.5-0.5B (M0) gets 0/54. B0 with the FCG harness modules (L1+L2+L3) gets 30/54, so the trained model alone roughly matches the full harness on full forms but has lower field accuracy (83.7% vs 93.0%). Discovery phase: the repo's admission rule still says NO_SUPERIORITY_CLAIM until replication.
 
 **Protocol:** Each config keeps its lowest-validation-loss epoch, then is scored on the 38 validation forms only. The config with the best validation full-form success (ties: validation field accuracy) is chosen and scored once on the frozen 54-form test split. No retries on test. LoRA vs DoRA pairs share rank, lr and epochs.
 
@@ -84,13 +86,14 @@ This is a live operational status block generated from the latest local SFT rece
 
 | Arm | Field accuracy | Full-form success | Source |
 |---|---|---|---|
+| **M3 SFT (S3 LoRA r32) — this work** | 83.7% (452/540 test fields) | **29/54 (53.7%)** | `evidence/forms_model/M3-sft-S3-lora-r32/summary.json` |
 | M0 untrained Qwen2.5-0.5B (zero-shot) | 41.7% (225/540 test fields) | 0/54 test, 0/38 validation | `evidence/forms_model/M0-zeroshot/summary.json (#62)` |
 | B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
 | B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
 | N1 NVIDIA Nemotron-Mini 4B (zero-shot, local Ollama) | 41.5% (validation+test) | 0/92 validation+test | `evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json` |
 | M2 qwen3:1.7b (zero-shot, local Ollama) | 72.6% (validation+test) | 1/92 validation+test (1/54 test) | `evidence/forms_model/M2-qwen3-1.7b/summary.json` |
 
-**Runs (status as of 2026-11-03T15:40:00Z):**
+**Runs (status as of 2026-11-03T16:10:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
@@ -98,10 +101,10 @@ This is a live operational status block generated from the latest local SFT rece
 | D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | done: validation 28/38 full forms (73.7%), field accuracy 95.3%; same forms as its LoRA pair S1 | 0.0074 (epoch 2 kept; 0.986 before training) | — | — |
 | S2 | LoRA r16, lr 2e-4, 4 epochs | done: validation 27/38 full forms (71.1%), field accuracy 95.8%; lowest val loss so far but one fewer full form than S1/D1 | 0.0061 (epoch 4 kept) | — | — |
 | D2 | DoRA r16, lr 2e-4, 4 epochs | done: validation 27/38 full forms (71.1%), field accuracy 95.5%; ties its LoRA pair S2 | 0.0061 (epoch 4 kept) | — | — |
-| S3 | LoRA r32, lr 5e-4, 3 epochs | done: validation 29/38 full forms (76.3%), field accuracy 94.7%; SELECTED (most validation full forms) (B0 19/38 on the same forms); scoring once on the 54 test forms now | 0.0081 (epoch 3 kept) | — | — |
+| S3 | LoRA r32, lr 5e-4, 3 epochs | SELECTED on validation (29/38 full forms, 94.7% fields); scored once on test as M3-sft-S3-lora-r32 | 0.0081 (epoch 3 kept) | 83.7% (452/540) | 29/54 (53.7%) |
 
-**Results will appear in:** `evidence/forms_model/selection_v1/ (one folder per attempt: receipt, train_receipt, answers, summary; ATTEMPTS.json lists every try including failures)` · `evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
-Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
+**Results will appear in:** `evidence/forms_model/M3-sft-S3-lora-r32/ (the single test scoring)` · `evidence/forms_model/selection_v1/ (every validation attempt; ATTEMPTS.json lists every try including failures)` · `evidence/ATTRIBUTION_LEDGER_FORMS.jsonl (sft_selection and learned_model rows)` · `evidence/FIGURES_LIVE.html (evidence/FIGURES.html stays frozen for the judges audit)`.
+Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Only the config chosen on validation is scored on test, once.
 
 <!-- sft-status:end -->
 
