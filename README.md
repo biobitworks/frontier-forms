@@ -1,5 +1,6 @@
 # Frontier Forms — Antigentic EHR Form Intake
 
+> **All figures in one place (judges):** [docs/FIGURES.md](docs/FIGURES.md): every figure with a thumbnail, caption, source-data file and PR.
 
 ## Judges — start here: visual results and evidence
 

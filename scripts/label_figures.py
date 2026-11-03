@@ -24,12 +24,12 @@ FIGURES = [
      "Gains heatmap: every intervention vs its own baseline",
      "Rows = interventions grouped by experiment; columns = field accuracy, full-form success, errors caught, false flags, time saved. Green = gain, red = loss, "
      "grey = null (p >= 0.05 or no change), striped = no p-value, blank = not measured. Each cell prints gain delta and p; status column marks admitted vs discovery.",
-     "This PR; data from #10 #11 #14 #15 #20 #21 #23 #51 and bench", "Mixed; status per row"),
+     "#65 #67; data from #10 #11 #14 #15 #20 #21 #23 #51 and bench", "Mixed; status per row"),
     ("docs/figures/accomplishment_heatmap.html",
      "Accomplishment heatmap: workstream status and mechanisms versus outcomes",
      "1a: rows = workstreams, columns = evidence stages, cell = status (icon + label). 1b: rows = mechanism or combination, "
      "columns = outcome metric 0-1, darker blue = better (lower-better columns shaded by 1 - value), printed number = raw value.",
-     "This PR (status 2026-11-02); data from #10 #12 #14-#23", "Mixed; each row tagged"),
+     "#50 #57 #58 #67; data from #10 #12 #14-#23", "Mixed; each row tagged"),
     ("docs/architecture/gate_factorial_heatmap.html",
      "Admission-gate factorial on SYNFORM2-ERR (16 mechanism combinations)",
      "Rows = combination of identity / rules / commitment / consistency gates. Columns = planted-error detection, false-admission rate, "
@@ -143,7 +143,7 @@ def write_index():
     lines = ["# Figures and images: index for judges", "",
              "Every figure and image in the repository, with what it shows, how to read it, the PR that produced it and its evidence grade. "
              "All patient data is synthetic (MITRE Synthea); all inference ran locally. Regenerate with `python3 scripts/build_status_figures.py && python3 scripts/label_figures.py`.",
-             "", "Evidence grades: **Evidence** = preregistered or independent run; **Discovery** = built after seeing the test data, needs replication; "
+             "", "Evidence grades: **Evidence** = preregistered or independent run; **Discovery** = built after seeing the test data, admitted by the PI on 2026-11-02 but not yet replicated; "
              "**Negative** = no gain over the control; **Illustration** = a single example, no statistics.", "",
              "## Analytic figures", "",
              "| # | Figure | How to read (axes, legend) | Source PR | Grade |", "|---|---|---|---|---|"]
@@ -152,7 +152,7 @@ def write_index():
     path, title, desc = SVG
     lines.append(f"| {len(FIGURES) + 1} | [{title} (static SVG)](../../{path}) | Same as figure 2, static. | #20 #21 | Discovery |")
     lines.append(f"| {len(FIGURES) + 2} | [Accomplishment heatmap (static PNG)](accomplishment_heatmap.png) | Static render of figure 1. | #50 #57 #58 | Mixed |")
-    lines.append(f"| {len(FIGURES) + 3} | [Gains heatmap (static PNG)](gains_heatmap.png), data [CSV](gains_heatmap.csv) / [JSON](gains_heatmap.json) | Static render of the gains heatmap; one CSV row per cell. | This PR | Mixed |")
+    lines.append(f"| {len(FIGURES) + 3} | [Gains heatmap (static PNG)](gains_heatmap.png), data [CSV](gains_heatmap.csv) / [JSON](gains_heatmap.json) | Static render of the gains heatmap; one CSV row per cell. | #65 #67 | Mixed |")
     lines += ["", "## Image sets (inputs, not results)", "",
               "These are the synthetic form renders the models read. They are stimuli, not charts, so each set is captioned once here and in its folder README.", "",
               "| Folder | Title | Caption | Source PR |", "|---|---|---|---|"]
