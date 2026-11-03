@@ -1,0 +1,1293 @@
+{
+ "counts_by_admission_state": {
+  "BLOCKED_RECORDED": 2,
+  "DATA_ADMITTED": 4,
+  "DISCOVERY_LEDGER_ADMITTED": 5,
+  "FAILED_RECORDED": 1,
+  "NEGATIVE_RECORDED": 5,
+  "NOT_TESTED_RECORDED": 2,
+  "NULL_RECORDED": 9,
+  "POSTHOC_RECORDED": 3
+ },
+ "lane": "claude-redteam",
+ "phi": false,
+ "program_id": "frontier-forms",
+ "records": [
+  {
+   "admission_state": "DISCOVERY_LEDGER_ADMITTED",
+   "decision": "PASS_DISCOVERY_RULE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_rows.json",
+     "sha256": "df92911f8700a1af858c59928b3ab02ae5104c3261a1e9d61d6e17be3b5ca69c"
+    },
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_summary.json",
+     "sha256": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+    }
+   ],
+   "family": "trained_model_gain",
+   "id": "RT-ADM-TRAINED-A1",
+   "mechanism": {
+    "changed": "LEARNED_COMPONENT_ADDED",
+    "ocr_engine_held_constant": true
+   },
+   "novelty": {
+    "claim_ceiling": "discovery on one synthetic template family; the correction is small (space stripping + O->0 in case ids)",
+    "standard": "post-OCR correction tables and fine-tuned object detectors are standard techniques",
+    "this_lane": "train-only fit, test split touched once, preregistered arms and endpoint, OCR engine held constant so only the trained component differs"
+   },
+   "outcome": {
+    "baseline_only": 0,
+    "baseline_success": 14,
+    "challenger_only": 8,
+    "challenger_success": 22,
+    "ci95_patient_cluster_bootstrap": [
+     0.043478260869565216,
+     0.32608695652173914
+    ],
+    "delta_rate": 0.17391304347826086,
+    "endpoint": "all 7 fields equal the printed value",
+    "holm_p": 0.0234375,
+    "mcnemar_p_exact_two_sided": 0.0078125,
+    "n": 46,
+    "unit": "image (23 patients x clean + scan)"
+   },
+   "preregistered": true,
+   "preregistration": {
+    "commit": "5615a07",
+    "path": "scripts/redteam/trained_gain_eval.py",
+    "sha256": "9ba4b693fd6b721c6d475ad84e1499f0db3440620388f242c3f2d8eeb12b34b9"
+   },
+   "primary_source_pr": "#51 (commit 4a52345); #58 re-plotted these numbers",
+   "promoted": false,
+   "question": "Does learned OCR post-correction improve all-7-field extraction over untrained page OCR on the held-out test split?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR (.accurate) + deterministic rule parser, no learned parameters",
+    "challenger": "character/space correction table fit on the 132 SYNFORM2 train images only"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_rows.json",
+     "sha256": "df92911f8700a1af858c59928b3ab02ae5104c3261a1e9d61d6e17be3b5ca69c"
+    },
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_summary.json",
+     "sha256": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+    }
+   ],
+   "family": "trained_model_gain",
+   "id": "RT-ADM-TRAINED-A2",
+   "mechanism": {
+    "changed": "LEARNED_COMPONENT_ADDED",
+    "ocr_engine_held_constant": true
+   },
+   "novelty": {
+    "claim_ceiling": "discovery on one synthetic template family; the correction is small (space stripping + O->0 in case ids)",
+    "standard": "post-OCR correction tables and fine-tuned object detectors are standard techniques",
+    "this_lane": "train-only fit, test split touched once, preregistered arms and endpoint, OCR engine held constant so only the trained component differs"
+   },
+   "outcome": {
+    "baseline_only": 9,
+    "baseline_success": 14,
+    "challenger_only": 4,
+    "challenger_success": 9,
+    "ci95_patient_cluster_bootstrap": [
+     -0.2826086956521739,
+     0.06521739130434782
+    ],
+    "delta_rate": -0.10869565217391304,
+    "endpoint": "all 7 fields equal the printed value",
+    "holm_p": 0.53369140625,
+    "mcnemar_p_exact_two_sided": 0.266845703125,
+    "n": 46,
+    "unit": "image (23 patients x clean + scan)"
+   },
+   "preregistered": true,
+   "preregistration": {
+    "commit": "5615a07",
+    "path": "scripts/redteam/trained_gain_eval.py",
+    "sha256": "9ba4b693fd6b721c6d475ad84e1499f0db3440620388f242c3f2d8eeb12b34b9"
+   },
+   "primary_source_pr": "#51 (commit 4a52345); #58 re-plotted these numbers",
+   "promoted": false,
+   "question": "Does trained YOLOv8n crops + OCR improve all-7-field extraction over untrained page OCR on the held-out test split?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR (.accurate) + deterministic rule parser, no learned parameters",
+    "challenger": "YOLOv8n fine-tuned on the train split; OCR on x3-upscaled value crops; detector best.pt sha256 d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_rows.json",
+     "sha256": "df92911f8700a1af858c59928b3ab02ae5104c3261a1e9d61d6e17be3b5ca69c"
+    },
+    {
+     "path": "evidence/redteam/trained_gain/trained_gain_summary.json",
+     "sha256": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+    }
+   ],
+   "family": "trained_model_gain",
+   "id": "RT-ADM-TRAINED-A3",
+   "mechanism": {
+    "changed": "LEARNED_COMPONENT_ADDED",
+    "ocr_engine_held_constant": true
+   },
+   "novelty": {
+    "claim_ceiling": "discovery on one synthetic template family; the correction is small (space stripping + O->0 in case ids)",
+    "standard": "post-OCR correction tables and fine-tuned object detectors are standard techniques",
+    "this_lane": "train-only fit, test split touched once, preregistered arms and endpoint, OCR engine held constant so only the trained component differs"
+   },
+   "outcome": {
+    "baseline_only": 5,
+    "baseline_success": 14,
+    "challenger_only": 6,
+    "challenger_success": 15,
+    "ci95_patient_cluster_bootstrap": [
+     -0.13043478260869565,
+     0.1956521739130435
+    ],
+    "delta_rate": 0.021739130434782608,
+    "endpoint": "all 7 fields equal the printed value",
+    "holm_p": 1.0,
+    "mcnemar_p_exact_two_sided": 1.0,
+    "n": 46,
+    "unit": "image (23 patients x clean + scan)"
+   },
+   "preregistered": true,
+   "preregistration": {
+    "commit": "5615a07",
+    "path": "scripts/redteam/trained_gain_eval.py",
+    "sha256": "9ba4b693fd6b721c6d475ad84e1499f0db3440620388f242c3f2d8eeb12b34b9"
+   },
+   "primary_source_pr": "#51 (commit 4a52345); #58 re-plotted these numbers",
+   "promoted": false,
+   "question": "Does crops + learned correction improve all-7-field extraction over untrained page OCR on the held-out test split?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR (.accurate) + deterministic rule parser, no learned parameters",
+    "challenger": "A2 followed by the A1 correction table; detector best.pt sha256 d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba"
+   }
+  },
+  {
+   "admission_state": "DISCOVERY_LEDGER_ADMITTED",
+   "caveat": "The commitment check compares each extracted value with a salted hash of the source value, so it detects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
+   "decision": "PASS_DISCOVERY_RULE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/gate_factorial.json",
+     "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+    },
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "admission_gate_factorial",
+   "id": "RT-ADM-GATE-COMMITMENT",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY",
+    "enabled": [
+     "commitment"
+    ]
+   },
+   "novelty": {
+    "claim_ceiling": "synthetic planted errors on one template family; requires access to the source record at admission time",
+    "standard": "validation rules, cross-field consistency and hash commitments are standard building blocks",
+    "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.6074074074074074,
+     0.6592592592592592
+    ],
+    "coverage": 0.8761904761904762,
+    "false_admission_rate_of_all": 0.0,
+    "holm_p": 7.754818242684634e-25,
+    "mcnemar_p": 5.169878828456423e-26,
+    "planted_detection_rate": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does the commitment check catch planted field errors that the unchecked extractor admits?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)",
+    "challenger": "same weights; deterministic check added"
+   }
+  },
+  {
+   "admission_state": "DISCOVERY_LEDGER_ADMITTED",
+   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "decision": "PASS_DISCOVERY_RULE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/gate_factorial.json",
+     "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+    },
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "admission_gate_factorial",
+   "id": "RT-ADM-GATE-RULES",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY",
+    "enabled": [
+     "rules"
+    ]
+   },
+   "novelty": {
+    "claim_ceiling": "synthetic planted errors on one template family; requires access to the source record at admission time",
+    "standard": "validation rules, cross-field consistency and hash commitments are standard building blocks",
+    "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.2518518518518518,
+     0.3037037037037037
+    ],
+    "coverage": 0.9407407407407408,
+    "false_admission_rate_of_all": 0.0656084656084656,
+    "holm_p": 3.637978807091713e-11,
+    "mcnemar_p": 7.275957614183426e-12,
+    "planted_detection_rate": 0.5092592592592593
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does the rules check catch planted field errors that the unchecked extractor admits?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)",
+    "challenger": "same weights; deterministic check added"
+   }
+  },
+  {
+   "admission_state": "DISCOVERY_LEDGER_ADMITTED",
+   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "decision": "PASS_DISCOVERY_RULE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/gate_factorial.json",
+     "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+    },
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "admission_gate_factorial",
+   "id": "RT-ADM-GATE-CONSISTENCY",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY",
+    "enabled": [
+     "consistency"
+    ]
+   },
+   "novelty": {
+    "claim_ceiling": "synthetic planted errors on one template family; requires access to the source record at admission time",
+    "standard": "validation rules, cross-field consistency and hash commitments are standard building blocks",
+    "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.11851851851851852,
+     0.18518518518518517
+    ],
+    "coverage": 0.8507936507936508,
+    "false_admission_rate_of_all": 0.07830687830687831,
+    "holm_p": 5.7220458984375e-06,
+    "mcnemar_p": 1.9073486328125e-06,
+    "planted_detection_rate": 0.3148148148148148
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does the consistency check catch planted field errors that the unchecked extractor admits?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)",
+    "challenger": "same weights; deterministic check added"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/gate_factorial.json",
+     "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+    },
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "admission_gate_factorial",
+   "id": "RT-ADM-GATE-IDENTITY",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY",
+    "enabled": [
+     "identity"
+    ]
+   },
+   "novelty": {
+    "claim_ceiling": "synthetic planted errors on one template family; requires access to the source record at admission time",
+    "standard": "validation rules, cross-field consistency and hash commitments are standard building blocks",
+    "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.0,
+     0.0
+    ],
+    "coverage": 0.8814814814814815,
+    "false_admission_rate_of_all": 0.09312169312169312,
+    "holm_p": 1.0,
+    "mcnemar_p": 1.0,
+    "planted_detection_rate": 0.25925925925925924
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does the identity check catch planted field errors that the unchecked extractor admits?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)",
+    "challenger": "same weights; deterministic check added"
+   }
+  },
+  {
+   "admission_state": "DISCOVERY_LEDGER_ADMITTED",
+   "caveat": "The commitment check compares each extracted value with a salted hash of the source value, so it detects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
+   "decision": "PASS_DISCOVERY_RULE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/gate_factorial.json",
+     "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+    },
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "admission_gate_factorial",
+   "id": "RT-ADM-GATE-IDENTITY-RULES-COMMITMENT-CONSISTENCY",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY",
+    "enabled": [
+     "identity",
+     "rules",
+     "commitment",
+     "consistency"
+    ]
+   },
+   "novelty": {
+    "claim_ceiling": "synthetic planted errors on one template family; requires access to the source record at admission time",
+    "standard": "validation rules, cross-field consistency and hash commitments are standard building blocks",
+    "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.5037037037037037,
+     0.5555555555555556
+    ],
+    "coverage": 0.6941798941798942,
+    "false_admission_rate_of_all": 0.0,
+    "holm_p": 9.317362419797304e-21,
+    "mcnemar_p": 8.470329472543003e-22,
+    "planted_detection_rate": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does the identity+rules+commitment+consistency check catch planted field errors that the unchecked extractor admits?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)",
+    "challenger": "same weights; deterministic check added"
+   }
+  },
+  {
+   "admission_state": "POSTHOC_RECORDED",
+   "decision": "PASS_DISCOVERY_RULE_POSTHOC",
+   "evidence": [
+    {
+     "path": "evidence/redteam/db/field_answers.jsonl",
+     "sha256": "eca3e6ee895b83661499295a02229292b738400e8a5ab7ae51e8e40da23e1054"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-POSTHOC-QWEN2_5VL",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "post hoc, not preregistered; cannot be promoted",
+    "standard": "off-the-shelf pretrained model inference",
+    "this_lane": "per-field answers exported with model name and paired against the same images"
+   },
+   "outcome": {
+    "baseline_fields_correct": 283,
+    "baseline_only": 0,
+    "baseline_success": 14,
+    "challenger_only": 28,
+    "challenger_success": 42,
+    "ci95_patient_cluster_bootstrap": [
+     0.45652173913043476,
+     0.7608695652173914
+    ],
+    "delta_rate": 0.6086956521739131,
+    "endpoint": "all 7 fields equal the printed value",
+    "fields_correct": 318,
+    "holm_p": 2.2351741790771484e-08,
+    "mcnemar_p_exact_two_sided": 7.450580596923828e-09,
+    "n": 46,
+    "unit": "image"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "All-7-field extraction: qwen2.5vl:3b:extract vs Apple Vision OCR + rule parser on the same test images",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR + rule parser",
+    "challenger": "qwen2.5vl:3b:extract (pretrained Ollama weights, not trained by this lane)"
+   }
+  },
+  {
+   "admission_state": "POSTHOC_RECORDED",
+   "decision": "NEGATIVE_WORSE_POSTHOC",
+   "evidence": [
+    {
+     "path": "evidence/redteam/db/field_answers.jsonl",
+     "sha256": "eca3e6ee895b83661499295a02229292b738400e8a5ab7ae51e8e40da23e1054"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-POSTHOC-QWEN2_5",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "post hoc, not preregistered; cannot be promoted",
+    "standard": "off-the-shelf pretrained model inference",
+    "this_lane": "per-field answers exported with model name and paired against the same images"
+   },
+   "outcome": {
+    "baseline_fields_correct": 283,
+    "baseline_only": 13,
+    "baseline_success": 14,
+    "challenger_only": 0,
+    "challenger_success": 1,
+    "ci95_patient_cluster_bootstrap": [
+     -0.41304347826086957,
+     -0.15217391304347827
+    ],
+    "delta_rate": -0.2826086956521739,
+    "endpoint": "all 7 fields equal the printed value",
+    "fields_correct": 209,
+    "holm_p": 0.000244140625,
+    "mcnemar_p_exact_two_sided": 0.000244140625,
+    "n": 46,
+    "unit": "image"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "All-7-field extraction: qwen2.5:1.5b:ocr_mapper vs Apple Vision OCR + rule parser on the same test images",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR + rule parser",
+    "challenger": "qwen2.5:1.5b:ocr_mapper (pretrained Ollama weights, not trained by this lane)"
+   }
+  },
+  {
+   "admission_state": "POSTHOC_RECORDED",
+   "decision": "NEGATIVE_WORSE_POSTHOC",
+   "evidence": [
+    {
+     "path": "evidence/redteam/db/field_answers.jsonl",
+     "sha256": "eca3e6ee895b83661499295a02229292b738400e8a5ab7ae51e8e40da23e1054"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-POSTHOC-QWEN3",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "post hoc, not preregistered; cannot be promoted",
+    "standard": "off-the-shelf pretrained model inference",
+    "this_lane": "per-field answers exported with model name and paired against the same images"
+   },
+   "outcome": {
+    "baseline_fields_correct": 283,
+    "baseline_only": 14,
+    "baseline_success": 14,
+    "challenger_only": 0,
+    "challenger_success": 0,
+    "ci95_patient_cluster_bootstrap": [
+     -0.45652173913043476,
+     -0.17391304347826086
+    ],
+    "delta_rate": -0.30434782608695654,
+    "endpoint": "all 7 fields equal the printed value",
+    "fields_correct": 109,
+    "holm_p": 0.000244140625,
+    "mcnemar_p_exact_two_sided": 0.0001220703125,
+    "n": 46,
+    "unit": "image"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "All-7-field extraction: qwen3:1.7b:ocr_mapper vs Apple Vision OCR + rule parser on the same test images",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "Apple Vision OCR + rule parser",
+    "challenger": "qwen3:1.7b:ocr_mapper (pretrained Ollama weights, not trained by this lane)"
+   }
+  },
+  {
+   "admission_state": "DATA_ADMITTED",
+   "caveat": "Detector quality is not an extraction gain: crop OCR from this detector was NULL (RT-ADM-TRAINED-A2).",
+   "decision": "OBSERVED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/detector/full/final_receipt.json",
+     "sha256": "179c66c3292d3a934d8486cb9be88d9feb9fa25e9788b13cb7def43ea55e6c02"
+    },
+    {
+     "path": "evidence/redteam/detector/full/epoch_ledger.jsonl",
+     "sha256": "e3aa66b65419add86f5b4cd3a4a86d08995fc132777cf4c76fc710be463fdad1"
+    },
+    {
+     "path": "evidence/redteam/detector/full/chain_manifest.json",
+     "sha256": "6880c6aa8ea8be1a43c01cb97d702b9ebd3685649ca7dbb386d019127eaa7392"
+    },
+    {
+     "path": "evidence/redteam/detector/full/test_scores.json",
+     "sha256": "e831259965607bb0b76ecd2e46dfb5a9f54e0467c4d228f9a9a3e5f724da095f"
+    }
+   ],
+   "family": "actual_training_snapshot",
+   "id": "RT-ADM-DATA-DETECTOR-FULL",
+   "mechanism": {
+    "lomo": "full"
+   },
+   "novelty": {
+    "claim_ceiling": "training provenance; best epoch selected on dev, never test",
+    "standard": "ultralytics YOLOv8n fine-tuning with default hyperparameters; per-epoch validation",
+    "this_lane": "each epoch committed as a hash-chained leaf (weights sha256, paired McNemar + bootstrap vs the previous epoch, GAIN/LOSS/NEUTRAL), plus a leave-one-mechanism-out run without scan variants"
+   },
+   "outcome": {
+    "GAIN": 3,
+    "LOSS": 3,
+    "NEUTRAL": 23,
+    "chain_root": "1fc600162b6a8dd727d8db52722c6a093fad85674450626b8c79fc287a294ff6",
+    "epochs": 30,
+    "test_summary": {}
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Per-epoch Merkle-chained training ledger of the YOLOv8n field detector",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "framework": "ultralytics 8.4.198 torch 2.15.0",
+    "trained": "YOLOv8n best weights sha256 d7bc1a0487a41831cda89c0af6809a58c2744ba8aeccdcac9faa101054776eba (raw weights not published)"
+   }
+  },
+  {
+   "admission_state": "DATA_ADMITTED",
+   "caveat": "Detector quality is not an extraction gain: crop OCR from this detector was NULL (RT-ADM-TRAINED-A2).",
+   "decision": "OBSERVED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/detector/no_scan/final_receipt.json",
+     "sha256": "d12fe3bf81c45c4ac991d4086c4ef22b77dcc20ec3fa9680b7b67e26aefbf543"
+    },
+    {
+     "path": "evidence/redteam/detector/no_scan/epoch_ledger.jsonl",
+     "sha256": "92b5ad4f5f3b30448c68a867539efac2374fb8702556d58a56643d30b936e976"
+    },
+    {
+     "path": "evidence/redteam/detector/no_scan/chain_manifest.json",
+     "sha256": "0f232008be4d6172e704366e30225d8dcbf2ce88fde6ca7c946d3cd89da1cb66"
+    },
+    {
+     "path": "evidence/redteam/detector/no_scan/test_scores.json",
+     "sha256": "764d76cc3241c8112367226d5369a2b17958802c1d41b8ebd8570c288e6e5b83"
+    }
+   ],
+   "family": "actual_training_snapshot",
+   "id": "RT-ADM-DATA-DETECTOR-NO_SCAN",
+   "mechanism": {
+    "lomo": "no_scan"
+   },
+   "novelty": {
+    "claim_ceiling": "training provenance; best epoch selected on dev, never test",
+    "standard": "ultralytics YOLOv8n fine-tuning with default hyperparameters; per-epoch validation",
+    "this_lane": "each epoch committed as a hash-chained leaf (weights sha256, paired McNemar + bootstrap vs the previous epoch, GAIN/LOSS/NEUTRAL), plus a leave-one-mechanism-out run without scan variants"
+   },
+   "outcome": {
+    "GAIN": 3,
+    "LOSS": 1,
+    "NEUTRAL": 25,
+    "chain_root": "e99fe22c7a1473a678e4629f9d32022681a7b4f1d66e3ddcd0b9b2fa332167c0",
+    "epochs": 30,
+    "test_summary": {}
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Per-epoch Merkle-chained training ledger of the YOLOv8n field detector",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "framework": "ultralytics 8.4.198 torch 2.15.0",
+    "trained": "YOLOv8n best weights sha256 903e00e7a3f5a7c740193a3187345c01997767b7379756d93034a42611927160 (raw weights not published)"
+   }
+  },
+  {
+   "admission_state": "DATA_ADMITTED",
+   "decision": "OBSERVED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/synform2/inputs.jsonl",
+     "sha256": "de0d69164031361a5c34a1754d6e40608f1b4233a71c88239c24066d8fa26f43"
+    },
+    {
+     "path": "evidence/redteam/synform2/leaves.jsonl",
+     "sha256": "2d8569888ba6488c45db6657ec2eef7143ffb6f272383a00b5fd607c667682c5"
+    },
+    {
+     "path": "evidence/redteam/synform2/manifest.json",
+     "sha256": "6f7ba4560a9c348908278dade1b546673693df5f17468f2a953091305dae6589"
+    }
+   ],
+   "family": "frozen_dataset",
+   "id": "RT-ADM-DATA-SYNFORM2",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "synthetic only; one template family",
+    "standard": "MITRE Synthea synthetic patients rendered to images",
+    "this_lane": "frozen Merkle root, patient-level splits, opaque image ids, per-field salted commitments"
+   },
+   "outcome": {
+    "merkle_root": "aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Frozen synthetic form dataset SYNFORM2",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "DATA_ADMITTED",
+   "decision": "OBSERVED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/synform2_err/inputs.jsonl",
+     "sha256": "5b73e7cfcab58523116505e6f56c744b22a0230224c8c088c8c30986359b26c2"
+    },
+    {
+     "path": "evidence/redteam/synform2_err/leaves.jsonl",
+     "sha256": "5b430cc817e41b265d428af9fd75755d08a5432d05b36cd9d9fcb546bf306a70"
+    },
+    {
+     "path": "evidence/redteam/synform2_err/manifest.json",
+     "sha256": "6c10d024b1451f348de7c443a8e6b3d097891417af3043234bf1fab66a95975c"
+    }
+   ],
+   "family": "frozen_dataset",
+   "id": "RT-ADM-DATA-SYNFORM2-ERR",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "synthetic only; one template family",
+    "standard": "MITRE Synthea synthetic patients rendered to images",
+    "this_lane": "frozen Merkle root, patient-level splits, opaque image ids, per-field salted commitments"
+   },
+   "outcome": {
+    "merkle_root": "790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Frozen synthetic form dataset SYNFORM2-ERR",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-001",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.07894736842105263,
+     0.0
+    ],
+    "delta_abs": -0.026315789473684292,
+    "holm_p": 1.0,
+    "mcnemar_p": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 direct vs L0 fcg on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "lfm2-1.2b-longevity-q4km:latest"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-002",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.07894736842105263,
+     0.0
+    ],
+    "delta_abs": -0.026315789473684292,
+    "holm_p": 1.0,
+    "mcnemar_p": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 direct vs L0 fco on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "lfm2-1.2b-longevity-q4km:latest"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-004",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.15789473684210525,
+     0.0
+    ],
+    "delta_abs": -0.07894736842105263,
+    "holm_p": 1.0,
+    "mcnemar_p": 0.25
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L1 direct vs L1 fcg on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "qwen3:1.7b"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-005",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.15789473684210525,
+     0.0
+    ],
+    "delta_abs": -0.07894736842105263,
+    "holm_p": 1.0,
+    "mcnemar_p": 0.25
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L1 direct vs L1 fco on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "qwen3:1.7b"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-007",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.0,
+     0.0
+    ],
+    "delta_abs": 0.0,
+    "holm_p": 1.0,
+    "mcnemar_p": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L2 direct vs L2 fcg on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "qwen2.5vl:3b"
+   }
+  },
+  {
+   "admission_state": "NULL_RECORDED",
+   "decision": "NULL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "fco_context_projection",
+   "id": "RT-ADM-NULL-CONTEXT-RT-008",
+   "mechanism": {
+    "changed": "MECHANISM_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "no gain observed",
+    "standard": "context in prompt",
+    "this_lane": "same weights and cases with and without FCO/FCG context"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     0.0,
+     0.0
+    ],
+    "delta_abs": 0.0,
+    "holm_p": 1.0,
+    "mcnemar_p": 1.0
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L2 direct vs L2 fco on LongevityBench discovery split",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "qwen2.5vl:3b"
+   }
+  },
+  {
+   "admission_state": "NEGATIVE_RECORDED",
+   "decision": "NEGATIVE_WORSE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-NEG-MODEL-RT-003",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "small general Qwen models are much worse on this benchmark",
+    "standard": "model swap",
+    "this_lane": "paired on identical frozen cases"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.7368421052631579,
+     -0.42105263157894735
+    ],
+    "delta_abs": -0.5789473684210527,
+    "holm_p": 2.384185791015625e-05,
+    "mcnemar_p": 2.9802322387695312e-06
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 lfm2-1.2b-longevity-q4km:latest direct vs L1 qwen3:1.7b (think off) direct on LongevityBench",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "L0 lfm2-1.2b-longevity-q4km:latest direct",
+    "challenger": "L1 qwen3:1.7b (think off) direct"
+   }
+  },
+  {
+   "admission_state": "NEGATIVE_RECORDED",
+   "decision": "NEGATIVE_WORSE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-NEG-MODEL-RT-006",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "small general Qwen models are much worse on this benchmark",
+    "standard": "model swap",
+    "this_lane": "paired on identical frozen cases"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.6578947368421053,
+     -0.34210526315789475
+    ],
+    "delta_abs": -0.5,
+    "holm_p": 0.0001468658447265625,
+    "mcnemar_p": 2.09808349609375e-05
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 lfm2-1.2b-longevity-q4km:latest direct vs L2 qwen2.5vl:3b direct on LongevityBench",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "L0 lfm2-1.2b-longevity-q4km:latest direct",
+    "challenger": "L2 qwen2.5vl:3b direct"
+   }
+  },
+  {
+   "admission_state": "NEGATIVE_RECORDED",
+   "decision": "NEGATIVE_WORSE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-NEG-MODEL-RT-011",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "small general Qwen models are much worse on this benchmark",
+    "standard": "model swap",
+    "this_lane": "paired on identical frozen cases"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.717948717948718,
+     -0.41025641025641024
+    ],
+    "delta_abs": -0.5641025641025641,
+    "holm_p": 3.814697265625e-06,
+    "mcnemar_p": 4.76837158203125e-07
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 lfm2-1.2b-longevity-q4km:latest direct vs L1 qwen3:1.7b (think off) direct on LongevityBench",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "L0 lfm2-1.2b-longevity-q4km:latest direct",
+    "challenger": "L1 qwen3:1.7b (think off) direct"
+   }
+  },
+  {
+   "admission_state": "NEGATIVE_RECORDED",
+   "decision": "NEGATIVE_WORSE",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "model_weight_comparison",
+   "id": "RT-ADM-NEG-MODEL-RT-014",
+   "mechanism": {
+    "changed": "WEIGHTS_ONLY"
+   },
+   "novelty": {
+    "claim_ceiling": "small general Qwen models are much worse on this benchmark",
+    "standard": "model swap",
+    "this_lane": "paired on identical frozen cases"
+   },
+   "outcome": {
+    "bootstrap_ci95": [
+     -0.6410256410256411,
+     -0.3333333333333333
+    ],
+    "delta_abs": -0.4871794871794872,
+    "holm_p": 2.6702880859375e-05,
+    "mcnemar_p": 3.814697265625e-06
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "L0 lfm2-1.2b-longevity-q4km:latest direct vs L2 qwen2.5vl:3b direct on LongevityBench",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "baseline": "L0 lfm2-1.2b-longevity-q4km:latest direct",
+    "challenger": "L2 qwen2.5vl:3b direct"
+   }
+  },
+  {
+   "admission_state": "NEGATIVE_RECORDED",
+   "decision": "NEGATIVE_WORSE_DESCRIPTIVE",
+   "evidence": [
+    {
+     "path": "docs/demo/ocr_boxes_vs_clean.json",
+     "sha256": "486f0df2d866be9bc2f6d6dc01acd9175aa63f2fd48d0a0b724f63097df9bda6"
+    }
+   ],
+   "family": "ocr_interference",
+   "id": "RT-ADM-NEG-BOXES-BREAK-OCR",
+   "mechanism": {
+    "changed": "INPUT_ONLY (overlay drawn)"
+   },
+   "novelty": {
+    "claim_ceiling": "10 forms, descriptive; OCR must run on the clean render",
+    "standard": "OCR",
+    "this_lane": "isolated overlay interference on identical forms"
+   },
+   "outcome": {
+    "boxes_fields_correct": 0,
+    "clean_fields_correct": 58,
+    "fields_total": 70,
+    "images": 10
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "Does drawing bounding boxes on the image change Apple Vision OCR accuracy?",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": {
+    "model": "Apple Vision OCR"
+   }
+  },
+  {
+   "admission_state": "FAILED_RECORDED",
+   "caveat": "could not create image from window; Screen Recording permission likely missing",
+   "decision": "FAILED",
+   "evidence": [
+    {
+     "path": "docs/demo/preview/preview_ocr.json",
+     "sha256": "21abc03fb1859e75082109e3a005a2a4ece17de3c1bdffa3d99e3ff05411d4df"
+    }
+   ],
+   "family": "harness",
+   "id": "RT-ADM-FAILED-PREVIEW-CAPTURE",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "no result",
+    "standard": "screen capture",
+    "this_lane": "none"
+   },
+   "outcome": {
+    "captured": 0,
+    "images": 10
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "macOS Preview window capture then Apple OCR",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "BLOCKED_RECORDED",
+   "decision": "BLOCKED_NO_CREDENTIAL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "not_run",
+   "id": "RT-ADM-BLOCKED-RT-111",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "not run",
+    "standard": "n/a",
+    "this_lane": "n/a"
+   },
+   "outcome": {
+    "claim_status": "BLOCKED_NO_CREDENTIAL"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "NOT_EXECUTED",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "BLOCKED_RECORDED",
+   "decision": "BLOCKED_NO_CREDENTIAL",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "not_run",
+   "id": "RT-ADM-BLOCKED-RT-112",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "not run",
+    "standard": "n/a",
+    "this_lane": "n/a"
+   },
+   "outcome": {
+    "claim_status": "BLOCKED_NO_CREDENTIAL"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "NOT_EXECUTED",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "NOT_TESTED_RECORDED",
+   "decision": "NOT_TESTED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "not_run",
+   "id": "RT-ADM-NOTTESTED-RT-113",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "not run",
+    "standard": "n/a",
+    "this_lane": "n/a"
+   },
+   "outcome": {
+    "claim_status": "NOT_TESTED"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "NOT_EXECUTED",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  },
+  {
+   "admission_state": "NOT_TESTED_RECORDED",
+   "decision": "NOT_OBSERVED",
+   "evidence": [
+    {
+     "path": "evidence/redteam/attribution_matrix.json",
+     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+    }
+   ],
+   "family": "not_run",
+   "id": "RT-ADM-NOTTESTED-RT-114",
+   "mechanism": null,
+   "novelty": {
+    "claim_ceiling": "not run",
+    "standard": "n/a",
+    "this_lane": "n/a"
+   },
+   "outcome": {
+    "claim_status": "NOT_OBSERVED"
+   },
+   "preregistered": false,
+   "promoted": false,
+   "question": "NOT_OBSERVED",
+   "replication": "NOT_TESTED",
+   "scientific_promotion": "HOLD",
+   "weights": null
+  }
+ ],
+ "rule": "DISCOVERY_LEDGER_ADMITTED requires Holm-corrected exact McNemar p<0.05, delta>0 and bootstrap lower 95% CI>0 on a predeclared paired comparison. Scientific promotion additionally requires an independently frozen replication cohort and PI approval; none exists, so every record is HOLD.",
+ "schema": "frontier_forms.redteam_discovery_admission.v1",
+ "statistics": {
+  "bootstrap": "patient-cluster paired, 10000 reps, seed 20261102 (trained-gain and post-hoc rows); lane-native stratified bootstrap for gate rows",
+  "mcnemar": "exact two-sided"
+ },
+ "status": "ADMITTED_TO_DISCOVERY_LEDGER_ONLY; SCIENTIFIC_PROMOTION=HOLD",
+ "synthetic_only": true,
+ "weights_published": false
+}
