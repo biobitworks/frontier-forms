@@ -2,6 +2,35 @@
 
 > **All figures in one place (judges):** [docs/FIGURES.md](docs/FIGURES.md): every figure with a thumbnail, caption, source-data file and PR.
 
+<!-- sft-status:start -->
+
+## In progress (post-deadline, host-approved): trained form-filling model (SFT)
+
+**What:** Qwen2.5-0.5B-Instruct + LoRA (local MacBookPro, bf16, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). Three configs are being trained.
+
+**Protocol:** Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.
+
+**Comparison points (frozen 54-form test split):**
+
+| Arm | Field accuracy | Full-form success | Source |
+|---|---|---|---|
+| M0 untrained Qwen2.5-0.5B (zero-shot) | 41.7% (225/540 test fields) | 0/54 test, 0/38 validation | `evidence/forms_model/M0-zeroshot/summary.json (#62)` |
+| B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
+| B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
+
+**Runs (status as of 2026-11-03T01:00:00Z):**
+
+| Run | Config | Status | Val loss | Test field accuracy | Test full-form |
+|---|---|---|---|---|---|
+| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | training | — | — | — |
+| SFT-2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
+| SFT-3 | larger rank, higher lr | queued | — | — | — |
+
+**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
+Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
+
+<!-- sft-status:end -->
+
 ## Judges — start here: visual results and evidence
 
 
