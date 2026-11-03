@@ -97,6 +97,8 @@ def main():
     ap.add_argument("--device", default="mps")
     ap.add_argument("--seed", type=int, default=20261102)
     ap.add_argument("--conf", type=float, default=0.25)
+    ap.add_argument("--reuse-run", default=None,
+                    help="existing ultralytics run dir (with weights/best.pt, results.csv): skip training, evaluate only")
     a = ap.parse_args()
     import torch
     import ultralytics
@@ -105,7 +107,8 @@ def main():
 
     random.seed(a.seed)
     torch.manual_seed(a.seed)
-    render, work, out = Path(a.render), Path(a.work), Path(a.out)
+    # absolute paths: ultralytics nests a relative `project` under runs/detect/
+    render, work, out = Path(a.render).resolve(), Path(a.work).resolve(), Path(a.out).resolve()
     work.mkdir(parents=True, exist_ok=True)
     out.mkdir(parents=True, exist_ok=True)
     gold = json.loads((render / "GOLD_BOXES.json").read_text())
@@ -114,11 +117,15 @@ def main():
     model = YOLO(a.base)
     base_path = Path(getattr(model, "ckpt_path", None) or a.base)
     t0 = time.perf_counter()
-    model.train(data=str(yamls["train"]), epochs=a.epochs, imgsz=a.imgsz, seed=a.seed, deterministic=True,
-                device=a.device, workers=0, batch=8, project=str(work), name="train", exist_ok=True, plots=False,
-                verbose=False, patience=15)
-    train_s = time.perf_counter() - t0
-    run = work / "train"
+    if a.reuse_run:
+        run = Path(a.reuse_run).resolve()
+        train_s = None
+    else:
+        model.train(data=str(yamls["train"]), epochs=a.epochs, imgsz=a.imgsz, seed=a.seed, deterministic=True,
+                    device=a.device, workers=0, batch=8, project=str(work), name="train", exist_ok=True, plots=False,
+                    verbose=False, patience=15)
+        train_s = time.perf_counter() - t0
+        run = Path(model.trainer.save_dir)
     best = run / "weights" / "best.pt"
     losses = []
     with open(run / "results.csv") as fh:
@@ -246,7 +253,7 @@ def main():
                "weights_published": False, "images_published": False,
                "gold_boxes_sha256": sha(render / "GOLD_BOXES.json"), "jobs_sha256": sha(a.jobs) if a.jobs else None,
                "images_by_split": counts, "seed": a.seed, "epochs_requested": a.epochs, "epochs_run": len(losses),
-               "imgsz": a.imgsz, "batch": 8, "patience": 15, "device": a.device, "train_seconds": round(train_s, 1),
+               "imgsz": a.imgsz, "batch": 8, "patience": 15, "device": a.device, "train_seconds": round(train_s, 1) if train_s is not None else "see reused run log",
                "conf_threshold": a.conf, "ocr": tess, "field_predictions_sha256": hashlib.sha256(data).hexdigest(),
                "versions": {"ultralytics": ultralytics.__version__, "torch": torch.__version__, "python": platform.python_version()},
                "host": {"machine": platform.machine(), "platform": platform.platform()}, "hosted_inference": "NONE"}
