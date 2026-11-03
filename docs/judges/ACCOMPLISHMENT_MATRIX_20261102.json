@@ -1,0 +1,494 @@
+{
+  "credit_policy": "Human/team/Claude vs ChatGPT credit based on distinct PR lanes; not inferred from shared github login.",
+  "detector_factorial": [
+    {
+      "combination": "M1",
+      "false_positive_clean_fields": 0,
+      "instances": 702,
+      "recall": 0.1624,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M1+M2",
+      "false_positive_clean_fields": 3,
+      "instances": 702,
+      "recall": 0.4259,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M1+M2+M3",
+      "false_positive_clean_fields": 236,
+      "instances": 702,
+      "recall": 0.9886,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M1+M3",
+      "false_positive_clean_fields": 233,
+      "instances": 702,
+      "recall": 0.9886,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M2",
+      "false_positive_clean_fields": 3,
+      "instances": 702,
+      "recall": 0.2678,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M2+M3",
+      "false_positive_clean_fields": 236,
+      "instances": 702,
+      "recall": 0.9886,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "M3",
+      "false_positive_clean_fields": 233,
+      "instances": 702,
+      "recall": 0.9886,
+      "status": "DISCOVERY_ONLY"
+    },
+    {
+      "combination": "none",
+      "false_positive_clean_fields": 0,
+      "instances": 702,
+      "recall": 0.0,
+      "status": "DISCOVERY_ONLY"
+    }
+  ],
+  "matrix": [
+    {
+      "capability": "Synthetic cohort & source provenance",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "100 Supabase patients; DB readback not verified",
+          "reference": "#4",
+          "state": "REPORTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "100 Synthea v3.4.0 JSON subset patients, 63/19/18",
+          "reference": "#10",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "Independent provenance checks; not identical to Supabase",
+          "reference": "#17",
+          "state": "REVIEWED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Synthetic FHIR only; Epic sandbox distinct",
+          "reference": "#10",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "HTML form test server",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "Supabase/teammate application lane",
+          "reference": "#4",
+          "state": "IMPLEMENTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "Read-only loopback FHIR, 3 forms, B0",
+          "reference": "#10",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "100-patient 218-case echo runner in open PR",
+          "reference": "#22",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "No real Epic UI/production writeback",
+          "reference": "#22",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "Field mapping accuracy",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "Teammate DB accuracy not verified",
+          "reference": "#5",
+          "state": "UNKNOWN"
+        },
+        {
+          "column": "Claude",
+          "detail": "B0+FCG 30/54 vs 18/54, previously inspected test",
+          "reference": "#10",
+          "state": "DISCOVERY"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "B0 full 218 cases, 1,867/2,180 fields correct",
+          "reference": "#22",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "New independent cohort required",
+          "reference": "#31",
+          "state": "NOT_TESTED"
+        }
+      ]
+    },
+    {
+      "capability": "Local Qwen text inference",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "No independently verified teammate model gain",
+          "reference": "#4",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "Red-team Qwen mapper 46-image comparison",
+          "reference": "#23",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "One-patient Qwen 12/20 smoke in draft",
+          "reference": "#22",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Qwen mappers below deterministic parser in PR23",
+          "reference": "#23",
+          "state": "NEGATIVE"
+        }
+      ]
+    },
+    {
+      "capability": "Qwen LoRA weight training",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "No audited production fine-tune",
+          "reference": "#4",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "M0/M1 training and scoring work item",
+          "reference": "#38",
+          "state": "IN_PROGRESS"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "No completed post-training admission in this review",
+          "reference": "#22",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Weight-change improvement absent",
+          "reference": "#38",
+          "state": "NOT_TESTED"
+        }
+      ]
+    },
+    {
+      "capability": "HTML/CSS and PDF readback",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "Teammate production form readback unavailable",
+          "reference": "#37",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "Local Apple PDFKit OCR arm and receipts",
+          "reference": "#10",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "CSS preview, Qwen PDF smoke and 3 PDF OCR files in open PR",
+          "reference": "#22",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Full pipeline readback unverified",
+          "reference": "#22",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "Pretrained VLM & OCR",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "Teammate visual QA not verified",
+          "reference": "#4",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "Qwen2.5vl:3b 57 images; Tesseract 57 images",
+          "reference": "#19",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "One-form Apple/Qwen paired field fixture",
+          "reference": "#12",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "OCR text location != clinical source correctness",
+          "reference": "#19",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "Trained bbox validators",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "No teammate weight-provenance evaluation",
+          "reference": "#4",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "YOLOv8n pipeline; final generalization not established",
+          "reference": "#19",
+          "state": "IMPLEMENTED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "D1 13.1% recall; D2 95.6% recall, low precision; logistic tie",
+          "reference": "#16",
+          "state": "NEGATIVE"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Unseen form-family detector replication",
+          "reference": "#40",
+          "state": "NOT_TESTED"
+        }
+      ]
+    },
+    {
+      "capability": "Prompt-injection robustness",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "No clinical adversarial exercise",
+          "reference": "#4",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "18 paired VLM injection examples (PR draft)",
+          "reference": "#29",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "Synthea field forgery O/0 and source-binding fixtures",
+          "reference": "#12",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Filter false-strip and new threat set not admitted",
+          "reference": "#34",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "Lean/Merkle/FCO/LOMO custody",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "No end-to-end teammate writeback proof",
+          "reference": "#5",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "Independent root replay and gate factorial, custody weaknesses",
+          "reference": "#21",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "Single-leaf ablations/identity audits, no causal inference",
+          "reference": "#18",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Source graph admission not production causal proof",
+          "reference": "#44",
+          "state": "DISCOVERY"
+        }
+      ]
+    },
+    {
+      "capability": "Public synthetic JSON policy",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "Legacy files subject to exact-blob policy",
+          "reference": "#30",
+          "state": "UNKNOWN"
+        },
+        {
+          "column": "Claude",
+          "detail": "Tasks/CI and security review successors",
+          "reference": "#42",
+          "state": "IMPLEMENTED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "Strict checker and legacy-freeze reconciliation",
+          "reference": "#30",
+          "state": "OBSERVED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "Legacy non-JSON bytes excepted; CI status must be checked",
+          "reference": "#30",
+          "state": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "capability": "Replication & real Epic writeback",
+      "cells": [
+        {
+          "column": "Teammate",
+          "detail": "DB readback not established",
+          "reference": "#37",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Claude",
+          "detail": "New cohort and Epic form fidelity pending",
+          "reference": "#31",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "ChatGPT / independent",
+          "detail": "No live Epic write/read authorization",
+          "reference": "#22",
+          "state": "NOT_TESTED"
+        },
+        {
+          "column": "Cross-lane admission",
+          "detail": "No validated end-to-end writeback",
+          "reference": "#44",
+          "state": "NOT_TESTED"
+        }
+      ]
+    }
+  ],
+  "merkle_root": "NOT_COMPUTED",
+  "metrics": [
+    {
+      "caveat": "Not 100 independent datasets; separate from teammate Supabase cohort",
+      "claim": "OBSERVED",
+      "denominator": "100 FHIR R4 subset bundles",
+      "id": "KPI-01",
+      "pr": 10,
+      "source": "data/forms_cohort_v1/MANIFEST.json",
+      "title": "Synthetic patients",
+      "value": "100"
+    },
+    {
+      "caveat": "B0 deterministic rules; every required field must be correct",
+      "claim": "OBSERVED",
+      "denominator": "18 held-out patients \u00d7 3 forms",
+      "id": "KPI-02",
+      "pr": 17,
+      "source": "evidence/baseline/BASELINE_V1.json",
+      "title": "Frozen baseline full-form success",
+      "value": "18 / 54"
+    },
+    {
+      "caveat": "Rules developed after B0 errors inspected; not independent replication",
+      "claim": "DISCOVERY_ONLY",
+      "denominator": "Same held-out 54 forms",
+      "id": "KPI-03",
+      "pr": 10,
+      "source": "evidence/baseline/BASELINE_V1.json",
+      "title": "B0 + L1+L2+L3 full-form success",
+      "value": "30 / 54"
+    },
+    {
+      "caveat": "213 false boxes; 73.6% value read match, not source-truth correctness",
+      "claim": "OBSERVED",
+      "denominator": "570 fields / 57 images",
+      "id": "KPI-04",
+      "pr": 19,
+      "source": "evidence/forms_vision/V1-qwen2.5vl-3b/summary.json",
+      "title": "Local pretrained VLM box recall",
+      "value": "82.1%"
+    },
+    {
+      "caveat": "Precision 65.6%; 180 false positives; post-hoc architecture",
+      "claim": "EXPLORATORY",
+      "denominator": "36 held-out filled images, known layouts",
+      "id": "KPI-05",
+      "pr": 16,
+      "source": "evidence/forms_bbox/LOCAL_BBOX_D1_D2_AUDIT_20261102.json",
+      "title": "D2 trained candidate-box recall",
+      "value": "95.6%"
+    },
+    {
+      "caveat": "236 false-positive clean fields; shared generator/oracle risk",
+      "claim": "DISCOVERY_ONLY",
+      "denominator": "702 injected faults",
+      "id": "KPI-06",
+      "pr": 10,
+      "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json",
+      "title": "Synthetic injected-error detector recall",
+      "value": "98.9%"
+    }
+  ],
+  "model_gain_admitted": "NO",
+  "parent_main_sha": "0fed9d81aee4e2b581e7a87dccee24fc7b5145f0",
+  "pr_count": 35,
+  "pr_snapshot": {
+    "CLOSED": 3,
+    "MERGED": 29,
+    "OPEN": 3
+  },
+  "publication_note": "Legacy byte exceptions are not a claim that old binaries conform to JSON-only requirements.",
+  "real_epic_writeback": "NOT_TESTED",
+  "schema": "FF-JUDGES-ACCOMPLISHMENT-MATRIX-V1",
+  "source_files": {
+    "baseline": "evidence/baseline/BASELINE_V1.json",
+    "d1_d2": "evidence/forms_bbox/LOCAL_BBOX_D1_D2_AUDIT_20261102.json",
+    "detector": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json",
+    "logistic": "evidence/forms_box_validator/run_v3/summary.json",
+    "tesseract": "evidence/forms_vision/T1-tesseract-redteam/summary.json",
+    "training_history": "dashboard/training_progress_latest.json",
+    "vlm": "evidence/forms_vision/V1-qwen2.5vl-3b/summary.json"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "bbox_format" : "normalized bottom-left x,y,width,height",
+  "engine" : "Apple Vision VNRecognizeTextRequest",
+  "engine_version" : "OS-native",
+  "pages" : [
+    {
+      "lines" : [
+        {
+          "bbox_norm_bl" : [
+            0.068742591157568408,
+            0.84044262810723125,
+            0.12731833863102532,
+            0.019893594221635391
+          ],
+          "confidence" : 1,
+          "text" : "Full legal name"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.07518796783943428,
+            0.8196969696459121,
+            0.12218045502706291,
+            0.014646464646464685
+          ],
+          "confidence" : 1,
+          "text" : "Lanny Volkman"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187972380332341,
+            0.76162790691255433,
+            0.090225558810763884,
+            0.01308139550565468
+          ],
+          "confidence" : 1,
+          "text" : "2017-03-03"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067669172887206974,
+            0.72529069773165777,
+            0.035714285358104836,
+            0.014534883788137831
+          ],
+          "confidence" : 1,
+          "text" : "Sex"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187970215254071,
+            0.70203488367039091,
+            0.041353382783777565,
+            0.011627907223171641
+          ],
+          "confidence" : 1,
+          "text" : "male"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.06954887308136512,
+            0.66565656573723131,
+            0.12406014835133272,
+            0.014646464646464685
+          ],
+          "confidence" : 1,
+          "text" : "Phone number"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187972078741713,
+            0.64244186039818252,
+            0.10902255189185049,
+            0.013081395505654569
+          ],
+          "confidence" : 1,
+          "text" : "555-799-1540"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548870798669685,
+            0.60606060600706591,
+            0.12030075172972836,
+            0.014646464646464574
+          ],
+          "confidence" : 1,
+          "text" : "Street address"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187971307401291,
+            0.58131313149233077,
+            0.156015034594567,
+            0.014646464646464574
+          ],
+          "confidence" : 1,
+          "text" : "759 Tremblay Mews"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.067289601996583556,
+            0.54363372071620941,
+            0.036661397397907733,
+            0.018401163274591625
+          ],
+          "confidence" : 1,
+          "text" : "City"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075094207425570408,
+            0.52296033189011482,
+            0.067856697631038077,
+            0.01367235954361723
+          ],
+          "confidence" : 1,
+          "text" : "Dedham"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548872591807878,
+            0.48691860476290783,
+            0.043233081094579753,
+            0.01453488378813772
+          ],
+          "confidence" : 1,
+          "text" : "State"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187969388746445,
+            0.46366279067377159,
+            0.028195489621629904,
+            0.01308139550565468
+          ],
+          "confidence" : 1,
+          "text" : "MA"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.06748079087318852,
+            0.42670499227441494,
+            0.077444433075150629,
+            0.015776062011718772
+          ],
+          "confidence" : 1,
+          "text" : "ZIP code"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075107749182665315,
+            0.40388178132363461,
+            0.050912321003433916,
+            0.01345736763694072
+          ],
+          "confidence" : 1,
+          "text" : "02026"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069115986808722649,
+            0.36514174217117745,
+            0.15874678667853859,
+            0.017870479159885044
+          ],
+          "confidence" : 1,
+          "text" : "Preferred language"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.077067666228478743,
+            0.34141414178127072,
+            0.17857143427032271,
+            0.016161615679962438
+          ],
+          "confidence" : 1,
+          "text" : "English (United States)"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.069548872268044834,
+            0.30808080823199413,
+            0.11090225518918505,
+            0.013140122095743778
+          ],
+          "confidence" : 1,
+          "text" : "Marital status"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075187970059081136,
+            0.28484848500557591,
+            0.11090225518918505,
+            0.013131313131313216
+          ],
+          "confidence" : 1,
+          "text" : "Never Married"
+        },
+        {
+          "bbox_norm_bl" : [
+            0.075101671180171553,
+            0.22495710229724419,
+            0.073480867872051159,
+            0.012295097774929542
+          ],
+          "confidence" : 1,
+          "text" : "Medicare"
+        }
+      ],
+      "page_index" : 0,
+      "pixel_height" : 1980,
+      "pixel_width" : 1530
+    }
+  ],
+  "pdfkit_text" : "SYNTHETIC DEMO FORM. Not a real clinic. Do not enter real patient data.\nNew patient registration (synthetic demo form)\nFull legal name\nLanny Volkman\nDate of birth (YYYY-MM-DD)\n2017-03-03\nSex\nmale\nPhone number\n555-799-1540\nStreet address\n759 Tremblay Mews\nCity\nDedham\nState\nMA\nZIP code\n02026\nPreferred language\nEnglish (United States)\nMarital status\nNever Married\nPrimary insurance company\nMedicare",
+  "pdfkit_text_is_not_ocr" : true
+}

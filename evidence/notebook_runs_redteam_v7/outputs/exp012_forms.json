@@ -1,0 +1,4 @@
+{
+  "reason": "legacy 12-form lane dropped by operator at finish request (GPU contention); superseded by SYNFORM2 lanes in EXP-014/015",
+  "status": "NOT_TESTED"
+}
