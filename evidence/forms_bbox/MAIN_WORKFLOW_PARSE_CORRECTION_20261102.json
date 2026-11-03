@@ -1,0 +1,11 @@
+{
+ "schema":"frontier-forms.main-workflow-parse-correction.v1",
+ "predecessor_main":"262ba5732ab3a5d6c39ed05c39ec5da79e5e3e9b",
+ "source_merge_pr":39,
+ "observed_failure_run":"https://github.com/biobitworks/frontier-forms/actions/runs/41544623081",
+ "observed_failure":"GitHub Actions workflow rejected before job start by unquoted colon in YAML run scalar --only-binary=:all:",
+ "implemented_repair":"Use literal block YAML run without changing pinned NumPy 1.26.4 and SciPy 1.15.3",
+ "predecessor_failed_ci_preserved":true,
+ "new_ci":"NOT_YET_EXECUTED",
+ "merkle_root":"NOT_COMPUTED"
+}

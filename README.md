@@ -5,6 +5,10 @@
 ## Judges — start here: visual results and evidence
 
 
+**Public data/merge coverage (post-deadline readback):** [Final exact-byte data availability and branch reconciliation](docs/judges/FINAL_PUBLIC_DATA_COVERAGE_20261102_V1.md) and [machine-readable source SHA256 audit](docs/judges/FINAL_PUBLIC_DATA_COVERAGE_20261102_V1.json). At frozen main f10e1d7: **60 PRs merged, 4 closed without merge, 0 open**; **13 remote branch refs remain NOT_MERGED**. One historical JSON failure receipt was preserved unchanged; outdated/duplicate code and a restricted binary were **not** blindly merged. Private weights, independent scientific replication and external submission acceptance remain **NOT_PUBLIC / NOT_TESTED / UNKNOWN**. This verifies published coverage, not that all data everywhere are available.
+
+
+
 ### Final review: contributor Gantt and measured training timeline
 
 **[Main Notion research hub](https://app.notion.com/p/40c58ec71eb28161b79ddfbb083cb7c0)** · **[Notion judge figure gallery](https://app.notion.com/p/40d58ec71eb281db9ba2db19e7f7adf6)** · **[Detailed source-bound final review](docs/judges/FINAL_SUBMISSION_REVIEW_AND_TRAINING_20261102.md)** · **[Frozen PR and epoch source JSON](docs/judges/FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json)**
