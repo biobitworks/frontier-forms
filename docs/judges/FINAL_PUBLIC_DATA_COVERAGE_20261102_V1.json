@@ -1,0 +1,397 @@
+{
+  "branch_count_not_ancestor_of_main": 13,
+  "branches_not_ancestor_of_main_at_snapshot": [
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 26,
+      "head_sha": "e1b7aa1b85f9c40a146345db1e81001f566fd233",
+      "ref": "origin/audit/judge-demo-manifest-repair-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": [
+        "docs/judges/figures/fig05_clean_boxes.png",
+        "docs/judges/figures/fig06_scan_boxes.png",
+        "docs/judges/figures/fig07_planted_name_swap.png",
+        "docs/judges/figures/fig08_planted_case_swap.png",
+        "docs/judges/figures/fig09_heavy_noise.png",
+        "docs/judges/figures/fig10_boxes_break_ocr.png"
+      ]
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 4,
+      "head_sha": "46340989d56eaa0b35bb21e52dd2dbdd8e777bae",
+      "ref": "origin/chatgpt/asi-fco-ehr-evaluation-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": [
+        "LICENSE",
+        "dashboard/index.html",
+        "docs/CUSTODY.md",
+        "docs/EXPERIMENT_PROTOCOL.md",
+        "docs/INTEGRATIONS.md",
+        "docs/LAB_NOTEBOOK.md",
+        "formal/CustodyInvariant.lean",
+        "governance/public_projection.json",
+        "notebooks/01_custody_merkle.ipynb",
+        "notebooks/02_paired_mcnemar_bootstrap.ipynb",
+        "notebooks/03_lomo_auc_fpr_fdr.ipynb",
+        "notebooks/04_synthea_to_ehr_form.ipynb",
+        "notebooks/05_fireworks_harness_costs.ipynb",
+        "prompts/CHATGPT_GSD.md",
+        "prompts/CLAUDE_REDTEAM.md",
+        "scripts/forms_fixture.py",
+        "scripts/freeze_form_run.py",
+        "scripts/paired_stats.py",
+        "scripts/quality_metrics.py",
+        "scripts/verify_freeze.py",
+        "tests/test_custody_metrics.py",
+        "tests/test_paired_stats.py"
+      ]
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 2,
+      "head_sha": "6e789da80c6bf29ce2f57b7fa7c6f2226a7f6f00",
+      "ref": "origin/claude/project-thread-qye578",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": [
+        "lanes/frontier-forms/dataset-freeze-redteam/README.md",
+        "lanes/frontier-forms/dataset-freeze-redteam/RUBRIC_V1.md",
+        "lanes/frontier-forms/dataset-freeze-redteam/fixtures/synthetic_pseudobulk_v1.bin",
+        "lanes/frontier-forms/dataset-freeze-redteam/results/REDTEAM_TEST_MATRIX.csv",
+        "lanes/frontier-forms/dataset-freeze-redteam/results/RESULTS.json",
+        "lanes/frontier-forms/dataset-freeze-redteam/tests/test_public_redteam.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/fixture_attacks.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/freezelib.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/public_redteam.py"
+      ]
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 22,
+      "head_sha": "6948bbc25b48a7ef2de0fc9367f99d0cb95c52d5",
+      "ref": "origin/docs/daisy-methodology-boundary-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 32,
+      "head_sha": "304ec1b868e0dd9471e729bbed0bfde315c94de0",
+      "ref": "origin/docs/discovery-admission-novelty-ledger-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 25,
+      "head_sha": "715a51c8fde1c9169e511a04ed429b7e485c0384",
+      "ref": "origin/docs/fireworks-deploy-judging-submission-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 35,
+      "head_sha": "c79e10d9bc6203edb7ae353a4e3e43b27aed0867",
+      "ref": "origin/docs/fireworks-prioritized-todo-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 22,
+      "head_sha": "7880a0eb1e859fb133e73aae055a2fe3b77fdb22",
+      "ref": "origin/docs/observed-gains-vs-daisy-method-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 19,
+      "head_sha": "4cd743d4cc4b57e493d2ac4c5c4f64f34e5350e5",
+      "ref": "origin/feat/fcg-ehr-evidence-lab-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 6,
+      "head_sha": "c220b111dc2f53e8d760c13025a29960c097fa75",
+      "ref": "origin/feat/training-evidence-heatmap-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": [
+        "lanes/frontier-forms/dataset-freeze-redteam/README.md",
+        "lanes/frontier-forms/dataset-freeze-redteam/RUBRIC_V1.md",
+        "lanes/frontier-forms/dataset-freeze-redteam/fixtures/synthetic_pseudobulk_v1.bin",
+        "lanes/frontier-forms/dataset-freeze-redteam/results/REDTEAM_TEST_MATRIX.csv",
+        "lanes/frontier-forms/dataset-freeze-redteam/results/RESULTS.json",
+        "lanes/frontier-forms/dataset-freeze-redteam/tests/test_public_redteam.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/fixture_attacks.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/freezelib.py",
+        "lanes/frontier-forms/dataset-freeze-redteam/tools/public_redteam.py"
+      ]
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 22,
+      "head_sha": "ef3624220194eef1cfff155e6130168813cbe990",
+      "ref": "origin/fix/main-ci-yaml-final-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [
+        "evidence/forms_bbox/MAIN_WORKFLOW_PARSE_CORRECTION_20261102.json"
+      ],
+      "unique_paths_absent_from_main": [
+        "evidence/forms_bbox/MAIN_WORKFLOW_PARSE_CORRECTION_20261102.json"
+      ]
+    },
+    {
+      "ahead_commits": 2,
+      "existing_paths_with_differing_blobs_count": 27,
+      "head_sha": "58a661089408a67cdf7c865be78a4180f3280897",
+      "ref": "origin/fix/synthetic-json-legacy-pin-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    },
+    {
+      "ahead_commits": 1,
+      "existing_paths_with_differing_blobs_count": 2,
+      "head_sha": "bf192ba7d48b8f78bc4f6004baa7cb32008b41b1",
+      "ref": "origin/review/compare-fcg-vs-supabase-20261102",
+      "status": "NOT_MERGED_BRANCH_SNAPSHOT_REVIEW_REQUIRED",
+      "unique_data_evidence_paths_absent_from_main": [],
+      "unique_paths_absent_from_main": []
+    }
+  ],
+  "created_at_utc": "2026-11-03T00:53:10.766955+00:00",
+  "current_main_ci_at_predecessor": "SUCCESS_OBSERVED_FROM_GITHUB_ACTIONS",
+  "file_inventory_main_predecessor": {
+    "data_files": 206,
+    "evidence_files": 549,
+    "json_files": 570,
+    "notebooks": 70,
+    "png_files": 283,
+    "top_level_prefixes": {
+      ".github": 1,
+      ".gitignore": 1,
+      ".gitleaks.toml": 1,
+      ".gsigmad": 1,
+      ".planning": 2,
+      "Frontier_Forms_Project_Spec.md": 1,
+      "README.md": 1,
+      "README_AI.md": 1,
+      "SUPABASE_Data_Helper_Script.md": 1,
+      "bench": 66,
+      "dashboard": 7,
+      "data": 206,
+      "detailed_plan_v1.md": 1,
+      "docs": 295,
+      "evidence": 549,
+      "experiments": 52,
+      "lean": 3,
+      "notebooks": 16,
+      "packages": 11,
+      "redteam": 102,
+      "requirements-local-vision.txt": 1,
+      "requirements-notebooks.txt": 1,
+      "scripts": 92,
+      "src": 21,
+      "supabase": 1,
+      "tests": 32,
+      "tools": 2
+    },
+    "total_tracked": 1468
+  },
+  "github_pull_requests": {
+    "closed_without_merge": 4,
+    "closed_without_merge_prs": [
+      {
+        "number": 1,
+        "title": "[REVIEW] EHR FCO/FCG source freeze, statistical notebooks and Claude red-team handoff",
+        "url": "https://github.com/biobitworks/frontier-forms/pull/1"
+      },
+      {
+        "number": 27,
+        "title": "Security successor: JSON-only new data with exact-byte legacy freeze",
+        "url": "https://github.com/biobitworks/frontier-forms/pull/27"
+      },
+      {
+        "number": 45,
+        "title": "Fix merged GitHub Actions YAML parse failure (NumPy/SciPy run block)",
+        "url": "https://github.com/biobitworks/frontier-forms/pull/45"
+      },
+      {
+        "number": 55,
+        "title": "Independent audit: repair 10 judge-demo annotation hashes and enforce exact-byte validation",
+        "url": "https://github.com/biobitworks/frontier-forms/pull/55"
+      }
+    ],
+    "merged": 60,
+    "merged_pr_numbers": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      26,
+      28,
+      29,
+      30,
+      39,
+      42,
+      43,
+      44,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "open_at_predecessor": 0,
+    "total": 64
+  },
+  "imported_historical_receipt": {
+    "exact_sha256": "cbe7d67eb961e960068b13e22ba297877bd3dab03eda464c1fe6497d5f35d5cc",
+    "historical_state": "PRESERVED_NOT_YET_EXECUTED_AT_PREDECESSOR; CURRENT_MAIN_CI_SUCCESS_SEPARATE",
+    "new_merkle_root": "NOT_COMPUTED",
+    "path": "evidence/forms_bbox/MAIN_WORKFLOW_PARSE_CORRECTION_20261102.json",
+    "source_branch": "origin/fix/main-ci-yaml-final-20261102",
+    "source_branch_head": "ef3624220194eef1cfff155e6130168813cbe990"
+  },
+  "new_root": "NOT_COMPUTED",
+  "no_model_inference_reperformed": true,
+  "predecessor_main_sha": "f10e1d7bb6856c85f9db054d409867ff65922c02",
+  "public_source_identity_checks": {
+    "docs/demo/MANIFEST_REPAIR_V2.json": {
+      "sha256": "cc5b330d3e239e6bf2dcec9433baa749fb19c5c57712258c9b82cba8fbe41595",
+      "size_bytes": 3915
+    },
+    "docs/demo/manifest.json": {
+      "sha256": "b7653d9ce4aead6195815e5513fc7da8dbbef20156aa77c6d0bd58e156328216",
+      "size_bytes": 11186
+    },
+    "docs/judges/FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json": {
+      "sha256": "550a0fe349262f58a5c27b7cd95f7026ef9ae904362d8cb8e059f32c0f0bfc19",
+      "size_bytes": 52037
+    },
+    "docs/judges/figures/fig19_actual_training_epochs_20261102.png": {
+      "sha256": "cd4e16ffcc7d9c09bcfa11981e866b15ebbef6ba7b2a9e295627aa5042cea357",
+      "size_bytes": 151998
+    },
+    "docs/judges/figures/fig20_contributor_gantt_corrected_v2.png": {
+      "sha256": "0d3d3b8d6e7126379bcb37e2ac78fded973223196064ccf4b5ffde2e878a4c45",
+      "size_bytes": 86744
+    },
+    "docs/judges/present.html": {
+      "sha256": "58f343152ca8fb34eaf038bb63818e444f28997dd50ae5a93a86a71cd66f0ec2",
+      "size_bytes": 290951
+    },
+    "evidence/FIGURES.html": {
+      "sha256": "7e766dc93585005a3281f9bc8aabc9c76fc99b57647eeddcc4178f6414599687",
+      "size_bytes": 14578
+    },
+    "evidence/acceptance/ACCEPTANCE_PROGRESS_20261102.json": {
+      "sha256": "3bcd1d444955548317a33f75ae22ebb4ee9e21d9aad8d4541b2ce2f07148f406",
+      "size_bytes": 4153
+    },
+    "evidence/forms_detector/V2-yolov8n/receipt.json": {
+      "sha256": "f337e4c7844080d78a33f5158b8b72f64931e546c400e1519db939fd168a7577",
+      "size_bytes": 1236
+    },
+    "evidence/forms_detector/V2-yolov8n/summary.json": {
+      "sha256": "502e90b0c2a89876c467f2092e87af3f333141e6909380cb85404c65fc6e8548",
+      "size_bytes": 16207
+    },
+    "evidence/governance/DISCOVERY_ADMISSION_V2_20261102.json": {
+      "sha256": "b6fe4847712037cc4e34b3a18b2a48e7966ab1e3f16f69838daadaa5599e6633",
+      "size_bytes": 96528
+    },
+    "evidence/governance/DISCOVERY_ADMISSION_V4_ROOT_SCHEME_CORRECTION_20261102.json": {
+      "sha256": "7694e17ba961eb2dba58fbf14a6529fd49f4da3ff4ce23d3915d7aff3a96a3fa",
+      "size_bytes": 969
+    },
+    "evidence/notebook_runs_redteam_v8/execution_manifest.json": {
+      "sha256": "f00fc02addc19de9b78927e4a4d28fb90a44df24cf7673298b9c870df1532e9a",
+      "size_bytes": 693
+    },
+    "evidence/redteam/detector/full/epoch_ledger.jsonl": {
+      "sha256": "e3aa66b65419add86f5b4cd3a4a86d08995fc132777cf4c76fc710be463fdad1",
+      "size_bytes": 23350
+    },
+    "evidence/redteam/detector/no_scan/epoch_ledger.jsonl": {
+      "sha256": "92b5ad4f5f3b30448c68a867539efac2374fb8702556d58a56643d30b936e976",
+      "size_bytes": 22893
+    }
+  },
+  "repo": "biobitworks/frontier-forms",
+  "restrictions": {
+    "FCAR": "HOLD",
+    "external_hackersquad_submission_receipt": "UNKNOWN",
+    "full_100_patient_qwen_acceptance": "NOT_TESTED_IN_FROZEN_ACCEPTANCE_RECEIPT",
+    "historical_legacy_binary_fixture": "NOT_MERGED; path under lanes/... synthetic_pseudobulk_v1.bin and policy/rights require separate review",
+    "independent_prospective_replication": "NOT_TESTED",
+    "notion_anonymous_published_visibility": "UNKNOWN",
+    "old_branch_only_code_and_notebooks": "NOT_MERGED; 13 refs not ancestor of main, avoid stale overwrite",
+    "qwen_lora_paired_effect": "NOT_COMPUTED",
+    "real_epic_patient_writeback": "NOT_TESTED",
+    "scientific_gain_admissions": 0,
+    "teammate_supabase_source_readback": "NOT_INDEPENDENTLY_VERIFIED",
+    "v2_raw_images": "SYNTHETIC_TEST_METADATA_AVAILABLE; IMAGES_NOT_PUBLISHED_IN_V2_RECEIPT",
+    "v2_yolo_weights": "RECEIPT_SHA_PRESENT; WEIGHTS_BYTES_NOT_PUBLISHED"
+  },
+  "schema": "frontier-forms.final-public-data-coverage.v1",
+  "source_scope": "GitHub public main and visible remote refs at timestamp; no access to all private drives, external API/Notion permissions or unsubmitted files",
+  "status": "PUBLIC_EVIDENCE_AND_ALL_OPEN_PRS_RECONCILED_NOT_ALL_PRIVATE_OR_BRANCH_BYTES_MERGED"
+}
