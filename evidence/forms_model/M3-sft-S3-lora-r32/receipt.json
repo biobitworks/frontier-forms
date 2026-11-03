@@ -1,0 +1,41 @@
+{
+  "adapter_path": "runs/sft/S3-lora-r32-e3-lr5e-4/adapter",
+  "adapter_sha256": {
+    "README.md": "f518c94bfc0812bbb89bad63477c0628788b48dda5ddd919c7f7d87db230af0b",
+    "adapter_config.json": "7f938c4de8bea8f36df21ab489537c6b1c2ea4d993c76652fb33fc01c3aa8ee7",
+    "adapter_model.safetensors": "d318857edce85fedceee1524269a14ede5032636b438fc8932260c9152d29986",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "arm": "M3-sft-S3-lora-r32",
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "cohort_root_evaluated": "c52ef6d0a8b191e6a77e17fd6dcf5f97e48318ed25564d88f12a9ca66b68a03c",
+  "decoding": "greedy, max_new_tokens=192",
+  "device": "mps",
+  "dtype": "float32",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "torch": "2.15.0"
+  },
+  "hosted_inference": "NONE",
+  "label": "POST-DEADLINE (host-approved). Single test-split scoring of the SFT config chosen on validation (S3-lora-r32-e3-lr5e-4, see evidence/forms_model/selection_v1/ATTEMPTS.json); no other config was scored on test",
+  "malformed_outputs": 0,
+  "model_calls": 540,
+  "model_seconds": 296.8,
+  "n_cases": 54,
+  "n_patients": 18,
+  "output_root": "e316be4f67894978bfa9afbfff82e5464f05cffa32545194aa55057fed40ed54",
+  "post_deadline": true,
+  "predictions_sha256": "816dc0e89a4009bbac22a7335994f1d22faa5b7bc2841be27e4890dd3a7adc86",
+  "splits": [
+    "test"
+  ],
+  "wall_seconds": 298.6
+}

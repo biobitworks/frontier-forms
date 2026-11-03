@@ -1,11 +1,17 @@
 {
  "schema": "frontier_forms.sft_status.v1",
- "updated_utc": "2026-11-03T15:40:00Z",
- "label": "In progress (post-deadline, host-approved)",
+ "updated_utc": "2026-11-03T16:10:00Z",
+ "label": "Done (post-deadline, host-approved)",
  "model": "Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
  "protocol": "Each config keeps its lowest-validation-loss epoch, then is scored on the 38 validation forms only. The config with the best validation full-form success (ties: validation field accuracy) is chosen and scored once on the frozen 54-form test split. No retries on test. LoRA vs DoRA pairs share rank, lr and epochs.",
  "comparators": [
+  {
+   "arm": "**M3 SFT (S3 LoRA r32) \u2014 this work**",
+   "field_accuracy": "83.7% (452/540 test fields)",
+   "full_form": "**29/54 (53.7%)**",
+   "source": "evidence/forms_model/M3-sft-S3-lora-r32/summary.json"
+  },
   {
    "arm": "M0 untrained Qwen2.5-0.5B (zero-shot)",
    "field_accuracy": "41.7% (225/540 test fields)",
@@ -73,16 +79,18 @@
   {
    "run": "S3",
    "config": "LoRA r32, lr 5e-4, 3 epochs",
-   "status": "done: validation 29/38 full forms (76.3%), field accuracy 94.7%; SELECTED (most validation full forms) (B0 19/38 on the same forms); scoring once on the 54 test forms now",
+   "status": "SELECTED on validation (29/38 full forms, 94.7% fields); scored once on test as M3-sft-S3-lora-r32",
    "val_loss": "0.0081 (epoch 3 kept)",
-   "test_field_accuracy": "",
-   "test_full_form": ""
+   "test_field_accuracy": "83.7% (452/540)",
+   "test_full_form": "29/54 (53.7%)"
   }
  ],
  "results_will_appear": [
-  "evidence/forms_model/selection_v1/ (one folder per attempt: receipt, train_receipt, answers, summary; ATTEMPTS.json lists every try including failures)",
-  "evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)",
-  "docs/figures/gains_heatmap (Not yet measured row becomes measured)"
+  "evidence/forms_model/M3-sft-S3-lora-r32/ (the single test scoring)",
+  "evidence/forms_model/selection_v1/ (every validation attempt; ATTEMPTS.json lists every try including failures)",
+  "evidence/ATTRIBUTION_LEDGER_FORMS.jsonl (sft_selection and learned_model rows)",
+  "evidence/FIGURES_LIVE.html (evidence/FIGURES.html stays frozen for the judges audit)"
  ],
- "note": "Moved from the MacBookPro (out of memory) to magicSTUDIObox per Byron, 2026-11-03 01:47Z, with a 25% free-memory guard so Vita DAISY keeps priority."
+ "note": "Moved from the MacBookPro (out of memory) to magicSTUDIObox per Byron, 2026-11-03 01:47Z, with a 25% free-memory guard so Vita DAISY keeps priority.",
+ "result": "The config chosen on validation (S3: LoRA r32, lr 5e-4, 3 epochs) was scored once on the frozen 54-form test split as `M3-sft-S3-lora-r32`: **29/54 full forms (53.7%)** and 83.7% field accuracy. On the same 54 forms the frozen rule baseline B0 gets 18/54 (paired: 13 forms only the model gets right, 2 only B0; +20.4 pts, 95% CI [11.1, 27.8], exact McNemar p=0.0074), and the untrained Qwen2.5-0.5B (M0) gets 0/54. B0 with the FCG harness modules (L1+L2+L3) gets 30/54, so the trained model alone roughly matches the full harness on full forms but has lower field accuracy (83.7% vs 93.0%). Discovery phase: the repo's admission rule still says NO_SUPERIORITY_CLAIM until replication."
 }

@@ -14,8 +14,11 @@ START, END = "<!-- sft-status:start -->", "<!-- sft-status:end -->"
 
 def render(s):
     out = [START, "", f"## {s['label']}: trained form-filling model (SFT)", "",
-           f"**What:** {s['model']}, fine-tuned on {s['data']}. {len(s['runs'])} configs are being trained.", "",
-           f"**Protocol:** {s['protocol']}", "",
+           f"**What:** {s['model']}, fine-tuned on {s['data']}. {len(s['runs'])} configs "
+           f"{'were' if s.get('result') else 'are being'} trained.", ""]
+    if s.get("result"):
+        out += [f"**Result:** {s['result']}", ""]
+    out += [f"**Protocol:** {s['protocol']}", "",
            "**Comparison points (frozen 54-form test split):**", "",
            "| Arm | Field accuracy | Full-form success | Source |", "|---|---|---|---|"]
     for c in s["comparators"]:
@@ -27,7 +30,7 @@ def render(s):
                    f"{r['test_field_accuracy'] or '—'} | {r['test_full_form'] or '—'} |")
     out += ["", "**Results will appear in:** " + " · ".join(f"`{x}`" for x in s["results_will_appear"]) + ".",
             "Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); "
-            "refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.",
+            "refresh with `python3 scripts/update_readme_sft.py`. Only the config chosen on validation is scored on test, once.",
             "", END]
     return "\n".join(out)
 

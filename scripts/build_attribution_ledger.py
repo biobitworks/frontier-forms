@@ -114,8 +114,9 @@ def main():
         s = json.loads((p.parent / "summary.json").read_text())
         ident = {k: rec.get(k) for k in ("base_model", "base_revision", "adapter_path", "adapter_sha256")}
         arms[rec["arm"]] = (ident, p.parent)
+        test_only = s["paired_vs_B0"]["overall"]["n"] == s["paired_vs_B0"].get("test_split", {}).get("n")
         for split, key in (("validation+test", "overall"), ("test", "test_split")):
-            if key in s["paired_vs_B0"]:
+            if key in s["paired_vs_B0"] and not (test_only and key == "overall"):
                 rows.append({"family": "learned_model", "parent_arm": "B0-v1", "child_arm": rec["arm"],
                              "model_weights": {"parent": rules, "child": ident, "changed": True},
                              "mechanism": {"changed": ["mapper:rules->model"]},
@@ -127,14 +128,18 @@ def main():
 
     # SFT adapter vs zero-shot base: same base weights + prompt, only the adapter differs
     m0 = next((k for k in arms if k.startswith("M0")), None)
-    m1 = next((k for k in arms if k.startswith("M1")), None)
+    m1 = next((k for k in arms if k.startswith("M1")), None) or next((k for k in arms if arms[k][0].get("adapter_path")), None)
     if m0 and m1:
         import sys
         sys.path.insert(0, str(ROOT / "src"))
         from frontier_forms.forms.statistics_bridge import paired_vs_b0
         load = lambda d: [json.loads(x) for x in (d / "predictions.jsonl").read_text().splitlines()]
-        res = paired_vs_b0(load(arms[m0][1]), load(arms[m1][1]))
+        child_rows = load(arms[m1][1])
+        splits = {r["split"] for r in child_rows}
+        res = paired_vs_b0([r for r in load(arms[m0][1]) if r["split"] in splits], child_rows)
         for split, key in (("validation+test", "overall"), ("test", "test_split")):
+            if key == "overall" and splits == {"test"}:
+                continue  # test-only arm: overall == test, keep one row
             rows.append({"family": "learned_model", "parent_arm": m0, "child_arm": m1,
                          "model_weights": {"parent": arms[m0][0], "child": arms[m1][0], "changed": True},
                          "mechanism": {"changed": []},
