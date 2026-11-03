@@ -100,10 +100,25 @@
   {
    "run": "D2-dora-r16-e4-lr2e-4",
    "try": 4,
-   "status": "RUNNING",
-   "started_utc": "2026-11-03T11:38:22Z"
+   "status": "DONE",
+   "started_utc": "2026-11-03T11:38:22Z",
+   "finished_utc": "2026-11-03T14:41:24Z",
+   "evidence": "evidence/forms_model/selection_v1/D2-dora-r16-e4-lr2e-4"
   }
  ],
  "base_model_cache": "Qwen/Qwen2.5-0.5B-Instruct revision 7ae557604adf67be50417f59c2c2f167def9a775 (same revision S1 used)",
- "code_note": "Try 3 onward runs the scripts in this commit (local_base offline loader); S1 ran the same code before that change, loading the identical base revision online."
+ "code_note": "Try 3 onward runs the scripts in this commit (local_base offline loader); S1 ran the same code before that change, loading the identical base revision online.",
+ "selection": {
+  "rule": "most validation full forms (required fields); ties broken by validation field accuracy",
+  "ranking": [
+   "S3 29/38 (0.947)",
+   "D1 28/38 (0.953)",
+   "S1 28/38 (0.950)",
+   "S2 27/38 (0.958)",
+   "D2 27/38 (0.955)"
+  ],
+  "chosen": "S3-lora-r32-e3-lr5e-4",
+  "decided_utc": "2026-11-03T15:31:00Z",
+  "test_scoring": "once, as evidence/forms_model/M3-sft-S3-lora-r32 (started 2026-11-03T15:31:07Z)"
+ }
 }
