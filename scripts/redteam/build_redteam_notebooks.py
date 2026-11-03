@@ -170,25 +170,26 @@ nb("12_redteam_ehr_forms.ipynb", "EXP-012 (red-team): synthetic form → VLM ext
 pub = sorted((R / 'evidence/redteam/lanes').glob('EHR_*_forms12_PUBLIC.jsonl'))
 if not pub:
     res = {'status': 'NOT_TESTED', 'reason': 'legacy 12-form lane dropped by operator at finish request (GPU contention); superseded by SYNFORM2 lanes in EXP-014/015'}
-    emit('exp012_forms.json', res); print(res); raise SystemExit(0)
-rows = jsonl(pub[0]); meta = json.loads(pub[0].with_name(pub[0].name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
-assert len({r['case_id'] for r in rows}) == len(rows) == 12
-agg = {'n_forms': len(rows), 'model': meta['model'], 'form_root': meta['form_root'], 'per_field': {}, 'cross_patient_abstain': sum(1 for r in rows if r['cross_patient_identity_check'] == 'ABSTAIN')}
-for f in FORM_FIELDS:
-    agg['per_field'][f] = {k: sum(1 for r in rows if r[k][f]) for k in ('correct_extract', 'correct_fco', 'correct_reread', 'admitted')}
-tot = {k: sum(1 for r in rows for f in FORM_FIELDS if r[k][f]) for k in ('correct_extract', 'correct_fco', 'correct_reread', 'admitted')}
-adm = confusion({(r['case_id'], f): r['admitted'][f] for r in rows for f in FORM_FIELDS} and {f'{r["case_id"]}|{f}': r['admitted'][f] for r in rows for f in FORM_FIELDS},
-                {f'{r["case_id"]}|{f}': r['correct_extract'][f] for r in rows for f in FORM_FIELDS}) if False else None
-# field-level admission confusion across all 84 fields
-A = {f'{r["case_id"]}|{f}': r['admitted'][f] for r in rows for f in FORM_FIELDS}; C = {f'{r["case_id"]}|{f}': r['correct_extract'][f] for r in rows for f in FORM_FIELDS}
-tp = sum(1 for k in A if A[k] and C[k]); fp = sum(1 for k in A if A[k] and not C[k]); fn = sum(1 for k in A if not A[k] and C[k]); tn = sum(1 for k in A if not A[k] and not C[k])
-div = lambda a, b: a / b if b else None
-agg.update({'fields_total': len(A), 'totals': tot, 'admission_confusion': {'TP': tp, 'FP': fp, 'FN': fn, 'TN': tn, 'FPR': div(fp, fp + tn), 'FDR': div(fp, tp + fp), 'FNR': div(fn, tp + fn), 'AUROC': 'NOT_COMPUTED_NO_CONTINUOUS_SCORES'},
-            'false_admissions': fp, 'draft_patient_matches_gold': sum(1 for r in rows if r['draft_patient_matches_gold']), 'draft_encounter_matches_gold': sum(1 for r in rows if r['draft_encounter_matches_gold']),
-            'tokens_extract_total': sum(r['tokens_extract'] for r in rows), 'tokens_challenge_total': sum(r['tokens_challenge'] for r in rows),
-            'wall_extract_total': round(sum(r['wall_extract'] for r in rows), 2), 'wall_challenge_total': round(sum(r['wall_challenge'] for r in rows), 2),
-            'epic': 'NOT_CONTACTED', 'ehr_write': 'PROHIBITED_NOT_ATTEMPTED'})
-emit('exp012_forms.json', agg); print(json.dumps(agg, indent=2))""")])
+    emit('exp012_forms.json', res); print(res)
+else:
+    rows = jsonl(pub[0]); meta = json.loads(pub[0].with_name(pub[0].name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
+    assert len({r['case_id'] for r in rows}) == len(rows) == 12
+    agg = {'n_forms': len(rows), 'model': meta['model'], 'form_root': meta['form_root'], 'per_field': {}, 'cross_patient_abstain': sum(1 for r in rows if r['cross_patient_identity_check'] == 'ABSTAIN')}
+    for f in FORM_FIELDS:
+        agg['per_field'][f] = {k: sum(1 for r in rows if r[k][f]) for k in ('correct_extract', 'correct_fco', 'correct_reread', 'admitted')}
+    tot = {k: sum(1 for r in rows for f in FORM_FIELDS if r[k][f]) for k in ('correct_extract', 'correct_fco', 'correct_reread', 'admitted')}
+    adm = confusion({(r['case_id'], f): r['admitted'][f] for r in rows for f in FORM_FIELDS} and {f'{r["case_id"]}|{f}': r['admitted'][f] for r in rows for f in FORM_FIELDS},
+                    {f'{r["case_id"]}|{f}': r['correct_extract'][f] for r in rows for f in FORM_FIELDS}) if False else None
+    # field-level admission confusion across all 84 fields
+    A = {f'{r["case_id"]}|{f}': r['admitted'][f] for r in rows for f in FORM_FIELDS}; C = {f'{r["case_id"]}|{f}': r['correct_extract'][f] for r in rows for f in FORM_FIELDS}
+    tp = sum(1 for k in A if A[k] and C[k]); fp = sum(1 for k in A if A[k] and not C[k]); fn = sum(1 for k in A if not A[k] and C[k]); tn = sum(1 for k in A if not A[k] and not C[k])
+    div = lambda a, b: a / b if b else None
+    agg.update({'fields_total': len(A), 'totals': tot, 'admission_confusion': {'TP': tp, 'FP': fp, 'FN': fn, 'TN': tn, 'FPR': div(fp, fp + tn), 'FDR': div(fp, tp + fp), 'FNR': div(fn, tp + fn), 'AUROC': 'NOT_COMPUTED_NO_CONTINUOUS_SCORES'},
+                'false_admissions': fp, 'draft_patient_matches_gold': sum(1 for r in rows if r['draft_patient_matches_gold']), 'draft_encounter_matches_gold': sum(1 for r in rows if r['draft_encounter_matches_gold']),
+                'tokens_extract_total': sum(r['tokens_extract'] for r in rows), 'tokens_challenge_total': sum(r['tokens_challenge'] for r in rows),
+                'wall_extract_total': round(sum(r['wall_extract'] for r in rows), 2), 'wall_challenge_total': round(sum(r['wall_challenge'] for r in rows), 2),
+                'epic': 'NOT_CONTACTED', 'ehr_write': 'PROHIBITED_NOT_ATTEMPTED'})
+    emit('exp012_forms.json', agg); print(json.dumps(agg, indent=2))""")])
 
 # ---------------------------------------------------------------- EXP-013 integrity attacks
 nb("13_redteam_integrity_attacks.ipynb", "EXP-013 (red-team): forged evidence, reordered leaves, forged parent links, missing receipts — deterministic gates",
@@ -315,7 +316,7 @@ nb("15_redteam_qwen_mappers_bbox_detector.ipynb", "EXP-015 (red-team): OCR→Qwe
 from frontier_forms.redteam_stats import compare, holm
 L = R / 'evidence/redteam/lanes'
 FIELDS = ('Synthetic case', 'Patient first', 'Patient last', 'Birth date', 'Gender', 'Encounter date', 'Visit class')
-out = {'mappers': {}, 'mapper_pairwise_vs_qwen3': {}, 'bbox': {}, 'detector': None, 'weights': {}}
+out = {'mappers': {}, 'mapper_pairwise_vs_qwen3': {}, 'bbox': {}, 'detector': {}, 'weights': {}}
 maps = {}
 for p in sorted(L.glob('MAP_*_synform2_test_PUBLIC.jsonl')):
     rows = jsonl(p); meta = json.loads(p.with_name(p.name.replace('_PUBLIC.jsonl', '_META.json')).read_text())
@@ -374,16 +375,16 @@ out = {'runs': {}}
 for run in ('full', 'no_scan'):
     man = json.loads((D / run / 'chain_manifest.json').read_text()); rows = jsonl(D / run / 'epoch_ledger.jsonl')
     ctx = man['context']
-    replay = root([leaf(ctx)] + [leaf(r) for r in rows])
+    replay = root([leaf(ctx)] + [leaf(r) for r in rows]).hex()
     assert replay == man['root'] and ctx['leaf_count'] == len(rows) + 1, ('CHAIN_ROOT_MISMATCH', run)
     # every epoch's parent_root is the committed root after the previous epoch
     for k, r in enumerate(rows, start=1):
         if k == 1:
             assert r['parent_root'] == ctx['parent_synform2_root']
         else:
-            c = dict(ctx, leaf_count=k); assert r['parent_root'] == root([leaf(c)] + [leaf(x) for x in rows[:k - 1]]), ('PARENT_ROOT_MISMATCH', run, k)
+            c = dict(ctx, leaf_count=k); assert r['parent_root'] == root([leaf(c)] + [leaf(x) for x in rows[:k - 1]]).hex(), ('PARENT_ROOT_MISMATCH', run, k)
     tam = copy.deepcopy(rows); tam[10]['dev_pass'] += 1
-    assert root([leaf(ctx)] + [leaf(r) for r in tam]) != man['root']   # negative control
+    assert root([leaf(ctx)] + [leaf(r) for r in tam]).hex() != man['root']   # negative control
     fin = json.loads((D / run / 'final_receipt.json').read_text())
     statuses = [r['status'] for r in rows]
     out['runs'][run] = {'chain_root': man['root'], 'epochs': len(rows), 'status_counts': {s: statuses.count(s) for s in sorted(set(statuses))},
@@ -415,7 +416,7 @@ for run, col in (('full', '#1c5cab'), ('no_scan', '#c2410c')):
         elif p['status'] == 'LOSS': svg.append(f'<path d="M{x:.1f},{y + 9:.1f} l5,-8 h-10 z" fill="{col}"><title>{tip}</title></path>')
         else: svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#ffffff" stroke="{col}" stroke-width="2"><title>{tip}</title></circle>')
 svg.append('</svg>')
-(R / 'docs/architecture/epoch_breakpoints.svg').write_text('\n'.join(svg) + '\n')
+(R / 'docs/architecture/epoch_breakpoints.svg').write_text('\\n'.join(svg) + '\\n')
 emit('exp016_epochs.json', out)
 for run, r in out['runs'].items(): print(run, r['status_counts'], 'gain', r['gain_epochs'], 'loss', r['loss_epochs'], 'test', r['final_test'], 'root', r['chain_root'][:16])
 print('LOMO no_scan vs full (test image pass):', {k: out['lomo_no_scan_vs_full_test'][k] for k in ('accuracy_baseline', 'accuracy_challenger', 'delta_abs', 'p_mcnemar_exact_two_sided', 'ci95_delta_stratified_bootstrap', 'fields_ok', 'by_variant')})""")])

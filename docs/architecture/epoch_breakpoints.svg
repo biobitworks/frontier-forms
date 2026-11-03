@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12"><rect width="760" height="300" fill="#ffffff"/>
+<text x="16" y="18" font-weight="600" fill="#111827">Dev field boxes correct (of 308) per epoch — full run (blue) vs LOMO no-scan (orange); ▲ GAIN ▼ LOSS committed leaves</text>
+<line x1="60" x2="730" y1="250.0" y2="250.0" stroke="#e5e7eb"/><text x="52" y="254.0" text-anchor="end" fill="#6b7280">0</text>
+<line x1="60" x2="730" y1="195.0" y2="195.0" stroke="#e5e7eb"/><text x="52" y="199.0" text-anchor="end" fill="#6b7280">77</text>
+<line x1="60" x2="730" y1="140.0" y2="140.0" stroke="#e5e7eb"/><text x="52" y="144.0" text-anchor="end" fill="#6b7280">154</text>
+<line x1="60" x2="730" y1="85.0" y2="85.0" stroke="#e5e7eb"/><text x="52" y="89.0" text-anchor="end" fill="#6b7280">231</text>
+<line x1="60" x2="730" y1="30.0" y2="30.0" stroke="#e5e7eb"/><text x="52" y="34.0" text-anchor="end" fill="#6b7280">308</text>
+<text x="60.0" y="272" text-anchor="middle" fill="#6b7280">1</text>
+<text x="152.4" y="272" text-anchor="middle" fill="#6b7280">5</text>
+<text x="267.9" y="272" text-anchor="middle" fill="#6b7280">10</text>
+<text x="383.4" y="272" text-anchor="middle" fill="#6b7280">15</text>
+<text x="499.0" y="272" text-anchor="middle" fill="#6b7280">20</text>
+<text x="614.5" y="272" text-anchor="middle" fill="#6b7280">25</text>
+<text x="730.0" y="272" text-anchor="middle" fill="#6b7280">30</text>
+<text x="410.0" y="290" text-anchor="middle" fill="#374151">epoch</text>
+<polyline fill="none" stroke="#1c5cab" stroke-width="2" points="60.0,250.0 83.1,249.3 106.2,223.6 129.3,204.3 152.4,142.9 175.5,74.3 198.6,95.7 221.7,91.4 244.8,40.0 267.9,60.0 291.0,56.4 314.1,37.1 337.2,44.3 360.3,43.6 383.4,43.6 406.6,42.1 429.7,40.7 452.8,40.0 475.9,48.6 499.0,44.3 522.1,50.7 545.2,32.9 568.3,32.9 591.4,32.9 614.5,32.9 637.6,32.9 660.7,32.1 683.8,31.4 706.9,32.9 730.0,32.9"/>
+<circle cx="60.0" cy="250.0" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 1: 0/308 fields, 0/44 images, FIRST_EPOCH, p=None, weights 3c1627d47511</title></circle>
+<circle cx="83.1" cy="249.3" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 2: 1/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 1162045d1daa</title></circle>
+<circle cx="106.2" cy="223.6" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 3: 37/308 fields, 0/44 images, NEUTRAL, p=1.0, weights a9f51b7adb21</title></circle>
+<circle cx="129.3" cy="204.3" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 4: 64/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 00ab9f0de043</title></circle>
+<circle cx="152.4" cy="142.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 5: 150/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 4d279a4d2ac5</title></circle>
+<circle cx="175.5" cy="74.3" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 6: 246/308 fields, 2/44 images, NEUTRAL, p=0.5, weights e9fcedd800aa</title></circle>
+<circle cx="198.6" cy="95.7" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 7: 216/308 fields, 0/44 images, NEUTRAL, p=0.5, weights 1f2d672e308b</title></circle>
+<circle cx="221.7" cy="91.4" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 8: 222/308 fields, 0/44 images, NEUTRAL, p=1.0, weights b2f6b8bb2247</title></circle>
+<path d="M244.8,31.0 l5,8 h-10 z" fill="#1c5cab"><title>full epoch 9: 294/308 fields, 30/44 images, GAIN, p=1.862645149230957e-09, weights 5a02c0e885d0</title></path>
+<path d="M267.9,69.0 l5,-8 h-10 z" fill="#1c5cab"><title>full epoch 10: 266/308 fields, 9/44 images, LOSS, p=9.5367431640625e-07, weights c3227bef3949</title></path>
+<circle cx="291.0" cy="56.4" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 11: 271/308 fields, 16/44 images, NEUTRAL, p=0.0654296875, weights 6888dc7fd1e5</title></circle>
+<path d="M314.1,28.1 l5,8 h-10 z" fill="#1c5cab"><title>full epoch 12: 298/308 fields, 34/44 images, GAIN, p=7.62939453125e-06, weights 22cab53ac2a5</title></path>
+<path d="M337.2,53.3 l5,-8 h-10 z" fill="#1c5cab"><title>full epoch 13: 288/308 fields, 27/44 images, LOSS, p=0.015625, weights 05347ca07c6c</title></path>
+<circle cx="360.3" cy="43.6" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 14: 289/308 fields, 28/44 images, NEUTRAL, p=1.0, weights 1f73fa419aff</title></circle>
+<circle cx="383.4" cy="43.6" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 15: 289/308 fields, 28/44 images, NEUTRAL, p=1.0, weights 08d6b055538e</title></circle>
+<circle cx="406.6" cy="42.1" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 16: 291/308 fields, 30/44 images, NEUTRAL, p=0.6875, weights feabe0e7010a</title></circle>
+<circle cx="429.7" cy="40.7" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 17: 293/308 fields, 31/44 images, NEUTRAL, p=1.0, weights 6ed6d30842ca</title></circle>
+<circle cx="452.8" cy="40.0" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 18: 294/308 fields, 31/44 images, NEUTRAL, p=1.0, weights 77e867348855</title></circle>
+<path d="M475.9,57.6 l5,-8 h-10 z" fill="#1c5cab"><title>full epoch 19: 282/308 fields, 21/44 images, LOSS, p=0.00634765625, weights 73d768641678</title></path>
+<circle cx="499.0" cy="44.3" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 20: 288/308 fields, 27/44 images, NEUTRAL, p=0.0703125, weights a003ad563c5c</title></circle>
+<circle cx="522.1" cy="50.7" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 21: 279/308 fields, 23/44 images, NEUTRAL, p=0.125, weights 295dfe512fbb</title></circle>
+<path d="M545.2,23.9 l5,8 h-10 z" fill="#1c5cab"><title>full epoch 22: 304/308 fields, 40/44 images, GAIN, p=1.52587890625e-05, weights 5d415aed56cd</title></path>
+<circle cx="568.3" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 23: 304/308 fields, 40/44 images, NEUTRAL, p=1.0, weights 71546e385998</title></circle>
+<circle cx="591.4" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 24: 304/308 fields, 40/44 images, NEUTRAL, p=1.0, weights 5874dd1fdd35</title></circle>
+<circle cx="614.5" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 25: 304/308 fields, 40/44 images, NEUTRAL, p=1.0, weights 85824e5b4804</title></circle>
+<circle cx="637.6" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 26: 304/308 fields, 40/44 images, NEUTRAL, p=1.0, weights e65b8c1ba2e0</title></circle>
+<circle cx="660.7" cy="32.1" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 27: 305/308 fields, 41/44 images, NEUTRAL, p=1.0, weights 113329ef07de</title></circle>
+<circle cx="683.8" cy="31.4" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 28: 306/308 fields, 42/44 images, NEUTRAL, p=1.0, weights 20b875935d07</title></circle>
+<circle cx="706.9" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 29: 304/308 fields, 40/44 images, NEUTRAL, p=0.5, weights d8a3d443cccc</title></circle>
+<circle cx="730.0" cy="32.9" r="4" fill="#ffffff" stroke="#1c5cab" stroke-width="2"><title>full epoch 30: 304/308 fields, 40/44 images, NEUTRAL, p=1.0, weights 36a0327e79a5</title></circle>
+<polyline fill="none" stroke="#c2410c" stroke-width="2" points="60.0,250.0 83.1,250.0 106.2,250.0 129.3,207.1 152.4,191.4 175.5,144.3 198.6,123.6 221.7,107.9 244.8,102.1 267.9,142.1 291.0,150.7 314.1,133.6 337.2,90.0 360.3,92.9 383.4,87.9 406.6,78.6 429.7,65.0 452.8,65.0 475.9,53.6 499.0,48.6 522.1,81.4 545.2,110.7 568.3,114.3 591.4,90.7 614.5,32.9 637.6,32.1 660.7,32.1 683.8,32.1 706.9,30.7 730.0,30.7"/>
+<circle cx="60.0" cy="250.0" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 1: 0/308 fields, 0/44 images, FIRST_EPOCH, p=None, weights 19260899f1e2</title></circle>
+<circle cx="83.1" cy="250.0" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 2: 0/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 55648aeb8666</title></circle>
+<circle cx="106.2" cy="250.0" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 3: 0/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 70114336e74b</title></circle>
+<circle cx="129.3" cy="207.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 4: 60/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 31a445a7a359</title></circle>
+<circle cx="152.4" cy="191.4" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 5: 82/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 6e7989684714</title></circle>
+<circle cx="175.5" cy="144.3" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 6: 148/308 fields, 0/44 images, NEUTRAL, p=1.0, weights ce3c3098976b</title></circle>
+<circle cx="198.6" cy="123.6" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 7: 177/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 15386593eb1f</title></circle>
+<circle cx="221.7" cy="107.9" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 8: 199/308 fields, 1/44 images, NEUTRAL, p=1.0, weights ae64a41d7880</title></circle>
+<circle cx="244.8" cy="102.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 9: 207/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 4e9dc1e2e86b</title></circle>
+<circle cx="267.9" cy="142.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 10: 151/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 75e9fc2b7361</title></circle>
+<circle cx="291.0" cy="150.7" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 11: 139/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 8b9b0896753f</title></circle>
+<circle cx="314.1" cy="133.6" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 12: 163/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 2199b1d351a9</title></circle>
+<circle cx="337.2" cy="90.0" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 13: 224/308 fields, 0/44 images, NEUTRAL, p=1.0, weights c0c21281a685</title></circle>
+<circle cx="360.3" cy="92.9" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 14: 220/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 4e414b9b3467</title></circle>
+<circle cx="383.4" cy="87.9" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 15: 227/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 23d3ec757599</title></circle>
+<circle cx="406.6" cy="78.6" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 16: 240/308 fields, 3/44 images, NEUTRAL, p=0.25, weights 610fe3ad9d0f</title></circle>
+<path d="M429.7,56.0 l5,8 h-10 z" fill="#c2410c"><title>no_scan epoch 17: 259/308 fields, 10/44 images, GAIN, p=0.015625, weights 7ad20caf2464</title></path>
+<circle cx="452.8" cy="65.0" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 18: 259/308 fields, 10/44 images, NEUTRAL, p=1.0, weights 8258c2b58ac3</title></circle>
+<path d="M475.9,44.6 l5,8 h-10 z" fill="#c2410c"><title>no_scan epoch 19: 275/308 fields, 20/44 images, GAIN, p=0.001953125, weights 106cedc8964d</title></path>
+<circle cx="499.0" cy="48.6" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 20: 282/308 fields, 20/44 images, NEUTRAL, p=1.0, weights 0a483a7d6bfb</title></circle>
+<path d="M522.1,90.4 l5,-8 h-10 z" fill="#c2410c"><title>no_scan epoch 21: 236/308 fields, 0/44 images, LOSS, p=1.9073486328125e-06, weights 60436c5d43e6</title></path>
+<circle cx="545.2" cy="110.7" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 22: 195/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 9802d289eed1</title></circle>
+<circle cx="568.3" cy="114.3" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 23: 190/308 fields, 0/44 images, NEUTRAL, p=1.0, weights 1533e7e0fe32</title></circle>
+<circle cx="591.4" cy="90.7" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 24: 223/308 fields, 1/44 images, NEUTRAL, p=1.0, weights b3545e8f9386</title></circle>
+<path d="M614.5,23.9 l5,8 h-10 z" fill="#c2410c"><title>no_scan epoch 25: 304/308 fields, 40/44 images, GAIN, p=3.637978807091713e-12, weights da58821e280b</title></path>
+<circle cx="637.6" cy="32.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 26: 305/308 fields, 42/44 images, NEUTRAL, p=0.5, weights 4a562c13eab1</title></circle>
+<circle cx="660.7" cy="32.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 27: 305/308 fields, 42/44 images, NEUTRAL, p=1.0, weights e7b4b5cb8f13</title></circle>
+<circle cx="683.8" cy="32.1" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 28: 305/308 fields, 41/44 images, NEUTRAL, p=1.0, weights 45808424b5de</title></circle>
+<circle cx="706.9" cy="30.7" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 29: 307/308 fields, 43/44 images, NEUTRAL, p=0.5, weights 852d4ebe83d4</title></circle>
+<circle cx="730.0" cy="30.7" r="4" fill="#ffffff" stroke="#c2410c" stroke-width="2"><title>no_scan epoch 30: 307/308 fields, 43/44 images, NEUTRAL, p=1.0, weights b004dc7c00b0</title></circle>
+</svg>

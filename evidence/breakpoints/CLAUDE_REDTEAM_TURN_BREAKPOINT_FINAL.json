@@ -1,0 +1,152 @@
+{
+ "decisions": [
+  "Insilico lane stopped by owner",
+  "Fireworks not used (no external data upload)",
+  "PNG/PDF published only under docs/",
+  "gate statistics relabelled to their tested endpoint after review"
+ ],
+ "id": "CLAUDE-REDTEAM-CLOUD-20261103-FINAL",
+ "lane": "claude-redteam (cloud)",
+ "next_action": "Freeze a new synthetic template family and patient cohort, preregister the admitted comparisons, and score them once to move any record beyond HOLD.",
+ "parent": {
+  "main_at_writing": "233896eaf7edd42b2f0e5a8523cfe72c1c13b171",
+  "pr3_head": "da953450",
+  "predecessor_roots_recomputed": {
+   "input_728": "5f9a7e51…",
+   "leaf_15": "9e4d4df8…",
+   "leaf_79": "2f1cfafd…"
+  }
+ },
+ "phi": false,
+ "pointers": [
+  {
+   "path": "docs/reviews/CLAUDE_REDTEAM_REPORT.md",
+   "sha256": "5861ff464c637bab9e5235af72f6666c3c98678905441de6b71138881ed66288"
+  },
+  {
+   "path": "docs/architecture/LEAF_GAIN_ATTRIBUTION.md",
+   "sha256": "307e40c7a2cb5fbed47614e420ee72428209239c8c6aeb8bba76e3f01e73d92a"
+  },
+  {
+   "path": "experiments/CLAUDE_LAB_NOTEBOOK.md",
+   "sha256": "6cda6ce296824323775d79038d319d6208ef6c6a5bf664c8b6bdd5c44d6584c4"
+  },
+  {
+   "path": "evidence/admission/REDTEAM_DISCOVERY_ADMISSION_V1.json",
+   "sha256": "96d90eee64a06604b37bee6eeddff14813299d4ce833e082639b7185702c4b09"
+  },
+  {
+   "path": "evidence/redteam/trained_gain/trained_gain_summary.json",
+   "sha256": "59924f66cc38ad33c2a365c16fe21846996b9258a72be007a2ee4f638cbd9348"
+  },
+  {
+   "path": "evidence/redteam/gate_factorial.json",
+   "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
+  },
+  {
+   "path": "evidence/redteam/attribution_matrix.json",
+   "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+  },
+  {
+   "path": "evidence/redteam/detector/full/chain_manifest.json",
+   "sha256": "6880c6aa8ea8be1a43c01cb97d702b9ebd3685649ca7dbb386d019127eaa7392"
+  },
+  {
+   "path": "evidence/redteam/detector/no_scan/chain_manifest.json",
+   "sha256": "0f232008be4d6172e704366e30225d8dcbf2ce88fde6ca7c946d3cd89da1cb66"
+  },
+  {
+   "path": "evidence/redteam/independent_replay_magicstudiobox.json",
+   "sha256": "c3e16bc2d9b981a1bce9033955373e8c0e79d7ea8a96735f2428a93c1e72af5f"
+  },
+  {
+   "path": "evidence/notebook_runs_redteam_v7/execution_manifest.json",
+   "sha256": "9aedf9943aefee5a14b60473c70aa498f157b59b7b924b81434c0d24513cc11b"
+  },
+  {
+   "path": "evidence/notebook_runs_redteam_v8/execution_manifest.json",
+   "sha256": "f00fc02addc19de9b78927e4a4d28fb90a44df24cf7673298b9c870df1532e9a"
+  },
+  {
+   "path": "lean/Gates.lean",
+   "sha256": "0b9bd64b2d976c9925e8be73d3e2732c98a7dab2a6ea1425a80c55ba2e590a68"
+  },
+  {
+   "path": "docs/judges/present.html",
+   "sha256": "58f343152ca8fb34eaf038bb63818e444f28997dd50ae5a93a86a71cd66f0ec2"
+  },
+  {
+   "path": "docs/judges/NOVEL_VS_STANDARD_TRAINING.md",
+   "sha256": "e89850b6f28feb71b95302e22fb96f1d8f455ef3ba1544a4078b9444d292f3fe"
+  }
+ ],
+ "program_id": "frontier-forms",
+ "schema": "frontier_forms.turn_breakpoint.v1",
+ "states": {
+  "BLOCKED": [
+   "Fireworks L4/L5 (policy: no external upload)",
+   "Snyk (auth)"
+  ],
+  "EXECUTED": [
+   "independent Merkle replay (728 proofs, 15-leaf root, split regeneration, 38 pairs)",
+   "L0/L1/L2 LongevityBench discovery+heldout; L0 cold replay; L3 discovery",
+   "Apple Vision OCR train/dev/test and ERR",
+   "qwen2.5vl:3b SYNFORM2 test (46) and ERR (135 of 230, truncated)",
+   "qwen3:1.7b and qwen2.5:1.5b OCR mappers on test",
+   "2^4 gate factorial with LOMO",
+   "YOLOv8n detector full + LOMO no-scan, per-epoch hash-chained ledger",
+   "preregistered trained-gain evaluation A0-A3 (test once)",
+   "discovery admission ledger (31 records)",
+   "notebooks EXP-010..016 (EXP-012 records NOT_TESTED lane)",
+   "Lean 4 Gates.lean compile",
+   "gitleaks scans",
+   "form server screenshots/PDFs (120 files)"
+  ],
+  "FAILED": [
+   "macOS Preview window capture 0/10 (Screen Recording permission)",
+   "notebook runs v6 (12/15/16) and v7 (16): builder bugs, fixed, failures kept"
+  ],
+  "NEGATIVE": [
+   "small Qwen models on LongevityBench (4 comparisons)",
+   "qwen2.5:1.5b and qwen3:1.7b mappers vs OCR parser (post hoc)",
+   "overlay boxes before OCR"
+  ],
+  "NOT_TESTED": [
+   "independent replication cohort (all admitted records on HOLD)",
+   "Qwen2.5-VL bbox grounding lane",
+   "legacy 12-form EHR lane",
+   "NVIDIA training",
+   "live Supabase",
+   "Epic",
+   "qwen2.5vl on remaining 95 ERR images"
+  ],
+  "NULL": [
+   "detector crops + OCR (9/46)",
+   "crops + correction (15/46)",
+   "identity check alone",
+   "FCO/FCG context in prompt (6 comparisons)",
+   "LOMO no_scan vs full on test (p=1.0)"
+  ],
+  "OBSERVED": {
+   "boxes_break_ocr": "58/70 -> 0/70 fields",
+   "commitment_gate": "per-image success 50->135/135 vs no checks, Holm p<1e-4, CI [+0.61,+0.66]; detection 108/108 descriptive",
+   "detector": "test mAP50 0.912 (full), 0.857 (no_scan); 3 GAIN / 3 LOSS epochs (full)",
+   "learned_ocr_correction": "all-7 14->22/46, Holm p=0.023, patient-cluster CI [+0.043,+0.326]",
+   "qwen2.5vl_posthoc": "42/46 all-7 vs 14/46 OCR+parser (post hoc)"
+  },
+  "SUPPORTED": []
+ },
+ "synthetic_only": true,
+ "unresolved": [
+  "F-01 duplicate-last-leaf collision in predecessor schemas",
+  "replication of commitment-gate and learned-correction gains",
+  "PR #55 superseded; open PRs #22/#44/#53/#54 belong to other lanes"
+ ],
+ "verified_new_roots": {
+  "SYNFORM2": "aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e",
+  "SYNFORM2_ERR": "790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944",
+  "detector_chain_full": "1fc600162b6a8dd727d8db52722c6a093fad85674450626b8c79fc287a294ff6",
+  "detector_chain_no_scan": "e99fe22c7a1473a678e4629f9d32022681a7b4f1d66e3ddcd0b9b2fa332167c0"
+ },
+ "weights_published": false
+}

@@ -125,3 +125,15 @@ replication: same hosts, same weights, same cases, temperature 0.
 * A1 learned correction: all-7 14→22/46, Holm p=0.023, CI [+0.065, +0.283], PROMOTE_DISCOVERY (replication NOT_TESTED).
 * A2 detector crops: 9/46, NULL. A3 crops + correction: 15/46, NULL. Both kept as null results.
 * Outputs: `evidence/redteam/trained_gain/{trained_gain_summary.json, trained_gain_rows.json, run_log.txt}`.
+
+## R10 — final audit (OBSERVED 2026-11-03)
+
+* Notebooks EXP-012, 014, 015 and 016 had never executed. Run v6 failed on EXP-012/015/016 and run v7 on EXP-016. All four failures were notebook-builder bugs:
+  * EXP-012 exited early with `SystemExit` after recording NOT_TESTED.
+  * EXP-015 wrote into a `None` detector slot.
+  * EXP-016 had a literal newline inside a string.
+  * EXP-016 compared a bytes root with a hex root.
+* All four bugs are fixed. Run v7 passes EXP-012/014/015 and run v8 passes EXP-016, and the failed runs are kept.
+* EXP-016 replays both detector chains with the shared verifier. It checks every epoch's parent root, confirms that a tampered ledger is rejected, and writes `docs/architecture/epoch_breakpoints.svg`.
+* The final breakpoint is now machine-readable at `evidence/breakpoints/CLAUDE_REDTEAM_TURN_BREAKPOINT_FINAL.json`. This folder was empty on main until now.
+

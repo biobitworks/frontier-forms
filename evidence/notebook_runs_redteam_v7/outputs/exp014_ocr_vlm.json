@@ -1,0 +1,501 @@
+{
+  "extractors": {
+    "OCR_apple-vision_synform2_dev": {
+      "meta": {
+        "blank_page_control_all_missing": true,
+        "engine": "Apple Vision VNRecognizeTextRequest .accurate, usesLanguageCorrection=false, en-US",
+        "images": 44,
+        "model": null,
+        "ocr_seconds_total": 37.448,
+        "public_sha256": "5ec599db6ae52100dedb173c46a4f0d26a922b1784bd231fcb95e854343d26ff",
+        "wall_seconds": 38.8
+      },
+      "summary": {
+        "clean": {
+          "all7": 10,
+          "false_admissions": 4,
+          "field_fidelity": 0.9090909090909091,
+          "fields_correct": 140,
+          "images": 22,
+          "per_field": {
+            "Birth date": 22,
+            "Encounter date": 22,
+            "Gender": 12,
+            "Patient first": 20,
+            "Patient last": 20,
+            "Synthetic case": 22,
+            "Visit class": 22
+          }
+        },
+        "scan": {
+          "all7": 11,
+          "false_admissions": 4,
+          "field_fidelity": 0.8961038961038961,
+          "fields_correct": 138,
+          "images": 22,
+          "per_field": {
+            "Birth date": 22,
+            "Encounter date": 22,
+            "Gender": 13,
+            "Patient first": 19,
+            "Patient last": 20,
+            "Synthetic case": 20,
+            "Visit class": 22
+          }
+        }
+      }
+    },
+    "OCR_apple-vision_synform2_test": {
+      "meta": {
+        "blank_page_control_all_missing": true,
+        "engine": "Apple Vision VNRecognizeTextRequest .accurate, usesLanguageCorrection=false, en-US",
+        "images": 46,
+        "model": null,
+        "ocr_seconds_total": 82.995,
+        "public_sha256": "ef1a9491037243a9c4f46f8bd1cb379b77ed9d04e320ba318e00acf44b2a6582",
+        "wall_seconds": 86.7
+      },
+      "summary": {
+        "clean": {
+          "all7": 5,
+          "false_admissions": 4,
+          "field_fidelity": 0.8695652173913043,
+          "fields_correct": 140,
+          "images": 23,
+          "per_field": {
+            "Birth date": 23,
+            "Encounter date": 23,
+            "Gender": 9,
+            "Patient first": 19,
+            "Patient last": 22,
+            "Synthetic case": 21,
+            "Visit class": 23
+          }
+        },
+        "scan": {
+          "all7": 9,
+          "false_admissions": 7,
+          "field_fidelity": 0.8881987577639752,
+          "fields_correct": 143,
+          "images": 23,
+          "per_field": {
+            "Birth date": 23,
+            "Encounter date": 23,
+            "Gender": 16,
+            "Patient first": 19,
+            "Patient last": 20,
+            "Synthetic case": 20,
+            "Visit class": 22
+          }
+        }
+      }
+    },
+    "OCR_apple-vision_synform2_train": {
+      "meta": {
+        "blank_page_control_all_missing": true,
+        "engine": "Apple Vision VNRecognizeTextRequest .accurate, usesLanguageCorrection=false, en-US",
+        "images": 132,
+        "model": null,
+        "ocr_seconds_total": 106.437,
+        "public_sha256": "bfd04a5d15a0a92bb6540a5d89cb80d2ed056de6b52dddd3e4a7c4d0595c29b1",
+        "wall_seconds": 107.5
+      },
+      "summary": {
+        "clean": {
+          "all7": 25,
+          "false_admissions": 12,
+          "field_fidelity": 0.8874458874458875,
+          "fields_correct": 410,
+          "images": 66,
+          "per_field": {
+            "Birth date": 66,
+            "Encounter date": 66,
+            "Gender": 28,
+            "Patient first": 61,
+            "Patient last": 59,
+            "Synthetic case": 64,
+            "Visit class": 66
+          }
+        },
+        "scan": {
+          "all7": 27,
+          "false_admissions": 12,
+          "field_fidelity": 0.8982683982683982,
+          "fields_correct": 415,
+          "images": 66,
+          "per_field": {
+            "Birth date": 66,
+            "Encounter date": 66,
+            "Gender": 38,
+            "Patient first": 59,
+            "Patient last": 60,
+            "Synthetic case": 60,
+            "Visit class": 66
+          }
+        }
+      }
+    },
+    "VLM_qwen2.5vl_3b_synform2_test": {
+      "meta": {
+        "blank_page_control_all_missing": null,
+        "engine": null,
+        "images": 46,
+        "model": "qwen2.5vl:3b",
+        "ocr_seconds_total": null,
+        "public_sha256": "350e05f942fe360d239f26f85e85df838b679fa1cdd08c2aa7ab8c07760ac882",
+        "wall_seconds": 509.8
+      },
+      "summary": {
+        "clean": {
+          "all7": 21,
+          "false_admissions": 2,
+          "field_fidelity": 0.9875776397515528,
+          "fields_correct": 159,
+          "images": 23,
+          "per_field": {
+            "Birth date": 23,
+            "Encounter date": 23,
+            "Gender": 23,
+            "Patient first": 22,
+            "Patient last": 22,
+            "Synthetic case": 23,
+            "Visit class": 23
+          }
+        },
+        "scan": {
+          "all7": 21,
+          "false_admissions": 2,
+          "field_fidelity": 0.9875776397515528,
+          "fields_correct": 159,
+          "images": 23,
+          "per_field": {
+            "Birth date": 23,
+            "Encounter date": 23,
+            "Gender": 23,
+            "Patient first": 22,
+            "Patient last": 22,
+            "Synthetic case": 23,
+            "Visit class": 23
+          }
+        }
+      }
+    }
+  },
+  "gate_factorial": {
+    "cells": 945,
+    "dataset": "SYNFORM2ERR-790a7dc6f9641fa6",
+    "full": {
+      "coverage": 0.6941798941798942,
+      "false_admission_rate_of_all": 0.0,
+      "planted_detection_rate": 1.0,
+      "selective_accuracy": 1.0
+    },
+    "images": 135,
+    "lomo": {
+      "minus_commitment": {
+        "coverage": 0.7312169312169312,
+        "delta_coverage_vs_full": 0.03703703703703698,
+        "delta_detection_vs_full": -0.32407407407407407,
+        "delta_false_admissions_vs_full": 35,
+        "false_admission_rate_of_all": 0.037037037037037035,
+        "planted_detection_rate": 0.6759259259259259
+      },
+      "minus_consistency": {
+        "coverage": 0.7873015873015873,
+        "delta_coverage_vs_full": 0.09312169312169305,
+        "delta_detection_vs_full": 0.0,
+        "delta_false_admissions_vs_full": 0,
+        "false_admission_rate_of_all": 0.0,
+        "planted_detection_rate": 1.0
+      },
+      "minus_identity": {
+        "coverage": 0.7714285714285715,
+        "delta_coverage_vs_full": 0.07724867724867723,
+        "delta_detection_vs_full": 0.0,
+        "delta_false_admissions_vs_full": 0,
+        "false_admission_rate_of_all": 0.0,
+        "planted_detection_rate": 1.0
+      },
+      "minus_rules": {
+        "coverage": 0.6952380952380952,
+        "delta_coverage_vs_full": 0.0010582010582009804,
+        "delta_detection_vs_full": 0.0,
+        "delta_false_admissions_vs_full": 0,
+        "false_admission_rate_of_all": 0.0,
+        "planted_detection_rate": 1.0
+      }
+    },
+    "none": {
+      "coverage": 0.9851851851851852,
+      "false_admission_rate_of_all": 0.10899470899470899,
+      "planted_detection_rate": 0.12962962962962962,
+      "selective_accuracy": 0.8893662728249194
+    },
+    "per_config_vs_none": {
+      "commitment": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "config_only": 85,
+        "config_success": 135,
+        "delta_success_rate": 0.6296296296296297,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 7.754818242684634e-25,
+        "p_mcnemar_exact_two_sided": 5.169878828456423e-26
+      },
+      "commitment+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "config_only": 85,
+        "config_success": 135,
+        "delta_success_rate": 0.6296296296296297,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 7.754818242684634e-25,
+        "p_mcnemar_exact_two_sided": 5.169878828456423e-26
+      },
+      "consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.11851851851851852,
+          0.18518518518518517
+        ],
+        "config_only": 20,
+        "config_success": 70,
+        "delta_success_rate": 0.14814814814814814,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 5.7220458984375e-06,
+        "p_mcnemar_exact_two_sided": 1.9073486328125e-06
+      },
+      "identity": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": false,
+        "ci95_delta_stratified_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "config_only": 0,
+        "config_success": 50,
+        "delta_success_rate": 0.0,
+        "mcnemar_gate_holm": false,
+        "n_images": 135,
+        "p_holm": 1.0,
+        "p_mcnemar_exact_two_sided": 1.0
+      },
+      "identity+commitment": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "config_only": 71,
+        "config_success": 121,
+        "delta_success_rate": 0.5259259259259259,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 9.317362419797304e-21,
+        "p_mcnemar_exact_two_sided": 8.470329472543003e-22
+      },
+      "identity+commitment+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "config_only": 71,
+        "config_success": 121,
+        "delta_success_rate": 0.5259259259259259,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 9.317362419797304e-21,
+        "p_mcnemar_exact_two_sided": 8.470329472543003e-22
+      },
+      "identity+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.1111111111111111,
+          0.16296296296296298
+        ],
+        "config_only": 18,
+        "config_success": 68,
+        "delta_success_rate": 0.13333333333333333,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 1.52587890625e-05,
+        "p_mcnemar_exact_two_sided": 7.62939453125e-06
+      },
+      "identity+rules": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.2518518518518518,
+          0.3037037037037037
+        ],
+        "config_only": 38,
+        "config_success": 88,
+        "delta_success_rate": 0.2814814814814815,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 3.637978807091713e-11,
+        "p_mcnemar_exact_two_sided": 7.275957614183426e-12
+      },
+      "identity+rules+commitment": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "config_only": 71,
+        "config_success": 121,
+        "delta_success_rate": 0.5259259259259259,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 9.317362419797304e-21,
+        "p_mcnemar_exact_two_sided": 8.470329472543003e-22
+      },
+      "identity+rules+commitment+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.5037037037037037,
+          0.5555555555555556
+        ],
+        "config_only": 71,
+        "config_success": 121,
+        "delta_success_rate": 0.5259259259259259,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 9.317362419797304e-21,
+        "p_mcnemar_exact_two_sided": 8.470329472543003e-22
+      },
+      "identity+rules+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.3111111111111111,
+          0.362962962962963
+        ],
+        "config_only": 45,
+        "config_success": 95,
+        "delta_success_rate": 0.3333333333333333,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 3.410605131648481e-13,
+        "p_mcnemar_exact_two_sided": 5.684341886080802e-14
+      },
+      "rules": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.2518518518518518,
+          0.3037037037037037
+        ],
+        "config_only": 38,
+        "config_success": 88,
+        "delta_success_rate": 0.2814814814814815,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 3.637978807091713e-11,
+        "p_mcnemar_exact_two_sided": 7.275957614183426e-12
+      },
+      "rules+commitment": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "config_only": 85,
+        "config_success": 135,
+        "delta_success_rate": 0.6296296296296297,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 7.754818242684634e-25,
+        "p_mcnemar_exact_two_sided": 5.169878828456423e-26
+      },
+      "rules+commitment+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.6074074074074074,
+          0.6592592592592592
+        ],
+        "config_only": 85,
+        "config_success": 135,
+        "delta_success_rate": 0.6296296296296297,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 7.754818242684634e-25,
+        "p_mcnemar_exact_two_sided": 5.169878828456423e-26
+      },
+      "rules+consistency": {
+        "baseline_only": 0,
+        "baseline_success": 50,
+        "bootstrap_gate": true,
+        "ci95_delta_stratified_bootstrap": [
+          0.31851851851851853,
+          0.3851851851851852
+        ],
+        "config_only": 47,
+        "config_success": 97,
+        "delta_success_rate": 0.34814814814814815,
+        "mcnemar_gate_holm": true,
+        "n_images": 135,
+        "p_holm": 9.947598300641403e-14,
+        "p_mcnemar_exact_two_sided": 1.4210854715202004e-14
+      }
+    }
+  },
+  "lean_gates": "COMPILED",
+  "ocr_vs_vlm_all7": {
+    "AUROC": "NOT_COMPUTED_NO_CONTINUOUS_SCORES",
+    "accuracy_baseline": 0.30434782608695654,
+    "accuracy_challenger": 0.9130434782608695,
+    "bootstrap_gate": true,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20261102,
+    "ci95_delta_stratified_bootstrap": [
+      0.4782608695652174,
+      0.7391304347826086
+    ],
+    "delta_abs": 0.608695652173913,
+    "delta_rel": 1.9999999999999996,
+    "mcnemar_gate": true,
+    "p_mcnemar_exact_two_sided": 7.450580596923828e-09,
+    "table": {
+      "baseline_only": 0,
+      "both_correct": 14,
+      "both_wrong": 4,
+      "challenger_only": 28,
+      "n": 46
+    }
+  }
+}
