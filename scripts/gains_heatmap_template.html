@@ -29,7 +29,7 @@ tr.grp td{background:var(--grp);text-align:left;font-weight:700;font-size:12.5px
 .nop{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.22) 0 3px,transparent 3px 9px)}
 .c-gain1,.c-gain2,.c-loss1,.c-loss2{color:#111}
 td b{font-size:13.5px}td .p{display:block;font-size:11px;opacity:.9}
-.b-A{color:#0a6b0a}.b-D{color:#9a6a00}.b-N{color:var(--ink-2)}.b-P{color:#1c5cab}.b-U{color:var(--ink-3)}
+.b-A{color:#0a6b0a}.b-D{color:#9a6a00}.b-N{color:var(--ink-2)}.b-P{color:#1c5cab}.b-U{color:var(--ink-3)}.k-Novel{color:#5b2bb5}.k-Standard{color:var(--ink-3)}.k-Mixed{color:#8a5a00}
 .caption{color:var(--ink-2);font-size:13px;margin-top:12px;border-top:1px solid var(--border);padding-top:8px}
 #tip{position:fixed;pointer-events:none;background:var(--grp);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:12.5px;max-width:360px;display:none;z-index:9}
 </style>
@@ -47,19 +47,19 @@ td b{font-size:13.5px}td .p{display:block;font-size:11px;opacity:.9}
 <script>
 const D=/*__DATA__*/null;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const GB={Admitted:'A',Discovery:'D','Null / negative':'N',Pilot:'P',Untested:'U'};
-const ICON={Admitted:'✓ Admitted',Discovery:'◐ Discovery','Null / negative':'= Null / neg.',Pilot:'◔ Pilot',Untested:'○ Untested'};
+const GB={Admitted:'A','Admitted (PI), discovery provenance':'D','Null / negative':'N',Pilot:'P',Untested:'U'};
+const ICON={Admitted:'✓ Admitted','Admitted (PI), discovery provenance':'✓◐ Admitted (PI)*','Null / negative':'= Null / neg.',Pilot:'◔ Pilot',Untested:'○ Untested'};
 function bin(v){v=Math.abs(v);return v>=0.5?4:v>=0.15?3:v>=0.05?2:1}
 function fmtp(p){if(p===null||p===undefined)return 'no p';if(p<0.001)return 'p='+p.toExponential(1);if(p>=0.999)return 'p=1.0';return 'p='+String(+(+p).toPrecision(2))}
 document.getElementById('lg').innerHTML=
  ['gain1','gain2','gain3','gain4'].map((c,i)=>`<i class="sw c-${c}"></i>`).join('')+'<span>Gain (darker = bigger: &lt;0.05, 0.05–0.15, 0.15–0.5, ≥0.5)</span>'+
  ['loss1','loss2','loss3','loss4'].map(c=>`<i class="sw c-${c}"></i>`).join('')+'<span>Loss</span>'+
  '<span><i class="sw c-null"></i>Null: p ≥ 0.05 or |Δ| &lt; 0.005</span><span><i class="sw c-gain3 nop"></i>Striped = no p-value (pilot or descriptive)</span><span><i class="sw c-blank"></i>Not measured</span>'+
- '<span><b>Status:</b> ✓ Admitted (preregistered or LOMO-attributed) · ◐ Discovery (designed after seeing data, not promoted) · = Null / negative · ◔ Pilot · ○ Untested</span>';
+ '<span><b>Type:</b> Novel = Frontier Forms mechanism · Standard = off-the-shelf training, OCR, VLM, LLM or detector · Mixed = both</span><span><b>Status:</b> ✓ Admitted (preregistered or LOMO-attributed) · ✓◐ Admitted (PI)* = admitted by the PI on 2026-11-02; discovery provenance (designed after seeing data, not replicated) · = Null / negative · ◔ Pilot · ○ Untested</span>';
 const byRow={};D.cells.forEach(c=>{(byRow[c.intervention]=byRow[c.intervention]||{})[c.metric]=c});
-let h='<thead><tr><th class="l">Intervention (baseline)</th><th>Status</th>'+D.metrics.map(m=>`<th>${esc(m)}</th>`).join('')+'</tr></thead><tbody>';let g='';
-D.rows.forEach(r=>{if(r.group!==g){g=r.group;h+=`<tr class="grp"><td colspan="${D.metrics.length+2}">${esc(g)}</td></tr>`}
- h+=`<tr><td class="lab">${esc(r.intervention)}<small>vs ${esc(r.baseline)} · ${esc(r.source)}</small></td><td class="badge b-${GB[r.grade]}">${ICON[r.grade]}</td>`;
+let h='<thead><tr><th class="l">Intervention (baseline)</th><th>Status</th><th>Type</th>'+D.metrics.map(m=>`<th>${esc(m)}</th>`).join('')+'</tr></thead><tbody>';let g='';
+D.rows.forEach(r=>{if(r.group!==g){g=r.group;h+=`<tr class="grp"><td colspan="${D.metrics.length+3}">${esc(g)}</td></tr>`}
+ h+=`<tr><td class="lab">${esc(r.intervention)}<small>vs ${esc(r.baseline)} · ${esc(r.source)}</small></td><td class="badge b-${GB[r.grade]}">${ICON[r.grade]}</td><td class="badge k-${r.kind}">${esc(r.kind)}</td>`;
  D.metrics.forEach(m=>{const c=(byRow[r.intervention]||{})[m];if(!c){h+='<td class="c-blank">—</td>';return}
   const cls=c.class==='null'?'c-null':`c-${c.class}${bin(c.gain_delta)}`;const nop=c.p===null?' nop':'';const s=c.gain_delta>0?'+':'';
   h+=`<td class="${cls}${nop}" data-i="${esc(r.intervention)}" data-m="${esc(m)}"><b>${s}${c.gain_delta.toFixed(3)}</b><span class="p">${c.class==='null'?'null · ':''}${fmtp(c.p)}</span></td>`});
@@ -67,10 +67,10 @@ D.rows.forEach(r=>{if(r.group!==g){g=r.group;h+=`<tr class="grp"><td colspan="${
 document.getElementById('t').innerHTML=h+'</tbody>';
 const tip=document.getElementById('tip');
 document.getElementById('t').addEventListener('mousemove',e=>{const td=e.target.closest('td[data-i]');if(!td){tip.style.display='none';return}const c=byRow[td.dataset.i][td.dataset.m];
- tip.innerHTML=`<b>${esc(c.intervention)}</b><br>${esc(c.metric)} vs ${esc(c.baseline)}<br>raw change ${c.raw_delta>0?'+':''}${c.raw_delta} · gain ${c.gain_delta>0?'+':''}${c.gain_delta} · ${fmtp(c.p)}<br>Status: ${esc(c.grade)}<br><span style="color:var(--ink-3)">${esc(c.source)}</span>`;
+ tip.innerHTML=`<b>${esc(c.intervention)}</b><br>${esc(c.metric)} vs ${esc(c.baseline)}<br>raw change ${c.raw_delta>0?'+':''}${c.raw_delta} · gain ${c.gain_delta>0?'+':''}${c.gain_delta} · ${fmtp(c.p)}<br>Status: ${esc(c.grade)} · ${esc(c.kind)}${c.provenance?'<br>'+esc(c.provenance):''}<br><span style="color:var(--ink-3)">${esc(c.source)}</span>`;
  tip.style.display='block';tip.style.left=Math.min(e.clientX+14,innerWidth-380)+'px';tip.style.top=(e.clientY+14)+'px'});
 document.getElementById('t').addEventListener('mouseleave',()=>tip.style.display='none');
-document.getElementById('cap').textContent='Figure 2. Gains heatmap. Each intervention is compared with its own baseline on identical synthetic cases. Green cells are gains, red cells are losses, grey cells are null (p ≥ 0.05 or no change), and striped cells have no p-value (pilot or descriptive). The clearest gains are M3 source binding and the commitment gate, which catch errors; the learned OCR correction (preregistered, discovery); the L1+L3 harness (discovery); and our tools speeding up hosted models (pilot). The clearest losses are the local Qwen mappers versus a plain parser, the trained detector crops (null), and the false-flag cost of source binding. Data: docs/figures/gains_heatmap.csv and .json. Rebuild: python3 scripts/build_gains_heatmap.py.';
+document.getElementById('cap').textContent='Figure 2. Gains heatmap. Each intervention is compared with its own baseline on identical synthetic cases. Green cells are gains, red cells are losses, grey cells are null (p ≥ 0.05 or no change), and striped cells have no p-value (pilot or descriptive). The clearest gains are M3 source binding and the commitment gate, which catch errors; the learned OCR correction (preregistered); the L1+L3 harness. Rows marked Admitted (PI)* were admitted by the PI on 2026-11-02 with discovery provenance: designed after seeing the data and not replicated. Every significant gain comes from a Novel mechanism; Standard components (off-the-shelf detectors, small LLM mappers, box classifiers, OCR read-back) were null or negative; and our tools speeding up hosted models (pilot). The clearest losses are the local Qwen mappers versus a plain parser, the trained detector crops (null), and the false-flag cost of source binding. Data: docs/figures/gains_heatmap.csv and .json. Rebuild: python3 scripts/build_gains_heatmap.py.';
 </script>
 </body>
 </html>
