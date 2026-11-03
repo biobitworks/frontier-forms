@@ -53,6 +53,23 @@ The protocol was committed before scoring, in `scripts/redteam/trained_gain_eval
 
 The learned correction is small. It strips spaces in every field, because no training value contains one, and maps `O` to `0` in the case id. Replication on a second cohort is NOT_TESTED, so this is OBSERVED at discovery grade and not SUPPORTED. Evidence: `evidence/redteam/trained_gain/`, judge Figure 6.
 
+## 5. Discovery admission (inventory only; scientific promotion HOLD)
+
+`evidence/admission/REDTEAM_DISCOVERY_ADMISSION_V1.json` is built by `scripts/redteam/build_discovery_admission.py` and checked by `tests/test_redteam_discovery_admission.py`. It holds 31 records:
+
+| State | Records |
+|---|---|
+| Discovery ledger admitted | 5 |
+| Data admitted | 4 |
+| Post hoc recorded | 3 |
+| Null recorded | 9 |
+| Negative recorded | 5 |
+| Failed recorded | 1 |
+| Blocked recorded | 2 |
+| Not tested recorded | 2 |
+
+The five admitted records are the learned OCR correction and four gate configurations. The learned correction keeps a positive patient-cluster CI of [+0.043, +0.326]. The four gate configurations are commitment, rules, consistency and all four combined. Novel versus standard: `docs/judges/NOVEL_VS_STANDARD_TRAINING.md`.
+
 ## TURN_BREAKPOINT
 
 * **ID**: CLAUDE-REDTEAM-CLOUD-20261102-FINAL
