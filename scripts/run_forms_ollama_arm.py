@@ -36,7 +36,8 @@ def post(path, body, timeout=600):
 
 def model_identity(model):
     tags = json.loads(urllib.request.urlopen(OLLAMA + "/api/tags", timeout=30).read())
-    t = next((m for m in tags["models"] if m["name"] == model or m["model"] == model), None)
+    full = model if ":" in model else model + ":latest"  # Ollama lists untagged pulls as name:latest
+    t = next((m for m in tags["models"] if m["name"] in (model, full) or m["model"] in (model, full)), None)
     show = post("/api/show", {"model": model})
     det = show.get("details", {})
     return {"runtime": "ollama", "model": model, "digest": t and t.get("digest"),
