@@ -21,7 +21,7 @@
  "pointers": [
   {
    "path": "docs/reviews/CLAUDE_REDTEAM_REPORT.md",
-   "sha256": "5861ff464c637bab9e5235af72f6666c3c98678905441de6b71138881ed66288"
+   "sha256": "9415a203c2e95fca8d025997c78ce6927ee3182ae180245d2095d19ad45c94e6"
   },
   {
    "path": "docs/architecture/LEAF_GAIN_ATTRIBUTION.md",
@@ -29,7 +29,7 @@
   },
   {
    "path": "experiments/CLAUDE_LAB_NOTEBOOK.md",
-   "sha256": "6cda6ce296824323775d79038d319d6208ef6c6a5bf664c8b6bdd5c44d6584c4"
+   "sha256": "08238763ae649defe67c6ae51494310dd5e5b6afd262f0347708ad9a0fc8775d"
   },
   {
    "path": "evidence/admission/REDTEAM_DISCOVERY_ADMISSION_V1.json",
