@@ -1,0 +1,35 @@
+{
+  "adapter_path": null,
+  "adapter_sha256": null,
+  "arm": "N1-nvidia-nemotron-mini-4b",
+  "base_model": "ollama:nemotron-mini",
+  "base_revision": null,
+  "cohort_root_evaluated": "3cd5eff2eb2b2eb7bda436ae8aaa5f18dbd23c8051d63d3b0f249608c0ff8ce6",
+  "decoding": "temperature 0, seed 20261102, num_predict 192, think false",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "hosted_inference": "NONE",
+  "model_calls": 920,
+  "model_identity": {
+    "digest": "ed76ab18784f5a01c9ec5b3c250e964d4f9c7a983e59ba041bb995f0fe2e8fb3",
+    "digest_source": "ollama /api/tags name nemotron-mini:latest (filled after run: arm script matched only exact name)",
+    "family": "nemotron",
+    "model": "nemotron-mini",
+    "parameter_size": "4.2B",
+    "quantization": "Q4_K_M",
+    "runtime": "ollama"
+  },
+  "model_seconds": 577.2,
+  "n_cases": 92,
+  "n_patients": 37,
+  "output_root": "929bf9a34228a03d4da5be7ad51e4f2ca38f5fb208018c5c1a9bea580bca2959",
+  "post_deadline": true,
+  "predictions_sha256": "8b76429351127e8689644e6cf4baaf17fd5e20ce0db177ae5b6152b026532517",
+  "splits": [
+    "test",
+    "validation"
+  ],
+  "wall_seconds": 578.2
+}
