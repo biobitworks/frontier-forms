@@ -1,6 +1,6 @@
 {
  "schema": "frontier_forms.sft_status.v1",
- "updated_utc": "2026-11-03T06:45:00Z",
+ "updated_utc": "2026-11-03T10:25:00Z",
  "label": "In progress (post-deadline, host-approved)",
  "model": "Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
@@ -57,15 +57,15 @@
   {
    "run": "S2",
    "config": "LoRA r16, lr 2e-4, 4 epochs",
-   "status": "training (started 06:34Z)",
-   "val_loss": "",
+   "status": "done: validation 27/38 full forms (71.1%), field accuracy 95.8%; lowest val loss so far but one fewer full form than S1/D1",
+   "val_loss": "0.0061 (epoch 4 kept)",
    "test_field_accuracy": "",
    "test_full_form": ""
   },
   {
    "run": "D2",
    "config": "DoRA r16, lr 2e-4, 4 epochs",
-   "status": "queued (earlier tries failed before training, see ATTEMPTS.json)",
+   "status": "queued after S3 (moved last: DoRA takes ~2.8x longer)",
    "val_loss": "",
    "test_field_accuracy": "",
    "test_full_form": ""
@@ -73,7 +73,7 @@
   {
    "run": "S3",
    "config": "LoRA r32, lr 5e-4, 3 epochs",
-   "status": "queued (earlier tries failed before training, see ATTEMPTS.json)",
+   "status": "training (started 10:18Z)",
    "val_loss": "",
    "test_field_accuracy": "",
    "test_full_form": ""
