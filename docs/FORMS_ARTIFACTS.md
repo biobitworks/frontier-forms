@@ -2,6 +2,12 @@
 
 Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient cohort. There is no real PHI. Model weights and credentials are never committed. Since PR #30, `scripts/check_synthetic_json_policy.py` rejects **new** PNG/PDF files and only exempts the legacy ones already committed. New visual evidence is therefore JSON plus HTML viewers that draw onto the committed screenshots.
 
+## Figures
+| What | Path |
+|---|---|
+| **All headline results as figures** (form-filling arms, vision arms, V2 validator, V2 training curve, SFT attempts once they land). One self-contained HTML page with inline SVG, so it opens in any browser with no setup | `evidence/FIGURES.html`; the numbers behind it are in `evidence/FIGURES_DATA.json`; rebuild with `python3 scripts/build_figures.py` |
+| Bounding-box overlay viewers | see below |
+
 ## Form server and forms
 | What | Path |
 |---|---|
@@ -35,7 +41,7 @@ Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient coho
 | qwen2.5vl:3b predicted boxes and raw answers | `evidence/forms_vision/V1-qwen2.5vl-3b/answers.jsonl`, `V1i-qwen2.5vl-3b-injection/` |
 | Tesseract line boxes (red-team runner) and scoring | `evidence/forms_vision/T1-tesseract-redteam/` |
 | Trained box validators from other lanes (#14, #15, #16) | `evidence/forms_box_validator/`, `evidence/local_box_validator/`, `evidence/forms_bbox/` |
-| V2 trained YOLOv8n detector: per-field pixel and normalized boxes, validator verdicts | `evidence/forms_detector/V2-yolov8n/` (follow-up PR once training finishes) |
+| V2 trained YOLOv8n detector: per-field pixel and normalized boxes, validator verdicts | `evidence/forms_detector/V2-yolov8n/` (executed; weights sha256 in `receipt.json`, not published) |
 | Browser overlay of the fixture with Apple Vision boxes (PR #12) | `experiments/form_error_factorial/vision_overlay.html` |
 
 Regenerate the overlays with `python3 scripts/render_bbox_overlays.py` (its usage is in the header).
