@@ -157,3 +157,12 @@ Open FIG12_OCR_CORRECTION_ABLATION_V1.html and OCR_CORRECTION_SUCCESSOR_V2.json.
 ## Judge synthetic demo manifest repair — independent ChatGPT
 
 Claude Code's Figures 1–10, PNG screenshots, 10 synthetic PDFs and visual overlays are unchanged. Original manifest had 10 incorrect annotation JSON hashes. Earlier FAILED manifest preserved as docs/demo/manifest_v1_pre_repair.json; successor repairs all ten, independently checks every one of 62 assets against its actual byte size and SHA256, and records verified 62-leaf asset root 227a1786183dc2535c5aeb54c28ace33c3c6b803584480eb97b646bbffcc444c. Asset root is not a clinical or model outcome; CI independently enforces this preservation.
+
+
+## Figures 18–20 — grounded contributor Gantt and recorded training history
+
+- **Figure 18, FAILED predecessor:** [original Gantt PNG](figures/fig18_pr_contributor_gantt_20261102.png) used a label that displayed **0 mixed PRs**, inconsistent with the 43 mixed/unknown PRs in the frozen source. Preserved rather than silently overwritten.
+- **Figure 20, corrected successor:** [Four-lane contributor Gantt PNG](figures/fig20_contributor_gantt_corrected_v2.png), with 63 source-read GitHub PR timestamps, four lane categories and an explicit 4:30 PM competition cutoff. Source [63-PR snapshot](FINAL_PR_SNAPSHOT_20261102_V3.json), [byte-level correction receipt](FINAL_JUDGE_TIMELINE_PRESENTATION_CORRECTION_V2.json).
+- **Figure 19, genuine recorded training:** [Training and discovery PNG](figures/fig19_actual_training_epochs_20261102.png). Distinct 40-epoch new YOLOv8n MPS mAP50–95(B) curve, older 30+30 epoch full/no-scan development-image success curves (with regressions and ties), plus different-denominator FCO/OCR synthetic discovery pairs. Source [source-hash-pinned timeline JSON](FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json), [V2 detector summary](../../evidence/forms_detector/V2-yolov8n/summary.json), and [independent experimental outcomes](JUDGE_OUTCOMES_SUCCESSOR_V1.json).
+
+**Attribution and chronology ceiling:** PR timestamp is not model runtime. V2 40-epoch metrics lack a separate UTC for each epoch; the older 30-epoch logs include actual UTC. The 63-PR snapshot was read after the 4:30 PM cutoff. The new detector localizes boxes well but remains PARTIAL on held-out class identity and flags. FCAR scientific promotion HOLD; no DAISY model, data, score or Merkle root imported.

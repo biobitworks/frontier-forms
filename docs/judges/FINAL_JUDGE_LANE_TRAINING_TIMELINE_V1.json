@@ -1,0 +1,1458 @@
+{
+  "contributor_attribution_basis": "known PR description / observed ChatGPT tool session only; all other work mixed/unverified",
+  "deadline_claim": "Review successor. PR merges after cutoff are not evidence of an eligible submitted version.",
+  "deadline_pacific": "2026-11-02T16:30:00-08:00",
+  "fco_full_form": {
+    "baseline": 18,
+    "challenger": 30,
+    "delta_pp": 22.22222222222222,
+    "n": 54,
+    "type": "deterministic source-context leaf ablation, not new neural weights"
+  },
+  "figure_files": [
+    "docs/judges/figures/fig18_pr_contributor_gantt_20261102.png",
+    "docs/judges/figures/fig19_actual_training_epochs_20261102.png"
+  ],
+  "github_pr_count": 63,
+  "github_pr_status_counts": {
+    "CLOSED": 4,
+    "MERGED": 54,
+    "OPEN": 5
+  },
+  "model_claims": "V2 trained detector high box recall BUT held-out class accuracy and high validator false flags; do not conflate bounding boxes with field-value correctness",
+  "new_yolo_v2_40_epochs": {
+    "checkpoint_file_not_published": true,
+    "device": "MacBookPro Apple Silicon MPS (per source receipt)",
+    "epochs": [
+      {
+        "epoch": 1,
+        "map50": 0.28355,
+        "map50_95": 0.1807,
+        "val_box_loss": 1.2283
+      },
+      {
+        "epoch": 2,
+        "map50": 0.64779,
+        "map50_95": 0.44083,
+        "val_box_loss": 1.10302
+      },
+      {
+        "epoch": 3,
+        "map50": 0.76335,
+        "map50_95": 0.57693,
+        "val_box_loss": 0.918
+      },
+      {
+        "epoch": 4,
+        "map50": 0.82444,
+        "map50_95": 0.64457,
+        "val_box_loss": 0.79535
+      },
+      {
+        "epoch": 5,
+        "map50": 0.79901,
+        "map50_95": 0.61955,
+        "val_box_loss": 0.83201
+      },
+      {
+        "epoch": 6,
+        "map50": 0.8145,
+        "map50_95": 0.65439,
+        "val_box_loss": 0.71566
+      },
+      {
+        "epoch": 7,
+        "map50": 0.83908,
+        "map50_95": 0.71842,
+        "val_box_loss": 0.60568
+      },
+      {
+        "epoch": 8,
+        "map50": 0.84055,
+        "map50_95": 0.71336,
+        "val_box_loss": 0.62852
+      },
+      {
+        "epoch": 9,
+        "map50": 0.86481,
+        "map50_95": 0.7566,
+        "val_box_loss": 0.53919
+      },
+      {
+        "epoch": 10,
+        "map50": 0.90033,
+        "map50_95": 0.7895,
+        "val_box_loss": 0.50501
+      },
+      {
+        "epoch": 11,
+        "map50": 0.91166,
+        "map50_95": 0.80445,
+        "val_box_loss": 0.50426
+      },
+      {
+        "epoch": 12,
+        "map50": 0.95212,
+        "map50_95": 0.85578,
+        "val_box_loss": 0.48035
+      },
+      {
+        "epoch": 13,
+        "map50": 0.97404,
+        "map50_95": 0.84377,
+        "val_box_loss": 0.51519
+      },
+      {
+        "epoch": 14,
+        "map50": 0.98591,
+        "map50_95": 0.87021,
+        "val_box_loss": 0.51224
+      },
+      {
+        "epoch": 15,
+        "map50": 0.97738,
+        "map50_95": 0.90071,
+        "val_box_loss": 0.39463
+      },
+      {
+        "epoch": 16,
+        "map50": 0.97113,
+        "map50_95": 0.89256,
+        "val_box_loss": 0.38777
+      },
+      {
+        "epoch": 17,
+        "map50": 0.99233,
+        "map50_95": 0.90251,
+        "val_box_loss": 0.42131
+      },
+      {
+        "epoch": 18,
+        "map50": 0.99375,
+        "map50_95": 0.91746,
+        "val_box_loss": 0.40025
+      },
+      {
+        "epoch": 19,
+        "map50": 0.98958,
+        "map50_95": 0.9235,
+        "val_box_loss": 0.34068
+      },
+      {
+        "epoch": 20,
+        "map50": 0.98682,
+        "map50_95": 0.91309,
+        "val_box_loss": 0.39153
+      },
+      {
+        "epoch": 21,
+        "map50": 0.99337,
+        "map50_95": 0.93075,
+        "val_box_loss": 0.32426
+      },
+      {
+        "epoch": 22,
+        "map50": 0.99449,
+        "map50_95": 0.93811,
+        "val_box_loss": 0.32183
+      },
+      {
+        "epoch": 23,
+        "map50": 0.9949,
+        "map50_95": 0.94371,
+        "val_box_loss": 0.34197
+      },
+      {
+        "epoch": 24,
+        "map50": 0.99476,
+        "map50_95": 0.94884,
+        "val_box_loss": 0.27971
+      },
+      {
+        "epoch": 25,
+        "map50": 0.99484,
+        "map50_95": 0.94908,
+        "val_box_loss": 0.28922
+      },
+      {
+        "epoch": 26,
+        "map50": 0.99482,
+        "map50_95": 0.9582,
+        "val_box_loss": 0.28926
+      },
+      {
+        "epoch": 27,
+        "map50": 0.99492,
+        "map50_95": 0.96209,
+        "val_box_loss": 0.25882
+      },
+      {
+        "epoch": 28,
+        "map50": 0.99315,
+        "map50_95": 0.95209,
+        "val_box_loss": 0.27937
+      },
+      {
+        "epoch": 29,
+        "map50": 0.99359,
+        "map50_95": 0.94801,
+        "val_box_loss": 0.27937
+      },
+      {
+        "epoch": 30,
+        "map50": 0.99362,
+        "map50_95": 0.95043,
+        "val_box_loss": 0.28793
+      },
+      {
+        "epoch": 31,
+        "map50": 0.99458,
+        "map50_95": 0.95873,
+        "val_box_loss": 0.27089
+      },
+      {
+        "epoch": 32,
+        "map50": 0.99499,
+        "map50_95": 0.95279,
+        "val_box_loss": 0.27785
+      },
+      {
+        "epoch": 33,
+        "map50": 0.99499,
+        "map50_95": 0.97098,
+        "val_box_loss": 0.23475
+      },
+      {
+        "epoch": 34,
+        "map50": 0.99496,
+        "map50_95": 0.97462,
+        "val_box_loss": 0.22922
+      },
+      {
+        "epoch": 35,
+        "map50": 0.95499,
+        "map50_95": 0.9381,
+        "val_box_loss": 0.22988
+      },
+      {
+        "epoch": 36,
+        "map50": 0.99483,
+        "map50_95": 0.96337,
+        "val_box_loss": 0.22756
+      },
+      {
+        "epoch": 37,
+        "map50": 0.99482,
+        "map50_95": 0.97257,
+        "val_box_loss": 0.22695
+      },
+      {
+        "epoch": 38,
+        "map50": 0.99498,
+        "map50_95": 0.97201,
+        "val_box_loss": 0.19523
+      },
+      {
+        "epoch": 39,
+        "map50": 0.99496,
+        "map50_95": 0.9737,
+        "val_box_loss": 0.17966
+      },
+      {
+        "epoch": 40,
+        "map50": 0.99497,
+        "map50_95": 0.97455,
+        "val_box_loss": 0.19284
+      }
+    ],
+    "held_out_layout_test": {
+      "box_recall_iou50": 0.9972,
+      "class_accuracy_matched": 0.7799,
+      "false_flag_rate": 0.5763,
+      "flag_recall": 0.3333,
+      "images": 36
+    },
+    "metric": "validation mAP50-95(B), by integer training epoch; NOT wall-clock duration",
+    "per_epoch_utc": "NOT_RECORDED_IN_V2_SUMMARY",
+    "test_images": 108,
+    "train_images": 252,
+    "validation_images": 38,
+    "weights_sha256_recorded": "94ab462f162c2096e31aeb5fe37a3e2ba2807267e880b0300e26f5339b662c99"
+  },
+  "ocr_all_seven_fields": {
+    "baseline": 14,
+    "correction": 22,
+    "crops_plus_correction": 15,
+    "detector_crops": 9,
+    "holm_p": 0.0234375,
+    "n": 46,
+    "type": "fitted OCR post-correction table, not neural SFT"
+  },
+  "older_yolo_30_epochs": {
+    "full": {
+      "chain_root_recorded": "1fc600162b6a8dd727d8db52722c6a093fad85674450626b8c79fc287a294ff6",
+      "epochs": [
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 1,
+          "status": "FIRST_EPOCH",
+          "utc": "2026-11-02T22:51:35Z",
+          "weights_sha256_recorded": "3c1627d47511bce7cf5644f5d9b60cd72db85e31560bccf54818132d3819dafe"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 2,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:51:50Z",
+          "weights_sha256_recorded": "1162045d1daaa07db6abb9a2f18a7b8765ccf6c63cf6efcb390d9d68986ab1e2"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 3,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:52:06Z",
+          "weights_sha256_recorded": "a9f51b7adb21e2a896c457d5535dc65f745c3bc8560538287dc98c02bee5a313"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 4,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:52:25Z",
+          "weights_sha256_recorded": "00ab9f0de04322e7730c13cef443ab0e268facdda184394f4f8ed5ceae7bda8f"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 5,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:52:38Z",
+          "weights_sha256_recorded": "4d279a4d2ac5dfff2c47765b62618a003baabe18d07d3c7ec299843d5992a06b"
+        },
+        {
+          "dev_image_pass": 2,
+          "dev_image_total": 44,
+          "epoch": 6,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:52:59Z",
+          "weights_sha256_recorded": "e9fcedd800aa4270df4246c5b851d002f16ee35c0cf3458343f34c1ffa6d341d"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 7,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:53:20Z",
+          "weights_sha256_recorded": "1f2d672e308b76ced56dcd55801d5a1af747c4a16256a73632138631db6c8ee4"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 8,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:53:32Z",
+          "weights_sha256_recorded": "b2f6b8bb2247d3bdaefef157461baff8d3a6b79223999993c781488b351a9f6b"
+        },
+        {
+          "dev_image_pass": 30,
+          "dev_image_total": 44,
+          "epoch": 9,
+          "status": "GAIN",
+          "utc": "2026-11-02T22:53:51Z",
+          "weights_sha256_recorded": "5a02c0e885d02a12884fb7c5f30b1a568dba21839a64c00a6f8929a55de84c8e"
+        },
+        {
+          "dev_image_pass": 9,
+          "dev_image_total": 44,
+          "epoch": 10,
+          "status": "LOSS",
+          "utc": "2026-11-02T22:54:09Z",
+          "weights_sha256_recorded": "c3227bef39497de351a98431d79ffcb11fd337d5b02e0b225ac89fb111b33959"
+        },
+        {
+          "dev_image_pass": 16,
+          "dev_image_total": 44,
+          "epoch": 11,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:54:22Z",
+          "weights_sha256_recorded": "6888dc7fd1e5c19cacd42b935dac9866f8c1a081f65300bef088e95c7678a60d"
+        },
+        {
+          "dev_image_pass": 34,
+          "dev_image_total": 44,
+          "epoch": 12,
+          "status": "GAIN",
+          "utc": "2026-11-02T22:54:42Z",
+          "weights_sha256_recorded": "22cab53ac2a5101f2da2319451afcf27482794a8ef2b55fe15b675dba474956a"
+        },
+        {
+          "dev_image_pass": 27,
+          "dev_image_total": 44,
+          "epoch": 13,
+          "status": "LOSS",
+          "utc": "2026-11-02T22:54:57Z",
+          "weights_sha256_recorded": "05347ca07c6c349846bbc2e39e359895a608253a1f25ae392f8a1b21fd98eed6"
+        },
+        {
+          "dev_image_pass": 28,
+          "dev_image_total": 44,
+          "epoch": 14,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:55:13Z",
+          "weights_sha256_recorded": "1f73fa419aff33bdd70f4973383a77afa247fd2ecd1349deb50d5c38616717c1"
+        },
+        {
+          "dev_image_pass": 28,
+          "dev_image_total": 44,
+          "epoch": 15,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:55:24Z",
+          "weights_sha256_recorded": "08d6b055538e0830e5ff15319e8608361a3d81ba925cba765009a4001974ba31"
+        },
+        {
+          "dev_image_pass": 30,
+          "dev_image_total": 44,
+          "epoch": 16,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:55:44Z",
+          "weights_sha256_recorded": "feabe0e7010a1b8d042d7379dd4d66219d95a63671b7689f6c975b1b0422cc55"
+        },
+        {
+          "dev_image_pass": 31,
+          "dev_image_total": 44,
+          "epoch": 17,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:56:04Z",
+          "weights_sha256_recorded": "6ed6d30842caccbc0b46d75648f16ce9c3d8a85b81f61c9ab92ed46fb2a82e82"
+        },
+        {
+          "dev_image_pass": 31,
+          "dev_image_total": 44,
+          "epoch": 18,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:56:15Z",
+          "weights_sha256_recorded": "77e86734885561aed1c666505a5f35b58884e2f63383be29198e60ba9bdb3c03"
+        },
+        {
+          "dev_image_pass": 21,
+          "dev_image_total": 44,
+          "epoch": 19,
+          "status": "LOSS",
+          "utc": "2026-11-02T22:56:37Z",
+          "weights_sha256_recorded": "73d7686416783f2b8a9df416abdac5d7decb0f8681f695a368e3a00995524f3e"
+        },
+        {
+          "dev_image_pass": 27,
+          "dev_image_total": 44,
+          "epoch": 20,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:56:49Z",
+          "weights_sha256_recorded": "a003ad563c5ceeec52b9c9d6590f42c0d3281e3f5d9d708c9258af6e554d04fc"
+        },
+        {
+          "dev_image_pass": 23,
+          "dev_image_total": 44,
+          "epoch": 21,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:57:06Z",
+          "weights_sha256_recorded": "295dfe512fbb93418dd8107ef2c0bb4691587a8992558835e8d3a1c037038e79"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 22,
+          "status": "GAIN",
+          "utc": "2026-11-02T22:57:17Z",
+          "weights_sha256_recorded": "5d415aed56cdffb5faa9ddab9ac9667207bd0cdb41f0b3071f9c02cb6633279a"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 23,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:57:36Z",
+          "weights_sha256_recorded": "71546e385998a08ecec1d9f5f8ef49768c1311eabeebfb8e84e5d52198f2c2e8"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 24,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:57:49Z",
+          "weights_sha256_recorded": "5874dd1fdd35b268c5fcabe52abf1a9b33ed60fc88be16c9a2313f17b6ee11e9"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 25,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:58:05Z",
+          "weights_sha256_recorded": "85824e5b48040b9f909cc522d368c28bda658f5f3ce763dd760b88bde839d751"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 26,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:58:24Z",
+          "weights_sha256_recorded": "e65b8c1ba2e0ff5726ab614a822e94ab76c8884e5bc2c0d87cfa6e4020a473bd"
+        },
+        {
+          "dev_image_pass": 41,
+          "dev_image_total": 44,
+          "epoch": 27,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:58:37Z",
+          "weights_sha256_recorded": "113329ef07de9b89b71f760753cd7f00b40c0bd2db0b65781ecbb54084052028"
+        },
+        {
+          "dev_image_pass": 42,
+          "dev_image_total": 44,
+          "epoch": 28,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:58:52Z",
+          "weights_sha256_recorded": "20b875935d0739783199d9d4fdfe137bda20a73cb6a69a3c43270d86c31a45bc"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 29,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:59:04Z",
+          "weights_sha256_recorded": "d8a3d443cccc2ecc807ae4d92a9c67ca73321b722a130f52e240f4ed108ae1c3"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 30,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T22:59:18Z",
+          "weights_sha256_recorded": "36a0327e79a552da4b696b037174740944f44f683baceca909d5f3d9ad6ba55b"
+        }
+      ],
+      "metric": "complete_dev_image_pass_rate (44 synthetic development renders)",
+      "not_patient_replication": true,
+      "state_counts": {
+        "FIRST_EPOCH": 1,
+        "GAIN": 3,
+        "LOSS": 3,
+        "NEUTRAL": 23
+      }
+    },
+    "no_scan": {
+      "chain_root_recorded": "e99fe22c7a1473a678e4629f9d32022681a7b4f1d66e3ddcd0b9b2fa332167c0",
+      "epochs": [
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 1,
+          "status": "FIRST_EPOCH",
+          "utc": "2026-11-02T22:59:53Z",
+          "weights_sha256_recorded": "19260899f1e2765c6dd31ad17357daa23cb8cb6a8487a99785c1f023f65fbfc2"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 2,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:02Z",
+          "weights_sha256_recorded": "55648aeb8666a20698422d8386ad9028763864978c822dad910609c6bd609283"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 3,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:10Z",
+          "weights_sha256_recorded": "70114336e74b273c251ef203ea3aee8ed3e49f4af7db70e0de172a80269df5fc"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 4,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:17Z",
+          "weights_sha256_recorded": "31a445a7a359879cbd4e67f5bbc6568568f841eb3a5320fed06028ad9ac62eaf"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 5,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:27Z",
+          "weights_sha256_recorded": "6e79896847141780c63bbb15b4c69affcd5218feb810ebf79155f027127e35aa"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 6,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:34Z",
+          "weights_sha256_recorded": "ce3c3098976b0e32cf51e29a45957b65ff12d80afabbb38f76596e415c4dbc64"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 7,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:44Z",
+          "weights_sha256_recorded": "15386593eb1faeed825902fc37e282cce29760e5c88de2fc3461c20a813ea0b7"
+        },
+        {
+          "dev_image_pass": 1,
+          "dev_image_total": 44,
+          "epoch": 8,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:51Z",
+          "weights_sha256_recorded": "ae64a41d7880c0cb472542d1daf4c3a01c24b350d9998c0ff9dcb2e1efef77d9"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 9,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:00:59Z",
+          "weights_sha256_recorded": "4e9dc1e2e86b070a134f27cf3789a273ab365d644d86ab5a4f18811287cb3744"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 10,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:09Z",
+          "weights_sha256_recorded": "75e9fc2b7361b1757a9ec6c9d45391f2ed5111108c1ebeed42374a18eed5f8b8"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 11,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:19Z",
+          "weights_sha256_recorded": "8b9b0896753f8e5111f40d5d382b72b070e2442bb3ac791d3ba2f0b8b5213638"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 12,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:28Z",
+          "weights_sha256_recorded": "2199b1d351a9330b4893b053a99a7d1f6e11a534bb4bb1a656dd08c2722c6b16"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 13,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:35Z",
+          "weights_sha256_recorded": "c0c21281a6855e4781bd8a400472e7d3ffb335e2d6f276c6029ccabc258658f6"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 14,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:43Z",
+          "weights_sha256_recorded": "4e414b9b34679ba5c2855dd4da96686ed1c90d65897335a0f640d8d3c46e9fb4"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 15,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:52Z",
+          "weights_sha256_recorded": "23d3ec757599890ddd4bc0ee2167e9e7649a206d886bff08366b493b2af4507c"
+        },
+        {
+          "dev_image_pass": 3,
+          "dev_image_total": 44,
+          "epoch": 16,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:01:59Z",
+          "weights_sha256_recorded": "610fe3ad9d0f1b849ca9dea29dc509993fbc3a8ce9a0d4e742199511adf0edfa"
+        },
+        {
+          "dev_image_pass": 10,
+          "dev_image_total": 44,
+          "epoch": 17,
+          "status": "GAIN",
+          "utc": "2026-11-02T23:02:08Z",
+          "weights_sha256_recorded": "7ad20caf2464c0b0ff676dc81c9871e033692d85d2ea7aef3826da911b0ed6cc"
+        },
+        {
+          "dev_image_pass": 10,
+          "dev_image_total": 44,
+          "epoch": 18,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:02:15Z",
+          "weights_sha256_recorded": "8258c2b58ac3c1cc844c2eb43acf33ee695bd53f1032db6a9afcbce96af4f924"
+        },
+        {
+          "dev_image_pass": 20,
+          "dev_image_total": 44,
+          "epoch": 19,
+          "status": "GAIN",
+          "utc": "2026-11-02T23:02:22Z",
+          "weights_sha256_recorded": "106cedc8964dc2622cd00481aaa3d42780e19e92b2e419ab0a0c2f7abf38c0de"
+        },
+        {
+          "dev_image_pass": 20,
+          "dev_image_total": 44,
+          "epoch": 20,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:02:31Z",
+          "weights_sha256_recorded": "0a483a7d6bfbd9322285d346940342d625257410b52ff9008bc51f8e2378e06c"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 21,
+          "status": "LOSS",
+          "utc": "2026-11-02T23:02:38Z",
+          "weights_sha256_recorded": "60436c5d43e653368475ec025062a9fa5f5d12b8552ad26fa36aa5d9637fb2c1"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 22,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:02:45Z",
+          "weights_sha256_recorded": "9802d289eed1f43c97da7f09b8b2fa6ad46bdf320518a62d19ae868960676bfb"
+        },
+        {
+          "dev_image_pass": 0,
+          "dev_image_total": 44,
+          "epoch": 23,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:02:54Z",
+          "weights_sha256_recorded": "1533e7e0fe328bb30caffb9bf5f992101f0064ce6e0e13b889d0119e891225c4"
+        },
+        {
+          "dev_image_pass": 1,
+          "dev_image_total": 44,
+          "epoch": 24,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:01Z",
+          "weights_sha256_recorded": "b3545e8f93863804ecedc86299bb1178cf139b9dbf3a1ac611f19c6a9a408b21"
+        },
+        {
+          "dev_image_pass": 40,
+          "dev_image_total": 44,
+          "epoch": 25,
+          "status": "GAIN",
+          "utc": "2026-11-02T23:03:08Z",
+          "weights_sha256_recorded": "da58821e280bac19dc39df6d33a132a48bccd4e6a13944495ab0b8f6e98447b7"
+        },
+        {
+          "dev_image_pass": 42,
+          "dev_image_total": 44,
+          "epoch": 26,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:17Z",
+          "weights_sha256_recorded": "4a562c13eab1b5a058e36f1c01aac76abcb4c233282970a97e7305f65c0c44f5"
+        },
+        {
+          "dev_image_pass": 42,
+          "dev_image_total": 44,
+          "epoch": 27,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:24Z",
+          "weights_sha256_recorded": "e7b4b5cb8f1386eb7fb532135b98c7a95902335c31db1a499738cf30f6c9ee24"
+        },
+        {
+          "dev_image_pass": 41,
+          "dev_image_total": 44,
+          "epoch": 28,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:31Z",
+          "weights_sha256_recorded": "45808424b5de467ac16b408133923ba98c7871df443e1fa6ca9bd490886016b8"
+        },
+        {
+          "dev_image_pass": 43,
+          "dev_image_total": 44,
+          "epoch": 29,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:39Z",
+          "weights_sha256_recorded": "852d4ebe83d4822a67f7d277325fcb0f2f47bb433cd430a153e3c4ce304575df"
+        },
+        {
+          "dev_image_pass": 43,
+          "dev_image_total": 44,
+          "epoch": 30,
+          "status": "NEUTRAL",
+          "utc": "2026-11-02T23:03:45Z",
+          "weights_sha256_recorded": "b004dc7c00b07d3725a98e74072345ebfc3097477ffd2855fa76390272cbaadf"
+        }
+      ],
+      "metric": "complete_dev_image_pass_rate (44 synthetic development renders)",
+      "not_patient_replication": true,
+      "state_counts": {
+        "FIRST_EPOCH": 1,
+        "GAIN": 3,
+        "LOSS": 1,
+        "NEUTRAL": 25
+      }
+    }
+  },
+  "png_sha256": {
+    "docs/judges/figures/fig18_pr_contributor_gantt_20261102.png": "77db04eb9755ab507b379a53b466ad4d739ba4787013bcf572e3396db402faf3",
+    "docs/judges/figures/fig19_actual_training_epochs_20261102.png": "cd4e16ffcc7d9c09bcfa11981e866b15ebbef6ba7b2a9e295627aa5042cea357"
+  },
+  "pr_events": [
+    {
+      "closed_utc": "2026-11-02T23:13:33Z",
+      "created_utc": "2026-11-02T19:54:35Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 1,
+      "state": "CLOSED",
+      "title": "[REVIEW] EHR FCO/FCG source freeze, statistical notebooks and Claude red-team handoff",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/1"
+    },
+    {
+      "closed_utc": "2026-11-02T21:28:35Z",
+      "created_utc": "2026-11-02T20:00:51Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T21:28:34Z",
+      "number": 3,
+      "state": "MERGED",
+      "title": "Review: Frontier Forms FCO/FCG frozen evidence lab, paired stats and EHR protocols",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/3"
+    },
+    {
+      "closed_utc": "2026-11-02T20:51:46Z",
+      "created_utc": "2026-11-02T20:29:45Z",
+      "lane": "Teammate / app",
+      "merged_utc": "2026-11-02T20:51:46Z",
+      "number": 4,
+      "state": "MERGED",
+      "title": "Add project spec and .gitignore",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/4"
+    },
+    {
+      "closed_utc": "2026-11-02T21:22:00Z",
+      "created_utc": "2026-11-02T21:04:34Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T21:22:00Z",
+      "number": 5,
+      "state": "MERGED",
+      "title": "Review: compare team Supabase implementation with FCO/FCG research lane",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/5"
+    },
+    {
+      "closed_utc": "2026-11-02T21:21:47Z",
+      "created_utc": "2026-11-02T21:16:10Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T21:21:47Z",
+      "number": 6,
+      "state": "MERGED",
+      "title": "Lane frontier-forms: dataset-freeze red-team method (synthetic, public-safe)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/6"
+    },
+    {
+      "closed_utc": "2026-11-02T21:32:48Z",
+      "created_utc": "2026-11-02T21:32:15Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T21:32:48Z",
+      "number": 7,
+      "state": "MERGED",
+      "title": "Add evidence-gated longitudinal heatmap for local forms + Vita DAISY boundary",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/7"
+    },
+    {
+      "closed_utc": "2026-11-02T21:33:26Z",
+      "created_utc": "2026-11-02T21:32:46Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T21:33:26Z",
+      "number": 8,
+      "state": "MERGED",
+      "title": "Security: reject forged Claude custody states and validate synthetic fixture bytes",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/8"
+    },
+    {
+      "closed_utc": "2026-11-02T22:41:37Z",
+      "created_utc": "2026-11-02T21:40:59Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T22:41:37Z",
+      "number": 9,
+      "state": "MERGED",
+      "title": "Review: independent PI/PM evidence review of Synthea form-filling vs B0",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/9"
+    },
+    {
+      "closed_utc": "2026-11-02T22:41:45Z",
+      "created_utc": "2026-11-02T21:56:52Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T22:41:45Z",
+      "number": 10,
+      "state": "MERGED",
+      "title": "Frontier Forms: frozen cohort, local form server, B0, module/LOMO arms, Apple OCR arm, detector heatmap",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/10"
+    },
+    {
+      "closed_utc": "2026-11-02T22:42:27Z",
+      "created_utc": "2026-11-02T22:13:42Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T22:42:27Z",
+      "number": 11,
+      "state": "MERGED",
+      "title": "Red team: independent FCG root replay, custody attacks, local context ablation",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/11"
+    },
+    {
+      "closed_utc": "2026-11-02T22:42:50Z",
+      "created_utc": "2026-11-02T22:29:17Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T22:42:50Z",
+      "number": 12,
+      "state": "MERGED",
+      "title": "[Frontier Forms] Synthetic factorial LOMO + checkpoint-bound Apple/Qwen vision evidence",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/12"
+    },
+    {
+      "closed_utc": "2026-11-02T23:07:51Z",
+      "created_utc": "2026-11-02T22:43:07Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:07:51Z",
+      "number": 13,
+      "state": "MERGED",
+      "title": "Red team follow-up: Insilico P-L3c CPU partial results (stopped at user request)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/13"
+    },
+    {
+      "closed_utc": "2026-11-02T23:11:11Z",
+      "created_utc": "2026-11-02T22:44:30Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-02T23:11:11Z",
+      "number": 14,
+      "state": "MERGED",
+      "title": "LOCAL vision validator: trained synthetic bbox coefficients, independent zero-gain LOMO receipt",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/14"
+    },
+    {
+      "closed_utc": "2026-11-02T23:11:31Z",
+      "created_utc": "2026-11-02T22:46:33Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-02T23:11:31Z",
+      "number": 15,
+      "state": "MERGED",
+      "title": "Independent local Synthea image-box validator: factorial weight ablations and negative-gain receipts",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/15"
+    },
+    {
+      "closed_utc": "2026-11-02T23:12:40Z",
+      "created_utc": "2026-11-02T22:46:42Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-02T23:12:40Z",
+      "number": 16,
+      "state": "MERGED",
+      "title": "Local-only trained bbox validator D1/D2 + independent JSON receipts (no hosted inference)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/16"
+    },
+    {
+      "closed_utc": "2026-11-02T22:56:46Z",
+      "created_utc": "2026-11-02T22:50:18Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T22:56:46Z",
+      "number": 17,
+      "state": "MERGED",
+      "title": "Before/after baseline v1; remove cloudmer-derived lane; gitleaks in CI",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/17"
+    },
+    {
+      "closed_utc": "2026-11-02T23:11:50Z",
+      "created_utc": "2026-11-02T23:02:04Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-02T23:11:50Z",
+      "number": 18,
+      "state": "MERGED",
+      "title": "Evidence: longitudinal Qwen checkpoint monitoring, Holm-corrected LOMO heatmap and Merkle breakpoints",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/18"
+    },
+    {
+      "closed_utc": "2026-11-02T23:05:50Z",
+      "created_utc": "2026-11-02T23:04:35Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:05:50Z",
+      "number": 19,
+      "state": "MERGED",
+      "title": "Frontier Forms: trained field-box detector validator, qwen2.5vl + Tesseract vision arms, patient-cluster bootstrap",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/19"
+    },
+    {
+      "closed_utc": "2026-11-02T23:09:42Z",
+      "created_utc": "2026-11-02T23:08:41Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:09:42Z",
+      "number": 20,
+      "state": "MERGED",
+      "title": "Red team (cloud): independent FCO/FCG replay, local Qwen/OCR lanes, gate factorial, per-epoch Merkle training ledger",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/20"
+    },
+    {
+      "closed_utc": "2026-11-02T23:10:49Z",
+      "created_utc": "2026-11-02T23:10:41Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:10:49Z",
+      "number": 21,
+      "state": "MERGED",
+      "title": "Red team (cloud) \u2192 main: independent FCO/FCG replay, gate factorial, per-epoch Merkle detector ledger",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/21"
+    },
+    {
+      "closed_utc": null,
+      "created_utc": "2026-11-02T23:11:48Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 22,
+      "state": "OPEN",
+      "title": "Frontier Forms: full 100-patient local acceptance runner, HTML/CSS\u2192PDF and Qwen/vision receipts",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/22"
+    },
+    {
+      "closed_utc": "2026-11-02T23:20:07Z",
+      "created_utc": "2026-11-02T23:13:12Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:20:07Z",
+      "number": 23,
+      "state": "MERGED",
+      "title": "Red team (cloud) follow-up: Qwen mapper lanes on SYNFORM2 test (+ VLM test pass and answer DB as they land)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/23"
+    },
+    {
+      "closed_utc": "2026-11-02T23:17:44Z",
+      "created_utc": "2026-11-02T23:13:55Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:17:44Z",
+      "number": 26,
+      "state": "MERGED",
+      "title": "Add detailed plan v1: Qwen 3.8 27B baseline, Fireworks LoRA fine-tune, before/after evaluation",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/26"
+    },
+    {
+      "closed_utc": "2026-11-02T23:22:44Z",
+      "created_utc": "2026-11-02T23:16:22Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 27,
+      "state": "CLOSED",
+      "title": "Security successor: JSON-only new data with exact-byte legacy freeze",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/27"
+    },
+    {
+      "closed_utc": "2026-11-02T23:17:41Z",
+      "created_utc": "2026-11-02T23:16:36Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:17:41Z",
+      "number": 28,
+      "state": "MERGED",
+      "title": "Fix CI regression: pin NumPy for independent paired-bootstrap tests",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/28"
+    },
+    {
+      "closed_utc": "2026-11-02T23:34:38Z",
+      "created_utc": "2026-11-02T23:17:28Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:34:38Z",
+      "number": 29,
+      "state": "MERGED",
+      "title": "Docs: gap analysis, artifact index, bbox overlay viewer; V1i qwen2.5vl injection evidence",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/29"
+    },
+    {
+      "closed_utc": "2026-11-02T23:20:09Z",
+      "created_utc": "2026-11-02T23:19:52Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:20:09Z",
+      "number": 30,
+      "state": "MERGED",
+      "title": "Integrate JSON-only security successor with CI dependency conflict resolved",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/30"
+    },
+    {
+      "closed_utc": "2026-11-02T23:21:16Z",
+      "created_utc": "2026-11-02T23:21:07Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:21:16Z",
+      "number": 39,
+      "state": "MERGED",
+      "title": "Preserve NumPy 1.26.4 dependency pin and PR27 reconciliation receipt",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/39"
+    },
+    {
+      "closed_utc": "2026-11-02T23:25:59Z",
+      "created_utc": "2026-11-02T23:21:55Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:25:59Z",
+      "number": 42,
+      "state": "MERGED",
+      "title": "Docs: track open Frontier Forms gaps as tasks",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/42"
+    },
+    {
+      "closed_utc": "2026-11-02T23:22:25Z",
+      "created_utc": "2026-11-02T23:22:15Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:22:25Z",
+      "number": 43,
+      "state": "MERGED",
+      "title": "Fix CI YAML parsing of pinned dependencies; preserve failure receipt",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/43"
+    },
+    {
+      "closed_utc": null,
+      "created_utc": "2026-11-02T23:22:18Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 44,
+      "state": "OPEN",
+      "title": "Integrate Merkle \u00d7 LOMO \u00d7 model-impact evidence contract",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/44"
+    },
+    {
+      "closed_utc": "2026-11-02T23:23:15Z",
+      "created_utc": "2026-11-02T23:22:28Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 45,
+      "state": "CLOSED",
+      "title": "Fix merged GitHub Actions YAML parse failure (NumPy/SciPy run block)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/45"
+    },
+    {
+      "closed_utc": "2026-11-02T23:29:44Z",
+      "created_utc": "2026-11-02T23:29:39Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:29:44Z",
+      "number": 46,
+      "state": "MERGED",
+      "title": "Document DAISY freeze\u2013challenge\u2013replicate\u2013admit reuse without model transfer",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/46"
+    },
+    {
+      "closed_utc": "2026-11-02T23:31:33Z",
+      "created_utc": "2026-11-02T23:29:56Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:31:33Z",
+      "number": 47,
+      "state": "MERGED",
+      "title": "Review: PR #3 after da953450 (T06)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/47"
+    },
+    {
+      "closed_utc": "2026-11-02T23:31:07Z",
+      "created_utc": "2026-11-02T23:31:02Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:31:07Z",
+      "number": 48,
+      "state": "MERGED",
+      "title": "Record observed Frontier Forms LOMO gain without DAISY performance attribution",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/48"
+    },
+    {
+      "closed_utc": "2026-11-02T23:34:55Z",
+      "created_utc": "2026-11-02T23:34:11Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:34:55Z",
+      "number": 49,
+      "state": "MERGED",
+      "title": "Enforce Vita DAISY-inspired FCAR evidence gates without cross-program transfer",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/49"
+    },
+    {
+      "closed_utc": "2026-11-02T23:38:36Z",
+      "created_utc": "2026-11-02T23:35:13Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-02T23:38:36Z",
+      "number": 50,
+      "state": "MERGED",
+      "title": "Docs: status of all PRs, accomplishment heatmap, labelled figures for judges",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/50"
+    },
+    {
+      "closed_utc": "2026-11-02T23:54:21Z",
+      "created_utc": "2026-11-02T23:37:13Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-02T23:54:21Z",
+      "number": 51,
+      "state": "MERGED",
+      "title": "Judges pack: labelled figures, accomplishment heat map, PR inventory, form server + screenshots/PDFs/bbox overlays",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/51"
+    },
+    {
+      "closed_utc": "2026-11-02T23:39:23Z",
+      "created_utc": "2026-11-02T23:39:18Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:39:23Z",
+      "number": 52,
+      "state": "MERGED",
+      "title": "Judges: Fireworks Deploy submission packet mapped to rubric and PR evidence",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/52"
+    },
+    {
+      "closed_utc": null,
+      "created_utc": "2026-11-02T23:39:58Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 53,
+      "state": "OPEN",
+      "title": "Fireworks Deploy submission checklist, rubric and deadline evidence boundary",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/53"
+    },
+    {
+      "closed_utc": null,
+      "created_utc": "2026-11-02T23:42:25Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 54,
+      "state": "OPEN",
+      "title": "Judges: fully labeled figure catalog, PR attribution, and evidence-status \u00d7 model/LOMO heatmap",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/54"
+    },
+    {
+      "closed_utc": "2026-11-03T00:37:18Z",
+      "created_utc": "2026-11-02T23:45:01Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": null,
+      "number": 55,
+      "state": "CLOSED",
+      "title": "Independent audit: repair 10 judge-demo annotation hashes and enforce exact-byte validation",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/55"
+    },
+    {
+      "closed_utc": "2026-11-02T23:46:42Z",
+      "created_utc": "2026-11-02T23:46:37Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:46:41Z",
+      "number": 56,
+      "state": "MERGED",
+      "title": "Prioritize Fireworks submission verification and judge evidence tasks",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/56"
+    },
+    {
+      "closed_utc": "2026-11-02T23:52:31Z",
+      "created_utc": "2026-11-02T23:50:48Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-02T23:52:31Z",
+      "number": 57,
+      "state": "MERGED",
+      "title": "Figures: show every result, including null, negative and failed ones",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/57"
+    },
+    {
+      "closed_utc": "2026-11-02T23:56:55Z",
+      "created_utc": "2026-11-02T23:55:20Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-02T23:56:55Z",
+      "number": 58,
+      "state": "MERGED",
+      "title": "Figures: add preregistered trained-gain results (OCR correction promoted, detector crops null)",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/58"
+    },
+    {
+      "closed_utc": "2026-11-02T23:56:23Z",
+      "created_utc": "2026-11-02T23:55:30Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-02T23:56:23Z",
+      "number": 59,
+      "state": "MERGED",
+      "title": "Judges: exact-time PR \u00d7 model \u00d7 synthetic dataset Gantt with promotions and negative results",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/59"
+    },
+    {
+      "closed_utc": "2026-11-02T23:58:28Z",
+      "created_utc": "2026-11-02T23:57:41Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-02T23:58:28Z",
+      "number": 60,
+      "state": "MERGED",
+      "title": "Publish complete positive, negative and unpromoted Frontier Forms evidence ledger",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/60"
+    },
+    {
+      "closed_utc": "2026-11-03T00:00:57Z",
+      "created_utc": "2026-11-03T00:00:01Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:00:57Z",
+      "number": 61,
+      "state": "MERGED",
+      "title": "Gantt V2 successor: incorporate Claude A1 discovery promotion and preserve A2/A3 null results",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/61"
+    },
+    {
+      "closed_utc": "2026-11-03T00:02:04Z",
+      "created_utc": "2026-11-03T00:00:19Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:02:04Z",
+      "number": 62,
+      "state": "MERGED",
+      "title": "evidence(forms-model): M0 zero-shot Qwen2.5-0.5B arm with per-field answers",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/62"
+    },
+    {
+      "closed_utc": "2026-11-03T00:02:49Z",
+      "created_utc": "2026-11-03T00:00:41Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:02:49Z",
+      "number": 63,
+      "state": "MERGED",
+      "title": "Trained-model gain figure, per-model form screenshots/PDFs, Preview FAILED receipt",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/63"
+    },
+    {
+      "closed_utc": "2026-11-03T00:02:35Z",
+      "created_utc": "2026-11-03T00:01:44Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-03T00:02:35Z",
+      "number": 64,
+      "state": "MERGED",
+      "title": "Independent judge audit: reconcile OCR + FCO gains, all negative epochs, asset hashes and scientific admission",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/64"
+    },
+    {
+      "closed_utc": "2026-11-03T00:06:21Z",
+      "created_utc": "2026-11-03T00:01:48Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:06:21Z",
+      "number": 65,
+      "state": "MERGED",
+      "title": "Figures: colour-coded gains heatmap with per-cell data",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/65"
+    },
+    {
+      "closed_utc": "2026-11-03T00:04:51Z",
+      "created_utc": "2026-11-03T00:04:47Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:04:51Z",
+      "number": 66,
+      "state": "MERGED",
+      "title": "Admit discovery evidence and distinguish Frontier Forms novelty from standard model training",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/66"
+    },
+    {
+      "closed_utc": "2026-11-03T00:09:00Z",
+      "created_utc": "2026-11-03T00:07:23Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:09:00Z",
+      "number": 67,
+      "state": "MERGED",
+      "title": "docs: admit discovery results (PI) and separate novel vs standard gains",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/67"
+    },
+    {
+      "closed_utc": "2026-11-03T00:09:07Z",
+      "created_utc": "2026-11-03T00:08:19Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:09:07Z",
+      "number": 68,
+      "state": "MERGED",
+      "title": "Evidence admission: distinguish project-specific FCO discoveries from standard training, retain negatives",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/68"
+    },
+    {
+      "closed_utc": "2026-11-03T00:13:34Z",
+      "created_utc": "2026-11-03T00:10:04Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:13:34Z",
+      "number": 69,
+      "state": "MERGED",
+      "title": "Red-team discovery admission ledger (31 records, promotion HOLD) + novel vs standard training",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/69"
+    },
+    {
+      "closed_utc": "2026-11-03T00:12:37Z",
+      "created_utc": "2026-11-03T00:11:01Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:12:37Z",
+      "number": 70,
+      "state": "MERGED",
+      "title": "Video review: color-coded Claude/ChatGPT evidence storyboard and Merkle drilldowns",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/70"
+    },
+    {
+      "closed_utc": "2026-11-03T00:13:55Z",
+      "created_utc": "2026-11-03T00:13:01Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-03T00:13:55Z",
+      "number": 71,
+      "state": "MERGED",
+      "title": "Audit: admit 89 synthetic discovery/negative checkpoints; separate standard training from integrated FCO gains",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/71"
+    },
+    {
+      "closed_utc": "2026-11-03T00:29:16Z",
+      "created_utc": "2026-11-03T00:17:14Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:29:16Z",
+      "number": 72,
+      "state": "MERGED",
+      "title": "Judges presentation page + gate endpoint fix in the admission ledger",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/72"
+    },
+    {
+      "closed_utc": "2026-11-03T00:35:19Z",
+      "created_utc": "2026-11-03T00:31:44Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": "2026-11-03T00:35:19Z",
+      "number": 73,
+      "state": "MERGED",
+      "title": "docs: one-click figure index for judges",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/73"
+    },
+    {
+      "closed_utc": "2026-11-03T00:32:49Z",
+      "created_utc": "2026-11-03T00:31:57Z",
+      "lane": "ChatGPT / independent",
+      "merged_utc": "2026-11-03T00:32:49Z",
+      "number": 74,
+      "state": "MERGED",
+      "title": "Judges: embed source-backed result figures in README and link Notion review page",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/74"
+    },
+    {
+      "closed_utc": "2026-11-03T00:36:00Z",
+      "created_utc": "2026-11-03T00:32:30Z",
+      "lane": "Claude Code / models",
+      "merged_utc": "2026-11-03T00:36:00Z",
+      "number": 75,
+      "state": "MERGED",
+      "title": "evidence: V2 YOLOv8n detector results + one-page figures",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/75"
+    },
+    {
+      "closed_utc": null,
+      "created_utc": "2026-11-03T00:37:12Z",
+      "lane": "Mixed / attribution unknown",
+      "merged_utc": null,
+      "number": 76,
+      "state": "OPEN",
+      "title": "Red-team final audit: execute remaining notebooks, fix builder bugs, final TURN_BREAKPOINT",
+      "url": "https://github.com/biobitworks/frontier-forms/pull/76"
+    }
+  ],
+  "pr_time_basis": "actual GitHub PR createdAt to mergedAt/closedAt; NOT actual human work or GPU time",
+  "qwen_lora_comparative_gain": "NOT_COMPUTED_FROM_FROZEN_PAIRED_CHECKPOINTS",
+  "reference_roots": {
+    "ocr_three_arm_successor": "5acbf8276ed1c184423ea68b9973acec96a3a47e030d296f83e23c1c005071cb",
+    "older_30_epoch_full": "1fc600162b6a8dd727d8db52722c6a093fad85674450626b8c79fc287a294ff6",
+    "older_30_epoch_no_scan": "e99fe22c7a1473a678e4629f9d32022681a7b4f1d66e3ddcd0b9b2fa332167c0"
+  },
+  "schema": "frontier-forms.judge-contributors-and-training-results.v1",
+  "scientific_promotions": 0,
+  "snapshot_utc": "2026-11-03T00:38:48.158577+00:00",
+  "source_file_sha256": {
+    "docs/judges/FINAL_PR_SNAPSHOT_20261102_V3.json": "0a93ff6ab8bac6f0cb0e331080eff171d1a50532617adce94286bac5beb014fc",
+    "docs/judges/JUDGE_OUTCOMES_SUCCESSOR_V1.json": "69e93af7d46fbc370aaa85c6262d2454c3891a6a2b962f7e89c918ce4da29dbb",
+    "docs/judges/OCR_CORRECTION_SUCCESSOR_V2.json": "ae50de6661b53db271aef0168cdd434743bc29f55137b865db590df4dd2112f0",
+    "evidence/forms_detector/V2-yolov8n/receipt.json": "f337e4c7844080d78a33f5158b8b72f64931e546c400e1519db939fd168a7577",
+    "evidence/forms_detector/V2-yolov8n/summary.json": "502e90b0c2a89876c467f2092e87af3f333141e6909380cb85404c65fc6e8548",
+    "evidence/redteam/detector/full/chain_manifest.json": "6880c6aa8ea8be1a43c01cb97d702b9ebd3685649ca7dbb386d019127eaa7392",
+    "evidence/redteam/detector/full/epoch_ledger.jsonl": "e3aa66b65419add86f5b4cd3a4a86d08995fc132777cf4c76fc710be463fdad1",
+    "evidence/redteam/detector/no_scan/chain_manifest.json": "0f232008be4d6172e704366e30225d8dcbf2ce88fde6ca7c946d3cd89da1cb66",
+    "evidence/redteam/detector/no_scan/epoch_ledger.jsonl": "92b5ad4f5f3b30448c68a867539efac2374fb8702556d58a56643d30b936e976"
+  },
+  "source_parent_main_sha": "23f4098dda4da00682734dda56e4fb0ead8feff5",
+  "synthetic_only": true
+}

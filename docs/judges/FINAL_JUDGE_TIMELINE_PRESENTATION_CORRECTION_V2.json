@@ -1,0 +1,19 @@
+{
+  "attribution_counts_verified_from_pr_events": {
+    "ChatGPT / independent": 9,
+    "Claude Code / models": 10,
+    "Mixed / attribution unknown": 43,
+    "Teammate / app": 1
+  },
+  "corrected_gantt_path": "docs/judges/figures/fig20_contributor_gantt_corrected_v2.png",
+  "corrected_gantt_sha256": "0d3d3b8d6e7126379bcb37e2ac78fded973223196064ccf4b5ffde2e878a4c45",
+  "frozen_training_figure_sha256_unchanged": "cd4e16ffcc7d9c09bcfa11981e866b15ebbef6ba7b2a9e295627aa5042cea357",
+  "pr_count_unchanged": 63,
+  "predecessor_gantt_sha256": "77db04eb9755ab507b379a53b466ad4d739ba4787013bcf572e3396db402faf3",
+  "predecessor_gantt_state": "FAILED_DISPLAY_LABEL_MISMATCH_MIXED_LANE_SHOWN_ZERO",
+  "predecessor_source_sha256": "550a0fe349262f58a5c27b7cd95f7026ef9ae904362d8cb8e059f32c0f0bfc19",
+  "schema": "frontier-forms.judge-pr-contributor-gantt-correction.v2",
+  "scientific_promotions": 0,
+  "source_data_changed": false,
+  "status": "PASS_CORRECTED_PRESENTATION"
+}
