@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Forms Gains Heatmap</title>
+<style>
+:root{--surface:#fcfcfb;--ink:#0b0b0b;--ink-2:#52514e;--ink-3:#77766f;--border:#dedcd6;--grp:#f3f2ef;--null:#e4e3df;--blank:#fafaf8;
+--g1:#d6f0d6;--g2:#a6dca6;--g3:#5fbf5f;--g4:#1f8f1f;--r1:#f8dada;--r2:#efaaaa;--r3:#e06666;--r4:#b52a2a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;--ink-3:#9a998f;--border:#3a3a37;--grp:#242422;--null:#3a3a37;--blank:#1f1f1d}}
+:root[data-theme="dark"]{--surface:#1a1a19;--ink:#f0efec;--ink-2:#c3c2b7;--ink-3:#9a998f;--border:#3a3a37;--grp:#242422;--null:#3a3a37;--blank:#1f1f1d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 40px}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--ink-2);margin:0 0 10px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--ink-2);margin:10px 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}.sw{display:inline-block;width:22px;height:14px;border-radius:3px;border:1px solid var(--border)}
+.scroll{overflow-x:auto}table{border-collapse:separate;border-spacing:2px;width:100%}
+th{font-size:12px;font-weight:600;color:var(--ink-2);text-align:center;padding:6px;vertical-align:bottom}
+th.l{text-align:left}
+td{padding:6px;border-radius:4px;font-size:12.5px;text-align:center;font-variant-numeric:tabular-nums;min-width:120px}
+td.lab{text-align:left;min-width:280px;white-space:normal;background:transparent}
+td.lab small{display:block;color:var(--ink-3)}
+td.badge{min-width:86px;font-weight:600;font-size:11.5px}
+tr.grp td{background:var(--grp);text-align:left;font-weight:700;font-size:12.5px;color:var(--ink)}
+.c-gain1{background:var(--g1)}.c-gain2{background:var(--g2)}.c-gain3{background:var(--g3);color:#fff}.c-gain4{background:var(--g4);color:#fff}
+.c-loss1{background:var(--r1)}.c-loss2{background:var(--r2)}.c-loss3{background:var(--r3);color:#fff}.c-loss4{background:var(--r4);color:#fff}
+.c-null{background:var(--null);color:var(--ink-2)}.c-blank{background:var(--blank);color:var(--ink-3)}
+.nop{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.22) 0 3px,transparent 3px 9px)}
+.c-gain1,.c-gain2,.c-loss1,.c-loss2{color:#111}
+td b{font-size:13.5px}td .p{display:block;font-size:11px;opacity:.9}
+.b-A{color:#0a6b0a}.b-D{color:#9a6a00}.b-N{color:var(--ink-2)}.b-P{color:#1c5cab}.b-U{color:var(--ink-3)}
+.caption{color:var(--ink-2);font-size:13px;margin-top:12px;border-top:1px solid var(--border);padding-top:8px}
+#tip{position:fixed;pointer-events:none;background:var(--grp);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:12.5px;max-width:360px;display:none;z-index:9}
+</style>
+</head>
+<body>
+<main>
+<div style="font-weight:600;color:var(--ink-2);font-size:12px;letter-spacing:.04em;text-transform:uppercase">Figure 2</div>
+<h1>Where Frontier Forms gains: every intervention vs its own baseline</h1>
+<p class="sub">Rows: interventions, grouped by experiment. Each row names its baseline and source. Columns: outcome metrics. Cell value: <b>gain Δ</b> = change toward the better direction, so a drop in false flags shows as a positive gain. The p-value comes from the paired exact McNemar test and is Holm-adjusted where the source reports that.</p>
+<div class="legend" id="lg"></div>
+<div class="scroll"><table id="t"></table></div>
+<p class="caption" id="cap"></p>
+</main>
+<div id="tip"></div>
+<script>
+const D=/*__DATA__*/null;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const GB={Admitted:'A',Discovery:'D','Null / negative':'N',Pilot:'P',Untested:'U'};
+const ICON={Admitted:'✓ Admitted',Discovery:'◐ Discovery','Null / negative':'= Null / neg.',Pilot:'◔ Pilot',Untested:'○ Untested'};
+function bin(v){v=Math.abs(v);return v>=0.5?4:v>=0.15?3:v>=0.05?2:1}
+function fmtp(p){if(p===null||p===undefined)return 'no p';if(p<0.001)return 'p='+p.toExponential(1);if(p>=0.999)return 'p=1.0';return 'p='+String(+(+p).toPrecision(2))}
+document.getElementById('lg').innerHTML=
+ ['gain1','gain2','gain3','gain4'].map((c,i)=>`<i class="sw c-${c}"></i>`).join('')+'<span>Gain (darker = bigger: &lt;0.05, 0.05–0.15, 0.15–0.5, ≥0.5)</span>'+
+ ['loss1','loss2','loss3','loss4'].map(c=>`<i class="sw c-${c}"></i>`).join('')+'<span>Loss</span>'+
+ '<span><i class="sw c-null"></i>Null: p ≥ 0.05 or |Δ| &lt; 0.005</span><span><i class="sw c-gain3 nop"></i>Striped = no p-value (pilot or descriptive)</span><span><i class="sw c-blank"></i>Not measured</span>'+
+ '<span><b>Status:</b> ✓ Admitted (preregistered or LOMO-attributed) · ◐ Discovery (designed after seeing data, not promoted) · = Null / negative · ◔ Pilot · ○ Untested</span>';
+const byRow={};D.cells.forEach(c=>{(byRow[c.intervention]=byRow[c.intervention]||{})[c.metric]=c});
+let h='<thead><tr><th class="l">Intervention (baseline)</th><th>Status</th>'+D.metrics.map(m=>`<th>${esc(m)}</th>`).join('')+'</tr></thead><tbody>';let g='';
+D.rows.forEach(r=>{if(r.group!==g){g=r.group;h+=`<tr class="grp"><td colspan="${D.metrics.length+2}">${esc(g)}</td></tr>`}
+ h+=`<tr><td class="lab">${esc(r.intervention)}<small>vs ${esc(r.baseline)} · ${esc(r.source)}</small></td><td class="badge b-${GB[r.grade]}">${ICON[r.grade]}</td>`;
+ D.metrics.forEach(m=>{const c=(byRow[r.intervention]||{})[m];if(!c){h+='<td class="c-blank">—</td>';return}
+  const cls=c.class==='null'?'c-null':`c-${c.class}${bin(c.gain_delta)}`;const nop=c.p===null?' nop':'';const s=c.gain_delta>0?'+':'';
+  h+=`<td class="${cls}${nop}" data-i="${esc(r.intervention)}" data-m="${esc(m)}"><b>${s}${c.gain_delta.toFixed(3)}</b><span class="p">${c.class==='null'?'null · ':''}${fmtp(c.p)}</span></td>`});
+ h+='</tr>'});
+document.getElementById('t').innerHTML=h+'</tbody>';
+const tip=document.getElementById('tip');
+document.getElementById('t').addEventListener('mousemove',e=>{const td=e.target.closest('td[data-i]');if(!td){tip.style.display='none';return}const c=byRow[td.dataset.i][td.dataset.m];
+ tip.innerHTML=`<b>${esc(c.intervention)}</b><br>${esc(c.metric)} vs ${esc(c.baseline)}<br>raw change ${c.raw_delta>0?'+':''}${c.raw_delta} · gain ${c.gain_delta>0?'+':''}${c.gain_delta} · ${fmtp(c.p)}<br>Status: ${esc(c.grade)}<br><span style="color:var(--ink-3)">${esc(c.source)}</span>`;
+ tip.style.display='block';tip.style.left=Math.min(e.clientX+14,innerWidth-380)+'px';tip.style.top=(e.clientY+14)+'px'});
+document.getElementById('t').addEventListener('mouseleave',()=>tip.style.display='none');
+document.getElementById('cap').textContent='Figure 2. Gains heatmap. Each intervention is compared with its own baseline on identical synthetic cases. Green cells are gains, red cells are losses, grey cells are null (p ≥ 0.05 or no change), and striped cells have no p-value (pilot or descriptive). The clearest gains are M3 source binding and the commitment gate, which catch errors; the learned OCR correction (preregistered, discovery); the L1+L3 harness (discovery); and our tools speeding up hosted models (pilot). The clearest losses are the local Qwen mappers versus a plain parser, the trained detector crops (null), and the false-flag cost of source binding. Data: docs/figures/gains_heatmap.csv and .json. Rebuild: python3 scripts/build_gains_heatmap.py.';
+</script>
+</body>
+</html>

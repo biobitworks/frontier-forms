@@ -20,6 +20,11 @@ START, END = "<!-- judge-caption:start -->", "<!-- judge-caption:end -->"
 
 # (path, title, how to read, source PR(s), evidence grade)
 FIGURES = [
+    ("docs/figures/gains_heatmap.html",
+     "Gains heatmap: every intervention vs its own baseline",
+     "Rows = interventions grouped by experiment; columns = field accuracy, full-form success, errors caught, false flags, time saved. Green = gain, red = loss, "
+     "grey = null (p >= 0.05 or no change), striped = no p-value, blank = not measured. Each cell prints gain delta and p; status column marks admitted vs discovery.",
+     "This PR; data from #10 #11 #14 #15 #20 #21 #23 #51 and bench", "Mixed; status per row"),
     ("docs/figures/accomplishment_heatmap.html",
      "Accomplishment heatmap: workstream status and mechanisms versus outcomes",
      "1a: rows = workstreams, columns = evidence stages, cell = status (icon + label). 1b: rows = mechanism or combination, "
@@ -146,7 +151,8 @@ def write_index():
         lines.append(f"| {i} | [{title}](../../{path}) | {read} | {src} | {grade} |")
     path, title, desc = SVG
     lines.append(f"| {len(FIGURES) + 1} | [{title} (static SVG)](../../{path}) | Same as figure 2, static. | #20 #21 | Discovery |")
-    lines.append(f"| {len(FIGURES) + 2} | [Accomplishment heatmap (static PNG)](accomplishment_heatmap.png) | Static render of figure 1. | This PR | Mixed |")
+    lines.append(f"| {len(FIGURES) + 2} | [Accomplishment heatmap (static PNG)](accomplishment_heatmap.png) | Static render of figure 1. | #50 #57 #58 | Mixed |")
+    lines.append(f"| {len(FIGURES) + 3} | [Gains heatmap (static PNG)](gains_heatmap.png), data [CSV](gains_heatmap.csv) / [JSON](gains_heatmap.json) | Static render of the gains heatmap; one CSV row per cell. | This PR | Mixed |")
     lines += ["", "## Image sets (inputs, not results)", "",
               "These are the synthetic form renders the models read. They are stimuli, not charts, so each set is captioned once here and in its folder README.", "",
               "| Folder | Title | Caption | Source PR |", "|---|---|---|---|"]
@@ -160,7 +166,7 @@ def write_index():
 
 def main():
     for i, (path, *rest) in enumerate(FIGURES, 1):
-        if path == "docs/figures/accomplishment_heatmap.html":
+        if path in ("docs/figures/accomplishment_heatmap.html", "docs/figures/gains_heatmap.html"):
             continue  # carries its own Figure 1a/1b captions (scripts/status_heatmap_template.html)
         label_html(path, banner(i, *rest))
     label_svg()
