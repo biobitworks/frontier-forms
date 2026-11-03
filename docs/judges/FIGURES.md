@@ -166,3 +166,11 @@ Claude Code's Figures 1–10, PNG screenshots, 10 synthetic PDFs and visual over
 - **Figure 19, genuine recorded training:** [Training and discovery PNG](figures/fig19_actual_training_epochs_20261102.png). Distinct 40-epoch new YOLOv8n MPS mAP50–95(B) curve, older 30+30 epoch full/no-scan development-image success curves (with regressions and ties), plus different-denominator FCO/OCR synthetic discovery pairs. Source [source-hash-pinned timeline JSON](FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json), [V2 detector summary](../../evidence/forms_detector/V2-yolov8n/summary.json), and [independent experimental outcomes](JUDGE_OUTCOMES_SUCCESSOR_V1.json).
 
 **Attribution and chronology ceiling:** PR timestamp is not model runtime. V2 40-epoch metrics lack a separate UTC for each epoch; the older 30-epoch logs include actual UTC. The 63-PR snapshot was read after the 4:30 PM cutoff. The new detector localizes boxes well but remains PARTIAL on held-out class identity and flags. FCAR scientific promotion HOLD; no DAISY model, data, score or Merkle root imported.
+
+## Figure 21 — judge-facing V3 presentation preview (visual-only successor)
+
+[Preview image](figures/fig21_presentation_v3_preview_20261102.png) · [Team-wide presentation V3](present_v3.html) · [V3 source template](../../scripts/redteam/present_page_template_v3.html) · [Build script](../../scripts/redteam/build_present_page_v3.py) · [Byte-level display successor receipt](PRESENTATION_VISUAL_V3_SUCCESSOR_20261102.json).
+
+V3 adds a UTF-8 document declaration, replaces the Claude-only heading with a verified team-wide attribution overview, adds a short two-comparison summary and source-labeled 63-PR/100-epoch figures, and corrects the judge README order so Qwen SFT training is beneath completed results. The screenshot is a *rendered browser capture of the V3 page*, not a newly trained model, new metric or external deployment. Previous v1/v2 pages are unchanged. The original 63-PR snapshot remains a historical predecessor; post-deadline work does not establish contest eligibility.
+
+The HTML source link on GitHub is not a hosted live application. For interactive charts serve the checkout from its root over a local HTTP server; for external judges the static preview and PNG/CSV evidence are publicly viewable without running code.
