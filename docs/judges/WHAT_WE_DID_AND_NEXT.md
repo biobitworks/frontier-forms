@@ -2,7 +2,7 @@
 
 The project turns a medical intake form into a draft FHIR record and checks each field against its source. It uses only synthetic MITRE Synthea patients, so there is no PHI. Models run locally (Apple Vision, Ollama Qwen, local detectors), with no hosted inference and no live EHR writes. The statuses are PROPOSED, IMPLEMENTED, EXECUTED, OBSERVED, SUPPORTED, NEGATIVE, NULL, NOT_TESTED and BLOCKED. **No workstream has reached SUPPORTED**, because every positive result still needs replication.
 
-This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`. Labelled figures with captions, including the accomplishment heat map, are in [FIGURES.md](FIGURES.md). What was novel versus standard training, and the discovery admission ledger, are in [NOVEL_VS_STANDARD_TRAINING.md](NOVEL_VS_STANDARD_TRAINING.md).
+This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`. Labelled figures with captions, including the accomplishment heat map, are in [FIGURES.md](FIGURES.md). A single presentation page with the data is `docs/judges/present.html` (built by `scripts/redteam/build_present_page.py`). What was novel versus standard training, and the discovery admission ledger, are in [NOVEL_VS_STANDARD_TRAINING.md](NOVEL_VS_STANDARD_TRAINING.md).
 
 ## Workstreams
 
@@ -41,7 +41,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 
 - **Frozen cohort:** 100 Synthea v3.4.0 patients split 63/19/18. Two generations were byte-identical (#10).
 - **Baseline vs harness:** on the 54 held-out test forms, B0 reached 0.333 (18/54) full-form success. B0+L1+L2+L3 reached 0.556 (30/54), with p=0.00049 and a patient-cluster CI of [0.074, 0.370] (#17, #19). This is discovery grade only.
-- **Commitment gate:** planted-error detection rose from 0.13 to 1.00 with 0 false admissions, Holm p < 0.0001 and CI [+0.61, +0.66] (#20).
+- **Commitment gate:** planted-error detection rose from 0.13 to 1.00 with 0 false admissions; these are descriptive counts. The tested endpoint is per-image success, meaning at least one field admitted and no wrong value admitted. It rose from 50/135 to 135/135, with Holm p < 0.0001 and CI [+0.61, +0.66] (#20).
 - **Injected-error detectors:** across 654 forms with 702 errors, M3 source binding reached 0.989 recall. Without source data, M1+M2 reached 0.426 (#10).
 - **qwen2.5vl:3b:**
   - 318/322 SYNFORM2 test fields (#23 ledger).

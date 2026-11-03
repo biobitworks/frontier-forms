@@ -34,7 +34,8 @@ class TestRedteamDiscoveryAdmission(unittest.TestCase):
                 continue
             o = r['outcome']
             self.assertLess(o['holm_p'], 0.05, r['id'])
-            ci = o.get('ci95_patient_cluster_bootstrap') or o.get('bootstrap_ci95')
+            ci = o.get('ci95_patient_cluster_bootstrap') or o.get('ci95_stratified_bootstrap')
+            self.assertIn('endpoint', o, r['id'])
             self.assertGreater(ci[0], 0, r['id'])
 
     def test_posthoc_never_admitted(self):
@@ -47,6 +48,12 @@ class TestRedteamDiscoveryAdmission(unittest.TestCase):
         self.assertEqual((a1['baseline_success'], a1['challenger_success'], a1['n']), (14, 22, 46))
         self.assertEqual((a1['baseline_only'], a1['challenger_only']), (0, 8))
         self.assertAlmostEqual(a1['mcnemar_p_exact_two_sided'], 0.0078125)
+
+    def test_gate_rows_name_tested_endpoint(self):
+        for r in self.d['records']:
+            if r['family'] == 'admission_gate_factorial':
+                self.assertTrue(r['outcome']['endpoint'].startswith('per-image success'), r['id'])
+                self.assertIn('planted_detection_rate', r['outcome']['descriptive_not_tested'], r['id'])
 
     def test_negatives_and_nulls_kept(self):
         states = self.d['counts_by_admission_state']

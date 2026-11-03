@@ -183,7 +183,7 @@
   },
   {
    "admission_state": "DISCOVERY_LEDGER_ADMITTED",
-   "caveat": "The commitment check compares each extracted value with a salted hash of the source value, so it detects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
+   "caveat": "The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. The commitment check compares each extracted value with a salted hash of the source value, so it rejects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
    "decision": "PASS_DISCOVERY_RULE",
    "evidence": [
     {
@@ -191,8 +191,8 @@
      "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
     },
     {
-     "path": "evidence/redteam/attribution_matrix.json",
-     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+     "path": "scripts/redteam/analyze_gate_factorial.py",
+     "sha256": "be56b3e0656ca2ccabc928e6a03991bde401e51c58193e88015635d025f37014"
     }
    ],
    "family": "admission_gate_factorial",
@@ -209,19 +209,32 @@
     "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
    },
    "outcome": {
-    "bootstrap_ci95": [
+    "baseline_only": 0,
+    "baseline_success": 50,
+    "bootstrap_strata": "error variant",
+    "challenger_only": 85,
+    "challenger_success": 135,
+    "ci95_stratified_bootstrap": [
      0.6074074074074074,
      0.6592592592592592
     ],
-    "coverage": 0.8761904761904762,
-    "false_admission_rate_of_all": 0.0,
+    "delta_rate": 0.6296296296296297,
+    "descriptive_not_tested": {
+     "coverage": 0.8761904761904762,
+     "false_admission_rate_of_all": 0.0,
+     "false_admissions": 0,
+     "planted_cells": 108,
+     "planted_detection_rate": 1.0
+    },
+    "endpoint": "per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)",
     "holm_p": 7.754818242684634e-25,
-    "mcnemar_p": 5.169878828456423e-26,
-    "planted_detection_rate": 1.0
+    "mcnemar_p_exact_two_sided": 5.169878828456423e-26,
+    "n": 135,
+    "unit": "image"
    },
    "preregistered": false,
    "promoted": false,
-   "question": "Does the commitment check catch planted field errors that the unchecked extractor admits?",
+   "question": "Does adding the commitment check raise per-image success (some field admitted, no wrong value admitted) over no checks?",
    "replication": "NOT_TESTED",
    "scientific_promotion": "HOLD",
    "weights": {
@@ -231,7 +244,7 @@
   },
   {
    "admission_state": "DISCOVERY_LEDGER_ADMITTED",
-   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "caveat": "The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. Planted errors were designed by the same lane that wrote the checks.",
    "decision": "PASS_DISCOVERY_RULE",
    "evidence": [
     {
@@ -239,8 +252,8 @@
      "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
     },
     {
-     "path": "evidence/redteam/attribution_matrix.json",
-     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+     "path": "scripts/redteam/analyze_gate_factorial.py",
+     "sha256": "be56b3e0656ca2ccabc928e6a03991bde401e51c58193e88015635d025f37014"
     }
    ],
    "family": "admission_gate_factorial",
@@ -257,19 +270,32 @@
     "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
    },
    "outcome": {
-    "bootstrap_ci95": [
+    "baseline_only": 0,
+    "baseline_success": 50,
+    "bootstrap_strata": "error variant",
+    "challenger_only": 38,
+    "challenger_success": 88,
+    "ci95_stratified_bootstrap": [
      0.2518518518518518,
      0.3037037037037037
     ],
-    "coverage": 0.9407407407407408,
-    "false_admission_rate_of_all": 0.0656084656084656,
+    "delta_rate": 0.2814814814814815,
+    "descriptive_not_tested": {
+     "coverage": 0.9407407407407408,
+     "false_admission_rate_of_all": 0.0656084656084656,
+     "false_admissions": 62,
+     "planted_cells": 108,
+     "planted_detection_rate": 0.5092592592592593
+    },
+    "endpoint": "per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)",
     "holm_p": 3.637978807091713e-11,
-    "mcnemar_p": 7.275957614183426e-12,
-    "planted_detection_rate": 0.5092592592592593
+    "mcnemar_p_exact_two_sided": 7.275957614183426e-12,
+    "n": 135,
+    "unit": "image"
    },
    "preregistered": false,
    "promoted": false,
-   "question": "Does the rules check catch planted field errors that the unchecked extractor admits?",
+   "question": "Does adding the rules check raise per-image success (some field admitted, no wrong value admitted) over no checks?",
    "replication": "NOT_TESTED",
    "scientific_promotion": "HOLD",
    "weights": {
@@ -279,7 +305,7 @@
   },
   {
    "admission_state": "DISCOVERY_LEDGER_ADMITTED",
-   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "caveat": "The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. Planted errors were designed by the same lane that wrote the checks.",
    "decision": "PASS_DISCOVERY_RULE",
    "evidence": [
     {
@@ -287,8 +313,8 @@
      "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
     },
     {
-     "path": "evidence/redteam/attribution_matrix.json",
-     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+     "path": "scripts/redteam/analyze_gate_factorial.py",
+     "sha256": "be56b3e0656ca2ccabc928e6a03991bde401e51c58193e88015635d025f37014"
     }
    ],
    "family": "admission_gate_factorial",
@@ -305,19 +331,32 @@
     "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
    },
    "outcome": {
-    "bootstrap_ci95": [
+    "baseline_only": 0,
+    "baseline_success": 50,
+    "bootstrap_strata": "error variant",
+    "challenger_only": 20,
+    "challenger_success": 70,
+    "ci95_stratified_bootstrap": [
      0.11851851851851852,
      0.18518518518518517
     ],
-    "coverage": 0.8507936507936508,
-    "false_admission_rate_of_all": 0.07830687830687831,
+    "delta_rate": 0.14814814814814814,
+    "descriptive_not_tested": {
+     "coverage": 0.8507936507936508,
+     "false_admission_rate_of_all": 0.07830687830687831,
+     "false_admissions": 74,
+     "planted_cells": 108,
+     "planted_detection_rate": 0.3148148148148148
+    },
+    "endpoint": "per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)",
     "holm_p": 5.7220458984375e-06,
-    "mcnemar_p": 1.9073486328125e-06,
-    "planted_detection_rate": 0.3148148148148148
+    "mcnemar_p_exact_two_sided": 1.9073486328125e-06,
+    "n": 135,
+    "unit": "image"
    },
    "preregistered": false,
    "promoted": false,
-   "question": "Does the consistency check catch planted field errors that the unchecked extractor admits?",
+   "question": "Does adding the consistency check raise per-image success (some field admitted, no wrong value admitted) over no checks?",
    "replication": "NOT_TESTED",
    "scientific_promotion": "HOLD",
    "weights": {
@@ -327,7 +366,7 @@
   },
   {
    "admission_state": "NULL_RECORDED",
-   "caveat": "Planted errors were designed by the same lane that wrote the checks.",
+   "caveat": "The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. Planted errors were designed by the same lane that wrote the checks.",
    "decision": "NULL",
    "evidence": [
     {
@@ -335,8 +374,8 @@
      "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
     },
     {
-     "path": "evidence/redteam/attribution_matrix.json",
-     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+     "path": "scripts/redteam/analyze_gate_factorial.py",
+     "sha256": "be56b3e0656ca2ccabc928e6a03991bde401e51c58193e88015635d025f37014"
     }
    ],
    "family": "admission_gate_factorial",
@@ -353,19 +392,32 @@
     "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
    },
    "outcome": {
-    "bootstrap_ci95": [
+    "baseline_only": 0,
+    "baseline_success": 50,
+    "bootstrap_strata": "error variant",
+    "challenger_only": 0,
+    "challenger_success": 50,
+    "ci95_stratified_bootstrap": [
      0.0,
      0.0
     ],
-    "coverage": 0.8814814814814815,
-    "false_admission_rate_of_all": 0.09312169312169312,
+    "delta_rate": 0.0,
+    "descriptive_not_tested": {
+     "coverage": 0.8814814814814815,
+     "false_admission_rate_of_all": 0.09312169312169312,
+     "false_admissions": 88,
+     "planted_cells": 108,
+     "planted_detection_rate": 0.25925925925925924
+    },
+    "endpoint": "per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)",
     "holm_p": 1.0,
-    "mcnemar_p": 1.0,
-    "planted_detection_rate": 0.25925925925925924
+    "mcnemar_p_exact_two_sided": 1.0,
+    "n": 135,
+    "unit": "image"
    },
    "preregistered": false,
    "promoted": false,
-   "question": "Does the identity check catch planted field errors that the unchecked extractor admits?",
+   "question": "Does adding the identity check raise per-image success (some field admitted, no wrong value admitted) over no checks?",
    "replication": "NOT_TESTED",
    "scientific_promotion": "HOLD",
    "weights": {
@@ -375,7 +427,7 @@
   },
   {
    "admission_state": "DISCOVERY_LEDGER_ADMITTED",
-   "caveat": "The commitment check compares each extracted value with a salted hash of the source value, so it detects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
+   "caveat": "The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. The commitment check compares each extracted value with a salted hash of the source value, so it rejects any printed value that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.",
    "decision": "PASS_DISCOVERY_RULE",
    "evidence": [
     {
@@ -383,8 +435,8 @@
      "sha256": "b73dbda8eaad115b33542424e323d99a43ad574cf1d9eb35c5733a5fd468aaed"
     },
     {
-     "path": "evidence/redteam/attribution_matrix.json",
-     "sha256": "8911d94d308bbc99d1ae6e76add5a0349281b7f5ad0c3300c229105deec23887"
+     "path": "scripts/redteam/analyze_gate_factorial.py",
+     "sha256": "be56b3e0656ca2ccabc928e6a03991bde401e51c58193e88015635d025f37014"
     }
    ],
    "family": "admission_gate_factorial",
@@ -404,19 +456,32 @@
     "this_lane": "per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list"
    },
    "outcome": {
-    "bootstrap_ci95": [
+    "baseline_only": 0,
+    "baseline_success": 50,
+    "bootstrap_strata": "error variant",
+    "challenger_only": 71,
+    "challenger_success": 121,
+    "ci95_stratified_bootstrap": [
      0.5037037037037037,
      0.5555555555555556
     ],
-    "coverage": 0.6941798941798942,
-    "false_admission_rate_of_all": 0.0,
+    "delta_rate": 0.5259259259259259,
+    "descriptive_not_tested": {
+     "coverage": 0.6941798941798942,
+     "false_admission_rate_of_all": 0.0,
+     "false_admissions": 0,
+     "planted_cells": 108,
+     "planted_detection_rate": 1.0
+    },
+    "endpoint": "per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)",
     "holm_p": 9.317362419797304e-21,
-    "mcnemar_p": 8.470329472543003e-22,
-    "planted_detection_rate": 1.0
+    "mcnemar_p_exact_two_sided": 8.470329472543003e-22,
+    "n": 135,
+    "unit": "image"
    },
    "preregistered": false,
    "promoted": false,
-   "question": "Does the identity+rules+commitment+consistency check catch planted field errors that the unchecked extractor admits?",
+   "question": "Does adding the identity+rules+commitment+consistency check raise per-image success (some field admitted, no wrong value admitted) over no checks?",
    "replication": "NOT_TESTED",
    "scientific_promotion": "HOLD",
    "weights": {
@@ -1284,7 +1349,7 @@
  "rule": "DISCOVERY_LEDGER_ADMITTED requires Holm-corrected exact McNemar p<0.05, delta>0 and bootstrap lower 95% CI>0 on a predeclared paired comparison. Scientific promotion additionally requires an independently frozen replication cohort and PI approval; none exists, so every record is HOLD.",
  "schema": "frontier_forms.redteam_discovery_admission.v1",
  "statistics": {
-  "bootstrap": "patient-cluster paired, 10000 reps, seed 20261102 (trained-gain and post-hoc rows); lane-native stratified bootstrap for gate rows",
+  "bootstrap": "patient-cluster paired, 10000 reps, seed 20261102 (trained-gain and post-hoc rows); stratified by error variant, 10000 reps, seed 20261102 for gate rows (from analyze_gate_factorial.py)",
   "mcnemar": "exact two-sided"
  },
  "status": "ADMITTED_TO_DISCOVERY_LEDGER_ONLY; SCIENTIFIC_PROMOTION=HOLD",
