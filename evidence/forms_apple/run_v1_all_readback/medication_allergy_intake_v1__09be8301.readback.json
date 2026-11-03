@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jacinda Bahringer",
+    "text": "Jacinda Bahringer"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Simvastatin 10 MG Oral Tablet; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); Hyperlipidemia (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Gingivitis (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Malignant neoplasm of breast (disorder); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Stress (finding); Not in labor force (finding); Social isolation (finding); Medication review due (situation)",
+    "text": "Chronic sinusitis (disorder); Received higher education (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Metabolic syndrome X (disorder); Ischemic heart"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "154.6",
+    "text": "154.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "66.3",
+    "text": "66.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "91/77",
+    "text": "91/77"
+  }
+}

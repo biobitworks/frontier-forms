@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Wilfred Parker",
+    "text": "Wilfred Parker"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2009-11-22",
+    "text": "2009-11-22"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-363-3132",
+    "text": "555-363-3132"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "581 Klocko Flat Apt 41",
+    "text": "581 Klocko Flat Apt 41"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Somerville",
+    "text": "Somerville"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02144",
+    "text": "02144"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

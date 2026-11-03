@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Venice Stokes",
+    "text": "Venice Stokes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1967-05-16",
+    "text": "1967-05-16"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-758-5366",
+    "text": "555-758-5366"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "299 Emmerich Route",
+    "text": "299 Emmerich Route"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Norfolk",
+    "text": "Norfolk"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

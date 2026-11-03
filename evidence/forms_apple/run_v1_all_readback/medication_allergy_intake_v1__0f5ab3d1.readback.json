@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Joe Mertz",
+    "text": "Joe Mertz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Naproxen sodium 220 MG Oral Tablet; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Ibuprofen 400 MG Oral Tablet [Ibu]",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Naproxen sodium 220 MG"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Localized, primary osteoarthritis of the hand (disorder); Part-time employment (finding); Victim of intimate partner abuse (finding)",
+    "text": "Received higher education (finding); Lack of access to transportation (finding); Transport problem (finding); Body mass index 30+ - obesity (finding); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "178.3",
+    "text": "178.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "96",
+    "text": "96"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "104/79",
+    "text": "104/79"
+  }
+}

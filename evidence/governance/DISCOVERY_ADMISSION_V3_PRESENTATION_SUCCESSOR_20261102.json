@@ -1,0 +1,17 @@
+{
+  "admitted_event_count_unchanged": 89,
+  "current_heatmap_file_sha256": "1fc054d30db5ee65da0758ed6f024a8baef03e020a21dbdc0cc3c64a2b206b83",
+  "current_source_ledger_leaf_root": "32fded207b7eae8e09071c8a3c8e4737e6648705e9765af5a09d28ff04292b61",
+  "exact_root_scheme": "SHA256(0x00 || canonical_sorted_compact_UTF8_JSON_manifest_without_root)",
+  "heatmap_cells_unchanged": 52,
+  "predecessor_heatmap_file_sha256": "54f006f5024b44db1df1a58b0e8004fc7c84fc33e8fbe0fc502543cb4b540610",
+  "predecessor_v2_event_root": "32fded207b7eae8e09071c8a3c8e4737e6648705e9765af5a09d28ff04292b61",
+  "predecessor_v2_manifest_file_sha256": "b6fe4847712037cc4e34b3a18b2a48e7966ab1e3f16f69838daadaa5599e6633",
+  "schema": "frontier-forms.discovery-admission-v3-presentation-link.v1",
+  "scientific_promotions": 0,
+  "source_difference": "HEATMAP_PRESENTATION_CHANGED_PR67; ALL_89_FROZEN_EVIDENCE_LEAVES_IDENTICAL",
+  "status": "SUCCESSOR_LINK_NOT_NEW_MODEL_GAIN",
+  "successor_manifest_root": "850bce37c0f039df4d6eb627cb680c068384b7345c2eec4755a2f524f1df2467",
+  "v1_admission_source_file_sha256": "4cb0443220fc41ec245b951a4eab00ef49327a3937b71fd49049947507cb367e",
+  "v1_source_path": "evidence/admission/FF_DISCOVERY_AND_NOVELTY_V1.json"
+}

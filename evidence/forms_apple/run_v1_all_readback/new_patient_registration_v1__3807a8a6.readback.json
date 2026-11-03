@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ethelyn Ebert",
+    "text": "Ethelyn Ebert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1983-08-08",
+    "text": "1983-08-08"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-640-1897",
+    "text": "555-640-1897"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "993 Sanford Run Apt 75",
+    "text": "993 Sanford Run Apt 75"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "North Andover",
+    "text": "North Andover"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Anthem",
+    "text": "Anthem"
+  }
+}

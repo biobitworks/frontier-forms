@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Elroy Bergstrom",
+    "text": "Elroy Bergstrom"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1961-03-23",
+    "text": "1961-03-23"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-420-7904",
+    "text": "555-420-7904"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "880 Medhurst Manor Apt 21",
+    "text": "880 Medhurst Manor Apt 21"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Quincy",
+    "text": "Quincy"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02186",
+    "text": "02186"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Dual Eligible",
+    "text": "Dual Eligible"
+  }
+}

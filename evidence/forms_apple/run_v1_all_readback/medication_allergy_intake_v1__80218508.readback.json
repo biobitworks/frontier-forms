@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roxana Kovacek",
+    "text": "Roxana Kovacek"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Hydrocortisone 10 MG/ML Topical Cream; Loratadine 10 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Levothyroxine Sodium 0.075 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet",
+    "text": "Hydrocortisone 10 MG/ML Topical Cream; Loratadine 10 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Levothyroxine Sodium 0.075 MG Oral Tablet; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Allergic disposition (finding)",
+    "text": "Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Sleep disorder (disorder); Gingivitis (disorder); Obstructive sleep apnea syndrome (disorder); Victim of intimate partner abuse (finding); Essential hypertension (disorder); Medication review due (situation); Has a criminal record (finding); Idiopathic atrophic hypothyroidism (disorder); Full-time employment (finding); Social isolation (finding); Stress (finding)",
+    "text": "Received higher education (finding); Body mass index 30+ - obesity (finding); Sleep disorder (disorder); Gingivitis (disorder); Obstructive sleep apnea syndrome (disorder); Victim of intimate partner abuse (finding); Essential hypertension (disorder); Medication review due (situation);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "159.9",
+    "text": "159.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "77.6",
+    "text": "77.6"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "72/58",
+    "text": "72/58"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Taylor Brown",
+    "text": "Taylor Brown"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1964-05-05",
+    "text": "1964-05-05"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-918-8827",
+    "text": "555-918-8827"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "467 Jacobi Wall Suite 15",
+    "text": "467 Jacobi Wall Suite 15"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Walpole",
+    "text": "Walpole"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02081",
+    "text": "02081"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Russian (Russia)",
+    "text": "Russian (Russia)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

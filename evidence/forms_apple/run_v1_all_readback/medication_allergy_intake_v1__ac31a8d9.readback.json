@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Donnie Mraz",
+    "text": "Donnie Mraz"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "lisinopril 10 MG Oral Tablet",
+    "text": "lisinopril 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Gingivitis (disorder); Malignant neoplasm of breast (disorder); Full-time employment (finding); Stress (finding); Medication review due (situation)",
+    "text": "Received higher education (finding); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "166.3",
+    "text": "166.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "77.5",
+    "text": "77.5"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "134/107",
+    "text": "134/107"
+  }
+}

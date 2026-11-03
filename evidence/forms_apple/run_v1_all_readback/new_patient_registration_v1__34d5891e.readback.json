@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Charmain Wyman",
+    "text": "Charmain Wyman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1998-03-18",
+    "text": "1998-03-18"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-481-8250",
+    "text": "555-481-8250"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "373 Gislason Row",
+    "text": "373 Gislason Row"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "New Bedford",
+    "text": "New Bedford"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02747",
+    "text": "02747"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

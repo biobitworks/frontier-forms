@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Laurie Powlowski",
+    "text": "Laurie Powlowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Received higher education (finding); Transport problem (finding); Body mass index 30+ - obesity (finding); Chronic sinusitis (disorder); Lack of access to transportation (finding); Social isolation (finding); Past pregnancy history of miscarriage (situation); Full-time employment (finding)",
+    "text": "Housing unsatisfactory (finding); Received higher education (finding); Transport problem (finding); Body mass index 30+ - obesity (finding); Chronic sinusitis (disorder); Lack of access to transportation (finding); Social isolation (finding); Past pregnancy history of miscarriage"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "165.8",
+    "text": "165.8"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "104.1",
+    "text": "104.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/80",
+    "text": "133/80"
+  }
+}

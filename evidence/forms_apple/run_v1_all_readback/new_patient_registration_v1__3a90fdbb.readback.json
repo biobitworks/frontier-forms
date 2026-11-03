@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Herb Hilll",
+    "text": "Herb Hilll"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2006-12-30",
+    "text": "2006-12-30"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-555-7983",
+    "text": "555-555-7983"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "579 Hansen Loaf Suite 3",
+    "text": "579 Hansen Loaf Suite 3"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Brockton",
+    "text": "Brockton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02302",
+    "text": "02302"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

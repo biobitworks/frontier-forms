@@ -1,0 +1,50 @@
+{
+ "captured": 0,
+ "fields_correct": 0,
+ "fields_total": 70,
+ "images": 10,
+ "pipeline": "PNG render -> one-page PDF -> macOS Preview window -> screencapture -l<window> -> Apple Vision OCR -> geometric parser",
+ "results": {
+  "synform2-ce08cff8d07665997ab7_E3_case_id_swap": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 517
+  },
+  "synform2-ce08cff8d07665997ab7_E6_name_swap": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 523
+  },
+  "synform2-ce08cff8d07665997ab7_E7_digit_flip": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 667
+  },
+  "synform2-ce08cff8d07665997ab7_V2_scan_sigma25": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 668
+  },
+  "synform2-ce08cff8d07665997ab7_clean": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 669
+  },
+  "synform2-ce08cff8d07665997ab7_scan": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 670
+  },
+  "synform2-d0c1b1664723a40a00dd_clean": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 671
+  },
+  "synform2-d0c1b1664723a40a00dd_scan": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 672
+  },
+  "synform2-d25a62e4657d1668520e_clean": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 673
+  },
+  "synform2-d25a62e4657d1668520e_scan": {
+   "status": "CAPTURE_FAILED:could not create image from window\n",
+   "window_id": 674
+  }
+ },
+ "schema": "redteam.preview_ocr.v1"
+}

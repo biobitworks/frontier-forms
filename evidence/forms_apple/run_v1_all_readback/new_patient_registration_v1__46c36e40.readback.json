@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Elden Paucek",
+    "text": "Elden Paucek"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1998-10-20",
+    "text": "1998-10-20"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-246-2152",
+    "text": "555-246-2152"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "543 Gutkowski Gate",
+    "text": "543 Gutkowski Gate"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "North Adams",
+    "text": "North Adams"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01247",
+    "text": "01247"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

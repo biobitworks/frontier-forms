@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Felica Goodwin",
+    "text": "Felica Goodwin"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1962-03-29",
+    "text": "1962-03-29"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-342-5242",
+    "text": "555-342-5242"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "244 Padberg Brook Unit 97",
+    "text": "244 Padberg Brook Unit 97"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Sudbury",
+    "text": "Sudbury"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Chinese",
+    "text": "Chinese"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

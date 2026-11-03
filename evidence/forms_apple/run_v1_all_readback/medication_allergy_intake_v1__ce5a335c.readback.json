@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ann Hagenes",
+    "text": "Ann Hagenes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Jolivette 28 Day Pack",
+    "text": "Jolivette 28 Day Pack"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Only received primary school education (finding); Unhealthy alcohol drinking behavior (finding); Body mass index 30+ - obesity (finding); Stress (finding); Medication review due (situation); Not in labor force (finding)",
+    "text": "Only received primary school education (finding); Unhealthy alcohol drinking behavior (finding); Body mass index 30+ - obesity (finding); Stress (finding); Medication review due (situation); Not in labor force (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "163",
+    "text": "163"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "81.1",
+    "text": "81.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "109/75",
+    "text": "109/75"
+  }
+}

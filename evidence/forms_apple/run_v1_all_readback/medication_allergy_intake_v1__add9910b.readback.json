@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Andrew Bogisich",
+    "text": "Andrew Bogisich"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Child attention deficit disorder (disorder)",
+    "text": "Child attention deficit disorder (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "152.7",
+    "text": "152.7"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "40.4",
+    "text": "40.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "128/83",
+    "text": "128/83"
+  }
+}

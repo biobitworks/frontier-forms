@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Lanny Volkman",
+    "text": "Lanny Volkman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2017-03-03",
+    "text": "2017-03-03"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-799-1540",
+    "text": "555-799-1540"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "759 Tremblay Mews",
+    "text": "759 Tremblay Mews"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Dedham",
+    "text": "Dedham"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02026",
+    "text": "02026"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

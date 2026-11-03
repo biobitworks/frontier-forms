@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jacinda Bahringer",
+    "text": "Jacinda Bahringer"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1947-03-26",
+    "text": "1947-03-26"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-625-2320",
+    "text": "555-625-2320"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "720 Mohr Tunnel Apt 62",
+    "text": "720 Mohr Tunnel Apt 62"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Easton",
+    "text": "Easton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

@@ -21,6 +21,10 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#c0ddf8;font-size:11px}
 .status{border-left:3px solid #81b2ed;padding:9px 12px;color:#c0d0e5}
 @media(max-width:850px){.layout{grid-template-columns:1fr}.grid{max-height:none}}
 </style></head><body>
+<!-- judge-caption:start -->
+<aside style="all:initial;display:block;font:13px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;background:#fffbe6;color:#1a1a1a;border:1px solid #e0c96b;border-radius:8px;padding:10px 14px;margin:12px 16px" aria-label="Figure caption"><b style="font-size:14px">Figure 6. One synthetic form: model field answers over Apple Vision OCR boxes</b><br><b>How to read:</b> Image = rendered synthetic PDF. Rectangles = Apple Vision text boxes (not Qwen). Box colour: green exact match, orange missing, red wrong. Pick the comparison arm (Apple OCR, qwen2.5vl image, qwen3 OCR-text) above the image.<br><b>Source:</b> PR #12 &middot; <b>Evidence grade:</b> Illustration only (n = 1 form) &middot; Synthetic MITRE Synthea data, local inference only. Index: docs/figures/FIGURES.md</aside>
+<!-- judge-caption:end -->
+
 <header><div style="letter-spacing:.17em;font-size:11px;color:#9dc8ff">FRONTIER FORMS · SYNTHETIC VISION EXPERIMENT</div>
 <h1>Field answers × checkpoint × bounding boxes</h1>
 <p>Apple Vision OCR geometry overlaid on the exact same rendered synthetic PDF image supplied to the local vision model. Boxes belong to Apple Vision, not Qwen. Model checkpoints are displayed only when a live reply was captured.</p></header>

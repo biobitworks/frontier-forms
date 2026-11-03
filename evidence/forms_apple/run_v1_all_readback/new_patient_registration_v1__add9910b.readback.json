@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Andrew Bogisich",
+    "text": "Andrew Bogisich"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2016-05-26",
+    "text": "2016-05-26"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-287-3469",
+    "text": "555-287-3469"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "560 Barton Union",
+    "text": "560 Barton Union"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Mansfield",
+    "text": "Mansfield"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

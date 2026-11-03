@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roy Leffler",
+    "text": "Roy Leffler"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2025-03-11",
+    "text": "2025-03-11"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-460-3213",
+    "text": "555-460-3213"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "521 Abshire Wall Apt 66",
+    "text": "521 Abshire Wall Apt 66"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Swansea",
+    "text": "Swansea"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

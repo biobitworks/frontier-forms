@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Bertram Erdman",
+    "text": "Bertram Erdman"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic sinusitis (disorder); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Limited social contact (finding); Impacted molars (disorder); Stress (finding); Medication review due (situation); Body mass index 30+ - obesity (finding); Full-time employment (finding)",
+    "text": "Chronic sinusitis (disorder); Educated to high school level (finding); Prediabetes (finding); Anemia (disorder); Limited social contact (finding); Impacted molars (disorder); Stress (finding); Medication review due (situation); Body mass index 30+ - obesity (finding); Full-time"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "184.9",
+    "text": "184.9"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "103.9",
+    "text": "103.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "113/90",
+    "text": "113/90"
+  }
+}

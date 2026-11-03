@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Corene Kovacek",
+    "text": "Corene Kovacek"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet",
+    "text": "Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Stress (finding); Medication review due (situation); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Full-time employment (finding)",
+    "text": "Received higher education (finding); Past pregnancy history of miscarriage (situation); Body mass index 30+ - obesity (finding); Essential hypertension (disorder); Stress (finding); Medication review due (situation); Chronic kidney disease stage 1 (disorder); Disorder of kidney"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "178.3",
+    "text": "178.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "87.9",
+    "text": "87.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "118/72",
+    "text": "118/72"
+  }
+}

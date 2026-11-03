@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Latarsha Sipes",
+    "text": "Latarsha Sipes"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1977-12-07",
+    "text": "1977-12-07"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-273-6103",
+    "text": "555-273-6103"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "873 Runte Wynd",
+    "text": "873 Runte Wynd"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Newton",
+    "text": "Newton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02461",
+    "text": "02461"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Widowed",
+    "text": "Widowed"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Uninsured",
+    "text": "Uninsured"
+  }
+}

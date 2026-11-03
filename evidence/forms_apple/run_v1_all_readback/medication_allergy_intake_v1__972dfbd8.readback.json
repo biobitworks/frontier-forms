@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ulrike Hilpert",
+    "text": "Ulrike Hilpert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Hydrochlorothiazide 25 MG Oral Tablet; 24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet",
+    "text": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Hydrochlorothiazide 25 MG Oral Tablet; 24 HR Metformin hydrochloride 500 MG Extended"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Prediabetes (finding); Educated to high school level (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Diabetes mellitus type 2 (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Hyperglycemia (disorder); Hypertriglyceridemia (disorder); Metabolic syndrome X (disorder); Nonproliferative diabetic retinopathy due to type 2 diabetes mellitus (disorder); Essential hypertension (disorder); Full-time employment (finding)",
+    "text": "Risk activity involvement (finding); Prediabetes (finding); Educated to high school level (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); History of tubal ligation (situation); Body mass index 30+ - obesity (finding); Diabetes mellitus type 2 (disorder);"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "169.3",
+    "text": "169.3"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "87.4",
+    "text": "87.4"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "124/80",
+    "text": "124/80"
+  }
+}
