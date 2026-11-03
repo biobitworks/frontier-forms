@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Octavio McKenzie",
+    "text": "Octavio McKenzie"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1965-05-09",
+    "text": "1965-05-09"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-223-7341",
+    "text": "555-223-7341"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "473 Monahan Junction Suite 59",
+    "text": "473 Monahan Junction Suite 59"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lexington",
+    "text": "Lexington"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02420",
+    "text": "02420"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Humana",
+    "text": "Humana"
+  }
+}

@@ -1,0 +1,10 @@
+{
+ "schema":"frontier-forms.dependency-reconciliation.v1",
+ "predecessor_ci_failure":"https://github.com/biobitworks/frontier-forms/actions/runs/41544123866",
+ "independent_parallel_repair_pr":28,
+ "parallel_main_merge":"aa9b3c7e8edbb85ed1a855e42b6b6b26602cdbda",
+ "reason":"Concurrent PR #28 pinned numpy==1.26.4; successor keeps NumPy 1.26.4 and adds independently pinned SciPy 1.15.3",
+ "original_local_tests":"133 PASS",
+ "ci_state":"NOT_YET_EXECUTED",
+ "model_gain":"NOT_COMPUTED"
+}

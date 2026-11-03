@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jarvis Hyatt",
+    "text": "Jarvis Hyatt"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1990-04-29",
+    "text": "1990-04-29"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-383-3433",
+    "text": "555-383-3433"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "724 Weber Pathway Unit 98",
+    "text": "724 Weber Pathway Unit 98"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Foxborough",
+    "text": "Foxborough"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02035",
+    "text": "02035"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Hindi",
+    "text": "Hindi"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

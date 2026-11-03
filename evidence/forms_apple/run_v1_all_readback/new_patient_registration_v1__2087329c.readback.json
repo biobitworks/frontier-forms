@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Mindi Ondricka",
+    "text": "Mindi Ondricka"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1952-07-13",
+    "text": "1952-07-13"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-433-9136",
+    "text": "555-433-9136"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "464 Russel Fork Suite 88",
+    "text": "464 Russel Fork Suite 88"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Methuen",
+    "text": "Methuen"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01841",
+    "text": "01841"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

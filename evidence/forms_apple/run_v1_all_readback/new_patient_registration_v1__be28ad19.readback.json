@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Vance Ebert",
+    "text": "Vance Ebert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2023-07-22",
+    "text": "2023-07-22"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-950-9577",
+    "text": "555-950-9577"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "332 Kreiger Mission Unit 26",
+    "text": "332 Kreiger Mission Unit 26"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Norwood",
+    "text": "Norwood"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02062",
+    "text": "02062"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

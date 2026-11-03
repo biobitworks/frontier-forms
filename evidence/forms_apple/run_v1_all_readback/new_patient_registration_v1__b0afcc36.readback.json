@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ricky Aufderhar",
+    "text": "Ricky Aufderhar"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1990-10-18",
+    "text": "1990-10-18"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-112-1668",
+    "text": "555-112-1668"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "876 Keebler Bridge Suite 9",
+    "text": "876 Keebler Bridge Suite 9"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Salem",
+    "text": "Salem"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01970",
+    "text": "01970"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Divorced",
+    "text": "Divorced"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Anthem",
+    "text": "Anthem"
+  }
+}

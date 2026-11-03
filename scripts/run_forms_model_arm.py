@@ -37,11 +37,12 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--splits", default="validation,test")
+    ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16", "float16"])
     args = ap.parse_args()
 
     dev = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu")
     tok = AutoTokenizer.from_pretrained(args.adapter or args.base)
-    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=torch.float32)
+    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=getattr(torch, args.dtype))
     if args.adapter:
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, args.adapter)
@@ -118,7 +119,7 @@ def main():
     (out / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     receipt = {"arm": args.name, **model_identity, "splits": sorted(keep), "n_patients": len(members), "n_cases": len(rows),
                "cohort_root_evaluated": cohort_root(members), "predictions_sha256": sha256_bytes(data),
-               "output_root": output_root(rows), "decoding": "greedy, max_new_tokens=192",
+               "output_root": output_root(rows), "decoding": "greedy, max_new_tokens=192", "dtype": args.dtype,
                "model_calls": calls["n"], "model_seconds": round(calls["seconds"], 1),
                "malformed_outputs": calls["malformed"], "wall_seconds": round(elapsed, 1), "device": dev,
                "host": {"machine": platform.machine(), "platform": platform.platform(), "torch": torch.__version__},

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jacqualine Johnson",
+    "text": "Jacqualine Johnson"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; 120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+    "text": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; 120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Childhood asthma (disorder)",
+    "text": "Childhood asthma (disorder)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "137.6",
+    "text": "137.6"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "44.8",
+    "text": "44.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "115/66",
+    "text": "115/66"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Olin Gusikowski",
+    "text": "Olin Gusikowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1997-11-06",
+    "text": "1997-11-06"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-950-2298",
+    "text": "555-950-2298"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1009 Borer Highlands",
+    "text": "1009 Borer Highlands"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Boston",
+    "text": "Boston"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02152",
+    "text": "02152"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Anthem",
+    "text": "Anthem"
+  }
+}

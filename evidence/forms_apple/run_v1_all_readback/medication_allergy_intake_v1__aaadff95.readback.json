@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Andre Baumbach",
+    "text": "Andre Baumbach"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "ferrous sulfate 325 MG Oral Tablet; lisinopril 10 MG Oral Tablet; NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]; amLODIPine 2.5 MG Oral Tablet; Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler [Qvar]",
+    "text": "ferrous sulfate 325 MG Oral Tablet; lisinopril 10 MG Oral Tablet; NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]; amLODIPine 2.5 MG Oral Tablet; Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Shellfish (substance); Allergic disposition (finding)",
+    "text": "Shellfish (substance); Allergic disposition (finding)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Housing unsatisfactory (finding); Received higher education (finding); Essential hypertension (disorder); Prediabetes (finding); Anemia (disorder); Has a criminal record (finding); Body mass index 30+ - obesity (finding); Metabolic syndrome X (disorder); Medication review due (situation); Part-time employment (finding); Stress (finding)",
+    "text": "Housing unsatisfactory (finding); Received higher education (finding); Essential hypertension (disorder); Prediabetes (finding); Anemia (disorder); Has a criminal record (finding); Body mass index 30+ - obesity (finding); Metabolic syndrome X (disorder); Medication review due"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "169.4",
+    "text": "169.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "87.3",
+    "text": "87.3"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/85",
+    "text": "133/85"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Weston Schroeder",
+    "text": "Weston Schroeder"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2023-08-02",
+    "text": "2023-08-02"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-814-4612",
+    "text": "555-814-4612"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "373 Corwin Gateway",
+    "text": "373 Corwin Gateway"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Taunton",
+    "text": "Taunton"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02767",
+    "text": "02767"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

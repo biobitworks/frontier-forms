@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Keith Sanford",
+    "text": "Keith Sanford"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2015-12-05",
+    "text": "2015-12-05"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-459-5109",
+    "text": "555-459-5109"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "736 Ledner Terrace Suite 64",
+    "text": "736 Ledner Terrace Suite 64"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Sturbridge",
+    "text": "Sturbridge"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01566",
+    "text": "01566"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "UnitedHealthcare",
+    "text": "UnitedHealthcare"
+  }
+}

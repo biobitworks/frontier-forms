@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ulrike Hilpert",
+    "text": "Ulrike Hilpert"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1979-05-11",
+    "text": "1979-05-11"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-652-5694",
+    "text": "555-652-5694"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "641 Nolan Village Apt 80",
+    "text": "641 Nolan Village Apt 80"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Southbridge",
+    "text": "Southbridge"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01550",
+    "text": "01550"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}

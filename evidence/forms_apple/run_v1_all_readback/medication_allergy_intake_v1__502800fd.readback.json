@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Guillermina Terry",
+    "text": "Guillermina Terry"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "clonazePAM 0.25 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; 12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Alendronic acid 10 MG Oral Tablet",
+    "text": "clonazePAM 0.25 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Seizure disorder (disorder); History of seizure (situation); Epilepsy (disorder); Gingivitis (disorder); Only received primary school education (finding); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage (situation); Essential hypertension (disorder); Chronic kidney disease stage 1 (disorder); Disorder of kidney due to diabetes mellitus (disorder); Metabolic syndrome X (disorder); Chronic kidney disease stage 2 (disorder); Microalbuminuria due to type 2 diabetes mellitus (disorder); Ischemic heart disease (disorder); Abnormal findings diagnostic imaging heart+coronary circulat (finding); History of coronary artery bypass grafting (situation); Chronic kidney disease stage 3 (disorder); Proteinuria due to type 2 diabetes mellitus (disorder); Osteoporosis (disorder); Has a criminal record (finding); Chronic pain (finding); Chronic low back pain (finding); Chronic neck pain (finding); Social isolation (finding); Unemployed (finding); Stress (finding)",
+    "text": "Seizure disorder (disorder); History of seizure (situation); Epilepsy (disorder); Gingivitis (disorder); Only received primary school education (finding); Body mass index 30+ - obesity (finding); Prediabetes (finding); Anemia (disorder); Past pregnancy history of miscarriage"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "158.5",
+    "text": "158.5"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "87.1",
+    "text": "87.1"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "115/82",
+    "text": "115/82"
+  }
+}

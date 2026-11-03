@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "former",
+    "text": "former"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Tiffaney Conn",
+    "text": "Tiffaney Conn"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 10 MG Extended Release Oral Tablet [Oxycontin]; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 72 HR Fentanyl 0.025 MG/HR Transdermal System; 12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "text": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 10 MG Extended Release Oral Tablet [Oxycontin]; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 72 HR Fentanyl 0.025 MG/HR Transdermal System; 12 HR Hydrocodone Bitartrate 10 MG"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Received higher education (finding); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)",
+    "text": "Chronic pain (finding); Chronic low back pain (finding); Fibromyalgia (disorder); Received higher education (finding); Gingivitis (disorder); Medication review due (situation); Full-time employment (finding)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "173.4",
+    "text": "173.4"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "76",
+    "text": "76"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "111/78",
+    "text": "111/78"
+  }
+}

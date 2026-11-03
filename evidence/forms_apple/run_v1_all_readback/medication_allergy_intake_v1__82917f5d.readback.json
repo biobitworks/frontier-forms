@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Celena Bergstrom",
+    "text": "Celena Bergstrom"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "History of appendectomy (situation)",
+    "text": "History of appendectomy (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "137",
+    "text": "137"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "43.2",
+    "text": "43.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "127/85",
+    "text": "127/85"
+  }
+}

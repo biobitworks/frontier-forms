@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Jared Little",
+    "text": "Jared Little"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1999-09-24",
+    "text": "1999-09-24"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-937-4273",
+    "text": "555-937-4273"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "712 Terry Frontage road",
+    "text": "712 Terry Frontage road"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Holbrook",
+    "text": "Holbrook"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02368",
+    "text": "02368"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

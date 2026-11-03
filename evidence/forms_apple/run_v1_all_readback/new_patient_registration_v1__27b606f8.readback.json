@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roxanna Gulgowski",
+    "text": "Roxanna Gulgowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1991-01-25",
+    "text": "1991-01-25"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-302-3486",
+    "text": "555-302-3486"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "1045 Kris Hollow Apt 12",
+    "text": "1045 Kris Hollow Apt 12"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Concord",
+    "text": "Concord"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Aetna",
+    "text": "Aetna"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Pete Denesik",
+    "text": "Pete Denesik"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Risk activity involvement (finding); Medication review due (situation)",
+    "text": "Risk activity involvement (finding); Medication review due (situation)"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "161",
+    "text": "161"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "36.8",
+    "text": "36.8"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "133/80",
+    "text": "133/80"
+  }
+}

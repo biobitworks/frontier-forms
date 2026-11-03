@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Cinderella Dickens",
+    "text": "Cinderella Dickens"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1945-12-16",
+    "text": "1945-12-16"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-930-4920",
+    "text": "555-930-4920"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "525 Jerde Crossroad",
+    "text": "525 Jerde Crossroad"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Mashpee",
+    "text": "Mashpee"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "00000",
+    "text": "00000"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicare",
+    "text": "Medicare"
+  }
+}

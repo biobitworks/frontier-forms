@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "female",
+    "text": "female"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Palmira Ryan",
+    "text": "Palmira Ryan"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "2023-08-21",
+    "text": "2023-08-21"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-367-4544",
+    "text": "555-367-4544"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "448 Senger Throughway",
+    "text": "448 Senger Throughway"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Lynn",
+    "text": "Lynn"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "01904",
+    "text": "01904"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Never Married",
+    "text": "Never Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Medicaid",
+    "text": "Medicaid"
+  }
+}

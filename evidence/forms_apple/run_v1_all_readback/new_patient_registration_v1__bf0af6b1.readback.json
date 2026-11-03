@@ -1,0 +1,57 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "male",
+    "text": "male"
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Ellis Ondricka",
+    "text": "Ellis Ondricka"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "1962-08-02",
+    "text": "1962-08-02"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "555-453-7457",
+    "text": "555-453-7457"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "177 Bartell Trafficway Apt 28",
+    "text": "177 Bartell Trafficway Apt 28"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Barnstable",
+    "text": "Barnstable"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "MA",
+    "text": "MA"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "02655",
+    "text": "02655"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "English (United States)",
+    "text": "English (United States)"
+  },
+  "text8": {
+    "min_confidence": 1,
+    "pdf_value": "Married",
+    "text": "Married"
+  },
+  "text9": {
+    "min_confidence": 1,
+    "pdf_value": "Blue Cross Blue Shield",
+    "text": "Blue Cross Blue Shield"
+  }
+}

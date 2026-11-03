@@ -1,0 +1,356 @@
+{
+  "assertion": "PR merge is not scientific admission; no model superiority admitted",
+  "existing_24_training_events": [
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0-to-B0+L1",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0-to-B0+L2",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0-to-B0+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L2-to-B0+L1+L2",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.2222222222222222,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L3-to-B0+L1+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L1-to-B0+L1+L2",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L3-to-B0+L2+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.2222222222222222,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L1-to-B0+L1+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L2-to-B0+L2+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.2222222222222222,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L2+L3-to-B0+L1+L2+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L1+L3-to-B0+L1+L2+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.2222222222222222,
+      "family": "fco_lomo",
+      "id": "FF-LOMO-B0+L1+L2-to-B0+L1+L2+L3",
+      "model": "Deterministic FCO/FCG rules; neural weights unchanged",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.1623931623931624,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-none-to-M1",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.2678062678062678,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-none-to-M2",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.9886039886039886,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-none-to-M3",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.5626780626780626,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-M1+M2-to-M1+M2+M3",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "DISCOVERY_POSITIVE_NOT_PROMOTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-M1+M3-to-M1+M2+M3",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "detector_lomo",
+      "id": "FF-DETECTOR-M2+M3-to-M1+M2+M3",
+      "model": "Deterministic Merkle / Lean4 / FCO source-binding detectors",
+      "promoted": false,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_OR_TIE",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": -0.020793950850661602,
+      "family": "training_size_cross_section",
+      "id": "FF-RF-CROSSSECTION-FF-BOX-V2-TINY",
+      "model": "RandomForestClassifier 24 trees",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_NO_GAIN",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": -0.020793950850661602,
+      "family": "training_size_cross_section",
+      "id": "FF-RF-CROSSSECTION-FF-BOX-V2-SMALL",
+      "model": "RandomForestClassifier 24 trees",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_NO_GAIN",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": -0.026615969581749055,
+      "family": "training_size_cross_section",
+      "id": "FF-RF-CROSSSECTION-FF-BOX-V2-MEDIUM",
+      "model": "RandomForestClassifier 24 trees",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_NO_GAIN",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": 0.0,
+      "family": "model_weight_comparison",
+      "id": "FF-LOGISTIC-BBOX-CONTROL-20261102",
+      "model": "CPU LogisticRegression (trained 3 blank forms)",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NEGATIVE_NO_GAIN",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": null,
+      "family": "actual_training_snapshot",
+      "id": "FF-QWEN05-LOCAL-SFT-SNAPSHOT-20261102T225623Z",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct; LoRA rank16 lr0.0002",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "OBSERVED_BASELINE_ONLY",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    },
+    {
+      "delta": null,
+      "family": "methodology_only",
+      "id": "FF-VITA-DAISY-ABSTRACT-ONLY",
+      "model": "No shared checkpoint, no shared training job",
+      "promoted": null,
+      "source": "dashboard/training_progress_latest.json",
+      "status": "NOT_COMPUTED",
+      "time_basis": "2026-11-02T22:56:23Z snapshot; individual event wall times not all independently recorded"
+    }
+  ],
+  "findings": [
+    {
+      "interpretation": "HOLD_NO_INDEPENDENT_PI_ADMISSION",
+      "kind": "HOLD",
+      "source": "evidence/admission/FF_FCAR_GATE_ASSESSMENT_V1.json",
+      "source_pr": 49,
+      "title": "Clinical/model superiority",
+      "value": null
+    },
+    {
+      "interpretation": "47 TP, 426 FP, 313 FN; NOT PROMOTED",
+      "kind": "NEGATIVE",
+      "source": "evidence/forms_bbox/LOCAL_BBOX_D1_D2_AUDIT_20261102.json",
+      "source_pr": 16,
+      "title": "D1 neural segmentation recall",
+      "value": 0.13056
+    },
+    {
+      "interpretation": "Precision 0.65649, 180 false positive boxes; known layouts only",
+      "kind": "EXPLORATORY",
+      "source": "evidence/forms_bbox/LOCAL_BBOX_D1_D2_AUDIT_20261102.json",
+      "source_pr": 16,
+      "title": "D2 candidate classifier recall",
+      "value": 0.95556
+    },
+    {
+      "interpretation": "540/540 for both; zero gain",
+      "kind": "NEGATIVE",
+      "source": "evidence/forms_box_validator/run_v3/summary.json",
+      "source_pr": 14,
+      "title": "Trained logistic vs contour delta",
+      "value": 0
+    },
+    {
+      "interpretation": "Three negative cross-sectional events; no model gain",
+      "kind": "NEGATIVE",
+      "source": "dashboard/training_progress_latest.json",
+      "source_pr": 15,
+      "title": "Random forest training-size sensitivity",
+      "value": null
+    },
+    {
+      "interpretation": "18/54 to 30/54, no independent replication",
+      "kind": "DISCOVERY",
+      "source": "evidence/baseline/BASELINE_V1.json",
+      "source_pr": 17,
+      "title": "B0+FCG paired full-form improvement",
+      "value": 0.222222
+    },
+    {
+      "interpretation": "694/702 planted faults; 236/5731 clean-field false positives",
+      "kind": "DISCOVERY",
+      "source": "evidence/forms_detectors/run_v1/DETECTOR_RESULTS_V1.json",
+      "source_pr": 10,
+      "title": "Full synthetic detector recall",
+      "value": 0.9886
+    },
+    {
+      "interpretation": "209/322 versus geometric parser 283/322",
+      "kind": "NEGATIVE",
+      "source": "https://github.com/biobitworks/frontier-forms/pull/23",
+      "source_pr": 23,
+      "title": "Qwen2.5:1.5b on SYNFORM2 comparison",
+      "value": null
+    },
+    {
+      "interpretation": "109/322 versus geometric parser 283/322",
+      "kind": "NEGATIVE",
+      "source": "https://github.com/biobitworks/frontier-forms/pull/23",
+      "source_pr": 23,
+      "title": "Qwen3:1.7b on SYNFORM2 comparison",
+      "value": null
+    },
+    {
+      "interpretation": "315/322 full, 316/322 no-scan; full mAP50 higher",
+      "kind": "MIXED",
+      "source": "evidence/redteam/detector/full/final_receipt.json",
+      "source_pr": 21,
+      "title": "YOLOv8n full vs no-scan",
+      "value": null
+    },
+    {
+      "interpretation": "Claude PR51: clean 58/70 vs annotated 0/70, not merged",
+      "kind": "NEGATIVE_DRAFT",
+      "source": "https://github.com/biobitworks/frontier-forms/pull/51",
+      "source_pr": 51,
+      "title": "OCR on drawn bounding boxes",
+      "value": null
+    },
+    {
+      "interpretation": "10 of 62 manifest entries repaired in ChatGPT audit PR55, not merged",
+      "kind": "FAILED_REPAIRED_DRAFT",
+      "source": "https://github.com/biobitworks/frontier-forms/pull/55",
+      "source_pr": 55,
+      "title": "Annotation manifest identity mismatch",
+      "value": null
+    },
+    {
+      "interpretation": "Epoch-0 training snapshot only, no admitted gain",
+      "kind": "NOT_COMPUTED",
+      "source": "dashboard/training_progress_latest.json",
+      "source_pr": 18,
+      "title": "Qwen2.5 0.5B SFT model gain",
+      "value": null
+    }
+  ],
+  "git_pr_merges": 33,
+  "merkle_root": "NOT_COMPUTED",
+  "schema": "frontier_forms.negative_promotion_register.v1",
+  "scientific_promotions": 0,
+  "snapshot_utc": "2026-11-02T23:46:01Z"
+}

@@ -1,0 +1,47 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Roxanna Gulgowski",
+    "text": "Roxanna Gulgowski"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet [Tylenol]; Ibuprofen 400 MG Oral Tablet [Ibu]; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Yaz 28 Day Pack",
+    "text": "Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Acetaminophen 325 MG Oral Tablet [Tylenol]; Ibuprofen 400 MG Oral Tablet [Ibu]; lisinopril 10 MG Oral Tablet;"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "Aspirin",
+    "text": "Aspirin"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "Shellfish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)",
+    "text": "Shellfish (substance); Allergic disposition (finding); Bee venom (substance); Mold (organism); House dust mite (organism); Animal dander (substance); Grass pollen (substance); Tree pollen (substance)"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "Received higher education (finding); Social isolation (finding); Chronic pain (finding); Chronic low back pain (finding); Unhealthy alcohol drinking behavior (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Full-time employment (finding); Limited social contact (finding)",
+    "text": "Received higher education (finding); Social isolation (finding); Chronic pain (finding); Chronic low back pain (finding); Unhealthy alcohol drinking behavior (finding); Prediabetes (finding); Anemia (disorder); Essential hypertension (disorder); Full-time employment (finding); Limited"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "164.1",
+    "text": "164.1"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "57.2",
+    "text": "57.2"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "119/86",
+    "text": "119/86"
+  }
+}

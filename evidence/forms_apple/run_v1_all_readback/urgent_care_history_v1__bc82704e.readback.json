@@ -1,0 +1,52 @@
+{
+  "choice0": {
+    "min_confidence": 1,
+    "pdf_value": "never",
+    "text": ""
+  },
+  "choice1": {
+    "min_confidence": 1,
+    "pdf_value": "",
+    "text": ""
+  },
+  "text0": {
+    "min_confidence": 1,
+    "pdf_value": "Gibson",
+    "text": "Gibson"
+  },
+  "text1": {
+    "min_confidence": 1,
+    "pdf_value": "Birgit",
+    "text": "Birgit"
+  },
+  "text2": {
+    "min_confidence": 1,
+    "pdf_value": "2022-03-12",
+    "text": "2022-03-12"
+  },
+  "text3": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text4": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text5": {
+    "min_confidence": 1,
+    "pdf_value": "None",
+    "text": "None"
+  },
+  "text6": {
+    "min_confidence": 1,
+    "pdf_value": "17.9",
+    "text": "17.9"
+  },
+  "text7": {
+    "min_confidence": 1,
+    "pdf_value": "Cigna Health",
+    "text": "Cigna Health"
+  }
+}
