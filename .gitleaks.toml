@@ -4,6 +4,7 @@
 #   row_key_sha256 / case_digest_sha256 = 64-hex SHA-256 case digests
 #   case_key = Synthea patient UUIDs plus form ids
 #   template_key = form template names such as medication_allergy_intake_v1
+#   tokenizer file names in adapter_sha256 maps (SFT receipts) = 64-hex SHA-256 of public tokenizer files
 title = "frontier-forms"
 
 [extend]
@@ -20,4 +21,5 @@ regexes = [
   '''^"?(row_key_sha256|case_digest_sha256|key)"?\s*[:=]\s*"?[0-9a-f]{64}"?$''',
   '''^"?case_key"?\s*[:=]\s*"?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}''',
   '''^"?template_key"?\s*[:=]\s*"?[a-z0-9_]+_v[0-9]+"?$''',
+  '''^"?(added_tokens|special_tokens_map|tokenizer|tokenizer_config)\.json"?\s*:\s*"?[0-9a-f]{64}"?$''',
 ]

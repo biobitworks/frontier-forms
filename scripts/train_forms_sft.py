@@ -23,6 +23,18 @@ import torch
 from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+
+def local_base(base, revision):
+    """With HF_HUB_OFFLINE set, load the base from the local Hugging Face cache by path.
+    Some transformers versions still call the Hub API while loading a tokenizer by repo id,
+    which fails offline. Returns (path_to_load, snapshot_revision_or_None)."""
+    import os
+    if os.environ.get("HF_HUB_OFFLINE") and not Path(base).exists():
+        from huggingface_hub import snapshot_download
+        p = snapshot_download(base, revision=revision, local_files_only=True)
+        return p, Path(p).name
+    return base, None
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/forms_sft_v1"
 
@@ -64,9 +76,11 @@ def main():
     random.seed(args.seed)
     torch.manual_seed(args.seed)
     dev = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu")
-    tok = AutoTokenizer.from_pretrained(args.base, revision=args.revision)
-    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=getattr(torch, args.dtype))
-    base_rev = getattr(model.config, "_commit_hash", None)
+    load_from, snap_rev = local_base(args.base, args.revision)
+    tok = AutoTokenizer.from_pretrained(load_from, revision=None if snap_rev else args.revision)
+    model = AutoModelForCausalLM.from_pretrained(load_from, revision=None if snap_rev else args.revision,
+                                                 torch_dtype=getattr(torch, args.dtype))
+    base_rev = getattr(model.config, "_commit_hash", None) or snap_rev
     if args.grad_ckpt:
         model.gradient_checkpointing_enable()
         model.enable_input_require_grads()

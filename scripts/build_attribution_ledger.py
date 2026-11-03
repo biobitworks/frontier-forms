@@ -142,6 +142,51 @@ def main():
                          "attribution": "SINGLE_MODEL_CHANGE",
                          "evidence": {"path": rel(arms[m1][1] / "predictions.jsonl"), "sha256": sha(arms[m1][1] / "predictions.jsonl")}})
 
+    # 5. post-deadline SFT selection attempts: validation split only (test never read), every attempt logged
+    sd = md / "selection_v1"
+    if sd.exists():
+        import sys
+        sys.path.insert(0, str(ROOT / "src"))
+        from frontier_forms.forms.statistics_bridge import paired_vs_b0
+        load = lambda d: [json.loads(x) for x in (d / "predictions.jsonl").read_text().splitlines()]
+        m0 = next((k for k in arms if k.startswith("M0")), None)
+        m0_val = [r for r in load(arms[m0][1]) if r["split"] == "validation"] if m0 else None
+        for p in sorted(sd.glob("*/receipt.json")):
+            rec = json.loads(p.read_text())
+            s = json.loads((p.parent / "summary.json").read_text())
+            tr = p.parent / "train_receipt.json"
+            train = json.loads(tr.read_text()) if tr.exists() else {}
+            ident = {k: rec.get(k) for k in ("base_model", "base_revision", "adapter_path", "adapter_sha256")}
+            ident["training"] = {"method": train.get("method"), "lora_rank": train.get("lora_rank"),
+                                 "hyperparameters": train.get("hyperparameters"), "selected_epoch": train.get("selected_epoch"),
+                                 "selected_val_loss": train.get("selected_val_loss"), "data": train.get("data")}
+            common = {"family": "sft_selection", "post_deadline": True, "child_arm": rec["arm"],
+                      "evidence": {"path": rel(p.parent / "summary.json"), "sha256": sha(p.parent / "summary.json")}}
+            rows.append({**common, "parent_arm": "B0-v1",
+                         "model_weights": {"parent": rules, "child": ident, "changed": True},
+                         "mechanism": {"changed": ["mapper:rules->model"]},
+                         "outcome": outcome(s["paired_vs_B0"]["overall"], "required_fields_correct per form", "validation"),
+                         "attribution": "CONFOUNDED",
+                         "note": "selection-phase comparison on validation; not a test-split claim"})
+            if m0_val:
+                res = paired_vs_b0(m0_val, load(p.parent))
+                rows.append({**common, "parent_arm": m0,
+                             "model_weights": {"parent": arms[m0][0], "child": ident, "changed": True},
+                             "mechanism": {"changed": []},
+                             "outcome": outcome(res["overall"], "required_fields_correct per form", "validation"),
+                             "attribution": "SINGLE_MODEL_CHANGE",
+                             "note": "same base weights, prompt and harness; only the trained adapter differs"})
+        af = sd / "ATTEMPTS.json"
+        if af.exists():
+            for a in json.loads(af.read_text())["attempts"]:
+                if a["status"].startswith(("FAILED", "ABORTED")):
+                    rows.append({"family": "sft_selection", "post_deadline": True, "parent_arm": m0, "child_arm": a["run"],
+                                 "attempt": a.get("try"), "model_weights": {"child": "NO_WEIGHTS_PRODUCED", "changed": None},
+                                 "mechanism": {"changed": []},
+                                 "outcome": {"status": a["status"], "reason": a.get("reason", "")},
+                                 "attribution": "NO_OUTCOME",
+                                 "evidence": {"path": rel(af), "sha256": sha(af)}})
+
     OUT.write_text("".join(json.dumps(r, sort_keys=True) + "\n" for r in rows))
     counts = {}
     for r in rows:

@@ -67,6 +67,13 @@
    "kind": "local Qwen model"
   }
  ],
+ "sft_selection_validation": [
+  {
+   "attempt": "S1-lora-r16-e2-lr2e-4",
+   "field_accuracy": 0.95,
+   "full_form_success_required": 0.736842
+  }
+ ],
  "v2_training_curve": [
   {
    "epoch": 1.0,

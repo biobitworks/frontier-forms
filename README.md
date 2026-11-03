@@ -90,17 +90,17 @@ This is a live operational status block generated from the latest local SFT rece
 | N1 NVIDIA Nemotron-Mini 4B (zero-shot, local Ollama) | 41.5% (validation+test) | 0/92 validation+test | `evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json` |
 | M2 qwen3:1.7b (zero-shot, local Ollama) | 72.6% (validation+test) | 1/92 validation+test (1/54 test) | `evidence/forms_model/M2-qwen3-1.7b/summary.json` |
 
-**Runs (status as of 2026-11-03T02:46:00Z):**
+**Runs (status as of 2026-11-03T03:15:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
-| S1 | LoRA r16, lr 2e-4, 2 epochs | training (epoch 2 of 2, step 300; train loss 0.004), validation scoring next | 1.017 (before training) | — | — |
-| D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | queued | — | — | — |
-| S2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
-| D2 | DoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
-| S3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
+| S1 | LoRA r16, lr 2e-4, 2 epochs | done: validation 28/38 full forms (73.7%), field accuracy 95.0% (B0 19/38 on the same forms; McNemar p=0.012, selection phase only) | 0.0074 (epoch 2 kept; 1.017 before training) | — | — |
+| D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | training (3rd try; first two failed before training when the Studio lost internet, logged in selection_v1/ATTEMPTS.json) | — | — | — |
+| S2 | LoRA r16, lr 2e-4, 4 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
+| D2 | DoRA r16, lr 2e-4, 4 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
+| S3 | LoRA r32, lr 5e-4, 3 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
 
-**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
+**Results will appear in:** `evidence/forms_model/selection_v1/ (one folder per attempt: receipt, train_receipt, answers, summary; ATTEMPTS.json lists every try including failures)` · `evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
 Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
 
 <!-- sft-status:end -->
