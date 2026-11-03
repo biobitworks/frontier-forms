@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build docs/judges/present.html: one self-contained presentation page for judges, drawn only from committed evidence.
+"""Build docs/judges/present_v2.html (successor of the frozen present.html): one self-contained presentation page for judges, drawn only from committed evidence.
 
 Reads the discovery admission ledger, gate factorial, detector epoch ledgers, OCR-vs-boxes receipt and two demo
 screenshots (embedded as small JPEG data URIs). No network, no external data. Synthetic data only.
@@ -10,7 +10,9 @@ import base64, hashlib, io, json, subprocess
 from pathlib import Path
 
 R = Path(__file__).resolve().parent.parent.parent
-OUT = R / 'docs/judges/present.html'
+# docs/judges/present.html is frozen: docs/judges/FINAL_PUBLIC_DATA_COVERAGE_20261102_V1.json pins its exact bytes.
+# Later versions are append-only successors.
+OUT = R / 'docs/judges/present_v2.html'
 
 
 def j(rel): return json.loads((R / rel).read_text())
