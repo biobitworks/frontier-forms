@@ -3,7 +3,7 @@
   "adapter_sha256": null,
   "arm": "N1-nvidia-nemotron-mini-4b",
   "base_model": "ollama:nemotron-mini",
-  "base_revision": null,
+  "base_revision": "ed76ab18784f5a01c9ec5b3c250e964d4f9c7a983e59ba041bb995f0fe2e8fb3",
   "cohort_root_evaluated": "3cd5eff2eb2b2eb7bda436ae8aaa5f18dbd23c8051d63d3b0f249608c0ff8ce6",
   "decoding": "temperature 0, seed 20261102, num_predict 192, think false",
   "host": {
