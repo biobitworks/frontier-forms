@@ -19,6 +19,18 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+
+def local_base(base, revision):
+    """With HF_HUB_OFFLINE set, load the base from the local Hugging Face cache by path.
+    Some transformers versions still call the Hub API while loading a tokenizer by repo id,
+    which fails offline. Returns (path_to_load, snapshot_revision_or_None)."""
+    import os
+    if os.environ.get("HF_HUB_OFFLINE") and not Path(base).exists():
+        from huggingface_hub import snapshot_download
+        p = snapshot_download(base, revision=revision, local_files_only=True)
+        return p, Path(p).name
+    return base, None
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from frontier_forms.forms import b0, sft_data  # noqa: E402
@@ -41,8 +53,10 @@ def main():
     args = ap.parse_args()
 
     dev = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu")
-    tok = AutoTokenizer.from_pretrained(args.adapter or args.base)
-    model = AutoModelForCausalLM.from_pretrained(args.base, revision=args.revision, torch_dtype=getattr(torch, args.dtype))
+    load_from, snap_rev = local_base(args.base, args.revision)
+    tok = AutoTokenizer.from_pretrained(args.adapter or load_from)
+    model = AutoModelForCausalLM.from_pretrained(load_from, revision=None if snap_rev else args.revision,
+                                                 torch_dtype=getattr(torch, args.dtype))
     if args.adapter:
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, args.adapter)
@@ -52,7 +66,7 @@ def main():
     adapter_sha = None
     if args.adapter:
         adapter_sha = {p.name: sha256_bytes(p.read_bytes()) for p in sorted(Path(args.adapter).glob("*")) if p.is_file()}
-    model_identity = {"base_model": args.base, "base_revision": getattr(model.config, "_commit_hash", None),
+    model_identity = {"base_model": args.base, "base_revision": getattr(model.config, "_commit_hash", None) or snap_rev,
                       "adapter_path": args.adapter, "adapter_sha256": adapter_sha}
 
     def generate(text):

@@ -1,0 +1,93 @@
+{
+ "schema": "frontier_forms.sft_attempts.v1",
+ "label": "POST-DEADLINE (host-approved). Every SFT attempt on magicSTUDIObox, including failures. Validation split only; the test split is never read during selection.",
+ "host": "magicSTUDIObox (Apple MPS), local only, hosted_inference NONE",
+ "attempts": [
+  {
+   "run": "S1-lora-r16-e2-lr2e-4",
+   "try": 1,
+   "started_utc": "2026-11-03T01:50:03Z",
+   "status": "DONE",
+   "evidence": "evidence/forms_model/selection_v1/S1-lora-r16-e2-lr2e-4"
+  },
+  {
+   "run": "D1-dora-r16-e2-lr2e-4",
+   "try": 1,
+   "started_utc": "2026-11-03T02:51:12Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "Studio lost DNS for huggingface.co (base-model metadata lookup); no weights were trained"
+  },
+  {
+   "run": "S2-lora-r16-e4-lr2e-4",
+   "try": 1,
+   "started_utc": "2026-11-03T02:51:38Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "Studio lost DNS for huggingface.co (base-model metadata lookup); no weights were trained"
+  },
+  {
+   "run": "D2-dora-r16-e4-lr2e-4",
+   "try": 1,
+   "started_utc": "2026-11-03T02:52:04Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "Studio lost DNS for huggingface.co (base-model metadata lookup); no weights were trained"
+  },
+  {
+   "run": "S3-lora-r32-e3-lr5e-4",
+   "try": 1,
+   "started_utc": "2026-11-03T02:52:30Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "Studio lost DNS for huggingface.co (base-model metadata lookup); no weights were trained"
+  },
+  {
+   "run": "D1-dora-r16-e2-lr2e-4",
+   "try": 2,
+   "started_utc": "2026-11-03T02:59:06Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "HF_HUB_OFFLINE was set, but the transformers tokenizer loader still called the Hub API; fixed by loading the cached snapshot by path (local_base in scripts/train_forms_sft.py and scripts/run_forms_model_arm.py)"
+  },
+  {
+   "run": "S2-lora-r16-e4-lr2e-4",
+   "try": 2,
+   "started_utc": "2026-11-03T02:59:08Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "HF_HUB_OFFLINE was set, but the transformers tokenizer loader still called the Hub API; fixed by loading the cached snapshot by path (local_base in scripts/train_forms_sft.py and scripts/run_forms_model_arm.py)"
+  },
+  {
+   "run": "D2-dora-r16-e4-lr2e-4",
+   "try": 2,
+   "started_utc": "2026-11-03T02:59:11Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "HF_HUB_OFFLINE was set, but the transformers tokenizer loader still called the Hub API; fixed by loading the cached snapshot by path (local_base in scripts/train_forms_sft.py and scripts/run_forms_model_arm.py)"
+  },
+  {
+   "run": "S3-lora-r32-e3-lr5e-4",
+   "try": 2,
+   "started_utc": "2026-11-03T02:59:14Z",
+   "status": "FAILED_BEFORE_TRAINING",
+   "reason": "HF_HUB_OFFLINE was set, but the transformers tokenizer loader still called the Hub API; fixed by loading the cached snapshot by path (local_base in scripts/train_forms_sft.py and scripts/run_forms_model_arm.py)"
+  },
+  {
+   "run": "D1-dora-r16-e2-lr2e-4",
+   "try": 3,
+   "started_utc": "2026-11-03T03:02:12Z",
+   "status": "RUNNING"
+  },
+  {
+   "run": "S2-lora-r16-e4-lr2e-4",
+   "try": 3,
+   "status": "QUEUED"
+  },
+  {
+   "run": "D2-dora-r16-e4-lr2e-4",
+   "try": 3,
+   "status": "QUEUED"
+  },
+  {
+   "run": "S3-lora-r32-e3-lr5e-4",
+   "try": 3,
+   "status": "QUEUED"
+  }
+ ],
+ "base_model_cache": "Qwen/Qwen2.5-0.5B-Instruct revision 7ae557604adf67be50417f59c2c2f167def9a775 (same revision S1 used)",
+ "code_note": "Try 3 onward runs the scripts in this commit (local_base offline loader); S1 ran the same code before that change, loading the identical base revision online."
+}
