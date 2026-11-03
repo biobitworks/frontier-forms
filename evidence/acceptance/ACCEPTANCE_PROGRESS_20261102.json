@@ -1,0 +1,134 @@
+{
+  "apple_vision_existing_pdf_spotchecks": [
+    {
+      "bbox_text_regions": 21,
+      "filled_fields": 9,
+      "ocr_json_sha256": "172fec9119e816c3ef18462a7e87face08fce451d20377228668c8858dc0e2f3",
+      "ocr_whole_value_misses": 1,
+      "page_count": 1,
+      "pdf_sha256": "72fc58644f5f2bf6b796f050ba13ee36026f21957ac57f548b3323405924007f",
+      "pdfkit_whole_value_misses": 0
+    },
+    {
+      "bbox_text_regions": 20,
+      "filled_fields": 11,
+      "ocr_json_sha256": "52b87cc0b7d36669cdc31bbe47a3334d8be56c7d9d8c8efc78a1a5a9a08df395",
+      "ocr_whole_value_misses": 0,
+      "page_count": 1,
+      "pdf_sha256": "b6a04a21f1284a788519da4d3ac9331c07b54dd633914f706c12e2a54934bc6e",
+      "pdfkit_whole_value_misses": 0
+    },
+    {
+      "bbox_text_regions": 22,
+      "filled_fields": 9,
+      "ocr_json_sha256": "ca41df6083491146ed09da6bf09d0310d0c53980c0d3b1d18f50aa9838df06a4",
+      "ocr_whole_value_misses": 0,
+      "page_count": 1,
+      "pdf_sha256": "35ffdca8974c72fa500c480330230d2fca16639854147047e2efbd88fa69ffe0",
+      "pdfkit_whole_value_misses": 0
+    }
+  ],
+  "apple_vision_status": "EXECUTED_ON_3_LOCAL_PDF_SAMPLES; FINAL_100_PATIENT_COMBINED_RECEIPT_NOT_OBSERVED",
+  "baseline_b0": {
+    "case_count": 218,
+    "case_evidence_sha256": "927fe4e355af4a9fd0cc0662d7c9a415a179a47aefa62c4bf6054d7c94d5e4da",
+    "failures": {
+      "html_value": 0,
+      "pdf_text": 0,
+      "server_echo": 0,
+      "vision_ocr_text": 0
+    },
+    "field_accuracy": 0.856422,
+    "field_correct": 1867,
+    "field_count": 2180,
+    "rendered_pdf_cases": 0,
+    "split_counts": {
+      "test": 18,
+      "train": 63,
+      "validation": 19
+    }
+  },
+  "baseline_by_template": {
+    "medication_allergy_intake_v1": {
+      "cases": 100,
+      "field_correct": 640,
+      "field_total": 900
+    },
+    "new_patient_registration_v1": {
+      "cases": 100,
+      "field_correct": 1100,
+      "field_total": 1100
+    },
+    "urgent_care_history_v1": {
+      "cases": 18,
+      "field_correct": 127,
+      "field_total": 180
+    }
+  },
+  "bbox_model_d2_integration": "NOT_TESTED",
+  "cohort": {
+    "origin": "MITRE Synthea v3.4.0 (synthetic FHIR subset)",
+    "size": 100,
+    "test": 18,
+    "train": 63,
+    "validation": 19
+  },
+  "fco_lean_merkle_full_pipeline": "NOT_TESTED",
+  "full_100_patient_qwen": "NOT_TESTED",
+  "hosted_inference": "NONE",
+  "html_css_pdf_successor_smoke": {
+    "case_count": 2,
+    "case_evidence_sha256": "d0c1fd2c8090c914315461e208fc43524bd1dcd4cfebf238ef97a9516baff8de",
+    "failures": {
+      "html_value": 0,
+      "pdf_text": 0,
+      "server_echo": 0,
+      "vision_ocr_text": 0
+    },
+    "field_correct": 19,
+    "field_count": 20,
+    "patient_count": 1,
+    "rendered_pdf_cases": 1
+  },
+  "id": "FF-E2E-ACCEPT-20261102-01",
+  "merkle_root": "NOT_COMPUTED",
+  "model_weights_updated": "NO",
+  "new_unseen_form_layout": "NOT_TESTED",
+  "ocr_line_to_dom_bbox_alignment": "NOT_TESTED",
+  "open_epic": "FHIR R4 technical reference; actual Epic questionnaire/HTML fidelity NOT_TESTED",
+  "parent_main_sha": "e58aed67c5c81a7f399bbc52e688defa33219447",
+  "promotion": "HOLD",
+  "publication_gate": {
+    "categories": {
+      "NO_PUBLIC_PIXEL_PDF_OR_WEIGHTS": 104,
+      "NO_PUBLIC_RENDERED_FIXTURES": 15,
+      "PUBLIC_DATA_JSON_ONLY": 4
+    },
+    "policy": "synthetic JSON data only on GitHub; local PDFs/pixels/weights stay private",
+    "status": "FAIL",
+    "violations": 123
+  },
+  "qwen_smoke": {
+    "case_count": 2,
+    "case_evidence_sha256": "271b02b93744de1e9d18239edaa6629f7c27a0253bb0d0b1e74e7ef9bdfa58dd",
+    "failures": {
+      "html_value": 0,
+      "pdf_text": 0,
+      "server_echo": 0,
+      "vision_ocr_text": 0
+    },
+    "field_accuracy": 0.6,
+    "field_correct": 12,
+    "field_count": 20,
+    "model": {
+      "digest": "a8b0c51577010a279d933d14c2a8ab4b268079d44c5c8830c0a93900f1827c67",
+      "name": "qwen2.5:0.5b",
+      "runtime": "local-ollama"
+    },
+    "model_raw_answers_sha256": "65baebfc7c14726dc0b1979f394c0cc0aac505dcba7b3332dde0df07b44fcaa2",
+    "patient_count": 1,
+    "rendered_pdf_cases": 1
+  },
+  "raw_model_outputs_public": "NO",
+  "status": "PARTIAL_EXECUTED"
+}
