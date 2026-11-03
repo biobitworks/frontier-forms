@@ -1,5 +1,7 @@
 # Frontier Forms — Antigentic EHR Form Intake
 
+> **All figures in one place (judges):** [docs/FIGURES.md](docs/FIGURES.md): every figure with a thumbnail, caption, source-data file and PR.
+
 > **VIDEO / TEAMMATE REVIEW:** [Start here—four-minute protocol, private vs hosted execution and actor comparison](docs/judges/VIDEO_START_HERE_20261102.md) · [color-coded interactive storyboard](docs/judges/VIDEO_EVIDENCE_STORYBOARD_20261102.html) · [10 frozen source receipts](docs/judges/VIDEO_EVIDENCE_MANIFEST_20261102.json). Serve the repository with localhost HTTP to render HTML. Both **FCO +22.22 pp** and **OCR correction +17.39 pp** have discovery evidence; prospective independently replicated scientific superiority remains HOLD. LOMO negatives and Merkle scopes are visible.
 
 > **Start here (judges, 2026-11-02).** Current status, results and priorities: [docs/STATUS_2026-11-02.md](docs/STATUS_2026-11-02.md). Accomplishment heatmap: [docs/figures/accomplishment_heatmap.png](docs/figures/accomplishment_heatmap.png) (interactive: [.html](docs/figures/accomplishment_heatmap.html)). **Where we gain (colour-coded):** [docs/figures/gains_heatmap.png](docs/figures/gains_heatmap.png) (interactive [.html](docs/figures/gains_heatmap.html), cell data [CSV](docs/figures/gains_heatmap.csv)). Every figure and image with its caption and source PR: [docs/figures/FIGURES.md](docs/figures/FIGURES.md).
