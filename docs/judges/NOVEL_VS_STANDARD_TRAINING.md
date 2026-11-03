@@ -24,13 +24,20 @@ This page covers the Claude red-team lane only. The project-wide note is [DISCOV
 
 ## Admitted to the discovery ledger (scientific promotion HOLD)
 
-| Record | Result | Holm p | 95% CI | Standard or novel |
+The learned correction is tested on whole-form correctness: the share of the 46 test images with all 7 fields correct.
+
+| Record | Result | Holm p | 95% CI on the change | Standard or novel |
 |---|---|---|---|---|
-| Learned OCR correction (trained on train split) | 14→22 of 46 forms all 7 fields correct | 0.023 | [+0.043, +0.326] patient-cluster | Standard technique, novel protocol |
-| Commitment check | planted-error detection 1.00, 0 false admissions | <0.0001 | [+0.61, +0.66] | Novel integration of a standard building block |
-| Rules check | detection 0.51 | <0.0001 | [+0.25, +0.30] | Standard |
-| Consistency check | detection 0.31 | <0.0001 | [+0.12, +0.19] | Standard |
-| All four checks | detection 1.00, 0 false admissions | <0.0001 | [+0.50, +0.56] | Novel combination |
+| Learned OCR correction (trained on train split) | 14→22 of 46 forms | 0.023 | [+0.043, +0.326], patient-cluster | Standard technique, novel protocol |
+
+The admission checks are tested on per-image success against running no checks. An image succeeds when at least one field is admitted and no wrong value is admitted. There are 135 planted-error images. Planted-error detection and false admissions are descriptive counts, with no interval of their own.
+
+| Check | Per-image success (no checks: 50/135) | Holm p | 95% CI on the change | Planted errors caught | False admissions | Standard or novel |
+|---|---|---|---|---|---|---|
+| Commitment | 135/135 | <0.0001 | [+0.61, +0.66] | 108/108 | 0 | Novel integration of a standard building block |
+| Rules | 88/135 | <0.0001 | [+0.25, +0.30] | 55/108 | 62 | Standard |
+| Consistency | 70/135 | <0.0001 | [+0.12, +0.19] | 34/108 | 74 | Standard |
+| All four checks | 121/135 | <0.0001 | [+0.50, +0.56] | 108/108 | 0 | Novel combination |
 
 **Caveats.**
 - **The correction is small.** It strips spaces from every field and maps `O` to `0` in the case id.

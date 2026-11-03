@@ -99,19 +99,27 @@ def build():
     # 2. Commitment / rules / consistency / identity gate factorial (paired, Holm-corrected in the lane analysis).
     am = json.loads((R / 'evidence/redteam/attribution_matrix.json').read_text())
     by = {r['experiment_id']: r for r in am['records']}
-    for rid, name in (('RT-096', 'commitment'), ('RT-099', 'rules'), ('RT-097', 'consistency'), ('RT-098', 'identity'), ('RT-110', 'identity+rules+commitment+consistency')):
-        r = by[rid]; o = r['outcome']
-        passed = r.get('claim_status') == 'PASS' and o['holm_p'] < 0.05 and isinstance(o['bootstrap_ci95'], list) and o['bootstrap_ci95'][0] > 0
+    gf = json.loads((R / 'evidence/redteam/gate_factorial.json').read_text())['configurations']
+    for name in ('commitment', 'rules', 'consistency', 'identity', 'identity+rules+commitment+consistency'):
+        c = gf[name]; v = c['vs_none']
+        o = {'endpoint': 'per-image success: at least one field admitted and no wrong value admitted (vs the no-checks configuration)',
+             'unit': 'image', 'n': v['n_images'], 'baseline_success': v['baseline_success'], 'challenger_success': v['config_success'],
+             'baseline_only': v['baseline_only'], 'challenger_only': v['config_only'], 'delta_rate': v['delta_success_rate'],
+             'mcnemar_p_exact_two_sided': v['p_mcnemar_exact_two_sided'], 'holm_p': v['p_holm'],
+             'ci95_stratified_bootstrap': v['ci95_delta_stratified_bootstrap'], 'bootstrap_strata': 'error variant',
+             'descriptive_not_tested': {'planted_detection_rate': c['planted_detection_rate'], 'planted_cells': c['planted_cells'],
+                                        'false_admissions': c['false_admissions'], 'false_admission_rate_of_all': c['false_admission_rate_of_all'], 'coverage': c['coverage']}}
+        passed = v['p_holm'] < 0.05 and v['delta_success_rate'] > 0 and v['ci95_delta_stratified_bootstrap'][0] > 0
         add(id=f'RT-ADM-GATE-{name.upper().replace("+", "-")}', family='admission_gate_factorial', preregistered=False,
-            question=f'Does the {name} check catch planted field errors that the unchecked extractor admits?',
+            question=f'Does adding the {name} check raise per-image success (some field admitted, no wrong value admitted) over no checks?',
             weights={'baseline': 'qwen2.5vl:3b extraction with Apple Vision OCR fallback (unchanged)', 'challenger': 'same weights; deterministic check added'},
             mechanism={'changed': 'MECHANISM_ONLY', 'enabled': name.split('+')},
-            outcome={k: o.get(k) for k in ('planted_detection_rate', 'false_admission_rate_of_all', 'coverage', 'mcnemar_p', 'holm_p', 'bootstrap_ci95')},
-            decision='PASS_DISCOVERY_RULE' if passed else 'NULL', admission_state='DISCOVERY_LEDGER_ADMITTED' if passed else 'NULL_RECORDED',
-            evidence=ev('evidence/redteam/gate_factorial.json', 'evidence/redteam/attribution_matrix.json'),
-            caveat=('The commitment check compares each extracted value with a salted hash of the source value, so it detects any printed value '
-                    'that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.')
-            if 'commitment' in name else 'Planted errors were designed by the same lane that wrote the checks.',
+            outcome=o, decision='PASS_DISCOVERY_RULE' if passed else 'NULL', admission_state='DISCOVERY_LEDGER_ADMITTED' if passed else 'NULL_RECORDED',
+            evidence=ev('evidence/redteam/gate_factorial.json', 'scripts/redteam/analyze_gate_factorial.py'),
+            caveat=('The tested endpoint is per-image success; planted-error detection and false admissions are descriptive counts without their own interval. '
+                    + ('The commitment check compares each extracted value with a salted hash of the source value, so it rejects any printed value '
+                       'that differs from the source by construction. The finding is that the other checks miss most of these errors, not that hashing is new.'
+                       if 'commitment' in name else 'Planted errors were designed by the same lane that wrote the checks.')),
             novelty={'standard': 'validation rules, cross-field consistency and hash commitments are standard building blocks',
                      'this_lane': 'per-field salted source commitments bound into the FCO leaf, a full 2^4 factorial with leave-one-mechanism-out, planted-error set with opaque image ids and a private planted list',
                      'claim_ceiling': 'synthetic planted errors on one template family; requires access to the source record at admission time'})
@@ -200,7 +208,7 @@ def build():
             'status': 'ADMITTED_TO_DISCOVERY_LEDGER_ONLY; SCIENTIFIC_PROMOTION=HOLD',
             'rule': 'DISCOVERY_LEDGER_ADMITTED requires Holm-corrected exact McNemar p<0.05, delta>0 and bootstrap lower 95% CI>0 on a predeclared paired comparison. '
                     'Scientific promotion additionally requires an independently frozen replication cohort and PI approval; none exists, so every record is HOLD.',
-            'statistics': {'mcnemar': 'exact two-sided', 'bootstrap': f'patient-cluster paired, {REPS} reps, seed {SEED} (trained-gain and post-hoc rows); lane-native stratified bootstrap for gate rows'},
+            'statistics': {'mcnemar': 'exact two-sided', 'bootstrap': f'patient-cluster paired, {REPS} reps, seed {SEED} (trained-gain and post-hoc rows); stratified by error variant, 10000 reps, seed 20261102 for gate rows (from analyze_gate_factorial.py)'},
             'counts_by_admission_state': dict(sorted(counts.items())), 'records': recs,
             'synthetic_only': True, 'weights_published': False, 'phi': False}
 

@@ -112,7 +112,7 @@ footer{font-size:13px;color:var(--muted);display:grid;gap:6px;border-top:1px sol
   <div class="sec-head">
     <span class="eyebrow">2⁴ factorial · same model weights throughout</span>
     <h2 id="h-gates">Which admission checks catch planted errors?</h2>
-    <p class="muted">There are 108 planted field errors across 135 forms. Each check either admits or rejects an extracted field. Detection is the share of planted errors rejected. False admissions are wrong values that got through. The commitment check compares each value with a salted hash of its source, so it catches any changed value by design. The finding is how much the other checks miss.</p>
+    <p class="muted">There are 108 planted field errors across 135 forms. Each check either admits or rejects an extracted field. Detection is the share of planted errors rejected. False admissions are wrong values that got through. The commitment check compares each value with a salted hash of its source, so it catches any changed value by design. The finding is how much the other checks miss. These bars are descriptive counts. The paired test in the ledger below uses per-image success: at least one field admitted and no wrong value admitted. That rises from 50/135 with no checks to 135/135 with the commitment check.</p>
   </div>
   <div class="panel"><svg class="chart" id="c-gates" role="img" aria-label="Planted error detection and false admissions for 16 check combinations"></svg>
     <div class="legend"><span><i style="background:var(--s1)"></i>planted-error detection (bar)</span><span>number at right = false admissions</span></div></div>
@@ -210,7 +210,7 @@ const vl = rec('RT-ADM-POSTHOC-QWEN2_5VL');
 // Key results
 const kpis = [
   ['Trained OCR correction', `${base} → ${A[0].outcome.challenger_success}<small> / 46 forms</small>`, `Holm p = ${fmtp(A[0].outcome.holm_p)} · admitted to discovery ledger`],
-  ['Commitment check', `${pct(gateCommit.outcome.planted_detection_rate)}<small> planted errors caught</small>`, `0 false admissions · rules alone catch ${pct(rec('RT-ADM-GATE-RULES').outcome.planted_detection_rate)}`],
+  ['Commitment check', `${pct(gateCommit.outcome.descriptive_not_tested.planted_detection_rate)}<small> planted errors caught</small>`, `0 false admissions · rules alone catch ${pct(rec('RT-ADM-GATE-RULES').outcome.descriptive_not_tested.planted_detection_rate)}`],
   ['qwen2.5vl:3b, pretrained', `${vl.outcome.challenger_success}<small> / 46 forms</small>`, `vs ${base} for OCR plus parser · post hoc`],
   ['Boxes drawn on the image', `${D.boxes.clean} → ${D.boxes.boxed}<small> / ${D.boxes.total} fields</small>`, 'Apple OCR on the same 10 forms'],
 ];
@@ -317,8 +317,8 @@ hbars($('#c-models'), [
 const STATE = { DISCOVERY_LEDGER_ADMITTED: ['admitted', 'good'], DATA_ADMITTED: ['data', 'acc'], POSTHOC_RECORDED: ['post hoc', ''], NULL_RECORDED: ['null', ''], NEGATIVE_RECORDED: ['negative', 'bad'], FAILED_RECORDED: ['failed', 'bad'], BLOCKED_RECORDED: ['blocked', 'warn'], NOT_TESTED_RECORDED: ['not tested', 'warn'] };
 function result(r) {
   const o = r.outcome || {};
-  if (o.baseline_success != null) return `${o.baseline_success} → ${o.challenger_success} / ${o.n}` + (o.ci95_patient_cluster_bootstrap ? ` · CI [${o.ci95_patient_cluster_bootstrap.map(x => x.toFixed(2)).join(', ')}]` : '');
-  if (o.planted_detection_rate != null) return `detection ${pct(o.planted_detection_rate)} · false adm. ${pct(o.false_admission_rate_of_all)}`;
+  const ci = o.ci95_patient_cluster_bootstrap || o.ci95_stratified_bootstrap;
+  if (o.baseline_success != null) return `${o.baseline_success} → ${o.challenger_success} / ${o.n}` + (ci ? ` · CI [${ci.map(x => x.toFixed(2)).join(', ')}]` : '') + (o.descriptive_not_tested ? ` · caught ${pct(o.descriptive_not_tested.planted_detection_rate)} (descriptive)` : '');
   if (o.delta_abs != null) return `Δ ${(o.delta_abs >= 0 ? '+' : '') + o.delta_abs.toFixed(3)}`;
   if (o.epochs != null) return `${o.epochs} epochs · ${o.GAIN} gain · ${o.LOSS} loss`;
   if (o.merkle_root) return `root ${o.merkle_root.slice(0, 12)}…`;
