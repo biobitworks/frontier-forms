@@ -74,9 +74,9 @@ This is a live operational status block generated from the latest local SFT rece
 
 ## In progress (post-deadline, host-approved): trained form-filling model (SFT)
 
-**What:** Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). Three configs are being trained.
+**What:** Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). 5 configs are being trained.
 
-**Protocol:** Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.
+**Protocol:** Each config keeps its lowest-validation-loss epoch, then is scored on the 38 validation forms only. The config with the best validation full-form success (ties: validation field accuracy) is chosen and scored once on the frozen 54-form test split. No retries on test. LoRA vs DoRA pairs share rank, lr and epochs.
 
 **Comparison points (frozen 54-form test split):**
 

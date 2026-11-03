@@ -14,7 +14,7 @@ START, END = "<!-- sft-status:start -->", "<!-- sft-status:end -->"
 
 def render(s):
     out = [START, "", f"## {s['label']}: trained form-filling model (SFT)", "",
-           f"**What:** {s['model']}, fine-tuned on {s['data']}. Three configs are being trained.", "",
+           f"**What:** {s['model']}, fine-tuned on {s['data']}. {len(s['runs'])} configs are being trained.", "",
            f"**Protocol:** {s['protocol']}", "",
            "**Comparison points (frozen 54-form test split):**", "",
            "| Arm | Field accuracy | Full-form success | Source |", "|---|---|---|---|"]

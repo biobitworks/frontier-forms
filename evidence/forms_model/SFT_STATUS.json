@@ -4,7 +4,7 @@
  "label": "In progress (post-deadline, host-approved)",
  "model": "Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
- "protocol": "Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.",
+ "protocol": "Each config keeps its lowest-validation-loss epoch, then is scored on the 38 validation forms only. The config with the best validation full-form success (ties: validation field accuracy) is chosen and scored once on the frozen 54-form test split. No retries on test. LoRA vs DoRA pairs share rank, lr and epochs.",
  "comparators": [
   {
    "arm": "M0 untrained Qwen2.5-0.5B (zero-shot)",
