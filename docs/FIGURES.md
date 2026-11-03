@@ -19,6 +19,12 @@ More detail: [status and novel vs standard](STATUS_2026-11-02.md#novel-versus-st
 
 **Scope:** these visuals were prepared after the 4:30 PM Pacific competition deadline. They are post-deadline review material, not proof that any particular commit was submitted to HackerSquad. Scientifically replicated promotions remain zero.
 
+### Judge presentation V3 — visual-only successor
+
+[![Team-level judge presentation V3, showing independent FCO and OCR synthetic evidence and admission hold](judges/figures/fig21_presentation_v3_preview_20261102.png)](judges/present_v3.html)
+
+**[Source-based presentation](judges/present_v3.html)** · [Full screenshot preview](judges/figures/fig21_presentation_v3_preview_20261102.png) · [Exact display/figure hashes](judges/PRESENTATION_VISUAL_V3_SUCCESSOR_20261102.json). V3 fixes encoding, contributor attribution and result-first hierarchy; frozen predecessor pages remain unchanged. Serve the checkout over localhost for interactive SVGs; GitHub provides only the source HTML.
+
 ## Headline figures
 
 | Preview | Figure | What it shows | Source data | PR |

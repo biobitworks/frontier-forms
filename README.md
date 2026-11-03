@@ -2,36 +2,21 @@
 
 > **All figures in one place (judges):** [docs/FIGURES.md](docs/FIGURES.md): every figure with a thumbnail, caption, source-data file and PR.
 
-<!-- sft-status:start -->
 
-## In progress (post-deadline, host-approved): trained form-filling model (SFT)
-
-**What:** Qwen2.5-0.5B-Instruct + LoRA (local MacBookPro, bf16, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). Three configs are being trained.
-
-**Protocol:** Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.
-
-**Comparison points (frozen 54-form test split):**
-
-| Arm | Field accuracy | Full-form success | Source |
-|---|---|---|---|
-| M0 untrained Qwen2.5-0.5B (zero-shot) | 41.7% (225/540 test fields) | 0/54 test, 0/38 validation | `evidence/forms_model/M0-zeroshot/summary.json (#62)` |
-| B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
-| B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
-
-**Runs (status as of 2026-11-03T01:12:00Z):**
-
-| Run | Config | Status | Val loss | Test field accuracy | Test full-form |
-|---|---|---|---|---|---|
-| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory | — | — | — |
-| SFT-2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
-| SFT-3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
-
-**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
-Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
-
-<!-- sft-status:end -->
 
 ## Judges — start here: visual results and evidence
+
+
+### Frontier Forms — judge overview
+
+**Two verified synthetic discovery comparisons:** deterministic FCO/FCG filtering **18/54 → 30/54 complete forms (+22.22 percentage points)**; fitted OCR correction **14/46 → 22/46 seven-field forms (+17.39 points; Holm p = 0.0234)**. These are separate denominators and mechanisms, **not** a Qwen neural fine-tuning improvement. Independent prospective scientific promotion remains **HOLD**.
+
+[**Team-wide judge presentation — V3 encoding and attribution fix**](docs/judges/present_v3.html) · [Screenshot preview](docs/judges/figures/fig21_presentation_v3_preview_20261102.png) · [Corrected contributor Gantt](docs/judges/figures/fig20_contributor_gantt_corrected_v2.png) · [Training history](docs/judges/figures/fig19_actual_training_epochs_20261102.png) · [All evidence and figures](docs/FIGURES.md).
+
+![Frontier Forms judge presentation V3: clearly attributed synthetic FCO and OCR gains, withheld scientific promotion](docs/judges/figures/fig21_presentation_v3_preview_20261102.png)
+
+**Contribution lanes:** application/teammates; Claude Code OCR/model experiments; independent ChatGPT evidence checks; mixed/unknown attribution separately retained. This is a post-deadline research review, not proof of HackerSquad submission.
+
 
 
 **Public data/merge coverage (post-deadline readback):** [Final exact-byte data availability and branch reconciliation](docs/judges/FINAL_PUBLIC_DATA_COVERAGE_20261102_V1.md) and [machine-readable source SHA256 audit](docs/judges/FINAL_PUBLIC_DATA_COVERAGE_20261102_V1.json). At frozen main f10e1d7: **60 PRs merged, 4 closed without merge, 0 open**; **13 remote branch refs remain NOT_MERGED**. One historical JSON failure receipt was preserved unchanged; outdated/duplicate code and a restricted binary were **not** blindly merged. Private weights, independent scientific replication and external submission acceptance remain **NOT_PUBLIC / NOT_TESTED / UNKNOWN**. This verifies published coverage, not that all data everywhere are available.
@@ -80,6 +65,39 @@ Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_S
 **Contributors:** Claude Code and teammates produced the form pipeline, local experiments, OCR/model training and original examples. ChatGPT's parallel lane contributed independent paired-statistics review, Merkle/checkpoint audits, negative-result attribution and the source-bound discovery register. These statements do not assign unverified authorship to shared-account commits.
 
 **Display limitation:** The PNGs and repo are public. Notion page content is verified through the connected workspace, but **anonymous Notion publication has not been established**; judges can always use the public GitHub images. The HTML files are GitHub source views, not publicly hosted interactive apps. To run locally, serve the checkout with \`python3 -m http.server 8787 --bind 127.0.0.1\`, then open \`http://127.0.0.1:8787/docs/judges/present.html\`.
+
+### Ongoing training · pending SFT evidence
+
+This is a live operational status block generated from the latest local SFT receipt. Read the per-run training, queued, stalled, failed or completed states below; no trained-Qwen superiority is admitted before validation-only checkpoint selection and held-out test scoring. Results here remain distinct from the completed FCO and fitted-OCR synthetic discoveries.
+
+<!-- sft-status:start -->
+
+## In progress (post-deadline, host-approved): trained form-filling model (SFT)
+
+**What:** Qwen2.5-0.5B-Instruct + LoRA (local MacBookPro, bf16, gradient checkpointing), fine-tuned on data/forms_sft_v1 (train / validation splits only). Three configs are being trained.
+
+**Protocol:** Pick one config by lowest validation loss (validation only). Then score that one model once on the frozen 54-form test split. No retries on test.
+
+**Comparison points (frozen 54-form test split):**
+
+| Arm | Field accuracy | Full-form success | Source |
+|---|---|---|---|
+| M0 untrained Qwen2.5-0.5B (zero-shot) | 41.7% (225/540 test fields) | 0/54 test, 0/38 validation | `evidence/forms_model/M0-zeroshot/summary.json (#62)` |
+| B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
+| B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
+
+**Runs (status as of 2026-11-03T01:12:00Z):**
+
+| Run | Config | Status | Val loss | Test field accuracy | Test full-form |
+|---|---|---|---|---|---|
+| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory | — | — | — |
+| SFT-2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
+| SFT-3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
+
+**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
+Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
+
+<!-- sft-status:end -->
 
 ---
 
