@@ -162,13 +162,67 @@ def build():
        'root_algorithm':'SHA256(0x00||UTF8 canonical sorted compact JSON leaf); SHA256(0x01||left||right); duplicate final odd'}
     result['admission_event_root']=merkle(entries)
     return result
+def presentation_successor():
+    old=json.loads(OUT.read_text())
+    new=build()
+    src='docs/figures/gains_heatmap.json'
+    assert old['admitted_entries']==new['admitted_entries'],'V2_SOURCE_LEAVES_CHANGED'
+    assert old['admission_event_root']==new['admission_event_root'],'V2_EVIDENCE_ROOT_CHANGED'
+    assert old['source_inputs_file_sha256'][src]!=new['source_inputs_file_sha256'][src]
+    v1='evidence/admission/FF_DISCOVERY_AND_NOVELTY_V1.json'
+    manifest={
+      'schema':'frontier-forms.discovery-admission-v3-presentation-link.v1',
+      'predecessor_v2_manifest_file_sha256':SHA(OUT.read_bytes()),
+      'predecessor_v2_event_root':old['admission_event_root'],
+      'v1_admission_source_file_sha256':src_sha(v1),
+      'v1_source_path':v1,
+      'admitted_event_count_unchanged':len(old['admitted_entries']),
+      'predecessor_heatmap_file_sha256':old['source_inputs_file_sha256'][src],
+      'current_heatmap_file_sha256':new['source_inputs_file_sha256'][src],
+      'heatmap_cells_unchanged':52,
+      'current_source_ledger_leaf_root':new['admission_event_root'],
+      'source_difference':'HEATMAP_PRESENTATION_CHANGED_PR67; ALL_89_FROZEN_EVIDENCE_LEAVES_IDENTICAL',
+      'scientific_promotions':0,
+      'status':'SUCCESSOR_LINK_NOT_NEW_MODEL_GAIN',
+      'exact_root_scheme':'SHA256(0x00 || canonical_sorted_compact_UTF8_JSON_manifest_without_root)'
+    }
+    manifest['successor_manifest_root']=SHA(b'\\x00'+CANON(manifest))
+    return manifest
+
+def verify_root_scheme_successor():
+    v3=ROOT/'evidence/governance/DISCOVERY_ADMISSION_V3_PRESENTATION_SUCCESSOR_20261102.json'
+    v4=ROOT/'evidence/governance/DISCOVERY_ADMISSION_V4_ROOT_SCHEME_CORRECTION_20261102.json'
+    rec=json.loads(v4.read_text())
+    assert rec['predecessor_v3_file_sha256']==SHA(v3.read_bytes()),'V3_BYTES_CHANGED'
+    assert rec['predecessor_v3_declared_root_did_not_use_nul'] is True
+    actual=dict(rec)
+    expected=actual.pop('corrected_successor_root')
+    assert SHA(bytes([0])+CANON(actual))==expected,'CORRECTED_NUL_ROOT_MISMATCH'
+    assert rec['admitted_89_event_root']==json.loads(OUT.read_text())['admission_event_root']
+    assert rec['scientific_promotions']==0
+    return expected
+
 def verify():
     target=json.loads(OUT.read_text())
     recomputed=build()
-    assert target==recomputed,'DISCOVERY_LEDGER_OR_SOURCE_MUTATED'
+    assert target['admission_event_root']==merkle(target['admitted_entries']),'FROZEN_V2_EVENT_ROOT_MUTATED'
+    changed=[p for p in SOURCE_PATHS if target['source_inputs_file_sha256'][p]!=recomputed['source_inputs_file_sha256'][p]]
+    if changed:
+        assert changed==['docs/figures/gains_heatmap.json'],'UNEXPECTED_SOURCE_DRIFT:'+str(changed)
+        assert target['admitted_entries']==recomputed['admitted_entries'],'MODEL_OUTCOMES_CHANGED'
+        assert target['admission_event_root']==recomputed['admission_event_root'],'LOMO_ROOT_CHANGED'
+        assert target['source_heatmap_cells']==recomputed['source_heatmap_cells']==52,'HEATMAP_CELLS_CHANGED'
+        successor=ROOT/'evidence/governance/DISCOVERY_ADMISSION_V3_PRESENTATION_SUCCESSOR_20261102.json'
+        assert successor.is_file(),'MISSING_SOURCE_PRESENTATION_SUCCESSOR'
+        assert json.loads(successor.read_text())==presentation_successor(),'SOURCE_PRESENTATION_SUCCESSOR_MUTATED'
+        verify_root_scheme_successor()
+    else:
+        assert target==recomputed,'DISCOVERY_LEDGER_OR_SOURCE_MUTATED'
     assert target['event_count']==len(target['admitted_entries'])
     assert target['scientific_promotion_count']==0
-    return {'status':'PASS','entries':target['event_count'],
+    return {'status':'PASS_FROZEN_V2_AND_PRESENTATION_SUCCESSOR' if changed else 'PASS',
+            'source_presentation_only_drift':changed,
+            'entries':target['event_count'],
             'source_heatmap_cells':target['source_heatmap_cells'],
             'scientific_promotions':0,'root':target['admission_event_root'],
             'status_counts':target['status_counts']}

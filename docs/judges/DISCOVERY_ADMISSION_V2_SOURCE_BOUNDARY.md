@@ -37,3 +37,12 @@ The artifact explicitly disclaims proof of competition submission content. Its c
 To verify: run python3 scripts/build_discovery_admission_v2.py and python3 -m unittest tests.test_discovery_admission_v2 -v.
 
 To admit new experiments, publish a new immutable successor after frozen inputs, model weight checks, paired patient answers and exact replication verification; do not alter this file.
+
+## Append-only reconciliation after concurrently merged PR #67/#68
+
+Claude's PR #67 updated the presentation of the 52-cell gain heatmap while PR #68 admitted the 13-row V1 synthetic source register. The 89 frozen evidence event leaves were **byte-for-byte unchanged**; only the referenced heatmap JSON's file SHA-256 changed. Rather than overwriting V2, V3 records the earlier and newer heatmap hashes and the exact predecessor V2 manifest SHA. An independent checker found that V3's initially declared root recipe incorrectly used ASCII backslash-x00 instead of a single NUL byte. That original **FAILED_DECLARED_ROOT_SCHEME** manifest is preserved as V3, and V4 explicitly corrects the recipe and stores a freshly computed successor root.
+
+- V2 frozen evidence root: 32fded207b7eae8e09071c8a3c8e4737e6648705e9765af5a09d28ff04292b61 (89 evidence leaves).
+- V3 original presentation root: 850bce37c0f039df4d6eb627cb680c068384b7345c2eec4755a2f524f1df2467 (**FAILED declared scheme**, not promoted).
+- V4 corrected successor root: 8c20b817e0da230e1faac2c8309a33b062d8297ca23ee35a4d99e35685d12ede (actual one-byte NUL domain prefix).
+- V1 from PR #68 remains separately intact at evidence/admission/FF_DISCOVERY_AND_NOVELTY_V1.json, with its source file pinned by V3/V4. V2 adds *granular epoch/leaf observations*; it does not supersede the existing 13 V1 admission categories or imply a novel algorithm or patient result.

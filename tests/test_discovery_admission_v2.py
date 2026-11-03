@@ -9,7 +9,7 @@ class AdmissionV2(unittest.TestCase):
  @classmethod
  def setUpClass(cls):cls.source=json.loads(a.OUT.read_text())
  def test_exact_source_replay_and_root(self):
-  r=a.verify();self.assertEqual(r['status'],'PASS')
+  r=a.verify();self.assertEqual(r['status'],'PASS_FROZEN_V2_AND_PRESENTATION_SUCCESSOR')
   self.assertEqual((r['entries'],r['source_heatmap_cells']), (89,52))
   self.assertEqual(r['root'],a.merkle(self.source['admitted_entries']))
  def test_distinct_promotions_and_discovery(self):
@@ -44,9 +44,16 @@ class AdmissionV2(unittest.TestCase):
   self.assertEqual(len(cells),5)
   self.assertTrue(all('standard' in x and 'project_integration' in x and 'novelty' in x for x in cells))
  def test_source_bytes(self):
+  successor=a.presentation_successor()
+  self.assertEqual(len(a.verify_root_scheme_successor()),64)
+  self.assertEqual(successor['current_source_ledger_leaf_root'],self.source['admission_event_root'])
+  self.assertEqual(successor['scientific_promotions'],0)
+  self.assertEqual(successor['heatmap_cells_unchanged'],52)
   for p,h in self.source['source_inputs_file_sha256'].items():
-   self.assertEqual(hashlib.sha256((R/p).read_bytes()).hexdigest(),h)
+   if p=='docs/figures/gains_heatmap.json':
+    self.assertNotEqual(hashlib.sha256((R/p).read_bytes()).hexdigest(),h)
+   else:self.assertEqual(hashlib.sha256((R/p).read_bytes()).hexdigest(),h)
  def test_mutation_detected(self):
   with patch.object(a,'src_sha',side_effect=lambda p:'0'*64):
-   with self.assertRaisesRegex(AssertionError,'DISCOVERY_LEDGER_OR_SOURCE_MUTATED'):a.verify()
+   with self.assertRaisesRegex(AssertionError,'UNEXPECTED_SOURCE_DRIFT'):a.verify()
 if __name__=='__main__':unittest.main()
