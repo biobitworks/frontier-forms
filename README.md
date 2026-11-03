@@ -18,13 +18,13 @@
 | B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
 | B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
 
-**Runs (status as of 2026-11-03T01:00:00Z):**
+**Runs (status as of 2026-11-03T01:12:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
-| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | training | — | — | — |
+| SFT-1 | LoRA r16, lr 2e-4, 2 epochs | stalled: MacBookPro out of memory (swap full) before first validation pass; first fp32 try also stalled; awaiting decision to free memory | — | — | — |
 | SFT-2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
-| SFT-3 | larger rank, higher lr | queued | — | — | — |
+| SFT-3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
 
 **Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
 Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
