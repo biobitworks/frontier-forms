@@ -35,7 +35,7 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 | Epic | NOT_TESTED | 1, 3, 22 |
 | Snyk | BLOCKED | 1, 8, 20 |
 | Governance (GSD/gsigmad, TASKS) | EXECUTED | 9, 42, 44, 46, 47 |
-| Demo: form server, overlays, screenshots, PDFs | OBSERVED (this branch) | 7, 12, 18, this PR |
+| Demo: form server, overlays, screenshots, PDFs | OBSERVED (this branch); Preview capture FAILED | 7, 12, 18, this PR |
 
 ## Headline results
 
@@ -50,6 +50,10 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 - **YOLOv8n:** test mAP50 0.912, with 315/322 fields detected (#20).
 - **100-patient B0 acceptance:** 1,867/2,180 fields (85.6422%) and 0 server echo errors (#22).
 - **Bounding boxes and OCR:** drawing boxes onto a form image dropped Apple OCR from 58/70 to 0/70 correct fields on the same 10 forms, so OCR must run on the clean render (`docs/demo/ocr_boxes_vs_clean.json`).
+- **Trained local models vs the untrained baseline (preregistered, test split scored once):** the baseline is page OCR plus a rule parser, with 14/46 forms all correct.
+  - A learned OCR correction fit only on the training split raised this to 22/46 (fields 283→296/322), Holm p=0.023, CI [+0.07, +0.28]. PROMOTE_DISCOVERY; replication NOT_TESTED.
+  - OCR on crops from the trained YOLOv8n detector reached 9/46 (NULL). Crops plus the correction reached 15/46 (NULL).
+  - Source: `evidence/redteam/trained_gain/`, Figure 6.
 - **Custody:** all 728 inclusion proofs and the review roots were independently recomputed (#11, #20, #47).
 
 ## Negative and null results we kept
@@ -62,14 +66,16 @@ This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory 
 - **Random Forest box validator:** −37.0 pp full-page vs the control (#15).
 - **D1:** F1 0.11285, NEGATIVE.
 - **D2:** F1 0.77828, exploratory only because it was tested on layouts it had already seen (#16).
+- **Trained detector crops for OCR:** 9/46 vs 14/46 baseline, NULL (Holm p=0.534). A good detector (mAP50 0.912) did not make crop OCR better.
 - **LoRA SFT:** only an epoch-0 loss (1.0049872103490327) and no adapter, so the gain is NOT_TESTED (#18).
 - **Publication policy:** 123 legacy non-JSON files are exempt but not compliant (#22, #30).
+- **macOS Preview capture:** FAILED for 0/10 windows with "could not create image from window". The likely cause is that the process lacks macOS Screen Recording permission on magicSTUDIObox. The failure receipt is `docs/demo/preview/preview_ocr.json`. Headless Chromium screenshots of every image × model × boxes on/off are in `docs/demo/screenshots/models/`.
 - **External services:** Snyk and Fireworks BLOCKED. NVIDIA, live Supabase and Epic NOT_TESTED.
 
 ## What remains (ordered)
 
 1. **Fresh replication cohort (T01 #31).** Preregister and score it once.
-2. **Trained-model result (T08 #38).** Restart SFT M1, then score M0, M1 and M2 on the 54 test forms.
+2. **Trained-model result (T08 #38).** Replicate the learned-correction promotion on a fresh cohort. Restart SFT M1, then score M0, M1 and M2 on the 54 test forms.
 3. **Custody fixes (#47).** Fix the duplicate-last-leaf, unbound-parent and dangling-edge findings, then regenerate `evidence/stats` through the gate.
 4. **Oracle-rule sign-off (T02 #32).**
 5. **Noisy and scanned renders (T03 #33).** Score the OCR and VLM arms clean vs degraded.

@@ -65,9 +65,12 @@ def form_html(a, model):
         val = (answers or {}).get(f)
         ok = answers is not None and ' '.join(str(val or '').split()).lower() == ' '.join(str(fa.get('printed') or '').split()).lower()
         correct += ok
-        rows.append(f'<label>{html.escape(f)} <span class="verdict">— printed "{html.escape(str(fa.get("printed")))}" · {"match" if ok else "MISMATCH"}</span></label>'
-                    f'<input class="{"ok" if ok else "bad"}" value="{html.escape("" if val is None else str(val))}" readonly>')
-    rows.append(f'<p style="margin-top:8px">{correct}/7 fields match the printed form</p>')
+        verdict = 'NOT_RUN' if answers is None else ('match' if ok else 'MISMATCH')
+        cls = '' if answers is None else ('ok' if ok else 'bad')
+        rows.append(f'<label>{html.escape(f)} <span class="verdict">— printed "{html.escape(str(fa.get("printed")))}" · {verdict}</span></label>'
+                    f'<input class="{cls}" value="{html.escape("" if val is None else str(val))}" readonly>')
+    rows.append('<p style="margin-top:8px">NOT_RUN: this model was not run on this image, so no fields are scored (not a failure)</p>' if answers is None
+                else f'<p style="margin-top:8px">{correct}/7 fields match the printed form</p>')
     return ''.join(rows)
 
 

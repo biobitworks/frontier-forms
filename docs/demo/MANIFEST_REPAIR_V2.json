@@ -1,0 +1,87 @@
+{
+  "asset_count": 62,
+  "asset_root": "227a1786183dc2535c5aeb54c28ace33c3c6b803584480eb97b646bbffcc444c",
+  "cause": "ANNOTATION_JSON_BYTES_DIFFER_FROM_RECORDED_MANIFEST;_GENERATION_ORDER_NOT_INDEPENDENTLY_ESTABLISHED",
+  "daisy_performance_gain": "NOT_COMPUTED",
+  "manifest_sha256": "b7653d9ce4aead6195815e5513fc7da8dbbef20156aa77c6d0bd58e156328216",
+  "merkle_recipe": "SHA256(0x00+canonical_sorted_compact_json_leaf); SHA256(0x01+left_raw+right_raw); duplicate last",
+  "model_accuracy_change": "NONE",
+  "new_verification_state": "PASS_AFTER_INDEPENDENT_REPLAY",
+  "original_verification_state": "FAILED_10_ANNOTATION_HASHES",
+  "predecessor_manifest_sha256": "2a9d222666e2c5ae2af979fd8ffe1b96b389a6701617ec6a79bc0ecb31568763",
+  "repaired_entries": [
+    {
+      "new_bytes": 6222,
+      "new_sha256": "8cbd8ae0bc5dddc994053be933e1c2a28f39d2dbf346348b9c50ccabd5452204",
+      "old_bytes": 5549,
+      "old_sha256": "7da5f0a763a63634fb085256d0fd02390dbc3db964e8ce3020137515f8d2304a",
+      "path": "ann/synform2-ce08cff8d07665997ab7_E3_case_id_swap.json"
+    },
+    {
+      "new_bytes": 6192,
+      "new_sha256": "f740e9df4c0ebc235ea6a6537a7f6bebb488798723b3cafc8a316c51a6d2f3b4",
+      "old_bytes": 5520,
+      "old_sha256": "f05cd000f0819d44381afcb455da7af1b859bc6ce921abae11ff77650f172134",
+      "path": "ann/synform2-ce08cff8d07665997ab7_E6_name_swap.json"
+    },
+    {
+      "new_bytes": 6171,
+      "new_sha256": "f29ed369b1d6034518998f0332c8c2f8e38faa8133b7e35ae65e2dcfe3bf1e06",
+      "old_bytes": 5499,
+      "old_sha256": "97682a667d1894dfdc5dc076443d4d979d05a0bf39b0b99f819febce48d36e5c",
+      "path": "ann/synform2-ce08cff8d07665997ab7_E7_digit_flip.json"
+    },
+    {
+      "new_bytes": 5995,
+      "new_sha256": "6bb5a0e8e21fe28508c366e7db7d5e421014f48bdd872a65520729c691ca5629",
+      "old_bytes": 5323,
+      "old_sha256": "c45a5e5639e376f7968a0f37d67409d4d7e7d9447f31aec593f7de9cc5706695",
+      "path": "ann/synform2-ce08cff8d07665997ab7_V2_scan_sigma25.json"
+    },
+    {
+      "new_bytes": 6575,
+      "new_sha256": "9ad5aab98bfb43facd918f6bb4b75151c29bf4f71a0aba0c05e3e36f326d8fa9",
+      "old_bytes": 5444,
+      "old_sha256": "18bc24679833ee96d5076e92646f2df3f64c5b04f22e16f6483b825414a0d20e",
+      "path": "ann/synform2-ce08cff8d07665997ab7_clean.json"
+    },
+    {
+      "new_bytes": 6670,
+      "new_sha256": "7fd6f15644d3c6e87910412216c8bd4c831ef8b774a1ea9185d92e9b21c2536b",
+      "old_bytes": 5568,
+      "old_sha256": "c2c7205177c751a331a7d4d5c3ac8c2442123a11b10909d92dfc7d80752d1e85",
+      "path": "ann/synform2-ce08cff8d07665997ab7_scan.json"
+    },
+    {
+      "new_bytes": 6740,
+      "new_sha256": "785ee4c0e45857849332472b5ede5a66ec1f4b37d1eed847d722d45c880dff28",
+      "old_bytes": 5596,
+      "old_sha256": "ff09b3cc1fea5011e7c0add943d148aa1fe0a1d8a4897e7eadf0347d99ed1efd",
+      "path": "ann/synform2-d0c1b1664723a40a00dd_clean.json"
+    },
+    {
+      "new_bytes": 6751,
+      "new_sha256": "b3fd2217be7465aace3afcff900ee046eb86c450ccb6b80e4a0831fb2ef9f277",
+      "old_bytes": 5621,
+      "old_sha256": "cd19a79d3cfca523f3428e0a339c6a6fc28ba7559a88d3d4fd415b189198c6ee",
+      "path": "ann/synform2-d0c1b1664723a40a00dd_scan.json"
+    },
+    {
+      "new_bytes": 6586,
+      "new_sha256": "91c9f20322fd99bb738d47afd58d6f1fcff8151c2c3016bcb60cfd6401b2d703",
+      "old_bytes": 5459,
+      "old_sha256": "46a566ba0189dba0ab5d209a3c4cb01de95c1a351855cb99739ee91aa551dfbd",
+      "path": "ann/synform2-d25a62e4657d1668520e_clean.json"
+    },
+    {
+      "new_bytes": 6572,
+      "new_sha256": "a13ac8f8c90f4d67339e4ff842dd7835ef6061fa00f7cc2186d4aa7fd7ecab66",
+      "old_bytes": 5442,
+      "old_sha256": "89cdae875840ed2663a50938a0e9723d7c1e899e1e7e85cd4967c2f0180883f7",
+      "path": "ann/synform2-d25a62e4657d1668520e_scan.json"
+    }
+  ],
+  "repaired_files": 10,
+  "schema": "frontier-forms.synthetic-judge-demo-manifest-repair.v2",
+  "synthetic_only": true
+}

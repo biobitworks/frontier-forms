@@ -44,49 +44,97 @@ One row per decision. PROMOTE requires Holm-corrected exact McNemar p<0.05 and a
 
 *Source:* `evidence/redteam/attribution_matrix.json, gate_factorial.json, detector/*/epoch_ledger.jsonl, trained_gain/trained_gain_summary.json, docs/judges/pr_inventory.json`
 
-## Figure 6 — A clean synthetic intake form with three kinds of boxes
+## Figure 6 — Trained local models vs the untrained baseline (test split, scored once)
 
-![Figure 6](figures/fig06_clean_boxes.png)
+![Figure 6](figures/fig06_trained_gain.png)
+
+Preregistered before the test split was scored (scripts/redteam/trained_gain_eval.py, committed first). Endpoint: forms with all 7 fields correct, 46 held-out images (23 patients x clean + scan). The learned correction was fit only on the 132 training images: strip spaces in every field (no training value contains one) plus character rules seen at least twice and never contradicted (Synthetic case: O->0). It is the only trained arm that is promoted, at discovery grade because the replication cohort is NOT_TESTED. The trained YOLOv8n detector finds fields well (mAP50 0.912) but OCR on its crops is NULL, and so is crops plus correction.
+
+*Source:* `evidence/redteam/trained_gain/trained_gain_summary.json, trained_gain_rows.json`
+
+## Figure 7 — A clean synthetic intake form with three kinds of boxes
+
+![Figure 7](figures/fig07_clean_boxes.png)
 
 Renderer ground truth (green dashed), Apple Vision OCR text lines (blue) and the locally trained YOLOv8n detector (orange, with confidence) on a frozen SYNFORM2 test render.
 
 *Source:* `docs/demo/overlay/synform2-ce08cff8d07665997ab7_clean.png`
 
-## Figure 7 — The same form as a scan-like image (rotation, noise, blur, JPEG)
+## Figure 8 — The same form as a scan-like image (rotation, noise, blur, JPEG)
 
-![Figure 7](figures/fig07_scan_boxes.png)
+![Figure 8](figures/fig08_scan_boxes.png)
 
 Scan-like variant of the same patient; boxes as in the previous figure. Used to test robustness of OCR and the detector.
 
 *Source:* `docs/demo/overlay/synform2-ce08cff8d07665997ab7_scan.png`
 
-## Figure 8 — Planted error the models cannot see: first and last names swapped
+## Figure 9 — Planted error the models cannot see: first and last names swapped
 
-![Figure 8](figures/fig08_planted_name_swap.png)
+![Figure 9](figures/fig09_planted_name_swap.png)
 
 Local form server: the printed form swaps first/last name. qwen2.5vl:3b reads the printed values faithfully and every rule passes — only the per-field source commitment in the FCO leaf rejects it.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_E6_name_swap.png`
 
-## Figure 9 — Planted cross-patient error: another patient's case id
+## Figure 10 — Planted cross-patient error: another patient's case id
 
-![Figure 9](figures/fig09_planted_case_swap.png)
+![Figure 10](figures/fig10_planted_case_swap.png)
 
 The printed case id belongs to a different patient. The identity check (FCO case id) and the commitment check both reject it.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_E3_case_id_swap.png`
 
-## Figure 10 — Heavy noise variant read by the models
+## Figure 11 — Heavy noise variant read by the models
 
-![Figure 10](figures/fig10_heavy_noise.png)
+![Figure 11](figures/fig11_heavy_noise.png)
 
 Heavier noise and rotation with no planted error; tests whether extraction stays correct under degradation.
 
 *Source:* `docs/demo/screenshots/synform2-ce08cff8d07665997ab7_V2_scan_sigma25.png`
 
-## Figure 11 — Drawing boxes on an image breaks OCR
+## Figure 12 — Form filled by qwen2.5vl:3b
 
-![Figure 11](figures/fig11_boxes_break_ocr.png)
+![Figure 12](figures/fig12_filled_qwen2.5vl_3b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen2.5vl:3b (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5vl_3b__boxes.png`
+
+## Figure 13 — Form filled by Apple Vision OCR + rule parser
+
+![Figure 13](figures/fig13_filled_apple_vision_parser.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of Apple Vision OCR + rule parser (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__apple_vision_parser__boxes.png`
+
+## Figure 14 — Form filled by qwen2.5:1.5b mapper
+
+![Figure 14](figures/fig14_filled_qwen2.5_1.5b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen2.5:1.5b mapper (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5_1.5b__boxes.png`
+
+## Figure 15 — Form filled by qwen3:1.7b mapper
+
+![Figure 15](figures/fig15_filled_qwen3_1.7b.png)
+
+Local form server: the scan-like form (left, with boxes) and the HTML intake form filled with the actual answers of qwen3:1.7b mapper (right). Green = field matches the printed form; red = mismatch.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen3_1.7b__boxes.png`
+
+## Figure 16 — Same filled form without bounding boxes
+
+![Figure 16](figures/fig16_filled_noboxes.png)
+
+The viewer with overlays switched off, as a reviewer would see the plain scan next to the filled form.
+
+*Source:* `docs/demo/screenshots/models/synform2-ce08cff8d07665997ab7_scan__qwen2.5vl_3b__noboxes.png`
+
+## Figure 17 — Drawing boxes on an image breaks OCR
+
+![Figure 17](figures/fig17_boxes_break_ocr.png)
 
 Same 10 forms, same OCR engine and parser; the only change is the drawn bounding boxes. Lesson: run OCR on the clean render and keep overlays for humans.
 
@@ -94,8 +142,16 @@ Same 10 forms, same OCR engine and parser; the only change is the drawn bounding
 
 ## Not included (input missing at build time)
 
-- models/qwen2.5vl_3b
-- models/apple_vision_parser
-- models/qwen2.5_1.5b
-- models/qwen3_1.7b
 - preview captures
+
+## Figure 11 — Independent complete outcome and training-epoch heatmap
+
+Open JUDGE_OUTCOME_HEATMAP_V1.html and JUDGE_OUTCOMES_SUCCESSOR_V1.json. Independent ChatGPT review of **82 exact outcome leaves**: 60 actual YOLO checkpoints across full/no-scan arms (full = three GAIN, three LOSS, 23 NEUTRAL and initial; no-scan = three GAIN, one LOSS, 25 NEUTRAL and initial); 12 FCO single-leaf contrasts with McNemar, Holm and patient-cluster bootstrap; six injected-error detector contrasts; learned box predictor and random-forest negative comparisons; FCAR scientific admission HOLD. Source root 71d3bdac181ca273537a4493ea967a41bd618eabfc83590c750b633d180ceae6. A changed root never establishes causal model gain.
+
+## Figure 12 — Claude learned OCR correction, independently reanalyzed
+
+Open FIG12_OCR_CORRECTION_ABLATION_V1.html and OCR_CORRECTION_SUCCESSOR_V2.json. Original fitted correction table and test: **Claude Code, PRs #51 and #58**; 23 synthetic cases each rendered clean and scanned (46 images, seven fields). Independent check by **ChatGPT** confirms A0 14/46 all-correct, A1 correction 22/46, A2 YOLO crop OCR 9/46, A3 crop+correction 15/46. For A1: exact paired McNemar p=0.0078125, three-comparison Holm p=0.0234375; 10,000 **patient-cluster** resamples grouping each clean+scan pair gave 95% CI +4.35 to +32.61 percentage points. Crop arms are NULL. A1 is an improvement on the studied synthetic sample but is a **trained OCR text-correction table**, not a Qwen/DAISY neural weight gain. Pretest preregistration chronology and independent second-cohort replication are NOT_VERIFIED. Scientific promotion remains HOLD. New independently computed three-arm root 5acbf8276ed1c184423ea68b9973acec96a3a47e030d296f83e23c1c005071cb is explicitly linked as a successor of, not a rewrite to, the frozen 82-event root.
+
+## Judge synthetic demo manifest repair — independent ChatGPT
+
+Claude Code's Figures 1–10, PNG screenshots, 10 synthetic PDFs and visual overlays are unchanged. Original manifest had 10 incorrect annotation JSON hashes. Earlier FAILED manifest preserved as docs/demo/manifest_v1_pre_repair.json; successor repairs all ten, independently checks every one of 62 assets against its actual byte size and SHA256, and records verified 62-leaf asset root 227a1786183dc2535c5aeb54c28ace33c3c6b803584480eb97b646bbffcc444c. Asset root is not a clinical or model outcome; CI independently enforces this preservation.
