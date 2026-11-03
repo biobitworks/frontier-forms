@@ -38,3 +38,7 @@ These are the synthetic form renders the models read. They are stimuli, not char
 ## Not in the repo
 
 Bounding-box overlay galleries (gold / qwen2.5vl / Tesseract) are on open PR #29, not on main. V2 detector renders, model weights and raw model prompts stay on the local Macs by policy.
+
+## Machine-readable discovery admission and integration novelty (independent successor)
+
+PR #65 is Claude Code’s 31-intervention, 52-cell source-labeled gains/losses/nulls heatmap; PR #66 is the documentary discovery admission. This independent successor adds evidence/governance/DISCOVERY_ADMISSION_V2_20261102.json with **89 source-linked leaves** and explicit flags for genuine development gains, regression, neutral, null, failed, and not-computed states. A five-component comparison distinguishes inherited standard techniques from Frontier Forms engineering integration. All referenced inputs and the computed source-root ledger are replayed in CI. **Scientific model-gain promotions remain 0** (FCAR HOLD); data admission is not scientific promotion.
