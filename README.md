@@ -97,7 +97,7 @@ This is a live operational status block generated from the latest local SFT rece
 | D2 | DoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
 | S3 | LoRA r32, lr 5e-4, 3 epochs | queued | — | — | — |
 
-**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES.html (SFT chart added when results land)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
+**Results will appear in:** `evidence/forms_model/ (one folder per run: receipt, answers, summary)` · `evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)` · `docs/figures/gains_heatmap (Not yet measured row becomes measured)`.
 Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
 
 <!-- sft-status:end -->

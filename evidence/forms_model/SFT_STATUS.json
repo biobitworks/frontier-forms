@@ -75,7 +75,7 @@
  ],
  "results_will_appear": [
   "evidence/forms_model/ (one folder per run: receipt, answers, summary)",
-  "evidence/FIGURES.html (SFT chart added when results land)",
+  "evidence/FIGURES_LIVE.html (rebuilt as results land; evidence/FIGURES.html stays frozen for the judges audit)",
   "docs/figures/gains_heatmap (Not yet measured row becomes measured)"
  ],
  "note": "Moved from the MacBookPro (out of memory) to magicSTUDIObox per Byron, 2026-11-03 01:47Z, with a 25% free-memory guard so Vita DAISY keeps priority."

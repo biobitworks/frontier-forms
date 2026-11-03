@@ -5,7 +5,7 @@ Every patient here is synthetic: MITRE Synthea v3.4.0, a frozen 100-patient coho
 ## Figures
 | What | Path |
 |---|---|
-| **All headline results as figures** (form-filling arms, vision arms, V2 validator, V2 training curve, SFT attempts once they land). One self-contained HTML page with inline SVG, so it opens in any browser with no setup | `evidence/FIGURES.html`; the numbers behind it are in `evidence/FIGURES_DATA.json`; rebuild with `python3 scripts/build_figures.py` |
+| **All headline results as figures** (form-filling arms, vision arms, V2 validator, V2 training curve, SFT attempts once they land). One self-contained HTML page with inline SVG, so it opens in any browser with no setup | `evidence/FIGURES.html` (frozen snapshot pinned by the judges audit) and `evidence/FIGURES_LIVE.html` (rebuilt as results land, numbers in `evidence/FIGURES_LIVE_DATA.json`; `python3 scripts/build_figures.py`) |
 | Bounding-box overlay viewers | see below |
 
 ## Form server and forms
