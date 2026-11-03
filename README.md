@@ -88,12 +88,13 @@ This is a live operational status block generated from the latest local SFT rece
 | B0 frozen rules | — | 33.3% (18/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10)` |
 | B0 + FCG harness (L1+L2+L3) | — | 55.6% (30/54) | `evidence/forms_arms/run_v1/FCG_ARMS_V1.json (#10, #17)` |
 | N1 NVIDIA Nemotron-Mini 4B (zero-shot, local Ollama) | 41.5% (validation+test) | 0/92 validation+test | `evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json` |
+| M2 qwen3:1.7b (zero-shot, local Ollama) | 72.6% (validation+test) | 1/92 validation+test (1/54 test) | `evidence/forms_model/M2-qwen3-1.7b/summary.json` |
 
-**Runs (status as of 2026-11-03T02:15:00Z):**
+**Runs (status as of 2026-11-03T02:46:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
-| S1 | LoRA r16, lr 2e-4, 2 epochs | training (epoch 1 of 2; train loss 0.28 at step 20 -> 0.013 at step 80) | 1.017 (before training) | — | — |
+| S1 | LoRA r16, lr 2e-4, 2 epochs | training (epoch 2 of 2, step 300; train loss 0.004), validation scoring next | 1.017 (before training) | — | — |
 | D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | queued | — | — | — |
 | S2 | LoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
 | D2 | DoRA r16, lr 2e-4, 4 epochs | queued | — | — | — |
@@ -103,6 +104,19 @@ This is a live operational status block generated from the latest local SFT rece
 Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_STATUS.json); refresh with `python3 scripts/update_readme_sft.py`. Until a run is scored on test, no trained-model gain is claimed.
 
 <!-- sft-status:end -->
+
+<!-- nvidia-tooling:start -->
+## NVIDIA tooling used (post-deadline, host-approved)
+
+Everything runs locally on Apple silicon (magicSTUDIObox). No DGX, no CUDA, no NVIDIA-hosted inference, and no data leaves the machine except JSON results pushed here. Machine-readable record: [`evidence/NVIDIA_TOOLING.json`](evidence/NVIDIA_TOOLING.json).
+
+| NVIDIA component | How we used it | Result so far |
+|---|---|---|
+| **DoRA**: Weight-Decomposed Low-Rank Adaptation (NVIDIA Research, ICML 2024) | `scripts/train_forms_sft.py --dora` (PEFT `use_dora=True`) on Qwen2.5-0.5B. Matched pairs against plain LoRA: D1 vs S1 (r16, 2 epochs) and D2 vs S2 (r16, 4 epochs). | Queued behind S1. Picked on validation only; test scored once. See the SFT table above. |
+| **Nemotron-Mini 4B** (NVIDIA open model) | Zero-shot form filling via local Ollama (Q4_K_M, digest `ed76ab18…`), same forms, oracle and scorer as every arm. | 0/92 full forms, 41.5% field accuracy. It answered "ask the patient" on 473 of 920 fields that had a value. [Evidence](evidence/forms_model/N1-nvidia-nemotron-mini-4b/) |
+| **Megatron-LM** | Source pinned (`631e1463`). | Not run: needs CUDA GPUs. |
+<!-- nvidia-tooling:end -->
+
 
 ---
 

@@ -1,6 +1,6 @@
 {
  "schema": "frontier_forms.sft_status.v1",
- "updated_utc": "2026-11-03T02:15:00Z",
+ "updated_utc": "2026-11-03T02:46:00Z",
  "label": "In progress (post-deadline, host-approved)",
  "model": "Qwen2.5-0.5B-Instruct + LoRA or DoRA (local magicSTUDIObox, Apple MPS, bf16 base, fp32 adapters, gradient checkpointing)",
  "data": "data/forms_sft_v1 (train / validation splits only)",
@@ -29,13 +29,19 @@
    "field_accuracy": "41.5% (validation+test)",
    "full_form": "0/92 validation+test",
    "source": "evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json"
+  },
+  {
+   "arm": "M2 qwen3:1.7b (zero-shot, local Ollama)",
+   "field_accuracy": "72.6% (validation+test)",
+   "full_form": "1/92 validation+test (1/54 test)",
+   "source": "evidence/forms_model/M2-qwen3-1.7b/summary.json"
   }
  ],
  "runs": [
   {
    "run": "S1",
    "config": "LoRA r16, lr 2e-4, 2 epochs",
-   "status": "training (epoch 1 of 2; train loss 0.28 at step 20 -> 0.013 at step 80)",
+   "status": "training (epoch 2 of 2, step 300; train loss 0.004), validation scoring next",
    "val_loss": "1.017 (before training)",
    "test_field_accuracy": "",
    "test_full_form": ""
