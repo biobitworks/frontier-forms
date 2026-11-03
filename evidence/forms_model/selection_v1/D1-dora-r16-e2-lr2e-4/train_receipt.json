@@ -1,0 +1,67 @@
+{
+  "adapter_sha256": {
+    "README.md": "f518c94bfc0812bbb89bad63477c0628788b48dda5ddd919c7f7d87db230af0b",
+    "adapter_config.json": "366ad05aa1a3856bbcfdcad9052420eaa0a4e087a36b30411c014a6e3a786824",
+    "adapter_model.safetensors": "9a2c65e9789dded5fde6da1ee62164042d6ee1a910c517685e2697583a77c66a",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "data": {
+    "manifest_sha256": "76d8a1e3d64faa47053b1ec3efb63066af973dfad09395716b8f49efbc28b1a1",
+    "train_sha256": "5bf82e91b6d27d8ffbc7d729f7f96620e3a8b1a4cff16743a3fd81c2ffa3e059",
+    "validation_sha256": "cf7b481a271e127e3889a0d519843da9c9d33f3ce13e72b99aaf46b7b7a8ae16"
+  },
+  "device": "mps",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "torch": "2.15.0"
+  },
+  "hosted_inference": "NONE",
+  "hyperparameters": {
+    "adapter_dtype": "float32",
+    "dtype": "bfloat16",
+    "epochs": 2,
+    "grad_accum": 8,
+    "gradient_checkpointing": true,
+    "lr": 0.0002,
+    "max_len": 1536,
+    "schedule": "linear decay",
+    "seed": 20261102,
+    "warmup_steps": 20
+  },
+  "label": "POST-DEADLINE (host-approved); SFT selection attempt, validation split only, test never read",
+  "lane": "frontier-forms",
+  "log": [
+    {
+      "epoch": 0,
+      "val_loss": 0.985967140997711
+    },
+    {
+      "elapsed_s": 5082,
+      "epoch": 1,
+      "val_loss": 0.011046099248936738
+    },
+    {
+      "elapsed_s": 9507,
+      "epoch": 2,
+      "val_loss": 0.007402828722591661
+    }
+  ],
+  "lora_rank": 16,
+  "method": "DoRA",
+  "post_deadline": true,
+  "run_id": "D1-dora-r16-e2-lr2e-4",
+  "selected_epoch": 2,
+  "selected_val_loss": 0.007402828722591661,
+  "selection_rule": "lowest validation loss across epochs; test split never read",
+  "task": "field mapper SFT (prompt sft-prompt-v1)",
+  "wall_seconds": 9509
+}
