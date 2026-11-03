@@ -6,6 +6,8 @@
 
 ## Judges — start here: visual results and evidence
 
+> **Video handoff (post-deadline research):** [Open the V3 presenter and Claude/ChatGPT evidence entry](docs/judges/VIDEO_REVIEW_ENTRY_20261102.md). The source-bound, local-only presentation and teammate responsibilities are documented there; it is not proof of the original competition submission.
+
 
 ### Frontier Forms — judge overview
 
