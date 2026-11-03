@@ -75,11 +75,11 @@ The five admitted records are the learned OCR correction and four gate configura
 * **ID**: CLAUDE-REDTEAM-CLOUD-20261102-FINAL
 * **PARENT**: PR #3 head `da953450`; roots `9e4d4df8…`, `5f9a7e51…`, `2f1cfafd…`
 * **VERIFIED_NEW**: SYNFORM2 `aa447934df5267349386fd0c5053a63a5ec140b05c504d221591e4ddd4b7580e`; SYNFORM2-ERR `790a7dc6f9641fa6c09df8ac951d8456f9ab2685326e4eb67012cd0e87d68944`; detector chains `1fc60016…` (full), `e99fe22c…` (no_scan)
-* **EXECUTED**: trained-gain evaluation (A0–A3, test split once); independent replay; L0/L1/L2 discovery+heldout; L0 cold replay; L3 discovery; Apple Vision OCR (train/dev/test, ERR); qwen2.5vl on ERR (135/230); gate factorial; detector full + LOMO; Lean ×2; gitleaks ×2; gsigmad init/register/classify/status
+* **EXECUTED**: trained-gain evaluation (A0–A3, test split once); discovery admission ledger (31 records); notebooks EXP-012/014/015/016 (runs v7, v8); qwen3:1.7b and qwen2.5:1.5b OCR mappers; independent replay; L0/L1/L2 discovery+heldout; L0 cold replay; L3 discovery; Apple Vision OCR (train/dev/test, ERR); qwen2.5vl on ERR (135/230); gate factorial; detector full + LOMO; Lean ×2; gitleaks ×2; gsigmad init/register/classify/status
 * **OBSERVED**: as in sections 1–3
-* **DECISIONS**: Insilico stopped; Fireworks not used; 12-form lane, mapper/bbox lanes and DB build dropped at finish request
-* **PROPOSED**: commitment-gate replication; mapper lanes; template-family replication
-* **NOT_TESTED**: Fireworks L4/L5, Snyk, NVIDIA training, live Supabase, Epic, mapper/bbox lanes, EXP-012/014/015/016 notebook execution
-* **FAILURES**: L3 MPS hang (resumed); gitleaks 273 false positives (repaired); EXP-013 first run import error (repaired, v1 kept)
+* **DECISIONS**: Insilico stopped; Fireworks not used; the 12-form lane and the Qwen2.5-VL bbox grounding lane were dropped at the finish request; the mapper lanes and the answer database were completed afterwards
+* **PROPOSED**: commitment-gate and learned-correction replication on a new template family and cohort
+* **NOT_TESTED**: Fireworks L4/L5, Snyk, NVIDIA training, live Supabase, Epic, Qwen2.5-VL bbox grounding lane, legacy 12-form lane, qwen2.5vl on the remaining 95 ERR images
+* **FAILURES**: L3 MPS hang (resumed); gitleaks 273 false positives (repaired); EXP-013 first run import error (repaired, v1 kept); notebook run v6 failed on EXP-012/015/016 and v7 on EXP-016 because of notebook-builder bugs (an early exit, an unset detector slot, and a bytes-vs-hex root comparison), repaired with both failed runs kept; macOS Preview capture 0/10
 * **UNRESOLVED**: F-01 in predecessor schemas; replication of the commitment gain and of the learned-correction gain (A1)
-* **NEXT_ACTION**: teammate review of this merge into `feat/fcg-ehr-evidence-lab-20261102`; PR #3 itself left for the owner
+* **NEXT_ACTION**: freeze a new template family and cohort, preregister the admitted comparisons and score them once. Machine-readable copy: `evidence/breakpoints/CLAUDE_REDTEAM_TURN_BREAKPOINT_FINAL.json`

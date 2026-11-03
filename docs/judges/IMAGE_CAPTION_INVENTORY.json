@@ -1,0 +1,1439 @@
+{
+  "draft_overlay_images": 0,
+  "images": [
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-001",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-002",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-003",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-004",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-005",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-006",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-007",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-008",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-009",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-010",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-011",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-012",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-013",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-014",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-015",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-016",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-017",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-018",
+      "link": "../../data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "path": "data/forms_vision_inject_v1/clean__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-019",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-020",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-021",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-022",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-023",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-024",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-025",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-026",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-027",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-028",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-029",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-030",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-031",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-032",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-033",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-034",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-035",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic medication/allergy intake screenshot for clean-versus-prompt-injection testing.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-036",
+      "link": "../../data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "path": "data/forms_vision_inject_v1/injected__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic blank web-form screenshot (DOM box training/reference; not model prediction).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-037",
+      "link": "../../data/forms_vision_v1/blank__medication_allergy_intake_v1.png",
+      "path": "data/forms_vision_v1/blank__medication_allergy_intake_v1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic blank web-form screenshot (DOM box training/reference; not model prediction).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-038",
+      "link": "../../data/forms_vision_v1/blank__new_patient_registration_v1.png",
+      "path": "data/forms_vision_v1/blank__new_patient_registration_v1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic blank web-form screenshot (DOM box training/reference; not model prediction).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-039",
+      "link": "../../data/forms_vision_v1/blank__urgent_care_history_v1.png",
+      "path": "data/forms_vision_v1/blank__urgent_care_history_v1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-040",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-041",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-042",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-043",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-044",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-045",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-046",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-047",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-048",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-049",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-050",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-051",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-052",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-053",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-054",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-055",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-056",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-057",
+      "link": "../../data/forms_vision_v1/filled__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "path": "data/forms_vision_v1/filled__medication_allergy_intake_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-058",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-059",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-060",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-061",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-062",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-063",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-064",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-065",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-066",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-067",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-068",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-069",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-070",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-071",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-072",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-073",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-074",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-075",
+      "link": "../../data/forms_vision_v1/filled__new_patient_registration_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "path": "data/forms_vision_v1/filled__new_patient_registration_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-076",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__09be8301-7f67-3e55-8eeb-51dbd3f7a194.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-077",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__1adf3d69-412a-6603-93ad-ba4038f78f4a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-078",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__2087329c-1f62-80b2-6a64-2612660c9281.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-079",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__32e9ae68-2a60-6a46-a96c-07ee69299c14.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-080",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__5bc25376-89c8-7f52-c63d-d0e71f9c422f.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-081",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__67343a62-afe0-dc97-4913-8d4ed061b3d5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-082",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__792e8798-3941-8301-dec4-f7960c33941a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-083",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__7d64bd02-5bd7-1607-9519-9ffb3bcc84e1.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-084",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__82917f5d-0215-1755-e88b-2cbfe1ededf7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-085",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__9c93a67e-459b-c1b7-51ac-b704c66983c2.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-086",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__9f0f8c98-718e-c835-18b5-77a28abb4495.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-087",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__bc82704e-ddb3-d2f4-1975-3334d4798350.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-088",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__d5d07442-fba5-35e8-bdc1-1aa6153105f8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-089",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__dbdffa16-b4d5-e004-d62d-4f4e57b192fa.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-090",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__ddb4edb6-146f-76f1-43a2-4898d83df4b0.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-091",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__e5c9cb54-8c48-5f9c-5dc7-89abc7179736.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-092",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__e8282861-e7a9-6044-e067-cb437d114e2a.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic B0-filled web-form screenshot (image evidence only; clinical correctness not implied).",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-093",
+      "link": "../../data/forms_vision_v1/filled__urgent_care_history_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "path": "data/forms_vision_v1/filled__urgent_care_history_v1__e8349fda-1bd2-84a5-d665-cacec40856d6.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 10,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Diagram of FCO/FCG and gate-factorial study; depicts synthetic experiment, not real-world clinical gain.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-094",
+      "link": "../../docs/architecture/gate_factorial_heatmap.svg",
+      "path": "docs/architecture/gate_factorial_heatmap.svg",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "Synthetic intake form image used in the independent Apple Vision/Qwen example; not benchmark-wide evidence.",
+      "credit": "ChatGPT / independent review lane",
+      "image_id": "IMG-095",
+      "link": "../../experiments/form_error_factorial/sample_vision/synthetic_intake.png",
+      "path": "experiments/form_error_factorial/sample_vision/synthetic_intake.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 12,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-096",
+      "link": "../../redteam/ehr/data/forms/ffsyn-19c12c27b3529565.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-19c12c27b3529565.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-097",
+      "link": "../../redteam/ehr/data/forms/ffsyn-19c12c27b3529565.png",
+      "path": "redteam/ehr/data/forms/ffsyn-19c12c27b3529565.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-098",
+      "link": "../../redteam/ehr/data/forms/ffsyn-247b2ce9cf0a57db.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-247b2ce9cf0a57db.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-099",
+      "link": "../../redteam/ehr/data/forms/ffsyn-247b2ce9cf0a57db.png",
+      "path": "redteam/ehr/data/forms/ffsyn-247b2ce9cf0a57db.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-100",
+      "link": "../../redteam/ehr/data/forms/ffsyn-284b27a403634875.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-284b27a403634875.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-101",
+      "link": "../../redteam/ehr/data/forms/ffsyn-284b27a403634875.png",
+      "path": "redteam/ehr/data/forms/ffsyn-284b27a403634875.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-102",
+      "link": "../../redteam/ehr/data/forms/ffsyn-32cdec01cb8fc380.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-32cdec01cb8fc380.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-103",
+      "link": "../../redteam/ehr/data/forms/ffsyn-32cdec01cb8fc380.png",
+      "path": "redteam/ehr/data/forms/ffsyn-32cdec01cb8fc380.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-104",
+      "link": "../../redteam/ehr/data/forms/ffsyn-53e595e12abafea8.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-53e595e12abafea8.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-105",
+      "link": "../../redteam/ehr/data/forms/ffsyn-53e595e12abafea8.png",
+      "path": "redteam/ehr/data/forms/ffsyn-53e595e12abafea8.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-106",
+      "link": "../../redteam/ehr/data/forms/ffsyn-5954838df409afa7.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-5954838df409afa7.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-107",
+      "link": "../../redteam/ehr/data/forms/ffsyn-5954838df409afa7.png",
+      "path": "redteam/ehr/data/forms/ffsyn-5954838df409afa7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-108",
+      "link": "../../redteam/ehr/data/forms/ffsyn-72caf2dd5c910323.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-72caf2dd5c910323.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-109",
+      "link": "../../redteam/ehr/data/forms/ffsyn-72caf2dd5c910323.png",
+      "path": "redteam/ehr/data/forms/ffsyn-72caf2dd5c910323.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-110",
+      "link": "../../redteam/ehr/data/forms/ffsyn-798ec0f5f8b164ea.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-798ec0f5f8b164ea.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-111",
+      "link": "../../redteam/ehr/data/forms/ffsyn-798ec0f5f8b164ea.png",
+      "path": "redteam/ehr/data/forms/ffsyn-798ec0f5f8b164ea.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-112",
+      "link": "../../redteam/ehr/data/forms/ffsyn-7d8d7a2bafc48e3b.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-7d8d7a2bafc48e3b.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-113",
+      "link": "../../redteam/ehr/data/forms/ffsyn-7d8d7a2bafc48e3b.png",
+      "path": "redteam/ehr/data/forms/ffsyn-7d8d7a2bafc48e3b.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-114",
+      "link": "../../redteam/ehr/data/forms/ffsyn-94e79bfcc9ff0f4b.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-94e79bfcc9ff0f4b.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-115",
+      "link": "../../redteam/ehr/data/forms/ffsyn-94e79bfcc9ff0f4b.png",
+      "path": "redteam/ehr/data/forms/ffsyn-94e79bfcc9ff0f4b.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-116",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a4c3207290a6d1ff.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a4c3207290a6d1ff.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-117",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a4c3207290a6d1ff.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a4c3207290a6d1ff.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-118",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a77ff28a56a90876.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a77ff28a56a90876.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-119",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a77ff28a56a90876.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a77ff28a56a90876.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-120",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a901e2708f9ab776.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a901e2708f9ab776.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-121",
+      "link": "../../redteam/ehr/data/forms/ffsyn-a901e2708f9ab776.png",
+      "path": "redteam/ehr/data/forms/ffsyn-a901e2708f9ab776.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-122",
+      "link": "../../redteam/ehr/data/forms/ffsyn-b3598d6fe3ca09f9.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-b3598d6fe3ca09f9.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-123",
+      "link": "../../redteam/ehr/data/forms/ffsyn-b3598d6fe3ca09f9.png",
+      "path": "redteam/ehr/data/forms/ffsyn-b3598d6fe3ca09f9.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-124",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c31c819984766fc5.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c31c819984766fc5.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-125",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c31c819984766fc5.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c31c819984766fc5.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-126",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c4f3ada163f8bcb7.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c4f3ada163f8bcb7.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-127",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c4f3ada163f8bcb7.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c4f3ada163f8bcb7.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-128",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c6d9d492aa918d5c.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c6d9d492aa918d5c.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-129",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c6d9d492aa918d5c.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c6d9d492aa918d5c.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-130",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c77527efa7ae4b69.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c77527efa7ae4b69.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-131",
+      "link": "../../redteam/ehr/data/forms/ffsyn-c77527efa7ae4b69.png",
+      "path": "redteam/ehr/data/forms/ffsyn-c77527efa7ae4b69.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-132",
+      "link": "../../redteam/ehr/data/forms/ffsyn-ca7be24055bda68d.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-ca7be24055bda68d.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-133",
+      "link": "../../redteam/ehr/data/forms/ffsyn-ca7be24055bda68d.png",
+      "path": "redteam/ehr/data/forms/ffsyn-ca7be24055bda68d.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-134",
+      "link": "../../redteam/ehr/data/forms/ffsyn-cb1d4e2a3c130309.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-cb1d4e2a3c130309.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-135",
+      "link": "../../redteam/ehr/data/forms/ffsyn-cb1d4e2a3c130309.png",
+      "path": "redteam/ehr/data/forms/ffsyn-cb1d4e2a3c130309.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-136",
+      "link": "../../redteam/ehr/data/forms/ffsyn-ce2860af92e14b7e.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-ce2860af92e14b7e.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-137",
+      "link": "../../redteam/ehr/data/forms/ffsyn-ce2860af92e14b7e.png",
+      "path": "redteam/ehr/data/forms/ffsyn-ce2860af92e14b7e.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-138",
+      "link": "../../redteam/ehr/data/forms/ffsyn-da7bbf1ff6699366.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-da7bbf1ff6699366.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-139",
+      "link": "../../redteam/ehr/data/forms/ffsyn-da7bbf1ff6699366.png",
+      "path": "redteam/ehr/data/forms/ffsyn-da7bbf1ff6699366.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-140",
+      "link": "../../redteam/ehr/data/forms/ffsyn-eab5ed1a9186dddf.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-eab5ed1a9186dddf.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-141",
+      "link": "../../redteam/ehr/data/forms/ffsyn-eab5ed1a9186dddf.png",
+      "path": "redteam/ehr/data/forms/ffsyn-eab5ed1a9186dddf.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team injected form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-142",
+      "link": "../../redteam/ehr/data/forms/ffsyn-f1aff80cbbb3ef1e.inj.png",
+      "path": "redteam/ehr/data/forms/ffsyn-f1aff80cbbb3ef1e.inj.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    },
+    {
+      "caption": "SYNFORM2 red-team clean form; not a real patient record.",
+      "credit": "Claude Code (documented lane)",
+      "image_id": "IMG-143",
+      "link": "../../redteam/ehr/data/forms/ffsyn-f1aff80cbbb3ef1e.png",
+      "path": "redteam/ehr/data/forms/ffsyn-f1aff80cbbb3ef1e.png",
+      "scope": "Already tracked in main; this inventory does not claim that bytes comply with the new JSON-only publication policy",
+      "source_pr": 21,
+      "status": "OBSERVED"
+    }
+  ],
+  "main_images": 143,
+  "main_sha": "0fed9d81aee4e2b581e7a87dccee24fc7b5145f0",
+  "pixel_inspection": "NOT_EXECUTED; captions grounded in file paths and source workflows",
+  "schema": "FF-JUDGES-IMAGE-CAPTIONS-V1"
+}

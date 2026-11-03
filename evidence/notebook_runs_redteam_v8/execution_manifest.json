@@ -1,0 +1,21 @@
+{
+  "append_only": true,
+  "executed_utc": "2026-11-03T00:35:42Z",
+  "host": "vm",
+  "model_inference": "NOT_RUN_IN_NOTEBOOKS_REPLAYED_FROM_RECEIPTS",
+  "notebooks": [
+    {
+      "error": null,
+      "execution": "PASS",
+      "notebook": "16_redteam_epoch_breakpoints.ipynb",
+      "receipt_sha256": "0ac4b42563752b13894a91ff72ba8191bb824250014ada6d0a9997691605ac36",
+      "source_sha256": "57d190d3f22cdaacbd1f5384175f0710b17819f8df68aef0911049b7d1a0bde4"
+    }
+  ],
+  "outputs_sha256": {
+    "exp016_epochs.json": "c1c7f35ef94c526a04ec28d6b3079d6a47ad47f97c5948c09274d0b93db52456"
+  },
+  "python": "3.13.18",
+  "run_dir": "notebook_runs_redteam_v8",
+  "schema": "notebook.execution.v2"
+}
