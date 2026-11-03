@@ -1,0 +1,38 @@
+{
+  "architecture": "YOLOv8n (ultralytics), 3 classes input/textarea/select",
+  "arm": "V2-yolov8n-field-detector",
+  "base_checkpoint": "yolov8n.pt",
+  "base_checkpoint_sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "batch": 8,
+  "conf_threshold": 0.25,
+  "device": "mps",
+  "epochs_requested": 40,
+  "epochs_run": 40,
+  "field_predictions_sha256": "484d050199751109b404633dedb1678e2c5ecfd503e03797fff659bcc0dc2584",
+  "gold_boxes_sha256": "40abec10e17398f58aee1158c427222d01b2059ac5de9edf71e1941d6b41d3f2",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-27.2-arm64-arm-64bit"
+  },
+  "hosted_inference": "NONE",
+  "images_by_split": {
+    "test": 108,
+    "train": 252,
+    "validation": 38
+  },
+  "images_published": false,
+  "imgsz": 960,
+  "jobs_sha256": "a34efca61a33461edd8f2e1026e7b8bc8552809b5a05325b10dcfd77d76316f2",
+  "ocr": "tesseract 5.5.3",
+  "patience": 15,
+  "seed": 20261102,
+  "train_seconds": "see reused run log",
+  "trained_weights_bytes": 6553066,
+  "trained_weights_sha256": "94ab462f162c2096e31aeb5fe37a3e2ba2807267e880b0300e26f5339b662c99",
+  "versions": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "ultralytics": "8.4.198"
+  },
+  "weights_published": false
+}

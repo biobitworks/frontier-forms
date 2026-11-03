@@ -118,3 +118,10 @@ replication: same hosts, same weights, same cases, temperature 0.
 * 22:30 UTC GPU contention on magicSTUDIObox (sibling lane holding qwen2.5:1.5b, my VLM-ERR pass, the Insilico MPS lane and a
   newly queued mapper lane): Ollama began swapping qwen2.5vl in and out; the mapper driver was paused by the operator (this
   session) and will be re-queued after the VLM passes. All latency/throughput receipts from this window are CONFOUNDED.
+
+## R09 — trained-model gain, preregistered (OBSERVED 2026-11-02)
+
+* Protocol committed first (5615a07, sha256 `9ba4b693…`), then run once on magicSTUDIObox against the 46 test images (EXIT=0).
+* A1 learned correction: all-7 14→22/46, Holm p=0.023, CI [+0.065, +0.283], PROMOTE_DISCOVERY (replication NOT_TESTED).
+* A2 detector crops: 9/46, NULL. A3 crops + correction: 15/46, NULL. Both kept as null results.
+* Outputs: `evidence/redteam/trained_gain/{trained_gain_summary.json, trained_gain_rows.json, run_log.txt}`.
