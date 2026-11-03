@@ -4,6 +4,28 @@
 
 ## Judges — start here: visual results and evidence
 
+
+### Final review: contributor Gantt and measured training timeline
+
+**[Main Notion research hub](https://app.notion.com/p/40c58ec71eb28161b79ddfbb083cb7c0)** · **[Notion judge figure gallery](https://app.notion.com/p/40d58ec71eb281db9ba2db19e7f7adf6)** · **[Detailed source-bound final review](docs/judges/FINAL_SUBMISSION_REVIEW_AND_TRAINING_20261102.md)** · **[Frozen PR and epoch source JSON](docs/judges/FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json)**
+
+**Corrected contributor Gantt:** actual GitHub PR creation-to-merge windows across teammate, Claude Code, independent ChatGPT, and mixed/unknown lanes. PR dates are **not engineering hours or model-training runtime**. Work merged after the 4:30 PM Pacific cutoff is shown as a later review successor, **not proof of a judged submission**.
+
+![Corrected four-lane contributor Gantt with actual GitHub PR windows and 4:30 PM submission cutoff](docs/judges/figures/fig20_contributor_gantt_corrected_v2.png)
+
+[Full-size corrected Gantt](docs/judges/figures/fig20_contributor_gantt_corrected_v2.png) · [Frozen 63-PR timestamp snapshot](docs/judges/FINAL_PR_SNAPSHOT_20261102_V3.json) · [Preserved failed predecessor and repair receipt](docs/judges/FINAL_JUDGE_TIMELINE_PRESENTATION_CORRECTION_V2.json)
+
+**Actual training results:** 40 new local YOLOv8n MPS epochs and **30 + 30 independently recorded** earlier full/no-scan epochs. V2 has per-epoch metrics but **no individual wall-clock timestamps**; the older two runs have source-recorded UTC. These are different runs, not one continuous curve.
+
+![Source-backed YOLOv8n epoch training charts and distinct FCO versus fitted OCR correction discovery comparisons](docs/judges/figures/fig19_actual_training_epochs_20261102.png)
+
+[Full-size 100-epoch comparison](docs/judges/figures/fig19_actual_training_epochs_20261102.png) · [V2 detector receipt](evidence/forms_detector/V2-yolov8n/receipt.json) · [V2 40-epoch source metrics](evidence/forms_detector/V2-yolov8n/summary.json) · [All source-linked recorded epochs](docs/judges/FINAL_JUDGE_LANE_TRAINING_TIMELINE_V1.json)
+
+**Measured, separate endpoints:** FCO L1×L3 full-form success **18/54 → 30/54 (+22.22 percentage points)**. Fitted OCR text correction all-seven-field success **14/46 → 22/46 (+17.39 points; Holm p=0.0234)**. New YOLOv8n V2 on **36 held-out-layout images**: box recall **99.72%**, matched class accuracy **77.99%**, and validator false-flag rate **57.63%**—therefore **PARTIAL**, not solved end-to-end. Earlier detector epochs include gains and regressions. Qwen LoRA paired generalization gain remains NOT_COMPUTED. **FCAR scientific promotion remains HOLD (0).**
+
+**Attribution caution:** Known assignments are limited to PR descriptions and independently observed tool sessions; 43 of 63 PRs remain mixed/unknown in the frozen snapshot. The first Gantt omitted that row due to a display-label mismatch; its FAILED predecessor and the corrected successor are both preserved. Neither GitHub updates nor this Notion review proves the HackerSquad form was submitted.
+
+
 **[Notion judge review: figures, results and team attribution](https://app.notion.com/p/40d58ec71eb281db9ba2db19e7f7adf6)** · **[Public GitHub figures and captions](docs/judges/FIGURES.md)** · **[Presentation guide](docs/judges/VIDEO_START_HERE_20261102.md)** · **[Self-contained judge presentation HTML](docs/judges/present.html)**
 
 **On display below:** the source-linked results heatmap and accomplishment/status heatmap. These are real committed PNGs, visible directly in the public GitHub README without installing software or opening Notion.
