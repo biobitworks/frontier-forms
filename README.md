@@ -90,13 +90,13 @@ This is a live operational status block generated from the latest local SFT rece
 | N1 NVIDIA Nemotron-Mini 4B (zero-shot, local Ollama) | 41.5% (validation+test) | 0/92 validation+test | `evidence/forms_model/N1-nvidia-nemotron-mini-4b/summary.json` |
 | M2 qwen3:1.7b (zero-shot, local Ollama) | 72.6% (validation+test) | 1/92 validation+test (1/54 test) | `evidence/forms_model/M2-qwen3-1.7b/summary.json` |
 
-**Runs (status as of 2026-11-03T03:15:00Z):**
+**Runs (status as of 2026-11-03T06:45:00Z):**
 
 | Run | Config | Status | Val loss | Test field accuracy | Test full-form |
 |---|---|---|---|---|---|
 | S1 | LoRA r16, lr 2e-4, 2 epochs | done: validation 28/38 full forms (73.7%), field accuracy 95.0% (B0 19/38 on the same forms; McNemar p=0.012, selection phase only) | 0.0074 (epoch 2 kept; 1.017 before training) | — | — |
-| D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | training (3rd try; first two failed before training when the Studio lost internet, logged in selection_v1/ATTEMPTS.json) | — | — | — |
-| S2 | LoRA r16, lr 2e-4, 4 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
+| D1 | DoRA r16, lr 2e-4, 2 epochs (NVIDIA weight-decomposed LoRA) | done: validation 28/38 full forms (73.7%), field accuracy 95.3%; same full forms as S1, +1 field. Took 2.8x S1's training time and 13x its scoring time on MPS | 0.0074 (epoch 2 kept; 0.986 before training) | — | — |
+| S2 | LoRA r16, lr 2e-4, 4 epochs | training (started 06:34Z) | — | — | — |
 | D2 | DoRA r16, lr 2e-4, 4 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
 | S3 | LoRA r32, lr 5e-4, 3 epochs | queued (earlier tries failed before training, see ATTEMPTS.json) | — | — | — |
 
@@ -119,7 +119,7 @@ We used **NVIDIA's open Nemotron-Mini 4B model as a comparison arm**. It filled 
 
 Nemotron-Mini answered "ask the patient" on 473 of 920 fields where the record had a value, so it was cautious rather than wrong. Every raw answer is in its `answers.jsonl`.
 
-Other NVIDIA pieces: **DoRA** (NVIDIA's weight-decomposed LoRA) is queued as LoRA-vs-DoRA matched pairs in the SFT runs above (`scripts/train_forms_sft.py --dora`). **Megatron-LM** source is pinned (`631e1463`) but not run, because it needs CUDA GPUs.
+Other NVIDIA pieces: **DoRA** (NVIDIA's weight-decomposed LoRA) is trained as LoRA-vs-DoRA matched pairs in the SFT runs above (`scripts/train_forms_sft.py --dora`). First pair, validation only: D1 DoRA fills 28/38 forms completely (95.3% fields), S1 LoRA 28/38 (95.0%). That is a tie on full forms, at 2.8x the training time and 13x the scoring time on Apple silicon. **Megatron-LM** source is pinned (`631e1463`) but not run, because it needs CUDA GPUs.
 <!-- nvidia-tooling:end -->
 
 
