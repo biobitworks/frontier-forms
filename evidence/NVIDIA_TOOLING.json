@@ -5,6 +5,16 @@
  "policy": "All NVIDIA components run locally on Apple silicon (magicSTUDIObox, MPS/CPU). No DGX, no CUDA, no NVIDIA-hosted inference (NIM/API), no data upload.",
  "used": [
   {
+   "tool": "NVIDIA Nemotron-Mini 4B (open weights)",
+   "how": "local Ollama nemotron-mini, Q4_K_M, digest ed76ab18784f5a01c9ec5b3c250e964d4f9c7a983e59ba041bb995f0fe2e8fb3",
+   "runs": [
+    "N1 zero-shot form filling, validation+test"
+   ],
+   "result": "0/92 full forms, field accuracy 0.415; 473/920 fields answered 'ask the patient' although a value existed",
+   "evidence": "evidence/forms_model/N1-nvidia-nemotron-mini-4b/",
+   "role": "comparison arm"
+  },
+  {
    "tool": "DoRA: Weight-Decomposed Low-Rank Adaptation (NVIDIA Research; Liu et al., ICML 2024)",
    "how": "Hugging Face PEFT LoraConfig(use_dora=True) via scripts/train_forms_sft.py --dora",
    "runs": [
@@ -17,15 +27,6 @@
    ],
    "status": "queued behind S1 on magicSTUDIObox",
    "evidence": "evidence/forms_model/selection_v1/ (per run) and evidence/forms_model/SFT_STATUS.json"
-  },
-  {
-   "tool": "NVIDIA Nemotron-Mini 4B (open weights)",
-   "how": "local Ollama nemotron-mini, Q4_K_M, digest ed76ab18784f5a01c9ec5b3c250e964d4f9c7a983e59ba041bb995f0fe2e8fb3",
-   "runs": [
-    "N1 zero-shot form filling, validation+test"
-   ],
-   "result": "0/92 full forms, field accuracy 0.415; 473/920 fields answered 'ask the patient' although a value existed",
-   "evidence": "evidence/forms_model/N1-nvidia-nemotron-mini-4b/"
   }
  ],
  "pinned_not_run": [
@@ -39,5 +40,6 @@
    "tool": "bionemo-agent-toolkit (on magicSTUDIObox)",
    "why": "agent tooling for BioNeMo, not a form-filling trainer or model"
   }
- ]
+ ],
+ "headline": "NVIDIA's open Nemotron-Mini 4B was used as a comparison arm (zero-shot, local, same forms/oracle/scorer as every arm)."
 }

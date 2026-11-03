@@ -106,15 +106,20 @@ Status data: [`evidence/forms_model/SFT_STATUS.json`](evidence/forms_model/SFT_S
 <!-- sft-status:end -->
 
 <!-- nvidia-tooling:start -->
-## NVIDIA tooling used (post-deadline, host-approved)
+## NVIDIA used for comparison (post-deadline, host-approved)
 
-Everything runs locally on Apple silicon (magicSTUDIObox). No DGX, no CUDA, no NVIDIA-hosted inference, and no data leaves the machine except JSON results pushed here. Machine-readable record: [`evidence/NVIDIA_TOOLING.json`](evidence/NVIDIA_TOOLING.json).
+We used **NVIDIA's open Nemotron-Mini 4B model as a comparison arm**. It filled the same synthetic forms as every other arm, with the same patient facts, prompt, oracle and scorer, so its numbers line up directly with B0, our harness and the Qwen models. It ran locally on Apple silicon (magicSTUDIObox) through Ollama, with no DGX, no CUDA, no NVIDIA-hosted inference, and no data upload. Machine-readable record: [`evidence/NVIDIA_TOOLING.json`](evidence/NVIDIA_TOOLING.json).
 
-| NVIDIA component | How we used it | Result so far |
-|---|---|---|
-| **DoRA**: Weight-Decomposed Low-Rank Adaptation (NVIDIA Research, ICML 2024) | `scripts/train_forms_sft.py --dora` (PEFT `use_dora=True`) on Qwen2.5-0.5B. Matched pairs against plain LoRA: D1 vs S1 (r16, 2 epochs) and D2 vs S2 (r16, 4 epochs). | Queued behind S1. Picked on validation only; test scored once. See the SFT table above. |
-| **Nemotron-Mini 4B** (NVIDIA open model) | Zero-shot form filling via local Ollama (Q4_K_M, digest `ed76ab18…`), same forms, oracle and scorer as every arm. | 0/92 full forms, 41.5% field accuracy. It answered "ask the patient" on 473 of 920 fields that had a value. [Evidence](evidence/forms_model/N1-nvidia-nemotron-mini-4b/) |
-| **Megatron-LM** | Source pinned (`631e1463`). | Not run: needs CUDA GPUs. |
+| Arm (validation + test, 92 forms) | Full forms correct | Field accuracy | Evidence |
+|---|---|---|---|
+| **N1 NVIDIA Nemotron-Mini 4B** (zero-shot, Q4_K_M, digest `ed76ab18…`) | 0/92 | 41.5% | [N1](evidence/forms_model/N1-nvidia-nemotron-mini-4b/) |
+| M0 Qwen2.5-0.5B (zero-shot) | 0/92 | 41.4% | [M0](evidence/forms_model/M0-zeroshot/) |
+| M2 qwen3:1.7b (zero-shot) | 1/92 | 72.6% | [M2](evidence/forms_model/M2-qwen3-1.7b/) |
+| B0 frozen rules | 37/92 | 83.4% | [B0](evidence/forms_b0/run_v1/) |
+
+Nemotron-Mini answered "ask the patient" on 473 of 920 fields where the record had a value, so it was cautious rather than wrong. Every raw answer is in its `answers.jsonl`.
+
+Other NVIDIA pieces: **DoRA** (NVIDIA's weight-decomposed LoRA) is queued as LoRA-vs-DoRA matched pairs in the SFT runs above (`scripts/train_forms_sft.py --dora`). **Megatron-LM** source is pinned (`631e1463`) but not run, because it needs CUDA GPUs.
 <!-- nvidia-tooling:end -->
 
 
