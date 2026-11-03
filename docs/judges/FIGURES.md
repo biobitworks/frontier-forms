@@ -99,3 +99,15 @@ Same 10 forms, same OCR engine and parser; the only change is the drawn bounding
 - models/qwen2.5_1.5b
 - models/qwen3_1.7b
 - preview captures
+
+## Figure 11 — Independent complete outcome and training-epoch heatmap
+
+Open JUDGE_OUTCOME_HEATMAP_V1.html and JUDGE_OUTCOMES_SUCCESSOR_V1.json. Independent ChatGPT review of **82 exact outcome leaves**: 60 actual YOLO checkpoints across full/no-scan arms (full = three GAIN, three LOSS, 23 NEUTRAL and initial; no-scan = three GAIN, one LOSS, 25 NEUTRAL and initial); 12 FCO single-leaf contrasts with McNemar, Holm and patient-cluster bootstrap; six injected-error detector contrasts; learned box predictor and random-forest negative comparisons; FCAR scientific admission HOLD. Source root 71d3bdac181ca273537a4493ea967a41bd618eabfc83590c750b633d180ceae6. A changed root never establishes causal model gain.
+
+## Figure 12 — Claude learned OCR correction, independently reanalyzed
+
+Open FIG12_OCR_CORRECTION_ABLATION_V1.html and OCR_CORRECTION_SUCCESSOR_V2.json. Original fitted correction table and test: **Claude Code, PRs #51 and #58**; 23 synthetic cases each rendered clean and scanned (46 images, seven fields). Independent check by **ChatGPT** confirms A0 14/46 all-correct, A1 correction 22/46, A2 YOLO crop OCR 9/46, A3 crop+correction 15/46. For A1: exact paired McNemar p=0.0078125, three-comparison Holm p=0.0234375; 10,000 **patient-cluster** resamples grouping each clean+scan pair gave 95% CI +4.35 to +32.61 percentage points. Crop arms are NULL. A1 is an improvement on the studied synthetic sample but is a **trained OCR text-correction table**, not a Qwen/DAISY neural weight gain. Pretest preregistration chronology and independent second-cohort replication are NOT_VERIFIED. Scientific promotion remains HOLD. New independently computed three-arm root 5acbf8276ed1c184423ea68b9973acec96a3a47e030d296f83e23c1c005071cb is explicitly linked as a successor of, not a rewrite to, the frozen 82-event root.
+
+## Judge synthetic demo manifest repair — independent ChatGPT
+
+Claude Code's Figures 1–10, PNG screenshots, 10 synthetic PDFs and visual overlays are unchanged. Original manifest had 10 incorrect annotation JSON hashes. Earlier FAILED manifest preserved as docs/demo/manifest_v1_pre_repair.json; successor repairs all ten, independently checks every one of 62 assets against its actual byte size and SHA256, and records verified 62-leaf asset root 227a1786183dc2535c5aeb54c28ace33c3c6b803584480eb97b646bbffcc444c. Asset root is not a clinical or model outcome; CI independently enforces this preservation.
