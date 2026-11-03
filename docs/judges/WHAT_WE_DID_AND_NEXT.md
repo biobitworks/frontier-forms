@@ -2,7 +2,7 @@
 
 The project turns a medical intake form into a draft FHIR record and checks each field against its source. It uses only synthetic MITRE Synthea patients, so there is no PHI. Models run locally (Apple Vision, Ollama Qwen, local detectors), with no hosted inference and no live EHR writes. The statuses are PROPOSED, IMPLEMENTED, EXECUTED, OBSERVED, SUPPORTED, NEGATIVE, NULL, NOT_TESTED and BLOCKED. **No workstream has reached SUPPORTED**, because every positive result still needs replication.
 
-This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`. Labelled figures with captions, including the accomplishment heat map, are in [FIGURES.md](FIGURES.md). A single presentation page with the data is `docs/judges/present.html` (built by `scripts/redteam/build_present_page.py`). What was novel versus standard training, and the discovery admission ledger, are in [NOVEL_VS_STANDARD_TRAINING.md](NOVEL_VS_STANDARD_TRAINING.md).
+This covers 34 PRs: 27 merged, 4 open and 3 closed unmerged. The full inventory is `docs/judges/pr_inventory.json`. Labelled figures with captions, including the accomplishment heat map, are in [FIGURES.md](FIGURES.md). A single presentation page with the data is `docs/judges/present_v2.html`, built by `scripts/redteam/build_present_page.py`. It succeeds `present.html`, which is kept frozen. What was novel versus standard training, and the discovery admission ledger, are in [NOVEL_VS_STANDARD_TRAINING.md](NOVEL_VS_STANDARD_TRAINING.md).
 
 ## Workstreams
 

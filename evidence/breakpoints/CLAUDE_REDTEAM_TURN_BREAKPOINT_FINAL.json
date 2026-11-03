@@ -74,11 +74,15 @@
   },
   {
    "path": "docs/judges/present.html",
-   "sha256": "59953c1c4bf7b5cc39171465cf35430b2639021c139a46f6cf6c597ea2db5134"
+   "sha256": "58f343152ca8fb34eaf038bb63818e444f28997dd50ae5a93a86a71cd66f0ec2"
   },
   {
    "path": "docs/judges/NOVEL_VS_STANDARD_TRAINING.md",
    "sha256": "5b93f773aee30aa85fc05480ebf0acd916d2cb1f4afb4595fd263ebe51079329"
+  },
+  {
+   "path": "docs/judges/present_v2.html",
+   "sha256": "8814a0e33596edd0d1970d1037fc76b0c437f894152f343a7c3ae020c87c7636"
   }
  ],
  "program_id": "frontier-forms",
