@@ -95,7 +95,6 @@ GRADE = {"A": "Admitted", "D": "Admitted (PI), discovery provenance", "N": "Null
 # designed or analysed after seeing the data, and not yet replicated on a fresh cohort.
 PROVENANCE = {"D": "Admitted by the PI on 2026-11-02. Discovery provenance: designed after seeing the data; not replicated on a fresh cohort."}
 
-# Novel = a Frontier Forms mechanism; Standard = off-the-shelf training, OCR, VLM, LLM or detector.
 KIND = {
     "B0 + L1 evidence abstain": "Novel", "B0 + L2 unit validation": "Novel", "B0 + L3 clinical filter": "Novel",
     "B0 + L1 + L3": "Novel", "B0 + L1 + L2 + L3 (full harness)": "Novel",

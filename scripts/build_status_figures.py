@@ -21,7 +21,6 @@ def load(rel):
     return json.loads((ROOT / rel).read_text())
 
 
-# ---------------------------------------------------------------- panel A
 # Workstream x stage status. States: done, discovery, negative, running, todo, na
 STAGES = ["Data frozen", "Implemented", "Executed", "Paired stats", "Replicated / new cohort"]
 WORK = [
@@ -65,7 +64,6 @@ WORK = [
      "Needs a preregistered new Synthea seed scored once with frozen arms."),
 ]
 
-# ---------------------------------------------------------------- panel B
 def forms_arms():
     d = load("evidence/forms_arms/run_v1/FCG_ARMS_V1.json")
     rows = []
@@ -173,8 +171,6 @@ def models():
 
 
 
-# ---------------------------------------------------------------- ledger
-# Every claim we tested, admitted or not. verdict: admitted, discovery, negative, null, failed, partial, not_tested
 LEDGER = [
     ("FCG harness L1+L3 on forms", "0.333 -> 0.556 (30/54), 12/0 discordant, p=0.00049, Holm p=0.0059, cluster CI [0.07, 0.37]", "discovery", "#10 #17 #18 #48"),
     ("Single module L1, L2 or L3 added to B0", "0 change in form success on test (p=1.0 each)", "null", "#10"),
